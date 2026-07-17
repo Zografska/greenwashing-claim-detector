@@ -1,0 +1,8 @@
+name: rag_only
+base_model: llama3.2
+use_rag: true
+use_distilled: false
+directive_path: data/raw/ecgt_directive_2024_825.txt
+top_k: 3
+data_dir: data/raw
+data_file: "06.25.json"

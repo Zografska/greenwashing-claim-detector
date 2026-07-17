@@ -1,0 +1,7 @@
+name: distilled_only
+base_model: llama3.2
+distilled_model_path: models/distilled-llama3.2-greenwashing
+use_rag: false
+use_distilled: true
+data_dir: data/raw
+data_file: "06.25.json"

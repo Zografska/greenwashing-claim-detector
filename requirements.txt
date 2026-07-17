@@ -1,0 +1,9 @@
+ollama
+sentence-transformers
+numpy
+pyyaml
+scikit-learn
+httpx
+sentence-transformers
+torch
+numpy

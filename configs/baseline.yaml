@@ -1,0 +1,6 @@
+name: baseline
+base_model: llama3.2
+use_rag: false
+use_distilled: false
+data_dir: data/raw
+data_file: "06.25.json"
