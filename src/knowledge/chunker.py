@@ -10,18 +10,28 @@ def clean(text):
 
 chunks = []
 
-# --- 1. New definitions from Art 1, section 1b (letters o-t) ---
-# These are the greenwashing-specific new terms added to UCPD Art 2
+# --- 1. New definitions from Art 1, section 1b (letters o-w) ---
+# These are the greenwashing-specific new terms added to UCPD Art 2.
+# Each letter (o, p, q, r, s, t, u, v, w) becomes its own chunk instead of
+# one chunk covering all 9 definitions — a single combined chunk is an
+# over-broad match magnet in retrieval (every query about any one of these
+# terms matches the whole block).
 art1 = soup.find(id='art_1')
 art1_text = clean(art1.get_text())
 
-# Extract the definitions block (letters o onwards = greenwashing terms)
-# Find all lettered items in art_1
-new_defs = {}
-letter_pattern = re.compile(r'«([a-z]\w*)\)\s+"([^"]+)":([^«»]+)', re.DOTALL)
+DEFINITION_TITLES = {
+    'o': '"asserzione ambientale"',
+    'p': '"asserzione ambientale generica"',
+    'q': '"marchio di sostenibilità"',
+    'r': '"sistema di certificazione"',
+    's': '"eccellenza riconosciuta delle prestazioni ambientali"',
+    't': '"durabilità"',
+    'u': '"aggiornamento del software"',
+    'v': '"materiali di consumo"',
+    'w': '"funzionalità"',
+}
 
-# simpler: just grab the whole definitions insertion as one chunk
-# find the table row with "b)" which contains the new letters o-t
+# find the table row with "b)" which contains the new letters o-w
 tables = art1.find_all('table')
 for tbl in tables:
     cells = tbl.find_all('td')
@@ -29,12 +39,42 @@ for tbl in tables:
         label = clean(cells[0].get_text())
         content = clean(cells[1].get_text())
         if label == 'b)' and 'asserzione ambientale' in content:
-            chunks.append({
-                "id": "ECGT_Art1_NuoveDefinizioni",
-                "title": "ECGT Art. 1 – Nuove definizioni (asserzione ambientale, marchio di sostenibilità, sistema di certificazione)",
-                "source": "art_1",
-                "text": f"ECGT Articolo 1 – Nuove definizioni inserite nella direttiva 2005/29/CE: {content}"
-            })
+            # Split the combined insertion text into one segment per
+            # lettered definition. Sub-items (i, ii, iii, iv under "r")
+            # and footnote markers use roman numerals / "(*n)", not a
+            # bare "<letter>) <quote>", so they don't false-split here.
+            letter_pattern = re.compile(r'([opqrstuvw])\)\s+[“"]')
+            matches = list(letter_pattern.finditer(content))
+            segs = {}
+            for i, m in enumerate(matches):
+                letter = m.group(1)
+                start = m.start()
+                end = matches[i + 1].start() if i + 1 < len(matches) else len(content)
+                segs[letter] = content[start:end].strip().rstrip(';').strip()
+
+            # Footnotes referenced from "s" and "u" ((*2), (*3)) are
+            # dumped in the source HTML at the very end of the whole
+            # insertion (after "w"), not next to the definition that
+            # cites them. Move each footnote's text onto its own
+            # definition instead of leaving both stuck onto "w".
+            footnote_match = re.search(
+                r'^(.*?)\s*(\(\*2\).*?pag\.\s*1\)\.)["»]?\s*(\(\*3\).*?pag\.\s*1\)\.)["»]?\.?$',
+                segs.get('w', ''), re.DOTALL
+            )
+            if footnote_match:
+                segs['w'] = footnote_match.group(1).strip()
+                segs['s'] = segs['s'] + '. ' + footnote_match.group(2).strip()
+                segs['u'] = segs['u'] + '. ' + footnote_match.group(3).strip()
+
+            for letter in ['o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w']:
+                if letter not in segs:
+                    continue
+                chunks.append({
+                    "id": f"ECGT_Art1_NuoveDefinizioni_{letter}",
+                    "title": f"ECGT Art. 1, lett. {letter}) – Definizione di {DEFINITION_TITLES[letter]}",
+                    "source": "art_1",
+                    "text": f"ECGT Articolo 1 – Nuova definizione inserita nella direttiva 2005/29/CE: «{segs[letter]}»."
+                })
             break
 
 # --- 2. Annex items – new blacklist entries ---
