@@ -34,6 +34,19 @@ No default is set for this because there are no gold-labeled matches yet
 (data/annotations/ is empty) to calibrate a floor against -- pick a value
 empirically once labels exist.
 
+Queries come in as multiple sentence-level chunks per ad (see
+prepare_ads_chunks.py), not one chunk per whole ad -- a chunk's "ad_id"
+field says which ad it belongs to (falls back to its own "id" if that field
+is absent, so a query set built the old one-chunk-per-ad way still works).
+Retrieval itself still runs per sentence-chunk, since that's the unit that
+was actually embedded; results are then pooled back up per ad_id, keeping
+each passage's single best-scoring sentence match and reporting which
+sentence produced it, before taking that ad's top-k. This is what lets one
+ad surface matches for more than one distinct claim (e.g. an environmental
+line matching an ECGT passage AND a nutrition line matching a different
+UCPD passage) instead of collapsing to whichever single sentence scored
+highest overall.
+
 This is the retrieval step ONLY -- it tells you which legal text is most
 SEMANTICALLY RELEVANT to a given ad/listing. It does NOT tell you whether
 the ad complies with that law. For an actual compliance verdict, feed the
@@ -190,7 +203,14 @@ def main():
         + [{**c, "directive": "ucpd"} for c in ucpd_meta["chunks"]]
     )
 
-    print(f"Comparing {query_emb.shape[0]} '{args.queries}' ads against {passage_emb.shape[0]} legal chunks (ecgt + ucpd) ...")
+    query_chunks = query_meta["chunks"]
+    ad_ids = [c.get("ad_id", c["id"]) for c in query_chunks]
+    n_ads = len(dict.fromkeys(ad_ids))  # preserves first-seen order, unlike set()
+
+    print(
+        f"Comparing {len(query_chunks)} claim-sentence chunks across {n_ads} '{args.queries}' ads "
+        f"against {passage_emb.shape[0]} legal chunks (ecgt + ucpd) ..."
+    )
 
     if args.no_center:
         # All sets are L2-normalized (done in embed_e5.py), so dot product == cosine similarity
@@ -210,13 +230,35 @@ def main():
         used_k = max(1, min(args.csls_k, min(similarity.shape)))
         print(f"Applied CSLS hub correction (k={used_k})")
 
-    results = []
-    for i, q_chunk in enumerate(query_meta["chunks"]):
+    # Per-sentence candidate lists first (ranked by CSLS/cosine, floor-filtered),
+    # since retrieval runs at the chunk level -- pooling across an ad's sentences
+    # happens after, once each sentence already has its own ranked candidates.
+    row_candidates = []
+    for i in range(len(query_chunks)):
         order = np.argsort(ranking_scores[i])[::-1]
         if args.min_similarity is not None:
             order = [j for j in order if similarity[i, j] >= args.min_similarity]
-        top_indices = order[: args.top_k]
-        below_threshold = args.min_similarity is not None and len(top_indices) == 0
+        row_candidates.append(order)
+
+    ad_rows = {}
+    for i, ad_id in enumerate(ad_ids):
+        ad_rows.setdefault(ad_id, []).append(i)
+
+    results = []
+    for ad_id, rows in ad_rows.items():
+        # For each passage, keep only its single best-scoring sentence within
+        # this ad -- a passage that several sentences weakly match shouldn't
+        # occupy multiple of the ad's top-k slots.
+        best_per_passage = {}
+        for i in rows:
+            for j in row_candidates[i]:
+                rank_score = ranking_scores[i, j]
+                if j not in best_per_passage or rank_score > best_per_passage[j][1]:
+                    best_per_passage[j] = (i, rank_score)
+
+        ranked_passages = sorted(best_per_passage.items(), key=lambda kv: kv[1][1], reverse=True)
+        top_passages = ranked_passages[: args.top_k]
+        below_threshold = args.min_similarity is not None and len(best_per_passage) == 0
 
         matches = [
             {
@@ -225,18 +267,20 @@ def main():
                 "legal_title": passage_chunks[j]["title"],
                 "legal_source": passage_chunks[j]["source"],
                 "legal_text": passage_chunks[j]["text"],
-                "similarity": float(similarity[i, j]),
-                **({} if args.no_csls else {"csls_similarity": float(ranking_scores[i, j])}),
+                "matched_sentence": query_chunks[sent_i]["text"],
+                "similarity": float(similarity[sent_i, j]),
+                **({} if args.no_csls else {"csls_similarity": float(rank_score)}),
             }
-            for j in top_indices
+            for j, (sent_i, rank_score) in top_passages
         ]
 
+        first_chunk = query_chunks[rows[0]]
         results.append(
             {
-                "query_chunk_id": q_chunk["id"],
-                "query_title": q_chunk["title"],
-                "query_source": q_chunk.get("source"),
-                "query_text": q_chunk["text"],
+                "query_ad_id": ad_id,
+                "query_title": first_chunk["title"],
+                "query_source": first_chunk.get("source"),
+                "query_sentences": [query_chunks[i]["text"] for i in rows],
                 "top_matches": matches,
                 "below_similarity_threshold": below_threshold,
             }

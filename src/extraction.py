@@ -168,18 +168,40 @@ CLAIM_KEYWORDS = re.compile(
 # GREEN_KEYWORDS directly.
 GREEN_KEYWORDS = CLAIM_KEYWORDS
 
+# Scrape artifact: packaging/disposal badges (e.g. "Vaschetta e Film - 7 -
+# Raccolta Plastica") are separate UI elements on the source page with no
+# delimiting punctuation from whatever text precedes them, so a short claim
+# right before one (e.g. "Meno plastica") ends up fused into the same
+# fragment as the badge instead of splitting into two. Matched by its
+# container word (Vaschetta/Incarto/Film/Confezione/Flowpack) followed
+# shortly by "Raccolta" -- inserting a split boundary right before it
+# separates the badge from whatever precedes it without needing a
+# general-purpose sentence segmenter.
+_PACKAGING_BADGE_BOUNDARY = r"(?=\b(?:Vaschetta|Incarto|Film|Confezione|Flowpack)\b[^.\n]{0,30}?Raccolta\b)"
+
+
+def _split_claim_sentences(description: str) -> list[str]:
+    """Split into sentence-ish fragments and keep only the ones mentioning
+    claim-adjacent terms (nutrition, origin, composition, price/value,
+    environmental, safety instructions -- the full UCPD scope, not just
+    environmental claims). Building block behind _prefilter_description;
+    exposed separately for callers that want the individual sentences
+    rather than one joined string (e.g. src/knowledge/prepare_ads_chunks.py,
+    which embeds each claim-adjacent sentence as its own chunk instead of
+    concatenating them -- concatenation dilutes a short embedding vector
+    with whatever unrelated sentences also happened to match a keyword)."""
+    if not description:
+        return []
+    fragments = re.split(r"(?<=[.!?])\s+|\n+|" + _PACKAGING_BADGE_BOUNDARY, description)
+    return [f.strip() for f in fragments if f.strip() and CLAIM_KEYWORDS.search(f)]
+
 
 def _prefilter_description(description: str) -> str:
-    """Keep only sentence-ish fragments mentioning claim-adjacent terms
-    (nutrition, origin, composition, price/value, environmental, safety
-    instructions -- the full UCPD scope, not just environmental claims).
+    """Keep only sentence-ish fragments mentioning claim-adjacent terms.
     Returns the full original description if nothing matches, so a gap in
     the keyword list degrades to "no speedup" rather than "missed claim"."""
-    if not description:
-        return description or ""
-    fragments = re.split(r"(?<=[.!?])\s+|\n+", description)
-    hits = [f.strip() for f in fragments if f.strip() and CLAIM_KEYWORDS.search(f)]
-    return " ".join(hits) if hits else description
+    hits = _split_claim_sentences(description)
+    return " ".join(hits) if hits else (description or "")
 
 
 def _build_user_prompt(product: dict, description: str) -> str:

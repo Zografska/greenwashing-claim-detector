@@ -1,0 +1,226 @@
+[
+  {
+    "query_ad_id": "8003170046535",
+    "query_title": "Crescenza 200 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "Origin/nutrition puffery only (\"Italiana al 100%\", \"basso apporto calorico\"), no environmental claim"
+  },
+  {
+    "query_ad_id": "80128908",
+    "query_title": "Crescenza 100 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "No environmental or misleading claim"
+  },
+  {
+    "query_ad_id": "8003170028951",
+    "query_title": "Crescenza 165 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "\"particolarmente indicata per i più piccoli\" is nutrition framing, not a direct child exhortation to buy"
+  },
+  {
+    "query_ad_id": "8003170018501",
+    "query_title": "Crescenza 320 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "\"Italiana al 100%\" origin claim only"
+  },
+  {
+    "query_ad_id": "8003170061903",
+    "query_title": "Crescenza biologica 100 g verso natura bio conad",
+    "gold_match": true,
+    "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+    "evidence_sentence": "È un formaggio cremoso, prodotto con attenzione verso le materie prime e l'impiego di un ciclo di produzione, rispettoso della natura e della sua biodiversità.",
+    "notes": "Genuine environmental/sustainability claim (asserzione ambientale)"
+  },
+  {
+    "query_ad_id": "8003170093119",
+    "query_title": "Sapori idee conad stracchino 250 g",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "No claim beyond standard packaging/disposal instructions"
+  },
+  {
+    "query_ad_id": "8003170093102",
+    "query_title": "Sapori idee conad stracchino di capra 200 g",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "No claim beyond standard packaging/disposal instructions"
+  },
+  {
+    "query_ad_id": "8003170018488",
+    "query_title": "Stracchino cremoso 200 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "No environmental or misleading claim"
+  },
+  {
+    "query_ad_id": "8000430030181",
+    "query_title": "Galbani certosa crescenza italiana 165 g",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "Borderline: \"filiera certificata, garantita dal latte al prodotto finito\" is a traceability claim, not environmental/sustainability"
+  },
+  {
+    "query_ad_id": "8007222502543",
+    "query_title": "Nonno nanni stracchino 100 g",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "Vitamin/calcium fortification claim, nutrition not environmental"
+  },
+  {
+    "query_ad_id": "8007222502215",
+    "query_title": "Nonno nanni stracchino 250 g",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "Same as 100g variant"
+  },
+  {
+    "query_ad_id": "8003170078888",
+    "query_title": "Feta dop 200 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "DOP is a mandatory/official EU scheme, explicitly excluded from ECGT \"marchio di sostenibilità\" definition"
+  },
+  {
+    "query_ad_id": "8003170023581",
+    "query_title": "Scamorza affumicata di latte vaccino 250 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "No environmental or misleading claim"
+  },
+  {
+    "query_ad_id": "8003170054448",
+    "query_title": "Asiago formaggio dop 300 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "DOP, legitimate certification scheme, no additional environmental claim"
+  },
+  {
+    "query_ad_id": "8003170086807",
+    "query_title": "Cheddar a fette 150 g freschi convenienti conad",
+    "gold_match": true,
+    "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_p",
+    "evidence_sentence": "Meno plastica",
+    "notes": "\"Meno plastica\" packaging reduction claim, unsubstantiated/generic in this format"
+  },
+  {
+    "query_ad_id": "8003170102699",
+    "query_title": "Conad freschi convenienti emmentaler 6 fette 90 g",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "Only disposal instructions (\"Vaschetta e Film - Raccolta Plastica\"), no \"Meno plastica\" claim present unlike sibling products"
+  },
+  {
+    "query_ad_id": "8003170050907",
+    "query_title": "Emmental a fette 150 g freschi e convenienti conad",
+    "gold_match": true,
+    "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_p",
+    "evidence_sentence": "Meno plastica",
+    "notes": "\"Meno plastica\" packaging reduction claim"
+  },
+  {
+    "query_ad_id": "8003170000001",
+    "query_title": "Emmental francese 220 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "No environmental or misleading claim"
+  },
+  {
+    "query_ad_id": "8003170001046",
+    "query_title": "Emmentaler svizzero 250 g conad",
+    "gold_match": true,
+    "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+    "evidence_sentence": "L'incarto puoi gettarlo nella plastica e contribuire interamente al rispetto dell'ambiente che questo prodotto segue sin dalla produzione dei suoi componenti.",
+    "notes": "Explicit environmental-impact claim tied to the product's production, not just disposal instructions"
+  },
+  {
+    "query_ad_id": "8003170050891",
+    "query_title": "Formaggio a pasta filata a fette 125 g freschi convenienti conad",
+    "gold_match": true,
+    "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_p",
+    "evidence_sentence": "Meno plastica",
+    "notes": "\"Meno plastica\" packaging reduction claim"
+  },
+  {
+    "query_ad_id": "8003170038271",
+    "query_title": "Formaggio di latte di montagna a fette sottili 130 g conad",
+    "gold_match": true,
+    "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_p",
+    "evidence_sentence": "Meno plastica",
+    "notes": "\"Meno plastica\" packaging reduction claim"
+  },
+  {
+    "query_ad_id": "8003170080140",
+    "query_title": "Freschi convenienti edamer a fette 130 g conad",
+    "gold_match": true,
+    "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_p",
+    "evidence_sentence": "Meno plastica",
+    "notes": "\"Meno plastica\" plus \"La sua confezione è riciclata\" — two distinct environmental claims in same ad, both relevant"
+  },
+  {
+    "query_ad_id": "8003170050884",
+    "query_title": "Freschi e convenienti maasdam a fette 200 g conad",
+    "gold_match": true,
+    "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_p",
+    "evidence_sentence": "Meno plastica",
+    "notes": "\"Meno plastica\" packaging reduction claim"
+  },
+  {
+    "query_ad_id": "8003170033757",
+    "query_title": "Maasdam olandese 150 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "No environmental or misleading claim, no \"Meno plastica\" line (non-Freschi&Convenienti line)"
+  },
+  {
+    "query_ad_id": "8003170020917",
+    "query_title": "Maasdam olandese 330 g conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "Same as 150g variant"
+  },
+  {
+    "query_ad_id": "8003170043138",
+    "query_title": "Pecorino romano dop stagionatura minima 12 mesi 300 g sapori dintorni conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "DOP, legitimate certification scheme, no additional claim"
+  },
+  {
+    "query_ad_id": "8003170008564",
+    "query_title": "Provolone valpadana dop dolce 250 g sapori dintorni conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "DOP, legitimate certification scheme"
+  },
+  {
+    "query_ad_id": "8003170008571",
+    "query_title": "Provolone valpadana dop piccante 250 g sapori dintorni conad",
+    "gold_match": false,
+    "gold_legal_chunk_id": null,
+    "evidence_sentence": null,
+    "notes": "DOP, legitimate certification scheme"
+  }
+]

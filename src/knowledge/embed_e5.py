@@ -124,16 +124,11 @@ def main():
     np.save(npy_path, embeddings)
     print(f"Saved vectors -> {npy_path}")
 
-    metadata = [
-        {
-            "row": i,
-            "id": c["id"],
-            "title": c["title"],
-            "source": c["source"],
-            "text": c["text"],  # original text, without the E5 prefix
-        }
-        for i, c in enumerate(chunks)
-    ]
+    # Preserves any extra fields a chunk producer adds (e.g. prepare_ads_chunks.py's
+    # "ad_id", used to group sentence-level chunks back up to their ad), not just
+    # the required id/title/source/text. "text" here is the original, un-prefixed
+    # string -- not what actually got embedded.
+    metadata = [{"row": i, **c} for i, c in enumerate(chunks)]
 
     json_path = args.output_dir / "metadata.json"
     with open(json_path, "w", encoding="utf-8") as f:
