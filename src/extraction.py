@@ -179,6 +179,52 @@ GREEN_KEYWORDS = CLAIM_KEYWORDS
 # general-purpose sentence segmenter.
 _PACKAGING_BADGE_BOUNDARY = r"(?=\b(?:Vaschetta|Incarto|Film|Confezione|Flowpack)\b[^.\n]{0,30}?Raccolta\b)"
 
+# Same scrape-artifact problem on the OTHER side of a packaging badge: the
+# structured product-spec sheet that follows it (Denominazione di vendita /
+# Marchio / Conservazione / Paese di origine / Produttori / Ingredienti e
+# valori nutrizionali / Allergeni / Tracciabilita) has no punctuation
+# separating its own fields either, so without a closing boundary the badge
+# fuses into one giant fragment with the entire rest of the spec sheet --
+# e.g. "Vaschetta - Plastica - Raccolta Plastica  Segui sempre le regole del
+# tuo comune ... Denominazione di vendita ... Ingredienti e valori
+# nutrizionali ... Allergeni ...". That fragment matches CLAIM_KEYWORDS on
+# "raccolta"/"plastica" and gets handed to the environmental-claim reranker
+# as if it were one claim, when in reality it's a disposal badge glued to
+# ~200 words of unrelated mandatory label text -- this was the single
+# biggest driver of the false-positive rate measured in reranked_v6_8b_top20
+# (Crescenza/Stracchino/Asiago/Emmental/Maasdam ads all failed this way).
+# Inserting a boundary before each of these field labels isolates them same
+# as the badge boundary above, so nutrition-table numbers (needed elsewhere,
+# e.g. to catch "e tra i pochi formaggi magri" contradicting a high-fat
+# value) stay intact as their own fragment instead of diluting a "claim".
+_LABEL_BOUNDARY = (
+    r"(?=\b(?:Denominazione di vendita|Marchio|Conservazione:|Paese di origine|"
+    r"Produttori\b|Confezionato per|Prodotto per|Ingredienti e valori nutrizionali|"
+    r"Valori nutrizionali|Allergeni|Additivi|Tracciabilità|"
+    r"Segui sempre|Verifica (?:le|sempre))\b)"
+)
+
+# Mandatory disclosures that superficially match CLAIM_KEYWORDS (they contain
+# words like "ambiente"/"raccolta"/"plastica") but are never a voluntary claim
+# about the product -- they're required-by-law labeling text present on
+# nearly every ad regardless of what the product actually asserts. Dropped
+# outright rather than left for the LLM to reject each time: rerank_matches.py's
+# own system prompt already carries worked counter-examples for exactly these
+# (packaging bin-sorting codes, DOP/IGP as an official scheme) and the smaller
+# local models still matched on them whenever they leaked into candidate text.
+_MANDATORY_DISCLOSURE_PATTERNS = [
+    re.compile(r"^Conad per l'ambiente\s*$", re.IGNORECASE),
+    re.compile(
+        r"^(?:Vaschetta|Incarto|Film|Confezione|Flowpack)\b[^.\n]{0,40}?Raccolta\s+\w+\s*$",
+        re.IGNORECASE,
+    ),
+    re.compile(r"^(?:Segui|Verifica)\b.{0,80}?(?:regole del tuo comune|disposizioni del tuo comune)", re.IGNORECASE),
+]
+
+
+def _is_mandatory_disclosure(fragment: str) -> bool:
+    return any(p.search(fragment) for p in _MANDATORY_DISCLOSURE_PATTERNS)
+
 
 def _split_claim_sentences(description: str) -> list[str]:
     """Split into sentence-ish fragments and keep only the ones mentioning
@@ -189,11 +235,22 @@ def _split_claim_sentences(description: str) -> list[str]:
     rather than one joined string (e.g. src/knowledge/prepare_ads_chunks.py,
     which embeds each claim-adjacent sentence as its own chunk instead of
     concatenating them -- concatenation dilutes a short embedding vector
-    with whatever unrelated sentences also happened to match a keyword)."""
+    with whatever unrelated sentences also happened to match a keyword).
+
+    Fragments that are purely a mandatory disclosure (packaging bin-sorting
+    badge, the "Conad per l'ambiente" section header, the boilerplate
+    "verifica le regole del tuo comune" sentence) are dropped even though
+    they match CLAIM_KEYWORDS -- see _MANDATORY_DISCLOSURE_PATTERNS."""
     if not description:
         return []
-    fragments = re.split(r"(?<=[.!?])\s+|\n+|" + _PACKAGING_BADGE_BOUNDARY, description)
-    return [f.strip() for f in fragments if f.strip() and CLAIM_KEYWORDS.search(f)]
+    fragments = re.split(
+        r"(?<=[.!?])\s+|\n+|" + _PACKAGING_BADGE_BOUNDARY + "|" + _LABEL_BOUNDARY, description
+    )
+    return [
+        f.strip()
+        for f in fragments
+        if f.strip() and CLAIM_KEYWORDS.search(f) and not _is_mandatory_disclosure(f.strip())
+    ]
 
 
 def _prefilter_description(description: str) -> str:

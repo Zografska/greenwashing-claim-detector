@@ -161,31 +161,43 @@ def evaluate_rerank(matches_by_ad: dict, positives: list, negatives: list):
     print(f"\n=== Negatives: {len(negatives)} ads with no real claim ===")
     correct_no_match = 0
     false_positives = []
+    errors = []
     for g in negatives:
         pred = matches_by_ad.get(g["query_ad_id"])
         rerank = pred.get("rerank") if pred else None
         if rerank is None:
             print(f"  MISS   {g['query_title']:60s} no rerank result")
             continue
-        if rerank.get("verdict") == "NO_MATCH":
+        verdict = rerank.get("verdict")
+        if verdict == "NO_MATCH":
             correct_no_match += 1
             print(f"  OK      {g['query_title']:60s} NO_MATCH")
+        elif verdict == "ERROR":
+            errors.append((g, rerank))
+            print(f"  ERROR   {g['query_title']:60s} {rerank.get('rationale')}")
         else:
             false_positives.append((g, rerank))
             print(f"  WRONG   {g['query_title']:60s} MATCH -> {rerank.get('legal_chunk_id')} | {rerank.get('rationale')}")
 
     if negatives:
         print(f"\nCorrectly said NO_MATCH: {correct_no_match}/{len(negatives)} = {correct_no_match / len(negatives):.1%}")
+        if errors:
+            print(f"Errored (excluded from accuracy, not scored either way): {len(errors)}/{len(negatives)}")
 
-    total = len(positives) + len(negatives)
+    total = len(positives) + len(negatives) - len(errors)
     binary_correct = verdict_hits + correct_no_match
     if total:
-        print(f"\nOverall binary (MATCH vs NO_MATCH) accuracy: {binary_correct}/{total} = {binary_correct / total:.1%}")
+        print(f"\nOverall binary (MATCH vs NO_MATCH) accuracy, excluding errors: {binary_correct}/{total} = {binary_correct / total:.1%}")
 
     if false_positives:
         print(f"\n--- False positives ({len(false_positives)}) ---")
         for g, rerank in false_positives:
             print(f"  {g['query_title']}: -> {rerank.get('legal_chunk_id')} | {rerank.get('rationale')}")
+
+    if errors:
+        print(f"\n--- Errors ({len(errors)}) -- not counted as correct or incorrect ---")
+        for g, rerank in errors:
+            print(f"  {g['query_title']}: {rerank.get('rationale')}")
 
 
 def main():
