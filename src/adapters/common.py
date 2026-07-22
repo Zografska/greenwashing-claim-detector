@@ -12,6 +12,8 @@ naturasi.py) but needs to end up in one of two canonical shapes:
     can run against it without any changes to src/data.py or src/extraction.py.
 """
 
+from .legal_mapping import assign_legal_chunk_id
+
 
 def _as_text(part) -> str:
     """Most fields are a plain string, but at least one Coop record (product
@@ -34,13 +36,22 @@ def join_nonempty(*parts, sep: str = "\n\n") -> str:
 def normalize_claim(claim: dict) -> dict:
     """One gold claim -> canonical shape. `modifiers` and `irrelevant_subreason`
     are only present on some retailers/claims (see field-presence counts in
-    the plan) -- default them rather than let evaluate.py branch per-retailer."""
+    the plan) -- default them rather than let evaluate.py branch per-retailer.
+
+    `gold_legal_chunk_id`/`legal_mapping_confidence`/`legal_mapping_note` are
+    derived via legal_mapping.assign_legal_chunk_id, so retrieval/rerank
+    against src/knowledge/chunks/{ecgt,ucpd}.json can be scored the same way
+    src/knowledge/evaluate_matches.py already scores the 25.06 gold set."""
+    mapping = assign_legal_chunk_id(claim)
     return {
         "claim_text": claim.get("claim_text", ""),
         "category": claim.get("category"),
         "risk_level": claim.get("risk_level"),
         "modifiers": claim.get("modifiers") or [],
         "irrelevant_subreason": claim.get("irrelevant_subreason"),
+        "gold_legal_chunk_id": mapping["chunk_id"],
+        "legal_mapping_confidence": mapping["confidence"],
+        "legal_mapping_note": mapping["note"],
     }
 
 

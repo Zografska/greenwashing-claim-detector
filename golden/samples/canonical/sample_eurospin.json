@@ -12,21 +12,30 @@
         "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action, no dedicated blacklist point"
       },
       {
         "claim_text": "i birrai ... non scendono a compromessi per farvi scoprire il meglio dell'arte birraia",
         "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action, no dedicated blacklist point"
       },
       {
         "claim_text": "i suoi ricchi aromi maltati sapranno accompagnare anche formaggi di media stagionatura e carni rosse",
         "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action, no dedicated blacklist point"
       }
     ],
     "extras": {
@@ -62,28 +71,40 @@
         "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action, no dedicated blacklist point"
       },
       {
         "claim_text": "Grazie alla presenza dei polimeri superassorbenti, l'umido penetra velocemente all'interno e non ritorna in superficie",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Dermatologicamente testato",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "realizzato con materia prima da foreste gestite in maniera sostenibile e da fonti controllate",
         "category": "environmental_unsubstantiated",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       }
     ],
     "extras": {
@@ -111,28 +132,40 @@
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Il Burro di Karitè e gli estratti di Calendula, Camomilla e Malva ... leniscono e ammorbidiscono l'epidermide",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Dermatologicamente testata su pelli sensibili",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Formula testata per ridurre al minimo il rischio di allergie",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       }
     ],
     "extras": {
@@ -164,7 +197,10 @@
         "category": "environmental_unsubstantiated",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       },
       {
         "claim_text": "A basso contenuto di grassi",
@@ -173,7 +209,10 @@
         "modifiers": [
           "compliance_unverified_from_text"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art7",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "undisclosed threshold is an omission, not a false assertion"
       }
     ],
     "extras": {
@@ -206,7 +245,10 @@
         "category": "environmental_unsubstantiated",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       }
     ],
     "extras": {
@@ -238,14 +280,20 @@
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Dermatologicamente testato",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       }
     ],
     "extras": {
@@ -318,7 +366,10 @@
         "category": "environmental_unsubstantiated",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       }
     ],
     "extras": {

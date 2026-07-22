@@ -130,7 +130,13 @@ Rules:
   a vulnerable group's risk -- not for unrelated convenience claims like
   pre-sliced packaging.
 - Skip recipes, serving suggestions, taste description, brand slogans.
-- No claims found -> empty array. Never invent a claim not in the text."""
+- No claims found -> empty array. Never invent a claim not in the text.
+- If a CANDIDATE LEGAL CONTEXT section is present: it was retrieved by
+  embedding similarity, not verified -- treat it as reference material that
+  may help sharpen a risk_rationale, never as confirmation that a claim
+  exists or which category/risk_level it gets. Some or all listed passages
+  may be irrelevant to this specific product; do not force a claim to match
+  one just because it was retrieved."""
 
 # --- Pre-filter: cut description down to claim-adjacent fragments before --
 # it ever reaches the model. On local Ollama, prefill time scales with
@@ -261,8 +267,56 @@ def _prefilter_description(description: str) -> str:
     return " ".join(hits) if hits else (description or "")
 
 
-def _build_user_prompt(product: dict, description: str) -> str:
+# Legal grounding is embedding-retrieval-only (src/knowledge/compare_e5.py,
+# tuned config center=True/csls=True/csls_k=15 -- see tune_retrieval.py),
+# not LLM-reranked: rerank_matches.py's per-ad LLM verdict is too slow/costly
+# (~2-3 min/ad) for what this needs, which is just candidate context, not a
+# confirmed verdict. Measured Hit@7 against golden/canonical/*.json: ~37%
+# for claims with a real specific legal chunk (environmental, endorsement,
+# medicinal-cure, offset-neutrality), ~16% for the generic UCPD_Art6/Art7
+# catch-all that most other categories map to -- i.e. retrieval is often
+# wrong. Chunks are therefore injected as UNLABELED candidate context ("may
+# or may not be relevant"), never as an asserted fact the model should defer
+# to -- see the "Rules" note in SYSTEM_PROMPT and the low hit rate above.
+#
+# Capped by total word count, not just chunk count: a real top-7 grounding
+# set ranges from ~200 to ~2000 words (measured across 889 products across
+# all 4 retailers), median ~789. Truncating the lowest-ranked (least
+# similar) chunks first when a pathological long-chunk case would otherwise
+# blow the token budget below keeps the most relevant chunks intact.
+MAX_GROUNDING_WORDS = 1400  # covers ~90th percentile of observed real top-7
+                            # grounding sets without sizing num_ctx to the
+                            # rare ~2000-word worst case.
+
+
+def _format_grounding(chunks: list[dict]) -> str:
+    """chunks: compare_e5.py top_matches shape (each with legal_chunk_id,
+    legal_title, legal_text), already ranked best-first. Truncates from the
+    end (lowest-ranked first) if the combined word count exceeds
+    MAX_GROUNDING_WORDS."""
+    kept = []
+    total_words = 0
+    for chunk in chunks:
+        words = len((chunk.get("legal_text") or "").split())
+        if kept and total_words + words > MAX_GROUNDING_WORDS:
+            break
+        kept.append(chunk)
+        total_words += words
+
+    entries = "\n\n".join(
+        f"[{c['legal_chunk_id']}] {c['legal_title']}\n{c['legal_text']}" for c in kept
+    )
+    return f"""CANDIDATE LEGAL CONTEXT (retrieved by embedding similarity, NOT verified --
+some or all of these may be irrelevant to this specific product; use your own
+judgment about which, if any, actually apply):
+{entries}"""
+
+
+def _build_user_prompt(product: dict, description: str, grounding_chunks: list[dict] | None = None) -> str:
     filtered = _prefilter_description(description)
+    # Only inserted when grounding_chunks is given, so the no-grounding
+    # prompt is byte-identical to every prior run (no stray blank line).
+    grounding_section = f"\n\n{_format_grounding(grounding_chunks)}\n" if grounding_chunks else ""
     return f"""Analyze the following Italian food product and extract all claims that
 may be unfair under the EU Unfair Commercial Practices Directive (UCPD).
 
@@ -270,7 +324,7 @@ PRODUCT NAME: {product.get("name", "N/A")}
 MARKETING BADGE: {product.get("marketing_badge", "none")}
 
 PRODUCT DESCRIPTION (pre-filtered for claim-relevant content):
-{filtered or "No description available"}
+{filtered or "No description available"}{grounding_section}
 
 Extract claims across all in-scope categories: nutrition/health, origin,
 composition, price/value, environmental, and safety-instruction claims."""
@@ -321,7 +375,9 @@ USE_SCHEMA_GRAMMAR = True  # flip to False to A/B test speed: grammar-
                            # rather than something to default silently.
 
 
-def extract_claims(product: dict, description: str, model: str = "llama3.2") -> dict:
+def extract_claims(
+    product: dict, description: str, model: str = "llama3.2", grounding_chunks: list[dict] | None = None
+) -> dict:
     """
     Extract greenwashing-relevant claims from a product description.
 
@@ -329,16 +385,31 @@ def extract_claims(product: dict, description: str, model: str = "llama3.2") -> 
         product: full product record (for name, brand, badge fields)
         description: the description string to analyze
         model: ollama model name
+        grounding_chunks: optional retrieved legal chunks (compare_e5.py
+            top_matches shape) to inject as unlabeled candidate context --
+            see the comment above _format_grounding for why this is
+            embedding-only, not LLM-reranked, and why it's capped by word
+            count. None (the default) preserves the exact prompt/token
+            budget of every prior run.
 
     Returns:
         dict with a "claims" list, each entry matching SCHEMA
     """
+    # num_ctx must grow when grounding is attached -- a real top-7 grounding
+    # block runs ~200-2000 words (median ~789), capped at MAX_GROUNDING_WORDS
+    # (~1400 words =~ 1960 tokens at ~1.4 tok/word for Italian legal text).
+    # Baseline budget (unchanged, see below) is ~2610 tokens + ~590 headroom
+    # for the description = 3200. Grounded budget: same 2610 + ~1960 for the
+    # capped grounding block + the same ~590 description headroom =~ 5160,
+    # rounded up for margin -- measured against the actual corpus, not guessed.
+    num_ctx = 5500 if grounding_chunks else 3200
+
     response = httpx.post(
         OLLAMA_URL,
         json={
             "model": model,
             "system": SYSTEM_PROMPT,
-            "prompt": _build_user_prompt(product, description),
+            "prompt": _build_user_prompt(product, description, grounding_chunks),
             "stream": False,
             "format": RESPONSE_SCHEMA if USE_SCHEMA_GRAMMAR else "json",
             "options": {
@@ -365,12 +436,15 @@ def extract_claims(product: dict, description: str, model: str = "llama3.2") -> 
                                        # (14 * 120 + 30 wrapper overhead =
                                        # ~1700) gives real margin above the
                                        # observed max, not just matching it.
-                "num_ctx": 3200,        # was 2560. Must cover system prompt
+                "num_ctx": num_ctx,     # was 3200 flat. Must cover system prompt
                                         # (~600 tok) + schema (~200) + user
                                         # overhead (~60) + num_predict (1750)
                                         # = ~2610, leaving ~590 tokens for the
                                         # pre-filtered description text itself
                                         # -- verified headroom, not a guess.
+                                        # 5500 when grounded -- see the comment
+                                        # above this function for the added
+                                        # ~1960-token grounding budget.
             },
         },
         timeout=600,  # was 200. The real problem causing timeouts was call
@@ -468,13 +542,26 @@ def _validate_claims(claims: list[dict]) -> tuple[list[dict], list[dict]]:
     return valid, dropped
 
 
-def extract_from_file(filename: str, model: str = "llama3.2") -> tuple[list[dict], list[dict]]:
+def _load_grounding_by_ean(matches_path: str) -> dict[str, list[dict]]:
+    """matches_path: a compare_e5.py output (matches.json shape), keyed by
+    query_ad_id -- which src/knowledge/prepare_ads_chunks.py sets to the
+    product's ean, same join key extract_from_file uses below."""
+    with open(matches_path, encoding="utf-8") as f:
+        matches = json.load(f)
+    return {m["query_ad_id"]: m["top_matches"] for m in matches}
+
+
+def extract_from_file(
+    filename: str, model: str = "llama3.2", matches_file: str | None = None
+) -> tuple[list[dict], list[dict]]:
     records = list(iter_records(filename))
     total = len(records)
     results = []
     failed = []
     total_dropped = 0
     run_start = time.monotonic()
+
+    grounding_by_ean = _load_grounding_by_ean(matches_file) if matches_file else {}
 
     for i, (idx, record) in enumerate(records, 1):
         name = record.get("name", f"record {idx}")
@@ -483,10 +570,12 @@ def extract_from_file(filename: str, model: str = "llama3.2") -> tuple[list[dict
         call_start = time.monotonic()
         try:
             description = record["description"]
+            grounding_chunks = grounding_by_ean.get(record.get("ean")) if matches_file else None
             result = extract_claims(
                 product=record,
                 description=description,
                 model=model,
+                grounding_chunks=grounding_chunks,
             )
             elapsed = time.monotonic() - call_start
 
@@ -541,9 +630,15 @@ if __name__ == "__main__":
     parser.add_argument("--file", required=True, help="filename in data/raw/, e.g. 06.25.json")
     parser.add_argument("--model", default="llama3.2")
     parser.add_argument("--out", default=None, help="optional output path for results json")
+    parser.add_argument(
+        "--matches", default=None,
+        help="optional compare_e5.py output (matches.json shape) to inject as unlabeled legal "
+        "grounding context, joined by ean -- see src/knowledge/tune_retrieval.py for the tuned "
+        "retrieval config this was measured against",
+    )
     args = parser.parse_args()
 
-    results, failed = extract_from_file(args.file, model=args.model)
+    results, failed = extract_from_file(args.file, model=args.model, matches_file=args.matches)
 
     print(f"\nProcessed {len(results)} products")
     total_claims = sum(len(r["claims"]) for r in results)

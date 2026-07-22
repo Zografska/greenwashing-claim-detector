@@ -12,14 +12,20 @@
         "category": "fake_or_unverified_label",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_2",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "environmental vs. general trust-mark split is a heuristic, not a certain read"
       },
       {
         "claim_text": "Elevati standard di qualità agricoltori selezionati",
         "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action, no dedicated blacklist point"
       },
       {
         "claim_text": "Dal 1902 il gusto di crescere insieme. Da 120 anni nutriamo l'Italia di domani",
@@ -28,7 +34,10 @@
         "modifiers": [
           "two_part_verification_required"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "Fonte di proteine vegetali",
@@ -37,7 +46,10 @@
         "modifiers": [
           "compliance_unverified_from_text"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art7",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "undisclosed threshold is an omission, not a false assertion"
       }
     ],
     "extras": {
@@ -175,14 +187,20 @@
         "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action, no dedicated blacklist point"
       },
       {
         "claim_text": "Stiriamo ancora a mano perché ci sono cose che le macchine non possono fare",
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "La nostra storia ha inizio nel 1987 da un piccolo forno di famiglia ... ultimo discendente di una famiglia di fornai",
@@ -191,28 +209,40 @@
         "modifiers": [
           "two_part_verification_required"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "In ogni Bibanese è racchiusa la storia della nostra tradizione e della nostra artigianalità",
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "tutti unici perché stirati a mano uno ad uno",
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "il gusto classico della migliore tradizione panificatoria",
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       }
     ],
     "extras": {
@@ -344,28 +374,40 @@
         "category": "misleading_composition_or_ingredient_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action"
       },
       {
         "claim_text": "Solo aromi naturali",
         "category": "misleading_composition_or_ingredient_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action"
       },
       {
         "claim_text": "Lavorazioni tradizionali (macinazione, spremitura...)",
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "Nuova confezione eco sostenibile",
         "category": "environmental_unsubstantiated",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       },
       {
         "claim_text": "Confezione con il 18% in meno di emissioni di CO2 rispetto alla confezione standard Tetra Prisma Aseptic. Certificato da Carbon Trust.",
@@ -374,14 +416,20 @@
         "modifiers": [
           "specific_quantified"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "no Comparative Advertising Directive (2006/114/EC) chunk exists in this corpus -- UCPD_Art6 is the best available fit, not a good one"
       },
       {
         "claim_text": "L'83% della confezione proviene da fonti vegetali rinnovabili",
         "category": "environmental_unsubstantiated",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       }
     ],
     "extras": {
@@ -525,21 +573,30 @@
         "category": "environmental_unsubstantiated",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       },
       {
         "claim_text": "nel rispetto dell'ambiente",
         "category": "environmental_unsubstantiated",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       },
       {
         "claim_text": "certificati da Enti di Controllo Biologici",
         "category": "irrelevant_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": null,
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": "not a claim; true negative"
       }
     ],
     "extras": {
@@ -667,7 +724,10 @@
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       }
     ],
     "extras": {
@@ -700,7 +760,10 @@
         "category": "environmental_unsubstantiated",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       },
       {
         "claim_text": "Ricchi di fibre e proteine",
@@ -709,7 +772,10 @@
         "modifiers": [
           "compliance_unverified_from_text"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art7",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "undisclosed threshold is an omission, not a false assertion"
       }
     ],
     "extras": {

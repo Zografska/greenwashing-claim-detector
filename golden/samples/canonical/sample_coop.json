@@ -12,49 +12,70 @@
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Massima intensità del colore",
         "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action, no dedicated blacklist point"
       },
       {
         "claim_text": "Copre il 100% dei capelli bianchi",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Migliora la qualità visibile dei capelli***",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Colorazione senza ammoniaca N°1 in Italia**** ... Fonte IRI, Totale Italia Mass Market",
         "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action, no dedicated blacklist point"
       },
       {
         "claim_text": "formula vegana** ... Nessun ingrediente o derivato di origine animale",
         "category": "irrelevant_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": null,
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": "not a claim; true negative"
       },
       {
         "claim_text": "45% di plastica in meno\nRispetto al kit precedente",
         "category": "unfair_comparison",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "no Comparative Advertising Directive (2006/114/EC) chunk exists in this corpus -- UCPD_Art6 is the best available fit, not a good one"
       }
     ],
     "extras": {
@@ -102,7 +123,10 @@
         "modifiers": [
           "compliance_unverified_from_text"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art7",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "undisclosed threshold is an omission, not a false assertion"
       },
       {
         "claim_text": "Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti",
@@ -111,21 +135,30 @@
         "modifiers": [
           "annex_i_blacklist_candidate"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_4",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       },
       {
         "claim_text": "Le migliori pesche gialle bio",
         "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action, no dedicated blacklist point"
       },
       {
         "claim_text": "Rigoni di Asiago per l'ambiente",
         "category": "environmental_unsubstantiated",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       },
       {
         "claim_text": "Etichetta in carta riciclata",
@@ -134,7 +167,10 @@
         "modifiers": [
           "checkable_binary_fact"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       }
     ],
     "extras": {
@@ -189,7 +225,10 @@
         "category": "fake_or_unverified_label",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_2",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "environmental vs. general trust-mark split is a heuristic, not a certain read"
       },
       {
         "claim_text": "65% Plastica riciclata",
@@ -198,14 +237,20 @@
         "modifiers": [
           "specific_quantified"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       },
       {
         "claim_text": "Originale",
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "Ricco in proteine - 37g Per 100g di prodotto",
@@ -214,7 +259,10 @@
         "modifiers": [
           "compliance_unverified_from_text"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art7",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "undisclosed threshold is an omission, not a false assertion"
       }
     ],
     "extras": {
@@ -258,14 +306,20 @@
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "il 50% in più di agenti protettivi** ... rispetto alla formula precedente",
         "category": "unfair_comparison",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "no Comparative Advertising Directive (2006/114/EC) chunk exists in this corpus -- UCPD_Art6 is the best available fit, not a good one"
       },
       {
         "claim_text": "Testato dell'Istituto Svizzero della Vitamina",
@@ -274,7 +328,10 @@
         "modifiers": [
           "annex_i_blacklist_candidate"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_4",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       }
     ],
     "extras": {
@@ -311,14 +368,20 @@
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Composizione che riduce il rischio di allergie",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Nichel, Cromo e Cobalto tested",
@@ -327,21 +390,30 @@
         "modifiers": [
           "undisclosed_test_result"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "no blacklist point for botanical/EFSA-mimicry wording; general misleading-action test"
       },
       {
         "claim_text": "Etichetta Ambientale",
         "category": "irrelevant_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": "mandatory_disclosure"
+        "irrelevant_subreason": "mandatory_disclosure",
+        "gold_legal_chunk_id": null,
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": "not a claim; true negative"
       },
       {
         "claim_text": "CRESCENDO",
         "category": "fake_or_unverified_label",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_2",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "environmental vs. general trust-mark split is a heuristic, not a certain read"
       }
     ],
     "extras": {
@@ -391,28 +463,40 @@
         "category": "irrelevant_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": null,
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": "not a claim; true negative"
       },
       {
         "claim_text": "PROTEIN +",
         "category": "fake_or_unverified_label",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_2",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "environmental vs. general trust-mark split is a heuristic, not a certain read"
       },
       {
         "claim_text": "Confezione con carta certificata FSC per una gestione responsabile delle foreste",
         "category": "environmental_unsubstantiated",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "ECGT_Art1_NuoveDefinizioni_o",
+        "legal_mapping_confidence": "high",
+        "legal_mapping_note": null
       },
       {
         "claim_text": "Filiera Italiana: 100% farina di grano controllato e tracciato dalla semina al prodotto finito",
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       }
     ],
     "extras": {
@@ -455,7 +539,10 @@
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       }
     ],
     "extras": {

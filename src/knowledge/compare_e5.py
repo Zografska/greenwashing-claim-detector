@@ -147,6 +147,138 @@ def csls_correct(sim: np.ndarray, k: int):
     return 2 * sim - r_query[:, None] - r_passage[None, :]
 
 
+def compare(
+    query_emb: np.ndarray,
+    query_meta: dict,
+    ecgt_emb: np.ndarray,
+    ecgt_meta: dict,
+    ucpd_emb: np.ndarray,
+    ucpd_meta: dict,
+    *,
+    top_k: int = 3,
+    center: bool = True,
+    csls: bool = True,
+    csls_k: int = 10,
+    min_similarity: float | None = None,
+    centroid_sample_size: int = 56,
+    seed: int = 42,
+    verbose: bool = True,
+) -> list[dict]:
+    """Core ranking logic, callable directly (e.g. by tune_retrieval.py's grid
+    search) without shelling out to the CLI or round-tripping through JSON
+    files per config. `main()` below is a thin argparse wrapper over this."""
+    if query_meta["mode"] != "query" and verbose:
+        print(f"Warning: query embeddings were embedded with mode='{query_meta['mode']}', expected 'query'")
+    for name, meta in (("ecgt", ecgt_meta), ("ucpd", ucpd_meta)):
+        if meta["mode"] != "passage" and verbose:
+            print(f"Warning: {name} embeddings were embedded with mode='{meta['mode']}', expected 'passage'")
+
+    if not (query_emb.shape[1] == ecgt_emb.shape[1] == ucpd_emb.shape[1]):
+        raise ValueError(
+            f"Dimension mismatch: queries dim {query_emb.shape[1]}, ecgt dim "
+            f"{ecgt_emb.shape[1]}, ucpd dim {ucpd_emb.shape[1]}. Did you use the "
+            f"same model for all three?"
+        )
+
+    # Passages from both directives are searched together as one corpus; the
+    # id prefix on each chunk (ECGT_.../UCPD_...) already says which directive
+    # it came from, but "directive" is added explicitly too so results don't
+    # depend on that naming convention holding forever.
+    passage_emb = np.concatenate([ecgt_emb, ucpd_emb], axis=0)
+    passage_chunks = (
+        [{**c, "directive": "ecgt"} for c in ecgt_meta["chunks"]]
+        + [{**c, "directive": "ucpd"} for c in ucpd_meta["chunks"]]
+    )
+
+    query_chunks = query_meta["chunks"]
+    ad_ids = [c.get("ad_id", c["id"]) for c in query_chunks]
+    n_ads = len(dict.fromkeys(ad_ids))  # preserves first-seen order, unlike set()
+
+    if verbose:
+        print(
+            f"Comparing {len(query_chunks)} claim-sentence chunks across {n_ads} ads "
+            f"against {passage_emb.shape[0]} legal chunks (ecgt + ucpd) ..."
+        )
+
+    if not center:
+        # All sets are L2-normalized (done in embed_e5.py), so dot product == cosine similarity
+        query_emb_scored, passage_emb_scored = query_emb, passage_emb
+    else:
+        query_emb_scored, passage_emb_scored, used_sample_size = center_and_normalize(
+            query_emb, passage_emb, centroid_sample_size, seed
+        )
+        if verbose:
+            print(f"Centered against a {used_sample_size}-passage random sample (seed={seed}) before scoring")
+
+    similarity = query_emb_scored @ passage_emb_scored.T  # shape: (n_queries, n_passages)
+
+    if not csls:
+        ranking_scores = similarity
+    else:
+        ranking_scores = csls_correct(similarity, csls_k)
+        if verbose:
+            used_k = max(1, min(csls_k, min(similarity.shape)))
+            print(f"Applied CSLS hub correction (k={used_k})")
+
+    # Per-sentence candidate lists first (ranked by CSLS/cosine, floor-filtered),
+    # since retrieval runs at the chunk level -- pooling across an ad's sentences
+    # happens after, once each sentence already has its own ranked candidates.
+    row_candidates = []
+    for i in range(len(query_chunks)):
+        order = np.argsort(ranking_scores[i])[::-1]
+        if min_similarity is not None:
+            order = [j for j in order if similarity[i, j] >= min_similarity]
+        row_candidates.append(order)
+
+    ad_rows = {}
+    for i, ad_id in enumerate(ad_ids):
+        ad_rows.setdefault(ad_id, []).append(i)
+
+    results = []
+    for ad_id, rows in ad_rows.items():
+        # For each passage, keep only its single best-scoring sentence within
+        # this ad -- a passage that several sentences weakly match shouldn't
+        # occupy multiple of the ad's top-k slots.
+        best_per_passage = {}
+        for i in rows:
+            for j in row_candidates[i]:
+                rank_score = ranking_scores[i, j]
+                if j not in best_per_passage or rank_score > best_per_passage[j][1]:
+                    best_per_passage[j] = (i, rank_score)
+
+        ranked_passages = sorted(best_per_passage.items(), key=lambda kv: kv[1][1], reverse=True)
+        top_passages = ranked_passages[:top_k]
+        below_threshold = min_similarity is not None and len(best_per_passage) == 0
+
+        matches = [
+            {
+                "legal_chunk_id": passage_chunks[j]["id"],
+                "legal_directive": passage_chunks[j]["directive"],
+                "legal_title": passage_chunks[j]["title"],
+                "legal_source": passage_chunks[j]["source"],
+                "legal_text": passage_chunks[j]["text"],
+                "matched_sentence": query_chunks[sent_i]["text"],
+                "similarity": float(similarity[sent_i, j]),
+                **({} if not csls else {"csls_similarity": float(rank_score)}),
+            }
+            for j, (sent_i, rank_score) in top_passages
+        ]
+
+        first_chunk = query_chunks[rows[0]]
+        results.append(
+            {
+                "query_ad_id": ad_id,
+                "query_title": first_chunk["title"],
+                "query_source": first_chunk.get("source"),
+                "query_sentences": [query_chunks[i]["text"] for i in rows],
+                "top_matches": matches,
+                "below_similarity_threshold": below_threshold,
+            }
+        )
+
+    return results
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--queries", required=True, help="Name of the query embedding set under ./embeddings/, e.g. '06.25'")
@@ -180,111 +312,16 @@ def main():
     ecgt_emb, ecgt_meta = load_passage_set("ecgt")
     ucpd_emb, ucpd_meta = load_passage_set("ucpd")
 
-    if query_meta["mode"] != "query":
-        print(f"Warning: '{args.queries}' embeddings were embedded with mode='{query_meta['mode']}', expected 'query'")
-    for name, meta in (("ecgt", ecgt_meta), ("ucpd", ucpd_meta)):
-        if meta["mode"] != "passage":
-            print(f"Warning: {name} embeddings were embedded with mode='{meta['mode']}', expected 'passage'")
-
-    if not (query_emb.shape[1] == ecgt_emb.shape[1] == ucpd_emb.shape[1]):
-        raise ValueError(
-            f"Dimension mismatch: queries dim {query_emb.shape[1]}, ecgt dim "
-            f"{ecgt_emb.shape[1]}, ucpd dim {ucpd_emb.shape[1]}. Did you use the "
-            f"same model for all three?"
-        )
-
-    # Passages from both directives are searched together as one corpus; the
-    # id prefix on each chunk (ECGT_.../UCPD_...) already says which directive
-    # it came from, but "directive" is added explicitly too so results don't
-    # depend on that naming convention holding forever.
-    passage_emb = np.concatenate([ecgt_emb, ucpd_emb], axis=0)
-    passage_chunks = (
-        [{**c, "directive": "ecgt"} for c in ecgt_meta["chunks"]]
-        + [{**c, "directive": "ucpd"} for c in ucpd_meta["chunks"]]
+    results = compare(
+        query_emb, query_meta, ecgt_emb, ecgt_meta, ucpd_emb, ucpd_meta,
+        top_k=args.top_k,
+        center=not args.no_center,
+        csls=not args.no_csls,
+        csls_k=args.csls_k,
+        min_similarity=args.min_similarity,
+        centroid_sample_size=args.centroid_sample_size,
+        seed=args.seed,
     )
-
-    query_chunks = query_meta["chunks"]
-    ad_ids = [c.get("ad_id", c["id"]) for c in query_chunks]
-    n_ads = len(dict.fromkeys(ad_ids))  # preserves first-seen order, unlike set()
-
-    print(
-        f"Comparing {len(query_chunks)} claim-sentence chunks across {n_ads} '{args.queries}' ads "
-        f"against {passage_emb.shape[0]} legal chunks (ecgt + ucpd) ..."
-    )
-
-    if args.no_center:
-        # All sets are L2-normalized (done in embed_e5.py), so dot product == cosine similarity
-        query_emb_scored, passage_emb_scored = query_emb, passage_emb
-    else:
-        query_emb_scored, passage_emb_scored, used_sample_size = center_and_normalize(
-            query_emb, passage_emb, args.centroid_sample_size, args.seed
-        )
-        print(f"Centered against a {used_sample_size}-passage random sample (seed={args.seed}) before scoring")
-
-    similarity = query_emb_scored @ passage_emb_scored.T  # shape: (n_queries, n_passages)
-
-    if args.no_csls:
-        ranking_scores = similarity
-    else:
-        ranking_scores = csls_correct(similarity, args.csls_k)
-        used_k = max(1, min(args.csls_k, min(similarity.shape)))
-        print(f"Applied CSLS hub correction (k={used_k})")
-
-    # Per-sentence candidate lists first (ranked by CSLS/cosine, floor-filtered),
-    # since retrieval runs at the chunk level -- pooling across an ad's sentences
-    # happens after, once each sentence already has its own ranked candidates.
-    row_candidates = []
-    for i in range(len(query_chunks)):
-        order = np.argsort(ranking_scores[i])[::-1]
-        if args.min_similarity is not None:
-            order = [j for j in order if similarity[i, j] >= args.min_similarity]
-        row_candidates.append(order)
-
-    ad_rows = {}
-    for i, ad_id in enumerate(ad_ids):
-        ad_rows.setdefault(ad_id, []).append(i)
-
-    results = []
-    for ad_id, rows in ad_rows.items():
-        # For each passage, keep only its single best-scoring sentence within
-        # this ad -- a passage that several sentences weakly match shouldn't
-        # occupy multiple of the ad's top-k slots.
-        best_per_passage = {}
-        for i in rows:
-            for j in row_candidates[i]:
-                rank_score = ranking_scores[i, j]
-                if j not in best_per_passage or rank_score > best_per_passage[j][1]:
-                    best_per_passage[j] = (i, rank_score)
-
-        ranked_passages = sorted(best_per_passage.items(), key=lambda kv: kv[1][1], reverse=True)
-        top_passages = ranked_passages[: args.top_k]
-        below_threshold = args.min_similarity is not None and len(best_per_passage) == 0
-
-        matches = [
-            {
-                "legal_chunk_id": passage_chunks[j]["id"],
-                "legal_directive": passage_chunks[j]["directive"],
-                "legal_title": passage_chunks[j]["title"],
-                "legal_source": passage_chunks[j]["source"],
-                "legal_text": passage_chunks[j]["text"],
-                "matched_sentence": query_chunks[sent_i]["text"],
-                "similarity": float(similarity[sent_i, j]),
-                **({} if args.no_csls else {"csls_similarity": float(rank_score)}),
-            }
-            for j, (sent_i, rank_score) in top_passages
-        ]
-
-        first_chunk = query_chunks[rows[0]]
-        results.append(
-            {
-                "query_ad_id": ad_id,
-                "query_title": first_chunk["title"],
-                "query_source": first_chunk.get("source"),
-                "query_sentences": [query_chunks[i]["text"] for i in rows],
-                "top_matches": matches,
-                "below_similarity_threshold": below_threshold,
-            }
-        )
 
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)

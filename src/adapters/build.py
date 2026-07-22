@@ -29,7 +29,7 @@ ADAPTERS = {
 }
 
 
-def build(retailer: str, in_path: Path, gold_out: Path, extraction_out: Path) -> tuple[int, int]:
+def build(retailer: str, in_path: Path, gold_out: Path, extraction_out: Path) -> dict:
     adapter = ADAPTERS[retailer]
     records = json.loads(in_path.read_text(encoding="utf-8"))
     if not isinstance(records, list):
@@ -47,7 +47,18 @@ def build(retailer: str, in_path: Path, gold_out: Path, extraction_out: Path) ->
     )
 
     empty_descriptions = sum(1 for r in extraction_input if not r.get("description", "").strip())
-    return len(records), empty_descriptions
+    all_claims = [c for g in gold for c in g["extracted_claims"]]
+    low_confidence = [c for c in all_claims if c["legal_mapping_confidence"] == "low"]
+    return {
+        "total_records": len(records),
+        "empty_descriptions": empty_descriptions,
+        "total_claims": len(all_claims),
+        "low_confidence_legal_mappings": len(low_confidence),
+        "low_confidence_by_category": {
+            cat: sum(1 for c in low_confidence if c["category"] == cat)
+            for cat in sorted({c["category"] for c in low_confidence})
+        },
+    }
 
 
 if __name__ == "__main__":
@@ -62,13 +73,17 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    total, empty = build(
-        args.retailer, Path(args.in_path), Path(args.gold_out), Path(args.extraction_out)
-    )
-    print(f"{args.retailer}: wrote {total} records to {args.gold_out} and {args.extraction_out}")
-    if empty:
+    stats = build(args.retailer, Path(args.in_path), Path(args.gold_out), Path(args.extraction_out))
+    print(f"{args.retailer}: wrote {stats['total_records']} records to {args.gold_out} and {args.extraction_out}")
+    if stats["empty_descriptions"]:
         print(
-            f"WARNING: {empty}/{total} records have an empty synthesized description -- "
-            f"src/data.py's iter_records will skip these (they'll never reach the model, "
-            f"and won't count as extraction misses since there was nothing to extract from)."
+            f"WARNING: {stats['empty_descriptions']}/{stats['total_records']} records have an empty "
+            f"synthesized description -- src/data.py's iter_records will skip these (they'll never "
+            f"reach the model, and won't count as extraction misses since there was nothing to extract from)."
+        )
+    if stats["low_confidence_legal_mappings"]:
+        print(
+            f"NOTE: {stats['low_confidence_legal_mappings']}/{stats['total_claims']} claims got a "
+            f"low-confidence gold_legal_chunk_id mapping (see src/adapters/legal_mapping.py) -- "
+            f"by category: {stats['low_confidence_by_category']}"
         )

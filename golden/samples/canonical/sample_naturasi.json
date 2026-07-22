@@ -12,35 +12,50 @@
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "con pasta madre",
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "ricetta vegana",
         "category": "misleading_composition_or_ingredient_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action"
       },
       {
         "claim_text": "senza lievito di birra",
         "category": "misleading_composition_or_ingredient_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action"
       },
       {
         "claim_text": "senza olio di palma",
         "category": "misleading_composition_or_ingredient_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action"
       }
     ],
     "extras": {
@@ -142,14 +157,20 @@
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "Equosolidale",
         "category": "fake_or_unverified_label",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_2",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "environmental vs. general trust-mark split is a heuristic, not a certain read"
       }
     ],
     "extras": {
@@ -247,21 +268,30 @@
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "prodotto da nostra filiera",
         "category": "fake_or_unverified_label",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_2",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "environmental vs. general trust-mark split is a heuristic, not a certain read"
       },
       {
         "claim_text": "ricetta vegana",
         "category": "misleading_composition_or_ingredient_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action"
       }
     ],
     "extras": {
@@ -378,14 +408,20 @@
         "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action; Art. 6(1)'s 'even if factually correct' clause covers two_part_verification_required heritage claims specifically"
       },
       {
         "claim_text": "di farro",
         "category": "misleading_composition_or_ingredient_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action"
       }
     ],
     "extras": {
@@ -485,14 +521,20 @@
         "modifiers": [
           "compliance_unverified_from_text"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art7",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "undisclosed threshold is an omission, not a false assertion"
       },
       {
         "claim_text": "prodotto da nostra filiera",
         "category": "fake_or_unverified_label",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_2",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "environmental vs. general trust-mark split is a heuristic, not a certain read"
       }
     ],
     "extras": {
@@ -606,7 +648,10 @@
         "category": "fake_or_unverified_label",
         "risk_level": "MEDIUM",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_AnnexI_2",
+        "legal_mapping_confidence": "low",
+        "legal_mapping_note": "environmental vs. general trust-mark split is a heuristic, not a certain read"
       },
       {
         "claim_text": "fonte di proteine",
@@ -615,14 +660,20 @@
         "modifiers": [
           "compliance_unverified_from_text"
         ],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art7",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "undisclosed threshold is an omission, not a false assertion"
       },
       {
         "claim_text": "senza glutine",
         "category": "misleading_composition_or_ingredient_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action"
       }
     ],
     "extras": {
@@ -925,7 +976,10 @@
         "category": "misleading_composition_or_ingredient_claim",
         "risk_level": "LOW",
         "modifiers": [],
-        "irrelevant_subreason": null
+        "irrelevant_subreason": null,
+        "gold_legal_chunk_id": "UCPD_Art6",
+        "legal_mapping_confidence": "medium",
+        "legal_mapping_note": "general misleading action"
       }
     ],
     "extras": {
