@@ -1,0 +1,483 @@
+[
+  {
+    "origin_file": "cura-persona",
+    "golden_bucket": "hard_yes",
+    "ean": "3600542487085",
+    "product_id": "599962",
+    "name": "Colorazione capelli permanente 5.3 castano dorato",
+    "brand": "Garnier",
+    "url": "https://www.coopshop.it/ebsn/api/products/599962",
+    "denomination": null,
+    "description": null,
+    "features": "Nuovo\n5.3 Castano dorato\nColorazione permanente\n3x Volte più luminosi***\n60% di Oli*\nCon Oli di Fiori di Origine Naturale\nMassima intensità del colore\n- Copre il 100% dei capelli bianchi\n- Colore intenso, che dura a lungo\n- Migliora la qualità visibile dei capelli***\n- Comfort ottimale del cuoio capelluto\nColorazione senza ammoniaca N°1 in Italia****\nSenza siliconi, formula vegana**\n*nella crema colorante\n**Nessun ingrediente o derivato di origine animale\n***test strumentali\n****Fonte IRI, Totale Italia Mass Market (Ipermercati+Supermercati+Libero Servizio Piccolo+Specialisti Casa Toilette+Discount), Colorazione Senza Ammoniaca, dati a volume da 13/07/2020 a 12/07/2021",
+    "producer_info": "ODS: Oil delivery system\nInfonde il colore intensamente all'interno della fibra capillare\nMassima intensità del colore\nDiffonde il colore in profondità nei capelli\n- Colore intenso e ricco di riflessi\n- Colore brillante che dura a lungo\n- Copertura 100% capelli bianchi\nMigliora la qualità visibile dei capelli***\n- Capelli più morbidi, leggeri e fino a 3 volte più luminosi***\n- Comfort ottimale del cuoio capelluto\nApplicazione ultra sensoriale\n- Crema vellutata che non cola\n- Delicata fragranza floreale\n***test strumentali\nSenza ammoniaca\nSenza siliconi\nVegana formula**\n**Nessun ingrediente o derivato di origine animale\nNuova preparazione più facile\n45% di plastica in meno\nRispetto al kit precedente\nStessa quantità di formula\nNuovo Rivelatore in crema all'interno del flacone applicatore\nTubetto Colorante\nNuovo Balsamo Luce&Seta senza siliconi",
+    "certifications": null,
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": "PAP\n90\nC/HDPE",
+    "matched_signals": [
+      {
+        "matched_text": "45% di plastica in meno",
+        "category": "unfair_comparison",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "N°1 in Italia",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [
+      "Fonte IRI"
+    ],
+    "heuristic_bucket": "hard_yes",
+    "extracted_claims": [
+      {
+        "claim_text": "3x Volte più luminosi***",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Massima intensità del colore",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Copre il 100% dei capelli bianchi",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Migliora la qualità visibile dei capelli***",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Colorazione senza ammoniaca N°1 in Italia**** ... Fonte IRI, Totale Italia Mass Market",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "formula vegana** ... Nessun ingrediente o derivato di origine animale",
+        "category": "irrelevant_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "45% di plastica in meno\nRispetto al kit precedente",
+        "category": "unfair_comparison",
+        "risk_level": "LOW",
+        "modifiers": []
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "colazione-dolci-e-snack-salati",
+    "golden_bucket": "hard_yes",
+    "ean": "8052575091954",
+    "product_id": "663509",
+    "name": "Confettura di pesche gialle natù no zuccheri aggiu",
+    "brand": "Rigoni di Asiago",
+    "url": "https://www.coopshop.it/ebsn/api/products/663509",
+    "denomination": "Preparazione biologica alle pesche gialle con edulcorante",
+    "description": null,
+    "features": "Senza conservanti - Edulcoranti artificiali\n13 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n*per porzione (15 g) 55 kJ / 13 kcal - per 100 g 367 kJ / 87 kcal",
+    "producer_info": "Le migliori pesche gialle bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+    "certifications": [
+      "BIOLOGICO"
+    ],
+    "life_style": [
+      "Senza aggiunta di zucchero",
+      "Biologico",
+      "Idoneo ai vegani"
+    ],
+    "recycling": [
+      "Metallo - Largamente riciclabile",
+      "Vetro - Largamente riciclabile"
+    ],
+    "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata",
+    "matched_signals": [
+      {
+        "matched_text": "Asiago per l'ambiente",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "Approvata da A",
+        "category": "misleading_endorsement_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [],
+    "heuristic_bucket": "hard_yes",
+    "extracted_claims": [
+      {
+        "claim_text": "Fonte di fibre",
+        "category": "nutrition_content_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "compliance_unverified_from_text"
+        ]
+      },
+      {
+        "claim_text": "Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti",
+        "category": "misleading_endorsement_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [
+          "annex_i_blacklist_candidate"
+        ]
+      },
+      {
+        "claim_text": "Le migliori pesche gialle bio",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Rigoni di Asiago per l'ambiente",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Etichetta in carta riciclata",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "LOW",
+        "modifiers": [
+          "checkable_binary_fact"
+        ]
+      }
+    ],
+    "bucket_review_flag": "recheck_hard_yes_basis",
+    "bucket_review_detail": "actionable claim count dropped from 6 to 5 after puffery removal -- reverify this product still clears the hard_yes bar (>=1 HIGH or >=2 distinct real claims)",
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "gastronomia-salumi-e-formaggi",
+    "golden_bucket": "hard_yes",
+    "ean": "8007660011386",
+    "product_id": "619225",
+    "name": "Salamini con bresaola",
+    "brand": "Fratelli Beretta",
+    "url": "https://www.coopshop.it/ebsn/api/products/619225",
+    "denomination": "Snack di carne bovina affumicata con bresaola",
+    "description": null,
+    "features": "BGreen - 65% Plastica riciclata - Scopri di più sul sito www.fratelliberetta.com\nOriginale\nRicco in proteine - 37g Per 100g di prodotto\nSenza glutine e senza lattosio",
+    "producer_info": null,
+    "certifications": null,
+    "life_style": null,
+    "recycling": "Plastica - Largamente riciclabile",
+    "recycling_other": "Confezione - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune",
+    "matched_signals": [
+      {
+        "matched_text": "65% Plastica",
+        "category": "unfair_comparison",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "65% Plastica riciclata",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [],
+    "heuristic_bucket": "hard_yes",
+    "extracted_claims": [
+      {
+        "claim_text": "BGreen",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "65% Plastica riciclata",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM",
+        "modifiers": [
+          "specific_quantified"
+        ]
+      },
+      {
+        "claim_text": "Originale",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Ricco in proteine - 37g Per 100g di prodotto",
+        "category": "nutrition_content_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "compliance_unverified_from_text"
+        ]
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "cura-persona",
+    "golden_bucket": "in_between",
+    "ean": "8700216528429",
+    "product_id": "673142",
+    "name": "Balsamo capelli infinite lunghezze",
+    "brand": "Pantene Pro-V",
+    "url": "https://www.coopshop.it/ebsn/api/products/673142",
+    "denomination": "Balsamo",
+    "description": null,
+    "features": "Ripara senza appesantire\nRipara* i capelli lunghi fino all'ultimo centimetro\nCon o senza risciacquo\n*danni alla superficie del capello",
+    "producer_info": "Balsamo quotidiano per capelli lunghi e dall'aspetto sano, senza appesantire\nNutri i capelli con la nostra esclusiva miscela Pro-V\nPro-Vitamina B5 + Lipidi rinforzanti + Antiossidanti protettivi\nLa nostra formula Pro-V con tecnologia Active Nutri-Plex, arricchita con il 50% in più di agenti protettivi ** dei legami del capello, aiuta a riparare* anche le punte danneggiate, dall'interno. Per una brillantezza e morbidezza dall'aspetto sano dalle radici alle punte, senza appesantire.\n*danni alla superficie del capello\n**rispetto alla formula precedente\nSenza olio minerale\nSenza coloranti\nTestato dell'Istituto Svizzero della Vitamina",
+    "certifications": null,
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": "Visita https://it.pg.com/ per la composizione della confezione e le modalità di smaltimento\nHDPE 2",
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [
+      "rispetto alla formula precedente"
+    ],
+    "hard_no_reason": "legit_certification_only",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [
+      {
+        "claim_text": "Ripara* i capelli lunghi fino all'ultimo centimetro",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "il 50% in più di agenti protettivi** ... rispetto alla formula precedente",
+        "category": "unfair_comparison",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Testato dell'Istituto Svizzero della Vitamina",
+        "category": "misleading_endorsement_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [
+          "annex_i_blacklist_candidate"
+        ]
+      }
+    ],
+    "bucket_correction": "hard_no -> in_between",
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "cura-persona",
+    "golden_bucket": "in_between",
+    "ean": "8001120727633",
+    "product_id": "646175",
+    "name": "Salviettine pelli sensibili base acqua x60",
+    "brand": "Coop",
+    "url": "https://www.coopshop.it/ebsn/api/products/646175",
+    "denomination": "60 Salviettine 99% acqua",
+    "description": null,
+    "features": "99% di Acqua\nDermatologicamente testato su pelli sensibili\nComposizione che riduce il rischio di allergie",
+    "producer_info": "Le salviettine detergenti Crescendo Advance Coop, a base di 99% acqua, sono adatte per le pelli sensibili e studiate per minimizzare i rischi di allergie. Nate per detergere la pelle delicata del tuo bambino, possono essere utilizzate per il cambio del pannolino e per pulire mani e viso. Adatte anche ai più grandi, in viaggio e in casa.\nNichel, Cromo e Cobalto tested",
+    "certifications": [
+      "CRESCENDO"
+    ],
+    "life_style": null,
+    "recycling": [
+      "Plastica - Largamente riciclabile",
+      "Plastica - Largamente riciclabile",
+      "Plastica - Largamente riciclabile"
+    ],
+    "recycling_other": "Etichetta Ambientale\nSacchetto - Plastica - 7 - Raccolta plastica\nSigillo e Tappo - Plastica - PP 5 - Raccolta Plastica\nVerifica le disposizioni del tuo Comune",
+    "matched_signals": [
+      {
+        "matched_text": "Dermatologicamente testato",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "testato su pelli",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [],
+    "heuristic_bucket": "in_between",
+    "extracted_claims": [
+      {
+        "claim_text": "Dermatologicamente testato su pelli sensibili",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Composizione che riduce il rischio di allergie",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Nichel, Cromo e Cobalto tested",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [
+          "undisclosed_test_result"
+        ]
+      },
+      {
+        "claim_text": "Etichetta Ambientale",
+        "category": "irrelevant_claim",
+        "risk_level": "LOW",
+        "modifiers": [],
+        "irrelevant_subreason": "mandatory_disclosure"
+      },
+      {
+        "claim_text": "CRESCENDO",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "colazione-dolci-e-snack-salati",
+    "golden_bucket": "in_between",
+    "ean": "8002590085681",
+    "product_id": "645376",
+    "name": "Fette biscottate proteiche",
+    "brand": "Misura",
+    "url": "https://www.coopshop.it/ebsn/api/products/645376",
+    "denomination": "Fette biscottate",
+    "description": null,
+    "features": "Farina da Filiera Italiana\nProteine 20g",
+    "producer_info": "Fette Biscottate\nUna fetta croccante, Ricca di Proteine che contribuiscono alla crescita e al mantenimento della massa muscolare, nell'ambito di una dieta varia ed equilibrata e uno stile di vita sano. Per iniziare la giornata con una carica di energia!\nProtein\nGusto e proteine.\nTutto in uno.\nRicche di proteine\nRicche di fibre\nConfezione con carta certificata FSC per una gestione responsabile delle foreste\nFiliera Italiana: 100% farina di grano controllato e tracciato dalla semina al prodotto finito",
+    "certifications": [
+      "PROTEIN +"
+    ],
+    "life_style": null,
+    "recycling": [
+      "Carta - Largamente riciclabile",
+      "Carta - Largamente riciclabile",
+      "Carta - Largamente riciclabile"
+    ],
+    "recycling_other": "Incarto e stick - C/PAP 81 - Carta\nCannettato - PAP 22 - Carta\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune",
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [
+      "carta certificata FSC"
+    ],
+    "hard_no_reason": "legit_certification_only",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [
+      {
+        "claim_text": "Ricca di Proteine che contribuiscono alla crescita e al mantenimento della massa muscolare",
+        "category": "irrelevant_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "PROTEIN +",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Confezione con carta certificata FSC per una gestione responsabile delle foreste",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Filiera Italiana: 100% farina di grano controllato e tracciato dalla semina al prodotto finito",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      }
+    ],
+    "bucket_correction": "hard_no -> in_between (PROTEIN+ private label)",
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "pane-pasta-riso-e-farine",
+    "golden_bucket": "hard_no",
+    "ean": "2412641000000",
+    "product_id": "429649",
+    "name": "Pane a legna arabo",
+    "brand": "FRAGRANZE",
+    "url": "https://www.coopshop.it/ebsn/api/products/429649",
+    "denomination": null,
+    "description": "PANE ARABO-COTTO A LEGNA\nPANE DI TIPO 0",
+    "features": null,
+    "producer_info": "FRAGRANZE srl",
+    "certifications": null,
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": null,
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [],
+    "hard_no_reason": "no_claim_content",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [
+      {
+        "claim_text": "PANE ARABO-COTTO A LEGNA",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "acqua-e-bevande",
+    "golden_bucket": "hard_no",
+    "ean": "5000281050553",
+    "product_id": "582768",
+    "name": "Whisky single malt 8 yo",
+    "brand": "Lagavulin",
+    "url": "https://www.coopshop.it/ebsn/api/products/582768",
+    "denomination": null,
+    "description": null,
+    "features": "Aged 8 years",
+    "producer_info": null,
+    "certifications": null,
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": null,
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [],
+    "hard_no_reason": "no_claim_content",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "latte-yogurt-e-uova",
+    "golden_bucket": "hard_no",
+    "ean": "8004983006372",
+    "product_id": "673177",
+    "name": "Yogurt mango/maracuja bella vita",
+    "brand": "Bella Vita",
+    "url": "https://www.coopshop.it/ebsn/api/products/673177",
+    "denomination": "Yogurt intero senza lattosio da latte fieno STG (81%) al mango e maracuja",
+    "description": null,
+    "features": null,
+    "producer_info": "Lattosio: <0,01g per 100g di prodotto. Il prodotto contiene glucosio e galattosio in conseguenza della scissione del lattosio.",
+    "certifications": [
+      "SENZA LATTOSIO"
+    ],
+    "life_style": null,
+    "recycling": [
+      "Carta - Largamente riciclabile",
+      "Metallo - Largamente riciclabile"
+    ],
+    "recycling_other": "Raccolta differenziata:\nVasetto - C/PAP 81 - Carta\nCapsula - C/ALU 90 - Metalli\nVerifica le disposizioni del tuo comune",
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [
+      "STG"
+    ],
+    "hard_no_reason": "legit_certification_only",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [],
+    "redo_schema_version": 2
+  }
+]

@@ -1,0 +1,1029 @@
+[
+  {
+    "origin_file": "prodotti-prima-infanzia",
+    "golden_bucket": "hard_yes",
+    "product_id": "8001040199374",
+    "ean": "8001040199374",
+    "name": "Plasmon Omogeneizzato Fagioli con carote 2 x 80 g",
+    "url": "https://www.carrefour.it/p/plasmon-omogeneizzato-fagioli-con-carote-2-x-80-g/8001040199374.html",
+    "code": "",
+    "C4_MarketingProduct": "8 - 36 mesi\nLo svezzamento è un viaggio alla scoperta di gusti e consistenze.\nPlasmon, in accordo con l'OMS, sostiene l'allattamento esclusivo al seno per almeno i primi sei mesi di vita, e ove possibile fino ai due anni quale componente lattea della sua dieta salvo diverso parere del pediatra.\n\nFiliera tracciata e controllata\nTracciabilità e sicurezza garantite da Oasi nella crescita\nElevati standard di qualità agricoltori selezionati\nAttenti all'ambiente confezione riciclabile\n\nFiliera controllata - Ingredienti selezionati\n\nRicetta semplice e cottura al vapore\nAcqua di cottura\nLegumi e verdure selezionati\nFarina di riso\nSucco di limone\nSolo quello che vedi\ntrasparenza dal campo al vasetto\n- Senza amidi e aromi aggiunti\n- Senza sale e olio aggiunti\n- Senza coloranti* e conservanti*\n*Come per legge\n\nSenza glutine",
+    "C4_MarketingBrand": "Plasmon\nDal 1902 il gusto di crescere insieme\n\nDa 120 anni nutriamo l'Italia di domani, garantendo solo ingredienti di prima qualità, selezionati e combinati con cura in ricette semplici, equilibrate, pensate per il tuo bambino.",
+    "C4_ManufacturesAddress": "Plasmon\nSede e stabilimento\nVia Migliara 45\nLatina\nItalia",
+    "C4_StorageMethod": "Ambiente",
+    "C4_Storage": "Il clac all'apertura della capsula è garanzia di confezione integra. Confezione protetta sottovuoto. Il prodotto deve essere conservato in luogo asciutto e lontano da fonti di calore. Se non completamente utilizzato, deve essere richiuso, conservato in frigorifero e consumato entro 24 ore.",
+    "C4_PreparationInfo": "Prodotto indicato a partire dal 8° mese compiuto, salvo diverso parere del pediatra.\n\nL'eventuale imbrunimento o il rilascio di acqua derivano dalle caratteristiche naturali dei legumi. Scalda il prodotto a bagnomaria, dopo aver tolto la capsula, mescolando bene fino al raggiungimento della consistenza desiderata. Aggiungi alla pappa.",
+    "C4_DurabilityAfterOpening": "Durata dopo l'apertura: 1 Giorni",
+    "C4_SalesDenomination": "Alimento per l'infanzia omogeneizzato con fagioli e carote\nA norma del D.P.R. n.128 del 7.4.99",
+    "C4_Allergens": "Non contiene Glutine",
+    "C4_NutritionClaims": "Fonte di proteine vegetali",
+    "C4_AdditivesMoreText": "0% Sale aggiunto, amidi aggiunti\nSenza amidi e aromi aggiunti\nSenza coloranti* e conservanti*\n*Come per legge",
+    "C4_RecyclingInfo": "Cartone Carta - Largamente riciclabile\nEtichetta - incollata Carta - Largamente riciclabile\nCoperchio Metallo - Largamente riciclabile\nVaso Vetro - Largamente riciclabile",
+    "C4_RecyclingMoreText": "Ricicla con Plasmon\nCartoncino esterno ed etichetta - Raccolta carta - PAP 21 / PAP 22\nVasetto - Raccolta vetro - GL 70\nCapsula - Raccolta metalli - C/FE 91\nVerifica con il tuo comune",
+    "C4_Subfamily": "14403",
+    "C4_MoreInformation": "La confezione contiene 2 vasetti da 80g ciascuno non vendibili singolarmente.",
+    "labeledIngredients": [
+      {
+        "description": null,
+        "ingredientList": [
+          "Acqua di cottura",
+          "Fagioli borlotti (22%)",
+          "Carote (8%)",
+          "Farina di riso (3%)",
+          "Succo di limone concentrato"
+        ]
+      }
+    ],
+    "nutritionInfo": [
+      {
+        "description": null,
+        "table": {
+          "headers": [
+            "",
+            "Dichiarazione nutrizionale per 100 g"
+          ],
+          "rows": [
+            {
+              "level": 1,
+              "values": [
+                "Energia",
+                "180 kJ/43 kcal"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Grassi",
+                "0,3 g"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui: acidi grassi saturi",
+                "0,04 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Carboidrati (p.d.)",
+                "6,6 g"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui: zuccheri",
+                "0,7 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Proteine",
+                "2,3 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Sale",
+                "0,03 g"
+              ]
+            }
+          ],
+          "preNotes": [],
+          "postNotes": []
+        }
+      }
+    ],
+    "primaryCategory": "omogeneizzati",
+    "primaryCategoryName": "Omogeneizzati",
+    "C4_LongDescription": "Alimento per l'infanzia, l’Omogeneizzato Legumi Fagioli Borlotti con Carote Plasmon è un prodotto indicato a partire dall’8° mese compiuto, salvo diverso parere del Pediatra.<br><br>L'Omogeneizzato Fagioli Borlotti con Carote Plasmon è prodotto con Ingredienti selezionati. Plasmon garantisce solo ingredienti di prima qualità, selezionati e combinati con cura in ricette semplici, equilibrate, pensate per il tuo bambino. Qualità garantita Oasi nella Crescita, Completa tracciabilità dal campo al vasetto.<br><br>Per Plasmon, l’alimentazione dei più piccoli ha bisogno delle attenzioni più grandi, e per questo gli Omogeneizzati ai Legumi Plasmon sono 100% Naturale, con 0% Amidi aggiunti e 0% Sale aggiunto. L'omogeneizzato ai Fagioli è ideale per far assaggiare al tuo bambino i legumi e variare il gusto della pappa.<br><br>Ma cosa significa 100% Naturale per Plasmon?<br><br>Ingredienti Selezionati: gli Omogeneizzati Plasmon hanno solo ingredienti naturali. L’eventuale imbrunimento o il rilascio di acqua derivano dalle caratteristiche naturali dei legumi.<br>Ricette Semplici: con 0% Amidi e aromi aggiunti, 0% Sale e olio aggiunti. Senza coloranti* e conservanti*, *come per legge.<br>Fai scoprire nuovi gusti al tuo bambino con la gamma di Omogeneizzati ai Legumi Plasmon, valida alternativa alle proteine animali . Inizia con l’Omogeneizzato di Piselli e zucchine o l’Omogeneizzato di legumi verdi, per poi sbizzarrirti con i gusti Zucca e Ceci o Lenticchie e Carote, o Fagioli . Il piacere della pappa sta anche nella scoperta!<br><br>Il prodotto deve essere conservato in luogo asciutto e lontano da fonti di calore. Se non completamente utilizzato, il prodotto va richiuso e conservato in frigorifero per massimo 24 ore.",
+    "heuristic_bucket": "hard_yes",
+    "matched_signals": [
+      {
+        "matched_text": "Filiera controllata",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "100% Naturale",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "confezione riciclabile",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "Tracciabilità",
+        "category": "irrelevant_claim",
+        "risk_level": "LOW"
+      }
+    ],
+    "extracted_claims": [
+      {
+        "claim_text": "Tracciabilità e sicurezza garantite da Oasi nella crescita",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "Elevati standard di qualità agricoltori selezionati",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "LOW"
+      },
+      {
+        "claim_text": "Dal 1902 il gusto di crescere insieme. Da 120 anni nutriamo l'Italia di domani",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "two_part_verification_required"
+        ]
+      },
+      {
+        "claim_text": "Fonte di proteine vegetali",
+        "category": "nutrition_content_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "compliance_unverified_from_text"
+        ]
+      }
+    ]
+  },
+  {
+    "origin_file": "pane-e-snack-salati",
+    "golden_bucket": "hard_yes",
+    "product_id": "8009086101009",
+    "ean": "8009086101009",
+    "name": "i Bibanesi gli Originali 400 g",
+    "url": "https://www.carrefour.it/p/i-bibanesi-gli-originali-400-g/8009086101009.html",
+    "code": "",
+    "C4_MarketingProduct": "Tutti diversi nella forma e unici nel sapore.\n1. Scegliamo da sempre la qualità del grano e il miglior olio extra vergine di oliva\n2. Lasciamo lievitare l'impasto per un giorno e una notte\n3. Stiriamo ancora a mano perché ci sono cose che le macchine non possono fare...\n4. Stuzzichiamo il gusto con tanti abbinamenti sfiziosi",
+    "C4_MarketingBrand": "Una Storia di famiglia.\nLa nostra storia ha inizio nel 1987 da un piccolo forno di famiglia.\nGrazie all'intuizione e alla genialità di nostro padre Giuseppe, ultimo discendente di una famiglia di fornai, sono nati i Bibanesi, \"un po' pane, un po' grissini\".\nIn ogni Bibanese è racchiusa la storia della nostra tradizione e della nostra artigianalità. A partire da un impasto semplice, fatto di pochi ingredienti, e lasciato a lievitare per oltre un giorno, sforniamo i Bibanesi, tutti unici perché stirati a mano uno ad uno.\nAncora oggi continuiamo a sperimentare, provare ed assaggiare, con lo stesso entusiasmo e con gli stessi valori che da sempre ci accompagnano: qualità, artigianalità e genuinità.\nPerché lo facciamo?\nPer portare nelle vostre case il gusto classico della migliore tradizione panificatoria, perché il pane è il nostro primo amore.\nNicola, Francesca, Armando Da Re",
+    "C4_ManufacturesAddress": "Prodotto da:\nDa Re s.p.a. a Socio Unico\nBibano di Godega S.U.\n31010 Via Borgo Nobili, 9 (TV)\nItalia\nnello stabilimento indicato con la lettera vicino alla data:\nA - Bibano di Godega S.U. (TV) - 31010 Via Borgo Nobili, 9\nB - Zoppè di San Vendemiano (TV) - 31020 Via Palù, 40/42",
+    "C4_Country": "Paese di Produzione Italia",
+    "C4_StorageMethod": "Ambiente",
+    "C4_Storage": "Conservare in luogo fresco e asciutto.",
+    "C4_SalesDenomination": "Pane di tipo \"0\" con olio extra vergine di oliva (12%) e semi di sesamo",
+    "C4_Allergens": "Contiene Orzo\nPotrebbe contenere Senape\nContiene Sesamo\nPotrebbe contenere Soia\nContiene Grano/Frumento",
+    "C4_RecyclingInfo": "Confezione Carta - Largamente riciclabile",
+    "C4_RecyclingMoreText": "Raccolta differenziata\nCarta - C/PAP 81 - Confezione Carta\nVerifica le disposizioni del tuo Comune",
+    "C4_Subfamily": "14710",
+    "labeledIngredients": [
+      {
+        "description": null,
+        "ingredientList": [
+          "Farina di <b>grano</b> tenero tipo 0",
+          "Olio extra vergine di oliva (12%)",
+          "Strutto",
+          "Sale",
+          "Malto d'<b>orzo</b>",
+          "Farina di <b>frumento</b> maltato",
+          "Lievito",
+          "Spolvero in superficie con <b>semi di sesamo</b> (0,2%)",
+          "Può contenere tracce di <b>soia</b> e <b>senape</b>"
+        ]
+      }
+    ],
+    "nutritionInfo": [
+      {
+        "description": null,
+        "table": {
+          "headers": [
+            "",
+            "Valori nutrizionali medi per 100g"
+          ],
+          "rows": [
+            {
+              "level": 1,
+              "values": [
+                "Energia",
+                "2011 kJ / 479 kcal"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Grassi",
+                "19 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "- acidi grassi saturi",
+                "4,5 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Carboidrati",
+                "62 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "- zuccheri",
+                "2,0 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Fibre",
+                "4,1 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Proteine",
+                "13 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Sale",
+                "1,9 g"
+              ]
+            }
+          ],
+          "preNotes": [],
+          "postNotes": [
+            "di cui:",
+            "di cui:"
+          ]
+        }
+      }
+    ],
+    "primaryCategory": "grissini-cracker-e-crostini",
+    "primaryCategoryName": "Grissini, cracker e crostini",
+    "heuristic_bucket": "in_between",
+    "matched_signals": [
+      {
+        "matched_text": "artigianalità",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "extracted_claims": [
+      {
+        "claim_text": "Tutti diversi nella forma e unici nel sapore",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "LOW"
+      },
+      {
+        "claim_text": "Stiriamo ancora a mano perché ci sono cose che le macchine non possono fare",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "La nostra storia ha inizio nel 1987 da un piccolo forno di famiglia ... ultimo discendente di una famiglia di fornai",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [
+          "two_part_verification_required"
+        ]
+      },
+      {
+        "claim_text": "In ogni Bibanese è racchiusa la storia della nostra tradizione e della nostra artigianalità",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "tutti unici perché stirati a mano uno ad uno",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "il gusto classico della migliore tradizione panificatoria",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "origin_file": "acqua-e-analcolici",
+    "golden_bucket": "hard_yes",
+    "product_id": "8002580005156",
+    "ean": "8002580005156",
+    "name": "Santàl Dolce di Natura arancia rossa Senza Zuccheri Aggiunti 1000 ml",
+    "url": "https://www.carrefour.it/p/santal-dolce-di-natura-arancia-rossa-senza-zuccheri-aggiunti-1000-ml/8002580005156.html",
+    "code": "",
+    "C4_MarketingProduct": "100% Di origine naturale\n\nCosa significa 100% di Origine Naturale per Santàl?\n- Senza conservanti\n- Senza additivi coloranti\n- Senza glutine\n- Solo aromi naturali\n- Lavorazioni tradizionali (macinazione, spremitura...)\n\nSenza zuccheri aggiunti\nContiene naturalmente zuccheri della frutta\n\nNuova confezione eco sostenibile",
+    "C4_MarketingBrand": "Santal per l'ambiente\nIl nostro impegno coinvolge anche le nostre confezioni, per un prodotto buono dentro e fuori.\nPerché questa confezione?\nÈ sostenibile\nConfezione con il 18% in meno di emissioni di CO2 rispetto alla confezione standard Tetra Prisma Aseptic. Certificato da Carbon Trust.\nÈ rinnovabile\nL'83% della confezione proviene da fonti vegetali rinnovabili. Parte della plastica e del tappo provengono da canna da zucchero.\nÈ riciclabile\nSegui le indicazioni per il corretto smaltimento della confezione.\nÈ economia circolare\nCon Ricarta, dal riciclo delle nostre confezioni si ottengono i nostri imballi secondari.\nVuoi saperne di più?\nVisita il sito www.santal.it\n\nInquadra il QR Code e Scopri le iniziative Santàl\nSeguici su Facebook, Instagram\nwww.santal.it\n#santaldolcedinatura",
+    "C4_ManufacturesAddress": "Parmalat S.p.A\nvia delle Nazioni Unite, 4\nCollecchio (PR)\nProdotto nello stabilimento di:\nvia Milano, 1\nCollecchio (PR)",
+    "C4_Country": "Paese di Produzione Italia",
+    "C4_StorageMethod": "Ambiente",
+    "C4_Storage": "Prenditi cura di me\nConservami in luogo fresco e asciutto.\nUna volta aperto il contenitore conservami in frigorifero a temperatura da 0 a +4°C e consumami entro 3/4 giorni.",
+    "C4_PreparationInfo": "Agitami prima di versarmi\nTi consiglio di bermi freddo!",
+    "C4_DurabilityAfterOpening": "Durata dopo l'apertura: 3/4 Giorni",
+    "C4_SalesDenomination": "Mi presento\nBevanda a base di succhi di frutta da concentrato (frutta: 53% minimo)",
+    "C4_Allergens": "Non contiene Glutine",
+    "C4_AdditivesMoreText": "Senza conservanti\nSenza additivi coloranti\nSolo aromi naturali",
+    "C4_RecyclingInfo": "Tappo Plastica - Largamente riciclabile\nCartone Carta - Largamente riciclabile",
+    "C4_RecyclingMoreText": "Tappo - Plastica - HDPE 2\nContenitore - Carta - C/PAP 84\nRaccolta differenziata: verifica le disposizioni del tuo comune",
+    "C4_Subfamily": "10031",
+    "labeledIngredients": [
+      {
+        "description": null,
+        "ingredientList": [
+          "Succhi di frutta da concentrato 53% (arancia rossa 19%, arancia bionda 16%, mela 11% e uva 7%)",
+          "Acqua",
+          "Estratto di carota nera",
+          "Fibra di agrumi",
+          "Acidificante: acido citrico",
+          "Aromi naturali"
+        ]
+      }
+    ],
+    "nutritionInfo": [
+      {
+        "description": null,
+        "table": {
+          "headers": [
+            "",
+            "Valori medi per 100 ml:"
+          ],
+          "rows": [
+            {
+              "level": 1,
+              "values": [
+                "Energia",
+                "107 kJ"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "",
+                "25 kcal"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Grassi",
+                "0 g"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui acidi grassi saturi",
+                "0 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Carboidrati",
+                "6,4 g"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui zuccheri",
+                "5,4 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Proteine",
+                "0 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Sale",
+                "0 g"
+              ]
+            }
+          ],
+          "preNotes": [],
+          "postNotes": []
+        }
+      }
+    ],
+    "primaryCategory": "succhi-di-frutta",
+    "primaryCategoryName": "Succhi di frutta",
+    "heuristic_bucket": "hard_yes",
+    "matched_signals": [
+      {
+        "matched_text": "Santal per l'ambiente",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "sostenibile",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "100% Di origine naturale",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "tradizionali",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "extracted_claims": [
+      {
+        "claim_text": "100% Di origine naturale",
+        "category": "misleading_composition_or_ingredient_claim",
+        "risk_level": "LOW"
+      },
+      {
+        "claim_text": "Solo aromi naturali",
+        "category": "misleading_composition_or_ingredient_claim",
+        "risk_level": "LOW"
+      },
+      {
+        "claim_text": "Lavorazioni tradizionali (macinazione, spremitura...)",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "LOW"
+      },
+      {
+        "claim_text": "Nuova confezione eco sostenibile",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "Confezione con il 18% in meno di emissioni di CO2 rispetto alla confezione standard Tetra Prisma Aseptic. Certificato da Carbon Trust.",
+        "category": "unfair_comparison",
+        "risk_level": "LOW",
+        "modifiers": [
+          "specific_quantified"
+        ]
+      },
+      {
+        "claim_text": "L'83% della confezione proviene da fonti vegetali rinnovabili",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "LOW"
+      }
+    ]
+  },
+  {
+    "origin_file": "acqua-e-analcolici",
+    "golden_bucket": "in_between",
+    "product_id": "8001440129070",
+    "ean": "8001440129070",
+    "name": "Valfrutta Bio Pera 6 x 125 ml",
+    "url": "https://www.carrefour.it/p/valfrutta-bio-pera-6-x-125-ml/8001440129070.html",
+    "code": "",
+    "C4_MarketingBrand": "Valfrutta\nCooperative agricole\n\nSiamo una cooperativa italiana di 14˙000 soci agricoltori. Crediamo in una agricoltura sostenibile che dia frutti sani e sicuri rispettando la natura.\n\nUna scelta consapevole, di valore, per assaporare tutta la naturalità e la freschezza della frutta nel rispetto dell'ambiente.\nL'agricoltura biologica garantisce prodotti:\n- senza l'uso di sostanze chimiche di sintesi\n- senza l'uso di pesticidi, diserbanti, ogm\n- certificati da Enti di Controllo Biologici.",
+    "C4_ManufacturesAddress": "Prodotto in Italia\nConserve Italia Soc. Coop. agricola\nVia P. Poggi, 11\n40068 San Lazzaro di Savena (BO)\nStabilimento di:\nBarbiano di Cotignola (RA)",
+    "C4_Country": "Paese di Produzione Italia",
+    "C4_StorageMethod": "Ambiente",
+    "C4_Storage": "Dopo l'apertura conservare in frigorifero e consumare entro 2-3 giorni.",
+    "C4_PreparationInfo": "Agitare prima di servire.",
+    "C4_DurabilityAfterOpening": "Durata dopo l'apertura: 2-3 Giorni",
+    "C4_SalesDenomination": "Succo e polpa di pera bio\nFrutta 50% minimo",
+    "C4_RecyclingInfo": "Bottiglia Vetro - Largamente riciclabile\nTappo Metallo - Largamente riciclabile\nCartone Carta - Largamente riciclabile\nEtichetta - incollata Carta - Largamente riciclabile",
+    "C4_RecyclingMoreText": "Valfrutta promuove la raccolta differenziata\nVerifica nel tuo comune le modalità di smaltimento\nIncarto esterno ed etichetta raccolta carta\nBottiglia e tappo raccolta vetro + metallo",
+    "C4_Subfamily": "10035",
+    "C4_Origin": "Origine Altro Testo Prodotto in Italia",
+    "labeledIngredients": [
+      {
+        "description": null,
+        "ingredientList": [
+          "Purea di pera*",
+          "Acqua",
+          "Zucchero di canna*",
+          "Acidificante: acido citrico",
+          "Antiossidante: acido ascorbico",
+          "*Biologico",
+          "Frutta italiana"
+        ]
+      }
+    ],
+    "nutritionInfo": [
+      {
+        "description": null,
+        "table": {
+          "headers": [
+            "",
+            "Valori nutrizionali medi per 100 ml"
+          ],
+          "rows": [
+            {
+              "level": 1,
+              "values": [
+                "Energia",
+                "257 kJ/60 kcal"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Grassi",
+                "0,0 g"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui acidi grassi saturi",
+                "0,0 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Carboidrati",
+                "14,8 g"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui zuccheri",
+                "14,1 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Fibre",
+                "0,8 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Proteine",
+                "0,2 g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Sale",
+                "0,0 g"
+              ]
+            }
+          ],
+          "preNotes": [],
+          "postNotes": []
+        }
+      }
+    ],
+    "primaryCategory": "succhi-di-frutta",
+    "primaryCategoryName": "Succhi di frutta",
+    "heuristic_bucket": "in_between",
+    "matched_signals": [
+      {
+        "matched_text": "sostenibile",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "extracted_claims": [
+      {
+        "claim_text": "Crediamo in una agricoltura sostenibile che dia frutti sani e sicuri rispettando la natura",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "nel rispetto dell'ambiente",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "certificati da Enti di Controllo Biologici",
+        "category": "irrelevant_claim",
+        "risk_level": "LOW"
+      }
+    ]
+  },
+  {
+    "origin_file": "articoli-per-la-casa",
+    "golden_bucket": "in_between",
+    "product_id": "3154146935003",
+    "ean": "3154146935003",
+    "name": "Maped Forbici Sensoft 13 cm per Mancini",
+    "url": "https://www.carrefour.it/p/maped-forbici-sensoft-13-cm-per-mancini/3154146935003.html",
+    "code": "",
+    "C4_Subfamily": "32574",
+    "primaryCategory": "penne-matite-colorate-e-pennarelli",
+    "primaryCategoryName": "Penne, matite colorate e pennarelli",
+    "C4_LongDescription": "Forbici dagli anelli ergonomici 3D morbidi per mancini. Autentiche forbici per mancini. Lame a molatura speculare.",
+    "heuristic_bucket": "in_between",
+    "matched_signals": [
+      {
+        "matched_text": "Autentiche",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "extracted_claims": [
+      {
+        "claim_text": "Autentiche forbici per mancini",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "LOW"
+      }
+    ]
+  },
+  {
+    "origin_file": "condimenti-e-conserve",
+    "golden_bucket": "in_between",
+    "product_id": "3083681003925",
+    "ean": "3083681003925",
+    "name": "Bonduelle Legumeria Borlotti 310 g",
+    "url": "https://www.carrefour.it/p/bonduelle-legumeria-borlotti-310-g/3083681003925.html",
+    "code": "",
+    "C4_MarketingProduct": "Bonduelle\nIl Mondo Che Ci Piace\npossiamo costruirlo ogni giorno insieme con semplici gesti: scelte sostenibili* e un'alimentazione ricca di prodotti a base vegetale, di qualità e gustosi.\n\nCome Legumeria Bonduelle, la nostra vasta gamma di legumi nata per ispirarti ad esplorare un'ampia varietà di sapori, dai più tradizionali ai più moderni, ed esaltare il gusto delle tue ricette, sia calde che fredde.\n\nRicchi di fibre e proteine\n\nProva i nostri borlotti per preparare l'insalata alla nizzarda\nScopri tutte le ricette e le proprietà dei legumi su www.bonduelle.it\n\n*Scopri di più: inquadra il QR code o vai su www.bonduelle.it",
+    "C4_StorageMethod": "Ambiente",
+    "C4_Storage": "Conservare la confezione integra in luogo fresco e asciutto, al riparo da fonti di calore.",
+    "C4_SalesDenomination": "Fagioli borlotti sottovuoto",
+    "C4_Allergens": "Potrebbe contenere Glutine\nPotrebbe contenere Soia",
+    "C4_NutritionClaims": "Ricchi di fibre e proteine",
+    "C4_RecyclingInfo": "Lattina Metallo - Largamente riciclabile",
+    "C4_RecyclingMoreText": "Cos'è - Dove va\nLattina - FE 40 - Raccolta metallo\nVerifica le disposizioni del tuo comune",
+    "C4_Subfamily": "14362",
+    "labeledIngredients": [
+      {
+        "description": null,
+        "ingredientList": [
+          "Fagioli borlotti",
+          "Acqua",
+          "Sale",
+          "Agente di resistenza: E509",
+          "Sequestrante: E385",
+          "Può contenere <b>soia</b>, cereali contenenti <b>glutine</b>"
+        ]
+      }
+    ],
+    "nutritionInfo": [
+      {
+        "description": null,
+        "table": {
+          "headers": [
+            "",
+            "Valori nutrizionali medi per 100 g di prodotto sgocciolato",
+            "VNR**"
+          ],
+          "rows": [
+            {
+              "level": 1,
+              "values": [
+                "Energia",
+                "401 kJ - 95 kcal",
+                ""
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Grassi",
+                "0,9 g",
+                ""
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui acidi grassi saturi",
+                "0,2 g",
+                ""
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Carboidrati",
+                "11 g",
+                ""
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui zuccheri",
+                "0,5 g",
+                ""
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Fibre",
+                "7,8 g",
+                ""
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Proteine",
+                "6,8 g",
+                ""
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Sale",
+                "0,56 g",
+                ""
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Acido folico (Vitamina B9)",
+                "43 μg",
+                "22%"
+              ]
+            }
+          ],
+          "preNotes": [],
+          "postNotes": [
+            "**VNR: Valori Nutritivi di Riferimento"
+          ]
+        }
+      }
+    ],
+    "primaryCategory": "fagioli",
+    "primaryCategoryName": "Fagioli",
+    "heuristic_bucket": "hard_yes",
+    "matched_signals": [
+      {
+        "matched_text": "sostenibili",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "tradizionali",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "extracted_claims": [
+      {
+        "claim_text": "scelte sostenibili*",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "Ricchi di fibre e proteine",
+        "category": "nutrition_content_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "compliance_unverified_from_text"
+        ]
+      }
+    ],
+    "bucket_correction": "hard_yes -> in_between"
+  },
+  {
+    "origin_file": "condimenti-e-conserve",
+    "golden_bucket": "hard_no",
+    "product_id": "8410628464566",
+    "ean": "8410628464566",
+    "name": "Consorcio Filetti di Tonno in Olio di Oliva Extra Vergine Bio 180 g",
+    "url": "https://www.carrefour.it/p/consorcio-filetti-di-tonno-in-olio-di-oliva-extra-vergine-bio-180-g/8410628464566.html",
+    "code": "",
+    "C4_MarketingBrand": "Se desideri conoscere la tracciabilità del Torino Consorzio, entra nel sito web www.consorcio.eu.",
+    "C4_ManufacturesAddress": "Prodotto da:\nConsorcio Español Conservero S.A.\nC/ Eguilior, 1\n39740 Santoña\nSpagna",
+    "C4_StorageMethod": "Ambiente",
+    "C4_Storage": "Una volta aperto, coprire con olio e conservare in frigorifero sotto i 5°C per un massimo di 7 giorni.",
+    "C4_DurabilityAfterOpening": "Durata dopo l'apertura: 7 Giorni",
+    "C4_SalesDenomination": "Filetti di tonno in olio di oliva extra vergine biologico",
+    "C4_Allergens": "Contiene Pesce",
+    "C4_RecyclingInfo": "Coperchio Riciclabile\nVaso Vetro - Largamente riciclabile",
+    "C4_RecyclingMoreText": "Raccolta differenziata:\nVaso - Vetro - GL 70\nCapsula - FE 40\nConsulta le disposizioni del tuo Comune",
+    "C4_Subfamily": "14651",
+    "C4_Origin": "Zona di pesca FAO51\nBollo CE ES 12.00599/S CE",
+    "labeledIngredients": [
+      {
+        "description": null,
+        "ingredientList": [
+          "<b>Tonno (pesce)</b>",
+          "Olio di oliva extra vergine biologico (36%)",
+          "Sale"
+        ]
+      }
+    ],
+    "nutritionInfo": [
+      {
+        "description": null,
+        "table": {
+          "headers": [
+            "",
+            "Dichiarazione nutrizionale per 100g peso sgocciolato:"
+          ],
+          "rows": [
+            {
+              "level": 1,
+              "values": [
+                "Energia",
+                "849kJ / 203kcal"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Grassi",
+                "11g"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui acidi grassi saturi",
+                "1,9g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Carboidrati",
+                "0g"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui zuccheri",
+                "0g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Proteine",
+                "26g"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Sale",
+                "1,1g"
+              ]
+            }
+          ],
+          "preNotes": [],
+          "postNotes": []
+        }
+      }
+    ],
+    "primaryCategory": "tonno-sott-olio",
+    "primaryCategoryName": "Tonno sott'olio",
+    "heuristic_bucket": "in_between",
+    "matched_signals": [
+      {
+        "matched_text": "tracciabilità",
+        "category": "irrelevant_claim",
+        "risk_level": "LOW"
+      }
+    ],
+    "extracted_claims": [],
+    "bucket_correction": "in_between -> hard_no (only a plain traceability-website mention, no checkable claim)"
+  },
+  {
+    "origin_file": "pasta-riso-e-farina",
+    "golden_bucket": "hard_no",
+    "product_id": "8012666072040",
+    "ean": "8012666072040",
+    "name": "Carrefour Classic Farina di Ceci 500 g",
+    "url": "https://www.carrefour.it/p/carrefour-classic-farina-di-ceci-500-g/8012666072040.html",
+    "code": "",
+    "C4_ManufacturesAddress": "Per\nGS S.p.A.\nvia Bisceglie,66\n20152 Milano\nConfezionato da\nMolino F.lli Chiavazza S.p.A.\nnello stabilimento di\nVia Pinerolo, 75\n10060 Pancalieri (TO)",
+    "C4_Country": "Paese di Confezionamento Italia",
+    "C4_StorageMethod": "Ambiente",
+    "C4_Storage": "Conservazione\nConservare in luogo asciutto, lontano da fonti di calore. Dopo un uso parziale, richiudere accuratamente la confezione o trasferire la restante farina in un contenitore per alimenti a chiusura ermetica, al riparo dall'umidità.",
+    "C4_SalesDenomination": "Farina di ceci. Umidità massima 15,50%",
+    "C4_Allergens": "Non contiene Glutine\nPotrebbe contenere Senape\nPotrebbe contenere Soia",
+    "C4_RecyclingInfo": "Sacchetto Carta - Largamente riciclabile",
+    "C4_RecyclingMoreText": "Cos'è - Raccolta\nSacchetto - PAP 22 - Carta\nPer conferma consulta il regolamento del tuo comune",
+    "C4_Subfamily": "14773",
+    "labeledIngredients": [
+      {
+        "description": null,
+        "ingredientList": [
+          "Farina di ceci",
+          "Può contenere tracce di soia e senape",
+          "<b>Senza glutine</b>"
+        ]
+      }
+    ],
+    "nutritionInfo": [
+      {
+        "description": null,
+        "table": {
+          "headers": [
+            "",
+            "100g",
+            "%AR"
+          ],
+          "rows": [
+            {
+              "level": 1,
+              "values": [
+                "Energia",
+                "1531 kJ",
+                "18%"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "",
+                "363 kcal",
+                ""
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Grassi",
+                "6,8 g",
+                "10%"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui acidi grassi saturi",
+                "1,0 g",
+                "5%"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Carboidrati",
+                "50 g",
+                "19%"
+              ]
+            },
+            {
+              "level": 2,
+              "values": [
+                "di cui zuccheri",
+                "3,0 g",
+                "3%"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Fibre",
+                "9,0 g",
+                "-"
+              ]
+            },
+            {
+              "level": 1,
+              "values": [
+                "Proteine",
+                "21 g",
+                "42%"
+              ]
+            }
+          ],
+          "preNotes": [],
+          "postNotes": [
+            "Contiene una quantità trascurabile di sale",
+            "AR = Assunzioni di Riferimento di un adulto medio (8400 kJ/2000 kcal), al giorno"
+          ]
+        }
+      }
+    ],
+    "primaryCategory": "farina-per-preparati-salati",
+    "primaryCategoryName": "Farina per preparati salati",
+    "heuristic_bucket": "hard_no",
+    "matched_signals": [],
+    "extracted_claims": []
+  },
+  {
+    "origin_file": "prodotti-prima-infanzia",
+    "golden_bucket": "hard_no",
+    "product_id": "8008324092703",
+    "ean": "8008324092703",
+    "name": "Lisciani Montessori Baby Touch Memo",
+    "url": "https://www.carrefour.it/p/lisciani-montessori-baby-touch-memo/8008324092703.html",
+    "code": "",
+    "C4_Subfamily": "33011",
+    "primaryCategory": "giochi-prima-infanzia",
+    "primaryCategoryName": "Giochi prima infanzia",
+    "C4_LongDescription": "Per lo sviluppo dei sensi<br><br>Un gioco semplice e divertente con tessere smerigliate con finitura ruvida per esercitare tatto e memoria.",
+    "heuristic_bucket": "hard_no",
+    "matched_signals": [],
+    "extracted_claims": []
+  }
+]

@@ -1,0 +1,1009 @@
+[
+  {
+    "origin_retailer": "naturasi",
+    "origin_file": "colazione-e-merende",
+    "product_id": "909691",
+    "ean": "8018848016949",
+    "name": "Fette biscottate con grani antichi Le Spesse",
+    "golden_bucket": "hard_yes",
+    "extracted_claims": [
+      {
+        "claim_text": "cereali antichi",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "con pasta madre",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "ricetta vegana",
+        "category": "misleading_composition_or_ingredient_claim",
+        "risk_level": "LOW",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "senza lievito di birra",
+        "category": "misleading_composition_or_ingredient_claim",
+        "risk_level": "LOW",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "senza olio di palma",
+        "category": "misleading_composition_or_ingredient_claim",
+        "risk_level": "LOW",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      }
+    ],
+    "extras": {
+      "url": "https://www.naturasi.it/ebsn/api/products?slug=fette-biscottate-con-grani-antichi-le-spesse-baule-volante-33076&store_id=5",
+      "code": "",
+      "certifications": [
+        "Agricoltura biologica",
+        "cereali antichi",
+        "con pasta madre",
+        "ricetta vegana",
+        "senza lievito di birra",
+        "senza olio di palma"
+      ],
+      "legal_name": "FETTE BISCOTTATE BIOLOGICHE DI SEMOLATO DI GRANO DURO CON GRANI ANTICHI.",
+      "producer": "Baule Volante Via degli Olmi 13-15 - Calenzano",
+      "production_facility": "via Filippo Benizzi 9, 40128 Bologna (BO) - Italia",
+      "organic_certification": "IT-BIO-006 Agricoltura UE",
+      "quality_recipe": "semolato di GRANO duro con GRANI duri antichi*30% (semolato di GRANO duro*60%,semolato di GRANI duri antichi*40%),semola integrale di GRANO duro Timilia macinata a pietra*30%,pasta madre di semolato di GRANO duro con GRANI duri antichi*27%(acqua,semolato di GRANO duro*30%,semolato di GRANI duri antichi*20%),olio di semi di girasole*,aceto di GRANO*,sale,malto d'ORZO*,farina integrale di SEGALE*, acidificante:acido lattico.*Biologico.",
+      "allergens": "Può contenere SOIA, SENAPE e SEMI DI SESAMO",
+      "declaration_type": "valori_nutrizionali_medi",
+      "table_nutrition": {
+        "kjoule": {
+          "value": "1766",
+          "unit": "kJ",
+          "label": "Energia kJ"
+        },
+        "kcalor": {
+          "value": "419",
+          "unit": "kcal",
+          "label": "Energia kcal"
+        },
+        "grassi": {
+          "value": "10",
+          "unit": "g",
+          "label": "Grassi"
+        },
+        "grassi_saturi": {
+          "value": "0,9",
+          "unit": "g",
+          "label": "di cui acidi grassi saturi"
+        },
+        "carboi": {
+          "value": "67",
+          "unit": "g",
+          "label": "Carboidrati"
+        },
+        "carboi_zucche": {
+          "value": "1,2",
+          "unit": "g",
+          "label": "di cui zuccheri"
+        },
+        "fibrea": {
+          "value": "5,3",
+          "unit": "g",
+          "label": "Fibre"
+        },
+        "protein": {
+          "value": "12",
+          "unit": "g",
+          "label": "Proteine"
+        },
+        "sodios": {
+          "value": "1,9",
+          "unit": "g",
+          "label": "Sale"
+        },
+        "unita_riferimento": {
+          "value": null,
+          "unit": "100 g"
+        },
+        "riferimento": {
+          "value": null,
+          "unit": "prodotto_tal_quale",
+          "label": "prodotto tal quale"
+        },
+        "unita": {
+          "value": null,
+          "unit": "100_g",
+          "label": "100 g"
+        }
+      },
+      "table_nutrition_percentage": [],
+      "storage": "Conservare in luogo fresco e asciutto, lontano da fonti di luce e di calore.",
+      "recommended_use": "Grazie alle pratiche monoporzioni resta intatta la croccantezza. Il lievito madre le rende più fragranti e saporite, possono anche essere utilizzate per tartine e bruschette salate.",
+      "zeus_code": "000100038122",
+      "packaging_component": []
+    }
+  },
+  {
+    "origin_retailer": "naturasi",
+    "origin_file": "pasta-riso-e-farine",
+    "product_id": "942814",
+    "ean": "8032891761397",
+    "name": "Penne di grano semintegrale Graziella Ra",
+    "golden_bucket": "hard_yes",
+    "extracted_claims": [
+      {
+        "claim_text": "cereali antichi",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "Equosolidale",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      }
+    ],
+    "extras": {
+      "url": "https://www.naturasi.it/ebsn/api/products?slug=penne-di-grano-semintegrale-graziella-ra-girolomoni-28811&store_id=5",
+      "code": "",
+      "certifications": [
+        "Agricoltura biologica",
+        "cereali antichi",
+        "Equosolidale"
+      ],
+      "legal_name": "Specialità alimentare di grano Graziella Ra",
+      "producer": "Gino Girolomoni Coop. Agricola via Strada delle Valli 21, 61030 Isola del Piano (PU) - Italia",
+      "production_facility": "via Strada delle Valli 21, 61030 Isola del Piano (PU) - Italia",
+      "organic_certification": "IT-BIO-006 Agricoltura Italia",
+      "quality_recipe": "Farina di grano Graziella Ra*. (*da agricoltura biologica)",
+      "declaration_type": "valori_nutrizionali_medi",
+      "table_nutrition": {
+        "kjoule": {
+          "value": "1494",
+          "unit": "kJ",
+          "label": "Energia kJ"
+        },
+        "kcalor": {
+          "value": "353",
+          "unit": "kcal",
+          "label": "Energia kcal"
+        },
+        "grassi": {
+          "value": "2,2",
+          "unit": "g",
+          "label": "Grassi"
+        },
+        "grassi_saturi": {
+          "value": "0,5",
+          "unit": "g",
+          "label": "di cui acidi grassi saturi"
+        },
+        "sodios": {
+          "value": "0",
+          "unit": "g",
+          "label": "Sale"
+        },
+        "fibrea": {
+          "value": "4,4",
+          "unit": "g",
+          "label": "Fibre"
+        },
+        "carboi": {
+          "value": "68,2",
+          "unit": "g",
+          "label": "Carboidrati"
+        },
+        "carboi_zucche": {
+          "value": "0,2",
+          "unit": "g",
+          "label": "di cui zuccheri"
+        },
+        "protein": {
+          "value": "12,8",
+          "unit": "g",
+          "label": "Proteine"
+        },
+        "unita_riferimento": {
+          "value": null,
+          "unit": "100 g"
+        },
+        "riferimento": {
+          "value": null,
+          "unit": "prodotto_tal_quale",
+          "label": "prodotto tal quale"
+        },
+        "unita": {
+          "value": null,
+          "unit": "100_g",
+          "label": "100 g"
+        }
+      },
+      "table_nutrition_percentage": [],
+      "storage": "Conservare in luogo fresco e asciutto.",
+      "recommended_use": "Le proporzioni indicative consigliate sono di un litro di acqua e circa 10 grammi di sale ogni 100 g di pasta. Aggiungere il sale in abbondante acqua bollente, cuocervi la pasta, scolare, condire e servire. Il tempo di cottura è di 8 minuti.",
+      "zeus_code": "00031832",
+      "packaging_component": []
+    }
+  },
+  {
+    "origin_retailer": "naturasi",
+    "origin_file": "prodotti-da-forno",
+    "product_id": "949005",
+    "ean": "8019010410534",
+    "name": "Pane bauletto di grano Turanicum",
+    "golden_bucket": "hard_yes",
+    "extracted_claims": [
+      {
+        "claim_text": "con pasta madre",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "prodotto da nostra filiera",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "ricetta vegana",
+        "category": "misleading_composition_or_ingredient_claim",
+        "risk_level": "LOW",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      }
+    ],
+    "extras": {
+      "url": "https://www.naturasi.it/ebsn/api/products?slug=pane-bauletto-di-grano-turanicum-naturasi-41053&store_id=5",
+      "code": "",
+      "certifications": [
+        "Agricoltura biologica",
+        "con pasta madre",
+        "prodotto da nostra filiera",
+        "ricetta vegana"
+      ],
+      "legal_name": "Pane di grano Triticum turanicum con olio di semi di girasole biologico.",
+      "producer": "EcorNaturaSì SpA via Palù 23, San Vendemiano (TV) Italia",
+      "production_facility": "Sottolestelle Srl Società Benefit Contrada Costarelle SP 45 bis Km 12, San Giovanni Rotondo (FG) - Italia",
+      "organic_certification": "IT-BIO-006 Agricoltura UE",
+      "quality_recipe": "*Sfarinato di grano Triticum turanicum 51%, acqua, *lievito da pasta madre di grano farro 15% (*farina di grano farro, acqua], *farina di grano farro, *olio di semi di girasole altoleico 2,7%, sale, *glutine di frumento , lievito (Saccharomyces cerevisiae). Trattato con *alcol etilico. *Biologico",
+      "allergens": "Può contenere senape , soia , frutta a guscio e semi di sesamo.",
+      "contained_gas": "Confezionato in aria",
+      "declaration_type": "valori_nutrizionali_medi",
+      "table_nutrition": {
+        "kjoule": {
+          "value": "1132",
+          "unit": "kJ",
+          "label": "Energia kJ"
+        },
+        "kcalor": {
+          "value": "268",
+          "unit": "kcal",
+          "label": "Energia kcal"
+        },
+        "grassi": {
+          "value": "3,6",
+          "unit": "g",
+          "label": "Grassi"
+        },
+        "grassi_saturi": {
+          "value": "0,4",
+          "unit": "g",
+          "label": "di cui acidi grassi saturi"
+        },
+        "carboi": {
+          "value": "49",
+          "unit": "g",
+          "label": "Carboidrati"
+        },
+        "carboi_zucche": {
+          "value": "0,8",
+          "unit": "g",
+          "label": "di cui zuccheri"
+        },
+        "fibrea": {
+          "value": "2,4",
+          "unit": "g",
+          "label": "Fibre"
+        },
+        "protein": {
+          "value": "9",
+          "unit": "g",
+          "label": "Proteine"
+        },
+        "sodios": {
+          "value": "1,3",
+          "unit": "g",
+          "label": "Sale"
+        },
+        "unita_riferimento": {
+          "value": null,
+          "unit": "100 g"
+        },
+        "riferimento": {
+          "value": null,
+          "unit": "prodotto_tal_quale",
+          "label": "prodotto tal quale"
+        },
+        "unita": {
+          "value": null,
+          "unit": "100_g",
+          "label": "100 g"
+        }
+      },
+      "table_nutrition_percentage": [],
+      "storage": "Conservare in luogo fresco e asciutto, al riparo dalla luce solare diretta. Una volta aperto il sacchetto si consiglia di richiudere bene la confezione e di consumare entro 2-3 giorni.",
+      "zeus_code": "000100061727",
+      "packaging_component": [
+        {
+          "peso": null,
+          "livello": "1_1",
+          "materiale": "PP 5 - Polipropilene",
+          "componente": "Sacchetto",
+          "conferimento": "Plastica",
+          "codice_colore": "#F5D93F"
+        },
+        {
+          "peso": null,
+          "livello": "1_2",
+          "materiale": "C/FE 92 Plastica + Ferro",
+          "componente": "Laccetto",
+          "conferimento": "Acciaio",
+          "codice_colore": "#65BAAF"
+        }
+      ]
+    }
+  },
+  {
+    "origin_retailer": "naturasi",
+    "origin_file": "cereali-e-legumi",
+    "product_id": "944028",
+    "ean": "8051511230716",
+    "name": "Zuppa di farro monococco miglio e lenticchie rosse",
+    "golden_bucket": "in_between",
+    "extracted_claims": [
+      {
+        "claim_text": "cereali antichi",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "di farro",
+        "category": "misleading_composition_or_ingredient_claim",
+        "risk_level": "LOW",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      }
+    ],
+    "extras": {
+      "url": "https://www.naturasi.it/ebsn/api/products?slug=zuppa-di-farro-monococco-miglio-e-lenticchie-rosse-il-cerreto-32405&store_id=5",
+      "code": "",
+      "certifications": [
+        "Agricoltura biologica",
+        "cereali antichi",
+        "di farro"
+      ],
+      "legal_name": "Zuppa di monococco della Val di Cecina",
+      "producer": "Azienda Agricola Il Cerreto Loc. Il Cerreto, 56045 Pomarance (PI) - Italia",
+      "production_facility": "Azienda Agricola Il Cerreto - Loc. Il Cerreto, 56045 Pomarance (PI) - Italia",
+      "organic_certification": "IT-BIO-006 Agricoltura Italia",
+      "quality_recipe": "Farro monococco integrale* (contiene glutine) 40%, miglio decorticato* 30%, lenticchie rosse decorticate* 30%. (*da agricoltura biologica)",
+      "declaration_type": "valori_nutrizionali_medi",
+      "table_nutrition": {
+        "kjoule": {
+          "value": "1449",
+          "unit": "kJ",
+          "label": "Energia kJ"
+        },
+        "kcalor": {
+          "value": "344",
+          "unit": "kcal",
+          "label": "Energia kcal"
+        },
+        "grassi": {
+          "value": "3",
+          "unit": "g",
+          "label": "Grassi"
+        },
+        "grassi_saturi": {
+          "value": "0,4",
+          "unit": "g",
+          "label": "di cui acidi grassi saturi"
+        },
+        "sodios": {
+          "value": "0",
+          "unit": "g",
+          "label": "Sale"
+        },
+        "fibrea": {
+          "value": "8,1",
+          "unit": "g",
+          "label": "Fibre"
+        },
+        "carboi": {
+          "value": "61,6",
+          "unit": "g",
+          "label": "Carboidrati"
+        },
+        "carboi_zucche": {
+          "value": "3,1",
+          "unit": "g",
+          "label": "di cui zuccheri"
+        },
+        "protein": {
+          "value": "15,2",
+          "unit": "g",
+          "label": "Proteine"
+        },
+        "unita_riferimento": {
+          "value": null,
+          "unit": "100 g"
+        },
+        "riferimento": {
+          "value": null,
+          "unit": "prodotto_tal_quale",
+          "label": "prodotto tal quale"
+        },
+        "unita": {
+          "value": null,
+          "unit": "100_g",
+          "label": "100 g"
+        }
+      },
+      "table_nutrition_percentage": [],
+      "storage": "Conservare in luogo fresco e asciutto, al riparo dalla luce solare.",
+      "recommended_use": "Non richiede precedente ammollo. Impiega un tempo di cottura di circa 45-60 minuti, partendo da acqua fredda, in una casseruola a fuoco basso. Rapporto acqua/zuppa: 1/3. Si consiglia un controllo visivo del prodotto prima del consumo.",
+      "zeus_code": "00033713",
+      "packaging_component": []
+    }
+  },
+  {
+    "origin_retailer": "naturasi",
+    "origin_file": "pasta-riso-e-farine",
+    "product_id": "951180",
+    "ean": "8019010434493",
+    "name": "Riso nero integrale italiano",
+    "golden_bucket": "in_between",
+    "extracted_claims": [
+      {
+        "claim_text": "fonte di fibre",
+        "category": "nutrition_content_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "compliance_unverified_from_text"
+        ],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "prodotto da nostra filiera",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      }
+    ],
+    "extras": {
+      "url": "https://www.naturasi.it/ebsn/api/products?slug=riso-nero-integrale-italiano-naturasi-43449&store_id=5",
+      "code": "",
+      "certifications": [
+        "Agricoltura biologica",
+        "fonte di fibre",
+        "prodotto da nostra filiera"
+      ],
+      "legal_name": "Riso lungo A integrale Nero biologico",
+      "producer": "EcorNaturaSì SpA via Palù 23, San Vendemiano (TV) Italia",
+      "production_facility": "Riseria Vignola Giovanni SpA Corso Dante 24, Balzola (AL) Italia",
+      "organic_certification": "IT-BIO-007 Agricoltura Italia",
+      "quality_recipe": "Riso lungo A integrale Nero*. *Biologico",
+      "contained_gas": "Confezionato in aria",
+      "declaration_type": "valori_nutrizionali_medi",
+      "table_nutrition": {
+        "kjoule": {
+          "value": "1445",
+          "unit": "kJ",
+          "label": "Energia kJ"
+        },
+        "kcalor": {
+          "value": "341",
+          "unit": "kcal",
+          "label": "Energia kcal"
+        },
+        "grassi": {
+          "value": "2,6",
+          "unit": "g",
+          "label": "Grassi"
+        },
+        "grassi_saturi": {
+          "value": "0,5",
+          "unit": "g",
+          "label": "di cui acidi grassi saturi"
+        },
+        "carboi": {
+          "value": "69",
+          "unit": "g",
+          "label": "Carboidrati"
+        },
+        "carboi_zucche": {
+          "value": "0,8",
+          "unit": "g",
+          "label": "di cui zuccheri"
+        },
+        "fibrea": {
+          "value": "4,6",
+          "unit": "g",
+          "label": "Fibre"
+        },
+        "protein": {
+          "value": "8,4",
+          "unit": "g",
+          "label": "Proteine"
+        },
+        "sodios": {
+          "value": "< 0,01",
+          "unit": "g",
+          "label": "Sale"
+        },
+        "unita_riferimento": {
+          "value": null,
+          "unit": "100 g"
+        },
+        "riferimento": {
+          "value": null,
+          "unit": "prodotto_tal_quale",
+          "label": "prodotto tal quale"
+        },
+        "unita": {
+          "value": null,
+          "unit": "100_g",
+          "label": "100 g"
+        }
+      },
+      "table_nutrition_percentage": {
+        "magnes": {
+          "value": "100",
+          "unit": "mg",
+          "label": "Magnesio"
+        }
+      },
+      "storage": "Conservare in luogo fresco e asciutto al riparo dalla luce solare diretta.",
+      "recommended_use": "In una pentola con buon fondo, cuocere un volume di cereale con due e mezzo di acqua. Portare ad ebollizione a fuoco vivo e con coperchio. Moderare la fiamma e proseguire, senza mescolare, finché l’acqua sarà completamente assorbita.\nCuoce in 25-30 minuti",
+      "zeus_code": "000100067109",
+      "packaging_component": [
+        {
+          "peso": "8 g",
+          "livello": "1_1",
+          "materiale": "PAP 22 - Carta",
+          "componente": "Sacchetto",
+          "conferimento": "Carta",
+          "codice_colore": "#004A98"
+        }
+      ]
+    }
+  },
+  {
+    "origin_retailer": "naturasi",
+    "origin_file": "proteine-vegetali",
+    "product_id": "931378",
+    "ean": "3273220184912",
+    "name": "Dessert cioccolato",
+    "golden_bucket": "in_between",
+    "extracted_claims": [
+      {
+        "claim_text": "Equosolidale",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "fonte di proteine",
+        "category": "nutrition_content_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "compliance_unverified_from_text"
+        ],
+        "irrelevant_subreason": null
+      },
+      {
+        "claim_text": "senza glutine",
+        "category": "misleading_composition_or_ingredient_claim",
+        "risk_level": "LOW",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      }
+    ],
+    "extras": {
+      "url": "https://www.naturasi.it/ebsn/api/products?slug=dessert-cioccolato-sojade-5573&store_id=5",
+      "code": "",
+      "certifications": [
+        "Agricoltura biologica",
+        "Equosolidale",
+        "fonte di proteine",
+        "senza glutine"
+      ],
+      "legal_name": "Dessert biologico a base di soia al cioccolato",
+      "producer": "Triballat Noyal 3 rue Julien Neveu, 35530 Noyal-sur-Vilaine - Francia",
+      "organic_certification": "FR-BIO-001 Agricoltura UE / non UE",
+      "quality_recipe": "Succo di soia * 80% (acqua, soia * 10,8%), zucchero di canna*°, amido di tapioca*, cioccolato in polvere*° 2,5% (zucchero di canna*°, cacao in polvere*° 32%), cacao in polvere*°, sale. *Biologico - °Da commercio equo solidale",
+      "contained_gas": "Confezionato in aria",
+      "declaration_type": "valori_nutrizionali_medi",
+      "table_nutrition": {
+        "kjoule": {
+          "value": "429",
+          "unit": "kJ",
+          "label": "Energia kJ"
+        },
+        "kcalor": {
+          "value": "102",
+          "unit": "kcal",
+          "label": "Energia kcal"
+        },
+        "grassi": {
+          "value": "2,2",
+          "unit": "g",
+          "label": "Grassi"
+        },
+        "grassi_saturi": {
+          "value": "0,5",
+          "unit": "g",
+          "label": "di cui acidi grassi saturi"
+        },
+        "carboi": {
+          "value": "16,1",
+          "unit": "g",
+          "label": "Carboidrati"
+        },
+        "carboi_zucche": {
+          "value": "12,3",
+          "unit": "g",
+          "label": "di cui zuccheri"
+        },
+        "protein": {
+          "value": "3,1",
+          "unit": "g",
+          "label": "Proteine"
+        },
+        "sodios": {
+          "value": "0,12",
+          "unit": "g",
+          "label": "Sale"
+        },
+        "unita_riferimento": {
+          "value": null,
+          "unit": "100 g"
+        },
+        "riferimento": {
+          "value": null,
+          "unit": "prodotto_tal_quale",
+          "label": "prodotto tal quale"
+        },
+        "unita": {
+          "value": null,
+          "unit": "100_g",
+          "label": "100 g"
+        }
+      },
+      "table_nutrition_percentage": [],
+      "storage": "Conservare in frigorifero tra +2°/+8°",
+      "zeus_code": "A00000520",
+      "packaging_component": [
+        {
+          "peso": null,
+          "livello": "1_1",
+          "materiale": "PS 6 - Polistirolo",
+          "componente": "Vasetto",
+          "conferimento": "Plastica",
+          "codice_colore": "#F5D93F"
+        },
+        {
+          "peso": null,
+          "livello": "1_2",
+          "materiale": "ALU 41 - Alluminio",
+          "componente": "Coperchio",
+          "conferimento": "Alluminio",
+          "codice_colore": "#65BAAF"
+        },
+        {
+          "peso": null,
+          "livello": "1_3",
+          "materiale": "PAP 22 - Carta",
+          "componente": "Cartoncino",
+          "conferimento": "Carta",
+          "codice_colore": "#004A98"
+        }
+      ]
+    }
+  },
+  {
+    "origin_retailer": "naturasi",
+    "origin_file": "carne-pesce-e-salumi",
+    "product_id": "947423",
+    "ean": "8027265009878",
+    "name": "Cotoletta di pollo con spinaci",
+    "golden_bucket": "hard_no",
+    "extracted_claims": [],
+    "extras": {
+      "url": "https://www.naturasi.it/ebsn/api/products?slug=cotoletta-di-pollo-con-spinaci-bioalleva-38869&store_id=5",
+      "code": "",
+      "certifications": [
+        "Agricoltura biologica"
+      ],
+      "legal_name": "Prodotto a base di carne di pollo, con spinaci. Precotta, panato. Biologico. Costituita da parti di carne. Con acqua aggiunta",
+      "producer": "BioAlleva srl via Rodolfo Spineta 1374, 37050 Oppeano (VR) - Italia",
+      "production_facility": "Bioalleva Srl - via C. Colombo 1, 37030 Vago di Lavagno (VR) - Italia",
+      "organic_certification": "IT-BIO-009 Agricoltura UE / non UE",
+      "quality_recipe": "Petto di pollo* 49,5%, panatura (farina di grano * tenero tipo 0, olio di semi di girasole*, lievito di birra, sale, paprika*, curcuma*), spinaci 9%, acqua, olio di semi di arachide *, farina di grano * tenero tipo 0, amido di frumento *, sale iodato (sale, iodato di potassio 0,007%), amido di tapioca*, sale, estratto di rosmarino*. (*da agricoltura biologica)",
+      "allergens": "Può contenere tracce di latte , uova .",
+      "declaration_type": "valori_nutrizionali_medi",
+      "table_nutrition": {
+        "kjoule": {
+          "value": "1036",
+          "unit": "kJ",
+          "label": "Energia kJ"
+        },
+        "kcalor": {
+          "value": "247",
+          "unit": "kcal",
+          "label": "Energia kcal"
+        },
+        "grassi": {
+          "value": "12",
+          "unit": "g",
+          "label": "Grassi"
+        },
+        "grassi_saturi": {
+          "value": "2,1",
+          "unit": "g",
+          "label": "di cui acidi grassi saturi"
+        },
+        "carboi": {
+          "value": "25",
+          "unit": "g",
+          "label": "Carboidrati"
+        },
+        "carboi_zucche": {
+          "value": "1,4",
+          "unit": "g",
+          "label": "di cui zuccheri"
+        },
+        "protein": {
+          "value": "10",
+          "unit": "g",
+          "label": "Proteine"
+        },
+        "sodios": {
+          "value": "1,2",
+          "unit": "g",
+          "label": "Sale"
+        },
+        "unita_riferimento": {
+          "value": null,
+          "unit": "100 g"
+        },
+        "riferimento": {
+          "value": null,
+          "unit": "prodotto_tal_quale",
+          "label": "prodotto tal quale"
+        },
+        "unita": {
+          "value": null,
+          "unit": "100_g",
+          "label": "100 g"
+        }
+      },
+      "table_nutrition_percentage": [],
+      "storage": "Confezionato in atmosfera protettiva. Non forare. Consumare previa cottura. Conservare tra 0 e 4°C.",
+      "recommended_use": "In forno a 200° C per 10 minuti. In padella antiaderente per 6 minuti.",
+      "zeus_code": "000100047256",
+      "packaging_component": [],
+      "hard_no_reason": "legit_certification_only"
+    }
+  },
+  {
+    "origin_retailer": "naturasi",
+    "origin_file": "pasta-riso-e-farine",
+    "product_id": "935728",
+    "ean": "8019010103368",
+    "name": "Farina di grano tenero tipo 0 - Manitoba",
+    "golden_bucket": "hard_no",
+    "extracted_claims": [],
+    "extras": {
+      "url": "https://www.naturasi.it/ebsn/api/products?slug=farina-di-grano-tenero-tipo-0-manitoba-molinum-10336&store_id=5",
+      "code": "",
+      "certifications": [
+        "Agricoltura biologica"
+      ],
+      "legal_name": "Farina di grano tenero tipo 0 bio Manitoba",
+      "producer": "EcorNaturaSì SpA via Palù 23, San Vendemiano (TV) Italia",
+      "production_facility": "Molino Grassi SpA via Emilia Ovest 347, Fraore, Parma (PR) Italia",
+      "organic_certification": "IT-BIO-009 Agricoltura non UE",
+      "quality_recipe": "Farina di grano tenero tipo 0 Manitoba biologica.",
+      "allergens": "Può contenere soia e senape.",
+      "contained_gas": "Confezionato in aria",
+      "declaration_type": "valori_nutrizionali_medi",
+      "table_nutrition": {
+        "kjoule": {
+          "value": "1430",
+          "unit": "kJ",
+          "label": "Energia kJ"
+        },
+        "kcalor": {
+          "value": "337",
+          "unit": "kcal",
+          "label": "Energia kcal"
+        },
+        "grassi": {
+          "value": "1,4",
+          "unit": "g",
+          "label": "Grassi"
+        },
+        "grassi_saturi": {
+          "value": "0,3",
+          "unit": "g",
+          "label": "di cui acidi grassi saturi"
+        },
+        "carboi": {
+          "value": "65",
+          "unit": "g",
+          "label": "Carboidrati"
+        },
+        "carboi_zucche": {
+          "value": "1,3",
+          "unit": "g",
+          "label": "di cui zuccheri"
+        },
+        "fibrea": {
+          "value": "3",
+          "unit": "g",
+          "label": "Fibre"
+        },
+        "protein": {
+          "value": "15",
+          "unit": "g",
+          "label": "Proteine"
+        },
+        "sodios": {
+          "value": "0",
+          "unit": "g",
+          "label": "Sale"
+        },
+        "unita_riferimento": {
+          "value": null,
+          "unit": "100 g"
+        },
+        "riferimento": {
+          "value": null,
+          "unit": "prodotto_tal_quale",
+          "label": "prodotto tal quale"
+        },
+        "unita": {
+          "value": null,
+          "unit": "100_g",
+          "label": "100 g"
+        }
+      },
+      "table_nutrition_percentage": [],
+      "storage": "Conservare in luogo fresco e asciutto.\nUna volta aperto il sacchetto si consiglia di richiudere bene la confezione.",
+      "recommended_use": "Ideale per lunghe lievitazioni di prodotti da forno.",
+      "zeus_code": "A00005999",
+      "packaging_component": [
+        {
+          "peso": null,
+          "livello": "1_1",
+          "materiale": "PAP 22 - Carta",
+          "componente": "Sacchetto",
+          "conferimento": "Carta",
+          "codice_colore": "#004A98"
+        }
+      ],
+      "hard_no_reason": "legit_certification_only"
+    }
+  },
+  {
+    "origin_retailer": "naturasi",
+    "origin_file": "latte-formaggi-e-uova",
+    "product_id": "937795",
+    "ean": "2110411",
+    "name": "Caciotta pavese di mucca",
+    "golden_bucket": "hard_no",
+    "extracted_claims": [
+      {
+        "claim_text": "senza caglio animale",
+        "category": "misleading_composition_or_ingredient_claim",
+        "risk_level": "LOW",
+        "modifiers": [],
+        "irrelevant_subreason": null
+      }
+    ],
+    "extras": {
+      "url": "https://www.naturasi.it/ebsn/api/products?slug=caciotta-pavese-di-mucca-cascine-orsine-15384&store_id=5",
+      "code": "",
+      "certifications": [
+        "Agricoltura biologica",
+        "Demeter",
+        "senza caglio animale"
+      ],
+      "legal_name": "Caciotta biologica",
+      "producer": "Az. Agr. Cascina Orsine via Cascine Orsine 5, 27021 Bereguardo (PV) - Italia",
+      "production_facility": "Az. Agr. Cascina Orsine S.S. via Cascine Orsine 5, 27021 Bereguardo (PV) - Italia",
+      "organic_certification": "IT-BIO-002 Agricoltura Italia",
+      "quality_recipe": "Latte *, caglio vegetale, sale. *Biologico",
+      "contained_gas": "Confezionato in aria",
+      "declaration_type": "valori_nutrizionali_medi",
+      "table_nutrition": {
+        "kjoule": {
+          "value": "1662",
+          "unit": "kJ",
+          "label": "Energia kJ"
+        },
+        "kcalor": {
+          "value": "397",
+          "unit": "kcal",
+          "label": "Energia kcal"
+        },
+        "grassi": {
+          "value": "29,8",
+          "unit": "g",
+          "label": "Grassi"
+        },
+        "grassi_saturi": {
+          "value": "18,8",
+          "unit": "g",
+          "label": "di cui acidi grassi saturi"
+        },
+        "carboi": {
+          "value": "8,9",
+          "unit": "g",
+          "label": "Carboidrati"
+        },
+        "carboi_zucche": {
+          "value": "1,7",
+          "unit": "g",
+          "label": "di cui zuccheri"
+        },
+        "protein": {
+          "value": "25,2",
+          "unit": "g",
+          "label": "Proteine"
+        },
+        "sodios": {
+          "value": "1,3",
+          "unit": "g",
+          "label": "Sale"
+        },
+        "unita_riferimento": {
+          "value": null,
+          "unit": "100 g"
+        },
+        "riferimento": {
+          "value": null,
+          "unit": "prodotto_tal_quale",
+          "label": "prodotto tal quale"
+        },
+        "unita": {
+          "value": null,
+          "unit": "100_g",
+          "label": "100 g"
+        }
+      },
+      "table_nutrition_percentage": [],
+      "storage": "Conservare tra +1° C e +4° C",
+      "zeus_code": "00012493",
+      "packaging_component": [],
+      "hard_no_reason": "legit_certification_only"
+    }
+  }
+]

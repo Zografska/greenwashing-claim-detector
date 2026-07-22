@@ -1,0 +1,284 @@
+[
+  {
+    "origin_file": "bevande",
+    "golden_bucket": "hard_yes",
+    "product_id": "1072122",
+    "ean": "8051407411328",
+    "name": "Birra artigianale italiana \"La Rossa\"",
+    "url": "https://online.eurospin.com/ebsn/api/products/1072122",
+    "code": "",
+    "weight_unit_base": "CL",
+    "weight_unit_selling": "CL",
+    "weight_selling": 50,
+    "alcoholich_strenght": "7,0% vol.",
+    "service_temperature": "Servire a una temperatura ideale di 6-8° in un ampio calice, favorendo la formazione della schiuma",
+    "sales_description": "LA ROSSA BIRRA ARTIGIANALE",
+    "supplier_brand": "B.T. srl - Via C. Mambriani 91sx, 43036 Fidenza (PR)",
+    "net_weight": "50cl",
+    "description": "Birra artigianale italiana \"La Rossa\"",
+    "web_description": "Birra artigianale italiana \"La Rossa\"",
+    "further_description": "La Brassicola",
+    "marketing_text": "Le migliori materie prime, una sapiente lavorazione artigianale, e il tempo necessario ad affinare il tutto. I birrai de \"La Brassicola\" non scendono a compromessi per farvi scoprire il meglio dell'arte birraia, unita al gusto italiano.\nLA ROSSA è la nostra birra per le grandi occasioni. Compagna perfetta per la tavola, è l'ideale per pizza, ma i suoi ricchi aromi maltati sapranno accompagnare anche formaggi di media stagionatura e carni rosse.",
+    "grape_variety": "{\"type\":\"TEXT\",\"uniqueId\":\"e82a034f-fa68-4400-bf66-f701be995cad\",\"version\":0,\"code\":\"grapeVariety\",\"name\":\"Vitigno\",\"tip\":null,\"translatable\":false,\"item-translations-map\":{},\"value\":null,\"textualValue\":null,\"value-translations-map\":{},\"lastModifiedDate\":null,\"lastModifiedUser\":null,\"reference\":null}",
+    "product_type_description": "Spesa Online",
+    "extracted_claims": [
+      {
+        "claim_text": "Le migliori materie prime, una sapiente lavorazione artigianale",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "i birrai ... non scendono a compromessi per farvi scoprire il meglio dell'arte birraia",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "i suoi ricchi aromi maltati sapranno accompagnare anche formaggi di media stagionatura e carni rosse",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "LOW"
+      }
+    ],
+    "bucket_correction": "in_between -> hard_yes (2+ distinct medium claims)"
+  },
+  {
+    "origin_file": "igiene-e-cura-personale",
+    "golden_bucket": "hard_yes",
+    "product_id": "1024768",
+    "ean": "8017596075512",
+    "name": "Proteggi slip ripiegato 40 pezzi",
+    "url": "https://online.eurospin.com/ebsn/api/products/1024768",
+    "code": "",
+    "weight_selling": 1,
+    "sales_description": "LINEA PROTEGGI SLIP RIPIEGATI - 40 PEZZI",
+    "description": "Proteggi slip ripiegato 40 pezzi",
+    "web_description": "Proteggi slip ripiegato 40 pezzi",
+    "further_description": "Traspirante ipoallergenico - Delicato per tutti i giorni - Bustina singola",
+    "marketing_text": "Il Proteggi slip Fior di Magnolia è ideale per avere ogni giorno la sensazione di uno slip pulito, per i giorni di flusso leggero, per le piccole perdite intermestruali e per una maggiore protezione con i tamponi. Grazie alla presenza dei polimeri superassorbenti, l'umido penetra velocemente all'interno e non ritorna in superficie. Freschezza per tutti i giorni e una morbidezza mai provata\nDermatologicamente testato - Tessuto traspirante - Ipoallergenico - Anatomico\nQuesto prodotto è realizzato con materia prima da foreste gestite in maniera sostenibile e da fonti controllate",
+    "product_type_description": "Spesa Online",
+    "extracted_claims": [
+      {
+        "claim_text": "Freschezza per tutti i giorni e una morbidezza mai provata",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "Grazie alla presenza dei polimeri superassorbenti, l'umido penetra velocemente all'interno e non ritorna in superficie",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "Dermatologicamente testato",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "realizzato con materia prima da foreste gestite in maniera sostenibile e da fonti controllate",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "LOW"
+      }
+    ]
+  },
+  {
+    "origin_file": "mondo-bimbi",
+    "golden_bucket": "hard_yes",
+    "product_id": "1111125",
+    "ean": null,
+    "name": "Crema all'ossido di zinco Eco-Bio",
+    "url": "https://online.eurospin.com/ebsn/api/products/1111125",
+    "code": "",
+    "weight_unit_base": "ML",
+    "weight_unit_selling": "ML",
+    "weight_selling": 100,
+    "sales_description": "CREMA ALL'OSSIDO DI ZINCO",
+    "net_weight": "100ml",
+    "description": "Crema all'ossido di zinco Eco-Bio",
+    "web_description": "Crema all'ossido di zinco Eco-Bio",
+    "other_claim": "Per cambio del pannolino",
+    "marketing_text": "- Con estratti da Agricoltura Biologica\n- Senza ingredienti di origine animale\n- Valori di Nichel, Cromo e Cobalto <1 ppm\n- Dermatologicamente testata su pelli sensibili\n- Formula a testata per ridurre al minimo il rischio di allergie\n\nCrema con ossido di zinco che aiuta a proteggere la pelle del bambino dallo sviluppo di batteri mettendo così la cute al riparo dall'aggressione di urine e feci. Il Burro di Karitè e gli estratti di Calendula, Camomilla e Malva da Agricoltura Biologca leniscono e ammorbidiscono l'epidermide",
+    "product_type_description": "Spesa Online",
+    "extracted_claims": [
+      {
+        "claim_text": "aiuta a proteggere la pelle del bambino dallo sviluppo di batteri mettendo così la cute al riparo dall'aggressione di urine e feci",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "Il Burro di Karitè e gli estratti di Calendula, Camomilla e Malva ... leniscono e ammorbidiscono l'epidermide",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "Dermatologicamente testata su pelli sensibili",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "Formula testata per ridurre al minimo il rischio di allergie",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "bucket_correction": "in_between -> hard_yes (2+ distinct medium claims)"
+  },
+  {
+    "origin_file": "dispensa",
+    "golden_bucket": "in_between",
+    "product_id": "1024619",
+    "ean": "8017596079725",
+    "name": "Gallette di riso bio",
+    "url": "https://online.eurospin.com/ebsn/api/products/1024619",
+    "code": "",
+    "weight_unit_base": "GR",
+    "weight_unit_selling": "GR",
+    "weight_selling": 150,
+    "sales_description": "GALLETTE DI RISO DA AGRICOLTURA BIOLOGICA. SENZA GLUTINE",
+    "net_weight": "150g",
+    "description": "Gallette di riso bio",
+    "web_description": "Gallette di riso bio",
+    "other_claim": "Senza glutine",
+    "further_description": "A basso contenuto di grassi",
+    "marketing_text": "Amo essere biologico è la linea di prodotti da Agricoltura Biologica dedicata ai consumatori sensibili ai temi della salvaguardia delle risorse naturali, della biodiversità e dell'utilizzo di pratiche ambientali sostenibili. Una serie di specialità, dai cereali alla pasta, dalle uova ai prodotti da forno, certificate secondo le norme europee e prodotte nel rispetto dell'uomo e dell'ambiente.\n\nIT-BIO-007 Agricoltura UE/non UE",
+    "product_type_description": "Spesa Online",
+    "extracted_claims": [
+      {
+        "claim_text": "Amo essere biologico è la linea di prodotti da Agricoltura Biologica dedicata ai consumatori sensibili ai temi della salvaguardia delle risorse naturali, della biodiversità",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "claim_text": "A basso contenuto di grassi",
+        "category": "nutrition_content_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "compliance_unverified_from_text"
+        ]
+      }
+    ],
+    "bucket_correction": "hard_yes -> in_between (single medium claim)"
+  },
+  {
+    "origin_file": "frutta-e-verdura",
+    "golden_bucket": "in_between",
+    "product_id": "1050951",
+    "ean": "8020204324292",
+    "name": "Mix di semi per insalate Bio",
+    "url": "https://online.eurospin.com/ebsn/api/products/1050951",
+    "code": "",
+    "weight_unit_base": "GR",
+    "weight_unit_selling": "GR",
+    "weight_selling": 200,
+    "sales_description": "MISTO DI SEMI BIOLOGICI",
+    "net_weight": "200g",
+    "description": "Mix di semi per insalate Bio",
+    "web_description": "Mix di semi per insalate Bio",
+    "other_claim": "IT BIO 009 Agricoltura UE / non UE",
+    "marketing_text": "AMO ESSERE Biologico è una linea di prodotti da Agricoltura Biologica dedicata ai consumatori sensibili ai temi della salvaguardia delle risorse naturali, della biodiversità e dell'utilizzo di pratiche ambientali sostenibili. Una serie di specialità, dai cereali alla pasta, dalle uova ai prodotti da forno, certificate secondo le norme europee e prodotte nel rispetto dell'uomo e dell'ambiente",
+    "product_type_description": "Spesa Online",
+    "extracted_claims": [
+      {
+        "claim_text": "AMO ESSERE Biologico è una linea di prodotti da Agricoltura Biologica dedicata ai consumatori sensibili ai temi della salvaguardia delle risorse naturali, della biodiversità",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "bucket_correction": "hard_yes -> in_between (single medium claim)"
+  },
+  {
+    "origin_file": "igiene-e-cura-personale",
+    "golden_bucket": "in_between",
+    "product_id": "1041536",
+    "ean": "8017596056665",
+    "name": "Compresse di garza sterili",
+    "url": "https://online.eurospin.com/ebsn/api/products/1041536",
+    "code": "",
+    "weight_selling": 1,
+    "sales_description": "COMPRESSE DI GARZA STERILI. 100% COTONE",
+    "supplier_brand": "Distribuito da EUROSPIN ITALIA S.p.A. - Via Campalto, 3/D - 37036 San Martino B.A. (VR) - Italia",
+    "description": "Compresse di garza sterili",
+    "web_description": "Compresse di garza sterili",
+    "other_claim": "100% cotone - Dermatologicamente testato",
+    "further_description": "Traspiranti - Protettive",
+    "marketing_text": "4 buste da 25 pz.\n100% cotone\nTraspiranti - Protettive - Ipoallergeniche\nSterile solo a confezione integra\n\n1 formato: 100 pz. cm 10 x 10",
+    "product_type_description": "Spesa Online",
+    "extracted_claims": [
+      {
+        "claim_text": "Traspiranti - Protettive - Ipoallergeniche",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "LOW"
+      },
+      {
+        "claim_text": "Dermatologicamente testato",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "origin_file": "carne-e-pesce",
+    "golden_bucket": "hard_no",
+    "product_id": "1109724",
+    "ean": null,
+    "name": "Cozze",
+    "url": "https://online.eurospin.com/ebsn/api/products/1109724",
+    "code": "",
+    "weight_unit_base": "GR",
+    "weight_unit_selling": "GR",
+    "weight_selling": 1000,
+    "sales_description": "COZZE 1000g",
+    "supplier_brand": "Megliopronto srl - Via Michelangelo n.6, CAP 45012 ariano nel Polesine RO\nIT Q 1557 CE",
+    "net_weight": "1.000g",
+    "description": "Cozze",
+    "web_description": "Cozze",
+    "product_type_description": "Spesa Online",
+    "extracted_claims": []
+  },
+  {
+    "origin_file": "frutta-e-verdura",
+    "golden_bucket": "hard_no",
+    "product_id": "1026821",
+    "ean": "8010292016698",
+    "name": "Lamponi",
+    "url": "https://online.eurospin.com/ebsn/api/products/1026821",
+    "code": "",
+    "weight_unit_base": "GR",
+    "weight_unit_selling": "GR",
+    "weight_selling": 125,
+    "sales_description": "LAMPONI 125g",
+    "net_weight": "125g",
+    "description": "Lamponi",
+    "web_description": "Lamponi",
+    "product_type_description": "Spesa Online",
+    "extracted_claims": []
+  },
+  {
+    "origin_file": "bevande",
+    "golden_bucket": "hard_no",
+    "product_id": "1036655",
+    "ean": "8007046369100",
+    "name": "Vino Grillo Sicilia DOC",
+    "url": "https://online.eurospin.com/ebsn/api/products/1036655",
+    "code": "",
+    "weight_unit_base": "ML",
+    "weight_unit_selling": "ML",
+    "weight_selling": 750,
+    "alcoholich_strenght": "12,5% vol",
+    "service_temperature": "12° C",
+    "sales_description": "ISOLA DEL SOLE GRILLO SICILIA DOC 2023",
+    "supplier_brand": "Integralmente prodotto e imbottigliato da Cantine Settesoli S.C.A. - Menfi - Italia",
+    "net_weight": "750ml",
+    "description": "Vino Grillo Sicilia DOC",
+    "web_description": "Vino Grillo Sicilia DOC",
+    "further_description": "\"Isola del Sole\"",
+    "marketing_text": "VIVA LA SOSTENIBILITA' NELLE VITIVINICOLTURA IN ITALIA\n\"Cantine Settesoli S.C.A.\" è certificato VIVA programma promosso dal Ministero dell'Ambiente e della Sicurezza Energetica",
+    "grape_variety": "{\"type\":\"TEXT\",\"uniqueId\":\"52d791b3-eeae-4c6c-ac24-e604e92922a1\",\"version\":0,\"code\":\"grapeVariety\",\"name\":\"Vitigno\",\"tip\":null,\"translatable\":false,\"item-translations-map\":{},\"value\":\"Grillo 100%\",\"textualValue\":null,\"value-translations-map\":{},\"lastModifiedDate\":null,\"lastModifiedUser\":null,\"reference\":null}",
+    "product_type_description": "Spesa Online",
+    "extracted_claims": [
+      {
+        "claim_text": "VIVA LA SOSTENIBILITA' NELLE VITIVINICOLTURA IN ITALIA ... certificato VIVA",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "LOW"
+      }
+    ],
+    "bucket_correction": "in_between -> hard_no (real, government-backed cert)"
+  }
+]
