@@ -33,7 +33,7 @@ Turns one retailer's golden set into (a) canonical gold with per-claim
 `src.extraction` and this pipeline's chunking step to read.
 
 ```bash
-python -m src.adapters.build --retailer coop \
+python3 -m src.adapters.build --retailer coop \
     --in golden/golden_set_coop_ucpd_250.json \
     --gold-out golden/canonical/coop.json \
     --extraction-out data/raw/coop_extraction_input.json
@@ -54,8 +54,8 @@ pre-built and checked in, so you can skip this step entirely for a sample run.
 ## 2. Chunk + embed the product text (from `src/knowledge/`)
 
 ```bash
-python prepare_ads_chunks.py --file coop_extraction_input.json --out /tmp/coop_chunks.json
-python embed_e5.py --input /tmp/coop_chunks.json --output-dir ./embeddings/coop --mode query
+python3 prepare_ads_chunks.py --file coop_extraction_input.json --out /tmp/coop_chunks.json
+python3 embed_e5.py --input /tmp/coop_chunks.json --output-dir ./embeddings/coop --mode query
 ```
 
 The legal corpus (`ecgt`/`ucpd`) is already embedded and checked in
@@ -92,7 +92,7 @@ specific legal chunk (environmental, endorsement, medicinal-cure,
 offset-neutrality), ~16% for the generic `UCPD_Art6`/`Art7` catch-all most
 other categories map to, ~3% for NaturaSì specifically (its "description" is
 synthesized from certification tags, not real prose, and doesn't embed like
-real legal prose does). This is *why* `src/extraction.py`'s grounding
+real legal prose does). This is _why_ `src/extraction.py`'s grounding
 (`--matches` flag) treats retrieved chunks as unlabeled candidate context,
 never as an asserted fact — see its `SYSTEM_PROMPT`.
 
@@ -114,7 +114,7 @@ own model, cheap enough to iterate. A larger model (e.g. `llama3.3:70b`) is
 worth a second data point if you want to know whether the 3b model itself is
 the bottleneck. Avoid `deepseek-r1` for now — it's a reasoning model whose
 `<think>` traces can be long, and `rerank_ad`'s `num_predict=600` is sized
-for a verbose *rationale*, not a full chain-of-thought trace; would need a
+for a verbose _rationale_, not a full chain-of-thought trace; would need a
 raised `num_predict` as a deliberate follow-up, not a drop-in swap.
 
 ## 5. Run extraction with grounding
