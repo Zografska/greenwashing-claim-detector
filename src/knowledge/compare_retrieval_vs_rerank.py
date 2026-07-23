@@ -42,6 +42,7 @@ import argparse
 import sys
 import time
 from pathlib import Path
+from typing import List, Tuple
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
@@ -59,7 +60,7 @@ GOLD_DIR = PROJECT_ROOT / "golden" / "canonical"
 TUNED_CONFIG = {"center": True, "csls": True, "csls_k": 15}
 
 
-def run_rerank_pass(results: list[dict], model: str) -> tuple[list[dict], dict]:
+def run_rerank_pass(results: List[dict], model: str) -> Tuple[List[dict], dict]:
     """Reranks each ad's candidates (already top-k from compare()) with the
     given model. Returns (reranked_results, timing) -- timing has
     total_seconds/n_ads/avg_seconds_per_ad so the resource-cost side of the
@@ -101,7 +102,7 @@ def run_rerank_pass(results: list[dict], model: str) -> tuple[list[dict], dict]:
     return reranked, timing
 
 
-def embedding_ad_level_scores(matches_by_ad: dict, gold_records: list[dict]) -> dict:
+def embedding_ad_level_scores(matches_by_ad: dict, gold_records: List[dict]) -> dict:
     """Two ad-level baselines for the embedding-only arm, computed the same
     "member of gold set" way score_rerank scores the LLM's single verdict --
     so all three numbers in the final table are directly comparable:

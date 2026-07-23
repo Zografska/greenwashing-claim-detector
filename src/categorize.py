@@ -9,6 +9,8 @@ unsubstantiated claims overlap a lot in practice. Decide before you build
 the gold annotation set, it changes the annotation schema.
 """
 
+from typing import List, Optional
+
 CATEGORIES = [
     "generic_unsubstantiated",   # "eco-friendly", "green" with no certified backing
     "offset_based_neutrality",   # "climate neutral" / "CO2 neutral" via offsetting
@@ -21,7 +23,7 @@ CATEGORIES = [
 
 def categorize_claim(
     claim_text: str,
-    retrieved_context: list | None = None,
+    retrieved_context: Optional[List] = None,
     model: str = "llama3.2",
 ) -> str:
     """

@@ -15,6 +15,7 @@ import json
 import time
 from pathlib import Path
 import re
+from typing import Dict, List, Optional, Tuple
 
 import httpx
 
@@ -232,7 +233,7 @@ def _is_mandatory_disclosure(fragment: str) -> bool:
     return any(p.search(fragment) for p in _MANDATORY_DISCLOSURE_PATTERNS)
 
 
-def _split_claim_sentences(description: str) -> list[str]:
+def _split_claim_sentences(description: str) -> List[str]:
     """Split into sentence-ish fragments and keep only the ones mentioning
     claim-adjacent terms (nutrition, origin, composition, price/value,
     environmental, safety instructions -- the full UCPD scope, not just
@@ -289,7 +290,7 @@ MAX_GROUNDING_WORDS = 1400  # covers ~90th percentile of observed real top-7
                             # rare ~2000-word worst case.
 
 
-def _format_grounding(chunks: list[dict]) -> str:
+def _format_grounding(chunks: List[dict]) -> str:
     """chunks: compare_e5.py top_matches shape (each with legal_chunk_id,
     legal_title, legal_text), already ranked best-first. Truncates from the
     end (lowest-ranked first) if the combined word count exceeds
@@ -312,7 +313,7 @@ judgment about which, if any, actually apply):
 {entries}"""
 
 
-def _build_user_prompt(product: dict, description: str, grounding_chunks: list[dict] | None = None) -> str:
+def _build_user_prompt(product: dict, description: str, grounding_chunks: Optional[List[dict]] = None) -> str:
     filtered = _prefilter_description(description)
     # Only inserted when grounding_chunks is given, so the no-grounding
     # prompt is byte-identical to every prior run (no stray blank line).
@@ -376,7 +377,7 @@ USE_SCHEMA_GRAMMAR = True  # flip to False to A/B test speed: grammar-
 
 
 def extract_claims(
-    product: dict, description: str, model: str = "llama3.2", grounding_chunks: list[dict] | None = None
+    product: dict, description: str, model: str = "llama3.2", grounding_chunks: Optional[List[dict]] = None
 ) -> dict:
     """
     Extract greenwashing-relevant claims from a product description.
@@ -501,7 +502,7 @@ def extract_claims(
     raise ValueError(f"Model returned invalid JSON{hint}\n\nRaw: {raw[:500]}")
 
 
-def _validate_claims(claims: list[dict]) -> tuple[list[dict], list[dict]]:
+def _validate_claims(claims: List[dict]) -> Tuple[List[dict], List[dict]]:
     """Drop rows with an empty claim_text (seen in a prior run: a placeholder
     row with "" and no real content), and drop LOW-risk claims.
 
@@ -542,7 +543,7 @@ def _validate_claims(claims: list[dict]) -> tuple[list[dict], list[dict]]:
     return valid, dropped
 
 
-def _load_grounding_by_ean(matches_path: str) -> dict[str, list[dict]]:
+def _load_grounding_by_ean(matches_path: str) -> Dict[str, List[dict]]:
     """matches_path: a compare_e5.py output (matches.json shape), keyed by
     query_ad_id -- which src/knowledge/prepare_ads_chunks.py sets to the
     product's ean, same join key extract_from_file uses below."""
@@ -552,8 +553,8 @@ def _load_grounding_by_ean(matches_path: str) -> dict[str, list[dict]]:
 
 
 def extract_from_file(
-    filename: str, model: str = "llama3.2", matches_file: str | None = None
-) -> tuple[list[dict], list[dict]]:
+    filename: str, model: str = "llama3.2", matches_file: Optional[str] = None
+) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
     total = len(records)
     results = []

@@ -47,6 +47,7 @@ Multiple retailers in one call (pooled score + per-retailer breakdown):
 import argparse
 import json
 import re
+from typing import List, Set, Tuple
 
 # --- category taxonomy mapping --------------------------------------------
 # Gold's 11 observed categories (a 12th, unauthorized_or_borderline_medicinal_claim,
@@ -74,7 +75,7 @@ GOLD_TO_COARSE = {
 }
 
 
-def load_json(path: str) -> list[dict]:
+def load_json(path: str) -> List[dict]:
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
@@ -82,17 +83,17 @@ def load_json(path: str) -> list[dict]:
 _TOKEN_RE = re.compile(r"\w+", re.UNICODE)
 
 
-def _tokens(text: str) -> set[str]:
+def _tokens(text: str) -> Set[str]:
     return set(_TOKEN_RE.findall((text or "").lower()))
 
 
-def _jaccard(a: set[str], b: set[str]) -> float:
+def _jaccard(a: Set[str], b: Set[str]) -> float:
     if not a or not b:
         return 0.0
     return len(a & b) / len(a | b)
 
 
-def _match_claims(pred_claims: list[dict], gold_claims: list[dict], overlap_threshold: float):
+def _match_claims(pred_claims: List[dict], gold_claims: List[dict], overlap_threshold: float):
     """Greedy one-to-one matching between a single record's predicted and
     gold claims by token-level Jaccard overlap on claim_text. Returns
     (matches, unmatched_gold, unmatched_pred), where matches is a list of
@@ -122,7 +123,7 @@ def _match_claims(pred_claims: list[dict], gold_claims: list[dict], overlap_thre
     return matches, unmatched_gold, unmatched_pred
 
 
-def _pair_records(predictions: list[dict], gold: list[dict]) -> list[tuple[dict, dict]]:
+def _pair_records(predictions: List[dict], gold: List[dict]) -> List[Tuple[dict, dict]]:
     """Pair by ean (both canonical gold and extraction.py's predictions carry
     it), falling back to product_id/index. Gold records with no matching
     prediction (e.g. skipped by src/data.py for an empty description) are
@@ -136,7 +137,7 @@ def _pair_records(predictions: list[dict], gold: list[dict]) -> list[tuple[dict,
     return pairs
 
 
-def extraction_prf(predictions: list[dict], gold: list[dict], overlap_threshold: float = 0.5) -> dict:
+def extraction_prf(predictions: List[dict], gold: List[dict], overlap_threshold: float = 0.5) -> dict:
     """Relaxed span-overlap P/R/F1, restricted to gold claims with
     risk_level != "LOW" (see module docstring for why)."""
     tp = fp = fn = 0
@@ -167,7 +168,7 @@ def extraction_prf(predictions: list[dict], gold: list[dict], overlap_threshold:
     }
 
 
-def category_accuracy(predictions: list[dict], gold: list[dict], overlap_threshold: float = 0.5) -> dict:
+def category_accuracy(predictions: List[dict], gold: List[dict], overlap_threshold: float = 0.5) -> dict:
     """Restricted to claims extraction_prf already matched (a wrong span
     can't have a "right" category), and further restricted to matched pairs
     whose gold category has an entry in GOLD_TO_COARSE that isn't None --
@@ -199,7 +200,7 @@ def category_accuracy(predictions: list[dict], gold: list[dict], overlap_thresho
     }
 
 
-def risk_level_agreement(predictions: list[dict], gold: list[dict], overlap_threshold: float = 0.5) -> dict:
+def risk_level_agreement(predictions: List[dict], gold: List[dict], overlap_threshold: float = 0.5) -> dict:
     """Bonus metric, kept separate from the two above: of the matched claims,
     did predicted risk_level (HIGH/MEDIUM) agree with gold's? Both sides
     exclude LOW by construction (extraction.py never emits it; gold LOW
@@ -221,7 +222,7 @@ def risk_level_agreement(predictions: list[dict], gold: list[dict], overlap_thre
     }
 
 
-def evaluate(predictions: list[dict], gold: list[dict], overlap_threshold: float = 0.5) -> dict:
+def evaluate(predictions: List[dict], gold: List[dict], overlap_threshold: float = 0.5) -> dict:
     return {
         "n_gold_records": len(gold),
         "n_prediction_records": len(predictions),

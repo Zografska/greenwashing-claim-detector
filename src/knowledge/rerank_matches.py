@@ -36,6 +36,7 @@ Usage:
 import argparse
 import json
 from pathlib import Path
+from typing import List
 
 import httpx
 
@@ -151,7 +152,7 @@ Rules:
   that only answers (A)."""
 
 
-def _build_user_prompt(title: str, claim_text: str, candidates: list[dict]) -> str:
+def _build_user_prompt(title: str, claim_text: str, candidates: List[dict]) -> str:
     candidate_block = "\n\n".join(
         f"[{c['legal_chunk_id']}] {c['legal_title']}\n{c['legal_text']}"
         for c in candidates
@@ -167,7 +168,7 @@ CANDIDATE LEGAL PASSAGES:
 Which candidate (if any) does this ad's claim genuinely match?"""
 
 
-def _response_schema(candidate_ids: list[str]) -> dict:
+def _response_schema(candidate_ids: List[str]) -> dict:
     # Field order matters under grammar-constrained decoding: the model fills
     # properties in the order they're declared here, so "rationale" MUST come
     # first -- otherwise it commits to verdict/legal_chunk_id before it's
@@ -201,7 +202,7 @@ def _response_schema(candidate_ids: list[str]) -> dict:
     }
 
 
-def rerank_ad(title: str, claim_text: str, candidates: list[dict], model: str) -> dict:
+def rerank_ad(title: str, claim_text: str, candidates: List[dict], model: str) -> dict:
     candidate_ids = [c["legal_chunk_id"] for c in candidates]
     response = httpx.post(
         OLLAMA_URL,

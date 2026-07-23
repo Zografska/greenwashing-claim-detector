@@ -39,6 +39,7 @@ Usage:
 import argparse
 import json
 from pathlib import Path
+from typing import List
 
 SCRIPT_DIR = Path(__file__).parent
 
@@ -48,7 +49,7 @@ def load(path: Path):
         return json.load(f)
 
 
-def best_separating_threshold(pos_scores: list[float], neg_scores: list[float]):
+def best_separating_threshold(pos_scores: List[float], neg_scores: List[float]):
     """Threshold t (predict "real match" iff score >= t) that maximizes
     correctly-classified count over these two labeled score sets."""
     candidates = sorted(set(pos_scores + neg_scores))

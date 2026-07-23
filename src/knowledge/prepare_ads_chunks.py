@@ -40,6 +40,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from typing import List
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 if str(PROJECT_ROOT) not in sys.path:
@@ -60,7 +61,7 @@ def _title_from_url(url: str, ean: str) -> str:
     return name.capitalize() if name else ean
 
 
-def build_chunks(filename: str) -> list[dict]:
+def build_chunks(filename: str) -> List[dict]:
     path = DATA_DIR / filename
     if not path.exists():
         raise FileNotFoundError(f"No file found at {path}")

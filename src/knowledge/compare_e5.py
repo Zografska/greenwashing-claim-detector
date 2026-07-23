@@ -70,6 +70,7 @@ Usage:
 import argparse
 import json
 from pathlib import Path
+from typing import List, Optional
 
 import numpy as np
 
@@ -159,11 +160,11 @@ def compare(
     center: bool = True,
     csls: bool = True,
     csls_k: int = 10,
-    min_similarity: float | None = None,
+    min_similarity: Optional[float] = None,
     centroid_sample_size: int = 56,
     seed: int = 42,
     verbose: bool = True,
-) -> list[dict]:
+) -> List[dict]:
     """Core ranking logic, callable directly (e.g. by tune_retrieval.py's grid
     search) without shelling out to the CLI or round-tripping through JSON
     files per config. `main()` below is a thin argparse wrapper over this."""
