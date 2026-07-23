@@ -39,10 +39,11 @@ Usage:
 """
 
 import argparse
+import json
 import sys
 import time
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
@@ -60,39 +61,62 @@ GOLD_DIR = PROJECT_ROOT / "golden" / "canonical"
 TUNED_CONFIG = {"center": True, "csls": True, "csls_k": 15}
 
 
-def run_rerank_pass(results: List[dict], model: str) -> Tuple[List[dict], dict]:
+def run_rerank_pass(
+    results: List[dict], model: str, out_path: Optional[Path] = None
+) -> Tuple[List[dict], dict]:
     """Reranks each ad's candidates (already top-k from compare()) with the
     given model. Returns (reranked_results, timing) -- timing has
     total_seconds/n_ads/avg_seconds_per_ad so the resource-cost side of the
-    comparison is a real, printed number, not an afterthought."""
+    comparison is a real, printed number, not an afterthought.
+
+    If out_path is given, each ad's record is appended as one JSON line and
+    flushed to disk immediately after that ad's call returns -- so a killed
+    session (broken pipe, SSH drop) only loses the in-flight ad, not every
+    result computed so far."""
     reranked = []
     call_seconds = []
-    for i, ad in enumerate(results, 1):
-        candidates = ad.get("top_matches") or []
-        title = ad["query_title"]
-        claim_text = " ".join(ad.get("query_sentences") or [])
+    out_f = None
+    if out_path is not None:
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_f = open(out_path, "w", encoding="utf-8")
+        print(f"  (streaming per-ad results to {out_path})")
 
-        if not candidates or not claim_text.strip():
-            reranked.append({
-                **ad,
-                "rerank": {"verdict": "NO_MATCH", "legal_chunk_id": "NONE", "rationale": "no retrieval candidates"},
-            })
-            print(f"  [{i}/{len(results)}] {title}: skipped (no candidates)")
-            continue
+    def _emit(record: dict) -> None:
+        reranked.append(record)
+        if out_f is not None:
+            out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
+            out_f.flush()
 
-        start = time.monotonic()
-        try:
-            verdict = rerank_ad(title, claim_text, candidates, model)
-            verdict = _apply_environmental_backstop(verdict)
-        except Exception as e:
+    try:
+        for i, ad in enumerate(results, 1):
+            candidates = ad.get("top_matches") or []
+            title = ad["query_title"]
+            claim_text = " ".join(ad.get("query_sentences") or [])
+
+            if not candidates or not claim_text.strip():
+                _emit({
+                    **ad,
+                    "rerank": {"verdict": "NO_MATCH", "legal_chunk_id": "NONE", "rationale": "no retrieval candidates"},
+                })
+                print(f"  [{i}/{len(results)}] {title}: skipped (no candidates)")
+                continue
+
+            start = time.monotonic()
+            try:
+                verdict = rerank_ad(title, claim_text, candidates, model)
+                verdict = _apply_environmental_backstop(verdict)
+            except Exception as e:
+                elapsed = time.monotonic() - start
+                print(f"  [{i}/{len(results)}] {title}: FAILED after {elapsed:.1f}s ({e})")
+                _emit({**ad, "rerank": {"verdict": "ERROR", "legal_chunk_id": None, "rationale": str(e)}})
+                continue
             elapsed = time.monotonic() - start
-            print(f"  [{i}/{len(results)}] {title}: FAILED after {elapsed:.1f}s ({e})")
-            reranked.append({**ad, "rerank": {"verdict": "ERROR", "legal_chunk_id": None, "rationale": str(e)}})
-            continue
-        elapsed = time.monotonic() - start
-        call_seconds.append(elapsed)
-        reranked.append({**ad, "rerank": verdict})
-        print(f"  [{i}/{len(results)}] {title}: {verdict['verdict']} -> {verdict['legal_chunk_id']} [{elapsed:.1f}s]")
+            call_seconds.append(elapsed)
+            _emit({**ad, "rerank": verdict})
+            print(f"  [{i}/{len(results)}] {title}: {verdict['verdict']} -> {verdict['legal_chunk_id']} [{elapsed:.1f}s]")
+    finally:
+        if out_f is not None:
+            out_f.close()
 
     timing = {
         "total_seconds": sum(call_seconds),
@@ -139,9 +163,18 @@ def main():
     parser.add_argument("--queries", default=None, help="query embedding set name under ./embeddings/ (default: sample_<retailer>)")
     parser.add_argument("--gold", type=Path, default=None, help="canonical gold path (default: golden/canonical/<retailer>.json)")
     parser.add_argument("--top-k", type=int, default=7, help="candidates per ad -- fed identically to both arms")
+    parser.add_argument(
+        "--rerank-out", type=Path, default=None,
+        help="stream each ad's rerank result here as JSONL, flushed after every call "
+        "(default: ./embeddings/<queries_name>_rerank_progress.jsonl; pass 'none' to disable)",
+    )
     args = parser.parse_args()
 
     queries_name = args.queries or f"sample_{args.retailer}"
+    if args.rerank_out is not None and str(args.rerank_out).lower() == "none":
+        rerank_out = None
+    else:
+        rerank_out = args.rerank_out or (SCRIPT_DIR / "embeddings" / f"{queries_name}_rerank_progress.jsonl")
     if args.gold:
         gold_path = args.gold
     elif queries_name.startswith("sample_"):
@@ -172,7 +205,7 @@ def main():
     embedding_ad_scores = embedding_ad_level_scores(matches_by_ad, gold_records)
 
     print(f"\nReranking {len(results)} ads with model={args.model} (this needs your Ollama server) ...")
-    reranked, timing = run_rerank_pass(results, args.model)
+    reranked, timing = run_rerank_pass(results, args.model, out_path=rerank_out)
     reranked_by_ad = {r["query_ad_id"]: r for r in reranked}
     rerank_scores = score_rerank(reranked_by_ad, gold_records)
 
