@@ -164,16 +164,38 @@ for a real, specific, checkable statement that happens to be mandatory/
 authorized/trivial -- never as a bucket for vague sentiment.
 
 risk_level: HIGH = directly contradicted by, or blacklisted regardless of,
-the product's own stated facts. MEDIUM = plausible but no evidence given
-either way. LOW = factual, or backed by a real EU certification/authorized
-wording. Emit every claim you find at every risk_level, including LOW --
-do not silently drop LOW-risk claims; filtering happens downstream, not here.
+the product's own stated facts. MEDIUM = a real, checkable benefit is
+asserted but the ad gives no specific data, mechanism, or certification for
+THAT exact claim. LOW = trivially true, or backed by a real, specifically-
+named certification/EU-authorized wording for THAT exact claim.
 
-EXAMPLE (full valid JSON response for one product with 4 claims -- copy this
+Certification scope rule -- a certification only lowers risk for the SPECIFIC
+claim it names. "Imballi certificati FSC" is LOW for the FSC packaging claim
+itself, but a certification mentioned anywhere in the ad (FSC, VEGANO, DOP...)
+never justifies LOW for a *different*, unrelated claim in the same product
+just because a certification exists somewhere in the text.
+
+MEDIUM-by-default rule for unsubstantiated_health_or_efficacy_claim and
+environmental_unsubstantiated specifically: these two categories describe
+claims with NO fixed legal threshold to fall back on (unlike
+nutrition_content_claim's NHCR thresholds, which stay LOW even when the
+exact number isn't shown, because the category itself is legally bounded
+and low-severity). For these two categories, "I can't find a contradiction"
+is NOT grounds for LOW -- an asserted-but-unbacked health/efficacy or
+environmental benefit defaults to MEDIUM. Reserve LOW here only for a claim
+you can point to real backing for (an EU-authorized phrase used correctly,
+or that exact claim's own named certification).
+
+Emit every claim you find at every risk_level, including LOW -- do not
+silently drop LOW-risk claims; filtering happens downstream, not here.
+
+EXAMPLE (full valid JSON response for one product with 6 claims -- copy this
 exact structure, not this content):
 {"claims": [
   {"claim_text": "è tra i pochi formaggi magri sul mercato", "category": "unsubstantiated_health_or_efficacy_claim", "risk_level": "HIGH", "risk_rationale": "Product's own nutrition panel shows standard fat content; claim contradicts the product's own disclosed data."},
-  {"claim_text": "Fonte di fibre", "category": "nutrition_content_claim", "risk_level": "LOW", "risk_rationale": "Correct legal wording; threshold compliance not verifiable from this text alone."},
+  {"claim_text": "Fonte di fibre", "category": "nutrition_content_claim", "risk_level": "LOW", "risk_rationale": "Correct legal wording; threshold compliance not verifiable from this text alone, but category is legally bounded."},
+  {"claim_text": "Filtro in cellulosa biodegradabile", "category": "environmental_unsubstantiated", "risk_level": "MEDIUM", "risk_rationale": "Asserts an environmental material property with no certification or data given for this specific claim."},
+  {"claim_text": "è un alleato dello stomaco e della digestione", "category": "unsubstantiated_health_or_efficacy_claim", "risk_level": "MEDIUM", "risk_rationale": "Folk digestive-health claim, no EU-authorized wording or evidence given."},
   {"claim_text": "Emissioni di CO2 ridotte e compensate", "category": "offset_based_neutrality", "risk_level": "HIGH", "risk_rationale": "Offset-based neutrality claim, blacklisted per se regardless of whether the offset is genuine."},
   {"claim_text": "Il calcio contribuisce alla normale funzione muscolare", "category": "irrelevant_claim", "risk_rationale": "Full authorized EFSA physiological-function wording, used correctly.", "risk_level": "LOW"}
 ]}
