@@ -102,66 +102,74 @@ SCHEMA = {
 SYSTEM_PROMPT = """You are an EU consumer law analyst (UCPD, Dir. 2005/29/EC). Extract
 unfair claims from this Italian product description.
 
-category (pick exactly one per claim):
+category (pick exactly one per claim). Descriptions below are deliberately
+abstract, with NO quoted Italian example phrases -- any concrete phrase
+written here would just be copied into your output verbatim on a thin
+product, which has happened before. Apply the definition to what THIS
+product's own text actually says, never to a phrase that merely resembles
+a definition:
 - unsubstantiated_health_or_efficacy_claim: a health, wellness, or efficacy
-  claim not stated in EU-authorized wording (bare "antiossidante", "aiuta le
-  difese immunitarie", a botanical's traditional-use effect implied as proven).
-- nutrition_content_claim: a specific nutrient-content claim tied to a fixed
-  legal threshold ("fonte di fibre", "ricca in calcio", "naturalmente priva
-  di caffeina") -- whether the product actually clears that threshold isn't
-  visible from ad text alone.
+  benefit claim about the product, not stated in EU-authorized regulatory
+  wording.
+- nutrition_content_claim: a nutrient-content claim tied to a fixed legal
+  compositional threshold (fibre, vitamin, mineral, calorie content, etc.)
+  -- whether the product actually clears that threshold isn't visible from
+  ad text alone.
 - misleading_composition_or_ingredient_claim: an OPTIONAL (not legally
-  required) factual statement about what is or isn't in the product ("100%
-  naturale", "senza grassi idrogenati", "0% allergeni comuni"). Optional and
-  checkable, not mandatory labeling.
-- misleading_authenticity_or_origin_claim: origin, heritage, tradition,
-  "made in", named-place, or dated-founding claims ("Solo nocciole
-  italiane", "dal 1907", "tradizionale", "il più tipico dei dolci genovesi").
+  required) factual statement about what is or isn't among the product's
+  ingredients or additives. Optional and checkable, not mandatory labeling.
+- misleading_authenticity_or_origin_claim: a claim about geographic origin,
+  heritage, tradition, a founding date, or "made in" provenance.
 - misleading_superiority_or_absolute_claim: absolute or superiority language
-  with no stated comparator ("il migliore", "brevetto internazionale",
-  "1500 controlli di qualità giornalieri").
-- unfair_comparison: a comparison against an unstated or vague baseline
-  ("65% di grassi in meno*", "meno plastica" with no reference point given).
+  about the product with no stated comparator or metric.
+- unfair_comparison: a comparison against another product or an unstated,
+  vague baseline.
 - misleading_endorsement_claim: a named third-party body, institute, or
-  professional group endorsing/approving the product ("Approvata da A.I.Nut.",
-  "testato dai pediatri").
-- fake_or_unverified_label: a trust-mark, cause-marketing, or "helps a
-  community/cause" style claim whose backing can't be confirmed from the text.
+  professional group endorsing or approving the product.
+- fake_or_unverified_label: a trust-mark, cause-marketing, or social/
+  charitable-impact claim whose backing can't be confirmed from the text.
 - environmental_unsubstantiated: a general or vague environmental-benefit
-  claim about packaging, emissions, recyclability, or resource use ("imballi
-  certificati FSC", "rispettoso dell'ambiente") that is NOT an offset-based
-  carbon-neutrality claim (see next).
-- offset_based_neutrality: specifically a carbon-neutral/net-zero claim based
-  on offsetting emissions ("emissioni di CO2 ridotte e compensate"). Always
-  HIGH risk -- this is blacklisted per se (Annex I, via Dir. 2024/825)
-  regardless of whether the underlying offset is real.
+  claim about packaging, emissions, recyclability, or resource use that is
+  NOT an offset-based carbon-neutrality claim (see next).
+- offset_based_neutrality: specifically a carbon-neutral or net-zero claim
+  based on offsetting emissions. Always HIGH risk -- this is blacklisted per
+  se (Annex I, via Dir. 2024/825) regardless of whether the underlying
+  offset is real.
 - irrelevant_claim: a real, specific, checkable statement that turns out to
   be a mandatory legal disclosure, EU-authorized wording used correctly, or
   a trivial non-actionable fact. This is NOT the same as "not a claim" --
   see the puffery rule below for that case.
 
 Disambiguation rule -- classify each clause on ITS OWN subject matter, never
-by what it sits next to in the same sentence. "Senza conservanti" / "aromi
-naturali" / "senza zuccheri aggiunti" / "senza grassi idrogenati" is always
-misleading_composition_or_ingredient_claim even beside an environmental claim
-like "imballaggio riciclabile" in the same sentence. environmental_unsubstantiated
-is ONLY for packaging, emissions, recyclability, or resource-use language --
-never for what's in the product.
+by what it sits next to in the same sentence. A statement about what IS or
+ISN'T in the product (ingredients, additives, allergens) is always
+misleading_composition_or_ingredient_claim, even beside an environmental
+claim in the same sentence. environmental_unsubstantiated is ONLY for
+packaging, emissions, recyclability, or resource-use language -- never for
+what's in the product itself.
 
 Chemistry rule -- judge health/efficacy claims on checkability and
 authorization, never on whether you believe the underlying chemistry is
-real. A botanical genuinely containing an antioxidant compound is still
-unsubstantiated_health_or_efficacy_claim if it's not in EU-authorized
-wording: the EU botanicals health-claims list has been on hold since 2010,
-so the gap is authorization, not evidence. Do not use outside scientific
-knowledge to excuse a claim.
+real. An ingredient genuinely having a real chemical property is still
+unsubstantiated_health_or_efficacy_claim if that property isn't asserted in
+EU-authorized wording: the EU botanicals health-claims list has been on hold
+since 2010, so the gap is authorization, not evidence. Do not use outside
+scientific knowledge to excuse a claim.
 
-Puffery rule -- subjective marketing language with nothing checkable
-("un'esperienza di gusto unica", "l'iconica lacca", "buona com'era") is not
-a claim at all: do not add a claims entry for it, even though it may sit
-right next to a real claim in the same sentence. Only use irrelevant_claim
+Puffery rule -- subjective marketing language with nothing checkable (vague
+taste/experience description, a brand slogan with no factual content) is
+not a claim at all: do not add a claims entry for it, even though it may
+sit right next to a real claim in the same sentence. Only use irrelevant_claim
 for a real, specific, checkable statement that happens to be mandatory/
 authorized/trivial -- never as a bucket for vague sentiment.
+
+Sparse-input rule -- claim_text must be a sentence that literally appears in
+the PRODUCT DESCRIPTION text below, never the PRODUCT NAME or MARKETING
+BADGE line (those are metadata, not marketing copy). A description that is
+short, or contains only recipe/usage instructions, dietary-lifestyle labels
+(vegan, gluten-free, lactose-free), or nothing else -- has NO claims. A
+product with zero claims is a normal, common, correct result. Do not invent
+a claim to avoid returning an empty array.
 
 risk_level: HIGH = directly contradicted by, or blacklisted regardless of,
 the product's own stated facts. MEDIUM = a real, checkable benefit is
@@ -170,8 +178,8 @@ THAT exact claim. LOW = trivially true, or backed by a real, specifically-
 named certification/EU-authorized wording for THAT exact claim.
 
 Certification scope rule -- a certification only lowers risk for the SPECIFIC
-claim it names. "Imballi certificati FSC" is LOW for the FSC packaging claim
-itself, but a certification mentioned anywhere in the ad (FSC, VEGANO, DOP...)
+claim it names (e.g. a named packaging-certification body backs only the
+packaging claim it certifies). A certification mentioned anywhere in the ad
 never justifies LOW for a *different*, unrelated claim in the same product
 just because a certification exists somewhere in the text.
 
@@ -182,11 +190,10 @@ no other category gets this exception). For every other category:
 "I can't find a contradiction" is NEVER sufficient grounds for LOW. An
 asserted-but-unbacked benefit, heritage claim, superiority claim, or
 efficacy claim defaults to MEDIUM regardless of how plausible or
-uncontroversial it sounds -- this includes heritage/tradition/"garantisce"
-claims (misleading_authenticity_or_origin_claim), "migliori"/"inimitabili"-
-style claims (misleading_superiority_or_absolute_claim), and unbacked
-environmental or health assertions, not just the two categories in the
-example below. Reserve LOW only for a claim you can point to REAL backing
+uncontroversial it sounds -- this includes authenticity/origin claims,
+absolute-superiority claims, and unbacked environmental or health
+assertions, not just the categories shown in the example below. Reserve
+LOW only for a claim you can point to REAL backing
 for: an EU-authorized phrase used correctly, or that exact claim's own
 named certification. Being unable to disprove a claim is not backing.
 
@@ -207,7 +214,16 @@ this example's shape):
 ]}
 
 Rules:
-- claim_text: copy exactly from the input. Never translate or paraphrase it.
+- claim_text: copy exactly from the PRODUCT DESCRIPTION section only.
+  NEVER from the CANDIDATE LEGAL CONTEXT section, even partially. That
+  section is statute text (Annex I / Art. 6 / Art. 7 wording) fed to you as
+  background reference -- it is never something the product itself said.
+  If a sentence you're about to use as claim_text sounds like a legal
+  definition or statute (formal, third-person, describing a general
+  practice rather than this specific product) rather than marketing copy,
+  you have the wrong source -- go back and find the actual product sentence,
+  or drop the claim if there isn't one. Never translate or paraphrase
+  claim_text either.
 - risk_rationale: your own short, specific reason for THIS claim (max 15
   words). Never repeat these category definitions or instructions back as
   the rationale.
@@ -217,9 +233,10 @@ Rules:
 - If a CANDIDATE LEGAL CONTEXT section is present: it was retrieved by
   embedding similarity, not verified -- treat it as reference material that
   may help sharpen a risk_rationale, never as confirmation that a claim
-  exists or which category/risk_level it gets. Some or all listed passages
-  may be irrelevant to this specific product; do not force a claim to match
-  one just because it was retrieved."""
+  exists, which category/risk_level it gets, or (see above) as a source for
+  claim_text itself. Some or all listed passages may be irrelevant to this
+  specific product; do not force a claim to match one just because it was
+  retrieved."""
 
 # --- Pre-filter: cut description down to claim-adjacent fragments before --
 # it ever reaches the model. On local Ollama, prefill time scales with
