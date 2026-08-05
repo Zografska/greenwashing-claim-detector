@@ -25,10 +25,20 @@ from .data import load_descriptions, iter_records
 OLLAMA_URL = "http://localhost:4639/api/generate"
 
 # --- JSON Schema for Ollama's grammar-constrained decoding ---------------
-# Categories below are UCPD's actual legal hooks, not ECGT's vocabulary --
-# "offset_based_neutrality" and "fake_or_unverified_label" are ECGT-specific
-# concepts (about *environmental* claim substantiation) that don't have a
-# direct UCPD equivalent, so they're replaced rather than relabeled.
+# `category` values are lifted verbatim from golden/canonical/<retailer>.json
+# -- the same 11-way taxonomy the golden set's extracted_claims use -- so
+# extraction output and gold labels are directly comparable without a
+# relabeling step. This replaces an earlier hand-designed 6-way UCPD split
+# (NUTRITION_HEALTH_CLAIM/ORIGIN_PROVENANCE_CLAIM/etc.) that didn't match
+# the golden set at all.
+#
+# `ucpd_category` (the separate misleading_action/misleading_omission/
+# blacklisted_practice/aggressive_practice/none legal-hook axis) is dropped
+# entirely, not just relabeled: golden/canonical/*.json's own ucpd_category
+# field is always null (that legal-hook mapping is done downstream by
+# src/adapters/legal_mapping.py, not at extraction time), so asking a small
+# model to hit two independent enums plus risk_level in one pass was pure
+# added failure surface for a field nothing consumes.
 RESPONSE_SCHEMA = {
     "type": "object",
     "properties": {
@@ -41,22 +51,17 @@ RESPONSE_SCHEMA = {
                     "category": {
                         "type": "string",
                         "enum": [
-                            "NUTRITION_HEALTH_CLAIM",
-                            "ORIGIN_PROVENANCE_CLAIM",
-                            "COMPOSITION_CLAIM",
-                            "PRICE_VALUE_CLAIM",
-                            "ENVIRONMENTAL_CLAIM",
-                            "SAFETY_INSTRUCTION_CLAIM",
-                        ],
-                    },
-                    "ucpd_category": {
-                        "type": "string",
-                        "enum": [
-                            "misleading_action",
-                            "misleading_omission",
-                            "blacklisted_practice",
-                            "aggressive_practice",
-                            "none",
+                            "unsubstantiated_health_or_efficacy_claim",
+                            "nutrition_content_claim",
+                            "misleading_composition_or_ingredient_claim",
+                            "misleading_authenticity_or_origin_claim",
+                            "misleading_superiority_or_absolute_claim",
+                            "unfair_comparison",
+                            "misleading_endorsement_claim",
+                            "fake_or_unverified_label",
+                            "environmental_unsubstantiated",
+                            "offset_based_neutrality",
+                            "irrelevant_claim",
                         ],
                     },
                     "risk_level": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
@@ -65,7 +70,6 @@ RESPONSE_SCHEMA = {
                 "required": [
                     "claim_text",
                     "category",
-                    "ucpd_category",
                     "risk_level",
                     "risk_rationale",
                 ],
@@ -81,56 +85,106 @@ SCHEMA = {
     "claims": [
         {
             "claim_text": "exact text as found in description",
-            "category": "NUTRITION_HEALTH_CLAIM | ORIGIN_PROVENANCE_CLAIM | COMPOSITION_CLAIM | PRICE_VALUE_CLAIM | ENVIRONMENTAL_CLAIM | SAFETY_INSTRUCTION_CLAIM",
-            "ucpd_category": "misleading_action | misleading_omission | blacklisted_practice | aggressive_practice | none",
+            "category": (
+                "unsubstantiated_health_or_efficacy_claim | nutrition_content_claim | "
+                "misleading_composition_or_ingredient_claim | misleading_authenticity_or_origin_claim | "
+                "misleading_superiority_or_absolute_claim | unfair_comparison | misleading_endorsement_claim | "
+                "fake_or_unverified_label | environmental_unsubstantiated | offset_based_neutrality | "
+                "irrelevant_claim"
+            ),
             "risk_level": "HIGH | MEDIUM | LOW",
             "risk_rationale": "specific reason this risk level applies",
         }
     ]
 }
 
-# --- System prompt: UCPD scope -------------------------------------------
-# Category/risk definitions spelled out for the model. Same verbatim-copy
-# and scope rules as before, carried over since they fixed real bugs
-# (mistranslation, multi-line concatenation) unrelated to which directive
-# is being applied.
+# --- System prompt: UCPD scope, golden-set-aligned category taxonomy ----
 SYSTEM_PROMPT = """You are an EU consumer law analyst (UCPD, Dir. 2005/29/EC). Extract
 unfair claims from this Italian product description.
 
-ucpd_category:
-- misleading_action: a false or unverifiable factual claim about composition,
-  origin, or health/nutrition, stated as if proven (Art. 6).
-- misleading_omission: hides info the consumer needs, or downplays/contradicts
-  an official safety or storage instruction (Art. 7).
-- blacklisted_practice: claims a certification, status, or health benefit the
-  product does not actually have evidence for (Annex I).
-- aggressive_practice: specifically recommends the product to, or targets,
-  a vulnerable group (children, elderly, pregnant, immunocompromised) in a
-  way connected to a real risk for that group -- not just any mention of them.
-- none: not a legal claim at all (recipe tips, taste description, brand slogans).
+category (pick exactly one per claim):
+- unsubstantiated_health_or_efficacy_claim: a health, wellness, or efficacy
+  claim not stated in EU-authorized wording (bare "antiossidante", "aiuta le
+  difese immunitarie", a botanical's traditional-use effect implied as proven).
+- nutrition_content_claim: a specific nutrient-content claim tied to a fixed
+  legal threshold ("fonte di fibre", "ricca in calcio", "naturalmente priva
+  di caffeina") -- whether the product actually clears that threshold isn't
+  visible from ad text alone.
+- misleading_composition_or_ingredient_claim: an OPTIONAL (not legally
+  required) factual statement about what is or isn't in the product ("100%
+  naturale", "senza grassi idrogenati", "0% allergeni comuni"). Optional and
+  checkable, not mandatory labeling.
+- misleading_authenticity_or_origin_claim: origin, heritage, tradition,
+  "made in", named-place, or dated-founding claims ("Solo nocciole
+  italiane", "dal 1907", "tradizionale", "il più tipico dei dolci genovesi").
+- misleading_superiority_or_absolute_claim: absolute or superiority language
+  with no stated comparator ("il migliore", "brevetto internazionale",
+  "1500 controlli di qualità giornalieri").
+- unfair_comparison: a comparison against an unstated or vague baseline
+  ("65% di grassi in meno*", "meno plastica" with no reference point given).
+- misleading_endorsement_claim: a named third-party body, institute, or
+  professional group endorsing/approving the product ("Approvata da A.I.Nut.",
+  "testato dai pediatri").
+- fake_or_unverified_label: a trust-mark, cause-marketing, or "helps a
+  community/cause" style claim whose backing can't be confirmed from the text.
+- environmental_unsubstantiated: a general or vague environmental-benefit
+  claim about packaging, emissions, recyclability, or resource use ("imballi
+  certificati FSC", "rispettoso dell'ambiente") that is NOT an offset-based
+  carbon-neutrality claim (see next).
+- offset_based_neutrality: specifically a carbon-neutral/net-zero claim based
+  on offsetting emissions ("emissioni di CO2 ridotte e compensate"). Always
+  HIGH risk -- this is blacklisted per se (Annex I, via Dir. 2024/825)
+  regardless of whether the underlying offset is real.
+- irrelevant_claim: a real, specific, checkable statement that turns out to
+  be a mandatory legal disclosure, EU-authorized wording used correctly, or
+  a trivial non-actionable fact. This is NOT the same as "not a claim" --
+  see the puffery rule below for that case.
 
-category: NUTRITION_HEALTH_CLAIM | ORIGIN_PROVENANCE_CLAIM | COMPOSITION_CLAIM
-| PRICE_VALUE_CLAIM | ENVIRONMENTAL_CLAIM | SAFETY_INSTRUCTION_CLAIM
+Disambiguation rule -- classify each clause on ITS OWN subject matter, never
+by what it sits next to in the same sentence. "Senza conservanti" / "aromi
+naturali" / "senza zuccheri aggiunti" / "senza grassi idrogenati" is always
+misleading_composition_or_ingredient_claim even beside an environmental claim
+like "imballaggio riciclabile" in the same sentence. environmental_unsubstantiated
+is ONLY for packaging, emissions, recyclability, or resource-use language --
+never for what's in the product.
 
-risk_level: HIGH = directly contradicted by, or unverifiable against, the
-product's own stated facts. MEDIUM = plausible but no evidence given either
-way. LOW = factual, or backed by a real EU certification -- skip these,
-do not output them at all.
+Chemistry rule -- judge health/efficacy claims on checkability and
+authorization, never on whether you believe the underlying chemistry is
+real. A botanical genuinely containing an antioxidant compound is still
+unsubstantiated_health_or_efficacy_claim if it's not in EU-authorized
+wording: the EU botanicals health-claims list has been on hold since 2010,
+so the gap is authorization, not evidence. Do not use outside scientific
+knowledge to excuse a claim.
 
-EXAMPLE (for format only, not content to copy):
-claim_text: "è tra i pochi formaggi magri"
-category: NUTRITION_HEALTH_CLAIM | ucpd_category: misleading_action | risk_level: HIGH
-risk_rationale: "Calls a high-fat cheese low-fat; contradicts its own nutrition values."
+Puffery rule -- subjective marketing language with nothing checkable
+("un'esperienza di gusto unica", "l'iconica lacca", "buona com'era") is not
+a claim at all: do not add a claims entry for it, even though it may sit
+right next to a real claim in the same sentence. Only use irrelevant_claim
+for a real, specific, checkable statement that happens to be mandatory/
+authorized/trivial -- never as a bucket for vague sentiment.
+
+risk_level: HIGH = directly contradicted by, or blacklisted regardless of,
+the product's own stated facts. MEDIUM = plausible but no evidence given
+either way. LOW = factual, or backed by a real EU certification/authorized
+wording. Emit every claim you find at every risk_level, including LOW --
+do not silently drop LOW-risk claims; filtering happens downstream, not here.
+
+EXAMPLE (full valid JSON response for one product with 4 claims -- copy this
+exact structure, not this content):
+{"claims": [
+  {"claim_text": "è tra i pochi formaggi magri sul mercato", "category": "unsubstantiated_health_or_efficacy_claim", "risk_level": "HIGH", "risk_rationale": "Product's own nutrition panel shows standard fat content; claim contradicts the product's own disclosed data."},
+  {"claim_text": "Fonte di fibre", "category": "nutrition_content_claim", "risk_level": "LOW", "risk_rationale": "Correct legal wording; threshold compliance not verifiable from this text alone."},
+  {"claim_text": "Emissioni di CO2 ridotte e compensate", "category": "offset_based_neutrality", "risk_level": "HIGH", "risk_rationale": "Offset-based neutrality claim, blacklisted per se regardless of whether the offset is genuine."},
+  {"claim_text": "Il calcio contribuisce alla normale funzione muscolare", "category": "irrelevant_claim", "risk_rationale": "Full authorized EFSA physiological-function wording, used correctly.", "risk_level": "LOW"}
+]}
 
 Rules:
 - claim_text: copy exactly from the input. Never translate or paraphrase it.
 - risk_rationale: your own short, specific reason for THIS claim (max 15
   words). Never repeat these category definitions or instructions back as
   the rationale.
-- Only use aggressive_practice if the text actually connects the product to
-  a vulnerable group's risk -- not for unrelated convenience claims like
-  pre-sliced packaging.
-- Skip recipes, serving suggestions, taste description, brand slogans.
+- Skip recipes, serving suggestions, and pure taste/sentiment description --
+  see the puffery rule above.
 - No claims found -> empty array. Never invent a claim not in the text.
 - If a CANDIDATE LEGAL CONTEXT section is present: it was retrieved by
   embedding similarity, not verified -- treat it as reference material that
@@ -327,8 +381,7 @@ MARKETING BADGE: {product.get("marketing_badge", "none")}
 PRODUCT DESCRIPTION (pre-filtered for claim-relevant content):
 {filtered or "No description available"}{grounding_section}
 
-Extract claims across all in-scope categories: nutrition/health, origin,
-composition, price/value, environmental, and safety-instruction claims."""
+Extract every claim covered by the category list in the system prompt."""
 
 
 def _repair_misplaced_commas(raw: str) -> str:
@@ -399,11 +452,11 @@ def extract_claims(
     # num_ctx must grow when grounding is attached -- a real top-7 grounding
     # block runs ~200-2000 words (median ~789), capped at MAX_GROUNDING_WORDS
     # (~1400 words =~ 1960 tokens at ~1.4 tok/word for Italian legal text).
-    # Baseline budget (unchanged, see below) is ~2610 tokens + ~590 headroom
-    # for the description = 3200. Grounded budget: same 2610 + ~1960 for the
-    # capped grounding block + the same ~590 description headroom =~ 5160,
+    # Baseline budget (unchanged, see below) is ~3360 tokens + ~590 headroom
+    # for the description = 4000. Grounded budget: same 3360 + ~1960 for the
+    # capped grounding block + the same ~590 description headroom =~ 5910,
     # rounded up for margin -- measured against the actual corpus, not guessed.
-    num_ctx = 5500 if grounding_chunks else 3200
+    num_ctx = 6000 if grounding_chunks else 4000
 
     response = httpx.post(
         OLLAMA_URL,
@@ -417,33 +470,31 @@ def extract_claims(
                 "temperature": 0,     # was 0.1 — fully greedy to remove the
                                        # run-to-run claim-count drift seen
                                        # earlier (4 vs 5, 2 vs 4 claims etc.)
-                "num_predict": 1750,   # was 1100, which truncated on a 3.1:8b
-                                       # run at the SAME record/claim as the
-                                       # 3.2:3b model did -- a strong signal
-                                       # this was a config ceiling, not a
-                                       # model-capability problem (a 3x larger
-                                       # model hit the identical wall). Root
-                                       # cause: 1100 was sized using a SHORT
-                                       # worked-example claim_text (~67
-                                       # tok/claim), but this dataset's actual
-                                       # marketing copy runs long, run-on
-                                       # sentences -- e.g. record 1's claim_text
-                                       # alone is 179 chars. Measured against
-                                       # a real long claim_text + a full
-                                       # 15-word rationale: ~120 tok/claim.
-                                       # Record 0 already produced 10 claims
-                                       # successfully; sizing to 14 claims at
-                                       # the worst-case per-claim cost
-                                       # (14 * 120 + 30 wrapper overhead =
-                                       # ~1700) gives real margin above the
-                                       # observed max, not just matching it.
-                "num_ctx": num_ctx,     # was 3200 flat. Must cover system prompt
+                "num_predict": 2500,   # was 1750, which still truncated on the
+                                       # full coop UCPD run (grounded, top-10
+                                       # candidates) -- same "config ceiling,
+                                       # not model-capability" signature as the
+                                       # 1100->1750 bump: e.g. "Torta alla
+                                       # mela"/"Biscotti al nesquik" produced
+                                       # claim_text values that embed a FULL
+                                       # ingredient list verbatim (250+ chars,
+                                       # ~2x the 179-char worst case 1750 was
+                                       # sized against), and several
+                                       # cura-persona records legitimately
+                                       # generate 9-14 claims pre-filter.
+                                       # Sizing to 14 claims at ~180 tok/claim
+                                       # (up from the earlier ~120 measurement,
+                                       # to cover these longer claim_texts) +
+                                       # 30 wrapper overhead = ~2550 -- real
+                                       # margin above the observed max, not
+                                       # just matching it.
+                "num_ctx": num_ctx,     # was 3200/5500. Must cover system prompt
                                         # (~600 tok) + schema (~200) + user
-                                        # overhead (~60) + num_predict (1750)
-                                        # = ~2610, leaving ~590 tokens for the
+                                        # overhead (~60) + num_predict (2500)
+                                        # = ~3360, leaving ~590 tokens for the
                                         # pre-filtered description text itself
                                         # -- verified headroom, not a guess.
-                                        # 5500 when grounded -- see the comment
+                                        # 6000 when grounded -- see the comment
                                         # above this function for the added
                                         # ~1960-token grounding budget.
             },
@@ -517,15 +568,14 @@ def _validate_claims(claims: List[dict]) -> Tuple[List[dict], List[dict]]:
     to reintroduce a verbatim check (see git history / _normalize_for_match)
     rather than trying to patch around it here.
 
-    The LOW-risk drop is a deterministic backstop for the "OUTPUT FILTER"
-    instruction in SYSTEM_PROMPT, which tells the model not to emit LOW-risk
-    claims at all. That instruction should cut most of the generation cost
-    (fewer claims -> fewer tokens -> faster runs), but it's a soft constraint:
-    the schema still allows risk_level="LOW" as a valid enum value, and local
-    models are inconsistent about honoring negative instructions like "don't
-    output X" under grammar-constrained decoding. This filter guarantees no
-    LOW-risk claim reaches `claims` regardless of whether the model actually
-    skipped generating it or generated it anyway.
+    The LOW-risk drop is deliberately a CODE filter, not a prompt instruction:
+    SYSTEM_PROMPT tells the model to emit every claim it finds, including
+    LOW-risk ones, and never to silently omit one -- otherwise a wrong "this
+    is LOW, skip it" judgment call vanishes with nothing to audit later (the
+    same reason golden/canonical/*.json tracks LOW-risk/irrelevant_claim rows
+    explicitly instead of dropping them at labeling time). Filtering happens
+    only here, downstream of generation, so every LOW-risk call the model
+    made is still visible in `dropped_claims` for review.
 
     Returns (valid, dropped) so both kinds of drops are still visible in the
     output instead of silently vanishing.
