@@ -22,7 +22,7 @@ import httpx
 from .data import load_descriptions, iter_records
 
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
+OLLAMA_URL = "http://localhost:4639/api/generate"
 
 # --- JSON Schema for Ollama's grammar-constrained decoding ---------------
 # Categories below are UCPD's actual legal hooks, not ECGT's vocabulary --
