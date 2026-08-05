@@ -193,17 +193,17 @@ named certification. Being unable to disprove a claim is not backing.
 Emit every claim you find at every risk_level, including LOW -- do not
 silently drop LOW-risk claims; filtering happens downstream, not here.
 
-EXAMPLE (full valid JSON response for one product with 8 claims -- copy this
-exact structure, not this content):
+EXAMPLE (JSON STRUCTURE ONLY. Every claim_text/risk_rationale below is a
+PLACEHOLDER in angle brackets, not real content -- there is no real product
+behind this example. NEVER copy any text from this example into a real
+answer: your claim_text must always be a verbatim sentence you can point to
+in THIS product's own PRODUCT DESCRIPTION, never text that merely resembles
+this example's shape):
 {"claims": [
-  {"claim_text": "è tra i pochi formaggi magri sul mercato", "category": "unsubstantiated_health_or_efficacy_claim", "risk_level": "HIGH", "risk_rationale": "Product's own nutrition panel shows standard fat content; claim contradicts the product's own disclosed data."},
-  {"claim_text": "Fonte di fibre", "category": "nutrition_content_claim", "risk_level": "LOW", "risk_rationale": "Correct legal wording; threshold compliance not verifiable from this text alone, but category is legally bounded."},
-  {"claim_text": "Filtro in cellulosa biodegradabile", "category": "environmental_unsubstantiated", "risk_level": "MEDIUM", "risk_rationale": "Asserts an environmental material property with no certification or data given for this specific claim."},
-  {"claim_text": "è un alleato dello stomaco e della digestione", "category": "unsubstantiated_health_or_efficacy_claim", "risk_level": "MEDIUM", "risk_rationale": "Folk digestive-health claim, no EU-authorized wording or evidence given."},
-  {"claim_text": "la tradizionale, autentica pastafrolla di Grondona", "category": "misleading_authenticity_or_origin_claim", "risk_level": "MEDIUM", "risk_rationale": "Heritage/authenticity claim with no evidence given; nothing contradicting it is not the same as backing it."},
-  {"claim_text": "le inimitabili ricette di famiglia", "category": "misleading_superiority_or_absolute_claim", "risk_level": "MEDIUM", "risk_rationale": "Absolute superiority language with no comparator or evidence given."},
-  {"claim_text": "Emissioni di CO2 ridotte e compensate", "category": "offset_based_neutrality", "risk_level": "HIGH", "risk_rationale": "Offset-based neutrality claim, blacklisted per se regardless of whether the offset is genuine."},
-  {"claim_text": "Il calcio contribuisce alla normale funzione muscolare", "category": "irrelevant_claim", "risk_rationale": "Full authorized EFSA physiological-function wording, used correctly.", "risk_level": "LOW"}
+  {"claim_text": "<verbatim sentence from the product asserting an unbacked health/efficacy benefit>", "category": "unsubstantiated_health_or_efficacy_claim", "risk_level": "MEDIUM", "risk_rationale": "<specific reason: what's asserted, why it's unbacked>"},
+  {"claim_text": "<verbatim sentence from the product using a fixed-threshold nutrient wording>", "category": "nutrition_content_claim", "risk_level": "LOW", "risk_rationale": "<specific reason: legally bounded category, threshold unverified from text>"},
+  {"claim_text": "<verbatim sentence from the product about heritage, tradition, or origin>", "category": "misleading_authenticity_or_origin_claim", "risk_level": "MEDIUM", "risk_rationale": "<specific reason: unbacked heritage/origin assertion>"},
+  {"claim_text": "<verbatim sentence from the product about a carbon-offset or net-zero claim>", "category": "offset_based_neutrality", "risk_level": "HIGH", "risk_rationale": "<specific reason: blacklisted per se regardless of truth>"}
 ]}
 
 Rules:
@@ -480,11 +480,22 @@ def extract_claims(
     # num_ctx must grow when grounding is attached -- a real top-7 grounding
     # block runs ~200-2000 words (median ~789), capped at MAX_GROUNDING_WORDS
     # (~1400 words =~ 1960 tokens at ~1.4 tok/word for Italian legal text).
-    # Baseline budget (unchanged, see below) is ~3360 tokens + ~590 headroom
-    # for the description = 4000. Grounded budget: same 3360 + ~1960 for the
-    # capped grounding block + the same ~590 description headroom =~ 5910,
-    # rounded up for margin -- measured against the actual corpus, not guessed.
-    num_ctx = 6000 if grounding_chunks else 4000
+    # SYSTEM_PROMPT itself was re-measured after the golden-set category
+    # rewrite (11-way taxonomy + disambiguation/chemistry/MEDIUM-default
+    # rules + an 8-claim worked example): ~1150 words / ~8800 chars, ~2000
+    # tokens -- roughly 3x the ~600 tok the PREVIOUS num_ctx sizing assumed.
+    # That gap, not num_predict, was the real cause of truncation reappearing
+    # on multi-claim records (e.g. "Integratore alimentare al mirtillo"):
+    # system(~2000) + schema(~190, measured from RESPONSE_SCHEMA's compact
+    # JSON) + user overhead(~60) + num_predict(3500) + grounding(~1960) +
+    # description headroom(~590) =~ 8300, already past the old 6000 ceiling
+    # -- Ollama truncates generation when num_ctx runs out, which looks
+    # identical to a num_predict truncation but isn't fixed by raising
+    # num_predict alone. Baseline (ungrounded) budget: same system+schema+
+    # overhead+num_predict+description =~ 6340, rounded up to 7000. Grounded:
+    # +1960 for the capped grounding block =~ 8300, rounded up to 9000 --
+    # real margin above the measured max, not just matching it.
+    num_ctx = 9000 if grounding_chunks else 7000
 
     response = httpx.post(
         OLLAMA_URL,
@@ -498,33 +509,22 @@ def extract_claims(
                 "temperature": 0,     # was 0.1 — fully greedy to remove the
                                        # run-to-run claim-count drift seen
                                        # earlier (4 vs 5, 2 vs 4 claims etc.)
-                "num_predict": 2500,   # was 1750, which still truncated on the
-                                       # full coop UCPD run (grounded, top-10
-                                       # candidates) -- same "config ceiling,
-                                       # not model-capability" signature as the
-                                       # 1100->1750 bump: e.g. "Torta alla
-                                       # mela"/"Biscotti al nesquik" produced
-                                       # claim_text values that embed a FULL
-                                       # ingredient list verbatim (250+ chars,
-                                       # ~2x the 179-char worst case 1750 was
-                                       # sized against), and several
-                                       # cura-persona records legitimately
-                                       # generate 9-14 claims pre-filter.
-                                       # Sizing to 14 claims at ~180 tok/claim
-                                       # (up from the earlier ~120 measurement,
-                                       # to cover these longer claim_texts) +
-                                       # 30 wrapper overhead = ~2550 -- real
-                                       # margin above the observed max, not
-                                       # just matching it.
-                "num_ctx": num_ctx,     # was 3200/5500. Must cover system prompt
-                                        # (~600 tok) + schema (~200) + user
-                                        # overhead (~60) + num_predict (2500)
-                                        # = ~3360, leaving ~590 tokens for the
-                                        # pre-filtered description text itself
-                                        # -- verified headroom, not a guess.
-                                        # 6000 when grounded -- see the comment
-                                        # above this function for the added
-                                        # ~1960-token grounding budget.
+                "num_predict": 3500,   # was 2500, which still truncated on
+                                       # "Integratore alimentare al mirtillo"
+                                       # (a supplement -- many per-ingredient
+                                       # efficacy claims, ~18-20 pre-filter is
+                                       # plausible for this product type).
+                                       # Sizing to 20 claims at ~170 tok/claim
+                                       # + 30 wrapper overhead =~ 3430 -- real
+                                       # margin above the observed max. NOTE:
+                                       # the num_ctx bump below is the more
+                                       # important fix this round -- see that
+                                       # comment for why num_predict alone
+                                       # wasn't the actual bottleneck here.
+                "num_ctx": num_ctx,     # was 4000/6000 -- too small even for
+                                        # num_predict=2500 once SYSTEM_PROMPT's
+                                        # real size is counted; see the
+                                        # comment above this function.
             },
         },
         timeout=600,  # was 200. The real problem causing timeouts was call
