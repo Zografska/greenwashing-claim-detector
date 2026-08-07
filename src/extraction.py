@@ -490,7 +490,8 @@ USE_SCHEMA_GRAMMAR = True  # flip to False to A/B test speed: grammar-
 
 
 def extract_claims(
-    product: dict, description: str, model: str = "llama3.2", grounding_chunks: Optional[List[dict]] = None
+    product: dict, description: str, model: str = "llama3.2", grounding_chunks: Optional[List[dict]] = None,
+    temperature: float = 0,
 ) -> dict:
     """
     Extract greenwashing-relevant claims from a product description.
@@ -505,6 +506,16 @@ def extract_claims(
             embedding-only, not LLM-reranked, and why it's capped by word
             count. None (the default) preserves the exact prompt/token
             budget of every prior run.
+        temperature: 0 (default) is fully greedy -- picked to kill llama3.2's
+            run-to-run claim-count drift. Measured on a larger model
+            (llama3.3:70b) to have a DIFFERENT failure mode at temperature=0:
+            it converges on ~1-2 claims per product almost regardless of how
+            many real claims exist, which prose instructions telling it to
+            "be exhaustive" did not change -- consistent with greedy decoding
+            always taking the single highest-probability continuation
+            (closing the array early) rather than exploring further options.
+            Exposed as a parameter, not hardcoded, so this can be A/B tested
+            per model rather than guessed at.
 
     Returns:
         dict with a "claims" list, each entry matching SCHEMA
@@ -538,9 +549,13 @@ def extract_claims(
             "stream": False,
             "format": RESPONSE_SCHEMA if USE_SCHEMA_GRAMMAR else "json",
             "options": {
-                "temperature": 0,     # was 0.1 — fully greedy to remove the
-                                       # run-to-run claim-count drift seen
-                                       # earlier (4 vs 5, 2 vs 4 claims etc.)
+                "temperature": temperature,  # see the temperature arg's
+                                       # docstring above -- 0 (the default)
+                                       # was chosen to remove llama3.2's
+                                       # run-to-run claim-count drift (4 vs 5,
+                                       # 2 vs 4 claims etc.), but is suspected
+                                       # to cause a DIFFERENT under-extraction
+                                       # problem on larger models.
                 "num_predict": 3500,   # was 2500, which still truncated on
                                        # "Integratore alimentare al mirtillo"
                                        # (a supplement -- many per-ingredient
@@ -663,7 +678,7 @@ def _load_grounding_by_ean(matches_path: str) -> Dict[str, List[dict]]:
 
 
 def extract_from_file(
-    filename: str, model: str = "llama3.2", matches_file: Optional[str] = None
+    filename: str, model: str = "llama3.2", matches_file: Optional[str] = None, temperature: float = 0
 ) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
     total = len(records)
@@ -687,6 +702,7 @@ def extract_from_file(
                 description=description,
                 model=model,
                 grounding_chunks=grounding_chunks,
+                temperature=temperature,
             )
             elapsed = time.monotonic() - call_start
 
@@ -747,9 +763,18 @@ if __name__ == "__main__":
         "grounding context, joined by ean -- see src/knowledge/tune_retrieval.py for the tuned "
         "retrieval config this was measured against",
     )
+    parser.add_argument(
+        "--temperature", type=float, default=0,
+        help="0 (default) is fully greedy -- fixes llama3.2's run-to-run claim-count drift, but "
+        "measured to cause a larger model (llama3.3:70b) to converge on ~1-2 claims per product "
+        "almost regardless of ground truth. Try a small positive value (e.g. 0.2) on a larger "
+        "model if it's under-extracting at temperature=0.",
+    )
     args = parser.parse_args()
 
-    results, failed = extract_from_file(args.file, model=args.model, matches_file=args.matches)
+    results, failed = extract_from_file(
+        args.file, model=args.model, matches_file=args.matches, temperature=args.temperature
+    )
 
     print(f"\nProcessed {len(results)} products")
     total_claims = sum(len(r["claims"]) for r in results)
