@@ -469,29 +469,33 @@ def _repair_misplaced_commas(raw: str) -> str:
     return re.sub(r'(["\d\}\]])\s*\n\s*,\s*\n', r'\1,\n', raw)
 
 
-USE_SCHEMA_GRAMMAR = True  # flip to False to A/B test speed: grammar-
-                           # constrained decoding (the JSON Schema passed to
-                           # `format`) is what fixed the enum-leak bug from
-                           # earlier (model echoing "A | B | C" back as a
-                           # literal value), but constrained decoding has a
+USE_SCHEMA_GRAMMAR_DEFAULT = True  # default for the --use-schema-grammar
+                           # CLI flag / extract_claims(use_schema_grammar=)
+                           # param. Grammar-constrained decoding (the JSON
+                           # Schema passed to `format`) is what fixed the
+                           # enum-leak bug from earlier (model echoing
+                           # "A | B | C" back as a literal value), but has a
                            # real, well-documented generation-speed cost --
                            # often 2-5x slower per token, scaling with how
-                           # branchy the grammar is. A 6-way x 5-way x 3-way
-                           # nested enum schema is non-trivial as grammars go.
-                           # Given the 94.7s/~1000-token result (~10 tok/s,
-                           # slow for a 3B model on 100% GPU), this is the
-                           # most likely cause of the slowdown, more so than
-                           # prompt length at this point. Set this to False
-                           # to fall back to loose "format": "json" mode and
-                           # see if speed recovers -- if it does, you're
-                           # trading the enum-leak protection for speed, and
-                           # that's a real decision to make deliberately
-                           # rather than something to default silently.
+                           # branchy the grammar is. An 11-way category enum
+                           # is non-trivial as grammars go. Also a live
+                           # suspect (untested as of this comment) in
+                           # llama3.3:70b's under-extraction pattern: it
+                           # converges on ~1-2 claims per product regardless
+                           # of temperature (identical output at temperature
+                           # 0 and 0.2 across 8 sample products), which rules
+                           # out sampling randomness -- the grammar's forced
+                           # choice at each "add another claim vs. close the
+                           # array" boundary is the other real lever nothing
+                           # has isolated yet. Exposed as a parameter, not a
+                           # hardcoded module constant, so it can be A/B
+                           # tested per model rather than guessed at, same
+                           # reasoning as the temperature parameter above.
 
 
 def extract_claims(
     product: dict, description: str, model: str = "llama3.2", grounding_chunks: Optional[List[dict]] = None,
-    temperature: float = 0,
+    temperature: float = 0, use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT,
 ) -> dict:
     """
     Extract greenwashing-relevant claims from a product description.
@@ -547,7 +551,7 @@ def extract_claims(
             "system": SYSTEM_PROMPT,
             "prompt": _build_user_prompt(product, description, grounding_chunks),
             "stream": False,
-            "format": RESPONSE_SCHEMA if USE_SCHEMA_GRAMMAR else "json",
+            "format": RESPONSE_SCHEMA if use_schema_grammar else "json",
             "options": {
                 "temperature": temperature,  # see the temperature arg's
                                        # docstring above -- 0 (the default)
@@ -678,7 +682,8 @@ def _load_grounding_by_ean(matches_path: str) -> Dict[str, List[dict]]:
 
 
 def extract_from_file(
-    filename: str, model: str = "llama3.2", matches_file: Optional[str] = None, temperature: float = 0
+    filename: str, model: str = "llama3.2", matches_file: Optional[str] = None, temperature: float = 0,
+    use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT,
 ) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
     total = len(records)
@@ -703,6 +708,7 @@ def extract_from_file(
                 model=model,
                 grounding_chunks=grounding_chunks,
                 temperature=temperature,
+                use_schema_grammar=use_schema_grammar,
             )
             elapsed = time.monotonic() - call_start
 
@@ -770,10 +776,17 @@ if __name__ == "__main__":
         "almost regardless of ground truth. Try a small positive value (e.g. 0.2) on a larger "
         "model if it's under-extracting at temperature=0.",
     )
+    parser.add_argument(
+        "--no-schema-grammar", dest="use_schema_grammar", action="store_false",
+        help="disable grammar-constrained decoding (falls back to loose 'format': 'json'). "
+        "Default is grammar-constrained (protects against enum-leak, but has a real generation-"
+        "speed cost and is an untested suspect in llama3.3:70b's under-extraction pattern).",
+    )
     args = parser.parse_args()
 
     results, failed = extract_from_file(
-        args.file, model=args.model, matches_file=args.matches, temperature=args.temperature
+        args.file, model=args.model, matches_file=args.matches, temperature=args.temperature,
+        use_schema_grammar=args.use_schema_grammar,
     )
 
     print(f"\nProcessed {len(results)} products")
