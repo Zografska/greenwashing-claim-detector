@@ -228,8 +228,23 @@ Rules:
   words). Never repeat these category definitions or instructions back as
   the rationale.
 - Skip recipes, serving suggestions, and pure taste/sentiment description --
-  see the puffery rule above.
-- No claims found -> empty array. Never invent a claim not in the text.
+  see the puffery rule above. A sentence giving USAGE instructions (how/where
+  to use the product) is not a health or efficacy claim, even if it mentions
+  a benefit in passing -- if the sentence is telling the consumer what to DO
+  with the product rather than asserting something the product itself
+  possesses, it is not a claim.
+- Be EXHAUSTIVE, not just correct: most real products with any marketing
+  copy at all have MULTIPLE distinct claims, often 4-10, each about a
+  different subject (origin, composition, health, environment...). Read
+  every sentence in PRODUCT DESCRIPTION on its own. Finding one clear claim
+  and stopping there is wrong if other sentences also assert something
+  checkable -- go through the ENTIRE description, not just the first or
+  most obvious claim. Missing a real claim is a worse error than including
+  one you're only moderately confident about (that's what risk_level is
+  for -- MEDIUM exists precisely for claims you're not fully certain of).
+- No claims found -> empty array. Never invent a claim not in the text. But
+  do not default to a single claim either -- verify you checked every
+  sentence before deciding you're done.
 - If a CANDIDATE LEGAL CONTEXT section is present: it was retrieved by
   embedding similarity, not verified -- treat it as reference material that
   may help sharpen a risk_rationale, never as confirmation that a claim
