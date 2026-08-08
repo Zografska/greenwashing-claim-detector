@@ -251,6 +251,56 @@ Rules:
   itself. Some or all listed passages may be irrelevant to this specific
   product; do not force a claim to match one just because it's listed."""
 
+# Reasoning-model variant: same rules verbatim (built as a targeted .replace()
+# on SYSTEM_PROMPT, not a copy, so category/rule edits never have to be made
+# twice), rebalanced for a model that deliberates explicitly over each
+# instruction (e.g. in a <think> trace) rather than pattern-matching.
+#
+# Motivating measurement: deepseek-r1:70b + full-grounding on the 20-product
+# sample scored the best category accuracy (0.71) and zero false positives
+# of any variant tried (plain 3b/70b, dissected, full-grounding 3b/70b), but
+# recall collapsed to 0.14 -- worse than plain llama3.2:3b's 0.22. SYSTEM_PROMPT
+# above states roughly eight distinct exclusionary rules (categories'-own
+# scope limits, disambiguation, chemistry, puffery, sparse-input,
+# certification-scope, MEDIUM-default, skip-recipes) against a single
+# exhaustiveness bullet stated once near the end of Rules. A model that
+# explicitly weighs every instruction in a reasoning trace may weight that
+# lopsidedly toward exclusion in a way a smaller, less deliberative model
+# doesn't. UNVERIFIED as the actual cause -- an ungrounded deepseek run was
+# queued to isolate this from full-grounding's separate, also-plausible
+# severity-anchoring effect (real statute text in the prompt raising the
+# model's bar for what counts as a claim) before this variant was written;
+# check that result before assuming this fixes anything rather than treating
+# a different symptom of the same bug.
+_REASONING_PREAMBLE = (
+    "REASONING-MODEL NOTE: work through every sentence in PRODUCT DESCRIPTION "
+    "independently before applying any rule below. When deliberating whether "
+    "a borderline sentence qualifies as a claim, DEFAULT TO INCLUDING IT at "
+    "the appropriate risk_level rather than excluding it -- risk_level, not "
+    "the claims list, is where uncertainty belongs. An empty or very short "
+    "claims list is only correct when the text truly contains no checkable "
+    "claims at all; do not let the exclusion rules below add up into a "
+    "stricter bar than intended.\n\n"
+)
+
+_LEGAL_CONTEXT_SEVERITY_NOTE = (
+    " A claim does not need to match the severity, formality, or specific "
+    "wording of any CANDIDATE LEGAL CONTEXT passage to qualify -- the "
+    "category definitions above are the only test that matters. Seeing "
+    "formal statute language in this prompt is not a reason to raise your "
+    "bar for what counts as a claim."
+)
+
+SYSTEM_PROMPT_REASONING = SYSTEM_PROMPT.replace(
+    "category (pick exactly one per claim).",
+    _REASONING_PREAMBLE + "category (pick exactly one per claim).",
+    1,
+).replace(
+    "product; do not force a claim to match one just because it's listed.",
+    "product; do not force a claim to match one just because it's listed." + _LEGAL_CONTEXT_SEVERITY_NOTE,
+    1,
+)
+
 # --- Pre-filter: cut description down to claim-adjacent fragments before --
 # it ever reaches the model. On local Ollama, prefill time scales with
 # input tokens, so this is the main latency lever for long product
@@ -538,6 +588,7 @@ def extract_claims(
     temperature: float = 0, use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT,
     full_grounding: bool = False,
     num_predict_override: Optional[int] = None, num_ctx_override: Optional[int] = None,
+    reasoning_model: bool = False,
 ) -> dict:
     """
     Extract greenwashing-relevant claims from a product description.
@@ -567,6 +618,12 @@ def extract_claims(
             cost can be measured directly -- same "parameter, not a guess"
             reasoning as temperature/use_schema_grammar above -- rather than
             adding a guessed deepseek-specific constant.
+        reasoning_model: use SYSTEM_PROMPT_REASONING instead of SYSTEM_PROMPT
+            -- see the comment above that constant for why a model that
+            deliberates explicitly (e.g. a <think> trace) may need the
+            exhaustiveness instruction rebalanced against this prompt's many
+            exclusionary rules. Unvalidated as of this writing -- an A/B
+            lever, not a default to assume is correct.
         temperature: 0 (default) is fully greedy -- picked to kill llama3.2's
             run-to-run claim-count drift. Measured on a larger model
             (llama3.3:70b) to have a DIFFERENT failure mode at temperature=0:
@@ -673,7 +730,7 @@ def extract_claims(
         OLLAMA_URL,
         json={
             "model": model,
-            "system": SYSTEM_PROMPT,
+            "system": SYSTEM_PROMPT_REASONING if reasoning_model else SYSTEM_PROMPT,
             "prompt": _build_user_prompt(product, description, grounding_chunks, full_grounding=full_grounding),
             "stream": False,
             "format": RESPONSE_SCHEMA if use_schema_grammar else "json",
@@ -796,7 +853,7 @@ def extract_from_file(
     filename: str, model: str = "llama3.2", matches_file: Optional[str] = None, temperature: float = 0,
     use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT, full_grounding: bool = False,
     num_predict_override: Optional[int] = None, num_ctx_override: Optional[int] = None,
-    limit: Optional[int] = None,
+    limit: Optional[int] = None, reasoning_model: bool = False,
 ) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
     if limit is not None:
@@ -830,6 +887,7 @@ def extract_from_file(
                 full_grounding=full_grounding,
                 num_predict_override=num_predict_override,
                 num_ctx_override=num_ctx_override,
+                reasoning_model=reasoning_model,
             )
             elapsed = time.monotonic() - call_start
 
@@ -926,12 +984,21 @@ if __name__ == "__main__":
         help="only process the first N records -- cheap for measuring a new model's actual token "
         "cost before committing to a full run.",
     )
+    parser.add_argument(
+        "--reasoning-model", action="store_true",
+        help="use SYSTEM_PROMPT_REASONING instead of SYSTEM_PROMPT -- rebalances the exhaustiveness "
+        "instruction against this prompt's ~8 exclusionary rules for a model that deliberates "
+        "explicitly (e.g. a <think> trace) rather than pattern-matching. Motivated by "
+        "deepseek-r1:70b's 0.71 category accuracy / 0 false positives but 0.14 recall on "
+        "full-grounding -- unvalidated as of this writing, an A/B lever not a proven fix.",
+    )
     args = parser.parse_args()
 
     results, failed = extract_from_file(
         args.file, model=args.model, matches_file=args.matches, temperature=args.temperature,
         use_schema_grammar=args.use_schema_grammar, full_grounding=args.full_grounding,
         num_predict_override=args.num_predict, num_ctx_override=args.num_ctx, limit=args.limit,
+        reasoning_model=args.reasoning_model,
     )
 
     print(f"\nProcessed {len(results)} products")

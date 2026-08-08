@@ -17,8 +17,10 @@ scope, since it postdates the README.
 
 ## Commands
 
-Extraction requires a local Ollama server running (`OLLAMA_URL` in
-`src/extraction.py` points at `http://localhost:11434`):
+Extraction requires an Ollama server running (`OLLAMA_URL` in
+`src/extraction.py` is currently pointed at `http://localhost:4639` — the
+port a remote GPU server this project also runs on uses, not Ollama's
+`11434` default; change it back if running against a local install):
 
 ```bash
 python3 -m src.extraction --file 06.25.json --model llama3.2 --out results/baseline/predictions.json
@@ -26,7 +28,18 @@ python3 -m src.extraction --file 06.25.json --model llama3.2 --out results/basel
 
 `--file` is a filename inside `data/raw/`, not a path. Records with an empty
 `description` are skipped by `src/data.py`. Failed records are written
-alongside `--out` as `failed.json` in the same directory.
+alongside `--out` as `failed.json` in the same directory. Other flags:
+`--matches <compare_e5.py output>` injects a per-product top-7 retrieved
+legal-chunk grounding block; `--full-grounding` attaches the entire 56-chunk
+legal corpus instead (measured to hurt category accuracy on both llama3.2:3b
+and llama3.3:70b — see `src/extraction.py`'s module status below, not
+recommended); `--temperature`/`--no-schema-grammar` are A/B levers, not
+defaults to change; `--num-predict`/`--num-ctx` override the computed
+token budgets entirely (needed for any model with a variable-length
+preamble before its JSON answer, e.g. a reasoning model like deepseek-r1 —
+none of the existing tiers were sized for that); `--limit N` processes only
+the first N records, for cheaply measuring a new model's real token cost
+before committing to a full run.
 
 Evaluation and pipeline wiring (`src/evaluate.py`, `src/pipeline.py`) are not
 yet implemented — see Architecture below.
@@ -68,7 +81,7 @@ Module status:
 
 - `src/data.py` — implemented. Loads `data/raw/<file>.json` (a JSON array of
   product records), yields `(index, record)` skipping blank descriptions.
-- `src/extraction.py` — implemented. Calls a local Ollama model with a
+- `src/extraction.py` — implemented. Calls an Ollama model with a
   JSON-Schema-constrained prompt (`RESPONSE_SCHEMA`) to pull claim spans +
   UCPD category + risk level out of a product description. Pre-filters the
   description to claim-adjacent sentences via `CLAIM_KEYWORDS` before it
@@ -79,7 +92,23 @@ Module status:
   `_validate_claims` drops empty-`claim_text` rows and `risk_level=LOW` rows
   as a deterministic backstop to a soft prompt instruction; `num_predict`/
   `num_ctx` values are sized from measured per-claim token cost, not guesses
-  — see the inline comments before changing them. `_split_claim_sentences`
+  — see the inline comments before changing them (overridable per-call via
+  `--num-predict`/`--num-ctx` for models these tiers weren't measured
+  against). Also supports two legal-grounding modes: `--matches` injects a
+  per-product top-7 embedding-retrieved shortlist (retrieval measured
+  unreliable: Hit@7 ~37%/~16%); `--full-grounding` instead attaches the
+  entire 56-chunk ecgt+ucpd corpus every time (`_load_full_legal_corpus`,
+  `num_ctx=15000`/`num_predict=5000`). Full-grounding was tested against the
+  20-product `golden/samples/canonical/sample_coop.json` sample on both
+  llama3.2:3b and llama3.3:70b and **measured to hurt category accuracy on
+  both** (3b: 0.65→0.00 category-accuracy collapse on matched claims; 70b:
+  0.65→0.41, plus 2.6x slower) — the small legal corpus doesn't sharpen
+  categorization, it dilutes it. Not recommended without a different
+  retrieval mechanism. Full-grounding also triggered a **degenerate
+  repetition loop** on llama3.2:3b (the model got stuck emitting one claim
+  object verbatim for 19KB straight) — fixed via `repeat_penalty=1.3`/
+  `repeat_last_n=512`, applied automatically whenever `full_grounding=True`.
+  `_split_claim_sentences`
   (shared with `src/knowledge/prepare_ads_chunks.py`) also inserts boundaries
   before known product-spec-sheet field labels (`_LABEL_BOUNDARY` —
   "Denominazione di vendita", "Ingredienti e valori nutrizionali", etc.) so
@@ -90,6 +119,51 @@ Module status:
   "Conad per l'ambiente" header, "verifica le regole del tuo comune"
   boilerplate) even though they superficially match `CLAIM_KEYWORDS` — these
   are legally mandatory labeling, never a voluntary claim.
+- `src/dissected_extraction.py` — implemented, same output shape as
+  `extraction.py`'s `extract_from_file` (drop-in comparable). Built to fix a
+  hypothesis that llama3.3:70b/llama3.1:70b collapse to ~1-2 claims/product
+  regardless of gold's real count, by never asking the model an open-ended
+  "list every claim" question: it segments the description into clauses in
+  plain Python first, then forces a classification call whose response
+  schema has `minItems == maxItems == clause count` (so the model
+  structurally cannot submit fewer classifications than clauses), then a
+  separate risk-level call over only the clauses flagged as real claims.
+  **The motivating hypothesis didn't hold up** — retested after the
+  `src/adapters/coop.py` fix below, plain llama3.3:70b's claim count (52)
+  was already in line with gold (49); the "collapse" was confounded by that
+  bug, not a real model limitation. On the 20-product sample, this pipeline
+  measures worse than plain `extraction.py` on precision/recall/F1/category
+  accuracy for both llama3.2:3b and llama3.3:70b, and llama3.3:70b through
+  this pipeline is ~11x slower per product (162s vs 14s) for a narrower win
+  (roughly half the false positives on the zero-claim/`hard_no` subset
+  only). Not currently worth its cost; kept as a still-useful fallback if
+  the plain pipeline's false-positive rate on `hard_no` products becomes the
+  binding constraint.
+- `src/adapters/` — implemented. `build.py` turns one retailer's golden set
+  into the two canonical outputs `evaluate.py`/`extraction.py` need
+  (`--gold-out` for canonical gold, `--extraction-out` for
+  `data/raw/<name>.json`, both gitignored — regenerate per-machine after
+  pulling adapter changes). Per-retailer adapters (`coop.py`, `carrefour.py`,
+  `eurospin.py`, `naturasi.py`) each implement `to_extraction_input`/
+  `to_canonical_gold`. `coop.py`'s `to_extraction_input` had a real bug, now
+  fixed: it only joined `description`+`features`, silently dropping
+  `producer_info` entirely — 178/250 Coop products (71%) had real marketing
+  content (heritage/superiority/environmental claims) that lived *only* in
+  `producer_info`, plus 22 products were skipped outright because their
+  synthesized description was blank. Every model-comparison result from
+  before this fix should be treated as run on incomplete input. Known
+  remaining gap, deliberately not fixed: ~28% of gold claims still aren't
+  found verbatim in description+features+producer_info (many trace to
+  `certifications`/`recycling_other`, which also carry mandatory-disclosure
+  boilerplate `extraction.py` deliberately filters elsewhere — a blind join
+  risks reintroducing that noise).
+- `golden/samples/canonical/sample_coop.json` (paired with
+  `data/raw/sample_coop_extraction_input.json` via `src/adapters/build.py`)
+  — a 20-product stratified sample (6 hard_yes/8 in_between/6 hard_no,
+  `random.seed(42)`) of the 250-product Coop golden set, for fast
+  model-comparison iteration instead of the full set. Current best result on
+  it: plain, ungrounded llama3.3:70b (relaxed span-match F1 0.40, category
+  accuracy 0.65) — beats every grounded/dissected variant tried so far.
 - `src/retrieval.py` and `src/categorize.py` — stubs (`raise NotImplementedError`).
   Intended to embed the directive text with `sentence-transformers` and do
   flat numpy cosine similarity, then categorize each claim optionally grounded
