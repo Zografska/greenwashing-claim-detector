@@ -39,6 +39,25 @@ OLLAMA_URL = "http://localhost:4639/api/generate"
 # src/adapters/legal_mapping.py, not at extraction time), so asking a small
 # model to hit two independent enums plus risk_level in one pass was pure
 # added failure surface for a field nothing consumes.
+#
+# Pulled into its own named constant (rather than inlined only in
+# RESPONSE_SCHEMA) so src/dissected_extraction.py's per-clause classifier can
+# import the exact same 11 values instead of hand-copying them into a second
+# place they could quietly drift out of sync with.
+CLAIM_CATEGORIES = [
+    "unsubstantiated_health_or_efficacy_claim",
+    "nutrition_content_claim",
+    "misleading_composition_or_ingredient_claim",
+    "misleading_authenticity_or_origin_claim",
+    "misleading_superiority_or_absolute_claim",
+    "unfair_comparison",
+    "misleading_endorsement_claim",
+    "fake_or_unverified_label",
+    "environmental_unsubstantiated",
+    "offset_based_neutrality",
+    "irrelevant_claim",
+]
+
 RESPONSE_SCHEMA = {
     "type": "object",
     "properties": {
@@ -48,22 +67,7 @@ RESPONSE_SCHEMA = {
                 "type": "object",
                 "properties": {
                     "claim_text": {"type": "string"},
-                    "category": {
-                        "type": "string",
-                        "enum": [
-                            "unsubstantiated_health_or_efficacy_claim",
-                            "nutrition_content_claim",
-                            "misleading_composition_or_ingredient_claim",
-                            "misleading_authenticity_or_origin_claim",
-                            "misleading_superiority_or_absolute_claim",
-                            "unfair_comparison",
-                            "misleading_endorsement_claim",
-                            "fake_or_unverified_label",
-                            "environmental_unsubstantiated",
-                            "offset_based_neutrality",
-                            "irrelevant_claim",
-                        ],
-                    },
+                    "category": {"type": "string", "enum": CLAIM_CATEGORIES},
                     "risk_level": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
                     "risk_rationale": {"type": "string"},
                 },
@@ -85,13 +89,7 @@ SCHEMA = {
     "claims": [
         {
             "claim_text": "exact text as found in description",
-            "category": (
-                "unsubstantiated_health_or_efficacy_claim | nutrition_content_claim | "
-                "misleading_composition_or_ingredient_claim | misleading_authenticity_or_origin_claim | "
-                "misleading_superiority_or_absolute_claim | unfair_comparison | misleading_endorsement_claim | "
-                "fake_or_unverified_label | environmental_unsubstantiated | offset_based_neutrality | "
-                "irrelevant_claim"
-            ),
+            "category": " | ".join(CLAIM_CATEGORIES),
             "risk_level": "HIGH | MEDIUM | LOW",
             "risk_rationale": "specific reason this risk level applies",
         }
