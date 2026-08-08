@@ -227,6 +227,12 @@ def _build_detection_prompt(clauses: List[str]) -> str:
 classification objects, clause_index 1 through {len(clauses)}, each with
 one category from the system prompt's list.
 
+Return a single JSON object of EXACTLY this shape -- the top-level key must
+be named "classifications", not any other name:
+{{"classifications": [{{"clause_index": 1, "category": "<one category>"}}, ...]}}
+This key name matters even when structured-output grammar is disabled --
+nothing else enforces it.
+
 CLAUSES:
 {numbered}"""
 
@@ -299,6 +305,13 @@ def _build_risk_prompt(flagged: List[Tuple[int, str, str]]) -> str:
 Return exactly {len(flagged)} risk objects, claim_index 1 through
 {len(flagged)}.
 
+Return a single JSON object of EXACTLY this shape -- the top-level key must
+be named "risk_assessments", not any other name (e.g. NOT "risk_objects"):
+{{"risk_assessments": [{{"claim_index": 1, "risk_level": "HIGH|MEDIUM|LOW", "risk_rationale": "<short reason>"}}, ...]}}
+This key name matters even when structured-output grammar is disabled --
+nothing else enforces it. Output ONLY this JSON object -- no reasoning,
+commentary, or text before or after it.
+
 CLAIMS:
 {numbered}"""
 
@@ -338,6 +351,27 @@ def _ollama_json_call(
             else f"{raw[:500]}\n...[{len(raw) - 1000} chars omitted]...\n{raw[-500:]}"
         )
         raise ValueError(f"Model returned invalid JSON ({e})\n\nRaw ({len(raw)} chars): {snippet}") from e
+
+
+def _find_items_list(parsed: dict, expected_key: str, index_key: str) -> List[dict]:
+    """Recover the intended list even if the model used a different
+    top-level key name -- measured on deepseek-r1:70b with grammar disabled
+    (--risk-no-schema-grammar): the risk call's actual content was correct
+    (right count, right claim_index values, sensible risk_level/rationale)
+    but wrapped under "risk_objects" instead of the expected
+    "risk_assessments", since nothing but the prompt text enforces the key
+    name once grammar-constrained decoding is off. Tries the expected key
+    first; if missing/wrong-shaped, falls back to the first list value in
+    the parsed object whose items all contain index_key -- salvages
+    otherwise-good output instead of failing the whole record over a naming
+    mismatch alone."""
+    direct = parsed.get(expected_key)
+    if isinstance(direct, list) and all(isinstance(item, dict) and index_key in item for item in direct):
+        return direct
+    for value in parsed.values():
+        if isinstance(value, list) and value and all(isinstance(item, dict) and index_key in item for item in value):
+            return value
+    return direct if isinstance(direct, list) else []
 
 
 def _check_cardinality(
@@ -445,7 +479,7 @@ def dissect_claims(
         num_predict=detection_num_predict, num_ctx=detection_num_ctx,
         use_schema_grammar=use_schema_grammar,
     )
-    classifications = detection.get("classifications", [])
+    classifications = _find_items_list(detection, "classifications", "clause_index")
     _check_cardinality(classifications, len(clauses), "clause_index", "detection", raw_response=detection)
     classifications.sort(key=lambda c: c["clause_index"])
 
@@ -471,7 +505,7 @@ def dissect_claims(
         num_predict=risk_num_predict, num_ctx=risk_num_ctx,
         use_schema_grammar=risk_use_schema_grammar,
     )
-    assessments = risk.get("risk_assessments", [])
+    assessments = _find_items_list(risk, "risk_assessments", "claim_index")
     _check_cardinality(assessments, len(flagged), "claim_index", "risk assessment", raw_response=risk)
     assessments.sort(key=lambda a: a["claim_index"])
 
