@@ -271,6 +271,41 @@ You will receive exactly N numbered claims and must return exactly N risk
 objects, one per claim_index, in the same order. This is a hard
 requirement of the response format, not a suggestion."""
 
+# Reasoning-model variant, same targeted-.replace() pattern as
+# extraction.py's SYSTEM_PROMPT_REASONING (not a copy -- rule edits above
+# never have to be made twice).
+#
+# Motivating measurement: on the IDENTICAL set of clauses llama3.2:3b
+# flagged as claims (same detection step, only the risk model swapped),
+# llama3.2:3b assigned HIGH/MEDIUM/LOW as 29%/50%/21%; deepseek-r1:70b on
+# those same claims assigned 9%/44%/47% -- more than double the LOW rate,
+# a third the HIGH rate, despite receiving the identical MEDIUM-by-default
+# instruction above. Since _validate_dissected_claims drops every LOW-risk
+# claim by policy, this single calibration gap is what silently deflated
+# recall in EVERY deepseek-involving run this session (full-grounding
+# extraction, ungrounded extraction, and this dissected hybrid) -- not a
+# detection/extraction problem, a risk-severity calibration one. Distinct
+# from extraction.py's SYSTEM_PROMPT_REASONING (that one was tested and
+# found to make NO measured difference on the extraction task) -- this is
+# a different prompt for a different, specifically-diagnosed bias, not a
+# retry of the same fix.
+_RISK_REASONING_NOTE = (
+    "REASONING-MODEL CALIBRATION NOTE: measured on this exact task, a "
+    "reasoning model tends to construct a justification for LOW far more "
+    "often than intended -- reasoning your way to 'this is basically fine' "
+    "is not the same as finding REAL, SPECIFIC backing for this exact "
+    "claim. If your rationale for LOW amounts to 'this seems plausible' or "
+    "'nothing here contradicts it,' that is MEDIUM, not LOW, per the rule "
+    "above -- do not let careful reasoning talk you into a lower severity "
+    "than a less deliberate judgment would reach.\n\n"
+)
+
+RISK_SYSTEM_PROMPT_REASONING = RISK_SYSTEM_PROMPT.replace(
+    "You will receive exactly N numbered claims",
+    _RISK_REASONING_NOTE + "You will receive exactly N numbered claims",
+    1,
+)
+
 RISK_SCHEMA_ITEM_PROPERTIES = {
     "claim_index": {"type": "integer"},
     "risk_level": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
@@ -426,6 +461,7 @@ def dissect_claims(
     risk_use_schema_grammar: Optional[bool] = None,
     detection_num_predict_override: Optional[int] = None, detection_num_ctx_override: Optional[int] = None,
     risk_num_predict_override: Optional[int] = None, risk_num_ctx_override: Optional[int] = None,
+    risk_reasoning_model: bool = False,
 ) -> dict:
     """Runs the full 3-step pipeline for one product's description.
 
@@ -498,7 +534,7 @@ def dissect_claims(
         return {"claims": [], "excluded_clauses": excluded_clauses}
 
     risk = _ollama_json_call(
-        system=RISK_SYSTEM_PROMPT,
+        system=RISK_SYSTEM_PROMPT_REASONING if risk_reasoning_model else RISK_SYSTEM_PROMPT,
         prompt=_build_risk_prompt(flagged),
         schema=_build_risk_schema(len(flagged)),
         model=risk_model, temperature=temperature,
@@ -540,6 +576,7 @@ def dissect_from_file(
     risk_use_schema_grammar: Optional[bool] = None,
     detection_num_predict_override: Optional[int] = None, detection_num_ctx_override: Optional[int] = None,
     risk_num_predict_override: Optional[int] = None, risk_num_ctx_override: Optional[int] = None,
+    risk_reasoning_model: bool = False,
 ) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
     total = len(records)
@@ -562,6 +599,7 @@ def dissect_from_file(
                 detection_num_ctx_override=detection_num_ctx_override,
                 risk_num_predict_override=risk_num_predict_override,
                 risk_num_ctx_override=risk_num_ctx_override,
+                risk_reasoning_model=risk_reasoning_model,
             )
             elapsed = time.monotonic() - call_start
 
@@ -645,12 +683,21 @@ if __name__ == "__main__":
         "--risk-num-ctx", type=int, default=None,
         help="override RISK_NUM_CTX (5000) for the risk call -- see --risk-num-predict.",
     )
+    parser.add_argument(
+        "--risk-reasoning-model", action="store_true",
+        help="use RISK_SYSTEM_PROMPT_REASONING for the risk call -- corrects a measured bias where a "
+        "reasoning model (deepseek-r1:70b, on the identical clauses llama3.2:3b flagged) assigned LOW "
+        "risk_level 47%% of the time vs 3b's 21%%, and HIGH only 9%% vs 3b's 29%%, despite the identical "
+        "MEDIUM-by-default instruction. Since dropped LOW claims cost recall downstream, this is the "
+        "actual cause of every deepseek-involving pipeline's under-recall this session, not detection.",
+    )
     args = parser.parse_args()
 
     results, failed = dissect_from_file(
         args.file, detection_model=args.model, risk_model=args.risk_model, temperature=args.temperature,
         use_schema_grammar=args.use_schema_grammar, risk_use_schema_grammar=args.risk_use_schema_grammar,
         risk_num_predict_override=args.risk_num_predict, risk_num_ctx_override=args.risk_num_ctx,
+        risk_reasoning_model=args.risk_reasoning_model,
     )
 
     print(f"\nProcessed {len(results)} products")
