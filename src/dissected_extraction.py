@@ -325,20 +325,41 @@ def _ollama_json_call(
     )
     response.raise_for_status()
     raw = response.json()["response"]
-    return json.loads(raw)
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as e:
+        # Same head+tail diagnostic as extraction.py's _try_parse -- a bare
+        # JSONDecodeError here gives no visibility into WHY (truncation?
+        # <think> preamble not stripped? wrong shape entirely?), which is
+        # exactly the gap that made deepseek's full-grounding failure take
+        # several rounds to diagnose over there.
+        snippet = (
+            raw if len(raw) <= 1000
+            else f"{raw[:500]}\n...[{len(raw) - 1000} chars omitted]...\n{raw[-500:]}"
+        )
+        raise ValueError(f"Model returned invalid JSON ({e})\n\nRaw ({len(raw)} chars): {snippet}") from e
 
 
-def _check_cardinality(items: List[dict], expected_n: int, index_key: str, label: str) -> None:
+def _check_cardinality(
+    items: List[dict], expected_n: int, index_key: str, label: str, raw_response: Optional[dict] = None,
+) -> None:
     """Hard backstop for the schema's minItems/maxItems, which Ollama's
     grammar compiler may or may not actually enforce (unverified -- see
     module docstring). Raises rather than silently truncating/padding, so a
     real cardinality miss surfaces as a failed record (visible in the
     --out run's failed.json) instead of quietly degrading back into the
-    same under-extraction bug this pipeline exists to fix."""
+    same under-extraction bug this pipeline exists to fix.
+
+    raw_response: the full parsed JSON object, echoed back in the error
+    message on a cardinality mismatch -- valid-but-wrong-shaped JSON (e.g.
+    the expected key missing, present but empty, or nested under a
+    different name) parses fine and only fails here, so without this the
+    error gives no way to tell those apart from genuine under-generation."""
     if len(items) != expected_n:
+        shape_hint = f"\n\nModel's full response: {json.dumps(raw_response, ensure_ascii=False)[:1000]}" if raw_response is not None else ""
         raise ValueError(
             f"{label}: expected {expected_n} items, model returned {len(items)} -- "
-            f"schema minItems/maxItems was not honored (see module docstring)"
+            f"schema minItems/maxItems was not honored (see module docstring){shape_hint}"
         )
     seen = {item.get(index_key) for item in items}
     expected = set(range(1, expected_n + 1))
@@ -425,7 +446,7 @@ def dissect_claims(
         use_schema_grammar=use_schema_grammar,
     )
     classifications = detection.get("classifications", [])
-    _check_cardinality(classifications, len(clauses), "clause_index", "detection")
+    _check_cardinality(classifications, len(clauses), "clause_index", "detection", raw_response=detection)
     classifications.sort(key=lambda c: c["clause_index"])
 
     excluded_clauses = []
@@ -451,7 +472,7 @@ def dissect_claims(
         use_schema_grammar=risk_use_schema_grammar,
     )
     assessments = risk.get("risk_assessments", [])
-    _check_cardinality(assessments, len(flagged), "claim_index", "risk assessment")
+    _check_cardinality(assessments, len(flagged), "claim_index", "risk assessment", raw_response=risk)
     assessments.sort(key=lambda a: a["claim_index"])
 
     claims = []
