@@ -615,6 +615,45 @@ def extract_claims(
         num_ctx = 9000 if grounding_chunks else 7000
         num_predict = 3500
 
+    # Repetition guard: measured on llama3.2:3b + full-grounding, "Biscotti al
+    # nesquik" got stuck emitting the exact same claim object (~277 chars/~69
+    # tokens: {"claim_text": "-50% di grassi saturi*...", "category":
+    # "nutrition_content_claim", "risk_level": "LOW", "risk_rationale": "The
+    # claim is tied to..."}) on an infinite loop for 19KB straight -- a
+    # degenerate-repetition failure (more likely at temperature=0/greedy
+    # decoding, and more likely with a long/complex context like the full
+    # legal corpus), NOT a token-budget problem: raising num_predict further
+    # just makes it repeat longer, it never actually helps. Ollama's default
+    # repeat_last_n=64 is LESS than one full ~69-token repeat cycle, so it
+    # can't even see back far enough to recognize the duplicate -- widened to
+    # 512 (~7 cycles of headroom) with a stronger repeat_penalty (default
+    # 1.1) so the model is actively pushed off a loop once several cycles in,
+    # instead of the penalty window sliding past it entirely. Only applied to
+    # full_grounding, where this was observed -- not touching the
+    # ungrounded/retrieval-grounded options, which haven't shown this failure.
+    options = {
+        "temperature": temperature,  # see the temperature arg's
+                               # docstring above -- 0 (the default)
+                               # was chosen to remove llama3.2's
+                               # run-to-run claim-count drift (4 vs 5,
+                               # 2 vs 4 claims etc.), but is suspected
+                               # to cause a DIFFERENT under-extraction
+                               # problem on larger models.
+        "num_predict": num_predict,  # 3500 was sized for the
+                               # ungrounded/retrieval-grounded case:
+                               # 20 claims at ~170 tok/claim + 30
+                               # wrapper overhead =~ 3430. Full-
+                               # grounding needs more -- see the
+                               # comment above this block.
+        "num_ctx": num_ctx,     # was 4000/6000 -- too small even for
+                                # num_predict=2500 once SYSTEM_PROMPT's
+                                # real size is counted; see the
+                                # comment above this function.
+    }
+    if full_grounding:
+        options["repeat_penalty"] = 1.3
+        options["repeat_last_n"] = 512
+
     response = httpx.post(
         OLLAMA_URL,
         json={
@@ -623,25 +662,7 @@ def extract_claims(
             "prompt": _build_user_prompt(product, description, grounding_chunks, full_grounding=full_grounding),
             "stream": False,
             "format": RESPONSE_SCHEMA if use_schema_grammar else "json",
-            "options": {
-                "temperature": temperature,  # see the temperature arg's
-                                       # docstring above -- 0 (the default)
-                                       # was chosen to remove llama3.2's
-                                       # run-to-run claim-count drift (4 vs 5,
-                                       # 2 vs 4 claims etc.), but is suspected
-                                       # to cause a DIFFERENT under-extraction
-                                       # problem on larger models.
-                "num_predict": num_predict,  # 3500 was sized for the
-                                       # ungrounded/retrieval-grounded case:
-                                       # 20 claims at ~170 tok/claim + 30
-                                       # wrapper overhead =~ 3430. Full-
-                                       # grounding needs more -- see the
-                                       # comment above this block.
-                "num_ctx": num_ctx,     # was 4000/6000 -- too small even for
-                                        # num_predict=2500 once SYSTEM_PROMPT's
-                                        # real size is counted; see the
-                                        # comment above this function.
-            },
+            "options": options,
         },
         timeout=600,  # was 200. The real problem causing timeouts was call
                       # cost (prompt size + num_ctx + per-claim rationale
