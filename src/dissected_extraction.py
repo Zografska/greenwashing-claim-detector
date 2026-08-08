@@ -66,7 +66,7 @@ import json
 import re
 import time
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 
 import httpx
 
@@ -366,10 +366,33 @@ RISK_NUM_CTX = 5000
 
 
 def dissect_claims(
-    description: str, model: str = "llama3.2", temperature: float = 0,
-    use_schema_grammar: bool = True,
+    description: str, detection_model: str = "llama3.2", risk_model: Optional[str] = None,
+    temperature: float = 0, use_schema_grammar: bool = True,
+    risk_use_schema_grammar: Optional[bool] = None,
+    detection_num_predict_override: Optional[int] = None, detection_num_ctx_override: Optional[int] = None,
+    risk_num_predict_override: Optional[int] = None, risk_num_ctx_override: Optional[int] = None,
 ) -> dict:
     """Runs the full 3-step pipeline for one product's description.
+
+    detection_model/risk_model let the two calls use different models --
+    the detection call (categorize every clause) and the risk call (assign
+    HIGH/MEDIUM/LOW) are already independent Ollama calls, just forced onto
+    the same model before this. Motivated by measurements on
+    golden/samples/canonical/sample_coop.json: plain llama3.3:70b has the
+    best raw recall/F1 of any single model tried, while deepseek-r1:70b
+    (ungrounded) has the best category accuracy and lowest false-positive
+    rate -- pairing a high-recall detector with a more disciplined risk
+    judge is untested but well-motivated by those two models' distinct
+    error profiles. risk_model=None (default) reuses detection_model,
+    preserving every prior single-model run's exact behavior.
+
+    risk_use_schema_grammar / *_num_predict_override / *_num_ctx_override:
+    a reasoning risk_model needs its own budget/grammar setting independent
+    of the detection call's -- see extraction.py's full_grounding_deepseek
+    experiment for why grammar-constrained decoding and an undersized
+    num_predict both broke down on a model with a <think> preamble.
+    Defaults (None) reuse use_schema_grammar and the module-level
+    RISK_NUM_PREDICT/RISK_NUM_CTX constants, i.e. current behavior.
 
     Returns {"claims": [...], "excluded_clauses": [...]} -- claims entries
     have {claim_text, category, risk_level, risk_rationale}, matching
@@ -382,6 +405,13 @@ def dissect_claims(
     all, 1 if clauses exist but none are flagged as real claims (skips the
     risk-assessment call entirely), 2 otherwise.
     """
+    risk_model = risk_model or detection_model
+    risk_use_schema_grammar = use_schema_grammar if risk_use_schema_grammar is None else risk_use_schema_grammar
+    detection_num_predict = detection_num_predict_override or DETECTION_NUM_PREDICT
+    detection_num_ctx = detection_num_ctx_override or DETECTION_NUM_CTX
+    risk_num_predict = risk_num_predict_override or RISK_NUM_PREDICT
+    risk_num_ctx = risk_num_ctx_override or RISK_NUM_CTX
+
     clauses = _split_into_clauses(description)
     if not clauses:
         return {"claims": [], "excluded_clauses": []}
@@ -390,8 +420,8 @@ def dissect_claims(
         system=DETECTION_SYSTEM_PROMPT,
         prompt=_build_detection_prompt(clauses),
         schema=_build_detection_schema(len(clauses)),
-        model=model, temperature=temperature,
-        num_predict=DETECTION_NUM_PREDICT, num_ctx=DETECTION_NUM_CTX,
+        model=detection_model, temperature=temperature,
+        num_predict=detection_num_predict, num_ctx=detection_num_ctx,
         use_schema_grammar=use_schema_grammar,
     )
     classifications = detection.get("classifications", [])
@@ -416,9 +446,9 @@ def dissect_claims(
         system=RISK_SYSTEM_PROMPT,
         prompt=_build_risk_prompt(flagged),
         schema=_build_risk_schema(len(flagged)),
-        model=model, temperature=temperature,
-        num_predict=RISK_NUM_PREDICT, num_ctx=RISK_NUM_CTX,
-        use_schema_grammar=use_schema_grammar,
+        model=risk_model, temperature=temperature,
+        num_predict=risk_num_predict, num_ctx=risk_num_ctx,
+        use_schema_grammar=risk_use_schema_grammar,
     )
     assessments = risk.get("risk_assessments", [])
     _check_cardinality(assessments, len(flagged), "claim_index", "risk assessment")
@@ -450,8 +480,11 @@ def _validate_dissected_claims(claims: List[dict]) -> Tuple[List[dict], List[dic
 
 
 def dissect_from_file(
-    filename: str, model: str = "llama3.2", temperature: float = 0,
-    use_schema_grammar: bool = True,
+    filename: str, detection_model: str = "llama3.2", risk_model: Optional[str] = None,
+    temperature: float = 0, use_schema_grammar: bool = True,
+    risk_use_schema_grammar: Optional[bool] = None,
+    detection_num_predict_override: Optional[int] = None, detection_num_ctx_override: Optional[int] = None,
+    risk_num_predict_override: Optional[int] = None, risk_num_ctx_override: Optional[int] = None,
 ) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
     total = len(records)
@@ -467,8 +500,13 @@ def dissect_from_file(
         call_start = time.monotonic()
         try:
             result = dissect_claims(
-                description=record["description"], model=model, temperature=temperature,
-                use_schema_grammar=use_schema_grammar,
+                description=record["description"], detection_model=detection_model, risk_model=risk_model,
+                temperature=temperature, use_schema_grammar=use_schema_grammar,
+                risk_use_schema_grammar=risk_use_schema_grammar,
+                detection_num_predict_override=detection_num_predict_override,
+                detection_num_ctx_override=detection_num_ctx_override,
+                risk_num_predict_override=risk_num_predict_override,
+                risk_num_ctx_override=risk_num_ctx_override,
             )
             elapsed = time.monotonic() - call_start
 
@@ -515,19 +553,49 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--file", required=True, help="filename in data/raw/, e.g. coop_extraction_input.json")
-    parser.add_argument("--model", default="llama3.2")
+    parser.add_argument("--model", default="llama3.2", help="model for the detection/classification call. "
+        "Also used for risk assessment unless --risk-model is given.")
+    parser.add_argument(
+        "--risk-model", default=None,
+        help="separate model for the risk-level (HIGH/MEDIUM/LOW) call, distinct from --model's "
+        "detection/classification call. Defaults to --model. Motivated by measurements showing "
+        "plain llama3.3:70b has the best recall/F1 while deepseek-r1:70b (ungrounded) has the best "
+        "category accuracy/lowest false-positive rate -- untested pairing, not a proven combo.",
+    )
     parser.add_argument("--out", default=None, help="optional output path for results json")
     parser.add_argument("--temperature", type=float, default=0)
     parser.add_argument(
         "--no-schema-grammar", dest="use_schema_grammar", action="store_false",
-        help="disable grammar-constrained decoding (falls back to loose 'format': 'json'); the "
-        "minItems/maxItems cardinality constraint this pipeline relies on is grammar-only, so "
-        "this flag also removes that mechanism -- useful for isolating whether it's doing anything.",
+        help="disable grammar-constrained decoding (falls back to loose 'format': 'json') for BOTH "
+        "calls unless --risk-no-schema-grammar/--risk-schema-grammar overrides the risk call "
+        "specifically. The minItems/maxItems cardinality constraint this pipeline relies on is "
+        "grammar-only, so this flag also removes that mechanism.",
+    )
+    parser.add_argument(
+        "--risk-no-schema-grammar", dest="risk_use_schema_grammar", action="store_false", default=None,
+        help="disable grammar-constrained decoding for the risk call only, independent of --model's "
+        "setting -- needed if --risk-model is a reasoning model (grammar-constrained decoding likely "
+        "conflicts with a <think> preamble, same issue found in extraction.py's full-grounding test).",
+    )
+    parser.add_argument(
+        "--risk-schema-grammar", dest="risk_use_schema_grammar", action="store_true", default=None,
+        help="force grammar-constrained decoding for the risk call only, independent of --model's setting.",
+    )
+    parser.add_argument(
+        "--risk-num-predict", type=int, default=None,
+        help="override RISK_NUM_PREDICT (1500) for the risk call -- needed for a reasoning --risk-model, "
+        "whose <think> trace before HIGH/MEDIUM/LOW has an unmeasured length that tiny default won't fit.",
+    )
+    parser.add_argument(
+        "--risk-num-ctx", type=int, default=None,
+        help="override RISK_NUM_CTX (5000) for the risk call -- see --risk-num-predict.",
     )
     args = parser.parse_args()
 
     results, failed = dissect_from_file(
-        args.file, model=args.model, temperature=args.temperature, use_schema_grammar=args.use_schema_grammar
+        args.file, detection_model=args.model, risk_model=args.risk_model, temperature=args.temperature,
+        use_schema_grammar=args.use_schema_grammar, risk_use_schema_grammar=args.risk_use_schema_grammar,
+        risk_num_predict_override=args.risk_num_predict, risk_num_ctx_override=args.risk_num_ctx,
     )
 
     print(f"\nProcessed {len(results)} products")
