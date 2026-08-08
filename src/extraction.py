@@ -694,7 +694,17 @@ def extract_claims(
         "below for the actual syntax break, since this isn't the truncation "
         "case)"
     )
-    raise ValueError(f"Model returned invalid JSON{hint}\n\nRaw: {raw[:500]}")
+    # Show head AND tail, not just the first 500 chars: for a truncation
+    # failure, the head is usually unremarkable (real-looking early claims) --
+    # what actually explains *why* it never closed is what the model was
+    # doing right at the cutoff (stuck repeating one phrase? still-legitimate
+    # but just numerous claims? copying CANDIDATE LEGAL CONTEXT text?), which
+    # only the tail shows.
+    snippet = (
+        raw if len(raw) <= 1000
+        else f"{raw[:500]}\n...[{len(raw) - 1000} chars omitted]...\n{raw[-500:]}"
+    )
+    raise ValueError(f"Model returned invalid JSON{hint}\n\nRaw ({len(raw)} chars): {snippet}")
 
 
 def _validate_claims(claims: List[dict]) -> Tuple[List[dict], List[dict]]:
