@@ -21,7 +21,7 @@ Extraction requires a local Ollama server running (`OLLAMA_URL` in
 `src/extraction.py` points at `http://localhost:11434`):
 
 ```bash
-python -m src.extraction --file 06.25.json --model llama3.2 --out results/baseline/predictions.json
+python3 -m src.extraction --file 06.25.json --model llama3.2 --out results/baseline/predictions.json
 ```
 
 `--file` is a filename inside `data/raw/`, not a path. Records with an empty
@@ -39,11 +39,11 @@ embedding pass and ~2-3 min/ad for reranking) is run as a chain of standalone
 scripts from within `src/knowledge/`, in this order:
 
 ```bash
-python prepare_ads_chunks.py --file 06.25.json --out ads_chunks.json     # data/raw/<file> -> per-sentence chunks
-python embed_e5.py --input ads_chunks.json --output-dir ./embeddings/06.25 --mode query   # legal corpus is embedded once as ecgt.npy/ucpd.npy (--mode passage)
-python compare_e5.py --queries 06.25 --top-k 56 --output embeddings/matches.json          # 56 = full ecgt+ucpd corpus size; rerank needs every candidate, not just top-3
-python rerank_matches.py --matches embeddings/matches.json --out embeddings/reranked.json --model llama3.1:8b
-python evaluate_matches.py --rerank embeddings/reranked.json --gold 25.06/gold.json
+python3 prepare_ads_chunks.py --file 06.25.json --out ads_chunks.json     # data/raw/<file> -> per-sentence chunks
+python3 embed_e5.py --input ads_chunks.json --output-dir ./embeddings/06.25 --mode query   # legal corpus is embedded once as ecgt.npy/ucpd.npy (--mode passage)
+python3 compare_e5.py --queries 06.25 --top-k 56 --output embeddings/matches.json          # 56 = full ecgt+ucpd corpus size; rerank needs every candidate, not just top-3
+python3 rerank_matches.py --matches embeddings/matches.json --out embeddings/reranked.json --model llama3.1:8b
+python3 evaluate_matches.py --rerank embeddings/reranked.json --gold 25.06/gold.json
 ```
 
 `evaluate_matches.py`'s default gold file (`25.06/gold.json`, 28 Conad
@@ -65,6 +65,7 @@ is an empty file (0 lines). The only runnable path today is calling
 `src/extraction.py` directly with `--model`.
 
 Module status:
+
 - `src/data.py` — implemented. Loads `data/raw/<file>.json` (a JSON array of
   product records), yields `(index, record)` skipping blank descriptions.
 - `src/extraction.py` — implemented. Calls a local Ollama model with a
@@ -80,7 +81,7 @@ Module status:
   `num_ctx` values are sized from measured per-claim token cost, not guesses
   — see the inline comments before changing them. `_split_claim_sentences`
   (shared with `src/knowledge/prepare_ads_chunks.py`) also inserts boundaries
-  before known product-spec-sheet field labels (`_LABEL_BOUNDARY` — 
+  before known product-spec-sheet field labels (`_LABEL_BOUNDARY` —
   "Denominazione di vendita", "Ingredienti e valori nutrizionali", etc.) so
   they isolate into their own fragment instead of fusing with whatever
   precedes them (the scraped source has no punctuation between fields), and
@@ -102,6 +103,7 @@ Module status:
 that predates/parallels the stubbed `src/retrieval.py`, using a different
 model (E5, not MiniLM) and a CLI/offline-script style rather than an
 importable API:
+
 - `chunker.py` — standalone script (not parameterized, run from within
   `src/knowledge/`) that parses a local `UCPD.html` with BeautifulSoup into
   per-article/per-annex-item JSON chunks. `src/knowledge/chunks/ecgt.json`
@@ -122,7 +124,7 @@ importable API:
   and does the cosine-similarity top-k lookup, dumping matches to JSON. This
   is retrieval only — it does not itself judge compliance. Retrieval alone
   has measured 0/8 top-1 accuracy against the gold set even after a chunking
-  fix, so `rerank_matches.py` below is run against the *full* ecgt+ucpd
+  fix, so `rerank_matches.py` below is run against the _full_ ecgt+ucpd
   corpus as candidates (`--top-k 56`), not a cheap top-3/15 shortlist.
 - `rerank_matches.py` — an Ollama model reads each ad's claim-relevant text
   next to `compare_e5.py`'s retrieved candidates and returns a MATCH/NO_MATCH
@@ -131,7 +133,7 @@ importable API:
   worked examples all environmental) — even though the legal corpus it
   retrieves against (ecgt+ucpd combined) and the newer
   `golden/golden_set_coop_ucpd_250_combined.json` gold set both span the
-  *full* UCPD taxonomy (nutrition/health, origin/authenticity, price/value,
+  _full_ UCPD taxonomy (nutrition/health, origin/authenticity, price/value,
   comparison, endorsement claims, not just environmental). Broadening this
   prompt beyond environmental claims — and adding non-environmental
   candidates' worked examples — is unstarted work, not a bug; don't assume
@@ -140,7 +142,7 @@ importable API:
   schema requires `is_environmental_claim: bool` between `rationale` and
   `verdict` (a smaller local model was measured answering "is this a claim"
   and jumping straight to MATCH without ever separately checking "is it
-  *environmental*" — the dedicated field forces that check); and
+  _environmental_" — the dedicated field forces that check); and
   `_apply_environmental_backstop` deterministically overrides
   `verdict=MATCH` to `NO_MATCH` whenever `is_environmental_claim=false`
   anyway, same "soft prompt + hard backstop" pattern as `extraction.py`'s

@@ -11,8 +11,8 @@ is just the runbook.
 pip install -r ../../requirements.txt
 ```
 
-**Python 3.6 note:** the scripts in this directory (and the modules they
-import from `src/`) are syntax-compatible with Python 3.6 — no walrus
+**python3 3.6 note:** the scripts in this directory (and the modules they
+import from `src/`) are syntax-compatible with python3 3.6 — no walrus
 operator, no PEP 585 subscripted generics (`list[int]`), no PEP 604 unions
 (`X | None`), all replaced with `typing.List`/`Optional`/etc. That said,
 **dependency versions are a separate risk**: recent `torch`,
@@ -69,13 +69,13 @@ knobs against `gold_legal_chunk_id` — winner: `center=True, csls=True,
 csls_k=15`. Re-run the grid search yourself with:
 
 ```bash
-python tune_retrieval.py
+python3 tune_retrieval.py
 ```
 
 Or just retrieve directly with the tuned config:
 
 ```bash
-python compare_e5.py --queries coop --top-k 7 --csls-k 15 --output embeddings/coop_matches.json
+python3 compare_e5.py --queries coop --top-k 7 --csls-k 15 --output embeddings/coop_matches.json
 ```
 
 (`--csls-k 15` is the only non-default flag needed — centering and CSLS are
@@ -84,7 +84,7 @@ already on by default.)
 ## 4a. Score retrieval alone against gold
 
 ```bash
-python evaluate_claim_matches.py --matches embeddings/coop_matches.json --gold ../../golden/canonical/coop.json
+python3 evaluate_claim_matches.py --matches embeddings/coop_matches.json --gold ../../golden/canonical/coop.json
 ```
 
 Measured pooled Hit@7 across all 4 retailers: ~37% for claims with a real
@@ -99,7 +99,7 @@ never as an asserted fact — see its `SYSTEM_PROMPT`.
 ## 4b. Compare retrieval-only vs. + LLM rerank (needs Ollama)
 
 ```bash
-python compare_retrieval_vs_rerank.py --retailer coop --model llama3.2:3b
+python3 compare_retrieval_vs_rerank.py --retailer coop --model llama3.2:3b
 ```
 
 Feeds rerank the SAME top-7 candidates retrieval already produced (fair
@@ -120,7 +120,7 @@ raised `num_predict` as a deliberate follow-up, not a drop-in swap.
 ## 5. Run extraction with grounding
 
 ```bash
-python -m src.extraction --file coop_extraction_input.json --model llama3.2 \
+python3 -m src.extraction --file coop_extraction_input.json --model llama3.2 \
     --matches src/knowledge/embeddings/coop_matches.json --out results/coop/predictions.json
 ```
 
@@ -135,9 +135,9 @@ set), its original convention reranks over the FULL 56-chunk corpus, not the
 tuned top-7:
 
 ```bash
-python compare_e5.py --queries coop --top-k 56 --output embeddings/coop_matches_full.json
-python rerank_matches.py --matches embeddings/coop_matches_full.json --model llama3.2:3b --out embeddings/coop_reranked.json
-python evaluate_claim_matches.py --rerank embeddings/coop_reranked.json --gold ../../golden/canonical/coop.json
+python3 compare_e5.py --queries coop --top-k 56 --output embeddings/coop_matches_full.json
+python3 rerank_matches.py --matches embeddings/coop_matches_full.json --model llama3.2:3b --out embeddings/coop_reranked.json
+python3 evaluate_claim_matches.py --rerank embeddings/coop_reranked.json --gold ../../golden/canonical/coop.json
 ```
 
 Note `rerank_matches.py`'s `SYSTEM_PROMPT` is still scoped to ECGT

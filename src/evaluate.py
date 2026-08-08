@@ -35,11 +35,11 @@ Important asymmetries this scorer has to account for, not paper over:
   buckets can't be validated against this gold data either way.
 
 Run with (see src/adapters/build.py to produce the --gold file first):
-    python -m src.evaluate --predictions results/coop/predictions.json \\
+    python3 -m src.evaluate --predictions results/coop/predictions.json \\
         --gold golden/canonical/coop.json
 
 Multiple retailers in one call (pooled score + per-retailer breakdown):
-    python -m src.evaluate \\
+    python3 -m src.evaluate \\
         --predictions results/coop/predictions.json results/carrefour/predictions.json \\
         --gold golden/canonical/coop.json golden/canonical/carrefour.json
 """

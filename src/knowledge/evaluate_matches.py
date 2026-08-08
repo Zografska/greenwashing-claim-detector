@@ -31,9 +31,9 @@ Two modes:
     file (a reranked file already contains everything matches.json had).
 
 Usage:
-  python evaluate_matches.py
-  python evaluate_matches.py --matches embeddings/matches.json --gold 25.06/gold.json --k 3
-  python evaluate_matches.py --rerank embeddings/reranked.json
+  python3 evaluate_matches.py
+  python3 evaluate_matches.py --matches embeddings/matches.json --gold 25.06/gold.json --k 3
+  python3 evaluate_matches.py --rerank embeddings/reranked.json
 """
 
 import argparse

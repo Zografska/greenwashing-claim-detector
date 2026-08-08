@@ -243,13 +243,13 @@ Rules:
 - No claims found -> empty array. Never invent a claim not in the text. But
   do not default to a single claim either -- verify you checked every
   sentence before deciding you're done.
-- If a CANDIDATE LEGAL CONTEXT section is present: it was retrieved by
-  embedding similarity, not verified -- treat it as reference material that
-  may help sharpen a risk_rationale, never as confirmation that a claim
-  exists, which category/risk_level it gets, or (see above) as a source for
-  claim_text itself. Some or all listed passages may be irrelevant to this
-  specific product; do not force a claim to match one just because it was
-  retrieved."""
+- If a CANDIDATE LEGAL CONTEXT section is present: whether it's a retrieved
+  shortlist or the full legal corpus, none of it is verified against this
+  specific product -- treat it as reference material that may help sharpen
+  a risk_rationale, never as confirmation that a claim exists, which
+  category/risk_level it gets, or (see above) as a source for claim_text
+  itself. Some or all listed passages may be irrelevant to this specific
+  product; do not force a claim to match one just because it's listed."""
 
 # --- Pre-filter: cut description down to claim-adjacent fragments before --
 # it ever reaches the model. On local Ollama, prefill time scales with
@@ -401,35 +401,77 @@ MAX_GROUNDING_WORDS = 1400  # covers ~90th percentile of observed real top-7
                             # grounding sets without sizing num_ctx to the
                             # rare ~2000-word worst case.
 
+# Full-corpus grounding: instead of top-7 embedding retrieval (measured
+# Hit@7 ~37%/~16%, see the comment block above), attach the ENTIRE legal
+# corpus every time, removing retrieval error from the picture at the cost
+# of a much bigger prompt. Only feasible because the corpus is small:
+# src/knowledge/chunks/ecgt.json + ucpd.json = 56 chunks / 4010 words total
+# (measured directly, not estimated) -- same "just include everything,
+# retrieval is unreliable" logic src/knowledge/rerank_matches.py already
+# uses (--top-k 56, the full corpus, as reranker candidates). Loaded once
+# and cached at module scope since the corpus is identical for every call.
+LEGAL_CHUNKS_DIR = Path(__file__).parent / "knowledge" / "chunks"
+_FULL_LEGAL_CORPUS: Optional[List[dict]] = None
 
-def _format_grounding(chunks: List[dict]) -> str:
+
+def _load_full_legal_corpus() -> List[dict]:
+    global _FULL_LEGAL_CORPUS
+    if _FULL_LEGAL_CORPUS is None:
+        chunks = []
+        for name in ("ecgt.json", "ucpd.json"):
+            with open(LEGAL_CHUNKS_DIR / name, encoding="utf-8") as f:
+                chunks.extend(json.load(f))
+        _FULL_LEGAL_CORPUS = [
+            {"legal_chunk_id": c["id"], "legal_title": c["title"], "legal_text": c["text"]}
+            for c in chunks
+        ]
+    return _FULL_LEGAL_CORPUS
+
+
+def _format_grounding(chunks: List[dict], max_words: Optional[int] = MAX_GROUNDING_WORDS) -> str:
     """chunks: compare_e5.py top_matches shape (each with legal_chunk_id,
-    legal_title, legal_text), already ranked best-first. Truncates from the
-    end (lowest-ranked first) if the combined word count exceeds
-    MAX_GROUNDING_WORDS."""
-    kept = []
-    total_words = 0
-    for chunk in chunks:
-        words = len((chunk.get("legal_text") or "").split())
-        if kept and total_words + words > MAX_GROUNDING_WORDS:
-            break
-        kept.append(chunk)
-        total_words += words
+    legal_title, legal_text). For retrieval grounding, already ranked
+    best-first, and truncated from the end (lowest-ranked first) if the
+    combined word count exceeds max_words. Pass max_words=None (full-corpus
+    grounding) to keep every chunk regardless of length -- there is no
+    "lowest-ranked" ordering to truncate by since nothing was ranked."""
+    if max_words is None:
+        kept = chunks
+    else:
+        kept = []
+        total_words = 0
+        for chunk in chunks:
+            words = len((chunk.get("legal_text") or "").split())
+            if kept and total_words + words > max_words:
+                break
+            kept.append(chunk)
+            total_words += words
 
     entries = "\n\n".join(
         f"[{c['legal_chunk_id']}] {c['legal_title']}\n{c['legal_text']}" for c in kept
     )
-    return f"""CANDIDATE LEGAL CONTEXT (retrieved by embedding similarity, NOT verified --
+    source_note = (
+        "the full legal corpus, NOT pre-filtered for relevance"
+        if max_words is None
+        else "retrieved by embedding similarity, NOT verified"
+    )
+    return f"""CANDIDATE LEGAL CONTEXT ({source_note} --
 some or all of these may be irrelevant to this specific product; use your own
 judgment about which, if any, actually apply):
 {entries}"""
 
 
-def _build_user_prompt(product: dict, description: str, grounding_chunks: Optional[List[dict]] = None) -> str:
+def _build_user_prompt(
+    product: dict, description: str, grounding_chunks: Optional[List[dict]] = None,
+    full_grounding: bool = False,
+) -> str:
     filtered = _prefilter_description(description)
     # Only inserted when grounding_chunks is given, so the no-grounding
     # prompt is byte-identical to every prior run (no stray blank line).
-    grounding_section = f"\n\n{_format_grounding(grounding_chunks)}\n" if grounding_chunks else ""
+    max_words = None if full_grounding else MAX_GROUNDING_WORDS
+    grounding_section = (
+        f"\n\n{_format_grounding(grounding_chunks, max_words=max_words)}\n" if grounding_chunks else ""
+    )
     return f"""Analyze the following Italian food product and extract all claims that
 may be unfair under the EU Unfair Commercial Practices Directive (UCPD).
 
@@ -494,6 +536,7 @@ USE_SCHEMA_GRAMMAR_DEFAULT = True  # default for the --use-schema-grammar
 def extract_claims(
     product: dict, description: str, model: str = "llama3.2", grounding_chunks: Optional[List[dict]] = None,
     temperature: float = 0, use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT,
+    full_grounding: bool = False,
 ) -> dict:
     """
     Extract greenwashing-relevant claims from a product description.
@@ -507,7 +550,12 @@ def extract_claims(
             see the comment above _format_grounding for why this is
             embedding-only, not LLM-reranked, and why it's capped by word
             count. None (the default) preserves the exact prompt/token
-            budget of every prior run.
+            budget of every prior run. Ignored when full_grounding=True.
+        full_grounding: attach the ENTIRE legal corpus (56 chunks, ecgt+ucpd)
+            instead of grounding_chunks -- see the comment above
+            _load_full_legal_corpus for why this is worth trying (small
+            corpus, retrieval measured unreliable). Overrides
+            grounding_chunks when True.
         temperature: 0 (default) is fully greedy -- picked to kill llama3.2's
             run-to-run claim-count drift. Measured on a larger model
             (llama3.3:70b) to have a DIFFERENT failure mode at temperature=0:
@@ -540,14 +588,26 @@ def extract_claims(
     # overhead+num_predict+description =~ 6340, rounded up to 7000. Grounded:
     # +1960 for the capped grounding block =~ 8300, rounded up to 9000 --
     # real margin above the measured max, not just matching it.
-    num_ctx = 9000 if grounding_chunks else 7000
+    #
+    # Full-corpus grounding budget: the formatted full-corpus block (56
+    # chunks incl. id/title lines) measures 4519 words =~ 6327 tokens at the
+    # same 1.4 tok/word estimate used above -- vs ~1960 for the capped top-7
+    # block, a difference of +4367. Same system+schema+overhead+num_predict+
+    # description base (~6340) + 6327 =~ 12667, rounded up to 14000 for real
+    # margin, not just matching it -- same rounding style as the two tiers
+    # above.
+    if full_grounding:
+        num_ctx = 14000
+        grounding_chunks = _load_full_legal_corpus()
+    else:
+        num_ctx = 9000 if grounding_chunks else 7000
 
     response = httpx.post(
         OLLAMA_URL,
         json={
             "model": model,
             "system": SYSTEM_PROMPT,
-            "prompt": _build_user_prompt(product, description, grounding_chunks),
+            "prompt": _build_user_prompt(product, description, grounding_chunks, full_grounding=full_grounding),
             "stream": False,
             "format": RESPONSE_SCHEMA if use_schema_grammar else "json",
             "options": {
@@ -681,7 +741,7 @@ def _load_grounding_by_ean(matches_path: str) -> Dict[str, List[dict]]:
 
 def extract_from_file(
     filename: str, model: str = "llama3.2", matches_file: Optional[str] = None, temperature: float = 0,
-    use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT,
+    use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT, full_grounding: bool = False,
 ) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
     total = len(records)
@@ -707,6 +767,7 @@ def extract_from_file(
                 grounding_chunks=grounding_chunks,
                 temperature=temperature,
                 use_schema_grammar=use_schema_grammar,
+                full_grounding=full_grounding,
             )
             elapsed = time.monotonic() - call_start
 
@@ -765,7 +826,14 @@ if __name__ == "__main__":
         "--matches", default=None,
         help="optional compare_e5.py output (matches.json shape) to inject as unlabeled legal "
         "grounding context, joined by ean -- see src/knowledge/tune_retrieval.py for the tuned "
-        "retrieval config this was measured against",
+        "retrieval config this was measured against. Ignored if --full-grounding is set.",
+    )
+    parser.add_argument(
+        "--full-grounding", action="store_true",
+        help="attach the ENTIRE legal corpus (56 chunks, src/knowledge/chunks/ecgt.json+ucpd.json, "
+        "~4500 formatted words) as grounding for every product, instead of --matches' per-product "
+        "top-7 embedding retrieval -- removes retrieval error at the cost of a much bigger prompt "
+        "(num_ctx=14000 vs 9000). Overrides --matches when both are given.",
     )
     parser.add_argument(
         "--temperature", type=float, default=0,
@@ -784,7 +852,7 @@ if __name__ == "__main__":
 
     results, failed = extract_from_file(
         args.file, model=args.model, matches_file=args.matches, temperature=args.temperature,
-        use_schema_grammar=args.use_schema_grammar,
+        use_schema_grammar=args.use_schema_grammar, full_grounding=args.full_grounding,
     )
 
     print(f"\nProcessed {len(results)} products")

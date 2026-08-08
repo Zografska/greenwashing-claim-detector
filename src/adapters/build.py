@@ -4,12 +4,12 @@ and extraction.py need:
 
   - --gold-out: canonical gold (one JSON array, same shape across retailers)
   - --extraction-out: same records + a `description` field, written into
-    data/raw/ so the existing `python -m src.extraction --file <name>` CLI
+    data/raw/ so the existing `python3 -m src.extraction --file <name>` CLI
     can run against it unmodified (src/data.py's iter_records requires a
     `description` key and only looks inside data/raw/).
 
 Usage:
-  python -m src.adapters.build --retailer coop \\
+  python3 -m src.adapters.build --retailer coop \\
       --in golden/golden_set_coop_ucpd_250.json \\
       --gold-out golden/canonical/coop.json \\
       --extraction-out data/raw/coop_extraction_input.json
@@ -69,7 +69,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--extraction-out", required=True,
         help="output path for the extraction-input JSON (put this in data/raw/ so "
-        "`python -m src.extraction --file <basename>` can find it)",
+        "`python3 -m src.extraction --file <basename>` can find it)",
     )
     args = parser.parse_args()
 

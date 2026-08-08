@@ -7,7 +7,7 @@ naturasi.py) but needs to end up in one of two canonical shapes:
     about retailer-specific fields (modifiers presence, hard_no_reason vs.
     bucket_review_flag, etc.)
   - extraction-input record: the *same* original record plus a `description`
-    field, so the existing, unmodified `python -m src.extraction --file ...`
+    field, so the existing, unmodified `python3 -m src.extraction --file ...`
     CLI (via src/data.py's `iter_records`, which hard-requires `description`)
     can run against it without any changes to src/data.py or src/extraction.py.
 """

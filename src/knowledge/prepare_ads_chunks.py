@@ -31,8 +31,8 @@ Records with an empty description are skipped, same as src/data.py's
 iter_records.
 
 Usage:
-  python prepare_ads_chunks.py --file 06.25.json --out ads_chunks.json
-  python embed_e5.py --input ads_chunks.json --output-dir ./embeddings --mode query
+  python3 prepare_ads_chunks.py --file 06.25.json --out ads_chunks.json
+  python3 embed_e5.py --input ads_chunks.json --output-dir ./embeddings --mode query
 """
 
 import argparse

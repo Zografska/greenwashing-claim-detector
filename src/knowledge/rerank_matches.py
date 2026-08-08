@@ -29,8 +29,8 @@ same way they diluted the embeddings).
 Requires a local Ollama server (see src/extraction.py's OLLAMA_URL).
 
 Usage:
-  python rerank_matches.py
-  python rerank_matches.py --matches embeddings/matches.json --out embeddings/reranked.json --model llama3.2
+  python3 rerank_matches.py
+  python3 rerank_matches.py --matches embeddings/matches.json --out embeddings/reranked.json --model llama3.2
 """
 
 import argparse
