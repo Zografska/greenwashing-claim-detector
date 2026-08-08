@@ -596,11 +596,24 @@ def extract_claims(
     # description base (~6340) + 6327 =~ 12667, rounded up to 14000 for real
     # margin, not just matching it -- same rounding style as the two tiers
     # above.
+    # Full-grounding num_predict: measured truncation on llama3.2:3b +
+    # full-grounding for "Biscotti al nesquik" even though num_ctx=14000 had
+    # ~5300 tokens of margin over that record's ~8546-token input (max across
+    # the 20-product sample was ~8672) -- i.e. num_ctx wasn't the bottleneck,
+    # the model was generating more/longer claims than the 3500 budget (sized
+    # for the ungrounded case) allows, plausibly because the full legal corpus
+    # gives it more categories/wording to match claims against. Raised to
+    # 5000, and num_ctx to 15000 alongside it (8672 input + 5000 predict + a
+    # buffer beyond both figures already includes RESPONSE_SCHEMA which sits
+    # outside the word-count estimate) -- real margin above both measured
+    # maxima, not just matching them.
     if full_grounding:
-        num_ctx = 14000
+        num_ctx = 15000
+        num_predict = 5000
         grounding_chunks = _load_full_legal_corpus()
     else:
         num_ctx = 9000 if grounding_chunks else 7000
+        num_predict = 3500
 
     response = httpx.post(
         OLLAMA_URL,
@@ -618,18 +631,12 @@ def extract_claims(
                                        # 2 vs 4 claims etc.), but is suspected
                                        # to cause a DIFFERENT under-extraction
                                        # problem on larger models.
-                "num_predict": 3500,   # was 2500, which still truncated on
-                                       # "Integratore alimentare al mirtillo"
-                                       # (a supplement -- many per-ingredient
-                                       # efficacy claims, ~18-20 pre-filter is
-                                       # plausible for this product type).
-                                       # Sizing to 20 claims at ~170 tok/claim
-                                       # + 30 wrapper overhead =~ 3430 -- real
-                                       # margin above the observed max. NOTE:
-                                       # the num_ctx bump below is the more
-                                       # important fix this round -- see that
-                                       # comment for why num_predict alone
-                                       # wasn't the actual bottleneck here.
+                "num_predict": num_predict,  # 3500 was sized for the
+                                       # ungrounded/retrieval-grounded case:
+                                       # 20 claims at ~170 tok/claim + 30
+                                       # wrapper overhead =~ 3430. Full-
+                                       # grounding needs more -- see the
+                                       # comment above this block.
                 "num_ctx": num_ctx,     # was 4000/6000 -- too small even for
                                         # num_predict=2500 once SYSTEM_PROMPT's
                                         # real size is counted; see the
@@ -679,9 +686,9 @@ def extract_claims(
     # brace at all.
     looks_truncated = not raw.rstrip().endswith("}")
     hint = (
-        " (output does not end with a closing brace — truncated by "
-        "num_predict; raise it further, e.g. to 2000-2500, especially for "
-        "records likely to produce many claims)"
+        f" (output does not end with a closing brace — truncated by "
+        f"num_predict={num_predict}; raise it further, especially for "
+        f"records likely to produce many claims)"
         if looks_truncated else
         " (has a closing brace but still won't parse — inspect the Raw text "
         "below for the actual syntax break, since this isn't the truncation "
