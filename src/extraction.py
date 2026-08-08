@@ -537,6 +537,7 @@ def extract_claims(
     product: dict, description: str, model: str = "llama3.2", grounding_chunks: Optional[List[dict]] = None,
     temperature: float = 0, use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT,
     full_grounding: bool = False,
+    num_predict_override: Optional[int] = None, num_ctx_override: Optional[int] = None,
 ) -> dict:
     """
     Extract greenwashing-relevant claims from a product description.
@@ -556,6 +557,16 @@ def extract_claims(
             _load_full_legal_corpus for why this is worth trying (small
             corpus, retrieval measured unreliable). Overrides
             grounding_chunks when True.
+        num_predict_override / num_ctx_override: replace the computed
+            num_predict/num_ctx tiers entirely when set. Every tier measured
+            so far (7000/9000/14000-15000) was sized against non-reasoning
+            models -- a reasoning model (e.g. deepseek-r1) generates a
+            <think> trace of UNKNOWN length before its JSON answer even
+            starts, so none of those budgets can be assumed to fit it.
+            Exposed as a raw override (not another named tier) so the actual
+            cost can be measured directly -- same "parameter, not a guess"
+            reasoning as temperature/use_schema_grammar above -- rather than
+            adding a guessed deepseek-specific constant.
         temperature: 0 (default) is fully greedy -- picked to kill llama3.2's
             run-to-run claim-count drift. Measured on a larger model
             (llama3.3:70b) to have a DIFFERENT failure mode at temperature=0:
@@ -614,6 +625,10 @@ def extract_claims(
     else:
         num_ctx = 9000 if grounding_chunks else 7000
         num_predict = 3500
+    if num_ctx_override is not None:
+        num_ctx = num_ctx_override
+    if num_predict_override is not None:
+        num_predict = num_predict_override
 
     # Repetition guard: measured on llama3.2:3b + full-grounding, "Biscotti al
     # nesquik" got stuck emitting the exact same claim object (~277 chars/~69
@@ -780,8 +795,15 @@ def _load_grounding_by_ean(matches_path: str) -> Dict[str, List[dict]]:
 def extract_from_file(
     filename: str, model: str = "llama3.2", matches_file: Optional[str] = None, temperature: float = 0,
     use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT, full_grounding: bool = False,
+    num_predict_override: Optional[int] = None, num_ctx_override: Optional[int] = None,
+    limit: Optional[int] = None,
 ) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
+    if limit is not None:
+        records = records[:limit]  # cheap diagnostic runs (e.g. measuring a
+                                    # reasoning model's <think>-trace token
+                                    # cost) shouldn't require burning a full
+                                    # file's worth of calls first.
     total = len(records)
     results = []
     failed = []
@@ -806,6 +828,8 @@ def extract_from_file(
                 temperature=temperature,
                 use_schema_grammar=use_schema_grammar,
                 full_grounding=full_grounding,
+                num_predict_override=num_predict_override,
+                num_ctx_override=num_ctx_override,
             )
             elapsed = time.monotonic() - call_start
 
@@ -886,11 +910,28 @@ if __name__ == "__main__":
         "Default is grammar-constrained (protects against enum-leak, but has a real generation-"
         "speed cost and is an untested suspect in llama3.3:70b's under-extraction pattern).",
     )
+    parser.add_argument(
+        "--num-predict", type=int, default=None,
+        help="override the computed num_predict entirely. Every existing tier (3500/5000) was "
+        "sized against non-reasoning models -- a reasoning model (e.g. deepseek-r1) generates a "
+        "<think> trace of unknown length before its JSON answer starts, so measure this directly "
+        "with a generous value + --limit 1-3 before trusting any tier here.",
+    )
+    parser.add_argument(
+        "--num-ctx", type=int, default=None,
+        help="override the computed num_ctx entirely -- see --num-predict.",
+    )
+    parser.add_argument(
+        "--limit", type=int, default=None,
+        help="only process the first N records -- cheap for measuring a new model's actual token "
+        "cost before committing to a full run.",
+    )
     args = parser.parse_args()
 
     results, failed = extract_from_file(
         args.file, model=args.model, matches_file=args.matches, temperature=args.temperature,
         use_schema_grammar=args.use_schema_grammar, full_grounding=args.full_grounding,
+        num_predict_override=args.num_predict, num_ctx_override=args.num_ctx, limit=args.limit,
     )
 
     print(f"\nProcessed {len(results)} products")
