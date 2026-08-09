@@ -131,10 +131,17 @@ Module status:
   ranking language, personal-care/cosmetic vocabulary — costing 45% of all
   gold claims on the 20-product sample before the fix (49%→93.9% survival
   after, 0 remaining prefilter-caused misses on the sample; 62.6%→77.2% on
-  the full 250-set). `_MANDATORY_DISCLOSURE_PATTERNS`' "per l'ambiente"
-  entry was also generalized from Conad-only to any brand prefix (real gap
-  confirmed against Coop's `recycling_other` data, but currently inert
-  there since `src/adapters/coop.py` doesn't join that field in). **(B1)**
+  the full 250-set). Confirmed with a live A0 run (llama3.2:3b,
+  20-sample): disabling the prefilter (`--no-prefilter`) made every metric
+  WORSE, not better (F1 0.248→0.168) — with keyword coverage now good, the
+  extra text it adds back is almost pure mandatory-disclosure/recipe
+  clutter, and that clutter measurably confuses a small model (FP 75→89,
+  TP 15→11). The prefilter is no longer just a latency lever for this
+  model; see the comment above `CLAIM_KEYWORDS` in `extraction.py`.
+  `_MANDATORY_DISCLOSURE_PATTERNS`' "per l'ambiente" entry was also
+  generalized from Conad-only to any brand prefix (real gap confirmed
+  against Coop's `recycling_other` data, but currently inert there since
+  `src/adapters/coop.py` doesn't join that field in). **(B1)**
   the prompt's "nutrition_content_claim always stays LOW" exception was
   removed — measured to have zero effect on any current score (100% of
   gold's own `nutrition_content_claim` claims are themselves LOW, already
@@ -147,10 +154,15 @@ Module status:
   of the default label-then-rationale order — Ollama honours JSON-Schema
   property order for grammar-constrained decoding, so the default order
   means the model commits to a label before ever writing the rationale
-  meant to justify it. Off by default; effect size unmeasured pending a
-  live A2 run (needs the `demmgpu1` Ollama endpoint). Also added
-  `--no-prefilter` (bypasses `_prefilter_description` entirely) for the
-  matching A0 ablation.
+  meant to justify it. A live A2 run (llama3.2:3b, 20-sample) did not show
+  the hoped-for improvement — F1 0.248→0.202, recall and precision both
+  dropped; category accuracy ticked up slightly (0.467→0.500) but on a
+  smaller matched-claim count (15→12), one flipped claim from reversing.
+  Single small run, not strong evidence the fix is wrong, just not a clear
+  win here — kept as an opt-in flag (default stays v3 order), worth
+  re-testing on llama3.3:70b or a larger sample before concluding either
+  way. Also added `--no-prefilter` for the matching A0 ablation (see B2
+  above for that result).
 - `src/dissected_extraction.py` — implemented, same output shape as
   `extraction.py`'s `extract_from_file` (drop-in comparable). Built to fix a
   hypothesis that llama3.3:70b/llama3.1:70b collapse to ~1-2 claims/product

@@ -333,35 +333,45 @@ cost to category accuracy and risk-level agreement (the 2 additional true
 positives are claims gold scored as MEDIUM/HIGH that the model itself
 called LOW).
 
-**A0 (prefilter on/off) and A2 (v3 vs v4 field order) are prepared but not
-yet run** — both need a fresh model call against the project's Ollama
-endpoint (`demmgpu1`, see reference memory), which wasn't reachable from
-the environment this pass ran in. Commands to run once connectivity is
-back (llama3.2:3b, 20-product sample — cheap, ~1 min/run):
+**A0 (prefilter on/off) and A2 (v3 vs v4 field order) — run on `demmgpu1`,
+llama3.2:3b, 20-product sample, post-`CLAIM_KEYWORDS`-fix:**
 
-```bash
-# baseline: prefilter ON, v3 field order -- reused as both A0's "on" arm
-# and A2's "v3" arm, so only 3 model calls are needed total
-python3 -m src.extraction --file sample_coop_extraction_input.json \
-    --model llama3.2:3b --out results/phase0/baseline_3b.json
+| run | precision | recall | F1 | category acc | risk agreement |
+|---|---|---|---|---|---|
+| baseline (prefilter ON, v3 order) | 0.1667 | 0.4839 | 0.2479 | 0.4667 (7/15) | 0.9333 (14/15) |
+| A0: `--no-prefilter` | 0.1100 | 0.3548 | 0.1679 | 0.4545 (5/11) | 1.0 (11/11) |
+| A2: `--rationale-first` | 0.1364 | 0.3871 | 0.2017 | 0.5000 (6/12) | 0.9167 (11/12) |
 
-# A0: prefilter OFF
-python3 -m src.extraction --file sample_coop_extraction_input.json \
-    --model llama3.2:3b --no-prefilter --out results/phase0/a0_no_prefilter_3b.json
+**A0 result: prefilter ON beats OFF outright** — worse on every axis when
+disabled (F1 0.248→0.168, recall 0.484→0.355, precision 0.167→0.110). This
+is the opposite of the naive expectation (strictly more text available
+should only help recall). Read together with B2's fix: since
+`CLAIM_KEYWORDS` now has ~94% survival on this sample, there's very little
+recall upside left to gain by removing the filter — the extra text it
+would add back is almost entirely mandatory-disclosure/recipe/nutrition-
+table clutter, not missed genuine claims. For a small model
+(llama3.2:3b), that clutter appears to actively hurt: FP count rose
+75→89 while TP fell 15→11. Consistent with this project's earlier
+full-grounding finding (adding more, mostly-irrelevant context measurably
+hurt llama3.2:3b's category accuracy, 0.65→0.00) — more text is not free
+for a small model even when the prefilter's own docstring frames it as
+"a latency lever, not a correctness filter." That framing was accurate
+when the keyword list was full of holes (removing it was a real recall
+safety net); it's measurably no longer the full picture now that B2 is
+fixed. Updated in `_prefilter_description`'s comment.
 
-# A2: rationale-first (v4 field order)
-python3 -m src.extraction --file sample_coop_extraction_input.json \
-    --model llama3.2:3b --rationale-first --out results/phase0/a2_rationale_first_3b.json
+**A2 result: rationale-first does not show a measured benefit on this
+run** — F1 dropped (0.248→0.202), recall and precision both dropped,
+category accuracy ticked up slightly (0.467→0.500) but on a smaller
+matched-claim count (15→12) that's one flipped claim away from reversing.
+Doesn't confirm B3's hypothesized effect on this model/sample size — small
+n (12-15 matched claims), single run, no repeats, so this isn't strong
+evidence the fix is *wrong*, just that it isn't a clear win here. Left as
+an opt-in flag (default stays v3 order) rather than promoted to default;
+worth re-testing on llama3.3:70b or a larger sample before drawing a firm
+conclusion either way.
 
-# score all three against the fixed evaluate.py
-python3 -m src.evaluate --predictions results/phase0/baseline_3b.json \
-    --gold golden/samples/canonical/sample_coop.json
-python3 -m src.evaluate --predictions results/phase0/a0_no_prefilter_3b.json \
-    --gold golden/samples/canonical/sample_coop.json
-python3 -m src.evaluate --predictions results/phase0/a2_rationale_first_3b.json \
-    --gold golden/samples/canonical/sample_coop.json
-```
-
-The full gate → extract-v4 → verify → severity-v4 rewrite and the rest of
-the ablation matrix (A3-A9) from `.claude/reccomendations/` remain deferred
-to a follow-up pass, per this pass's explicit scope decision.
+This closes Phase 0's ablation matrix (A0/A1/A2). The full gate →
+extract-v4 → verify → severity-v4 rewrite and the rest of the ablation
+matrix (A3-A9) from `.claude/reccomendations/` remain deferred to a
+follow-up pass, per this pass's explicit scope decision.

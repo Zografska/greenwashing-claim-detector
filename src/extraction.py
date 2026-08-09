@@ -359,6 +359,19 @@ def _reorder_rationale_first(prompt: str) -> str:
 # the claim types UCPD scope is now meant to catch -- before the model ever
 # saw them. Now also matches nutrition/health, origin, composition, and
 # price/value language.
+#
+# Measured (A0 ablation, Phase 0, llama3.2:3b, 20-product sample, after the
+# CLAIM_KEYWORDS expansion below): this is NOT just a latency lever anymore.
+# Disabling it (--no-prefilter) made every metric worse -- F1 0.248->0.168,
+# recall 0.484->0.355, precision 0.167->0.110 -- not better, despite strictly
+# more text being available to the model. With keyword coverage now good
+# (~94% claim survival on this sample), the extra text --no-prefilter adds
+# back is almost entirely mandatory-disclosure/recipe/nutrition-table
+# clutter, and that clutter measurably hurts a small model's extraction
+# (FP 75->89, TP 15->11) -- consistent with this file's separate
+# full-grounding finding that more, mostly-irrelevant context hurts
+# llama3.2:3b's accuracy. Keep this filter on by default; --no-prefilter
+# exists for re-testing this, not as a recommended mode.
 CLAIM_KEYWORDS = re.compile(
     r"(ambiente|sostenib|riciclat|riciclabil|plastica|carta|imballaggi|imballagg|"
     r"biodegrad|compostabil|biologic|naturale|natura|co2|carbon|climate|neutral|"
@@ -1112,7 +1125,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--no-prefilter", action="store_true",
         help="A0 ablation for bug B2: send the full, unfiltered description instead of "
-        "_prefilter_description's keyword-matched fragments. Off by default (prefilter stays on).",
+        "_prefilter_description's keyword-matched fragments. Off by default (prefilter stays on) -- "
+        "measured WORSE on every axis (F1/recall/precision) on llama3.2:3b/20-sample once "
+        "CLAIM_KEYWORDS coverage was fixed, see the comment above CLAIM_KEYWORDS. Not a recommended mode.",
     )
     args = parser.parse_args()
 
