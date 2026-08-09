@@ -21,18 +21,12 @@ Important asymmetries this scorer has to account for, not paper over:
   ("flaggable" claims) and reports the excluded count so it isn't silently
   baked into a lower recall number.
 
-- src/extraction.py's output taxonomy (6 broad categories) is coarser than
-  the golden sets' taxonomy (11 categories actually observed across all 4
-  retailers -- see GOLD_TO_COARSE below). Some gold categories
-  (misleading_superiority_or_absolute_claim, misleading_endorsement_claim,
-  unfair_comparison, irrelevant_claim) have NO corresponding extraction.py
-  category at all -- there's no honest way to score "did the model pick the
-  right category" for a claim type the schema can't express. These are
-  UNMAPPED: excluded from category_accuracy's denominator, with the excluded
-  count reported rather than hidden. Symmetrically, extraction.py's
-  PRICE_VALUE_CLAIM and SAFETY_INSTRUCTION_CLAIM have no gold category
-  feeding into them at all in these 4 sets -- predictions in those two
-  buckets can't be validated against this gold data either way.
+- src/extraction.py's category enum (CLAIM_CATEGORIES) is now the golden
+  sets' exact 11-category taxonomy, lifted verbatim -- it used to be a
+  coarser hand-designed 6-way split, which is why category_accuracy used to
+  need a lossy GOLD_TO_COARSE mapping. That mapping is gone: predicted and
+  gold category strings are compared directly, and every gold category has
+  an honest corresponding prediction value now.
 
 Run with (see src/adapters/build.py to produce the --gold file first):
     python3 -m src.evaluate --predictions results/coop/predictions.json \\
@@ -48,31 +42,6 @@ import argparse
 import json
 import re
 from typing import List, Set, Tuple
-
-# --- category taxonomy mapping --------------------------------------------
-# Gold's 11 observed categories (a 12th, unauthorized_or_borderline_medicinal_claim,
-# has zero hits across all 4 golden sets per their READMEs, included here for
-# completeness) -> extraction.py's 6-category RESPONSE_SCHEMA enum.
-# None means "no honest mapping exists" -- see module docstring.
-GOLD_TO_COARSE = {
-    "environmental_unsubstantiated": "ENVIRONMENTAL_CLAIM",
-    "offset_based_neutrality": "ENVIRONMENTAL_CLAIM",
-    "unsubstantiated_health_or_efficacy_claim": "NUTRITION_HEALTH_CLAIM",
-    "unauthorized_or_borderline_medicinal_claim": "NUTRITION_HEALTH_CLAIM",
-    "nutrition_content_claim": "NUTRITION_HEALTH_CLAIM",
-    "misleading_composition_or_ingredient_claim": "COMPOSITION_CLAIM",
-    "misleading_authenticity_or_origin_claim": "ORIGIN_PROVENANCE_CLAIM",
-    # Closest available bucket: fake_or_unverified_label is about whether a
-    # claimed certification/label/scheme is real -- an authenticity question,
-    # same shape as misleading_authenticity_or_origin_claim. An editorial
-    # call, not an obvious 1:1 fit -- revisit if it doesn't hold up in practice.
-    "fake_or_unverified_label": "ORIGIN_PROVENANCE_CLAIM",
-    # No honest match in extraction.py's 6-category schema:
-    "misleading_superiority_or_absolute_claim": None,
-    "misleading_endorsement_claim": None,
-    "unfair_comparison": None,
-    "irrelevant_claim": None,
-}
 
 
 def load_json(path: str) -> List[dict]:
@@ -170,12 +139,11 @@ def extraction_prf(predictions: List[dict], gold: List[dict], overlap_threshold:
 
 def category_accuracy(predictions: List[dict], gold: List[dict], overlap_threshold: float = 0.5) -> dict:
     """Restricted to claims extraction_prf already matched (a wrong span
-    can't have a "right" category), and further restricted to matched pairs
-    whose gold category has an entry in GOLD_TO_COARSE that isn't None --
-    see module docstring."""
+    can't have a "right" category). Gold and prediction categories are the
+    same 11-value taxonomy, so this is a direct string comparison -- see
+    module docstring."""
     correct = 0
     considered = 0
-    excluded_unmapped = 0
 
     for pred_record, gold_record in _pair_records(predictions, gold):
         pred_claims = pred_record.get("claims", [])
@@ -183,12 +151,8 @@ def category_accuracy(predictions: List[dict], gold: List[dict], overlap_thresho
         matches, _, _ = _match_claims(pred_claims, flaggable, overlap_threshold)
 
         for gold_claim, pred_claim in matches:
-            coarse = GOLD_TO_COARSE.get(gold_claim.get("category"))
-            if coarse is None:
-                excluded_unmapped += 1
-                continue
             considered += 1
-            if pred_claim.get("category") == coarse:
+            if pred_claim.get("category") == gold_claim.get("category"):
                 correct += 1
 
     accuracy = correct / considered if considered else 0.0
@@ -196,7 +160,6 @@ def category_accuracy(predictions: List[dict], gold: List[dict], overlap_thresho
         "accuracy": round(accuracy, 4),
         "correct": correct,
         "considered": considered,
-        "excluded_unmapped_gold_category": excluded_unmapped,
     }
 
 

@@ -259,13 +259,13 @@ Certification scope rule -- a certification only lowers risk for the
 SPECIFIC claim it names. A certification mentioned for one claim never
 justifies LOW for a different, unrelated claim.
 
-MEDIUM-by-default rule -- applies to every category except
-nutrition_content_claim (that one has fixed legal thresholds, so it stays
-LOW even when unverified from text -- no other category gets this
-exception). For every other category, "nothing contradicts this" is NEVER
-sufficient grounds for LOW -- an asserted-but-unbacked claim defaults to
-MEDIUM regardless of how plausible it sounds. Reserve LOW only for a claim
-you can point to real backing for.
+MEDIUM-by-default rule -- applies to every category, with no exceptions.
+"Nothing contradicts this" is NEVER sufficient grounds for LOW -- an
+asserted-but-unbacked claim defaults to MEDIUM regardless of how plausible
+it sounds, including nutrition_content_claim: a fixed legal threshold being
+invoked is not itself backing unless the text also shows the product
+actually clears it. Reserve LOW only for a claim you can point to real
+backing for.
 
 You will receive exactly N numbered claims and must return exactly N risk
 objects, one per claim_index, in the same order. This is a hard
@@ -306,10 +306,15 @@ RISK_SYSTEM_PROMPT_REASONING = RISK_SYSTEM_PROMPT.replace(
     1,
 )
 
+# risk_rationale before risk_level (B3): the label is committed to only
+# after the rationale that's meant to justify it, not before -- see
+# extraction.py's RESPONSE_SCHEMA_RATIONALE_FIRST for the same fix applied
+# there (that one's kept as an opt-in ablation flag since it's the pipeline
+# actually being benchmarked; this pipeline isn't, so it's just fixed).
 RISK_SCHEMA_ITEM_PROPERTIES = {
     "claim_index": {"type": "integer"},
-    "risk_level": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
     "risk_rationale": {"type": "string"},
+    "risk_level": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
 }
 
 
@@ -324,7 +329,7 @@ def _build_risk_schema(n: int) -> dict:
                 "items": {
                     "type": "object",
                     "properties": RISK_SCHEMA_ITEM_PROPERTIES,
-                    "required": ["claim_index", "risk_level", "risk_rationale"],
+                    "required": ["claim_index", "risk_rationale", "risk_level"],
                 },
             }
         },
@@ -336,13 +341,13 @@ def _build_risk_prompt(flagged: List[Tuple[int, str, str]]) -> str:
     numbered = "\n".join(
         f"{i + 1}. [{category}] {clause}" for i, (_orig_idx, clause, category) in enumerate(flagged)
     )
-    return f"""Assign risk_level + risk_rationale to each of these {len(flagged)} claims.
+    return f"""Assign risk_rationale + risk_level to each of these {len(flagged)} claims.
 Return exactly {len(flagged)} risk objects, claim_index 1 through
 {len(flagged)}.
 
 Return a single JSON object of EXACTLY this shape -- the top-level key must
 be named "risk_assessments", not any other name (e.g. NOT "risk_objects"):
-{{"risk_assessments": [{{"claim_index": 1, "risk_level": "HIGH|MEDIUM|LOW", "risk_rationale": "<short reason>"}}, ...]}}
+{{"risk_assessments": [{{"claim_index": 1, "risk_rationale": "<short reason>", "risk_level": "HIGH|MEDIUM|LOW"}}, ...]}}
 This key name matters even when structured-output grammar is disabled --
 nothing else enforces it. Output ONLY this JSON object -- no reasoning,
 commentary, or text before or after it.

@@ -83,6 +83,35 @@ RESPONSE_SCHEMA = {
     "required": ["claims"],
 }
 
+# --rationale-first ablation variant of RESPONSE_SCHEMA (B3): risk_rationale
+# emitted before risk_level, both in `properties` order and `required`
+# order -- see _reorder_rationale_first above for why this has to be paired
+# with a matching prompt-example reorder, not used alone.
+RESPONSE_SCHEMA_RATIONALE_FIRST = {
+    "type": "object",
+    "properties": {
+        "claims": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "claim_text": {"type": "string"},
+                    "category": {"type": "string", "enum": CLAIM_CATEGORIES},
+                    "risk_rationale": {"type": "string"},
+                    "risk_level": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
+                },
+                "required": [
+                    "claim_text",
+                    "category",
+                    "risk_rationale",
+                    "risk_level",
+                ],
+            },
+        }
+    },
+    "required": ["claims"],
+}
+
 # Kept as a plain dict too, in case other code in this package imports SCHEMA
 # directly for docs/tests. Not used in the prompt anymore.
 SCHEMA = {
@@ -181,19 +210,19 @@ packaging claim it certifies). A certification mentioned anywhere in the ad
 never justifies LOW for a *different*, unrelated claim in the same product
 just because a certification exists somewhere in the text.
 
-MEDIUM-by-default rule -- applies to EVERY category except nutrition_content_claim
-(that one has fixed NHCR legal thresholds to fall back on, so it stays LOW
-even unverified -- the category itself is legally bounded and low-severity;
-no other category gets this exception). For every other category:
+MEDIUM-by-default rule -- applies to EVERY category, with no exceptions.
 "I can't find a contradiction" is NEVER sufficient grounds for LOW. An
-asserted-but-unbacked benefit, heritage claim, superiority claim, or
-efficacy claim defaults to MEDIUM regardless of how plausible or
-uncontroversial it sounds -- this includes authenticity/origin claims,
-absolute-superiority claims, and unbacked environmental or health
-assertions, not just the categories shown in the example below. Reserve
-LOW only for a claim you can point to REAL backing
-for: an EU-authorized phrase used correctly, or that exact claim's own
-named certification. Being unable to disprove a claim is not backing.
+asserted-but-unbacked benefit, heritage claim, superiority claim,
+nutrient-content claim, or efficacy claim defaults to MEDIUM regardless of
+how plausible or uncontroversial it sounds -- this includes
+authenticity/origin claims, absolute-superiority claims, and unbacked
+environmental, nutrition, or health assertions, not just the categories
+shown in the example below. Reserve LOW only for a claim you can point to
+REAL backing for: an EU-authorized phrase used correctly, or that exact
+claim's own named certification. Being unable to disprove a claim is not
+backing -- this applies to nutrition_content_claim exactly as it does to
+every other category: a fixed legal threshold being invoked is not itself
+backing unless the text also shows the product actually clears it.
 
 Emit every claim you find at every risk_level, including LOW -- do not
 silently drop LOW-risk claims; filtering happens downstream, not here.
@@ -206,7 +235,7 @@ in THIS product's own PRODUCT DESCRIPTION, never text that merely resembles
 this example's shape):
 {"claims": [
   {"claim_text": "<verbatim sentence from the product asserting an unbacked health/efficacy benefit>", "category": "unsubstantiated_health_or_efficacy_claim", "risk_level": "MEDIUM", "risk_rationale": "<specific reason: what's asserted, why it's unbacked>"},
-  {"claim_text": "<verbatim sentence from the product using a fixed-threshold nutrient wording>", "category": "nutrition_content_claim", "risk_level": "LOW", "risk_rationale": "<specific reason: legally bounded category, threshold unverified from text>"},
+  {"claim_text": "<verbatim sentence from the product using a fixed-threshold nutrient wording with no backing given for THIS product>", "category": "nutrition_content_claim", "risk_level": "MEDIUM", "risk_rationale": "<specific reason: fixed-threshold claim, but no evidence THIS product clears it>"},
   {"claim_text": "<verbatim sentence from the product about heritage, tradition, or origin>", "category": "misleading_authenticity_or_origin_claim", "risk_level": "MEDIUM", "risk_rationale": "<specific reason: unbacked heritage/origin assertion>"},
   {"claim_text": "<verbatim sentence from the product about a carbon-offset or net-zero claim>", "category": "offset_based_neutrality", "risk_level": "HIGH", "risk_rationale": "<specific reason: blacklisted per se regardless of truth>"}
 ]}
@@ -301,6 +330,23 @@ SYSTEM_PROMPT_REASONING = SYSTEM_PROMPT.replace(
     1,
 )
 
+# --rationale-first ablation (B3): RESPONSE_SCHEMA emits risk_level before
+# risk_rationale, so the model commits to a label and only then writes a
+# rationale for a decision it already made -- the rationale can never
+# inform the label. Ollama honours JSON-Schema property order for
+# grammar-constrained decoding, so this is a real lever, not cosmetic.
+# Effect size is unmeasured -- see A2 in .claude/reccomendations/extract.md.
+# Applied as a runtime transform over whichever base prompt is selected
+# (plain or reasoning-model), not a separate hand-written prompt, so the two
+# never have to be kept in sync by hand.
+_RATIONALE_FIRST_FIELD_RE = re.compile(
+    r'"risk_level":\s*("(?:[^"\\]|\\.)*"),\s*"risk_rationale":\s*("(?:[^"\\]|\\.)*")'
+)
+
+
+def _reorder_rationale_first(prompt: str) -> str:
+    return _RATIONALE_FIRST_FIELD_RE.sub(r'"risk_rationale": \2, "risk_level": \1', prompt)
+
 # --- Pre-filter: cut description down to claim-adjacent fragments before --
 # it ever reaches the model. On local Ollama, prefill time scales with
 # input tokens, so this is the main latency lever for long product
@@ -322,9 +368,42 @@ CLAIM_KEYWORDS = re.compile(
     r"calori|grass|magr|light|leggero|proteic|vitamin|calcio|fosforo|"
     r"saziant|nutrit|dieta|sportiv|forma fisica|salute|benefici|ricc[ao] (?:di|in)|"
     r"fonte di|"
+    # health/efficacy proof language -- dermatological/clinical claims and
+    # before-after "results" framing (e.g. cosmetics, supplements) had zero
+    # coverage here; measured to lose 6/6 claims on a dental-adhesive product
+    # and most of a skincare-serum product's claims (see
+    # src/check_prefilter_coverage.py)
+    r"efficac|dermatolog|comprovat|clinic|testat|macchi|risultat|"
+    r"ripara|contribui|mantenimento|favorisc|benessere|assicura|duratur|"
+    # endorsement / testimonial
+    r"raccomandat|confermat|approvat|garant|"
+    # superiority / comparison / ranking
+    r"miglior|ancora (?:pi[uù]|meno)|precedente|massim|leader|"
+    r"n[°.]?\s?1\b|brevett|primato|"
+    # tradition / authenticity framing -- measured as the single largest
+    # gap category on the full 250-product set (misleading_authenticity_or_
+    # origin_claim relies almost entirely on this vocabulary)
+    r"tradizional|antic[ao]|tramandat|original|autentic|ricetta|"
+    # environmental commitment / impact language, distinct from the
+    # recyclability/packaging terms above
+    r"impegno|pianeta|biodiversit|responsabil|etichetta ambiental|"
+    # statistical / testimonial proof framing (percentages, named panels,
+    # market-research citations)
+    r"\btest\b|\biri\b|nielsen|studio condotto|"
+    # personal-care / cosmetic / hygiene efficacy vocabulary -- second
+    # largest gap category on the full 250-set, essentially uncovered before
+    r"idrata|\bpelle\b|\bcute\b|capelli|smalto|placca|\bcarie\b|screpolat|"
+    r"esfoliant|leviga|ipoallergenic|allergi|profum|colorant|odori|odore|"
+    r"\bacne\b|sollievo|fastidio|\bdolore\b|prurito|batter|protegg|"
+    r"protettiv|rigenera|rinforza|ricostitu|"
+    # recurring Coop private-label trust marks -- this golden set is
+    # Coop-sourced and these are arbitrary proper-noun labels, not
+    # semantically generalizable the way the rest of this list is; kept
+    # narrow and literal rather than guessed at
+    r"vivi verde|fior fiore|crescendo|daytech|bene s[iì]|"
     # origin / provenance
     r"italian|origine|provenien|dop\b|igp\b|denominazione|allevat|pascol|"
-    r"montagna|territorio|"
+    r"montagna|territorio|artigianal|"
     # composition
     r"100%|ingredient|latte (?:crudo|fresco)|non pastorizzat|edibile|commestibil|"
     # price / value
@@ -382,7 +461,20 @@ _LABEL_BOUNDARY = (
 # (packaging bin-sorting codes, DOP/IGP as an official scheme) and the smaller
 # local models still matched on them whenever they leaked into candidate text.
 _MANDATORY_DISCLOSURE_PATTERNS = [
-    re.compile(r"^Conad per l'ambiente\s*$", re.IGNORECASE),
+    # "<Brand> per l'ambiente" section headers -- was hardcoded to
+    # "Conad per l'ambiente" only, but the exact same badge exists per-brand
+    # across retailers ("Coop per l'ambiente", bare "Per l'ambiente",
+    # "Rigoni di Asiago per l'ambiente", "Citterio per l'ambiente", etc. --
+    # see src/check_prefilter_coverage.py's data-gap findings on the Coop
+    # golden set). Prefix words must be capitalized (proper nouns) or a
+    # short Italian connector (di/del/della/dei/delle), so this can't also
+    # swallow a genuine lowercase sentence that happens to contain the same
+    # phrase (e.g. "Facciamo tanto per l'ambiente" as real marketing copy).
+    # Currently inert for Coop data specifically: this text lives in
+    # `recycling_other`, which src/adapters/coop.py's to_extraction_input
+    # deliberately doesn't join into the extraction input -- but real for
+    # any future source that does join it in.
+    re.compile(r"^(?:(?:[A-Z][\w'.]*|di|del|della|dei|delle)\s+){0,4}[Pp]er l'ambiente\s*$"),
     re.compile(
         r"^(?:Vaschetta|Incarto|Film|Confezione|Flowpack)\b[^.\n]{0,40}?Raccolta\s+\w+\s*$",
         re.IGNORECASE,
@@ -513,9 +605,9 @@ judgment about which, if any, actually apply):
 
 def _build_user_prompt(
     product: dict, description: str, grounding_chunks: Optional[List[dict]] = None,
-    full_grounding: bool = False,
+    full_grounding: bool = False, no_prefilter: bool = False,
 ) -> str:
-    filtered = _prefilter_description(description)
+    filtered = description if no_prefilter else _prefilter_description(description)
     # Only inserted when grounding_chunks is given, so the no-grounding
     # prompt is byte-identical to every prior run (no stray blank line).
     max_words = None if full_grounding else MAX_GROUNDING_WORDS
@@ -588,7 +680,7 @@ def extract_claims(
     temperature: float = 0, use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT,
     full_grounding: bool = False,
     num_predict_override: Optional[int] = None, num_ctx_override: Optional[int] = None,
-    reasoning_model: bool = False,
+    reasoning_model: bool = False, rationale_first: bool = False, no_prefilter: bool = False,
 ) -> dict:
     """
     Extract greenwashing-relevant claims from a product description.
@@ -624,6 +716,14 @@ def extract_claims(
             exhaustiveness instruction rebalanced against this prompt's many
             exclusionary rules. Unvalidated as of this writing -- an A/B
             lever, not a default to assume is correct.
+        rationale_first: emit risk_rationale before risk_level (RESPONSE_
+            SCHEMA_RATIONALE_FIRST + a matching prompt-example reorder)
+            instead of the default label-then-rationale order -- the A2
+            ablation for bug B3. Off by default so existing behavior is
+            unchanged.
+        no_prefilter: send the full, unfiltered description instead of
+            _prefilter_description's keyword-matched fragments -- the A0
+            ablation for bug B2. Off by default (prefilter stays on).
         temperature: 0 (default) is fully greedy -- picked to kill llama3.2's
             run-to-run claim-count drift. Measured on a larger model
             (llama3.3:70b) to have a DIFFERENT failure mode at temperature=0:
@@ -726,14 +826,21 @@ def extract_claims(
         options["repeat_penalty"] = 1.3
         options["repeat_last_n"] = 512
 
+    system_prompt = SYSTEM_PROMPT_REASONING if reasoning_model else SYSTEM_PROMPT
+    if rationale_first:
+        system_prompt = _reorder_rationale_first(system_prompt)
+    response_schema = RESPONSE_SCHEMA_RATIONALE_FIRST if rationale_first else RESPONSE_SCHEMA
+
     response = httpx.post(
         OLLAMA_URL,
         json={
             "model": model,
-            "system": SYSTEM_PROMPT_REASONING if reasoning_model else SYSTEM_PROMPT,
-            "prompt": _build_user_prompt(product, description, grounding_chunks, full_grounding=full_grounding),
+            "system": system_prompt,
+            "prompt": _build_user_prompt(
+                product, description, grounding_chunks, full_grounding=full_grounding, no_prefilter=no_prefilter,
+            ),
             "stream": False,
-            "format": RESPONSE_SCHEMA if use_schema_grammar else "json",
+            "format": response_schema if use_schema_grammar else "json",
             "options": options,
         },
         timeout=600,  # was 200. The real problem causing timeouts was call
@@ -854,6 +961,7 @@ def extract_from_file(
     use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT, full_grounding: bool = False,
     num_predict_override: Optional[int] = None, num_ctx_override: Optional[int] = None,
     limit: Optional[int] = None, reasoning_model: bool = False,
+    rationale_first: bool = False, no_prefilter: bool = False,
 ) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
     if limit is not None:
@@ -888,6 +996,8 @@ def extract_from_file(
                 num_predict_override=num_predict_override,
                 num_ctx_override=num_ctx_override,
                 reasoning_model=reasoning_model,
+                rationale_first=rationale_first,
+                no_prefilter=no_prefilter,
             )
             elapsed = time.monotonic() - call_start
 
@@ -992,6 +1102,18 @@ if __name__ == "__main__":
         "deepseek-r1:70b's 0.71 category accuracy / 0 false positives but 0.14 recall on "
         "full-grounding -- unvalidated as of this writing, an A/B lever not a proven fix.",
     )
+    parser.add_argument(
+        "--rationale-first", action="store_true",
+        help="A2 ablation for bug B3: emit risk_rationale before risk_level (schema property order "
+        "+ a matching worked-example reorder) instead of the default label-then-rationale order, "
+        "so the rationale can actually inform the label under grammar-constrained decoding. Off by "
+        "default -- effect size unmeasured, see .claude/reccomendations/extract.md.",
+    )
+    parser.add_argument(
+        "--no-prefilter", action="store_true",
+        help="A0 ablation for bug B2: send the full, unfiltered description instead of "
+        "_prefilter_description's keyword-matched fragments. Off by default (prefilter stays on).",
+    )
     args = parser.parse_args()
 
     results, failed = extract_from_file(
@@ -999,6 +1121,7 @@ if __name__ == "__main__":
         use_schema_grammar=args.use_schema_grammar, full_grounding=args.full_grounding,
         num_predict_override=args.num_predict, num_ctx_override=args.num_ctx, limit=args.limit,
         reasoning_model=args.reasoning_model,
+        rationale_first=args.rationale_first, no_prefilter=args.no_prefilter,
     )
 
     print(f"\nProcessed {len(results)} products")

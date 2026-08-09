@@ -41,8 +41,8 @@ none of the existing tiers were sized for that); `--limit N` processes only
 the first N records, for cheaply measuring a new model's real token cost
 before committing to a full run.
 
-Evaluation and pipeline wiring (`src/evaluate.py`, `src/pipeline.py`) are not
-yet implemented — see Architecture below.
+`src/evaluate.py` is implemented (see Architecture below for what it scores
+and how). `src/pipeline.py` is not yet implemented (empty file).
 
 No test suite exists in this repo yet.
 
@@ -62,7 +62,7 @@ python3 evaluate_matches.py --rerank embeddings/reranked.json --gold 25.06/gold.
 `evaluate_matches.py`'s default gold file (`25.06/gold.json`, 28 Conad
 cheese ads, ECGT-only) is small and single-category — good enough to
 diagnose systematic bugs in the pipeline itself, not enough to certify
-label quality at scale. `golden/golden_set_coop_ucpd_250_combined.json`
+label quality at scale. `golden/golden_set_coop_ucpd_250.json`
 (250 Coop products across 9 categories, full UCPD scope) is a much larger,
 more diverse candidate for that job, but nothing currently reads it —
 see Data layout below.
@@ -116,9 +116,41 @@ Module status:
   precedes them (the scraped source has no punctuation between fields), and
   drops fragments that are purely a mandatory disclosure
   (`_MANDATORY_DISCLOSURE_PATTERNS` — packaging bin-sorting badges, the
-  "Conad per l'ambiente" header, "verifica le regole del tuo comune"
-  boilerplate) even though they superficially match `CLAIM_KEYWORDS` — these
-  are legally mandatory labeling, never a voluntary claim.
+  "`<Brand>` per l'ambiente" header (generalized from a Conad-only regex —
+  see below), "verifica le regole del tuo comune" boilerplate) even though
+  they superficially match `CLAIM_KEYWORDS` — these are legally mandatory
+  labeling, never a voluntary claim.
+
+  A Phase 0 pass (triggered by `.claude/reccomendations/`'s external review,
+  which named these B1/B2/B3) fixed three structural bugs here, measured
+  with `src/check_prefilter_coverage.py` and the fixed `src/evaluate.py`
+  (see `model_comparison_report.md` §8 for full numbers): **(B2, by far the
+  largest effect)** `CLAIM_KEYWORDS` had zero coverage for whole gap
+  categories — dermatological/clinical proof language, tradition/
+  authenticity framing, endorsement/testimonial phrasing, superiority-
+  ranking language, personal-care/cosmetic vocabulary — costing 45% of all
+  gold claims on the 20-product sample before the fix (49%→93.9% survival
+  after, 0 remaining prefilter-caused misses on the sample; 62.6%→77.2% on
+  the full 250-set). `_MANDATORY_DISCLOSURE_PATTERNS`' "per l'ambiente"
+  entry was also generalized from Conad-only to any brand prefix (real gap
+  confirmed against Coop's `recycling_other` data, but currently inert
+  there since `src/adapters/coop.py` doesn't join that field in). **(B1)**
+  the prompt's "nutrition_content_claim always stays LOW" exception was
+  removed — measured to have zero effect on any current score (100% of
+  gold's own `nutrition_content_claim` claims are themselves LOW, already
+  excluded from scoring), but it was still a real correctness bug: a
+  genuinely risky nutrition claim would have been forced to LOW and
+  silently dropped regardless of the model's own judgment. **(B3)** added
+  an opt-in `--rationale-first` flag (`RESPONSE_SCHEMA_RATIONALE_FIRST` +
+  `_reorder_rationale_first`) that emits `risk_rationale` before
+  `risk_level` in both the schema and the prompt's worked example, instead
+  of the default label-then-rationale order — Ollama honours JSON-Schema
+  property order for grammar-constrained decoding, so the default order
+  means the model commits to a label before ever writing the rationale
+  meant to justify it. Off by default; effect size unmeasured pending a
+  live A2 run (needs the `demmgpu1` Ollama endpoint). Also added
+  `--no-prefilter` (bypasses `_prefilter_description` entirely) for the
+  matching A0 ablation.
 - `src/dissected_extraction.py` — implemented, same output shape as
   `extraction.py`'s `extract_from_file` (drop-in comparable). Built to fix a
   hypothesis that llama3.3:70b/llama3.1:70b collapse to ~1-2 claims/product
@@ -138,7 +170,10 @@ Module status:
   (roughly half the false positives on the zero-claim/`hard_no` subset
   only). Not currently worth its cost; kept as a still-useful fallback if
   the plain pipeline's false-positive rate on `hard_no` products becomes the
-  binding constraint.
+  binding constraint. The same Phase 0 pass applied the B1 (nutrition
+  exception removed) and B3 (`risk_rationale` before `risk_level`) fixes to
+  `RISK_SYSTEM_PROMPT`/`RISK_SCHEMA_ITEM_PROPERTIES` here too, directly
+  (not behind a flag) since this pipeline isn't the one being benchmarked.
 - `src/adapters/` — implemented. `build.py` turns one retailer's golden set
   into the two canonical outputs `evaluate.py`/`extraction.py` need
   (`--gold-out` for canonical gold, `--extraction-out` for
@@ -168,9 +203,29 @@ Module status:
   Intended to embed the directive text with `sentence-transformers` and do
   flat numpy cosine similarity, then categorize each claim optionally grounded
   by retrieved passages.
-- `src/evaluate.py` — stub. Two scores kept deliberately separate: extraction
-  P/R/F1 (relaxed span overlap, not exact match) and category accuracy
-  (restricted to claims correctly extracted).
+- `src/evaluate.py` — implemented. Pairs `extraction.py` predictions against
+  a canonical gold file (`golden/canonical/<retailer>.json`-shaped, built by
+  `src/adapters/build.py --gold-out`; `golden/samples/canonical/
+  sample_coop.json` is one) by `ean`, and reports three separate scores:
+  `extraction_prf` (relaxed token-overlap span match, restricted to gold
+  claims with `risk_level != "LOW"` — gold's LOW claims are excluded from
+  scoring by design, since `extraction.py`'s own LOW-drop policy means they
+  can never appear in predictions either); `category_accuracy` (direct
+  string equality between predicted and gold `category`, restricted to
+  matched claims — gold and `extraction.py`'s `CLAIM_CATEGORIES` are the
+  same 11-value taxonomy, so this needs no coarsening); `risk_level_
+  agreement` (HIGH-vs-MEDIUM agreement on matched claims, bonus metric).
+  Was, until a Phase 0 pass, comparing predicted categories against a
+  `GOLD_TO_COARSE`-mapped 6-category scheme that `extraction.py` stopped
+  emitting once it was broadened to output gold's exact 11 categories
+  directly — silently producing near-zero `category_accuracy` regardless of
+  actual model quality (measured: 0.0 before the fix, 0.75 after, on the
+  same predictions file). Fixed by comparing category strings directly and
+  deleting `GOLD_TO_COARSE`. See `model_comparison_report.md` §8 for the
+  full writeup and for `src/check_prefilter_coverage.py`, a companion
+  reusable script (not part of `evaluate.py` itself) that measures how many
+  gold claims survive `_prefilter_description` before ever reaching the
+  model — run it after any `CLAIM_KEYWORDS` change.
 - `src/pipeline.py` — empty; not yet started.
 
 `src/knowledge/` is a **separate, already-working retrieval+rerank pipeline**
@@ -206,7 +261,7 @@ importable API:
   environmental claims only** ("asserzione ambientale" recognition,
   worked examples all environmental) — even though the legal corpus it
   retrieves against (ecgt+ucpd combined) and the newer
-  `golden/golden_set_coop_ucpd_250_combined.json` gold set both span the
+  `golden/golden_set_coop_ucpd_250.json` gold set both span the
   _full_ UCPD taxonomy (nutrition/health, origin/authenticity, price/value,
   comparison, endorsement claims, not just environmental). Broadening this
   prompt beyond environmental claims — and adding non-environmental
@@ -247,7 +302,7 @@ into `src/pipeline.py`.
   The single-label-vs-multi-label decision flagged in `src/categorize.py`'s
   docstring is still unresolved. Gold labels do exist now, just not here —
   see `golden/` below and `src/knowledge/25.06/gold.json`.
-- `golden/golden_set_coop_ucpd_250_combined.json` — 250 Coop products across
+- `golden/golden_set_coop_ucpd_250.json` — 250 Coop products across
   9 categories (cura-persona, colazione-dolci-e-snack-salati, gastronomia,
   pane-pasta-riso-e-farine, acqua-e-bevande, latte-yogurt-e-uova,
   parafarmacia, prima-infanzia, condimenti-conserve-e-scatolame), labeled
