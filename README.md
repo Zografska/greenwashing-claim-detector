@@ -9,12 +9,12 @@ Dir. 2005/29/EC): nutrition/health, origin, composition, price/value, and
 safety-instruction claims, not just environmental ones. See `CLAUDE.md` for the
 detailed, current module-by-module status; this file is the higher-level map.
 
-| condition         | RAG | distilled/fine-tuned model |
-|--------------------|-----|------------------------------|
-| baseline           | no  | no  |
-| rag_only           | yes | no  |
-| distilled_only     | no  | yes |
-| rag_distilled      | yes | yes |
+| condition      | RAG | distilled/fine-tuned model |
+| -------------- | --- | -------------------------- |
+| baseline       | no  | no                         |
+| rag_only       | yes | no                         |
+| distilled_only | no  | yes                        |
+| rag_distilled  | yes | yes                        |
 
 **Nothing wires these four conditions together yet** — `src/pipeline.py` is
 still empty. The only runnable path today is calling `src/extraction.py`
@@ -47,7 +47,7 @@ models/           local fine-tuned adapters (gitignored, not in repo)
 ## Running extraction directly
 
 ```bash
-python -m src.extraction --file 06.25.json --model llama3.2 --out results/baseline/predictions.json
+python3 -m src.extraction --file 06.25.json --model llama3.2 --out results/baseline/predictions.json
 ```
 
 Requires a local Ollama server (`http://localhost:11434`). `--file` is a
@@ -62,15 +62,15 @@ a specific legal definition.
 
 ```bash
 cd src/knowledge
-python prepare_ads_chunks.py --file 06.25.json --out ads_chunks.json
-python embed_e5.py --input ads_chunks.json --output-dir ./embeddings/06.25 --mode query
-python compare_e5.py --queries 06.25 --top-k 56 --output embeddings/matches.json
-python rerank_matches.py --matches embeddings/matches.json --out embeddings/reranked.json --model llama3.1:8b
-python evaluate_matches.py --rerank embeddings/reranked.json --gold 25.06/gold.json
+python3 prepare_ads_chunks.py --file 06.25.json --out ads_chunks.json
+python3 embed_e5.py --input ads_chunks.json --output-dir ./embeddings/06.25 --mode query
+python3 compare_e5.py --queries 06.25 --top-k 56 --output embeddings/matches.json
+python3 rerank_matches.py --matches embeddings/matches.json --out embeddings/reranked.json --model llama3.1:8b
+python3 evaluate_matches.py --rerank embeddings/reranked.json --gold 25.06/gold.json
 ```
 
 **Important scope gap:** `rerank_matches.py`'s prompt currently only judges
-ECGT *environmental* claims, even though the legal corpus and the golden set
+ECGT _environmental_ claims, even though the legal corpus and the golden set
 below span the full UCPD taxonomy. Broadening it is an open item, not done —
 see the checklist.
 
@@ -103,7 +103,7 @@ diagnosed against the 28-ad gold set:
    **Result: overall rerank accuracy 46.4% → 67.9%, positive recall 87.5% → 100%.**
 2. **Reasoning-skip bug** (`src/knowledge/rerank_matches.py`): the model would
    confirm "this is a real claim" and jump straight to MATCH without ever
-   separately checking "is it *environmental*." Fixed by adding a required
+   separately checking "is it _environmental_." Fixed by adding a required
    `is_environmental_claim: bool` field to the response schema plus a
    deterministic backstop that forces `NO_MATCH` if the model contradicts
    itself. Validated on the 3 known-failing ads; full 28-ad re-measurement
@@ -117,6 +117,7 @@ the canonical names used in the commands above.
 ## Checklist — next steps & goals
 
 **Validate against the real gold set**
+
 - [ ] Write the `src/evaluate.py` that doesn't exist yet: span-level P/R/F1 +
       category accuracy, scoring `src/extraction.py`'s predictions against
       `golden/golden_set_coop_ucpd_250_combined.json`'s `extracted_claims`
@@ -129,6 +130,7 @@ the canonical names used in the commands above.
       diagnose → fix → re-measure loop as the two fixes above.
 
 **Retrieval/rerank pipeline**
+
 - [ ] Re-run the full 28-ad rerank eval with the `is_environmental_claim` fix
       (only validated on 3 ads so far) to get a clean before/after number.
 - [ ] Decide whether to broaden `rerank_matches.py`'s prompt to full UCPD
@@ -141,12 +143,14 @@ the canonical names used in the commands above.
       error.
 
 **Distillation goal**
+
 - [ ] Once `src/extraction.py` (or the rerank pipeline) clears an acceptable
       bar on the golden set, run it over the full unlabeled `data/raw/`
       corpus to generate the actual distillation training set. Keep the
       golden set held out as the scorecard — don't train on it directly.
 
 **Repo hygiene / open decisions**
+
 - [ ] Resolve the single-label-vs-multi-label decision flagged in
       `src/categorize.py`'s docstring before building any annotation schema
       around it.

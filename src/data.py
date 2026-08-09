@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from typing import List, Tuple
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "raw"
 
@@ -29,5 +30,5 @@ def iter_descriptions(filename: str):
         yield i, record["description"]
 
 
-def load_descriptions(filename: str) -> list[tuple[int, str]]:
+def load_descriptions(filename: str) -> List[Tuple[int, str]]:
     return list(iter_descriptions(filename))

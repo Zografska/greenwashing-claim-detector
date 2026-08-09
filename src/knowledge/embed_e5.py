@@ -46,11 +46,12 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from typing import List
 
 import numpy as np
 
 
-def load_chunks(input_path: Path) -> list[dict]:
+def load_chunks(input_path: Path) -> List[dict]:
     with open(input_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -66,12 +67,12 @@ def load_chunks(input_path: Path) -> list[dict]:
     return data
 
 
-def add_e5_prefix(texts: list[str], mode: str) -> list[str]:
+def add_e5_prefix(texts: List[str], mode: str) -> List[str]:
     prefix = "query: " if mode == "query" else "passage: "
     return [prefix + t for t in texts]
 
 
-def embed(model_name: str, texts: list[str], batch_size: int) -> np.ndarray:
+def embed(model_name: str, texts: List[str], batch_size: int) -> np.ndarray:
     from sentence_transformers import SentenceTransformer
 
     print(f"Loading model '{model_name}' ...")

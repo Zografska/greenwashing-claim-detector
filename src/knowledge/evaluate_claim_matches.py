@@ -48,6 +48,7 @@ Usage:
 import argparse
 import json
 from pathlib import Path
+from typing import List
 
 SCRIPT_DIR = Path(__file__).parent
 
@@ -57,7 +58,7 @@ def load(path: Path):
         return json.load(f)
 
 
-def _flaggable_claims(gold_records: list[dict]) -> list[dict]:
+def _flaggable_claims(gold_records: List[dict]) -> List[dict]:
     """Every scoreable (product, claim) pair, flattened, tagged with its
     product's ean/name for reporting. Excludes LOW-risk and no-chunk claims
     (irrelevant_claim, or an unrecognized category -- see legal_mapping.py)."""
@@ -70,7 +71,7 @@ def _flaggable_claims(gold_records: list[dict]) -> list[dict]:
     return out
 
 
-def score_claims(matches_by_ad: dict, claims: list[dict], ks: list[int]) -> dict:
+def score_claims(matches_by_ad: dict, claims: List[dict], ks: List[int]) -> dict:
     """Hit@k for every k in `ks`, computed from each claim's ad's existing
     top_matches list (already ranked) -- no need to rerun retrieval per k.
     Returns {"n": int, "no_prediction": int, "hits": {k: int, ...}}, so
@@ -89,11 +90,11 @@ def score_claims(matches_by_ad: dict, claims: list[dict], ks: list[int]) -> dict
     return {"n": len(claims), "no_prediction": no_prediction, "hits": hits}
 
 
-def evaluate_retrieval(matches_by_ad: dict, claims: list[dict], k: int) -> dict:
+def evaluate_retrieval(matches_by_ad: dict, claims: List[dict], k: int) -> dict:
     high_conf = [c for c in claims if c["legal_mapping_confidence"] != "low"]
     low_conf = [c for c in claims if c["legal_mapping_confidence"] == "low"]
 
-    def score_and_print(subset: list[dict], label: str) -> dict:
+    def score_and_print(subset: List[dict], label: str) -> dict:
         result = score_claims(matches_by_ad, subset, [1, k])
         n = result["n"]
         print(f"\n=== {label}: {n} claims ===")
@@ -109,7 +110,7 @@ def evaluate_retrieval(matches_by_ad: dict, claims: list[dict], k: int) -> dict:
     return {"high_confidence": high_conf_result, "low_confidence": low_conf_result}
 
 
-def score_rerank(matches_by_ad: dict, gold_records: list[dict]) -> dict:
+def score_rerank(matches_by_ad: dict, gold_records: List[dict]) -> dict:
     """Ad-level rerank scoring: is the single predicted legal_chunk_id a member
     of the SET of that ad's gold chunk ids (best-case credit, since
     rerank_matches.py returns only one verdict per ad)? Returns
@@ -141,7 +142,7 @@ def score_rerank(matches_by_ad: dict, gold_records: list[dict]) -> dict:
     return {"correct": correct, "total": total, "ceiling_cases": ceiling_cases}
 
 
-def evaluate_rerank(matches_by_ad: dict, gold_records: list[dict]) -> dict:
+def evaluate_rerank(matches_by_ad: dict, gold_records: List[dict]) -> dict:
     result = score_rerank(matches_by_ad, gold_records)
     correct, total, ceiling_cases = result["correct"], result["total"], result["ceiling_cases"]
 

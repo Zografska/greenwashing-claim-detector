@@ -31,8 +31,8 @@ Records with an empty description are skipped, same as src/data.py's
 iter_records.
 
 Usage:
-  python prepare_ads_chunks.py --file 06.25.json --out ads_chunks.json
-  python embed_e5.py --input ads_chunks.json --output-dir ./embeddings --mode query
+  python3 prepare_ads_chunks.py --file 06.25.json --out ads_chunks.json
+  python3 embed_e5.py --input ads_chunks.json --output-dir ./embeddings --mode query
 """
 
 import argparse
@@ -40,8 +40,9 @@ import json
 import re
 import sys
 from pathlib import Path
+from typing import List
 
-PROJECT_ROOT = Path(__file__).parent.parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
@@ -60,7 +61,7 @@ def _title_from_url(url: str, ean: str) -> str:
     return name.capitalize() if name else ean
 
 
-def build_chunks(filename: str) -> list[dict]:
+def build_chunks(filename: str) -> List[dict]:
     path = DATA_DIR / filename
     if not path.exists():
         raise FileNotFoundError(f"No file found at {path}")

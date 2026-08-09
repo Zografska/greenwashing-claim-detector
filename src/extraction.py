@@ -15,19 +15,49 @@ import json
 import time
 from pathlib import Path
 import re
+from typing import Dict, List, Optional, Tuple
 
 import httpx
 
 from .data import load_descriptions, iter_records
 
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
+OLLAMA_URL = "http://localhost:4639/api/generate"
 
 # --- JSON Schema for Ollama's grammar-constrained decoding ---------------
-# Categories below are UCPD's actual legal hooks, not ECGT's vocabulary --
-# "offset_based_neutrality" and "fake_or_unverified_label" are ECGT-specific
-# concepts (about *environmental* claim substantiation) that don't have a
-# direct UCPD equivalent, so they're replaced rather than relabeled.
+# `category` values are lifted verbatim from golden/canonical/<retailer>.json
+# -- the same 11-way taxonomy the golden set's extracted_claims use -- so
+# extraction output and gold labels are directly comparable without a
+# relabeling step. This replaces an earlier hand-designed 6-way UCPD split
+# (NUTRITION_HEALTH_CLAIM/ORIGIN_PROVENANCE_CLAIM/etc.) that didn't match
+# the golden set at all.
+#
+# `ucpd_category` (the separate misleading_action/misleading_omission/
+# blacklisted_practice/aggressive_practice/none legal-hook axis) is dropped
+# entirely, not just relabeled: golden/canonical/*.json's own ucpd_category
+# field is always null (that legal-hook mapping is done downstream by
+# src/adapters/legal_mapping.py, not at extraction time), so asking a small
+# model to hit two independent enums plus risk_level in one pass was pure
+# added failure surface for a field nothing consumes.
+#
+# Pulled into its own named constant (rather than inlined only in
+# RESPONSE_SCHEMA) so src/dissected_extraction.py's per-clause classifier can
+# import the exact same 11 values instead of hand-copying them into a second
+# place they could quietly drift out of sync with.
+CLAIM_CATEGORIES = [
+    "unsubstantiated_health_or_efficacy_claim",
+    "nutrition_content_claim",
+    "misleading_composition_or_ingredient_claim",
+    "misleading_authenticity_or_origin_claim",
+    "misleading_superiority_or_absolute_claim",
+    "unfair_comparison",
+    "misleading_endorsement_claim",
+    "fake_or_unverified_label",
+    "environmental_unsubstantiated",
+    "offset_based_neutrality",
+    "irrelevant_claim",
+]
+
 RESPONSE_SCHEMA = {
     "type": "object",
     "properties": {
@@ -37,34 +67,13 @@ RESPONSE_SCHEMA = {
                 "type": "object",
                 "properties": {
                     "claim_text": {"type": "string"},
-                    "category": {
-                        "type": "string",
-                        "enum": [
-                            "NUTRITION_HEALTH_CLAIM",
-                            "ORIGIN_PROVENANCE_CLAIM",
-                            "COMPOSITION_CLAIM",
-                            "PRICE_VALUE_CLAIM",
-                            "ENVIRONMENTAL_CLAIM",
-                            "SAFETY_INSTRUCTION_CLAIM",
-                        ],
-                    },
-                    "ucpd_category": {
-                        "type": "string",
-                        "enum": [
-                            "misleading_action",
-                            "misleading_omission",
-                            "blacklisted_practice",
-                            "aggressive_practice",
-                            "none",
-                        ],
-                    },
+                    "category": {"type": "string", "enum": CLAIM_CATEGORIES},
                     "risk_level": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
                     "risk_rationale": {"type": "string"},
                 },
                 "required": [
                     "claim_text",
                     "category",
-                    "ucpd_category",
                     "risk_level",
                     "risk_rationale",
                 ],
@@ -80,63 +89,217 @@ SCHEMA = {
     "claims": [
         {
             "claim_text": "exact text as found in description",
-            "category": "NUTRITION_HEALTH_CLAIM | ORIGIN_PROVENANCE_CLAIM | COMPOSITION_CLAIM | PRICE_VALUE_CLAIM | ENVIRONMENTAL_CLAIM | SAFETY_INSTRUCTION_CLAIM",
-            "ucpd_category": "misleading_action | misleading_omission | blacklisted_practice | aggressive_practice | none",
+            "category": " | ".join(CLAIM_CATEGORIES),
             "risk_level": "HIGH | MEDIUM | LOW",
             "risk_rationale": "specific reason this risk level applies",
         }
     ]
 }
 
-# --- System prompt: UCPD scope -------------------------------------------
-# Category/risk definitions spelled out for the model. Same verbatim-copy
-# and scope rules as before, carried over since they fixed real bugs
-# (mistranslation, multi-line concatenation) unrelated to which directive
-# is being applied.
+# --- System prompt: UCPD scope, golden-set-aligned category taxonomy ----
 SYSTEM_PROMPT = """You are an EU consumer law analyst (UCPD, Dir. 2005/29/EC). Extract
 unfair claims from this Italian product description.
 
-ucpd_category:
-- misleading_action: a false or unverifiable factual claim about composition,
-  origin, or health/nutrition, stated as if proven (Art. 6).
-- misleading_omission: hides info the consumer needs, or downplays/contradicts
-  an official safety or storage instruction (Art. 7).
-- blacklisted_practice: claims a certification, status, or health benefit the
-  product does not actually have evidence for (Annex I).
-- aggressive_practice: specifically recommends the product to, or targets,
-  a vulnerable group (children, elderly, pregnant, immunocompromised) in a
-  way connected to a real risk for that group -- not just any mention of them.
-- none: not a legal claim at all (recipe tips, taste description, brand slogans).
+category (pick exactly one per claim). Descriptions below are deliberately
+abstract, with NO quoted Italian example phrases -- any concrete phrase
+written here would just be copied into your output verbatim on a thin
+product, which has happened before. Apply the definition to what THIS
+product's own text actually says, never to a phrase that merely resembles
+a definition:
+- unsubstantiated_health_or_efficacy_claim: a health, wellness, or efficacy
+  benefit claim about the product, not stated in EU-authorized regulatory
+  wording.
+- nutrition_content_claim: a nutrient-content claim tied to a fixed legal
+  compositional threshold (fibre, vitamin, mineral, calorie content, etc.)
+  -- whether the product actually clears that threshold isn't visible from
+  ad text alone.
+- misleading_composition_or_ingredient_claim: an OPTIONAL (not legally
+  required) factual statement about what is or isn't among the product's
+  ingredients or additives. Optional and checkable, not mandatory labeling.
+- misleading_authenticity_or_origin_claim: a claim about geographic origin,
+  heritage, tradition, a founding date, or "made in" provenance.
+- misleading_superiority_or_absolute_claim: absolute or superiority language
+  about the product with no stated comparator or metric.
+- unfair_comparison: a comparison against another product or an unstated,
+  vague baseline.
+- misleading_endorsement_claim: a named third-party body, institute, or
+  professional group endorsing or approving the product.
+- fake_or_unverified_label: a trust-mark, cause-marketing, or social/
+  charitable-impact claim whose backing can't be confirmed from the text.
+- environmental_unsubstantiated: a general or vague environmental-benefit
+  claim about packaging, emissions, recyclability, or resource use that is
+  NOT an offset-based carbon-neutrality claim (see next).
+- offset_based_neutrality: specifically a carbon-neutral or net-zero claim
+  based on offsetting emissions. Always HIGH risk -- this is blacklisted per
+  se (Annex I, via Dir. 2024/825) regardless of whether the underlying
+  offset is real.
+- irrelevant_claim: a real, specific, checkable statement that turns out to
+  be a mandatory legal disclosure, EU-authorized wording used correctly, or
+  a trivial non-actionable fact. This is NOT the same as "not a claim" --
+  see the puffery rule below for that case.
 
-category: NUTRITION_HEALTH_CLAIM | ORIGIN_PROVENANCE_CLAIM | COMPOSITION_CLAIM
-| PRICE_VALUE_CLAIM | ENVIRONMENTAL_CLAIM | SAFETY_INSTRUCTION_CLAIM
+Disambiguation rule -- classify each clause on ITS OWN subject matter, never
+by what it sits next to in the same sentence. A statement about what IS or
+ISN'T in the product (ingredients, additives, allergens) is always
+misleading_composition_or_ingredient_claim, even beside an environmental
+claim in the same sentence. environmental_unsubstantiated is ONLY for
+packaging, emissions, recyclability, or resource-use language -- never for
+what's in the product itself.
 
-risk_level: HIGH = directly contradicted by, or unverifiable against, the
-product's own stated facts. MEDIUM = plausible but no evidence given either
-way. LOW = factual, or backed by a real EU certification -- skip these,
-do not output them at all.
+Chemistry rule -- judge health/efficacy claims on checkability and
+authorization, never on whether you believe the underlying chemistry is
+real. An ingredient genuinely having a real chemical property is still
+unsubstantiated_health_or_efficacy_claim if that property isn't asserted in
+EU-authorized wording: the EU botanicals health-claims list has been on hold
+since 2010, so the gap is authorization, not evidence. Do not use outside
+scientific knowledge to excuse a claim.
 
-EXAMPLE (for format only, not content to copy):
-claim_text: "è tra i pochi formaggi magri"
-category: NUTRITION_HEALTH_CLAIM | ucpd_category: misleading_action | risk_level: HIGH
-risk_rationale: "Calls a high-fat cheese low-fat; contradicts its own nutrition values."
+Puffery rule -- subjective marketing language with nothing checkable (vague
+taste/experience description, a brand slogan with no factual content) is
+not a claim at all: do not add a claims entry for it, even though it may
+sit right next to a real claim in the same sentence. Only use irrelevant_claim
+for a real, specific, checkable statement that happens to be mandatory/
+authorized/trivial -- never as a bucket for vague sentiment.
+
+Sparse-input rule -- claim_text must be a sentence that literally appears in
+the PRODUCT DESCRIPTION text below, never the PRODUCT NAME or MARKETING
+BADGE line (those are metadata, not marketing copy). A description that is
+short, or contains only recipe/usage instructions, dietary-lifestyle labels
+(vegan, gluten-free, lactose-free), or nothing else -- has NO claims. A
+product with zero claims is a normal, common, correct result. Do not invent
+a claim to avoid returning an empty array.
+
+risk_level: HIGH = directly contradicted by, or blacklisted regardless of,
+the product's own stated facts. MEDIUM = a real, checkable benefit is
+asserted but the ad gives no specific data, mechanism, or certification for
+THAT exact claim. LOW = trivially true, or backed by a real, specifically-
+named certification/EU-authorized wording for THAT exact claim.
+
+Certification scope rule -- a certification only lowers risk for the SPECIFIC
+claim it names (e.g. a named packaging-certification body backs only the
+packaging claim it certifies). A certification mentioned anywhere in the ad
+never justifies LOW for a *different*, unrelated claim in the same product
+just because a certification exists somewhere in the text.
+
+MEDIUM-by-default rule -- applies to EVERY category except nutrition_content_claim
+(that one has fixed NHCR legal thresholds to fall back on, so it stays LOW
+even unverified -- the category itself is legally bounded and low-severity;
+no other category gets this exception). For every other category:
+"I can't find a contradiction" is NEVER sufficient grounds for LOW. An
+asserted-but-unbacked benefit, heritage claim, superiority claim, or
+efficacy claim defaults to MEDIUM regardless of how plausible or
+uncontroversial it sounds -- this includes authenticity/origin claims,
+absolute-superiority claims, and unbacked environmental or health
+assertions, not just the categories shown in the example below. Reserve
+LOW only for a claim you can point to REAL backing
+for: an EU-authorized phrase used correctly, or that exact claim's own
+named certification. Being unable to disprove a claim is not backing.
+
+Emit every claim you find at every risk_level, including LOW -- do not
+silently drop LOW-risk claims; filtering happens downstream, not here.
+
+EXAMPLE (JSON STRUCTURE ONLY. Every claim_text/risk_rationale below is a
+PLACEHOLDER in angle brackets, not real content -- there is no real product
+behind this example. NEVER copy any text from this example into a real
+answer: your claim_text must always be a verbatim sentence you can point to
+in THIS product's own PRODUCT DESCRIPTION, never text that merely resembles
+this example's shape):
+{"claims": [
+  {"claim_text": "<verbatim sentence from the product asserting an unbacked health/efficacy benefit>", "category": "unsubstantiated_health_or_efficacy_claim", "risk_level": "MEDIUM", "risk_rationale": "<specific reason: what's asserted, why it's unbacked>"},
+  {"claim_text": "<verbatim sentence from the product using a fixed-threshold nutrient wording>", "category": "nutrition_content_claim", "risk_level": "LOW", "risk_rationale": "<specific reason: legally bounded category, threshold unverified from text>"},
+  {"claim_text": "<verbatim sentence from the product about heritage, tradition, or origin>", "category": "misleading_authenticity_or_origin_claim", "risk_level": "MEDIUM", "risk_rationale": "<specific reason: unbacked heritage/origin assertion>"},
+  {"claim_text": "<verbatim sentence from the product about a carbon-offset or net-zero claim>", "category": "offset_based_neutrality", "risk_level": "HIGH", "risk_rationale": "<specific reason: blacklisted per se regardless of truth>"}
+]}
 
 Rules:
-- claim_text: copy exactly from the input. Never translate or paraphrase it.
+- claim_text: copy exactly from the PRODUCT DESCRIPTION section only.
+  NEVER from the CANDIDATE LEGAL CONTEXT section, even partially. That
+  section is statute text (Annex I / Art. 6 / Art. 7 wording) fed to you as
+  background reference -- it is never something the product itself said.
+  If a sentence you're about to use as claim_text sounds like a legal
+  definition or statute (formal, third-person, describing a general
+  practice rather than this specific product) rather than marketing copy,
+  you have the wrong source -- go back and find the actual product sentence,
+  or drop the claim if there isn't one. Never translate or paraphrase
+  claim_text either.
 - risk_rationale: your own short, specific reason for THIS claim (max 15
   words). Never repeat these category definitions or instructions back as
   the rationale.
-- Only use aggressive_practice if the text actually connects the product to
-  a vulnerable group's risk -- not for unrelated convenience claims like
-  pre-sliced packaging.
-- Skip recipes, serving suggestions, taste description, brand slogans.
-- No claims found -> empty array. Never invent a claim not in the text.
-- If a CANDIDATE LEGAL CONTEXT section is present: it was retrieved by
-  embedding similarity, not verified -- treat it as reference material that
-  may help sharpen a risk_rationale, never as confirmation that a claim
-  exists or which category/risk_level it gets. Some or all listed passages
-  may be irrelevant to this specific product; do not force a claim to match
-  one just because it was retrieved."""
+- Skip recipes, serving suggestions, and pure taste/sentiment description --
+  see the puffery rule above. A sentence giving USAGE instructions (how/where
+  to use the product) is not a health or efficacy claim, even if it mentions
+  a benefit in passing -- if the sentence is telling the consumer what to DO
+  with the product rather than asserting something the product itself
+  possesses, it is not a claim.
+- Be EXHAUSTIVE, not just correct: most real products with any marketing
+  copy at all have MULTIPLE distinct claims, often 4-10, each about a
+  different subject (origin, composition, health, environment...). Read
+  every sentence in PRODUCT DESCRIPTION on its own. Finding one clear claim
+  and stopping there is wrong if other sentences also assert something
+  checkable -- go through the ENTIRE description, not just the first or
+  most obvious claim. Missing a real claim is a worse error than including
+  one you're only moderately confident about (that's what risk_level is
+  for -- MEDIUM exists precisely for claims you're not fully certain of).
+- No claims found -> empty array. Never invent a claim not in the text. But
+  do not default to a single claim either -- verify you checked every
+  sentence before deciding you're done.
+- If a CANDIDATE LEGAL CONTEXT section is present: whether it's a retrieved
+  shortlist or the full legal corpus, none of it is verified against this
+  specific product -- treat it as reference material that may help sharpen
+  a risk_rationale, never as confirmation that a claim exists, which
+  category/risk_level it gets, or (see above) as a source for claim_text
+  itself. Some or all listed passages may be irrelevant to this specific
+  product; do not force a claim to match one just because it's listed."""
+
+# Reasoning-model variant: same rules verbatim (built as a targeted .replace()
+# on SYSTEM_PROMPT, not a copy, so category/rule edits never have to be made
+# twice), rebalanced for a model that deliberates explicitly over each
+# instruction (e.g. in a <think> trace) rather than pattern-matching.
+#
+# Motivating measurement: deepseek-r1:70b + full-grounding on the 20-product
+# sample scored the best category accuracy (0.71) and zero false positives
+# of any variant tried (plain 3b/70b, dissected, full-grounding 3b/70b), but
+# recall collapsed to 0.14 -- worse than plain llama3.2:3b's 0.22. SYSTEM_PROMPT
+# above states roughly eight distinct exclusionary rules (categories'-own
+# scope limits, disambiguation, chemistry, puffery, sparse-input,
+# certification-scope, MEDIUM-default, skip-recipes) against a single
+# exhaustiveness bullet stated once near the end of Rules. A model that
+# explicitly weighs every instruction in a reasoning trace may weight that
+# lopsidedly toward exclusion in a way a smaller, less deliberative model
+# doesn't. UNVERIFIED as the actual cause -- an ungrounded deepseek run was
+# queued to isolate this from full-grounding's separate, also-plausible
+# severity-anchoring effect (real statute text in the prompt raising the
+# model's bar for what counts as a claim) before this variant was written;
+# check that result before assuming this fixes anything rather than treating
+# a different symptom of the same bug.
+_REASONING_PREAMBLE = (
+    "REASONING-MODEL NOTE: work through every sentence in PRODUCT DESCRIPTION "
+    "independently before applying any rule below. When deliberating whether "
+    "a borderline sentence qualifies as a claim, DEFAULT TO INCLUDING IT at "
+    "the appropriate risk_level rather than excluding it -- risk_level, not "
+    "the claims list, is where uncertainty belongs. An empty or very short "
+    "claims list is only correct when the text truly contains no checkable "
+    "claims at all; do not let the exclusion rules below add up into a "
+    "stricter bar than intended.\n\n"
+)
+
+_LEGAL_CONTEXT_SEVERITY_NOTE = (
+    " A claim does not need to match the severity, formality, or specific "
+    "wording of any CANDIDATE LEGAL CONTEXT passage to qualify -- the "
+    "category definitions above are the only test that matters. Seeing "
+    "formal statute language in this prompt is not a reason to raise your "
+    "bar for what counts as a claim."
+)
+
+SYSTEM_PROMPT_REASONING = SYSTEM_PROMPT.replace(
+    "category (pick exactly one per claim).",
+    _REASONING_PREAMBLE + "category (pick exactly one per claim).",
+    1,
+).replace(
+    "product; do not force a claim to match one just because it's listed.",
+    "product; do not force a claim to match one just because it's listed." + _LEGAL_CONTEXT_SEVERITY_NOTE,
+    1,
+)
 
 # --- Pre-filter: cut description down to claim-adjacent fragments before --
 # it ever reaches the model. On local Ollama, prefill time scales with
@@ -232,7 +395,7 @@ def _is_mandatory_disclosure(fragment: str) -> bool:
     return any(p.search(fragment) for p in _MANDATORY_DISCLOSURE_PATTERNS)
 
 
-def _split_claim_sentences(description: str) -> list[str]:
+def _split_claim_sentences(description: str) -> List[str]:
     """Split into sentence-ish fragments and keep only the ones mentioning
     claim-adjacent terms (nutrition, origin, composition, price/value,
     environmental, safety instructions -- the full UCPD scope, not just
@@ -288,35 +451,77 @@ MAX_GROUNDING_WORDS = 1400  # covers ~90th percentile of observed real top-7
                             # grounding sets without sizing num_ctx to the
                             # rare ~2000-word worst case.
 
+# Full-corpus grounding: instead of top-7 embedding retrieval (measured
+# Hit@7 ~37%/~16%, see the comment block above), attach the ENTIRE legal
+# corpus every time, removing retrieval error from the picture at the cost
+# of a much bigger prompt. Only feasible because the corpus is small:
+# src/knowledge/chunks/ecgt.json + ucpd.json = 56 chunks / 4010 words total
+# (measured directly, not estimated) -- same "just include everything,
+# retrieval is unreliable" logic src/knowledge/rerank_matches.py already
+# uses (--top-k 56, the full corpus, as reranker candidates). Loaded once
+# and cached at module scope since the corpus is identical for every call.
+LEGAL_CHUNKS_DIR = Path(__file__).parent / "knowledge" / "chunks"
+_FULL_LEGAL_CORPUS: Optional[List[dict]] = None
 
-def _format_grounding(chunks: list[dict]) -> str:
+
+def _load_full_legal_corpus() -> List[dict]:
+    global _FULL_LEGAL_CORPUS
+    if _FULL_LEGAL_CORPUS is None:
+        chunks = []
+        for name in ("ecgt.json", "ucpd.json"):
+            with open(LEGAL_CHUNKS_DIR / name, encoding="utf-8") as f:
+                chunks.extend(json.load(f))
+        _FULL_LEGAL_CORPUS = [
+            {"legal_chunk_id": c["id"], "legal_title": c["title"], "legal_text": c["text"]}
+            for c in chunks
+        ]
+    return _FULL_LEGAL_CORPUS
+
+
+def _format_grounding(chunks: List[dict], max_words: Optional[int] = MAX_GROUNDING_WORDS) -> str:
     """chunks: compare_e5.py top_matches shape (each with legal_chunk_id,
-    legal_title, legal_text), already ranked best-first. Truncates from the
-    end (lowest-ranked first) if the combined word count exceeds
-    MAX_GROUNDING_WORDS."""
-    kept = []
-    total_words = 0
-    for chunk in chunks:
-        words = len((chunk.get("legal_text") or "").split())
-        if kept and total_words + words > MAX_GROUNDING_WORDS:
-            break
-        kept.append(chunk)
-        total_words += words
+    legal_title, legal_text). For retrieval grounding, already ranked
+    best-first, and truncated from the end (lowest-ranked first) if the
+    combined word count exceeds max_words. Pass max_words=None (full-corpus
+    grounding) to keep every chunk regardless of length -- there is no
+    "lowest-ranked" ordering to truncate by since nothing was ranked."""
+    if max_words is None:
+        kept = chunks
+    else:
+        kept = []
+        total_words = 0
+        for chunk in chunks:
+            words = len((chunk.get("legal_text") or "").split())
+            if kept and total_words + words > max_words:
+                break
+            kept.append(chunk)
+            total_words += words
 
     entries = "\n\n".join(
         f"[{c['legal_chunk_id']}] {c['legal_title']}\n{c['legal_text']}" for c in kept
     )
-    return f"""CANDIDATE LEGAL CONTEXT (retrieved by embedding similarity, NOT verified --
+    source_note = (
+        "the full legal corpus, NOT pre-filtered for relevance"
+        if max_words is None
+        else "retrieved by embedding similarity, NOT verified"
+    )
+    return f"""CANDIDATE LEGAL CONTEXT ({source_note} --
 some or all of these may be irrelevant to this specific product; use your own
 judgment about which, if any, actually apply):
 {entries}"""
 
 
-def _build_user_prompt(product: dict, description: str, grounding_chunks: list[dict] | None = None) -> str:
+def _build_user_prompt(
+    product: dict, description: str, grounding_chunks: Optional[List[dict]] = None,
+    full_grounding: bool = False,
+) -> str:
     filtered = _prefilter_description(description)
     # Only inserted when grounding_chunks is given, so the no-grounding
     # prompt is byte-identical to every prior run (no stray blank line).
-    grounding_section = f"\n\n{_format_grounding(grounding_chunks)}\n" if grounding_chunks else ""
+    max_words = None if full_grounding else MAX_GROUNDING_WORDS
+    grounding_section = (
+        f"\n\n{_format_grounding(grounding_chunks, max_words=max_words)}\n" if grounding_chunks else ""
+    )
     return f"""Analyze the following Italian food product and extract all claims that
 may be unfair under the EU Unfair Commercial Practices Directive (UCPD).
 
@@ -326,8 +531,7 @@ MARKETING BADGE: {product.get("marketing_badge", "none")}
 PRODUCT DESCRIPTION (pre-filtered for claim-relevant content):
 {filtered or "No description available"}{grounding_section}
 
-Extract claims across all in-scope categories: nutrition/health, origin,
-composition, price/value, environmental, and safety-instruction claims."""
+Extract every claim covered by the category list in the system prompt."""
 
 
 def _repair_misplaced_commas(raw: str) -> str:
@@ -355,28 +559,36 @@ def _repair_misplaced_commas(raw: str) -> str:
     return re.sub(r'(["\d\}\]])\s*\n\s*,\s*\n', r'\1,\n', raw)
 
 
-USE_SCHEMA_GRAMMAR = True  # flip to False to A/B test speed: grammar-
-                           # constrained decoding (the JSON Schema passed to
-                           # `format`) is what fixed the enum-leak bug from
-                           # earlier (model echoing "A | B | C" back as a
-                           # literal value), but constrained decoding has a
+USE_SCHEMA_GRAMMAR_DEFAULT = True  # default for the --use-schema-grammar
+                           # CLI flag / extract_claims(use_schema_grammar=)
+                           # param. Grammar-constrained decoding (the JSON
+                           # Schema passed to `format`) is what fixed the
+                           # enum-leak bug from earlier (model echoing
+                           # "A | B | C" back as a literal value), but has a
                            # real, well-documented generation-speed cost --
                            # often 2-5x slower per token, scaling with how
-                           # branchy the grammar is. A 6-way x 5-way x 3-way
-                           # nested enum schema is non-trivial as grammars go.
-                           # Given the 94.7s/~1000-token result (~10 tok/s,
-                           # slow for a 3B model on 100% GPU), this is the
-                           # most likely cause of the slowdown, more so than
-                           # prompt length at this point. Set this to False
-                           # to fall back to loose "format": "json" mode and
-                           # see if speed recovers -- if it does, you're
-                           # trading the enum-leak protection for speed, and
-                           # that's a real decision to make deliberately
-                           # rather than something to default silently.
+                           # branchy the grammar is. An 11-way category enum
+                           # is non-trivial as grammars go. Also a live
+                           # suspect (untested as of this comment) in
+                           # llama3.3:70b's under-extraction pattern: it
+                           # converges on ~1-2 claims per product regardless
+                           # of temperature (identical output at temperature
+                           # 0 and 0.2 across 8 sample products), which rules
+                           # out sampling randomness -- the grammar's forced
+                           # choice at each "add another claim vs. close the
+                           # array" boundary is the other real lever nothing
+                           # has isolated yet. Exposed as a parameter, not a
+                           # hardcoded module constant, so it can be A/B
+                           # tested per model rather than guessed at, same
+                           # reasoning as the temperature parameter above.
 
 
 def extract_claims(
-    product: dict, description: str, model: str = "llama3.2", grounding_chunks: list[dict] | None = None
+    product: dict, description: str, model: str = "llama3.2", grounding_chunks: Optional[List[dict]] = None,
+    temperature: float = 0, use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT,
+    full_grounding: bool = False,
+    num_predict_override: Optional[int] = None, num_ctx_override: Optional[int] = None,
+    reasoning_model: bool = False,
 ) -> dict:
     """
     Extract greenwashing-relevant claims from a product description.
@@ -390,7 +602,38 @@ def extract_claims(
             see the comment above _format_grounding for why this is
             embedding-only, not LLM-reranked, and why it's capped by word
             count. None (the default) preserves the exact prompt/token
-            budget of every prior run.
+            budget of every prior run. Ignored when full_grounding=True.
+        full_grounding: attach the ENTIRE legal corpus (56 chunks, ecgt+ucpd)
+            instead of grounding_chunks -- see the comment above
+            _load_full_legal_corpus for why this is worth trying (small
+            corpus, retrieval measured unreliable). Overrides
+            grounding_chunks when True.
+        num_predict_override / num_ctx_override: replace the computed
+            num_predict/num_ctx tiers entirely when set. Every tier measured
+            so far (7000/9000/14000-15000) was sized against non-reasoning
+            models -- a reasoning model (e.g. deepseek-r1) generates a
+            <think> trace of UNKNOWN length before its JSON answer even
+            starts, so none of those budgets can be assumed to fit it.
+            Exposed as a raw override (not another named tier) so the actual
+            cost can be measured directly -- same "parameter, not a guess"
+            reasoning as temperature/use_schema_grammar above -- rather than
+            adding a guessed deepseek-specific constant.
+        reasoning_model: use SYSTEM_PROMPT_REASONING instead of SYSTEM_PROMPT
+            -- see the comment above that constant for why a model that
+            deliberates explicitly (e.g. a <think> trace) may need the
+            exhaustiveness instruction rebalanced against this prompt's many
+            exclusionary rules. Unvalidated as of this writing -- an A/B
+            lever, not a default to assume is correct.
+        temperature: 0 (default) is fully greedy -- picked to kill llama3.2's
+            run-to-run claim-count drift. Measured on a larger model
+            (llama3.3:70b) to have a DIFFERENT failure mode at temperature=0:
+            it converges on ~1-2 claims per product almost regardless of how
+            many real claims exist, which prose instructions telling it to
+            "be exhaustive" did not change -- consistent with greedy decoding
+            always taking the single highest-probability continuation
+            (closing the array early) rather than exploring further options.
+            Exposed as a parameter, not hardcoded, so this can be A/B tested
+            per model rather than guessed at.
 
     Returns:
         dict with a "claims" list, each entry matching SCHEMA
@@ -398,54 +641,100 @@ def extract_claims(
     # num_ctx must grow when grounding is attached -- a real top-7 grounding
     # block runs ~200-2000 words (median ~789), capped at MAX_GROUNDING_WORDS
     # (~1400 words =~ 1960 tokens at ~1.4 tok/word for Italian legal text).
-    # Baseline budget (unchanged, see below) is ~2610 tokens + ~590 headroom
-    # for the description = 3200. Grounded budget: same 2610 + ~1960 for the
-    # capped grounding block + the same ~590 description headroom =~ 5160,
-    # rounded up for margin -- measured against the actual corpus, not guessed.
-    num_ctx = 5500 if grounding_chunks else 3200
+    # SYSTEM_PROMPT itself was re-measured after the golden-set category
+    # rewrite (11-way taxonomy + disambiguation/chemistry/MEDIUM-default
+    # rules + an 8-claim worked example): ~1150 words / ~8800 chars, ~2000
+    # tokens -- roughly 3x the ~600 tok the PREVIOUS num_ctx sizing assumed.
+    # That gap, not num_predict, was the real cause of truncation reappearing
+    # on multi-claim records (e.g. "Integratore alimentare al mirtillo"):
+    # system(~2000) + schema(~190, measured from RESPONSE_SCHEMA's compact
+    # JSON) + user overhead(~60) + num_predict(3500) + grounding(~1960) +
+    # description headroom(~590) =~ 8300, already past the old 6000 ceiling
+    # -- Ollama truncates generation when num_ctx runs out, which looks
+    # identical to a num_predict truncation but isn't fixed by raising
+    # num_predict alone. Baseline (ungrounded) budget: same system+schema+
+    # overhead+num_predict+description =~ 6340, rounded up to 7000. Grounded:
+    # +1960 for the capped grounding block =~ 8300, rounded up to 9000 --
+    # real margin above the measured max, not just matching it.
+    #
+    # Full-corpus grounding budget: the formatted full-corpus block (56
+    # chunks incl. id/title lines) measures 4519 words =~ 6327 tokens at the
+    # same 1.4 tok/word estimate used above -- vs ~1960 for the capped top-7
+    # block, a difference of +4367. Same system+schema+overhead+num_predict+
+    # description base (~6340) + 6327 =~ 12667, rounded up to 14000 for real
+    # margin, not just matching it -- same rounding style as the two tiers
+    # above.
+    # Full-grounding num_predict: measured truncation on llama3.2:3b +
+    # full-grounding for "Biscotti al nesquik" even though num_ctx=14000 had
+    # ~5300 tokens of margin over that record's ~8546-token input (max across
+    # the 20-product sample was ~8672) -- i.e. num_ctx wasn't the bottleneck,
+    # the model was generating more/longer claims than the 3500 budget (sized
+    # for the ungrounded case) allows, plausibly because the full legal corpus
+    # gives it more categories/wording to match claims against. Raised to
+    # 5000, and num_ctx to 15000 alongside it (8672 input + 5000 predict + a
+    # buffer beyond both figures already includes RESPONSE_SCHEMA which sits
+    # outside the word-count estimate) -- real margin above both measured
+    # maxima, not just matching them.
+    if full_grounding:
+        num_ctx = 15000
+        num_predict = 5000
+        grounding_chunks = _load_full_legal_corpus()
+    else:
+        num_ctx = 9000 if grounding_chunks else 7000
+        num_predict = 3500
+    if num_ctx_override is not None:
+        num_ctx = num_ctx_override
+    if num_predict_override is not None:
+        num_predict = num_predict_override
+
+    # Repetition guard: measured on llama3.2:3b + full-grounding, "Biscotti al
+    # nesquik" got stuck emitting the exact same claim object (~277 chars/~69
+    # tokens: {"claim_text": "-50% di grassi saturi*...", "category":
+    # "nutrition_content_claim", "risk_level": "LOW", "risk_rationale": "The
+    # claim is tied to..."}) on an infinite loop for 19KB straight -- a
+    # degenerate-repetition failure (more likely at temperature=0/greedy
+    # decoding, and more likely with a long/complex context like the full
+    # legal corpus), NOT a token-budget problem: raising num_predict further
+    # just makes it repeat longer, it never actually helps. Ollama's default
+    # repeat_last_n=64 is LESS than one full ~69-token repeat cycle, so it
+    # can't even see back far enough to recognize the duplicate -- widened to
+    # 512 (~7 cycles of headroom) with a stronger repeat_penalty (default
+    # 1.1) so the model is actively pushed off a loop once several cycles in,
+    # instead of the penalty window sliding past it entirely. Only applied to
+    # full_grounding, where this was observed -- not touching the
+    # ungrounded/retrieval-grounded options, which haven't shown this failure.
+    options = {
+        "temperature": temperature,  # see the temperature arg's
+                               # docstring above -- 0 (the default)
+                               # was chosen to remove llama3.2's
+                               # run-to-run claim-count drift (4 vs 5,
+                               # 2 vs 4 claims etc.), but is suspected
+                               # to cause a DIFFERENT under-extraction
+                               # problem on larger models.
+        "num_predict": num_predict,  # 3500 was sized for the
+                               # ungrounded/retrieval-grounded case:
+                               # 20 claims at ~170 tok/claim + 30
+                               # wrapper overhead =~ 3430. Full-
+                               # grounding needs more -- see the
+                               # comment above this block.
+        "num_ctx": num_ctx,     # was 4000/6000 -- too small even for
+                                # num_predict=2500 once SYSTEM_PROMPT's
+                                # real size is counted; see the
+                                # comment above this function.
+    }
+    if full_grounding:
+        options["repeat_penalty"] = 1.3
+        options["repeat_last_n"] = 512
 
     response = httpx.post(
         OLLAMA_URL,
         json={
             "model": model,
-            "system": SYSTEM_PROMPT,
-            "prompt": _build_user_prompt(product, description, grounding_chunks),
+            "system": SYSTEM_PROMPT_REASONING if reasoning_model else SYSTEM_PROMPT,
+            "prompt": _build_user_prompt(product, description, grounding_chunks, full_grounding=full_grounding),
             "stream": False,
-            "format": RESPONSE_SCHEMA if USE_SCHEMA_GRAMMAR else "json",
-            "options": {
-                "temperature": 0,     # was 0.1 — fully greedy to remove the
-                                       # run-to-run claim-count drift seen
-                                       # earlier (4 vs 5, 2 vs 4 claims etc.)
-                "num_predict": 1750,   # was 1100, which truncated on a 3.1:8b
-                                       # run at the SAME record/claim as the
-                                       # 3.2:3b model did -- a strong signal
-                                       # this was a config ceiling, not a
-                                       # model-capability problem (a 3x larger
-                                       # model hit the identical wall). Root
-                                       # cause: 1100 was sized using a SHORT
-                                       # worked-example claim_text (~67
-                                       # tok/claim), but this dataset's actual
-                                       # marketing copy runs long, run-on
-                                       # sentences -- e.g. record 1's claim_text
-                                       # alone is 179 chars. Measured against
-                                       # a real long claim_text + a full
-                                       # 15-word rationale: ~120 tok/claim.
-                                       # Record 0 already produced 10 claims
-                                       # successfully; sizing to 14 claims at
-                                       # the worst-case per-claim cost
-                                       # (14 * 120 + 30 wrapper overhead =
-                                       # ~1700) gives real margin above the
-                                       # observed max, not just matching it.
-                "num_ctx": num_ctx,     # was 3200 flat. Must cover system prompt
-                                        # (~600 tok) + schema (~200) + user
-                                        # overhead (~60) + num_predict (1750)
-                                        # = ~2610, leaving ~590 tokens for the
-                                        # pre-filtered description text itself
-                                        # -- verified headroom, not a guess.
-                                        # 5500 when grounded -- see the comment
-                                        # above this function for the added
-                                        # ~1960-token grounding budget.
-            },
+            "format": RESPONSE_SCHEMA if use_schema_grammar else "json",
+            "options": options,
         },
         timeout=600,  # was 200. The real problem causing timeouts was call
                       # cost (prompt size + num_ctx + per-claim rationale
@@ -490,18 +779,28 @@ def extract_claims(
     # brace at all.
     looks_truncated = not raw.rstrip().endswith("}")
     hint = (
-        " (output does not end with a closing brace — truncated by "
-        "num_predict; raise it further, e.g. to 2000-2500, especially for "
-        "records likely to produce many claims)"
+        f" (output does not end with a closing brace — truncated by "
+        f"num_predict={num_predict}; raise it further, especially for "
+        f"records likely to produce many claims)"
         if looks_truncated else
         " (has a closing brace but still won't parse — inspect the Raw text "
         "below for the actual syntax break, since this isn't the truncation "
         "case)"
     )
-    raise ValueError(f"Model returned invalid JSON{hint}\n\nRaw: {raw[:500]}")
+    # Show head AND tail, not just the first 500 chars: for a truncation
+    # failure, the head is usually unremarkable (real-looking early claims) --
+    # what actually explains *why* it never closed is what the model was
+    # doing right at the cutoff (stuck repeating one phrase? still-legitimate
+    # but just numerous claims? copying CANDIDATE LEGAL CONTEXT text?), which
+    # only the tail shows.
+    snippet = (
+        raw if len(raw) <= 1000
+        else f"{raw[:500]}\n...[{len(raw) - 1000} chars omitted]...\n{raw[-500:]}"
+    )
+    raise ValueError(f"Model returned invalid JSON{hint}\n\nRaw ({len(raw)} chars): {snippet}")
 
 
-def _validate_claims(claims: list[dict]) -> tuple[list[dict], list[dict]]:
+def _validate_claims(claims: List[dict]) -> Tuple[List[dict], List[dict]]:
     """Drop rows with an empty claim_text (seen in a prior run: a placeholder
     row with "" and no real content), and drop LOW-risk claims.
 
@@ -516,15 +815,14 @@ def _validate_claims(claims: list[dict]) -> tuple[list[dict], list[dict]]:
     to reintroduce a verbatim check (see git history / _normalize_for_match)
     rather than trying to patch around it here.
 
-    The LOW-risk drop is a deterministic backstop for the "OUTPUT FILTER"
-    instruction in SYSTEM_PROMPT, which tells the model not to emit LOW-risk
-    claims at all. That instruction should cut most of the generation cost
-    (fewer claims -> fewer tokens -> faster runs), but it's a soft constraint:
-    the schema still allows risk_level="LOW" as a valid enum value, and local
-    models are inconsistent about honoring negative instructions like "don't
-    output X" under grammar-constrained decoding. This filter guarantees no
-    LOW-risk claim reaches `claims` regardless of whether the model actually
-    skipped generating it or generated it anyway.
+    The LOW-risk drop is deliberately a CODE filter, not a prompt instruction:
+    SYSTEM_PROMPT tells the model to emit every claim it finds, including
+    LOW-risk ones, and never to silently omit one -- otherwise a wrong "this
+    is LOW, skip it" judgment call vanishes with nothing to audit later (the
+    same reason golden/canonical/*.json tracks LOW-risk/irrelevant_claim rows
+    explicitly instead of dropping them at labeling time). Filtering happens
+    only here, downstream of generation, so every LOW-risk call the model
+    made is still visible in `dropped_claims` for review.
 
     Returns (valid, dropped) so both kinds of drops are still visible in the
     output instead of silently vanishing.
@@ -542,7 +840,7 @@ def _validate_claims(claims: list[dict]) -> tuple[list[dict], list[dict]]:
     return valid, dropped
 
 
-def _load_grounding_by_ean(matches_path: str) -> dict[str, list[dict]]:
+def _load_grounding_by_ean(matches_path: str) -> Dict[str, List[dict]]:
     """matches_path: a compare_e5.py output (matches.json shape), keyed by
     query_ad_id -- which src/knowledge/prepare_ads_chunks.py sets to the
     product's ean, same join key extract_from_file uses below."""
@@ -552,9 +850,17 @@ def _load_grounding_by_ean(matches_path: str) -> dict[str, list[dict]]:
 
 
 def extract_from_file(
-    filename: str, model: str = "llama3.2", matches_file: str | None = None
-) -> tuple[list[dict], list[dict]]:
+    filename: str, model: str = "llama3.2", matches_file: Optional[str] = None, temperature: float = 0,
+    use_schema_grammar: bool = USE_SCHEMA_GRAMMAR_DEFAULT, full_grounding: bool = False,
+    num_predict_override: Optional[int] = None, num_ctx_override: Optional[int] = None,
+    limit: Optional[int] = None, reasoning_model: bool = False,
+) -> Tuple[List[dict], List[dict]]:
     records = list(iter_records(filename))
+    if limit is not None:
+        records = records[:limit]  # cheap diagnostic runs (e.g. measuring a
+                                    # reasoning model's <think>-trace token
+                                    # cost) shouldn't require burning a full
+                                    # file's worth of calls first.
     total = len(records)
     results = []
     failed = []
@@ -576,6 +882,12 @@ def extract_from_file(
                 description=description,
                 model=model,
                 grounding_chunks=grounding_chunks,
+                temperature=temperature,
+                use_schema_grammar=use_schema_grammar,
+                full_grounding=full_grounding,
+                num_predict_override=num_predict_override,
+                num_ctx_override=num_ctx_override,
+                reasoning_model=reasoning_model,
             )
             elapsed = time.monotonic() - call_start
 
@@ -634,11 +946,60 @@ if __name__ == "__main__":
         "--matches", default=None,
         help="optional compare_e5.py output (matches.json shape) to inject as unlabeled legal "
         "grounding context, joined by ean -- see src/knowledge/tune_retrieval.py for the tuned "
-        "retrieval config this was measured against",
+        "retrieval config this was measured against. Ignored if --full-grounding is set.",
+    )
+    parser.add_argument(
+        "--full-grounding", action="store_true",
+        help="attach the ENTIRE legal corpus (56 chunks, src/knowledge/chunks/ecgt.json+ucpd.json, "
+        "~4500 formatted words) as grounding for every product, instead of --matches' per-product "
+        "top-7 embedding retrieval -- removes retrieval error at the cost of a much bigger prompt "
+        "(num_ctx=14000 vs 9000). Overrides --matches when both are given.",
+    )
+    parser.add_argument(
+        "--temperature", type=float, default=0,
+        help="0 (default) is fully greedy -- fixes llama3.2's run-to-run claim-count drift, but "
+        "measured to cause a larger model (llama3.3:70b) to converge on ~1-2 claims per product "
+        "almost regardless of ground truth. Try a small positive value (e.g. 0.2) on a larger "
+        "model if it's under-extracting at temperature=0.",
+    )
+    parser.add_argument(
+        "--no-schema-grammar", dest="use_schema_grammar", action="store_false",
+        help="disable grammar-constrained decoding (falls back to loose 'format': 'json'). "
+        "Default is grammar-constrained (protects against enum-leak, but has a real generation-"
+        "speed cost and is an untested suspect in llama3.3:70b's under-extraction pattern).",
+    )
+    parser.add_argument(
+        "--num-predict", type=int, default=None,
+        help="override the computed num_predict entirely. Every existing tier (3500/5000) was "
+        "sized against non-reasoning models -- a reasoning model (e.g. deepseek-r1) generates a "
+        "<think> trace of unknown length before its JSON answer starts, so measure this directly "
+        "with a generous value + --limit 1-3 before trusting any tier here.",
+    )
+    parser.add_argument(
+        "--num-ctx", type=int, default=None,
+        help="override the computed num_ctx entirely -- see --num-predict.",
+    )
+    parser.add_argument(
+        "--limit", type=int, default=None,
+        help="only process the first N records -- cheap for measuring a new model's actual token "
+        "cost before committing to a full run.",
+    )
+    parser.add_argument(
+        "--reasoning-model", action="store_true",
+        help="use SYSTEM_PROMPT_REASONING instead of SYSTEM_PROMPT -- rebalances the exhaustiveness "
+        "instruction against this prompt's ~8 exclusionary rules for a model that deliberates "
+        "explicitly (e.g. a <think> trace) rather than pattern-matching. Motivated by "
+        "deepseek-r1:70b's 0.71 category accuracy / 0 false positives but 0.14 recall on "
+        "full-grounding -- unvalidated as of this writing, an A/B lever not a proven fix.",
     )
     args = parser.parse_args()
 
-    results, failed = extract_from_file(args.file, model=args.model, matches_file=args.matches)
+    results, failed = extract_from_file(
+        args.file, model=args.model, matches_file=args.matches, temperature=args.temperature,
+        use_schema_grammar=args.use_schema_grammar, full_grounding=args.full_grounding,
+        num_predict_override=args.num_predict, num_ctx_override=args.num_ctx, limit=args.limit,
+        reasoning_model=args.reasoning_model,
+    )
 
     print(f"\nProcessed {len(results)} products")
     total_claims = sum(len(r["claims"]) for r in results)

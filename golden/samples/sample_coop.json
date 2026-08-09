@@ -1,77 +1,743 @@
 [
   {
-    "origin_file": "cura-persona",
-    "golden_bucket": "hard_yes",
-    "ean": "3600542487085",
-    "product_id": "599962",
-    "name": "Colorazione capelli permanente 5.3 castano dorato",
-    "brand": "Garnier",
-    "url": "https://www.coopshop.it/ebsn/api/products/599962",
+    "origin_file": "gastronomia-salumi-e-formaggi",
+    "golden_bucket": "hard_no",
+    "ean": "2012889000000",
+    "product_id": "414115",
+    "name": "Speck di montagna",
+    "brand": "SENFTER",
+    "url": "https://www.coopshop.it/ebsn/api/products/414115",
     "denomination": null,
-    "description": null,
-    "features": "Nuovo\n5.3 Castano dorato\nColorazione permanente\n3x Volte più luminosi***\n60% di Oli*\nCon Oli di Fiori di Origine Naturale\nMassima intensità del colore\n- Copre il 100% dei capelli bianchi\n- Colore intenso, che dura a lungo\n- Migliora la qualità visibile dei capelli***\n- Comfort ottimale del cuoio capelluto\nColorazione senza ammoniaca N°1 in Italia****\nSenza siliconi, formula vegana**\n*nella crema colorante\n**Nessun ingrediente o derivato di origine animale\n***test strumentali\n****Fonte IRI, Totale Italia Mass Market (Ipermercati+Supermercati+Libero Servizio Piccolo+Specialisti Casa Toilette+Discount), Colorazione Senza Ammoniaca, dati a volume da 13/07/2020 a 12/07/2021",
-    "producer_info": "ODS: Oil delivery system\nInfonde il colore intensamente all'interno della fibra capillare\nMassima intensità del colore\nDiffonde il colore in profondità nei capelli\n- Colore intenso e ricco di riflessi\n- Colore brillante che dura a lungo\n- Copertura 100% capelli bianchi\nMigliora la qualità visibile dei capelli***\n- Capelli più morbidi, leggeri e fino a 3 volte più luminosi***\n- Comfort ottimale del cuoio capelluto\nApplicazione ultra sensoriale\n- Crema vellutata che non cola\n- Delicata fragranza floreale\n***test strumentali\nSenza ammoniaca\nSenza siliconi\nVegana formula**\n**Nessun ingrediente o derivato di origine animale\nNuova preparazione più facile\n45% di plastica in meno\nRispetto al kit precedente\nStessa quantità di formula\nNuovo Rivelatore in crema all'interno del flacone applicatore\nTubetto Colorante\nNuovo Balsamo Luce&Seta senza siliconi",
+    "description": "SPECK MONTAGNA",
+    "features": null,
+    "producer_info": null,
     "certifications": null,
     "life_style": null,
     "recycling": null,
-    "recycling_other": "PAP\n90\nC/HDPE",
+    "recycling_other": null,
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [],
+    "hard_no_reason": "no_claim_content",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "colazione-dolci-e-snack-salati",
+    "golden_bucket": "hard_no",
+    "ean": "3336413247235",
+    "product_id": "144907",
+    "name": "Pancakes soffici x6",
+    "brand": "BERNARD JARNOUX",
+    "url": "https://www.coopshop.it/ebsn/api/products/144907",
+    "denomination": null,
+    "description": "Pancakes bio 6 pezzi",
+    "features": null,
+    "producer_info": null,
+    "certifications": [
+      "BIOLOGICO"
+    ],
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": null,
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [],
+    "hard_no_reason": "no_claim_content",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "cura-persona",
+    "golden_bucket": "hard_yes",
+    "ean": "4005900784520",
+    "product_id": "554877",
+    "name": "Siero anti macchie luminosità",
+    "brand": "Nivea",
+    "url": "https://www.coopshop.it/ebsn/api/products/554877",
+    "denomination": null,
+    "description": null,
+    "features": "Nuovo\nSchiarisce & riduce le macchie e ne previene la ricomparsa\nRisultati visibili dopo 4 settimane\nLuminous630 ingrediente brevettato",
+    "producer_info": "Il trattamento Nivea più efficace nella riduzione delle macchie cutanee\nIl siero dalla texture leggera riduce le macchie causate dal sole, dall'invecchiamento cutaneo, da fattori genetici ed ormonali¹ e ne previene la ricomparsa, trasformando la pelle in uniforme e luminosa.\n¹come gravidanza e menopausa; in assenza di attività ormonale\nRisultati testati\nDopo 4 settimane: le macchie sono visibilmente schiarite.\nDopo 8 settimane: l'intensità delle macchie è ridotta del 50%.\nCon l'uso continuativo³, i risultati continuano a migliorare: la pelle è più liscia, più uniforme e riacquista la sua naturale luminosità, per un aspetto più giovane.\n²i risultati possono variare da individuo a individuo\n³studio di 12 settimane\nRaccomandato dalle donne4\n82% ha confermato\nÈ il prodotto più efficace nel ridurre le macchie che io abbia mai provato\n100% ha confermato\nQuesto prodotto sarà sempre presente nella mia routine di cura del viso\n4 Autovalutazione, studio di 12 settimane con 34 donne, 2018\nUna innovazione rivoluzionaria\nDopo 10 anni di meticolosa ricerca e lo studio di più 50.000 ingredienti, gli scienziati Nivea hanno individuato un ingrediente altamente efficace nel trattamento delle macchie cutanee: Luminous630, in grado di agire a livello cellulare.\nLuminous630 ingrediente brevettato\n- Riduce gli accumuli di melanina schiarendo le macchie già esistenti e riducendone la dimensione.\n- Regola la produzione di nuova melanina prevenendo la formazione di macchie future.\n- Trasforma la pelle in uniforme e luminosa.\nDermatologicamente comprovato\nDelicato sulla pelle e adatto a tutti i tipi di pelle, anche le più sensibili.\nAdatto anche a donne in gravidanza.\nLuminous630 è efficace su tutti i fototipi.",
+    "certifications": null,
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": null,
     "matched_signals": [
       {
-        "matched_text": "45% di plastica in meno",
-        "category": "unfair_comparison",
+        "matched_text": "previene la ricomparsa",
+        "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM"
       },
       {
-        "matched_text": "N°1 in Italia",
+        "matched_text": "Raccomandato dalle",
+        "category": "misleading_endorsement_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [],
+    "heuristic_bucket": "hard_yes",
+    "extracted_claims": [
+      {
+        "claim_text": "Schiarisce & riduce le macchie e ne previene la ricomparsa",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Risultati visibili dopo 4 settimane",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Il trattamento Nivea più efficace nella riduzione delle macchie cutanee",
         "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "riduce le macchie causate dal sole, dall'invecchiamento cutaneo, da fattori genetici ed ormonali",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Dopo 8 settimane: l'intensità delle macchie è ridotta del 50%",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Raccomandato dalle donne / 82% ha confermato / È il prodotto più efficace nel ridurre le macchie che io abbia mai provato / 100% ha confermato ... Autovalutazione, studio di 12 settimane con 34 donne, 2018",
+        "category": "misleading_endorsement_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": [
+          "vague_unnamed_endorser",
+          "weak_evidence_self_report"
+        ]
+      },
+      {
+        "claim_text": "Una innovazione rivoluzionaria / Dopo 10 anni di meticolosa ricerca e lo studio di più 50.000 ingredienti",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Dermatologicamente comprovato",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Luminous630 è efficace su tutti i fototipi",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "acqua-e-bevande",
+    "golden_bucket": "hard_no",
+    "ean": "8000040510028",
+    "product_id": "56860",
+    "name": "Tequila blanco",
+    "brand": "Espolón",
+    "url": "https://www.coopshop.it/ebsn/api/products/56860",
+    "denomination": "Tequila",
+    "description": null,
+    "features": "100% Puro agave",
+    "producer_info": null,
+    "certifications": null,
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": null,
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [],
+    "hard_no_reason": "no_claim_content",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "parafarmacia",
+    "golden_bucket": "in_between",
+    "ean": "8000137001354",
+    "product_id": "41185",
+    "name": "Integratore biofoltil forte vegicaps x32",
+    "brand": "Equilibra",
+    "url": "https://www.coopshop.it/ebsn/api/products/41185",
+    "denomination": "Biofoltil Forte\nIntegratore alimentare",
+    "description": null,
+    "features": "Estratti di Miglio e Bambù, con aminoacidi solforati, vitamine e minerali\n32 Capsule vegetali\n16 Giorni 2 capsule/giorno\nCon biotina, zinco e selenio\nIntegratore alimentare\nNaturalmente privo di lattosio\nBeauty",
+    "producer_info": "Biofoltil Forte\nForza dei capelli\nBiofoltil Forte Equilibra è un integratore alimentare di vitamine, minerali e aminoacidi solforati, con Ortica, Miglio e Bambù. Zinco e Selenio contribuiscono al mantenimento di unghie normali e insieme alla Biotina contribuiscono al mantenimento di capelli normali. Inoltre, il Rame contribuisce alla normale pigmentazione della pelle e alla protezione delle cellule dallo stress ossidativo. Gli estratti di Miglio e Bambù favoriscono il benessere di unghie e capelli.\nCapsule vegetali Vegicaps Soft\nSfruttando le tecnologie produttive più all'avanguardia, Equilibra ha scelto di racchiudere i preziosi componenti dei propri prodotti in capsule vegetali morbide e facili da deglutire con tecnologia Vegicaps Soft, per offrire ai propri consumatori il miglior standard qualitativo possibile, anche per stabilità e dosaggio.",
+    "certifications": [
+      "BIOLOGICO"
+    ],
+    "life_style": null,
+    "recycling": [
+      "Carta - Largamente riciclabile",
+      "Carta - Largamente riciclabile",
+      "Plastica - Largamente riciclabile"
+    ],
+    "recycling_other": "Per l'ambiente\nCome smaltire:\nAstuccio - Raccolta Carta (PAP 21)\nBlister - Raccolta Plastica (C/PVC 90)\nFoglietto illustrativo - Raccolta Carta (PAP 22)\nVerifica le disposizioni del tuo Comune",
+    "matched_signals": [
+      {
+        "matched_text": "alimentare\nPer l'ambiente",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [],
+    "heuristic_bucket": "in_between",
+    "extracted_claims": [
+      {
+        "claim_text": "Zinco e Selenio contribuiscono al mantenimento di unghie normali ... Biotina contribuiscono al mantenimento di capelli normali",
+        "category": "irrelevant_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "eu_authorized_wording",
+          "compliance_unverified_from_text"
+        ],
+        "irrelevant_subreason": "eu_authorized_optional_claim"
+      },
+      {
+        "claim_text": "Gli estratti di Miglio e Bambù favoriscono il benessere di unghie e capelli",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "colazione-dolci-e-snack-salati",
+    "golden_bucket": "in_between",
+    "ean": "8000300422931",
+    "product_id": "612659",
+    "name": "Biscotti al nesquik",
+    "brand": "Nesquik",
+    "url": "https://www.coopshop.it/ebsn/api/products/612659",
+    "denomination": "Biscotto frollino con cacao e latte fresco",
+    "description": null,
+    "features": "Nuova ricetta\nAncora più friabili!\n-50% di grassi saturi*\n*Rispetto alla media dei frollini più venduti. Fonte Unione Italiana Food Mercato Italia. Per maggiori informazioni: www.unioneitalianafood.it/claims-comparativi/",
+    "producer_info": "Con latte 100% italiano, -50% di grassi saturi*\nLatte + 3 biscotti + Acqua + 1 frutto = Una colazione completa e nutriente\n*Rispetto alla media dei frollini più venduti.\nFonte Unione Italiana Food Mercato Italia. Per maggiori informazioni: www.unioneitalianafood.it/claims-comparativi/\nIl nostro cacao è certificato Rainforest Alliance.\nIl cacao certificato contribuisce a migliorare la vita dei coltivatori e delle loro famiglie.\nScopri di più su www.ra.org\nTi sono piaciuti?\nInquadra il codice e potrai dirci quello che pensi di questi biscotti!\n- Nuova ricetta\n- Ancora più friabili!\n- -50% di grassi saturi*\n*Rispetto alla media dei frollini più venduti. Fonte Unione Italiana Food Mercato Italia. Per maggiori informazioni: www.unioneitalianafood.it/claims-comparativi/",
+    "certifications": null,
+    "life_style": null,
+    "recycling": "Carta - Largamente riciclabile",
+    "recycling_other": "Componente - Materiale - Raccolta\nSacchetto - C/PAP 81 - Carta\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune",
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [
+      "Rainforest Alliance"
+    ],
+    "hard_no_reason": "legit_certification_only",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [
+      {
+        "claim_text": "Ancora più friabili!",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "-50% di grassi saturi* ... Fonte Unione Italiana Food Mercato Italia",
+        "category": "unfair_comparison",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Il nostro cacao è certificato Rainforest Alliance",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Il cacao certificato contribuisce a migliorare la vita dei coltivatori e delle loro famiglie",
+        "category": "fake_or_unverified_label",
+        "risk_level": "LOW",
+        "modifiers": []
+      }
+    ],
+    "bucket_correction": "hard_no -> in_between (claims present, mostly well-substantiated)",
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "prima-infanzia",
+    "golden_bucket": "in_between",
+    "ean": "8001040420935",
+    "product_id": "638347",
+    "name": "Pasta mini pennette",
+    "brand": "Plasmon",
+    "url": "https://www.coopshop.it/ebsn/api/products/638347",
+    "denomination": "La mini pasta - Pennette\nAlimento per l'infanzia pastina\nA norma del D.P.R. n.128 del 7.4.99",
+    "description": null,
+    "features": "Cuoce in soli 6 minuti\nDa 10 mesi\nProdotto in Italia - Con ingredienti italiani\nPer i primi dentini\nAlla scoperta di nuove consistenze\nMiscela selezionata di semola di grano duro e farina di grano tenero 100% italiano\nCon Ferro e Vitamina B6",
+    "producer_info": "Per Plasmon qualità e trasparenza sono sempre al primo posto\nProdotto in Italia - Con ingredienti italiani - Filiera italiana certificata\nTracciabilità e sicurezza garantite da Oasi nella crescita\nElevati standard di qualità agricoltori italiani selezionati\nAttenti all'ambiente confezione riciclabile\nPer il tuo bimbo che cresce, uniamo alla farina di grano tenero la semola di grano duro e le combiniamo in un equilibrio perfetto per offrire una pasta tenera ma corposa, adatta ai suoi primi dentini.\nCon Plasmon, ogni età ha la sua pastina\nDall'inizio dello svezzamento - Piccolissima e facile da deglutire\nPer le prime pappe (da 6 mesi) - Piccola e morbida in bocca\nPer i primi dentini (da 10 mesi) - Alla scoperta di nuove consistenze",
+    "certifications": null,
+    "life_style": null,
+    "recycling": [
+      "Carta - Largamente riciclabile",
+      "Plastica - Largamente riciclabile"
+    ],
+    "recycling_other": "Ricicla con Plasmon\nConfezione esterna - Raccolta carta - PAP 21\nConfezione interna - Raccolta plastica - PP 5\nVerifica le disposizioni del tuo Comune",
+    "matched_signals": [
+      {
+        "matched_text": "confezione riciclabile",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "Tracciabilità",
+        "category": "irrelevant_claim",
+        "risk_level": "LOW"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [],
+    "heuristic_bucket": "in_between",
+    "extracted_claims": [
+      {
+        "claim_text": "Filiera italiana certificata",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": [
+          "vague_or_unquantified"
+        ]
+      },
+      {
+        "claim_text": "Tracciabilità e sicurezza garantite da Oasi nella crescita",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Elevati standard di qualità agricoltori italiani selezionati",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Attenti all'ambiente confezione riciclabile",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "gastronomia-salumi-e-formaggi",
+    "golden_bucket": "hard_yes",
+    "ean": "8002063214143",
+    "product_id": "48442",
+    "name": "Mozzarella fior di latte",
+    "brand": "Brimi",
+    "url": "https://www.coopshop.it/ebsn/api/products/48442",
+    "denomination": "Mozzarella. Formaggio fresco a pasta filata",
+    "description": null,
+    "features": "100% Latte Alto Adige",
+    "producer_info": "Dal latte fieno STG, la bontà Brimi.\nUn gusto intenso, autentico, genuino: è la Mozzarella di Latte Fieno STG Brimi. Le nostre mucche vengono nutrite in modo tradizionale, con erba fresca, fieno e piante di campo. E si sente!",
+    "certifications": null,
+    "life_style": null,
+    "recycling": [
+      "Plastica - Largamente riciclabile",
+      "Plastica - Largamente riciclabile"
+    ],
+    "recycling_other": "Busta interna - O 07 - Plastica*\nBusta esterna - PP 05 - Plastica*\n*consulta le indicazioni del tuo Comune",
+    "matched_signals": [
+      {
+        "matched_text": "tradizionale",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "autentico",
+        "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM"
       }
     ],
     "legit_or_disclosed_basis_detected": [
-      "Fonte IRI"
+      "STG"
     ],
     "heuristic_bucket": "hard_yes",
     "extracted_claims": [
       {
-        "claim_text": "3x Volte più luminosi***",
-        "category": "unsubstantiated_health_or_efficacy_claim",
-        "risk_level": "MEDIUM",
-        "modifiers": []
-      },
-      {
-        "claim_text": "Massima intensità del colore",
-        "category": "misleading_superiority_or_absolute_claim",
-        "risk_level": "MEDIUM",
-        "modifiers": []
-      },
-      {
-        "claim_text": "Copre il 100% dei capelli bianchi",
-        "category": "unsubstantiated_health_or_efficacy_claim",
+        "claim_text": "Le nostre mucche vengono nutrite in modo tradizionale, con erba fresca, fieno e piante di campo. E si sente!",
+        "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "LOW",
         "modifiers": []
-      },
+      }
+    ],
+    "bucket_review_flag": "recheck_hard_yes_basis",
+    "bucket_review_detail": "actionable claim count dropped from 2 to 1 after puffery removal -- reverify this product still clears the hard_yes bar (>=1 HIGH or >=2 distinct real claims)",
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "latte-yogurt-e-uova",
+    "golden_bucket": "hard_yes",
+    "ean": "8002580008744",
+    "product_id": "603657",
+    "name": "Latte fresco parzialmente scremato",
+    "brand": "Carnini",
+    "url": "https://www.coopshop.it/ebsn/api/products/603657",
+    "denomination": "Latte parzialmente scremato pastorizzato a temperatura elevata da agricoltura biologica",
+    "description": null,
+    "features": "100% Italiano",
+    "producer_info": "Il latte è una fonte naturale di Calcio, necessario per il mantenimento di ossa e denti normali.\nCarnini Bio ti ricorda l'importanza di una dieta varia ed equilibrata e uno stile di vita sano.\nQuesta confezione è riciclabile\nChiedi al tuo comune come raccoglierla e proteggi l'ambiente insieme a noi!\nRipiegala prima di metterla nella differenziata\nEmissioni zero\nQuesta confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione, supportando progetti ad alto valore ambientale, etico e sociale.",
+    "certifications": [
+      "BIOLOGICO"
+    ],
+    "life_style": "Biologico",
+    "recycling": [
+      "Carta - Largamente riciclabile",
+      "Plastica - Largamente riciclabile"
+    ],
+    "recycling_other": "Tappo - HDPE 2 - Plastica\nContenitore - C/PAP 81 - Carta\nRaccolta differenziata: verifica le disposizioni del tuo comune",
+    "matched_signals": [
       {
-        "claim_text": "Migliora la qualità visibile dei capelli***",
-        "category": "unsubstantiated_health_or_efficacy_claim",
-        "risk_level": "MEDIUM",
-        "modifiers": []
-      },
+        "matched_text": "Carbon Neutral",
+        "category": "offset_based_neutrality",
+        "risk_level": "HIGH"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [
+      "agricoltura biologica",
+      "da agricoltura biologica"
+    ],
+    "heuristic_bucket": "hard_yes",
+    "extracted_claims": [
       {
-        "claim_text": "Colorazione senza ammoniaca N°1 in Italia**** ... Fonte IRI, Totale Italia Mass Market",
-        "category": "misleading_superiority_or_absolute_claim",
-        "risk_level": "LOW",
-        "modifiers": []
-      },
-      {
-        "claim_text": "formula vegana** ... Nessun ingrediente o derivato di origine animale",
+        "claim_text": "Il latte è una fonte naturale di Calcio, necessario per il mantenimento di ossa e denti normali",
         "category": "irrelevant_claim",
         "risk_level": "LOW",
+        "modifiers": [
+          "eu_authorized_wording",
+          "compliance_unverified_from_text"
+        ],
+        "irrelevant_subreason": "eu_authorized_optional_claim"
+      },
+      {
+        "claim_text": "Emissioni zero / Questa confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione",
+        "category": "offset_based_neutrality",
+        "risk_level": "HIGH",
+        "modifiers": [
+          "annex_i_blacklist_per_se"
+        ]
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "colazione-dolci-e-snack-salati",
+    "golden_bucket": "in_between",
+    "ean": "8002590077037",
+    "product_id": "599157",
+    "name": "Biscotti dolcesenza allo yogurt",
+    "brand": "Misura",
+    "url": "https://www.coopshop.it/ebsn/api/products/599157",
+    "denomination": "Frollino allo yogurt con edulcoranti",
+    "description": null,
+    "features": "Farina di tipo 2 da Filiera Italiana\nSenza zuccheri aggiunti\nPer un minore aumento della glicemia*\nx12 Confezioni\n*L'assunzione di alimenti contenenti maltitolo anziché zucchero induce un minore aumento del glucosio ematico dopo la loro assunzione rispetto agli alimenti contenenti zucchero nell'ambito di una dieta varia ed equilibrata e di uno stile di vita sano",
+    "producer_info": "Biscotti yogurt\nIl classico frollino senza zuccheri aggiunti per iniziare al meglio la tua giornata o da portare sempre con te con le pratiche monoporzioni!\nDolcesenza\nLa dolcezza che vuoi, senza zuccheri aggiunti.\nSenza zuccheri aggiunti\nFonte di fibre\nConfezione con carta certificata FSC per una gestione responsabile delle foreste\nFiliera Italiana: 100% farina di grano controllato e tracciato dalla semina al prodotto finito",
+    "certifications": null,
+    "life_style": "Senza aggiunta di zucchero",
+    "recycling": [
+      "Carta - Largamente riciclabile",
+      "Carta - Largamente riciclabile",
+      "Carta - Largamente riciclabile"
+    ],
+    "recycling_other": "Incarto esterno e interno - C/PAP 81 - Carta\nCannettato - PAP 22 - Carta\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune",
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [
+      "carta certificata FSC"
+    ],
+    "hard_no_reason": "legit_certification_only",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [
+      {
+        "claim_text": "Per un minore aumento della glicemia*",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "LOW",
         "modifiers": []
       },
       {
-        "claim_text": "45% di plastica in meno\nRispetto al kit precedente",
-        "category": "unfair_comparison",
+        "claim_text": "Fonte di fibre",
+        "category": "nutrition_content_claim",
         "risk_level": "LOW",
+        "modifiers": [
+          "compliance_unverified_from_text"
+        ]
+      },
+      {
+        "claim_text": "Confezione con carta certificata FSC per una gestione responsabile delle foreste",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "LOW",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Filiera Italiana: 100% farina di grano controllato e tracciato dalla semina al prodotto finito",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "LOW",
+        "modifiers": []
+      }
+    ],
+    "bucket_correction": "hard_no -> in_between (properly-qualified but real claims present)",
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "colazione-dolci-e-snack-salati",
+    "golden_bucket": "in_between",
+    "ean": "8003000360800",
+    "product_id": "164990",
+    "name": "Lievito vanigliato x10",
+    "brand": "PANEANGELI",
+    "url": "https://www.coopshop.it/ebsn/api/products/164990",
+    "denomination": "Agente lievitante per dolci da forno senza glutine",
+    "description": null,
+    "features": "Per dolci\nAgente lievitante\nLievitazione istantanea\n10 Buste\nAstuccio richiudibile",
+    "producer_info": "Con 80 anni di tradizione Pane degli Angeli garantisce la lievitazione perfetta di torte di pasta morbida, pasta Margherita, Pan di Spagna, pasta frolla e biscotti e conferisce loro una delicata fragranza di vanillina.",
+    "certifications": null,
+    "life_style": null,
+    "recycling": [
+      "Carta - Largamente riciclabile",
+      "Carta - Largamente riciclabile"
+    ],
+    "recycling_other": "Rispettiamo l'ambiente\nAstuccio: Raccolta Carta - PAP 21\nBustina: Raccolta Carta - C/PAP 81\nRicordate di seguire le regole del vostro Comune",
+    "matched_signals": [
+      {
+        "matched_text": "Rispettiamo l'ambiente",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [],
+    "heuristic_bucket": "in_between",
+    "extracted_claims": [
+      {
+        "claim_text": "Con 80 anni di tradizione",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "LOW",
+        "modifiers": [
+          "two_part_verification_required"
+        ]
+      },
+      {
+        "claim_text": "garantisce la lievitazione perfetta",
+        "category": "misleading_superiority_or_absolute_claim",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Rispettiamo l'ambiente",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "colazione-dolci-e-snack-salati",
+    "golden_bucket": "hard_no",
+    "ean": "8003600014523",
+    "product_id": "68120",
+    "name": "Decorazioni gel per dolci rosso",
+    "brand": "F.lli Rebecchi Valtrebbia",
+    "url": "https://www.coopshop.it/ebsn/api/products/68120",
+    "denomination": "Preparazione in gel con colorante per alimenti - Senza glutine\nGel color rosso",
+    "description": null,
+    "features": "Ideale per colorare impasti per biscotti, torte, crema, panna, pasta di zucchero e marzapane\nSenza glutine",
+    "producer_info": null,
+    "certifications": null,
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": null,
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [],
+    "hard_no_reason": "dietary_lifestyle_only",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "latte-yogurt-e-uova",
+    "golden_bucket": "in_between",
+    "ean": "8004673220415",
+    "product_id": "101501",
+    "name": "Burro",
+    "brand": "Latteria Soresina",
+    "url": "https://www.coopshop.it/ebsn/api/products/101501",
+    "denomination": "Burro Soresina Senza Lattosio",
+    "description": null,
+    "features": "Solo da Panna Fresca di Latte\nBurro senza lattosio(**)\n(**) Inferiore a 0,01 di lattosio per 100g di prodotto. Il prodotto contiene glucosio e galattosio in conseguenza della scissione del lattosio",
+    "producer_info": "Il Burro Soresina senza lattosio è ideale per chi è intollerante a questo zucchero, grazie alla lavorazione che ne riduce il contenuto. Un burro prodotto solo con panne fresche lavorate entro poche ore dalla mungitura la cui qualità è certificata da controlli lungo tutta la filiera, rispettando l'ambiente e il benessere animale.\nBenessere animale\nFiliera certificata\nSenza lattosio\nBurro senza lattosio**\n(**) Inferiore a 0,01 di lattosio per 100g di prodotto\nIl prodotto contiene glucosio e galattosio in conseguenza della scissione del lattosio",
+    "certifications": [
+      "SENZA LATTOSIO"
+    ],
+    "life_style": null,
+    "recycling": "Carta - Largamente riciclabile",
+    "recycling_other": "C/PAP 81 - Incarto - Raccolta carta\nSegui le regole del tuo comune",
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [],
+    "hard_no_reason": "dietary_lifestyle_only",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [
+      {
+        "claim_text": "la cui qualità è certificata da controlli lungo tutta la filiera",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "rispettando l'ambiente e il benessere animale",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "Filiera certificata",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": [
+          "vague_or_unquantified"
+        ]
+      }
+    ],
+    "bucket_correction": "hard_no -> in_between",
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "gastronomia-salumi-e-formaggi",
+    "golden_bucket": "hard_yes",
+    "ean": "8007660486634",
+    "product_id": "44721",
+    "name": "Pancetta affumicata a fette",
+    "brand": "Fratelli Beretta",
+    "url": "https://www.coopshop.it/ebsn/api/products/44721",
+    "denomination": "Bacon fette\nPancetta affumicata",
+    "description": null,
+    "features": "Provalo per Hamburger Gourmet\n100% Italiano\nBGreen - 65% Plastica riciclata - Scopri di più sul sito www.fratellibereta.com",
+    "producer_info": null,
+    "certifications": [
+      "SENZA LATTOSIO"
+    ],
+    "life_style": null,
+    "recycling": [
+      "Plastica - Largamente riciclabile",
+      "Plastica - Largamente riciclabile"
+    ],
+    "recycling_other": "Per lo smaltimento della confezione:\nVaschetta + Film plastica - 7 - Raccolta plastica\nVerifica le disposizione del tuo Comune",
+    "matched_signals": [
+      {
+        "matched_text": "65% Plastica",
+        "category": "unfair_comparison",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "matched_text": "65% Plastica riciclata",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [],
+    "heuristic_bucket": "hard_yes",
+    "extracted_claims": [
+      {
+        "claim_text": "BGreen",
+        "category": "fake_or_unverified_label",
+        "risk_level": "MEDIUM",
+        "modifiers": []
+      },
+      {
+        "claim_text": "65% Plastica riciclata",
+        "category": "environmental_unsubstantiated",
+        "risk_level": "MEDIUM",
+        "modifiers": [
+          "specific_quantified"
+        ]
+      }
+    ],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "latte-yogurt-e-uova",
+    "golden_bucket": "hard_no",
+    "ean": "8008683034208",
+    "product_id": "68604",
+    "name": "Burro",
+    "brand": "Valli Genovesi",
+    "url": "https://www.coopshop.it/ebsn/api/products/68604",
+    "denomination": "Burro - Materia grassa 82% min.",
+    "description": null,
+    "features": "Solo panna italiana",
+    "producer_info": null,
+    "certifications": [
+      "Prodotto Ligure"
+    ],
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": null,
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [],
+    "hard_no_reason": "no_claim_content",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "colazione-dolci-e-snack-salati",
+    "golden_bucket": "hard_no",
+    "ean": "8020776640264",
+    "product_id": "607531",
+    "name": "Torta sacher",
+    "brand": null,
+    "url": "https://www.coopshop.it/ebsn/api/products/607531",
+    "denomination": null,
+    "description": "Torta Sacher",
+    "features": null,
+    "producer_info": null,
+    "certifications": null,
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": null,
+    "matched_signals": [],
+    "legit_or_disclosed_basis_detected": [],
+    "hard_no_reason": "no_claim_content",
+    "heuristic_bucket": "hard_no",
+    "extracted_claims": [],
+    "redo_schema_version": 2
+  },
+  {
+    "origin_file": "colazione-dolci-e-snack-salati",
+    "golden_bucket": "in_between",
+    "ean": "8032644870024",
+    "product_id": "41567",
+    "name": "Vol au vent",
+    "brand": "La Sfoglia Della Nonna",
+    "url": "https://www.coopshop.it/ebsn/api/products/41567",
+    "denomination": "Dischetti di pasta sfoglia",
+    "description": null,
+    "features": "Artigianale sfogliato a mano\nProdotto italiano",
+    "producer_info": null,
+    "certifications": null,
+    "life_style": null,
+    "recycling": null,
+    "recycling_other": null,
+    "matched_signals": [
+      {
+        "matched_text": "Artigianale",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "legit_or_disclosed_basis_detected": [],
+    "heuristic_bucket": "in_between",
+    "extracted_claims": [
+      {
+        "claim_text": "Artigianale sfogliato a mano",
+        "category": "misleading_authenticity_or_origin_claim",
+        "risk_level": "MEDIUM",
         "modifiers": []
       }
     ],
@@ -159,68 +825,6 @@
     "redo_schema_version": 2
   },
   {
-    "origin_file": "gastronomia-salumi-e-formaggi",
-    "golden_bucket": "hard_yes",
-    "ean": "8007660011386",
-    "product_id": "619225",
-    "name": "Salamini con bresaola",
-    "brand": "Fratelli Beretta",
-    "url": "https://www.coopshop.it/ebsn/api/products/619225",
-    "denomination": "Snack di carne bovina affumicata con bresaola",
-    "description": null,
-    "features": "BGreen - 65% Plastica riciclata - Scopri di più sul sito www.fratelliberetta.com\nOriginale\nRicco in proteine - 37g Per 100g di prodotto\nSenza glutine e senza lattosio",
-    "producer_info": null,
-    "certifications": null,
-    "life_style": null,
-    "recycling": "Plastica - Largamente riciclabile",
-    "recycling_other": "Confezione - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune",
-    "matched_signals": [
-      {
-        "matched_text": "65% Plastica",
-        "category": "unfair_comparison",
-        "risk_level": "MEDIUM"
-      },
-      {
-        "matched_text": "65% Plastica riciclata",
-        "category": "environmental_unsubstantiated",
-        "risk_level": "MEDIUM"
-      }
-    ],
-    "legit_or_disclosed_basis_detected": [],
-    "heuristic_bucket": "hard_yes",
-    "extracted_claims": [
-      {
-        "claim_text": "BGreen",
-        "category": "fake_or_unverified_label",
-        "risk_level": "MEDIUM",
-        "modifiers": []
-      },
-      {
-        "claim_text": "65% Plastica riciclata",
-        "category": "environmental_unsubstantiated",
-        "risk_level": "MEDIUM",
-        "modifiers": [
-          "specific_quantified"
-        ]
-      },
-      {
-        "claim_text": "Originale",
-        "category": "misleading_authenticity_or_origin_claim",
-        "risk_level": "LOW",
-        "modifiers": []
-      },
-      {
-        "claim_text": "Ricco in proteine - 37g Per 100g di prodotto",
-        "category": "nutrition_content_claim",
-        "risk_level": "LOW",
-        "modifiers": [
-          "compliance_unverified_from_text"
-        ]
-      }
-    ],
-    "redo_schema_version": 2
-  },
-  {
     "origin_file": "cura-persona",
     "golden_bucket": "in_between",
     "ean": "8700216528429",
@@ -269,215 +873,80 @@
   },
   {
     "origin_file": "cura-persona",
-    "golden_bucket": "in_between",
-    "ean": "8001120727633",
-    "product_id": "646175",
-    "name": "Salviettine pelli sensibili base acqua x60",
-    "brand": "Coop",
-    "url": "https://www.coopshop.it/ebsn/api/products/646175",
-    "denomination": "60 Salviettine 99% acqua",
-    "description": null,
-    "features": "99% di Acqua\nDermatologicamente testato su pelli sensibili\nComposizione che riduce il rischio di allergie",
-    "producer_info": "Le salviettine detergenti Crescendo Advance Coop, a base di 99% acqua, sono adatte per le pelli sensibili e studiate per minimizzare i rischi di allergie. Nate per detergere la pelle delicata del tuo bambino, possono essere utilizzate per il cambio del pannolino e per pulire mani e viso. Adatte anche ai più grandi, in viaggio e in casa.\nNichel, Cromo e Cobalto tested",
+    "golden_bucket": "hard_yes",
+    "ean": "8700216620048",
+    "product_id": "704601",
+    "name": "Crema adesiva per dentiere totali e parziali sapor",
+    "brand": null,
+    "url": "https://www.coopshop.it/ebsn/api/products/704601",
+    "denomination": null,
+    "description": "Kukident Bipacco Morso Insuperabile è stato progettato come coadiuvante per migliorare la stabilità e la tenuta delle protesi dentarie, sia totali che parziali. La sua destinazione d'uso principale è quella di formare uno strato adesivo resistente tra la dentiera e le gengive, assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore. I benefici derivanti dall'utilizzo di questa crema adesiva includono la prevenzione delle infiltrazioni di particelle di cibo sotto la protesi, un problema comune che può causare disagio e irritazione gengivale. Grazie alla sua formula avanzata, Kukident Morso Insuperabile contribuisce a creare un sigillo protettivo che mantiene il cibo lontano dalle gengive e dal palato, preservando la salute orale e il comfort durante i pasti. Un altro vantaggio significativo è l'aumento della sicurezza nel morso, permettendo agli utilizzatori di masticare con maggiore efficacia e senza preoccupazioni, anche alimenti più difficili. Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare. Inoltre, la stabilità offerta dalla crema riduce il rischio di movimenti imprevisti della dentiera, migliorando la fiducia in sé stessi e la qualità della vita quotidiana.\nScegliere Kukident Bipacco Morso Insuperabile su Farmaciauno significa optare per una soluzione affidabile e conveniente per la gestione quotidiana della propria protesi dentaria. Questo prodotto si distingue per la sua formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura, un aspetto fondamentale per chi cerca sicurezza e tranquillità per tutto il giorno. La qualità dei suoi componenti garantisce un'adesione efficace, migliorando notevolmente l'esperienza di chi porta la dentiera. L'acquisto del bipacco offre un vantaggio economico significativo, fornendo due tubetti di crema adesiva, garantendo una scorta più prolungata e riducendo la frequenza degli acquisti. Questa convenienza è un valore aggiunto che Farmaciauno è lieta di offrire, assicurando un ottimo rapporto qualità-prezzo. La scelta di questo formato è ideale per chi desidera avere sempre a disposizione il proprio prodotto preferito senza interruzioni. Kukident Morso Insuperabile non è solo una crema adesiva, ma un vero alleato per la salute e il comfort orale. Acquistarlo da Farmaciauno garantisce non solo l'autenticità e la freschezza del prodotto, ma anche un servizio clienti eccellente e spedizioni rapide, supportando la tua routine quotidiana con la massima efficienza e affidabilità. Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita.",
+    "features": null,
+    "producer_info": "Kukident Bipacco Morso Insuperabile è un dispositivo medico ideale per tutti coloro che utilizzano protesi dentarie totali o parziali e desiderano una tenuta forte e sicura per l'intera giornata. È specificamente formulato per offrire comfort e stabilità, permettendo di vivere con maggiore serenità ogni momento quotidiano. Le situazioni d'uso consigliate includono i pasti, dove la crema adesiva aiuta a prevenire le infiltrazioni di cibo sotto la dentiera, evitando fastidiosi residui e proteggendo le gengive. È inoltre particolarmente utile durante le conversazioni o le attività sociali, garantendo che la dentiera rimanga saldamente al suo posto, eliminando la preoccupazione di spostamenti indesiderati. I benefici attesi sono molteplici: un morso più potente e una maggiore fiducia nel mangiare qualsiasi tipo di alimento, dal più morbido al più croccante. L'utente sperimenta un significativo aumento del comfort orale, riducendo l'attrito e l'irritazione causati dal movimento della protesi, contribuendo a una migliore qualità di vita e una maggiore libertà di espressione.",
     "certifications": [
-      "CRESCENDO"
+      "DISPOSITIVO MEDICO DETRAIBILE"
     ],
     "life_style": null,
-    "recycling": [
-      "Plastica - Largamente riciclabile",
-      "Plastica - Largamente riciclabile",
-      "Plastica - Largamente riciclabile"
-    ],
-    "recycling_other": "Etichetta Ambientale\nSacchetto - Plastica - 7 - Raccolta plastica\nSigillo e Tappo - Plastica - PP 5 - Raccolta Plastica\nVerifica le disposizioni del tuo Comune",
+    "recycling": null,
+    "recycling_other": null,
     "matched_signals": [
       {
-        "matched_text": "Dermatologicamente testato",
+        "matched_text": "clinicamente testata",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM"
       },
       {
-        "matched_text": "testato su pelli",
-        "category": "unsubstantiated_health_or_efficacy_claim",
+        "matched_text": "autenticità",
+        "category": "misleading_authenticity_or_origin_claim",
         "risk_level": "MEDIUM"
       }
     ],
     "legit_or_disclosed_basis_detected": [],
-    "heuristic_bucket": "in_between",
+    "heuristic_bucket": "hard_yes",
     "extracted_claims": [
       {
-        "claim_text": "Dermatologicamente testato su pelli sensibili",
+        "claim_text": "assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore",
         "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": []
       },
       {
-        "claim_text": "Composizione che riduce il rischio di allergie",
+        "claim_text": "Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare",
         "category": "unsubstantiated_health_or_efficacy_claim",
-        "risk_level": "MEDIUM",
-        "modifiers": []
-      },
-      {
-        "claim_text": "Nichel, Cromo e Cobalto tested",
-        "category": "unsubstantiated_health_or_efficacy_claim",
-        "risk_level": "MEDIUM",
+        "risk_level": "HIGH",
         "modifiers": [
-          "undisclosed_test_result"
+          "borderline_medicinal_claim_candidate"
         ]
       },
       {
-        "claim_text": "Etichetta Ambientale",
-        "category": "irrelevant_claim",
-        "risk_level": "LOW",
-        "modifiers": [],
-        "irrelevant_subreason": "mandatory_disclosure"
-      },
-      {
-        "claim_text": "CRESCENDO",
-        "category": "fake_or_unverified_label",
-        "risk_level": "MEDIUM",
-        "modifiers": []
-      }
-    ],
-    "redo_schema_version": 2
-  },
-  {
-    "origin_file": "colazione-dolci-e-snack-salati",
-    "golden_bucket": "in_between",
-    "ean": "8002590085681",
-    "product_id": "645376",
-    "name": "Fette biscottate proteiche",
-    "brand": "Misura",
-    "url": "https://www.coopshop.it/ebsn/api/products/645376",
-    "denomination": "Fette biscottate",
-    "description": null,
-    "features": "Farina da Filiera Italiana\nProteine 20g",
-    "producer_info": "Fette Biscottate\nUna fetta croccante, Ricca di Proteine che contribuiscono alla crescita e al mantenimento della massa muscolare, nell'ambito di una dieta varia ed equilibrata e uno stile di vita sano. Per iniziare la giornata con una carica di energia!\nProtein\nGusto e proteine.\nTutto in uno.\nRicche di proteine\nRicche di fibre\nConfezione con carta certificata FSC per una gestione responsabile delle foreste\nFiliera Italiana: 100% farina di grano controllato e tracciato dalla semina al prodotto finito",
-    "certifications": [
-      "PROTEIN +"
-    ],
-    "life_style": null,
-    "recycling": [
-      "Carta - Largamente riciclabile",
-      "Carta - Largamente riciclabile",
-      "Carta - Largamente riciclabile"
-    ],
-    "recycling_other": "Incarto e stick - C/PAP 81 - Carta\nCannettato - PAP 22 - Carta\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune",
-    "matched_signals": [],
-    "legit_or_disclosed_basis_detected": [
-      "carta certificata FSC"
-    ],
-    "hard_no_reason": "legit_certification_only",
-    "heuristic_bucket": "hard_no",
-    "extracted_claims": [
-      {
-        "claim_text": "Ricca di Proteine che contribuiscono alla crescita e al mantenimento della massa muscolare",
-        "category": "irrelevant_claim",
-        "risk_level": "LOW",
-        "modifiers": []
-      },
-      {
-        "claim_text": "PROTEIN +",
-        "category": "fake_or_unverified_label",
+        "claim_text": "migliorando la fiducia in sé stessi e la qualità della vita quotidiana",
+        "category": "unsubstantiated_health_or_efficacy_claim",
         "risk_level": "MEDIUM",
         "modifiers": []
       },
       {
-        "claim_text": "Confezione con carta certificata FSC per una gestione responsabile delle foreste",
-        "category": "environmental_unsubstantiated",
-        "risk_level": "LOW",
+        "claim_text": "formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura",
+        "category": "unsubstantiated_health_or_efficacy_claim",
+        "risk_level": "MEDIUM",
         "modifiers": []
       },
       {
-        "claim_text": "Filiera Italiana: 100% farina di grano controllato e tracciato dalla semina al prodotto finito",
-        "category": "misleading_authenticity_or_origin_claim",
+        "claim_text": "Acquistarlo da Farmaciauno garantisce non solo l'autenticità e la freschezza del prodotto, ma anche un servizio clienti eccellente e spedizioni rapide",
+        "category": "misleading_superiority_or_absolute_claim",
         "risk_level": "LOW",
-        "modifiers": []
-      }
-    ],
-    "bucket_correction": "hard_no -> in_between (PROTEIN+ private label)",
-    "redo_schema_version": 2
-  },
-  {
-    "origin_file": "pane-pasta-riso-e-farine",
-    "golden_bucket": "hard_no",
-    "ean": "2412641000000",
-    "product_id": "429649",
-    "name": "Pane a legna arabo",
-    "brand": "FRAGRANZE",
-    "url": "https://www.coopshop.it/ebsn/api/products/429649",
-    "denomination": null,
-    "description": "PANE ARABO-COTTO A LEGNA\nPANE DI TIPO 0",
-    "features": null,
-    "producer_info": "FRAGRANZE srl",
-    "certifications": null,
-    "life_style": null,
-    "recycling": null,
-    "recycling_other": null,
-    "matched_signals": [],
-    "legit_or_disclosed_basis_detected": [],
-    "hard_no_reason": "no_claim_content",
-    "heuristic_bucket": "hard_no",
-    "extracted_claims": [
+        "modifiers": [
+          "retailer_level_claim_not_product_claim"
+        ]
+      },
       {
-        "claim_text": "PANE ARABO-COTTO A LEGNA",
-        "category": "misleading_authenticity_or_origin_claim",
+        "claim_text": "Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita",
+        "category": "misleading_endorsement_claim",
         "risk_level": "LOW",
-        "modifiers": []
+        "modifiers": [
+          "retailer_level_claim_not_product_claim"
+        ]
       }
     ],
-    "redo_schema_version": 2
-  },
-  {
-    "origin_file": "acqua-e-bevande",
-    "golden_bucket": "hard_no",
-    "ean": "5000281050553",
-    "product_id": "582768",
-    "name": "Whisky single malt 8 yo",
-    "brand": "Lagavulin",
-    "url": "https://www.coopshop.it/ebsn/api/products/582768",
-    "denomination": null,
-    "description": null,
-    "features": "Aged 8 years",
-    "producer_info": null,
-    "certifications": null,
-    "life_style": null,
-    "recycling": null,
-    "recycling_other": null,
-    "matched_signals": [],
-    "legit_or_disclosed_basis_detected": [],
-    "hard_no_reason": "no_claim_content",
-    "heuristic_bucket": "hard_no",
-    "extracted_claims": [],
-    "redo_schema_version": 2
-  },
-  {
-    "origin_file": "latte-yogurt-e-uova",
-    "golden_bucket": "hard_no",
-    "ean": "8004983006372",
-    "product_id": "673177",
-    "name": "Yogurt mango/maracuja bella vita",
-    "brand": "Bella Vita",
-    "url": "https://www.coopshop.it/ebsn/api/products/673177",
-    "denomination": "Yogurt intero senza lattosio da latte fieno STG (81%) al mango e maracuja",
-    "description": null,
-    "features": null,
-    "producer_info": "Lattosio: <0,01g per 100g di prodotto. Il prodotto contiene glucosio e galattosio in conseguenza della scissione del lattosio.",
-    "certifications": [
-      "SENZA LATTOSIO"
-    ],
-    "life_style": null,
-    "recycling": [
-      "Carta - Largamente riciclabile",
-      "Metallo - Largamente riciclabile"
-    ],
-    "recycling_other": "Raccolta differenziata:\nVasetto - C/PAP 81 - Carta\nCapsula - C/ALU 90 - Metalli\nVerifica le disposizioni del tuo comune",
-    "matched_signals": [],
-    "legit_or_disclosed_basis_detected": [
-      "STG"
-    ],
-    "hard_no_reason": "legit_certification_only",
-    "heuristic_bucket": "hard_no",
-    "extracted_claims": [],
     "redo_schema_version": 2
   }
 ]
