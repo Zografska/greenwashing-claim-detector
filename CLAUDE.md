@@ -238,6 +238,27 @@ Module status:
   reusable script (not part of `evaluate.py` itself) that measures how many
   gold claims survive `_prefilter_description` before ever reaching the
   model — run it after any `CLAIM_KEYWORDS` change.
+- `src/extraction_v4.py` — implemented (Phase 1), untested against a live
+  model. A new, separate pipeline built from `.claude/reccomendations/`'s
+  external review (extract.md/gate_and_verify.md/severity.md/schemas.py):
+  gate (binary pre-screen) → extract-v4 (ordered decision procedure,
+  `quote`/`why`/`category`, no severity) → optional deepseek-r1 verify
+  cascade → severity (backing-before-score, 0-100 continuous, no
+  `nutrition_content_claim` exception). `extraction.py`'s v3 pipeline is
+  untouched and remains the current best-measured baseline; this is an
+  unproven A/B variant. `run_pipeline_v4` returns every claim with its raw
+  severity attached — no threshold drop at generation time, so
+  `to_v3_shape(results, threshold)` (same file) can re-score one cached
+  run at many candidate thresholds without a new model call. Converts v4
+  output into `evaluate.py`'s exact existing shape, so **`evaluate.py`
+  needed zero changes**. `num_predict`/`num_ctx` tiers are word-counted
+  initial estimates, not yet measured against a live model — calibrate
+  with `--limit 2-3` first. See `model_comparison_report.md` §9 for what's
+  ready to run (A4/A6/A7/A9) vs. not yet built (A3/A5/A8).
+- `src/sweep_severity_threshold.py` — implemented. Sweeps
+  `extraction_v4.py`'s severity threshold against a dev gold set via
+  `to_v3_shape` + `evaluate.py`, no new model calls per threshold tried.
+  The A4 ablation.
 - `src/pipeline.py` — empty; not yet started.
 
 `src/knowledge/` is a **separate, already-working retrieval+rerank pipeline**

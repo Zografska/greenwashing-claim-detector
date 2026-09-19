@@ -371,7 +371,108 @@ an opt-in flag (default stays v3 order) rather than promoted to default;
 worth re-testing on llama3.3:70b or a larger sample before drawing a firm
 conclusion either way.
 
-This closes Phase 0's ablation matrix (A0/A1/A2). The full gate →
-extract-v4 → verify → severity-v4 rewrite and the rest of the ablation
-matrix (A3-A9) from `.claude/reccomendations/` remain deferred to a
-follow-up pass, per this pass's explicit scope decision.
+This closes Phase 0's ablation matrix (A0/A1/A2).
+
+## 9. Phase 1 (this pass): the v4 pipeline itself
+
+Built per `.claude/reccomendations/` (extract.md, gate_and_verify.md,
+severity.md, schemas.py), as a new module rather than modifying
+`extraction.py` in place — same "keep the old pipeline comparable"
+convention this repo already follows for `dissected_extraction.py`. v3
+(`extraction.py`) is untouched and remains the current best-measured
+baseline; this is an unproven variant to A/B against it.
+
+- **`src/extraction_v4.py`** — gate (binary pre-screen) → extract-v4
+  (ordered decision procedure, `quote`/`why`/`category`, gold-calibrated
+  0-4 claim guidance, worked example deleted) → optional verify cascade
+  (deepseek-r1 as accept/reject discriminator, not a generator) → severity
+  (backing-before-score, 0-100 continuous, no `nutrition_content_claim`
+  exception). Reuses `extraction.py`'s prefilter/keyword machinery and
+  `dissected_extraction.py`'s generic `_ollama_json_call`/`_find_items_list`
+  rather than re-deriving either. `run_pipeline_v4` returns **every**
+  claim with its raw severity/backing attached — no threshold-based drop
+  at generation time, same "generate once, filter downstream" pattern as
+  v3's `dropped_claims`.
+- **`to_v3_shape(results, threshold)`** (in the same file) — converts v4
+  output into the exact shape `src/evaluate.py` already scores
+  (`claim_text`/`category`/`risk_level`/`risk_rationale` +
+  `dropped_claims`), so **`evaluate.py` needed zero changes** to score v4
+  predictions. The severity→risk_level bucketing it uses is display-only,
+  for the bonus `risk_level_agreement` metric — `extraction_prf`/
+  `category_accuracy` never look at it.
+- **`src/sweep_severity_threshold.py`** — sweeps a list of candidate
+  thresholds through `to_v3_shape` + `evaluate.py` against a single cached
+  results file, no new model calls per threshold. This is what makes A4
+  ("0-100 + tuned threshold") affordable: severity is computed once,
+  thresholds are free to re-try.
+- All four stages' `num_predict`/`num_ctx` tiers are **initial estimates**
+  (word/token-counted the same way `extraction.py`'s tiers were, but not
+  yet run against a live model) — calibrate with `--limit 2-3` before
+  trusting them on a full file.
+- Verified end-to-end with a monkeypatched Ollama call (gate short-circuit,
+  candidate generation, verify reject/keep + category correction, severity
+  attachment, missing-index handling) — no live model access was available
+  in the environment this was built in, so none of the prompts themselves
+  have been run yet.
+
+### Ablation rows ready to run as-is
+
+```bash
+# A6: gate on (default) vs off
+python3 -m src.extraction_v4 --file sample_coop_extraction_input.json \
+    --model llama3.2:3b --out results/phase1/a6_gate_on.json
+python3 -m src.extraction_v4 --file sample_coop_extraction_input.json \
+    --model llama3.2:3b --no-gate --out results/phase1/a6_gate_off.json
+
+# A7: cascade (3b extract -> deepseek-r1 verify) vs 70b alone, no cascade
+python3 -m src.extraction_v4 --file sample_coop_extraction_input.json \
+    --model llama3.2:3b --verify-model deepseek-r1:70b --out results/phase1/a7_cascade.json
+python3 -m src.extraction_v4 --file sample_coop_extraction_input.json \
+    --model llama3.3:70b --out results/phase1/a7_70b_alone.json
+
+# A9: grammar-constrained (default) vs format:json + parser
+python3 -m src.extraction_v4 --file sample_coop_extraction_input.json \
+    --model llama3.2:3b --out results/phase1/a9_grammar.json
+python3 -m src.extraction_v4 --file sample_coop_extraction_input.json \
+    --model llama3.2:3b --no-schema-grammar --out results/phase1/a9_no_grammar.json
+
+# score any of the above (to_v3_shape needs a threshold -- 40 is
+# severity.md's own MEDIUM-band floor, a principled starting point, not a
+# tuned one; sweep it properly with A4 below before trusting a comparison)
+python3 -c "
+import json
+from src.extraction_v4 import to_v3_shape
+results = json.load(open('results/phase1/a6_gate_on.json'))
+json.dump(to_v3_shape(results, threshold=40), open('/tmp/shaped.json', 'w'))
+"
+python3 -m src.evaluate --predictions /tmp/shaped.json --gold golden/samples/canonical/sample_coop.json
+
+# A4: 0-100 + tuned threshold (run once, sweep many thresholds for free)
+python3 -m src.extraction_v4 --file sample_coop_extraction_input.json \
+    --model llama3.2:3b --out results/phase1/a4_severity.json
+python3 -m src.sweep_severity_threshold --predictions results/phase1/a4_severity.json \
+    --gold golden/samples/canonical/sample_coop.json --thresholds 0 10 20 30 40 50 60 70 80 90
+```
+
+### Ablation rows NOT yet built — concrete, not silently skipped
+
+- **A3 (v3 vs v4 extract prompt, severity held at v3)** needs v4's
+  `extract_claims_v4` candidates run through `dissected_extraction.py`'s
+  *existing* `RISK_SYSTEM_PROMPT`/`_build_risk_schema` risk call instead of
+  v4's own severity call — that machinery already exists, it just expects
+  `(orig_idx, clause_text, category)` tuples rather than v4's
+  `{quote, why, category}` dicts. A small adapter, not built here.
+- **A5 (backing-before-severity vs severity alone)** needs a stripped
+  variant of `SEVERITY_SCHEMA`/`SEVERITY_SYSTEM_PROMPT` with the `backing`
+  field removed, to isolate whether the backing requirement itself (not
+  just the 0-100 scale) is what's doing the work. Not built.
+- **A8 (English vs Italian prompt)** needs an Italian translation of
+  `EXTRACT_V4_SYSTEM_PROMPT` (and probably gate/verify/severity too). Not
+  built — this project has a standing reason to be careful translating in
+  concrete examples specifically (small models measured echoing realistic
+  prompt text back as output), but the rule *prose* itself should
+  translate safely.
+
+None of A3/A4/A5/A6/A7/A8/A9 have been run yet — no live Ollama access
+was available while building this pass. Same next step as Phase 0: bring
+up connectivity to `demmgpu1` and run the commands above.
