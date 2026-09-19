@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JSON Product Viewer</title>
+    <title>JSONL Product Viewer</title>
     <style>
       :root {
         --bg: #ffffff;
@@ -131,6 +131,13 @@
       #meta {
         color: var(--text-muted);
         white-space: nowrap;
+      }
+      #errBadge {
+        color: var(--danger);
+        white-space: nowrap;
+        cursor: pointer;
+        border-bottom: 1px dotted var(--danger);
+        display: none;
       }
 
       /* Body: sidebar + detail */
@@ -277,6 +284,10 @@
         color: var(--text-muted);
         font-style: italic;
       }
+      .parse-error {
+        color: var(--danger);
+        font-weight: 600;
+      }
       #dropHint {
         position: fixed;
         inset: 0;
@@ -306,10 +317,15 @@
     <div id="app">
       <div id="topbar">
         <label class="btn" id="fileLabel"
-          >Open JSON file…
-          <input type="file" id="fileInput" accept=".json,application/json" />
+          >Open JSONL file…
+          <input
+            type="file"
+            id="fileInput"
+            accept=".jsonl,.ndjson,.jsonlines,text/plain"
+          />
         </label>
         <span id="meta">No file loaded</span>
+        <span id="errBadge"></span>
         <div class="spacer"></div>
         <input
           type="search"
@@ -327,11 +343,11 @@
 
       <div id="body">
         <div id="sidebar">
-          <div class="empty">Load a JSON file to see the product list.</div>
+          <div class="empty">Load a JSONL file to see the record list.</div>
         </div>
         <div id="detail">
           <div class="placeholder">
-            Drag &amp; drop a .json file anywhere, or use "Open JSON file…"
+            Drag &amp; drop a .jsonl file anywhere, or use "Open JSONL file…"
             above.<br /><br />
             Once loaded: <kbd>&larr;</kbd>/<kbd>&rarr;</kbd> to page,
             <kbd>/</kbd> to search, click a value to select/copy it.
@@ -339,20 +355,22 @@
         </div>
       </div>
     </div>
-    <div id="dropHint">Drop JSON file to load</div>
+    <div id="dropHint">Drop JSONL file to load</div>
 
     <script>
       (function () {
         "use strict";
 
-        let allRecords = []; // full list of {index, data}
+        let allRecords = []; // full list of {index, data, raw, error}
         let filtered = []; // subset matching current search, same shape
         let currentPos = -1; // position within `filtered`
         let searchTerm = "";
+        let parseErrors = []; // {line, message}
 
         const el = {
           fileInput: document.getElementById("fileInput"),
           meta: document.getElementById("meta"),
+          errBadge: document.getElementById("errBadge"),
           searchBox: document.getElementById("searchBox"),
           matchCount: document.getElementById("matchCount"),
           sidebar: document.getElementById("sidebar"),
@@ -361,7 +379,7 @@
         };
 
         // --- theme ---
-        const THEME_KEY = "json_viewer_theme";
+        const THEME_KEY = "jsonl_viewer_theme";
         function systemPrefersDark() {
           return (
             window.matchMedia &&
@@ -402,6 +420,7 @@
         const URL_RE = /^https?:\/\//i;
 
         function pickLabel(rec) {
+          if (!rec || typeof rec !== "object") return null;
           for (const k of LABEL_KEYS) {
             if (typeof rec[k] === "string" && rec[k].trim())
               return rec[k].split("\n")[0];
@@ -410,6 +429,7 @@
         }
 
         function pickSub(rec) {
+          if (!rec || typeof rec !== "object") return "";
           const bits = [];
           if (typeof rec.brand === "string" && rec.brand) bits.push(rec.brand);
           if (typeof rec.ean === "string" || typeof rec.ean === "number")
@@ -419,39 +439,58 @@
           return bits.join(" · ");
         }
 
-        function normalizeToArray(parsed) {
-          if (Array.isArray(parsed)) return parsed;
-          if (parsed && typeof parsed === "object") {
-            // find the first top-level property that is an array of objects
-            for (const k of Object.keys(parsed)) {
-              if (
-                Array.isArray(parsed[k]) &&
-                parsed[k].length &&
-                typeof parsed[k][0] === "object"
-              ) {
-                return parsed[k];
-              }
+        // --- JSONL parsing ---
+        function parseJSONL(text) {
+          // Strip a UTF-8 BOM if present.
+          if (text.charCodeAt(0) === 0xfeff) text = text.slice(1);
+          const lines = text.split(/\r\n|\r|\n/);
+          const records = [];
+          const errors = [];
+          lines.forEach((line, i) => {
+            const trimmed = line.trim();
+            if (!trimmed) return; // skip blank lines
+            try {
+              const data = JSON.parse(trimmed);
+              records.push({ index: records.length, data, line: i + 1 });
+            } catch (e) {
+              errors.push({ line: i + 1, message: e.message, raw: trimmed });
+              records.push({
+                index: records.length,
+                data: null,
+                line: i + 1,
+                error: e.message,
+                raw: trimmed,
+              });
             }
-            return [parsed]; // single record file
-          }
-          return [];
+          });
+          return { records, errors };
         }
 
-        function loadJSON(text, filename) {
-          let parsed;
-          try {
-            parsed = JSON.parse(text);
-          } catch (e) {
-            alert("Could not parse JSON: " + e.message);
-            return;
-          }
-          const arr = normalizeToArray(parsed);
-          allRecords = arr.map((data, index) => ({ index, data }));
+        function loadJSONL(text, filename) {
+          const { records, errors } = parseJSONL(text);
+          allRecords = records;
+          parseErrors = errors;
           el.meta.textContent =
             (filename ? filename + " — " : "") +
             allRecords.length +
             " record" +
             (allRecords.length === 1 ? "" : "s");
+          if (errors.length) {
+            el.errBadge.style.display = "inline";
+            el.errBadge.textContent =
+              errors.length + " parse error" + (errors.length === 1 ? "" : "s");
+            el.errBadge.title =
+              "Lines that failed to parse:\n" +
+              errors
+                .slice(0, 20)
+                .map((e) => "line " + e.line + ": " + e.message)
+                .join("\n") +
+              (errors.length > 20 ? "\n…" : "");
+          } else {
+            el.errBadge.style.display = "none";
+            el.errBadge.textContent = "";
+            el.errBadge.title = "";
+          }
           searchTerm = "";
           el.searchBox.value = "";
           applyFilter();
@@ -460,6 +499,7 @@
         function recordMatches(rec, term) {
           if (!term) return true;
           try {
+            if (rec.error) return rec.raw.toLowerCase().includes(term);
             return JSON.stringify(rec.data).toLowerCase().includes(term);
           } catch (e) {
             return false;
@@ -519,25 +559,35 @@
             d.className = "empty";
             d.textContent = allRecords.length
               ? "No records match your search."
-              : "Load a JSON file to see the product list.";
+              : "Load a JSONL file to see the record list.";
             el.sidebar.appendChild(d);
             return;
           }
           const frag = document.createDocumentFragment();
           filtered.forEach((rec, pos) => {
-            const label = pickLabel(rec.data) || "Record #" + rec.index;
-            const sub = pickSub(rec.data);
             const item = document.createElement("div");
             item.className = "item" + (pos === currentPos ? " selected" : "");
             item.dataset.pos = pos;
-            item.innerHTML =
-              '<span class="idx">' +
-              rec.index +
-              "</span>" +
-              '<span class="label">' +
-              highlight(label) +
-              "</span>" +
-              (sub ? '<span class="sub">' + highlight(sub) + "</span>" : "");
+            if (rec.error) {
+              item.innerHTML =
+                '<span class="idx">' +
+                rec.index +
+                "</span>" +
+                '<span class="label parse-error">⚠ line ' +
+                rec.line +
+                ": parse error</span>";
+            } else {
+              const label = pickLabel(rec.data) || "Record #" + rec.index;
+              const sub = pickSub(rec.data);
+              item.innerHTML =
+                '<span class="idx">' +
+                rec.index +
+                "</span>" +
+                '<span class="label">' +
+                highlight(label) +
+                "</span>" +
+                (sub ? '<span class="sub">' + highlight(sub) + "</span>" : "");
+            }
             item.addEventListener("click", () => selectPos(pos));
             frag.appendChild(item);
           });
@@ -684,7 +734,7 @@
             ph.className = "placeholder";
             ph.textContent = allRecords.length
               ? "No record selected."
-              : 'Drag & drop a .json file anywhere, or use "Open JSON file…" above.';
+              : 'Drag & drop a .jsonl file anywhere, or use "Open JSONL file…" above.';
             el.detail.appendChild(ph);
             return;
           }
@@ -712,6 +762,8 @@
             filtered.length +
             "  (record #" +
             rec.index +
+            ", line " +
+            rec.line +
             ")";
 
           const jump = document.createElement("input");
@@ -733,7 +785,9 @@
           const copyBtn = document.createElement("button");
           copyBtn.textContent = "Copy JSON";
           copyBtn.addEventListener("click", () =>
-            copyText(JSON.stringify(rec.data, null, 2)),
+            copyText(
+              rec.error ? rec.raw : JSON.stringify(rec.data, null, 2),
+            ),
           );
 
           header.appendChild(prevBtn);
@@ -744,6 +798,25 @@
           header.appendChild(copyBtn);
 
           el.detail.appendChild(header);
+
+          if (rec.error) {
+            const errBox = document.createElement("div");
+            errBox.className = "parse-error";
+            errBox.style.marginBottom = "10px";
+            errBox.textContent =
+              "Failed to parse line " + rec.line + ": " + rec.error;
+            el.detail.appendChild(errBox);
+            const pre = document.createElement("pre");
+            pre.style.whiteSpace = "pre-wrap";
+            pre.style.wordBreak = "break-word";
+            pre.style.background = "var(--bg-alt)";
+            pre.style.padding = "10px";
+            pre.style.borderRadius = "6px";
+            pre.textContent = rec.raw;
+            el.detail.appendChild(pre);
+            return;
+          }
+
           el.detail.appendChild(renderObjectTable(rec.data));
         }
 
@@ -752,7 +825,7 @@
           const file = e.target.files[0];
           if (!file) return;
           const reader = new FileReader();
-          reader.onload = () => loadJSON(reader.result, file.name);
+          reader.onload = () => loadJSONL(reader.result, file.name);
           reader.readAsText(file);
         });
 
@@ -772,7 +845,7 @@
           const file = e.dataTransfer.files && e.dataTransfer.files[0];
           if (!file) return;
           const reader = new FileReader();
-          reader.onload = () => loadJSON(reader.result, file.name);
+          reader.onload = () => loadJSONL(reader.result, file.name);
           reader.readAsText(file);
         });
 
