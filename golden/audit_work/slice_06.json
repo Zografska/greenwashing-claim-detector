@@ -1,0 +1,998 @@
+[
+ {
+  "uid": "588549#0",
+  "product_id": "588549",
+  "claim_text": "55% di plastica riciclata",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Prosciutto cotto snello grancotto",
+   "brand": "Rovagnati",
+   "denomination": "Grancotto\nA basso contenuto di grassi\nProdotto cotto costituito da parti di coscia di suino con acqua aggiunta",
+   "features": "Prodotto senza nitriti\n2% di grassi\nProdotto in Italia\nSenza glutine e derivati del latte\n55% di plastica riciclata -38% di plastica*\nCarne Origine: UE\n*55% nella vaschetta. -38% rispetto alle vaschette tradizionali Rovagnati. Scopri di più su www.rovagnati.it",
+   "producer_info": "Prodotto senza nitriti\nGrazie a un processo produttivo Rovagnati che non prevede l'utilizzo di nitriti\n\"Mangia sano, vivi Snello\"",
+   "life_style": "Pochi grassi",
+   "recycling_other": "Pellicola/Vassoio - OTHER7 - Plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "588549#1",
+  "product_id": "588549",
+  "claim_text": "-38% di plastica* ... rispetto alle vaschette tradizionali Rovagnati",
+  "v1_category": "unfair_comparison",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Prosciutto cotto snello grancotto",
+   "brand": "Rovagnati",
+   "denomination": "Grancotto\nA basso contenuto di grassi\nProdotto cotto costituito da parti di coscia di suino con acqua aggiunta",
+   "features": "Prodotto senza nitriti\n2% di grassi\nProdotto in Italia\nSenza glutine e derivati del latte\n55% di plastica riciclata -38% di plastica*\nCarne Origine: UE\n*55% nella vaschetta. -38% rispetto alle vaschette tradizionali Rovagnati. Scopri di più su www.rovagnati.it",
+   "producer_info": "Prodotto senza nitriti\nGrazie a un processo produttivo Rovagnati che non prevede l'utilizzo di nitriti\n\"Mangia sano, vivi Snello\"",
+   "life_style": "Pochi grassi",
+   "recycling_other": "Pellicola/Vassoio - OTHER7 - Plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "588549#2",
+  "product_id": "588549",
+  "claim_text": "Mangia sano, vivi Snello",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Prosciutto cotto snello grancotto",
+   "brand": "Rovagnati",
+   "denomination": "Grancotto\nA basso contenuto di grassi\nProdotto cotto costituito da parti di coscia di suino con acqua aggiunta",
+   "features": "Prodotto senza nitriti\n2% di grassi\nProdotto in Italia\nSenza glutine e derivati del latte\n55% di plastica riciclata -38% di plastica*\nCarne Origine: UE\n*55% nella vaschetta. -38% rispetto alle vaschette tradizionali Rovagnati. Scopri di più su www.rovagnati.it",
+   "producer_info": "Prodotto senza nitriti\nGrazie a un processo produttivo Rovagnati che non prevede l'utilizzo di nitriti\n\"Mangia sano, vivi Snello\"",
+   "life_style": "Pochi grassi",
+   "recycling_other": "Pellicola/Vassoio - OTHER7 - Plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "53999#0",
+  "product_id": "53999",
+  "claim_text": "Tradizionali e gustosi",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Cannelloni al ragù",
+   "brand": "Viva la Mamma",
+   "denomination": "Cannelloni al ragù - Preparazione gastronomica cotta",
+   "description": "Linea Viva la Mamma Brand BERETTA Cannelloni Al Ragu’ INGREDIENTI\n \nBESCIAMELLA: PREPARATO PER BESCIAMELLA REIDRATATO (ACQUA, FARINA DI GRANO TENERO TIPO “00”, AMIDO DI MAIS, BURRO , SIERO DI LATTE SCREMATO, MALTODESTRINE, FORMAGGIO DISIDRATATO IN POLVERE, SALE, FIBRA DI FRUMENTO , AROMI, PROTEINE DEL LATTE ), BRODO VEGETALE (SALE, FECOLA E MALTODESTRINE D PATATE, ESTRATTO DI LIEVITO, ESTRATTO DI VERDURE – CAROTE, CIPOLLE - , OLIO DI SEMI DI GIRASOLE, ESTRATTO DI ERBE AROMATICHE).\nRIPIENO 37%: DI CUI CARNE DI SUINO 34%, CARNE DI BOVINO 12%, POLPA DI POMODORO,\nACQUA, PURÈ DI PATATE (PATATE, EMULSIONANTE: E471, STABILIZZANTE E450I, CURCUMA), CONCENTRATO DI POMODORO, OLIO DI SEMI DI GIRASOLE, CIPOLLA 4%, CAROTA 4%, FARINA DI GRANO TENERO, VINO ROSSO, OLIO EXTRAVERGINE DI OLIVA, AMIDO\nMODIFICATO DI TAPIOCA, SALE, SEDANO 0,4%, BRODO VEGETALE (SALE, FECOLA E MALTODESTRINE DI PATATE, ESTRATTO DI LIEVITO, ESTRATTO DI VERDURE – CAROTA,\nCIPOLLA - , OLIO DI SEMI DI GIRASOLE, ESTRATTO DI ERBE AROMATICHE), PEPE BIANCO, AGLIO, SALVIA, BASILICO, AROMI. PASTA FRESCA ALL’ UOVO 15%: SEMOLA DI GRANO DURO, UOVA 27%. SALSA DI POMODORO 9%: POLPA DI POMODORO, CONCENTRATO DI POMODORO, OLIO D’OLIVA, ACQUA, CIPOLLA, AMIDO DI MAIS, POMODORI, SALE, ZUCCHERO, BASILICO, OLIO DI SEMI DI GIRASOLE, PEPERONCINO, PEPE, AROMA.\n\nPUÒ CONTENERE TRACCE DI CROSTACEI, PESCE, SOIA, SENAPE; MOLLUSCHI CONSERVAZIONE\nCONSERVARE IN FRIGORIFERO A TEMPERATURA TRA +0°C E +4°C. UNA VOLTA APERTA LA CONFEZIONE SI CONSIGLIA DI CONSUMARE ENTRO 24 ORE.\nDA CONSUMARE PREVIA COTTURA.\n\nMODALITÀ DI PREPARAZIONE\nIN FORNO: 18 MINUTI A 180°C\nIN FORNO MICROONDE: 4 MINUTI A 750-900W. Nome Prodotto CANNELLONI AL RAGù",
+   "features": "Con solo carne italiana\nTradizionali e gustosi - 4 min in microonde\nUova italiane",
+   "producer_info": "I love cannelloni al ragù\n- Ragù secondo la tradizione con 100% carne scelta italiana\n- Sfoglia tradizionale, ruvida e casereccia, fatta con uova italiane\n- Morbida e gustosa besciamella\n- Con pomodoro 100% italiano\n- Senza conservanti aggiunti - Senza grassi idrogenati",
+   "recycling_other": "Smaltisci così\nCos'è - Dove va\nIncarto esterno - PAP 21 - Raccolta carta\nVaschetta e Pellicola - PET 1 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "53999#1",
+  "product_id": "53999",
+  "claim_text": "Ragù secondo la tradizione",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Cannelloni al ragù",
+   "brand": "Viva la Mamma",
+   "denomination": "Cannelloni al ragù - Preparazione gastronomica cotta",
+   "description": "Linea Viva la Mamma Brand BERETTA Cannelloni Al Ragu’ INGREDIENTI\n \nBESCIAMELLA: PREPARATO PER BESCIAMELLA REIDRATATO (ACQUA, FARINA DI GRANO TENERO TIPO “00”, AMIDO DI MAIS, BURRO , SIERO DI LATTE SCREMATO, MALTODESTRINE, FORMAGGIO DISIDRATATO IN POLVERE, SALE, FIBRA DI FRUMENTO , AROMI, PROTEINE DEL LATTE ), BRODO VEGETALE (SALE, FECOLA E MALTODESTRINE D PATATE, ESTRATTO DI LIEVITO, ESTRATTO DI VERDURE – CAROTE, CIPOLLE - , OLIO DI SEMI DI GIRASOLE, ESTRATTO DI ERBE AROMATICHE).\nRIPIENO 37%: DI CUI CARNE DI SUINO 34%, CARNE DI BOVINO 12%, POLPA DI POMODORO,\nACQUA, PURÈ DI PATATE (PATATE, EMULSIONANTE: E471, STABILIZZANTE E450I, CURCUMA), CONCENTRATO DI POMODORO, OLIO DI SEMI DI GIRASOLE, CIPOLLA 4%, CAROTA 4%, FARINA DI GRANO TENERO, VINO ROSSO, OLIO EXTRAVERGINE DI OLIVA, AMIDO\nMODIFICATO DI TAPIOCA, SALE, SEDANO 0,4%, BRODO VEGETALE (SALE, FECOLA E MALTODESTRINE DI PATATE, ESTRATTO DI LIEVITO, ESTRATTO DI VERDURE – CAROTA,\nCIPOLLA - , OLIO DI SEMI DI GIRASOLE, ESTRATTO DI ERBE AROMATICHE), PEPE BIANCO, AGLIO, SALVIA, BASILICO, AROMI. PASTA FRESCA ALL’ UOVO 15%: SEMOLA DI GRANO DURO, UOVA 27%. SALSA DI POMODORO 9%: POLPA DI POMODORO, CONCENTRATO DI POMODORO, OLIO D’OLIVA, ACQUA, CIPOLLA, AMIDO DI MAIS, POMODORI, SALE, ZUCCHERO, BASILICO, OLIO DI SEMI DI GIRASOLE, PEPERONCINO, PEPE, AROMA.\n\nPUÒ CONTENERE TRACCE DI CROSTACEI, PESCE, SOIA, SENAPE; MOLLUSCHI CONSERVAZIONE\nCONSERVARE IN FRIGORIFERO A TEMPERATURA TRA +0°C E +4°C. UNA VOLTA APERTA LA CONFEZIONE SI CONSIGLIA DI CONSUMARE ENTRO 24 ORE.\nDA CONSUMARE PREVIA COTTURA.\n\nMODALITÀ DI PREPARAZIONE\nIN FORNO: 18 MINUTI A 180°C\nIN FORNO MICROONDE: 4 MINUTI A 750-900W. Nome Prodotto CANNELLONI AL RAGù",
+   "features": "Con solo carne italiana\nTradizionali e gustosi - 4 min in microonde\nUova italiane",
+   "producer_info": "I love cannelloni al ragù\n- Ragù secondo la tradizione con 100% carne scelta italiana\n- Sfoglia tradizionale, ruvida e casereccia, fatta con uova italiane\n- Morbida e gustosa besciamella\n- Con pomodoro 100% italiano\n- Senza conservanti aggiunti - Senza grassi idrogenati",
+   "recycling_other": "Smaltisci così\nCos'è - Dove va\nIncarto esterno - PAP 21 - Raccolta carta\nVaschetta e Pellicola - PET 1 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "53999#2",
+  "product_id": "53999",
+  "claim_text": "Sfoglia tradizionale, ruvida e casereccia",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Cannelloni al ragù",
+   "brand": "Viva la Mamma",
+   "denomination": "Cannelloni al ragù - Preparazione gastronomica cotta",
+   "description": "Linea Viva la Mamma Brand BERETTA Cannelloni Al Ragu’ INGREDIENTI\n \nBESCIAMELLA: PREPARATO PER BESCIAMELLA REIDRATATO (ACQUA, FARINA DI GRANO TENERO TIPO “00”, AMIDO DI MAIS, BURRO , SIERO DI LATTE SCREMATO, MALTODESTRINE, FORMAGGIO DISIDRATATO IN POLVERE, SALE, FIBRA DI FRUMENTO , AROMI, PROTEINE DEL LATTE ), BRODO VEGETALE (SALE, FECOLA E MALTODESTRINE D PATATE, ESTRATTO DI LIEVITO, ESTRATTO DI VERDURE – CAROTE, CIPOLLE - , OLIO DI SEMI DI GIRASOLE, ESTRATTO DI ERBE AROMATICHE).\nRIPIENO 37%: DI CUI CARNE DI SUINO 34%, CARNE DI BOVINO 12%, POLPA DI POMODORO,\nACQUA, PURÈ DI PATATE (PATATE, EMULSIONANTE: E471, STABILIZZANTE E450I, CURCUMA), CONCENTRATO DI POMODORO, OLIO DI SEMI DI GIRASOLE, CIPOLLA 4%, CAROTA 4%, FARINA DI GRANO TENERO, VINO ROSSO, OLIO EXTRAVERGINE DI OLIVA, AMIDO\nMODIFICATO DI TAPIOCA, SALE, SEDANO 0,4%, BRODO VEGETALE (SALE, FECOLA E MALTODESTRINE DI PATATE, ESTRATTO DI LIEVITO, ESTRATTO DI VERDURE – CAROTA,\nCIPOLLA - , OLIO DI SEMI DI GIRASOLE, ESTRATTO DI ERBE AROMATICHE), PEPE BIANCO, AGLIO, SALVIA, BASILICO, AROMI. PASTA FRESCA ALL’ UOVO 15%: SEMOLA DI GRANO DURO, UOVA 27%. SALSA DI POMODORO 9%: POLPA DI POMODORO, CONCENTRATO DI POMODORO, OLIO D’OLIVA, ACQUA, CIPOLLA, AMIDO DI MAIS, POMODORI, SALE, ZUCCHERO, BASILICO, OLIO DI SEMI DI GIRASOLE, PEPERONCINO, PEPE, AROMA.\n\nPUÒ CONTENERE TRACCE DI CROSTACEI, PESCE, SOIA, SENAPE; MOLLUSCHI CONSERVAZIONE\nCONSERVARE IN FRIGORIFERO A TEMPERATURA TRA +0°C E +4°C. UNA VOLTA APERTA LA CONFEZIONE SI CONSIGLIA DI CONSUMARE ENTRO 24 ORE.\nDA CONSUMARE PREVIA COTTURA.\n\nMODALITÀ DI PREPARAZIONE\nIN FORNO: 18 MINUTI A 180°C\nIN FORNO MICROONDE: 4 MINUTI A 750-900W. Nome Prodotto CANNELLONI AL RAGù",
+   "features": "Con solo carne italiana\nTradizionali e gustosi - 4 min in microonde\nUova italiane",
+   "producer_info": "I love cannelloni al ragù\n- Ragù secondo la tradizione con 100% carne scelta italiana\n- Sfoglia tradizionale, ruvida e casereccia, fatta con uova italiane\n- Morbida e gustosa besciamella\n- Con pomodoro 100% italiano\n- Senza conservanti aggiunti - Senza grassi idrogenati",
+   "recycling_other": "Smaltisci così\nCos'è - Dove va\nIncarto esterno - PAP 21 - Raccolta carta\nVaschetta e Pellicola - PET 1 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "716821#0",
+  "product_id": "716821",
+  "claim_text": "Citterio per l'ambiente",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Prosciutto toscano dop taglio fresco",
+   "brand": "Citterio",
+   "denomination": "Prosciutto toscano DOP",
+   "features": "Il prosciutto toscano è senza conservanti e senza derivati del latte",
+   "certifications": [
+    "DOP"
+   ],
+   "recycling_other": "Citterio per l'ambiente\nO 7 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "45171#0",
+  "product_id": "45171",
+  "claim_text": "VIVI VERDE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Seitan alla piastra",
+   "brand": "Coop",
+   "denomination": "Preparato alimentare a base di glutine di frumento e farina",
+   "features": "Bio\n- Ad alto contenuto di proteine\n2 Porzioni",
+   "producer_info": "Il prodotto non contiene proteine di origine animale",
+   "certifications": [
+    "BIOLOGICO",
+    "FOREST STEWARDSHIP COUNCIL",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Etichetta Ambientale\nAstuccio - Cartoncino - PAP21 - Raccolta carta\nInvolucro - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "45171#1",
+  "product_id": "45171",
+  "claim_text": "Etichetta Ambientale",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": "mandatory_disclosure",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Seitan alla piastra",
+   "brand": "Coop",
+   "denomination": "Preparato alimentare a base di glutine di frumento e farina",
+   "features": "Bio\n- Ad alto contenuto di proteine\n2 Porzioni",
+   "producer_info": "Il prodotto non contiene proteine di origine animale",
+   "certifications": [
+    "BIOLOGICO",
+    "FOREST STEWARDSHIP COUNCIL",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Etichetta Ambientale\nAstuccio - Cartoncino - PAP21 - Raccolta carta\nInvolucro - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "709781#0",
+  "product_id": "709781",
+  "claim_text": "prodotto con metodo tradizionale in caldaie di rame",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Formaggio grattugiato italiano",
+   "brand": "Granarolo",
+   "denomination": "Formaggio a pasta dura stagionato da latte crudo italiano",
+   "features": "Apri e chiudi\nFatto con latte della nostra filiera\nStagionatura 10 mesi\nNaturalmente senza lattosio*\nNaturalmente ricco in proteine\nSenza conservanti\n*Lattosio inferiore <0,01% dovuto al processo di fabbricazione. Contiene galattosio <0,5%",
+   "producer_info": "Grattugiato italiano\nQuesto grattugiato deriva dalla forma formaggio duro italiano Granarolo quattrocento. Ogni forma è fatta con oltre 400 litri di latte italiano della nostra filiera Granarolo e viene prodotto con metodo tradizionale in caldaie di rame.\nLa sua stagionatura di 10 mesi, che avviene su assi di legno, gli dona un sapore dolce e gustoso ed è ideale per esaltare ogni tuo piatto. Senza lisozima dell'uovo.\nAdatto a una alimentazione vegetariana.",
+   "life_style": "Idoneo ai vegetariani",
+   "recycling_other": "Busta - 7 - Plastica\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "709781#1",
+  "product_id": "709781",
+  "claim_text": "Fatto con latte della nostra filiera",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Formaggio grattugiato italiano",
+   "brand": "Granarolo",
+   "denomination": "Formaggio a pasta dura stagionato da latte crudo italiano",
+   "features": "Apri e chiudi\nFatto con latte della nostra filiera\nStagionatura 10 mesi\nNaturalmente senza lattosio*\nNaturalmente ricco in proteine\nSenza conservanti\n*Lattosio inferiore <0,01% dovuto al processo di fabbricazione. Contiene galattosio <0,5%",
+   "producer_info": "Grattugiato italiano\nQuesto grattugiato deriva dalla forma formaggio duro italiano Granarolo quattrocento. Ogni forma è fatta con oltre 400 litri di latte italiano della nostra filiera Granarolo e viene prodotto con metodo tradizionale in caldaie di rame.\nLa sua stagionatura di 10 mesi, che avviene su assi di legno, gli dona un sapore dolce e gustoso ed è ideale per esaltare ogni tuo piatto. Senza lisozima dell'uovo.\nAdatto a una alimentazione vegetariana.",
+   "life_style": "Idoneo ai vegetariani",
+   "recycling_other": "Busta - 7 - Plastica\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "552334#0",
+  "product_id": "552334",
+  "claim_text": "Alta digeribilità",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Burrata burratina senza lattosio",
+   "brand": "Coop",
+   "denomination": "Formaggio fresco a pasta filata con crema di latte, senza lattosio",
+   "features": "<0,01% di lattosio\nAlta digeribilità",
+   "producer_info": "Il prodotto contiene glucosio e galattosio in conseguenza della scissione del lattosio",
+   "certifications": [
+    "BENE SI'",
+    "SENZA LATTOSIO"
+   ],
+   "recycling_other": "Coop per l'ambiente\nCos'è - Vaschetta - Plastica - PS 6 | Dove va - Raccolta plastica\nCos'è - Top - Plastica - 07 | Dove va - Raccolta plastica\nCos'è - Nastro - Plastica - PP 5 | Dove va - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "552334#1",
+  "product_id": "552334",
+  "claim_text": "BENE SI'",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Burrata burratina senza lattosio",
+   "brand": "Coop",
+   "denomination": "Formaggio fresco a pasta filata con crema di latte, senza lattosio",
+   "features": "<0,01% di lattosio\nAlta digeribilità",
+   "producer_info": "Il prodotto contiene glucosio e galattosio in conseguenza della scissione del lattosio",
+   "certifications": [
+    "BENE SI'",
+    "SENZA LATTOSIO"
+   ],
+   "recycling_other": "Coop per l'ambiente\nCos'è - Vaschetta - Plastica - PS 6 | Dove va - Raccolta plastica\nCos'è - Top - Plastica - 07 | Dove va - Raccolta plastica\nCos'è - Nastro - Plastica - PP 5 | Dove va - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "552334#2",
+  "product_id": "552334",
+  "claim_text": "Coop per l'ambiente",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Burrata burratina senza lattosio",
+   "brand": "Coop",
+   "denomination": "Formaggio fresco a pasta filata con crema di latte, senza lattosio",
+   "features": "<0,01% di lattosio\nAlta digeribilità",
+   "producer_info": "Il prodotto contiene glucosio e galattosio in conseguenza della scissione del lattosio",
+   "certifications": [
+    "BENE SI'",
+    "SENZA LATTOSIO"
+   ],
+   "recycling_other": "Coop per l'ambiente\nCos'è - Vaschetta - Plastica - PS 6 | Dove va - Raccolta plastica\nCos'è - Top - Plastica - 07 | Dove va - Raccolta plastica\nCos'è - Nastro - Plastica - PP 5 | Dove va - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "429528#0",
+  "product_id": "429528",
+  "claim_text": "il formaggio greco più antico, risalente all'età omerica",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Feta DOP",
+   "brand": "Coop",
+   "denomination": "Formaggio Feta D.O.P.",
+   "features": "Prodotta in Grecia secondo metodo tradizionale\nDenominazione d'Origine Protetta",
+   "producer_info": "\"La feta è il formaggio greco più antico, risalente all'età omerica. È un formaggio bianco, prodotto con latte di pecora e capra. Una volta assaggiata questa raffinatezza greca sarete colpiti dal suo ricco e piacevole gusto.\"",
+   "certifications": [
+    "DOP",
+    "FIOR FIORE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nCoperchio e vaschetta - Plastica - PP 5 - Raccolta plastica\nFilm interno - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "429528#1",
+  "product_id": "429528",
+  "claim_text": "FIOR FIORE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Feta DOP",
+   "brand": "Coop",
+   "denomination": "Formaggio Feta D.O.P.",
+   "features": "Prodotta in Grecia secondo metodo tradizionale\nDenominazione d'Origine Protetta",
+   "producer_info": "\"La feta è il formaggio greco più antico, risalente all'età omerica. È un formaggio bianco, prodotto con latte di pecora e capra. Una volta assaggiata questa raffinatezza greca sarete colpiti dal suo ricco e piacevole gusto.\"",
+   "certifications": [
+    "DOP",
+    "FIOR FIORE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nCoperchio e vaschetta - Plastica - PP 5 - Raccolta plastica\nFilm interno - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "429528#2",
+  "product_id": "429528",
+  "claim_text": "Etichetta Ambientale",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": "mandatory_disclosure",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Feta DOP",
+   "brand": "Coop",
+   "denomination": "Formaggio Feta D.O.P.",
+   "features": "Prodotta in Grecia secondo metodo tradizionale\nDenominazione d'Origine Protetta",
+   "producer_info": "\"La feta è il formaggio greco più antico, risalente all'età omerica. È un formaggio bianco, prodotto con latte di pecora e capra. Una volta assaggiata questa raffinatezza greca sarete colpiti dal suo ricco e piacevole gusto.\"",
+   "certifications": [
+    "DOP",
+    "FIOR FIORE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nCoperchio e vaschetta - Plastica - PP 5 - Raccolta plastica\nFilm interno - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "55274#0",
+  "product_id": "55274",
+  "claim_text": "Salume tipico artigianale della Puglia",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Capocollo di martina franca",
+   "brand": "Artigiani di Bottega",
+   "denomination": "Capocollo di Martina Franca\nSalume tipico artigianale della Puglia",
+   "features": "Salumificio Santoro Cisternino Brindisi",
+   "producer_info": "Conosciuto ed apprezzato già nel XVII secolo è il salume tipico della Valle d'Itria, nel comprensorio dei trulli, dove viene prodotto con metodi artigianali",
+   "recycling_other": "O 07"
+  }
+ },
+ {
+  "uid": "55274#1",
+  "product_id": "55274",
+  "claim_text": "Conosciuto ed apprezzato già nel XVII secolo",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "two_part_verification_required"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Capocollo di martina franca",
+   "brand": "Artigiani di Bottega",
+   "denomination": "Capocollo di Martina Franca\nSalume tipico artigianale della Puglia",
+   "features": "Salumificio Santoro Cisternino Brindisi",
+   "producer_info": "Conosciuto ed apprezzato già nel XVII secolo è il salume tipico della Valle d'Itria, nel comprensorio dei trulli, dove viene prodotto con metodi artigianali",
+   "recycling_other": "O 07"
+  }
+ },
+ {
+  "uid": "55274#2",
+  "product_id": "55274",
+  "claim_text": "prodotto con metodi artigianali",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Capocollo di martina franca",
+   "brand": "Artigiani di Bottega",
+   "denomination": "Capocollo di Martina Franca\nSalume tipico artigianale della Puglia",
+   "features": "Salumificio Santoro Cisternino Brindisi",
+   "producer_info": "Conosciuto ed apprezzato già nel XVII secolo è il salume tipico della Valle d'Itria, nel comprensorio dei trulli, dove viene prodotto con metodi artigianali",
+   "recycling_other": "O 07"
+  }
+ },
+ {
+  "uid": "142195#0",
+  "product_id": "142195",
+  "claim_text": "Eco pack 100% riciclabile - Con meno plastica",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tomini aromatici",
+   "brand": "Caseificio Pezzana",
+   "denomination": "Tomini aromatici\nFormaggio fresco con spezie ed erbe aromatiche",
+   "features": "Tomini freschi\nEco pack 100% riciclabile - Con meno plastica\nLatte italiano",
+   "recycling_other": "Vaschetta + Film - Plastica (PP 5)\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "665410#0",
+  "product_id": "665410",
+  "claim_text": "FIOR FIORE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Gorgonzola DOP dolce al cucchiaio",
+   "brand": "Coop",
+   "denomination": "Gorgonzola DOP Dolce Fior Fiore",
+   "features": "Naturalmente privo di lattosio*\nDenominazione d'Origine Protetta\n*(tenore residuo di lattosio <0,1 g/100 g). L'assenza di lattosio è conseguenza \"naturale\" del tipico processo dal quale si ottiene il prodotto. Contiene galattosio",
+   "certifications": [
+    "DOP",
+    "FIOR FIORE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nVaschetta e top - Plastica - PET 1 - Raccolta plastica\nEtichetta - Carta - PAP 20 - Raccolta carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "665410#1",
+  "product_id": "665410",
+  "claim_text": "Etichetta Ambientale",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": "mandatory_disclosure",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Gorgonzola DOP dolce al cucchiaio",
+   "brand": "Coop",
+   "denomination": "Gorgonzola DOP Dolce Fior Fiore",
+   "features": "Naturalmente privo di lattosio*\nDenominazione d'Origine Protetta\n*(tenore residuo di lattosio <0,1 g/100 g). L'assenza di lattosio è conseguenza \"naturale\" del tipico processo dal quale si ottiene il prodotto. Contiene galattosio",
+   "certifications": [
+    "DOP",
+    "FIOR FIORE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nVaschetta e top - Plastica - PET 1 - Raccolta plastica\nEtichetta - Carta - PAP 20 - Raccolta carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "54957#0",
+  "product_id": "54957",
+  "claim_text": "Cottura lenta materie prime selezionate",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Prosciutto cotto alle erbe grigliato alta qualità",
+   "brand": "Lenti",
+   "denomination": "Prosciutto Cotto alle Erbe Grigliato Alta Qualità 100% italiano",
+   "features": "Cottura lenta materie prime selezionate\nSenza glutine\nNo latte e derivati\nNo ingredienti OGM\nNo glutammato",
+   "producer_info": "Senza glutine",
+   "recycling_other": "Vaschetta e laminato - 7 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "58406#0",
+  "product_id": "58406",
+  "claim_text": "Il calcio contribuisce alla normale funzione muscolare",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "eu_authorized_wording",
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": "eu_authorized_optional_claim",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Formaggio primo sale",
+   "brand": "Fattorie Osella",
+   "denomination": "Formaggio Fresco Primosale senza lattosio",
+   "features": "Il calcio contribuisce alla normale funzione muscolare\nLe proteine contribuiscono al mantenimento della massa muscolare\nLatte da filiera italiana*\nRicca in calcio\nFonte naturale di proteine\nSenza conservanti\n*Latte da allevamenti Piemontesi (cert. CSQA ISO 22005 n.52626) conformi allo standard DTP122 per il benessere animale (cert. CSQA n.52667)",
+   "producer_info": "Il prodotto è destinato a persone intolleranti al lattosio, perchè il lattosio del latte è stato scisso in galattosio e glucosio.\nadatto ai vegetariani\nConsuma il prodotto all'interno di una dieta varia e bilanciata e di uno stile di vita sano.",
+   "certifications": [
+    "SENZA LATTOSIO"
+   ],
+   "life_style": [
+    "Idoneo agli intolleranti al lattosio",
+    "Idoneo ai vegetariani"
+   ],
+   "recycling_other": "Dove lo butto?\nPellicola - 7 - Plastica\nVaschetta - PP 5 - Raccolta plastica\nIncarto interno - PAP 22 - Raccolta carta\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "58406#1",
+  "product_id": "58406",
+  "claim_text": "Le proteine contribuiscono al mantenimento della massa muscolare",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "eu_authorized_wording",
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": "eu_authorized_optional_claim",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Formaggio primo sale",
+   "brand": "Fattorie Osella",
+   "denomination": "Formaggio Fresco Primosale senza lattosio",
+   "features": "Il calcio contribuisce alla normale funzione muscolare\nLe proteine contribuiscono al mantenimento della massa muscolare\nLatte da filiera italiana*\nRicca in calcio\nFonte naturale di proteine\nSenza conservanti\n*Latte da allevamenti Piemontesi (cert. CSQA ISO 22005 n.52626) conformi allo standard DTP122 per il benessere animale (cert. CSQA n.52667)",
+   "producer_info": "Il prodotto è destinato a persone intolleranti al lattosio, perchè il lattosio del latte è stato scisso in galattosio e glucosio.\nadatto ai vegetariani\nConsuma il prodotto all'interno di una dieta varia e bilanciata e di uno stile di vita sano.",
+   "certifications": [
+    "SENZA LATTOSIO"
+   ],
+   "life_style": [
+    "Idoneo agli intolleranti al lattosio",
+    "Idoneo ai vegetariani"
+   ],
+   "recycling_other": "Dove lo butto?\nPellicola - 7 - Plastica\nVaschetta - PP 5 - Raccolta plastica\nIncarto interno - PAP 22 - Raccolta carta\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "58406#2",
+  "product_id": "58406",
+  "claim_text": "Ricca in calcio",
+  "v1_category": "nutrition_content_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Formaggio primo sale",
+   "brand": "Fattorie Osella",
+   "denomination": "Formaggio Fresco Primosale senza lattosio",
+   "features": "Il calcio contribuisce alla normale funzione muscolare\nLe proteine contribuiscono al mantenimento della massa muscolare\nLatte da filiera italiana*\nRicca in calcio\nFonte naturale di proteine\nSenza conservanti\n*Latte da allevamenti Piemontesi (cert. CSQA ISO 22005 n.52626) conformi allo standard DTP122 per il benessere animale (cert. CSQA n.52667)",
+   "producer_info": "Il prodotto è destinato a persone intolleranti al lattosio, perchè il lattosio del latte è stato scisso in galattosio e glucosio.\nadatto ai vegetariani\nConsuma il prodotto all'interno di una dieta varia e bilanciata e di uno stile di vita sano.",
+   "certifications": [
+    "SENZA LATTOSIO"
+   ],
+   "life_style": [
+    "Idoneo agli intolleranti al lattosio",
+    "Idoneo ai vegetariani"
+   ],
+   "recycling_other": "Dove lo butto?\nPellicola - 7 - Plastica\nVaschetta - PP 5 - Raccolta plastica\nIncarto interno - PAP 22 - Raccolta carta\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "58406#3",
+  "product_id": "58406",
+  "claim_text": "Fonte naturale di proteine",
+  "v1_category": "nutrition_content_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Formaggio primo sale",
+   "brand": "Fattorie Osella",
+   "denomination": "Formaggio Fresco Primosale senza lattosio",
+   "features": "Il calcio contribuisce alla normale funzione muscolare\nLe proteine contribuiscono al mantenimento della massa muscolare\nLatte da filiera italiana*\nRicca in calcio\nFonte naturale di proteine\nSenza conservanti\n*Latte da allevamenti Piemontesi (cert. CSQA ISO 22005 n.52626) conformi allo standard DTP122 per il benessere animale (cert. CSQA n.52667)",
+   "producer_info": "Il prodotto è destinato a persone intolleranti al lattosio, perchè il lattosio del latte è stato scisso in galattosio e glucosio.\nadatto ai vegetariani\nConsuma il prodotto all'interno di una dieta varia e bilanciata e di uno stile di vita sano.",
+   "certifications": [
+    "SENZA LATTOSIO"
+   ],
+   "life_style": [
+    "Idoneo agli intolleranti al lattosio",
+    "Idoneo ai vegetariani"
+   ],
+   "recycling_other": "Dove lo butto?\nPellicola - 7 - Plastica\nVaschetta - PP 5 - Raccolta plastica\nIncarto interno - PAP 22 - Raccolta carta\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "569248#0",
+  "product_id": "569248",
+  "claim_text": "da allevamenti prevalentemente piccoli e a conduzione familiare dove le mucche rappresentato il bene più prezioso",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Latte fresco alta qualità 100% toscano",
+   "brand": "Mukki",
+   "denomination": "Latte fresco pastorizzato intero di Alta Qualità",
+   "features": "100% Latte toscano\nBenessere Animale da filiera certificata 100% toscana\nLatte intero di Alta Qualità",
+   "producer_info": "Fresco, toscano da filiera certificata\nNel latte fresco la materia prima viene selezionata a lavorata entro massimo 48 ore dalla mungitura, preservandone così gusto e qualità.\nQuesto latte nasce qui, in Toscana, da allevamenti prevalentemente piccoli e a conduzione familiare dove le mucche rappresentato il bene più prezioso.\nProprio per questo, il 100% delle aziende agricole conferenti ha ottenuto la Certificazione di Filiera con Benessere Animale (valutazione ClassyFarm in riferimento alle bovine da latte) che prevede il rispetto di rigorosi paramentri nella cura e gestione delle nostre amate mucche.\nL'eccellenza del nostro latte parte proprio da qui.\nTutto è controllato nei dettagli, delle condizioni ambientali, agli spazi e giacigli, fino alla cura dell'igiene e dell'alimentazione.\nScopri di più su www.mukki.it\nEco\nNaturale dentro e fuori!\nil latte amico dell'ambiente\nQuesta confezione proviene esclusivamente da fonti rinnovabili di origine vegetale ed è a Zero Emissioni CO2.\nIl tappo e la plastica sono ricavati dalla canna da zucchero, una risorsa che opportunamente gestita ricresce all'infinito.\nLa carta utilizzata è certificata e proviene da foreste gestite nel rispetto di rigorosi standard ambientali sociali ed economici.",
+   "recycling_other": "HDPE 2 - Tappo - Plastica\nC/PAP81 - Confezione - Carta\nRaccolta differenziata\nSegui le regole del tuo Comune per un corretto smaltimento www.tiriciclo.it"
+  }
+ },
+ {
+  "uid": "569248#1",
+  "product_id": "569248",
+  "claim_text": "il 100% delle aziende agricole conferenti ha ottenuto la Certificazione di Filiera con Benessere Animale (valutazione ClassyFarm)",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Latte fresco alta qualità 100% toscano",
+   "brand": "Mukki",
+   "denomination": "Latte fresco pastorizzato intero di Alta Qualità",
+   "features": "100% Latte toscano\nBenessere Animale da filiera certificata 100% toscana\nLatte intero di Alta Qualità",
+   "producer_info": "Fresco, toscano da filiera certificata\nNel latte fresco la materia prima viene selezionata a lavorata entro massimo 48 ore dalla mungitura, preservandone così gusto e qualità.\nQuesto latte nasce qui, in Toscana, da allevamenti prevalentemente piccoli e a conduzione familiare dove le mucche rappresentato il bene più prezioso.\nProprio per questo, il 100% delle aziende agricole conferenti ha ottenuto la Certificazione di Filiera con Benessere Animale (valutazione ClassyFarm in riferimento alle bovine da latte) che prevede il rispetto di rigorosi paramentri nella cura e gestione delle nostre amate mucche.\nL'eccellenza del nostro latte parte proprio da qui.\nTutto è controllato nei dettagli, delle condizioni ambientali, agli spazi e giacigli, fino alla cura dell'igiene e dell'alimentazione.\nScopri di più su www.mukki.it\nEco\nNaturale dentro e fuori!\nil latte amico dell'ambiente\nQuesta confezione proviene esclusivamente da fonti rinnovabili di origine vegetale ed è a Zero Emissioni CO2.\nIl tappo e la plastica sono ricavati dalla canna da zucchero, una risorsa che opportunamente gestita ricresce all'infinito.\nLa carta utilizzata è certificata e proviene da foreste gestite nel rispetto di rigorosi standard ambientali sociali ed economici.",
+   "recycling_other": "HDPE 2 - Tappo - Plastica\nC/PAP81 - Confezione - Carta\nRaccolta differenziata\nSegui le regole del tuo Comune per un corretto smaltimento www.tiriciclo.it"
+  }
+ },
+ {
+  "uid": "569248#2",
+  "product_id": "569248",
+  "claim_text": "il latte amico dell'ambiente",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Latte fresco alta qualità 100% toscano",
+   "brand": "Mukki",
+   "denomination": "Latte fresco pastorizzato intero di Alta Qualità",
+   "features": "100% Latte toscano\nBenessere Animale da filiera certificata 100% toscana\nLatte intero di Alta Qualità",
+   "producer_info": "Fresco, toscano da filiera certificata\nNel latte fresco la materia prima viene selezionata a lavorata entro massimo 48 ore dalla mungitura, preservandone così gusto e qualità.\nQuesto latte nasce qui, in Toscana, da allevamenti prevalentemente piccoli e a conduzione familiare dove le mucche rappresentato il bene più prezioso.\nProprio per questo, il 100% delle aziende agricole conferenti ha ottenuto la Certificazione di Filiera con Benessere Animale (valutazione ClassyFarm in riferimento alle bovine da latte) che prevede il rispetto di rigorosi paramentri nella cura e gestione delle nostre amate mucche.\nL'eccellenza del nostro latte parte proprio da qui.\nTutto è controllato nei dettagli, delle condizioni ambientali, agli spazi e giacigli, fino alla cura dell'igiene e dell'alimentazione.\nScopri di più su www.mukki.it\nEco\nNaturale dentro e fuori!\nil latte amico dell'ambiente\nQuesta confezione proviene esclusivamente da fonti rinnovabili di origine vegetale ed è a Zero Emissioni CO2.\nIl tappo e la plastica sono ricavati dalla canna da zucchero, una risorsa che opportunamente gestita ricresce all'infinito.\nLa carta utilizzata è certificata e proviene da foreste gestite nel rispetto di rigorosi standard ambientali sociali ed economici.",
+   "recycling_other": "HDPE 2 - Tappo - Plastica\nC/PAP81 - Confezione - Carta\nRaccolta differenziata\nSegui le regole del tuo Comune per un corretto smaltimento www.tiriciclo.it"
+  }
+ },
+ {
+  "uid": "569248#3",
+  "product_id": "569248",
+  "claim_text": "Questa confezione proviene esclusivamente da fonti rinnovabili di origine vegetale ed è a Zero Emissioni CO2",
+  "v1_category": "offset_based_neutrality",
+  "v1_risk": "HIGH",
+  "v1_modifiers": [
+   "annex_i_blacklist_per_se"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Latte fresco alta qualità 100% toscano",
+   "brand": "Mukki",
+   "denomination": "Latte fresco pastorizzato intero di Alta Qualità",
+   "features": "100% Latte toscano\nBenessere Animale da filiera certificata 100% toscana\nLatte intero di Alta Qualità",
+   "producer_info": "Fresco, toscano da filiera certificata\nNel latte fresco la materia prima viene selezionata a lavorata entro massimo 48 ore dalla mungitura, preservandone così gusto e qualità.\nQuesto latte nasce qui, in Toscana, da allevamenti prevalentemente piccoli e a conduzione familiare dove le mucche rappresentato il bene più prezioso.\nProprio per questo, il 100% delle aziende agricole conferenti ha ottenuto la Certificazione di Filiera con Benessere Animale (valutazione ClassyFarm in riferimento alle bovine da latte) che prevede il rispetto di rigorosi paramentri nella cura e gestione delle nostre amate mucche.\nL'eccellenza del nostro latte parte proprio da qui.\nTutto è controllato nei dettagli, delle condizioni ambientali, agli spazi e giacigli, fino alla cura dell'igiene e dell'alimentazione.\nScopri di più su www.mukki.it\nEco\nNaturale dentro e fuori!\nil latte amico dell'ambiente\nQuesta confezione proviene esclusivamente da fonti rinnovabili di origine vegetale ed è a Zero Emissioni CO2.\nIl tappo e la plastica sono ricavati dalla canna da zucchero, una risorsa che opportunamente gestita ricresce all'infinito.\nLa carta utilizzata è certificata e proviene da foreste gestite nel rispetto di rigorosi standard ambientali sociali ed economici.",
+   "recycling_other": "HDPE 2 - Tappo - Plastica\nC/PAP81 - Confezione - Carta\nRaccolta differenziata\nSegui le regole del tuo Comune per un corretto smaltimento www.tiriciclo.it"
+  }
+ },
+ {
+  "uid": "569248#4",
+  "product_id": "569248",
+  "claim_text": "Il tappo e la plastica sono ricavati dalla canna da zucchero, una risorsa che opportunamente gestita ricresce all'infinito",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Latte fresco alta qualità 100% toscano",
+   "brand": "Mukki",
+   "denomination": "Latte fresco pastorizzato intero di Alta Qualità",
+   "features": "100% Latte toscano\nBenessere Animale da filiera certificata 100% toscana\nLatte intero di Alta Qualità",
+   "producer_info": "Fresco, toscano da filiera certificata\nNel latte fresco la materia prima viene selezionata a lavorata entro massimo 48 ore dalla mungitura, preservandone così gusto e qualità.\nQuesto latte nasce qui, in Toscana, da allevamenti prevalentemente piccoli e a conduzione familiare dove le mucche rappresentato il bene più prezioso.\nProprio per questo, il 100% delle aziende agricole conferenti ha ottenuto la Certificazione di Filiera con Benessere Animale (valutazione ClassyFarm in riferimento alle bovine da latte) che prevede il rispetto di rigorosi paramentri nella cura e gestione delle nostre amate mucche.\nL'eccellenza del nostro latte parte proprio da qui.\nTutto è controllato nei dettagli, delle condizioni ambientali, agli spazi e giacigli, fino alla cura dell'igiene e dell'alimentazione.\nScopri di più su www.mukki.it\nEco\nNaturale dentro e fuori!\nil latte amico dell'ambiente\nQuesta confezione proviene esclusivamente da fonti rinnovabili di origine vegetale ed è a Zero Emissioni CO2.\nIl tappo e la plastica sono ricavati dalla canna da zucchero, una risorsa che opportunamente gestita ricresce all'infinito.\nLa carta utilizzata è certificata e proviene da foreste gestite nel rispetto di rigorosi standard ambientali sociali ed economici.",
+   "recycling_other": "HDPE 2 - Tappo - Plastica\nC/PAP81 - Confezione - Carta\nRaccolta differenziata\nSegui le regole del tuo Comune per un corretto smaltimento www.tiriciclo.it"
+  }
+ },
+ {
+  "uid": "569248#5",
+  "product_id": "569248",
+  "claim_text": "La carta utilizzata è certificata e proviene da foreste gestite nel rispetto di rigorosi standard ambientali sociali ed economici",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Latte fresco alta qualità 100% toscano",
+   "brand": "Mukki",
+   "denomination": "Latte fresco pastorizzato intero di Alta Qualità",
+   "features": "100% Latte toscano\nBenessere Animale da filiera certificata 100% toscana\nLatte intero di Alta Qualità",
+   "producer_info": "Fresco, toscano da filiera certificata\nNel latte fresco la materia prima viene selezionata a lavorata entro massimo 48 ore dalla mungitura, preservandone così gusto e qualità.\nQuesto latte nasce qui, in Toscana, da allevamenti prevalentemente piccoli e a conduzione familiare dove le mucche rappresentato il bene più prezioso.\nProprio per questo, il 100% delle aziende agricole conferenti ha ottenuto la Certificazione di Filiera con Benessere Animale (valutazione ClassyFarm in riferimento alle bovine da latte) che prevede il rispetto di rigorosi paramentri nella cura e gestione delle nostre amate mucche.\nL'eccellenza del nostro latte parte proprio da qui.\nTutto è controllato nei dettagli, delle condizioni ambientali, agli spazi e giacigli, fino alla cura dell'igiene e dell'alimentazione.\nScopri di più su www.mukki.it\nEco\nNaturale dentro e fuori!\nil latte amico dell'ambiente\nQuesta confezione proviene esclusivamente da fonti rinnovabili di origine vegetale ed è a Zero Emissioni CO2.\nIl tappo e la plastica sono ricavati dalla canna da zucchero, una risorsa che opportunamente gestita ricresce all'infinito.\nLa carta utilizzata è certificata e proviene da foreste gestite nel rispetto di rigorosi standard ambientali sociali ed economici.",
+   "recycling_other": "HDPE 2 - Tappo - Plastica\nC/PAP81 - Confezione - Carta\nRaccolta differenziata\nSegui le regole del tuo Comune per un corretto smaltimento www.tiriciclo.it"
+  }
+ },
+ {
+  "uid": "603657#0",
+  "product_id": "603657",
+  "claim_text": "Il latte è una fonte naturale di Calcio, necessario per il mantenimento di ossa e denti normali",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "eu_authorized_wording",
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": "eu_authorized_optional_claim",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Latte fresco parzialmente scremato",
+   "brand": "Carnini",
+   "denomination": "Latte parzialmente scremato pastorizzato a temperatura elevata da agricoltura biologica",
+   "features": "100% Italiano",
+   "producer_info": "Il latte è una fonte naturale di Calcio, necessario per il mantenimento di ossa e denti normali.\nCarnini Bio ti ricorda l'importanza di una dieta varia ed equilibrata e uno stile di vita sano.\nQuesta confezione è riciclabile\nChiedi al tuo comune come raccoglierla e proteggi l'ambiente insieme a noi!\nRipiegala prima di metterla nella differenziata\nEmissioni zero\nQuesta confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione, supportando progetti ad alto valore ambientale, etico e sociale.",
+   "certifications": [
+    "BIOLOGICO"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Tappo - HDPE 2 - Plastica\nContenitore - C/PAP 81 - Carta\nRaccolta differenziata: verifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "603657#1",
+  "product_id": "603657",
+  "claim_text": "Emissioni zero / Questa confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione",
+  "v1_category": "offset_based_neutrality",
+  "v1_risk": "HIGH",
+  "v1_modifiers": [
+   "annex_i_blacklist_per_se"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Latte fresco parzialmente scremato",
+   "brand": "Carnini",
+   "denomination": "Latte parzialmente scremato pastorizzato a temperatura elevata da agricoltura biologica",
+   "features": "100% Italiano",
+   "producer_info": "Il latte è una fonte naturale di Calcio, necessario per il mantenimento di ossa e denti normali.\nCarnini Bio ti ricorda l'importanza di una dieta varia ed equilibrata e uno stile di vita sano.\nQuesta confezione è riciclabile\nChiedi al tuo comune come raccoglierla e proteggi l'ambiente insieme a noi!\nRipiegala prima di metterla nella differenziata\nEmissioni zero\nQuesta confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione, supportando progetti ad alto valore ambientale, etico e sociale.",
+   "certifications": [
+    "BIOLOGICO"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Tappo - HDPE 2 - Plastica\nContenitore - C/PAP 81 - Carta\nRaccolta differenziata: verifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "612212#0",
+  "product_id": "612212",
+  "claim_text": "Bottiglia 50% plastica riciclata",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Albume d'uovo",
+   "brand": "Coop",
+   "denomination": "Albume d'uovo biologico pastorizzato",
+   "description": "Albume d'uovo biologico pastorizzato\nda galline italiane allevate senza uso di antibiotici",
+   "features": "Bio\nNaturalmente ricco di proteine\nBottiglia 50% plastica riciclata",
+   "producer_info": "Particolarmente adatto per gli sportivi e per chi segue una dieta bilanciata ma senza rinunciare al gusto.\nDa galline italiane allevate senza uso di antibiotici*\n*Il processo produttivo non prevede l'uso di antibiotici.",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Etichetta Ambientale\nBottiglia - PET 1 - Raccolta plastica\nEtichetta - Plastica - 7 - Raccolta plastica\nTappo - HDPE 2 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "612212#1",
+  "product_id": "612212",
+  "claim_text": "Naturalmente ricco di proteine",
+  "v1_category": "nutrition_content_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Albume d'uovo",
+   "brand": "Coop",
+   "denomination": "Albume d'uovo biologico pastorizzato",
+   "description": "Albume d'uovo biologico pastorizzato\nda galline italiane allevate senza uso di antibiotici",
+   "features": "Bio\nNaturalmente ricco di proteine\nBottiglia 50% plastica riciclata",
+   "producer_info": "Particolarmente adatto per gli sportivi e per chi segue una dieta bilanciata ma senza rinunciare al gusto.\nDa galline italiane allevate senza uso di antibiotici*\n*Il processo produttivo non prevede l'uso di antibiotici.",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Etichetta Ambientale\nBottiglia - PET 1 - Raccolta plastica\nEtichetta - Plastica - 7 - Raccolta plastica\nTappo - HDPE 2 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "612212#2",
+  "product_id": "612212",
+  "claim_text": "VIVI VERDE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Albume d'uovo",
+   "brand": "Coop",
+   "denomination": "Albume d'uovo biologico pastorizzato",
+   "description": "Albume d'uovo biologico pastorizzato\nda galline italiane allevate senza uso di antibiotici",
+   "features": "Bio\nNaturalmente ricco di proteine\nBottiglia 50% plastica riciclata",
+   "producer_info": "Particolarmente adatto per gli sportivi e per chi segue una dieta bilanciata ma senza rinunciare al gusto.\nDa galline italiane allevate senza uso di antibiotici*\n*Il processo produttivo non prevede l'uso di antibiotici.",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Etichetta Ambientale\nBottiglia - PET 1 - Raccolta plastica\nEtichetta - Plastica - 7 - Raccolta plastica\nTappo - HDPE 2 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "612212#3",
+  "product_id": "612212",
+  "claim_text": "Etichetta Ambientale",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": "mandatory_disclosure",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Albume d'uovo",
+   "brand": "Coop",
+   "denomination": "Albume d'uovo biologico pastorizzato",
+   "description": "Albume d'uovo biologico pastorizzato\nda galline italiane allevate senza uso di antibiotici",
+   "features": "Bio\nNaturalmente ricco di proteine\nBottiglia 50% plastica riciclata",
+   "producer_info": "Particolarmente adatto per gli sportivi e per chi segue una dieta bilanciata ma senza rinunciare al gusto.\nDa galline italiane allevate senza uso di antibiotici*\n*Il processo produttivo non prevede l'uso di antibiotici.",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Etichetta Ambientale\nBottiglia - PET 1 - Raccolta plastica\nEtichetta - Plastica - 7 - Raccolta plastica\nTappo - HDPE 2 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "609831#0",
+  "product_id": "609831",
+  "claim_text": "le capre sono allevate nel rispetto del benessere animale",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Yogurt intero di capra",
+   "brand": "Bìobì",
+   "description": "Questo yogurt viene prodotto nella nostra azienda agricola situata nel cuore delle colline Ovadesi, dove, a ciclo chiuso, coltiviamo la terra, alleviamo le nostre amate capre camosciate e trasformiamo giornalmente con cura il latte in vari prodotti. I nostri valori aziendali sono semplici: le capre sono allevate nel rispetto del benessere animale, proteggendo la natura in cui vivono, da cui creiamo prodotti di massima qualità mantenendo l'artigianalità, il tutto gestito con ecosostenibilità.",
+   "producer_info": "Yogurt intero di capra.",
+   "certifications": [
+    "BIOLOGICO",
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "609831#1",
+  "product_id": "609831",
+  "claim_text": "proteggendo la natura in cui vivono",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Yogurt intero di capra",
+   "brand": "Bìobì",
+   "description": "Questo yogurt viene prodotto nella nostra azienda agricola situata nel cuore delle colline Ovadesi, dove, a ciclo chiuso, coltiviamo la terra, alleviamo le nostre amate capre camosciate e trasformiamo giornalmente con cura il latte in vari prodotti. I nostri valori aziendali sono semplici: le capre sono allevate nel rispetto del benessere animale, proteggendo la natura in cui vivono, da cui creiamo prodotti di massima qualità mantenendo l'artigianalità, il tutto gestito con ecosostenibilità.",
+   "producer_info": "Yogurt intero di capra.",
+   "certifications": [
+    "BIOLOGICO",
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "609831#2",
+  "product_id": "609831",
+  "claim_text": "prodotti di massima qualità",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Yogurt intero di capra",
+   "brand": "Bìobì",
+   "description": "Questo yogurt viene prodotto nella nostra azienda agricola situata nel cuore delle colline Ovadesi, dove, a ciclo chiuso, coltiviamo la terra, alleviamo le nostre amate capre camosciate e trasformiamo giornalmente con cura il latte in vari prodotti. I nostri valori aziendali sono semplici: le capre sono allevate nel rispetto del benessere animale, proteggendo la natura in cui vivono, da cui creiamo prodotti di massima qualità mantenendo l'artigianalità, il tutto gestito con ecosostenibilità.",
+   "producer_info": "Yogurt intero di capra.",
+   "certifications": [
+    "BIOLOGICO",
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "609831#3",
+  "product_id": "609831",
+  "claim_text": "mantenendo l'artigianalità",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Yogurt intero di capra",
+   "brand": "Bìobì",
+   "description": "Questo yogurt viene prodotto nella nostra azienda agricola situata nel cuore delle colline Ovadesi, dove, a ciclo chiuso, coltiviamo la terra, alleviamo le nostre amate capre camosciate e trasformiamo giornalmente con cura il latte in vari prodotti. I nostri valori aziendali sono semplici: le capre sono allevate nel rispetto del benessere animale, proteggendo la natura in cui vivono, da cui creiamo prodotti di massima qualità mantenendo l'artigianalità, il tutto gestito con ecosostenibilità.",
+   "producer_info": "Yogurt intero di capra.",
+   "certifications": [
+    "BIOLOGICO",
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "609831#4",
+  "product_id": "609831",
+  "claim_text": "gestito con ecosostenibilità",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Yogurt intero di capra",
+   "brand": "Bìobì",
+   "description": "Questo yogurt viene prodotto nella nostra azienda agricola situata nel cuore delle colline Ovadesi, dove, a ciclo chiuso, coltiviamo la terra, alleviamo le nostre amate capre camosciate e trasformiamo giornalmente con cura il latte in vari prodotti. I nostri valori aziendali sono semplici: le capre sono allevate nel rispetto del benessere animale, proteggendo la natura in cui vivono, da cui creiamo prodotti di massima qualità mantenendo l'artigianalità, il tutto gestito con ecosostenibilità.",
+   "producer_info": "Yogurt intero di capra.",
+   "certifications": [
+    "BIOLOGICO",
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "598057#0",
+  "product_id": "598057",
+  "claim_text": "allevate secondo i metodi alpini tradizionali",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Yogurt extra goloso con caramello salato",
+   "brand": "Merano",
+   "denomination": "Yogurt intero da latte fieno STG (73%) con caramello salato",
+   "features": "Latte Fieno\nCon strato al caramello salato sul fondo",
+   "producer_info": "Cos'é il latte fieno?\nÈ un latte prodotto da mucche che si nutrono di erba fresca, fieno d'alpeggio ed erbe aromatiche, allevate secondo i metodi alpini tradizionali; l'attenzione dedicata all'alimentazione e al benessere delle mucche garantisce una produzione sostenibile in armonia con la natura.\nSenza conservanti.",
+   "recycling_other": "Vasetto in carta riciclabile!\nQuesto vasetto é completamente riciclabile con la carta\nLavalo bene, schiaccialo e gettalo nel contenitore della carta\nRaccolta differenziata:\nVasetto - C/PAP 81 - Carta\nCapsula - C/ALU 90 - Metalli\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "598057#1",
+  "product_id": "598057",
+  "claim_text": "garantisce una produzione sostenibile in armonia con la natura",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Yogurt extra goloso con caramello salato",
+   "brand": "Merano",
+   "denomination": "Yogurt intero da latte fieno STG (73%) con caramello salato",
+   "features": "Latte Fieno\nCon strato al caramello salato sul fondo",
+   "producer_info": "Cos'é il latte fieno?\nÈ un latte prodotto da mucche che si nutrono di erba fresca, fieno d'alpeggio ed erbe aromatiche, allevate secondo i metodi alpini tradizionali; l'attenzione dedicata all'alimentazione e al benessere delle mucche garantisce una produzione sostenibile in armonia con la natura.\nSenza conservanti.",
+   "recycling_other": "Vasetto in carta riciclabile!\nQuesto vasetto é completamente riciclabile con la carta\nLavalo bene, schiaccialo e gettalo nel contenitore della carta\nRaccolta differenziata:\nVasetto - C/PAP 81 - Carta\nCapsula - C/ALU 90 - Metalli\nVerifica le disposizioni del tuo comune"
+  }
+ }
+]

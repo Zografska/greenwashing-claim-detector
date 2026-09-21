@@ -1,0 +1,1103 @@
+[
+ {
+  "uid": "44114#0",
+  "product_id": "44114",
+  "claim_text": "100% Naturale",
+  "v1_category": "misleading_composition_or_ingredient_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Infuso di zenzero e curcuma",
+   "brand": "Pompadour",
+   "denomination": "Mix con zenzero e curcuma per infuso",
+   "features": "50% di zenzero\nSpeziato e Antiossidante**\n100% Naturale\n**Contiene curcuma che possiede proprietà antiossidanti",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone riciclabile\n- Bustina in carta riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile\n- Senza microplastiche\n- Filo in puro cotone\n- Scritta in Braille\n- Emissioni di CO2 ridotte e compensate\nLo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione. La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante. L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.\nQuesto prodotto è naturalmente senza glutine.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - PAP 21 - Carta\nBustina - PAP 22 - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "44114#1",
+  "product_id": "44114",
+  "claim_text": "Speziato e Antiossidante",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "botanical_or_generic_antioxidant_not_on_eu_register"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Infuso di zenzero e curcuma",
+   "brand": "Pompadour",
+   "denomination": "Mix con zenzero e curcuma per infuso",
+   "features": "50% di zenzero\nSpeziato e Antiossidante**\n100% Naturale\n**Contiene curcuma che possiede proprietà antiossidanti",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone riciclabile\n- Bustina in carta riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile\n- Senza microplastiche\n- Filo in puro cotone\n- Scritta in Braille\n- Emissioni di CO2 ridotte e compensate\nLo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione. La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante. L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.\nQuesto prodotto è naturalmente senza glutine.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - PAP 21 - Carta\nBustina - PAP 22 - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "44114#2",
+  "product_id": "44114",
+  "claim_text": "Contiene curcuma che possiede proprietà antiossidanti",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "botanical_or_generic_antioxidant_not_on_eu_register"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Infuso di zenzero e curcuma",
+   "brand": "Pompadour",
+   "denomination": "Mix con zenzero e curcuma per infuso",
+   "features": "50% di zenzero\nSpeziato e Antiossidante**\n100% Naturale\n**Contiene curcuma che possiede proprietà antiossidanti",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone riciclabile\n- Bustina in carta riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile\n- Senza microplastiche\n- Filo in puro cotone\n- Scritta in Braille\n- Emissioni di CO2 ridotte e compensate\nLo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione. La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante. L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.\nQuesto prodotto è naturalmente senza glutine.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - PAP 21 - Carta\nBustina - PAP 22 - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "44114#3",
+  "product_id": "44114",
+  "claim_text": "#unsorsomigliore",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Infuso di zenzero e curcuma",
+   "brand": "Pompadour",
+   "denomination": "Mix con zenzero e curcuma per infuso",
+   "features": "50% di zenzero\nSpeziato e Antiossidante**\n100% Naturale\n**Contiene curcuma che possiede proprietà antiossidanti",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone riciclabile\n- Bustina in carta riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile\n- Senza microplastiche\n- Filo in puro cotone\n- Scritta in Braille\n- Emissioni di CO2 ridotte e compensate\nLo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione. La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante. L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.\nQuesto prodotto è naturalmente senza glutine.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - PAP 21 - Carta\nBustina - PAP 22 - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "44114#4",
+  "product_id": "44114",
+  "claim_text": "Imballi certificati FSC per salvaguardare le foreste",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Infuso di zenzero e curcuma",
+   "brand": "Pompadour",
+   "denomination": "Mix con zenzero e curcuma per infuso",
+   "features": "50% di zenzero\nSpeziato e Antiossidante**\n100% Naturale\n**Contiene curcuma che possiede proprietà antiossidanti",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone riciclabile\n- Bustina in carta riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile\n- Senza microplastiche\n- Filo in puro cotone\n- Scritta in Braille\n- Emissioni di CO2 ridotte e compensate\nLo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione. La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante. L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.\nQuesto prodotto è naturalmente senza glutine.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - PAP 21 - Carta\nBustina - PAP 22 - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "44114#5",
+  "product_id": "44114",
+  "claim_text": "Filtro in cellulosa biodegradabile",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Infuso di zenzero e curcuma",
+   "brand": "Pompadour",
+   "denomination": "Mix con zenzero e curcuma per infuso",
+   "features": "50% di zenzero\nSpeziato e Antiossidante**\n100% Naturale\n**Contiene curcuma che possiede proprietà antiossidanti",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone riciclabile\n- Bustina in carta riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile\n- Senza microplastiche\n- Filo in puro cotone\n- Scritta in Braille\n- Emissioni di CO2 ridotte e compensate\nLo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione. La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante. L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.\nQuesto prodotto è naturalmente senza glutine.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - PAP 21 - Carta\nBustina - PAP 22 - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "44114#6",
+  "product_id": "44114",
+  "claim_text": "Senza microplastiche",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Infuso di zenzero e curcuma",
+   "brand": "Pompadour",
+   "denomination": "Mix con zenzero e curcuma per infuso",
+   "features": "50% di zenzero\nSpeziato e Antiossidante**\n100% Naturale\n**Contiene curcuma che possiede proprietà antiossidanti",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone riciclabile\n- Bustina in carta riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile\n- Senza microplastiche\n- Filo in puro cotone\n- Scritta in Braille\n- Emissioni di CO2 ridotte e compensate\nLo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione. La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante. L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.\nQuesto prodotto è naturalmente senza glutine.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - PAP 21 - Carta\nBustina - PAP 22 - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "44114#7",
+  "product_id": "44114",
+  "claim_text": "Emissioni di CO2 ridotte e compensate",
+  "v1_category": "offset_based_neutrality",
+  "v1_risk": "HIGH",
+  "v1_modifiers": [
+   "annex_i_blacklist_per_se"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Infuso di zenzero e curcuma",
+   "brand": "Pompadour",
+   "denomination": "Mix con zenzero e curcuma per infuso",
+   "features": "50% di zenzero\nSpeziato e Antiossidante**\n100% Naturale\n**Contiene curcuma che possiede proprietà antiossidanti",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone riciclabile\n- Bustina in carta riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile\n- Senza microplastiche\n- Filo in puro cotone\n- Scritta in Braille\n- Emissioni di CO2 ridotte e compensate\nLo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione. La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante. L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.\nQuesto prodotto è naturalmente senza glutine.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - PAP 21 - Carta\nBustina - PAP 22 - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "44114#8",
+  "product_id": "44114",
+  "claim_text": "è un alleato dello stomaco e della digestione",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Infuso di zenzero e curcuma",
+   "brand": "Pompadour",
+   "denomination": "Mix con zenzero e curcuma per infuso",
+   "features": "50% di zenzero\nSpeziato e Antiossidante**\n100% Naturale\n**Contiene curcuma che possiede proprietà antiossidanti",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone riciclabile\n- Bustina in carta riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile\n- Senza microplastiche\n- Filo in puro cotone\n- Scritta in Braille\n- Emissioni di CO2 ridotte e compensate\nLo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione. La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante. L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.\nQuesto prodotto è naturalmente senza glutine.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - PAP 21 - Carta\nBustina - PAP 22 - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "554553#0",
+  "product_id": "554553",
+  "claim_text": "Più erbe funzionali",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "554553#1",
+  "product_id": "554553",
+  "claim_text": "Astuccio in cartone 100% riciclabile",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "554553#2",
+  "product_id": "554553",
+  "claim_text": "Bustina salva-aroma in carta 100% riciclabile",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "554553#3",
+  "product_id": "554553",
+  "claim_text": "Imballi certificati FSC per salvaguardare le foreste",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "554553#4",
+  "product_id": "554553",
+  "claim_text": "Filtro in cellulosa biodegradabile senza microplastiche",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "554553#5",
+  "product_id": "554553",
+  "claim_text": "Produzione a zero emissioni di CO2",
+  "v1_category": "offset_based_neutrality",
+  "v1_risk": "HIGH",
+  "v1_modifiers": [
+   "annex_i_blacklist_per_se"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "554553#6",
+  "product_id": "554553",
+  "claim_text": "Le sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "554553#7",
+  "product_id": "554553",
+  "claim_text": "Conosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "HIGH",
+  "v1_modifiers": [
+   "borderline_medicinal_claim_candidate"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "554553#8",
+  "product_id": "554553",
+  "claim_text": "è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "554553#9",
+  "product_id": "554553",
+  "claim_text": "#unsorsomigliore",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tisana digestiva plus con finocchio e camomilla",
+   "brand": "Pompadour",
+   "denomination": "Erbe aromatiche con finocchio e camomilla per tisana",
+   "features": "Plus - Più erbe funzionali",
+   "producer_info": "#unsorsomigliore\n- Astuccio in cartone 100% riciclabile\n- Bustina salva-aroma in carta 100% riciclabile\n- Imballi certificati FSC per salvaguardare le foreste\n- Filtro in cellulosa biodegradabile senza microplastiche\n- Filo in puro cotone senza graffetta in alluminio\n- Scritta in Braille per aiutare ciechi e ipovedenti\n- Produzione a zero emissioni di CO2\nBenefici\nLe sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.\nFinocchio\nConosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.\nCamomilla\nDalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Raccolta differenziata\nAstuccio - Carta"
+  }
+ },
+ {
+  "uid": "63837#0",
+  "product_id": "63837",
+  "claim_text": "il più tipico dei dolci tradizionali genovesi",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pandolce antico",
+   "brand": "PRETI",
+   "denomination": "Prodotto dolciario da forno",
+   "description": "Brand PRETI Conservazione CONSERVARE IN LUOGO FRESCO E ASCIUTTO. Nome Prodotto PANDOLCE ANTICO - BASSO 750 G",
+   "producer_info": "Il Pandolce Antico è il più tipico dei dolci tradizionali genovesi la cui ricetta originale, creata nel XVI secolo ai tempi di Andrea D’Oria, è un autentico trionfo di pasticceria. L’abbondanza di uva sultanina*, scorze di agrumi candite e pinoli testimoniano la vocazione mercantile ed i fasti della Repubblica Marinara Genovese. Il suo ricco sapore di burro ed i profumi dei suoi ingredienti sapranno avvolgervi e deliziarvi fino all’ultima briciola, che i commensali si ruberanno nel piatto!",
+   "certifications": [
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "63837#1",
+  "product_id": "63837",
+  "claim_text": "la cui ricetta originale, creata nel XVI secolo ai tempi di Andrea D’Oria",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "two_part_verification_required"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pandolce antico",
+   "brand": "PRETI",
+   "denomination": "Prodotto dolciario da forno",
+   "description": "Brand PRETI Conservazione CONSERVARE IN LUOGO FRESCO E ASCIUTTO. Nome Prodotto PANDOLCE ANTICO - BASSO 750 G",
+   "producer_info": "Il Pandolce Antico è il più tipico dei dolci tradizionali genovesi la cui ricetta originale, creata nel XVI secolo ai tempi di Andrea D’Oria, è un autentico trionfo di pasticceria. L’abbondanza di uva sultanina*, scorze di agrumi candite e pinoli testimoniano la vocazione mercantile ed i fasti della Repubblica Marinara Genovese. Il suo ricco sapore di burro ed i profumi dei suoi ingredienti sapranno avvolgervi e deliziarvi fino all’ultima briciola, che i commensali si ruberanno nel piatto!",
+   "certifications": [
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "663509#0",
+  "product_id": "663509",
+  "claim_text": "Fonte di fibre",
+  "v1_category": "nutrition_content_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura di pesche gialle natù no zuccheri aggiu",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle pesche gialle con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n13 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n*per porzione (15 g) 55 kJ / 13 kcal - per 100 g 367 kJ / 87 kcal",
+   "producer_info": "Le migliori pesche gialle bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "663509#1",
+  "product_id": "663509",
+  "claim_text": "Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti",
+  "v1_category": "misleading_endorsement_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "annex_i_blacklist_candidate"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura di pesche gialle natù no zuccheri aggiu",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle pesche gialle con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n13 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n*per porzione (15 g) 55 kJ / 13 kcal - per 100 g 367 kJ / 87 kcal",
+   "producer_info": "Le migliori pesche gialle bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "663509#2",
+  "product_id": "663509",
+  "claim_text": "Le migliori pesche gialle bio",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura di pesche gialle natù no zuccheri aggiu",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle pesche gialle con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n13 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n*per porzione (15 g) 55 kJ / 13 kcal - per 100 g 367 kJ / 87 kcal",
+   "producer_info": "Le migliori pesche gialle bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "663509#3",
+  "product_id": "663509",
+  "claim_text": "Rigoni di Asiago per l'ambiente",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura di pesche gialle natù no zuccheri aggiu",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle pesche gialle con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n13 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n*per porzione (15 g) 55 kJ / 13 kcal - per 100 g 367 kJ / 87 kcal",
+   "producer_info": "Le migliori pesche gialle bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "663509#4",
+  "product_id": "663509",
+  "claim_text": "Etichetta in carta riciclata",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "checkable_binary_fact"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura di pesche gialle natù no zuccheri aggiu",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle pesche gialle con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n13 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n*per porzione (15 g) 55 kJ / 13 kcal - per 100 g 367 kJ / 87 kcal",
+   "producer_info": "Le migliori pesche gialle bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "603892#0",
+  "product_id": "603892",
+  "claim_text": "Fonte di fibre",
+  "v1_category": "nutrition_content_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura all'albicocca naturale bio",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle albicocche con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n12 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n* per porzione (15 g) 51 kJ / 12 kcal - per 100 g 339 kJ / 80 kcal",
+   "producer_info": "Le migliori albicocche bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO",
+    "VEGANO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "603892#1",
+  "product_id": "603892",
+  "claim_text": "Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti",
+  "v1_category": "misleading_endorsement_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "annex_i_blacklist_candidate"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura all'albicocca naturale bio",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle albicocche con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n12 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n* per porzione (15 g) 51 kJ / 12 kcal - per 100 g 339 kJ / 80 kcal",
+   "producer_info": "Le migliori albicocche bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO",
+    "VEGANO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "603892#2",
+  "product_id": "603892",
+  "claim_text": "Le migliori albicocche bio",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura all'albicocca naturale bio",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle albicocche con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n12 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n* per porzione (15 g) 51 kJ / 12 kcal - per 100 g 339 kJ / 80 kcal",
+   "producer_info": "Le migliori albicocche bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO",
+    "VEGANO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "603892#3",
+  "product_id": "603892",
+  "claim_text": "di origine naturale e bio",
+  "v1_category": "misleading_composition_or_ingredient_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura all'albicocca naturale bio",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle albicocche con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n12 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n* per porzione (15 g) 51 kJ / 12 kcal - per 100 g 339 kJ / 80 kcal",
+   "producer_info": "Le migliori albicocche bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO",
+    "VEGANO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "603892#4",
+  "product_id": "603892",
+  "claim_text": "Rigoni di Asiago per l'ambiente",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura all'albicocca naturale bio",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle albicocche con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n12 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n* per porzione (15 g) 51 kJ / 12 kcal - per 100 g 339 kJ / 80 kcal",
+   "producer_info": "Le migliori albicocche bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO",
+    "VEGANO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "603892#5",
+  "product_id": "603892",
+  "claim_text": "Etichetta in carta riciclata",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "checkable_binary_fact"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Confettura all'albicocca naturale bio",
+   "brand": "Rigoni di Asiago",
+   "denomination": "Preparazione biologica alle albicocche con edulcorante",
+   "features": "Senza conservanti - Edulcoranti artificiali\n12 Kcal per porzione (15 g) *\nFonte di fibre\nApprovata da A.I.Nut. - Associazione Italiana Nutrizionisti\n* per porzione (15 g) 51 kJ / 12 kcal - per 100 g 339 kJ / 80 kcal",
+   "producer_info": "Le migliori albicocche bio, senza conservanti ed edulcoranti artificiali, per un gusto senza compromessi.\nbio\nNatù\nI prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata, hanno pochi ingredienti, di origine naturale e bio, per un'esperienza di gusto e benessere unica.",
+   "certifications": [
+    "BIOLOGICO",
+    "VEGANO"
+   ],
+   "life_style": [
+    "Senza aggiunta di zucchero",
+    "Biologico",
+    "Idoneo ai vegani"
+   ],
+   "recycling_other": "Rigoni di Asiago per l'ambiente\nCapsula - C/FE 91 - Acciaio\nVasetto - GL 70 - Vetro\nRaccolta differenziata\nVerifica le disposizioni del tuo Comune\nEtichetta in carta riciclata"
+  }
+ },
+ {
+  "uid": "43145#0",
+  "product_id": "43145",
+  "claim_text": "Acquistando questa tavoletta di cioccolato contribuisci a sostenere e promuovere lo sviluppo economico e sociale delle comunità",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tavoletta cioccolato extra fondente 70%",
+   "brand": "Coop",
+   "denomination": "Cioccolato fondente extra - Biologico\nCacao 70% min.",
+   "producer_info": "Acquistando questa tavoletta di cioccolato contribuisci a sostenere e promuovere lo sviluppo economico e sociale delle comunità in cui operano le cooperative o i produttori dei seguenti paesi: Repubblica Dominicana, Perù, Paraguay, India, Madagascar",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Coop per l'ambiente\nCos'è - Astuccio - Cartoncino - PAP 21 | Dove va - Raccolta carta\nCos'è - Incarto - Alluminio - ALU 41 | Dove va - Raccolta diff."
+  }
+ },
+ {
+  "uid": "43145#1",
+  "product_id": "43145",
+  "claim_text": "Coop per l'ambiente",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tavoletta cioccolato extra fondente 70%",
+   "brand": "Coop",
+   "denomination": "Cioccolato fondente extra - Biologico\nCacao 70% min.",
+   "producer_info": "Acquistando questa tavoletta di cioccolato contribuisci a sostenere e promuovere lo sviluppo economico e sociale delle comunità in cui operano le cooperative o i produttori dei seguenti paesi: Repubblica Dominicana, Perù, Paraguay, India, Madagascar",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Coop per l'ambiente\nCos'è - Astuccio - Cartoncino - PAP 21 | Dove va - Raccolta carta\nCos'è - Incarto - Alluminio - ALU 41 | Dove va - Raccolta diff."
+  }
+ },
+ {
+  "uid": "43145#2",
+  "product_id": "43145",
+  "claim_text": "VIVI VERDE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tavoletta cioccolato extra fondente 70%",
+   "brand": "Coop",
+   "denomination": "Cioccolato fondente extra - Biologico\nCacao 70% min.",
+   "producer_info": "Acquistando questa tavoletta di cioccolato contribuisci a sostenere e promuovere lo sviluppo economico e sociale delle comunità in cui operano le cooperative o i produttori dei seguenti paesi: Repubblica Dominicana, Perù, Paraguay, India, Madagascar",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Coop per l'ambiente\nCos'è - Astuccio - Cartoncino - PAP 21 | Dove va - Raccolta carta\nCos'è - Incarto - Alluminio - ALU 41 | Dove va - Raccolta diff."
+  }
+ },
+ {
+  "uid": "41888#0",
+  "product_id": "41888",
+  "claim_text": "vivi verde",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Miele di castagno",
+   "brand": {
+    "Brand": "Coop"
+   },
+   "denomination": "Miele italiano di castagno biologico",
+   "producer_info": "Il miele di castagno vivi verde Coop è ottenuto dal nettare dei fiori di castagno provenienti principalmente dalle regioni italiane più vocate quali: Calabria, Piemonte e Toscana.",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Coop per l'ambiente\nCos'è - Vasetto - Vetro - GL70 | Dove va - Raccolta vetro"
+  }
+ },
+ {
+  "uid": "41888#1",
+  "product_id": "41888",
+  "claim_text": "provenienti principalmente dalle regioni italiane più vocate",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Miele di castagno",
+   "brand": {
+    "Brand": "Coop"
+   },
+   "denomination": "Miele italiano di castagno biologico",
+   "producer_info": "Il miele di castagno vivi verde Coop è ottenuto dal nettare dei fiori di castagno provenienti principalmente dalle regioni italiane più vocate quali: Calabria, Piemonte e Toscana.",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Coop per l'ambiente\nCos'è - Vasetto - Vetro - GL70 | Dove va - Raccolta vetro"
+  }
+ },
+ {
+  "uid": "41888#2",
+  "product_id": "41888",
+  "claim_text": "Coop per l'ambiente",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Miele di castagno",
+   "brand": {
+    "Brand": "Coop"
+   },
+   "denomination": "Miele italiano di castagno biologico",
+   "producer_info": "Il miele di castagno vivi verde Coop è ottenuto dal nettare dei fiori di castagno provenienti principalmente dalle regioni italiane più vocate quali: Calabria, Piemonte e Toscana.",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Coop per l'ambiente\nCos'è - Vasetto - Vetro - GL70 | Dove va - Raccolta vetro"
+  }
+ },
+ {
+  "uid": "50746#0",
+  "product_id": "50746",
+  "claim_text": "la tradizionale, autentica pastafrolla di Grondona",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pasticcini lunette",
+   "brand": "Biscottificio Grondona",
+   "denomination": "Biscotti di pastafrolla con gocce di cioccolato e cocco",
+   "features": "Ricche e semplici\nSenza grassi idrogenati\nProdotto in Italia",
+   "producer_info": "Le ricette di famiglia\nLunette®: la tradizionale, autentica pastafrolla di Grondona, buona e semplice; arricchita e resa unica da una fantasia di cocco e dall'intensità del cioccolato, che insieme ne caratterizzano il sapore. È una ricetta di inizio Ottocento quando, in un piccolo laboratorio, Grondona avvia la sua produzione secondo le inimitabili ricette di famiglia, che nel tempo verranno custodite nel quadernetto delle cose buone. Le stesse utilizzate ancora oggi.\nProdotto di qualità\nGaranzia famiglia Grondona\nDal 1820 la famiglia Grondona garantisce che anche questa specialità è prodotta con i migliori ingredienti reperibili sul mercato, senza aggiungere conservanti, coloranti o aromi.",
+   "certifications": [
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "50746#1",
+  "product_id": "50746",
+  "claim_text": "È una ricetta di inizio Ottocento",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "two_part_verification_required"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pasticcini lunette",
+   "brand": "Biscottificio Grondona",
+   "denomination": "Biscotti di pastafrolla con gocce di cioccolato e cocco",
+   "features": "Ricche e semplici\nSenza grassi idrogenati\nProdotto in Italia",
+   "producer_info": "Le ricette di famiglia\nLunette®: la tradizionale, autentica pastafrolla di Grondona, buona e semplice; arricchita e resa unica da una fantasia di cocco e dall'intensità del cioccolato, che insieme ne caratterizzano il sapore. È una ricetta di inizio Ottocento quando, in un piccolo laboratorio, Grondona avvia la sua produzione secondo le inimitabili ricette di famiglia, che nel tempo verranno custodite nel quadernetto delle cose buone. Le stesse utilizzate ancora oggi.\nProdotto di qualità\nGaranzia famiglia Grondona\nDal 1820 la famiglia Grondona garantisce che anche questa specialità è prodotta con i migliori ingredienti reperibili sul mercato, senza aggiungere conservanti, coloranti o aromi.",
+   "certifications": [
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "50746#2",
+  "product_id": "50746",
+  "claim_text": "le inimitabili ricette di famiglia",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pasticcini lunette",
+   "brand": "Biscottificio Grondona",
+   "denomination": "Biscotti di pastafrolla con gocce di cioccolato e cocco",
+   "features": "Ricche e semplici\nSenza grassi idrogenati\nProdotto in Italia",
+   "producer_info": "Le ricette di famiglia\nLunette®: la tradizionale, autentica pastafrolla di Grondona, buona e semplice; arricchita e resa unica da una fantasia di cocco e dall'intensità del cioccolato, che insieme ne caratterizzano il sapore. È una ricetta di inizio Ottocento quando, in un piccolo laboratorio, Grondona avvia la sua produzione secondo le inimitabili ricette di famiglia, che nel tempo verranno custodite nel quadernetto delle cose buone. Le stesse utilizzate ancora oggi.\nProdotto di qualità\nGaranzia famiglia Grondona\nDal 1820 la famiglia Grondona garantisce che anche questa specialità è prodotta con i migliori ingredienti reperibili sul mercato, senza aggiungere conservanti, coloranti o aromi.",
+   "certifications": [
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "50746#3",
+  "product_id": "50746",
+  "claim_text": "Dal 1820 la famiglia Grondona garantisce",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "two_part_verification_required",
+   "two_part_verification_required"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pasticcini lunette",
+   "brand": "Biscottificio Grondona",
+   "denomination": "Biscotti di pastafrolla con gocce di cioccolato e cocco",
+   "features": "Ricche e semplici\nSenza grassi idrogenati\nProdotto in Italia",
+   "producer_info": "Le ricette di famiglia\nLunette®: la tradizionale, autentica pastafrolla di Grondona, buona e semplice; arricchita e resa unica da una fantasia di cocco e dall'intensità del cioccolato, che insieme ne caratterizzano il sapore. È una ricetta di inizio Ottocento quando, in un piccolo laboratorio, Grondona avvia la sua produzione secondo le inimitabili ricette di famiglia, che nel tempo verranno custodite nel quadernetto delle cose buone. Le stesse utilizzate ancora oggi.\nProdotto di qualità\nGaranzia famiglia Grondona\nDal 1820 la famiglia Grondona garantisce che anche questa specialità è prodotta con i migliori ingredienti reperibili sul mercato, senza aggiungere conservanti, coloranti o aromi.",
+   "certifications": [
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "50746#4",
+  "product_id": "50746",
+  "claim_text": "prodotta con i migliori ingredienti reperibili sul mercato",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pasticcini lunette",
+   "brand": "Biscottificio Grondona",
+   "denomination": "Biscotti di pastafrolla con gocce di cioccolato e cocco",
+   "features": "Ricche e semplici\nSenza grassi idrogenati\nProdotto in Italia",
+   "producer_info": "Le ricette di famiglia\nLunette®: la tradizionale, autentica pastafrolla di Grondona, buona e semplice; arricchita e resa unica da una fantasia di cocco e dall'intensità del cioccolato, che insieme ne caratterizzano il sapore. È una ricetta di inizio Ottocento quando, in un piccolo laboratorio, Grondona avvia la sua produzione secondo le inimitabili ricette di famiglia, che nel tempo verranno custodite nel quadernetto delle cose buone. Le stesse utilizzate ancora oggi.\nProdotto di qualità\nGaranzia famiglia Grondona\nDal 1820 la famiglia Grondona garantisce che anche questa specialità è prodotta con i migliori ingredienti reperibili sul mercato, senza aggiungere conservanti, coloranti o aromi.",
+   "certifications": [
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "50746#5",
+  "product_id": "50746",
+  "claim_text": "Senza grassi idrogenati",
+  "v1_category": "misleading_composition_or_ingredient_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pasticcini lunette",
+   "brand": "Biscottificio Grondona",
+   "denomination": "Biscotti di pastafrolla con gocce di cioccolato e cocco",
+   "features": "Ricche e semplici\nSenza grassi idrogenati\nProdotto in Italia",
+   "producer_info": "Le ricette di famiglia\nLunette®: la tradizionale, autentica pastafrolla di Grondona, buona e semplice; arricchita e resa unica da una fantasia di cocco e dall'intensità del cioccolato, che insieme ne caratterizzano il sapore. È una ricetta di inizio Ottocento quando, in un piccolo laboratorio, Grondona avvia la sua produzione secondo le inimitabili ricette di famiglia, che nel tempo verranno custodite nel quadernetto delle cose buone. Le stesse utilizzate ancora oggi.\nProdotto di qualità\nGaranzia famiglia Grondona\nDal 1820 la famiglia Grondona garantisce che anche questa specialità è prodotta con i migliori ingredienti reperibili sul mercato, senza aggiungere conservanti, coloranti o aromi.",
+   "certifications": [
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "68928#0",
+  "product_id": "68928",
+  "claim_text": "Antica ricetta",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "vague_or_unquantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Patatine 1936 multipack",
+   "brand": "San Carlo",
+   "denomination": "Patatine - Chips",
+   "features": "Multipacco\nLenta cottura\nArricciate e croccanti\nAntica ricetta\n6 Sacchetti da 25g",
+   "producer_info": "1936\nBuona com'era\n1936 Nel Cuore di Milano apre la Rosticceria San Carlo, ed è subito successo. La Rosticceria è un vero e proprio riferimento per i buongustai dell'epoca. È particolarmente rinomata per le sue patatine dal taglio sottile, arricciate e molto croccanti. La sapienza e la passione con cui queste patatine venivano preparate è stata tramandata di generazione in generazione.\nSenza glutine\n100% Elettrica rinnovabile\nLe chips 1936 sono prodotte con energia elettrica proveniente esclusivamente da fonti rinnovabili.",
+   "recycling_other": "Busta multipack - PP5 - Raccolta plastica\nSacchetto interno - PP5 - Raccolta plastica\nVerifica sempre le modalità di raccolta del tuo Comune\nNon disperdere nell'ambiente\nL'ambiente è vita. Tienilo pulito"
+  }
+ },
+ {
+  "uid": "68928#1",
+  "product_id": "68928",
+  "claim_text": "tramandata di generazione in generazione",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "vague_or_unquantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Patatine 1936 multipack",
+   "brand": "San Carlo",
+   "denomination": "Patatine - Chips",
+   "features": "Multipacco\nLenta cottura\nArricciate e croccanti\nAntica ricetta\n6 Sacchetti da 25g",
+   "producer_info": "1936\nBuona com'era\n1936 Nel Cuore di Milano apre la Rosticceria San Carlo, ed è subito successo. La Rosticceria è un vero e proprio riferimento per i buongustai dell'epoca. È particolarmente rinomata per le sue patatine dal taglio sottile, arricciate e molto croccanti. La sapienza e la passione con cui queste patatine venivano preparate è stata tramandata di generazione in generazione.\nSenza glutine\n100% Elettrica rinnovabile\nLe chips 1936 sono prodotte con energia elettrica proveniente esclusivamente da fonti rinnovabili.",
+   "recycling_other": "Busta multipack - PP5 - Raccolta plastica\nSacchetto interno - PP5 - Raccolta plastica\nVerifica sempre le modalità di raccolta del tuo Comune\nNon disperdere nell'ambiente\nL'ambiente è vita. Tienilo pulito"
+  }
+ },
+ {
+  "uid": "68928#2",
+  "product_id": "68928",
+  "claim_text": "100% Elettrica rinnovabile",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Patatine 1936 multipack",
+   "brand": "San Carlo",
+   "denomination": "Patatine - Chips",
+   "features": "Multipacco\nLenta cottura\nArricciate e croccanti\nAntica ricetta\n6 Sacchetti da 25g",
+   "producer_info": "1936\nBuona com'era\n1936 Nel Cuore di Milano apre la Rosticceria San Carlo, ed è subito successo. La Rosticceria è un vero e proprio riferimento per i buongustai dell'epoca. È particolarmente rinomata per le sue patatine dal taglio sottile, arricciate e molto croccanti. La sapienza e la passione con cui queste patatine venivano preparate è stata tramandata di generazione in generazione.\nSenza glutine\n100% Elettrica rinnovabile\nLe chips 1936 sono prodotte con energia elettrica proveniente esclusivamente da fonti rinnovabili.",
+   "recycling_other": "Busta multipack - PP5 - Raccolta plastica\nSacchetto interno - PP5 - Raccolta plastica\nVerifica sempre le modalità di raccolta del tuo Comune\nNon disperdere nell'ambiente\nL'ambiente è vita. Tienilo pulito"
+  }
+ }
+]

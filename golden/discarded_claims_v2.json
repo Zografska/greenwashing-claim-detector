@@ -1,0 +1,2986 @@
+[
+ {
+  "product_id": "44114",
+  "claim_text": "Speziato e Antiossidante",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Afferma una proprietà antiossidante, cioè un effetto/contenuto benefico per l'organismo: territorio del Reg. (CE) 1924/2006, non dell'ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "44114",
+  "claim_text": "Contiene curcuma che possiede proprietà antiossidanti",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Attribuisce alla curcuma proprietà antiossidanti, cioè un effetto fisiologico da ingestione: claim salutistico ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "44114",
+  "claim_text": "#unsorsomigliore",
+  "reason": "other_regime",
+  "note": "generic quality slogan with no environmental content - no ECGT hook",
+  "rationale_it": "Slogan generico di qualita privo di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "44114",
+  "claim_text": "è un alleato dello stomaco e della digestione",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Afferma un effetto su stomaco e digestione, cioè su una funzione fisiologica: Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554553",
+  "claim_text": "Più erbe funzionali",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "«Erbe funzionali» in maggiore quantità afferma la presenza/livello di sostanze presentate come benefiche per l'organismo: claim nutrizionale/salutistico.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554553",
+  "claim_text": "Le sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Afferma proprietà calmanti e un effetto sui processi digestivi: claim salutistico ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554553",
+  "claim_text": "Conosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Attribuisce al finocchio la capacità di contrastare gonfiore addominale e disturbi digestivi: claim salutistico, al limite del claim medicinale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554553",
+  "claim_text": "è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Afferma un contributo alla digestione e al normale funzionamento intestinale: funzione fisiologica, Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554553",
+  "claim_text": "#unsorsomigliore",
+  "reason": "other_regime",
+  "note": "generic quality slogan with no environmental content - no ECGT hook",
+  "rationale_it": "Slogan generico di qualita privo di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "63837",
+  "claim_text": "il più tipico dei dolci tradizionali genovesi",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Afferma la tipicità storica di un dolce tradizionale genovese: asserzione sul passato, Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "63837",
+  "claim_text": "la cui ricetta originale, creata nel XVI secolo ai tempi di Andrea D’Oria",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Afferma la provenienza storica della ricetta (XVI secolo, Andrea D'Oria): asserzione sul passato, Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "663509",
+  "claim_text": "Fonte di fibre",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim nutrizionale sul contenuto di fibre disciplinato dal Reg. (CE) 1924/2006 e dal Reg. (UE) 1169/2011.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "663509",
+  "claim_text": "Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti",
+  "reason": "other_regime",
+  "note": "third-party endorsement on a health/efficacy axis - no ECGT hook (Art. 23 lett. d Cod. Cons.); the endorsing body certifies neither environmental nor social characteristics",
+  "rationale_it": "Approvazione di un ente che non certifica caratteristiche ambientali o sociali: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "603892",
+  "claim_text": "Fonte di fibre",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim nutrizionale sul contenuto di fibre, disciplinato dal Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "603892",
+  "claim_text": "Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti",
+  "reason": "other_regime",
+  "note": "third-party endorsement on a health/efficacy axis - no ECGT hook (Art. 23 lett. d Cod. Cons.); the endorsing body certifies neither environmental nor social characteristics",
+  "rationale_it": "Approvazione di un ente che non certifica caratteristiche ambientali o sociali: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "43145",
+  "claim_text": "Acquistando questa tavoletta di cioccolato contribuisci a sostenere e promuovere lo sviluppo economico e sociale delle comunità",
+  "reason": "other_regime",
+  "note": "Asserzione sociale in prosa libera (sviluppo economico e sociale delle comunità produttrici): non è un'asserzione di impatto ambientale ex Art. 18 n-quater e non ha forma di marchio o etichetta, quindi non rientra nell'etichetta di sostenibilità ex n-sexies; resta nel campo generale degli Artt. 21-22 fuori dal perimetro ECGT.",
+  "rationale_it": "Asserzione di impatto sociale in prosa, priva di aggancio ECGT perché non ambientale e non veicolata da un marchio.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41888",
+  "claim_text": "provenienti principalmente dalle regioni italiane più vocate",
+  "reason": "other_regime",
+  "note": "Asserzione di origine geografica con superlativo di vocazione produttiva: territorio dell'Art. 21 (origine e autenticità), fuori dal perimetro ECGT perché non afferma alcun impatto ambientale.",
+  "rationale_it": "Afferma la provenienza regionale del nettare e la vocazione dei territori, non un impatto ambientale né un'etichetta di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "50746",
+  "claim_text": "la tradizionale, autentica pastafrolla di Grondona",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Afferma tradizione e autenticità della ricetta di pastafrolla: asserzione di provenienza storica, Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "50746",
+  "claim_text": "È una ricetta di inizio Ottocento",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Data la ricetta all'inizio dell'Ottocento: asserzione sul passato, Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "50746",
+  "claim_text": "le inimitabili ricette di famiglia",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Superlativo agganciato alle ricette di famiglia: prevale la qualificazione di provenienza storica (T3).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "50746",
+  "claim_text": "Dal 1820 la famiglia Grondona garantisce",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Richiama la data di fondazione e la garanzia familiare: asserzione sul passato, Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "50746",
+  "claim_text": "prodotta con i migliori ingredienti reperibili sul mercato",
+  "reason": "other_regime",
+  "note": "generic excellence claim, no environmental content - S24/S25 superseded",
+  "rationale_it": "Asserzione generica di eccellenza priva di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "50746",
+  "claim_text": "Senza grassi idrogenati",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Asserzione sull'assenza di grassi idrogenati, cioè sulla composizione nutrizionale: Reg. (CE) 1924/2006 e Reg. (UE) 1169/2011.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "68928",
+  "claim_text": "Antica ricetta",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Richiama l'antichità della ricetta: asserzione sul passato, Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "68928",
+  "claim_text": "tramandata di generazione in generazione",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Afferma la trasmissione generazionale del sapere produttivo: asserzione di tradizione e provenienza storica.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "418104",
+  "claim_text": "65% di Grassi in Meno*",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indica il livello di un nutriente (i grassi) presentato come vantaggioso: indicazione nutrizionale comparativa di competenza del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "418104",
+  "claim_text": "Si alla linea, no allo fame!",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Richiamo al controllo del peso e al senso di fame: asserzione dimagrante e nutrizionale di competenza del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "675785",
+  "claim_text": "Supporta le difese immunitarie",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Asserisce un effetto sulla funzione immunitaria: indicazione sulla salute di competenza del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "675785",
+  "claim_text": "Contiene la tradizionale miscela di 13 erbe",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Richiama la tipicità storica di una miscela «tradizionale» di erbe: asserzione sul passato ex Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41567",
+  "claim_text": "Artigianale sfogliato a mano",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Asserisce un metodo di lavorazione artigianale con appello alla tradizione e non un impatto ambientale: dopo il ritiro di T5 questi casi escono dal perimetro.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "717407",
+  "claim_text": "le \"ricette di famiglia\"",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Provenienza della ricetta e storia familiare: asserzione sul passato ex Step 2c, vicinissima al seme D18.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "717407",
+  "claim_text": "Dal 1820 la famiglia Grondona garantisce",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Data di fondazione e garanzia familiare: asserzione sul passato (seme D17).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "717407",
+  "claim_text": "prodotta con i migliori ingredienti reperibili sul mercato",
+  "reason": "other_regime",
+  "note": "generic excellence claim, no environmental content - S24/S25 superseded",
+  "rationale_it": "Asserzione generica di eccellenza priva di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "164990",
+  "claim_text": "Con 80 anni di tradizione",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Richiamo a ottant'anni di tradizione: asserzione sul passato ex Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "164990",
+  "claim_text": "garantisce la lievitazione perfetta",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserisce quanto bene il prodotto svolge la propria funzione (la lievitazione): efficacia ex Step 2b.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "39785",
+  "claim_text": "Céréal si impegna per voi",
+  "reason": "other_regime",
+  "note": "corporate commitment slogan with no environmental content in the claim text itself - judged alone per guide section 0",
+  "rationale_it": "Slogan di impegno aziendale privo di contenuto ambientale nel testo dell'asserzione.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "39785",
+  "claim_text": "Si consiglia di utilizzare il prodotto nell'ambito di una dieta varia ed equilibrata ed uno stile di vita sano",
+  "reason": "other_regime",
+  "note": "Avvertenza obbligatoria a corredo delle indicazioni nutrizionali e sulla salute, art. 10, par. 2, Reg. (CE) 1924/2006: not_a_commercial_claim.",
+  "rationale_it": "Disclosure obbligatoria e non un'asserzione idonea a influenzare la decisione commerciale: si ferma allo Step 1.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "63679",
+  "claim_text": "Naturalmente priva di caffeina",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indica l'assenza di una sostanza (la caffeina): indicazione di contenuto di competenza del Reg. (CE) 1924/2006 e del Reg. (UE) 1169/2011.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "43616",
+  "claim_text": "Consumo moderato per i bambini",
+  "reason": "other_regime",
+  "note": "Avvertenza volontaria sul profilo nutrizionale del prodotto (materia del Reg. (CE) 1924/2006 e dell'autodisciplina sulla comunicazione alimentare rivolta ai minori): non promuove il prodotto e non asserisce caratteristiche ambientali o sociali.",
+  "rationale_it": "Avvertenza di consumo moderato per i bambini: non è un'asserzione promozionale e non tocca il perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "621126",
+  "claim_text": "Solo nocciole italiane",
+  "reason": "other_regime",
+  "note": "Asserzione di origine e autenticità: materia dell'art. 21 Cod. Cons. e della disciplina sull'origine degli alimenti, collocata fuori dal perimetro ECGT dalla tabella dello Step 3, che cita proprio «Solo nocciole italiane».",
+  "rationale_it": "Asserzione sull'origine italiana delle nocciole: territorio dell'art. 21 ma fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "39538",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale degli imballaggi obbligatoria ex art. 219, comma 5, D.Lgs. 152/2006 come modificato dal D.Lgs. 116/2020: marchio obbligatorio escluso dalla definizione di etichetta di sostenibilità (art. 18, lett. n-sexies).",
+  "rationale_it": "Dicitura obbligatoria di etichettatura ambientale degli imballaggi, esclusa dalla definizione di etichetta di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599157",
+  "claim_text": "Per un minore aumento della glicemia*",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Asserisce un effetto sulla glicemia dopo il consumo: indicazione sulla salute di competenza del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599157",
+  "claim_text": "Fonte di fibre",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione nutrizionale sul contenuto di fibre (seme D3).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599157",
+  "claim_text": "Filiera Italiana: 100% farina di grano controllato e tracciato dalla semina al prodotto finito",
+  "reason": "other_regime",
+  "note": "origin + traceability assurance, Art. 21 Cod. Cons. - outside the ECGT perimeter",
+  "rationale_it": "Asserzione di origine e tracciabilita: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40713",
+  "claim_text": "Fatto in Italia da sempre",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Unisce origine italiana e continuità storica («da sempre»): asserzione sul passato ex Step 2c e comunque fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612659",
+  "claim_text": "Ancora più friabili!",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Comparativo su un asse sensoriale (la friabilità): asse non ambientale, quindi resta scartato ex T4.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612659",
+  "claim_text": "-50% di grassi saturi* ... Fonte Unione Italiana Food Mercato Italia",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione nutrizionale comparativa sul contenuto di grassi saturi, di competenza del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612659",
+  "claim_text": "Il cacao certificato contribuisce a migliorare la vita dei coltivatori e delle loro famiglie",
+  "reason": "other_regime",
+  "note": "Asserzione sociale in prosa libera, non in forma di marchio o etichetta: l'art. 18, lett. n-quater è limitato all'impatto ambientale e la lett. n-sexies alle etichette, quindi manca l'aggancio ECGT; stessa forma dell'esempio adjudicato «riconosciamo loro il giusto compenso contro ogni sfruttamento della manodopera».",
+  "rationale_it": "Prosa sociale sul miglioramento delle condizioni di vita dei coltivatori: fuori dal perimetro ECGT secondo la regola sulla lett. n-sexies, benché agganciata a una certificazione a sua volta in perimetro.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "594623",
+  "claim_text": "FIOR FIORE",
+  "reason": "other_regime",
+  "note": "Denominazione di una linea commerciale premium (marchio privato di gamma gastronomica): non distingue il prodotto per caratteristiche ambientali o sociali e quindi non è etichetta di sostenibilità ex art. 18, lett. n-sexies, a differenza della linea «Vivi Verde».",
+  "rationale_it": "Marchio di linea gastronomica che non asserisce caratteristiche ambientali o sociali: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "594623",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale degli imballaggi obbligatoria ex art. 219, comma 5, D.Lgs. 152/2006 come modificato dal D.Lgs. 116/2020: marchio obbligatorio escluso dalla definizione di etichetta di sostenibilità (art. 18, lett. n-sexies).",
+  "rationale_it": "Dicitura obbligatoria di etichettatura ambientale degli imballaggi, esclusa dalla definizione di etichetta di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "641458",
+  "claim_text": "L'originale",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Asserzione di autenticità e primogenitura del prodotto: appello alla provenienza originaria ex Step 2c, con T3 che prevale sulla lettura di eccellenza generica.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "645376",
+  "claim_text": "Ricca di Proteine che contribuiscono alla crescita e al mantenimento della massa muscolare",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione nutrizionale e sulla salute relativa alle proteine e alla massa muscolare, di competenza del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "645376",
+  "claim_text": "PROTEIN +",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Il marchio «PROTEIN +» afferma il tenore di un nutriente presentato come benefico, materia del Reg. (CE) 1924/2006, e non riguarda caratteristiche ambientali o sociali ex Art. 18 lett. n-sexies.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "645376",
+  "claim_text": "Filiera Italiana: 100% farina di grano controllato e tracciato dalla semina al prodotto finito",
+  "reason": "other_regime",
+  "note": "origin + traceability assurance, Art. 21 Cod. Cons. - outside the ECGT perimeter",
+  "rationale_it": "Asserzione di origine e tracciabilita: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "144400",
+  "claim_text": "0% di allergeni comuni*, profumi, coloranti (with disclosed NF EN 16274 test method and named allergen list)",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "L'assenza di allergeni comuni, profumi e coloranti è un attributo di tollerabilità cutanea del prodotto, assimilabile a «ipoallergenico» (D12), e non un'asserzione ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "144400",
+  "claim_text": "Approvato da Skin Health Alliance",
+  "reason": "other_regime",
+  "note": "third-party endorsement on a health/efficacy axis - no ECGT hook (Art. 23 lett. d Cod. Cons.); the endorsing body certifies neither environmental nor social characteristics",
+  "rationale_it": "Approvazione di un ente che non certifica caratteristiche ambientali o sociali: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "144400",
+  "claim_text": "Cour-V - Massima adattabilità\nUna tecnologia unica",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«Massima adattabilità» e «tecnologia unica» sono un superlativo di prestazione e comfort sul design del prodotto, che l'asse di confronto colloca nel 2b via T4.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "144400",
+  "claim_text": "aiutano a ridurre il rischio di irritazione della pelle",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione di efficacia su prodotto non alimentare: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "619902",
+  "claim_text": "24h Idratazione",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«24h Idratazione» è la durata di un effetto cosmetico, che la guida al passo 3c esclude espressamente dalla durabilità dei beni.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "619902",
+  "claim_text": "Supporta la barriera protettiva delle labbra",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Il sostegno alla barriera protettiva delle labbra è un effetto sul substrato su cui il prodotto agisce, quindi prestazione ai sensi di T2.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "619902",
+  "claim_text": "Compatibilità cutanea dermatologicamente approvata",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "L'approvazione dermatologica della compatibilità cutanea è un'asserzione sul processo probatorio, che T1 colloca fra le asserzioni di prestazione.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599962",
+  "claim_text": "3x Volte più luminosi***",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«3x volte più luminosi» è un comparativo quantificato sull'asse della prestazione cosmetica dei capelli, scartato da T4 nonostante la nota «test strumentali».",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599962",
+  "claim_text": "Massima intensità del colore",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«Massima intensità del colore» è un superlativo sulla resa del prodotto nella sua funzione propria.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599962",
+  "claim_text": "Copre il 100% dei capelli bianchi",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "La copertura del 100% dei capelli bianchi è un'asserzione di efficacia sul substrato trattato.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599962",
+  "claim_text": "Migliora la qualità visibile dei capelli***",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Il miglioramento della qualità visibile dei capelli è un effetto sul substrato su cui il prodotto agisce (T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599962",
+  "claim_text": "Colorazione senza ammoniaca N°1 in Italia**** ... Fonte IRI, Totale Italia Mass Market",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Il primato rivendicato riguarda le quote di vendita nella categoria, non un impatto ambientale né una prestazione del prodotto.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599963",
+  "claim_text": "3x Volte più luminosi***",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«3x volte più luminosi» è un comparativo quantificato sull'asse della prestazione cosmetica dei capelli, scartato da T4 nonostante la nota «test strumentali».",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599963",
+  "claim_text": "Massima intensità del colore",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«Massima intensità del colore» è un superlativo sulla resa del prodotto nella sua funzione propria.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599963",
+  "claim_text": "Copre il 100% dei capelli bianchi",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "La copertura del 100% dei capelli bianchi è un'asserzione di efficacia sul substrato trattato.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599963",
+  "claim_text": "Migliora la qualità visibile dei capelli***",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Il miglioramento della qualità visibile dei capelli è un effetto sul substrato su cui il prodotto agisce (T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "599963",
+  "claim_text": "Colorazione senza ammoniaca N°1 in Italia**** ... Fonte IRI, Totale Italia Mass Market",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Il primato rivendicato riguarda le quote di vendita nella categoria, non un impatto ambientale né una prestazione del prodotto.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "712712",
+  "claim_text": "Brand antiforfora n.1 al mondo* ... Calcolo P&G basato su rapporti annuali sui dati di vendita",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Il primato rivendicato riguarda il volume di vendite del marchio nella categoria, non un impatto ambientale né una prestazione del prodotto.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "712712",
+  "claim_text": "Fino a 100% protezione dalla forfora*",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "La protezione dalla forfora fino al 100% è un'asserzione di efficacia del prodotto sul cuoio capelluto.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "712712",
+  "claim_text": "forfora visibile eliminata al 100% in 66 casi su 100 (test clinico)",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "L'eliminazione della forfora visibile nel 100% dei casi su 66 su 100 in test clinico è un'asserzione di efficacia quantificata, che T4 scarta nonostante la sostanziazione dichiarata.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "712712",
+  "claim_text": "Clinicamente testato",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«Clinicamente testato» è un'asserzione sul processo probatorio, collocata da T1 fra le asserzioni di prestazione (seed D5).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "712712",
+  "claim_text": "Dermatologicamente testato",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«Dermatologicamente testato» è un'asserzione sul processo probatorio, collocata da T1 fra le asserzioni di prestazione.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "712712",
+  "claim_text": "Approvato da Aideco",
+  "reason": "other_regime",
+  "note": "third-party endorsement on a health/efficacy axis - no ECGT hook (Art. 23 lett. d Cod. Cons.); the endorsing body certifies neither environmental nor social characteristics",
+  "rationale_it": "Approvazione di un ente che non certifica caratteristiche ambientali o sociali: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554877",
+  "claim_text": "Schiarisce & riduce le macchie e ne previene la ricomparsa",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Schiarire e ridurre le macchie prevenendone la ricomparsa è un effetto sul substrato cutaneo, quindi prestazione ai sensi di T2.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554877",
+  "claim_text": "Risultati visibili dopo 4 settimane",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "La visibilità dei risultati dopo quattro settimane è la durata e la tempistica di un effetto cosmetico, non una durabilità dei beni ex passo 3c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554877",
+  "claim_text": "Il trattamento Nivea più efficace nella riduzione delle macchie cutanee",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo il cui asse di confronto è l'efficacia nella riduzione delle macchie, scartato da T4.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554877",
+  "claim_text": "riduce le macchie causate dal sole, dall'invecchiamento cutaneo, da fattori genetici ed ormonali",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "La riduzione delle macchie di varia origine è un effetto sul substrato cutaneo su cui il prodotto agisce (T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554877",
+  "claim_text": "Dopo 8 settimane: l'intensità delle macchie è ridotta del 50%",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "La riduzione del 50% dell'intensità delle macchie a otto settimane è un'asserzione di efficacia quantificata, che T4 scarta per l'asse prestazionale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554877",
+  "claim_text": "Raccomandato dalle donne / 82% ha confermato / È il prodotto più efficace nel ridurre le macchie che io abbia mai provato / 100% ha confermato ... Autovalutazione, studio di 12 settimane con 34 donne, 2018",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Le percentuali di consenso raccolte in autovalutazione sostengono un superlativo di efficacia del prodotto, quindi un confronto sull'asse prestazionale (T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554877",
+  "claim_text": "Una innovazione rivoluzionaria / Dopo 10 anni di meticolosa ricerca e lo studio di più 50.000 ingredienti",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«Innovazione rivoluzionaria» con il corredo degli anni di ricerca è un vanto sul merito tecnico del prodotto, privo di qualsiasi aggancio ambientale o sociale ex Art. 18.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554877",
+  "claim_text": "Dermatologicamente comprovato",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "«Dermatologicamente comprovato» è un'asserzione sul processo probatorio, collocata da T1 fra le asserzioni di prestazione.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554877",
+  "claim_text": "Luminous630 è efficace su tutti i fototipi",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione di efficacia dell'ingrediente sul substrato cutaneo (tutti i fototipi): rientra nel passo 2b, prestazione del prodotto.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612478",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichetta Ambientale: informazione/marchio obbligatorio di etichettatura ambientale degli imballaggi (D.Lgs. 116/2020, art. 219 c.5 TUA), esclusa dalla nozione di etichetta di sostenibilita' (art. 18, lett. n-sexies, Cod. Cons.)",
+  "rationale_it": "Marchio/informazione obbligatoria di etichettatura ambientale degli imballaggi, espressamente esclusa dall'art. 18 lett. n-sexies, quindi fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "608641",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichetta Ambientale: informazione/marchio obbligatorio di etichettatura ambientale degli imballaggi (D.Lgs. 116/2020, art. 219 c.5 TUA), esclusa dalla nozione di etichetta di sostenibilita' (art. 18, lett. n-sexies, Cod. Cons.)",
+  "rationale_it": "Informazione obbligatoria di etichettatura ambientale degli imballaggi, esclusa dalla definizione di etichetta di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "704601",
+  "claim_text": "assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Durata della tenuta adesiva fino a 12 ore: efficacia e durata dell'effetto, non durabilità del bene ai sensi dell'art. 18 lett. n-novies.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "704601",
+  "claim_text": "Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Afferma un effetto sulla digestione, materia del Reg. (CE) 1924/2006 e del Reg. (UE) 1169/2011, non di questo rilevatore (passo 2a).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "704601",
+  "claim_text": "migliorando la fiducia in sé stessi e la qualità della vita quotidiana",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Beneficio di comfort e fiducia derivante dalla stabilità della protesi: asserzione sulla prestazione del prodotto (passo 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "704601",
+  "claim_text": "formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sul processo probatorio («clinicamente testata») unita alla tenuta del prodotto: prestazione, per la regola T1.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "704601",
+  "claim_text": "Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita",
+  "reason": "other_regime",
+  "note": "trader-level generic excellence, no environmental content",
+  "rationale_it": "Eccellenza generica del venditore priva di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610425",
+  "claim_text": "Clinicamente testato",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sul processo probatorio, non su un nutriente o un esito di salute: prestazione per la regola T1 (seed D5).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610425",
+  "claim_text": "Approvato ANDI - Associazione Nazionale Dentisti Italiani (con spiegazione: l'A.N.D.I. riconosce che un dentifricio al fluoro aiuta a prevenire la formazione della placca...)",
+  "reason": "other_regime",
+  "note": "third-party endorsement on a health/efficacy axis - no ECGT hook (Art. 23 lett. d Cod. Cons.); the endorsing body certifies neither environmental nor social characteristics",
+  "rationale_it": "Approvazione di un ente che non certifica caratteristiche ambientali o sociali: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610425",
+  "claim_text": "3x Denti più bianchi subito* ... Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Comparativo il cui asse di confronto è la prestazione sbiancante, per quanto quantificato e corredato di nota: regola T4 (seed D9).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610425",
+  "claim_text": "Rimuove le macchie da caffè e fumo**",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Efficacia del dentifricio sul substrato dentale (rimozione delle macchie): passo 2b.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "676876",
+  "claim_text": "tutta l'efficacia antiossidante della Rosa Fermentata e le proprietà idratanti e protettive dell'Acido laluronico per restituirle la sua condizione naturale",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Efficacia degli attivi sulla pelle (substrato): prestazione del prodotto per la regola T2.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "676876",
+  "claim_text": "Dopo 48h dall'applicazione la pelle risulta più idratata* ... Test strumentale",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Durata dell'effetto idratante misurata da test strumentale: efficacia e durata dell'effetto, non durabilità del bene (passo 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "676876",
+  "claim_text": "Dopo l'utilizzo la pelle risulta più morbida e vellutata** ... Test di autovalutazione",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto sensoriale sulla pelle attestato da autovalutazione: prestazione del prodotto (passo 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "676876",
+  "claim_text": "Clinicamente testato",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sul processo probatorio: prestazione per la regola T1 (seed D5).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "676876",
+  "claim_text": "stimola le acquaporine per una idratazione istantanea e duratura nel tempo",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Meccanismo d'azione e durata dell'idratazione sul substrato cutaneo: prestazione per la regola T2.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "575950",
+  "claim_text": "Clinicamente testate",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sul processo probatorio: prestazione per la regola T1 (seed D5).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "575950",
+  "claim_text": "Contribuiscono a difendere il tuo equilibrio intimo",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione protettiva generica sull'equilibrio intimo, effetto sul substrato cutaneo: prestazione per la regola T2 (analoga a D6 e D8).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "602008",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichetta Ambientale: informazione/marchio obbligatorio di etichettatura ambientale degli imballaggi (D.Lgs. 116/2020, art. 219 c.5 TUA), esclusa dalla nozione di etichetta di sostenibilita' (art. 18, lett. n-sexies, Cod. Cons.)",
+  "rationale_it": "Informazione obbligatoria di etichettatura ambientale degli imballaggi, esclusa dalla definizione di etichetta di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "620290",
+  "claim_text": "Aiuta a Rigenerare le pelli screpolate",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto rigenerante sulla pelle screpolata, cioè sul substrato su cui il prodotto agisce: prestazione per la regola T2.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "620290",
+  "claim_text": "Protegge dagli agenti esterni",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione protettiva generica: prestazione del prodotto (seed D6).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "620290",
+  "claim_text": "Dermatologicamente testata",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sul processo probatorio: prestazione per la regola T1.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38080",
+  "claim_text": "allevia anche il fastidio provocato dalle punture di insetti ... donando una sensazione di immediato sollievo",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Efficacia lenitiva sul fastidio da puntura, effetto sul corpo per applicazione topica: prestazione del prodotto (passo 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38080",
+  "claim_text": "Dermatologicamente testato",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sul processo probatorio: prestazione per la regola T1.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "42428",
+  "claim_text": "Pulizia profonda",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Efficacia detergente: prestazione del prodotto (seed D7).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "42428",
+  "claim_text": "Con sistema igienizzante",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Caratteristica tecnica/funzionale del prodotto (sistema igienizzante): prestazione (passo 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "42428",
+  "claim_text": "Ripristina il PH",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto sul pH del substrato cutaneo: prestazione per la regola T2 (seed D8).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "42428",
+  "claim_text": "Dermatologicamente testate",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sul processo probatorio: prestazione per la regola T1.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41070",
+  "claim_text": "30% Più flessibile* ... Da test di laboratorio, rispetto ad uno spazzolino a setole piatte standard",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Comparativo quantificato il cui asse è la prestazione (flessibilità del collo), per quanto sostenuto da nota e test: regola T4.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41070",
+  "claim_text": "Progettato con setole dalla punta 4 volte più sottile per una pulizia delicata** ... rispetto a filamenti arrotondati standard",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Comparativo il cui asse di confronto e' la delicatezza della pulizia rispetto a filamenti standard, quindi prestazione del prodotto (T4; corrisponde al seme D9).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610898",
+  "claim_text": "Il migliore di sempre* ... per una maggiore protezione dalla carie rispetto alla formula precedente",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo il cui asse, esplicitato nella nota, e' la maggiore protezione dalla carie: confronto su asse prestazionale, non ambientale (T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610898",
+  "claim_text": "Smalto 4x più forte** ... A 2 settimane, minerali diversi rispetto ad un regolare dentifricio al fluoro",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Comparativo quantificato sull'efficacia rimineralizzante dello smalto rispetto a un dentifricio al fluoro: asse prestazionale (T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610898",
+  "claim_text": "neutralizza gli acidi che causano la carie prima che indeboliscano lo smalto",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione di efficacia sul substrato dentale (neutralizzazione degli acidi cariogeni), regolata come prestazione del prodotto (Step 2b, T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40184",
+  "claim_text": "esclusiva formula ad alta efficacia",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Affermazione di eccellenza il cui asse e' l'efficacia della formula, quindi prestazione del prodotto (Step 2b), che precede il vaglio di ambito ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40184",
+  "claim_text": "garantire una pelle asciutta e protetta fino a 72 ore",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Efficacia sulla pelle con durata dell'effetto fino a 72 ore: durata di un effetto cosmetico, non durabilità del bene ai sensi dell'art. 18 lett. n-novies (Step 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40184",
+  "claim_text": "Contribuisce a regolare il naturale processo di traspirazione della pelle",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto sul substrato cutaneo (regolazione della traspirazione) per applicazione topica: prestazione del prodotto e non claim salutistico (T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40184",
+  "claim_text": "Studiato per ridurre la formazione di macchie e aloni sui tessuti",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto sul substrato tessile (riduzione di macchie e aloni): prestazione del prodotto (Step 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40184",
+  "claim_text": "Formula clinicamente testata",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione relativa al processo probatorio (test clinico) e non a un nutriente o a un esito di salute (T1).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "644995",
+  "claim_text": "-66% di imperfezioni** ... Test clinico condotto su 34 donne in 56 giorni di applicazione",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Efficacia quantificata sulla pelle sostenuta da test clinico: l'asse e' prestazionale, e la presenza della nota non sposta l'asse (Step 2b, T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "644995",
+  "claim_text": "12h Effetto mat* ... Test consumatori, 105 soggetti",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Durata dell'effetto cosmetico (12h effetto mat), espressamente esclusa dalla durabilità n-novies e trattata come prestazione del prodotto.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "644995",
+  "claim_text": "-31% Pori visibili**",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Riduzione quantificata dei pori visibili: efficacia sul substrato cutaneo (Step 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "644995",
+  "claim_text": "per correggere e prevenire le macchie",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Efficacia correttiva e preventiva sulle macchie cutanee: prestazione del prodotto (Step 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "644995",
+  "claim_text": "-55% di punti neri e bianchi, -32% di segni d'acne",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Riduzioni quantificate di punti neri e segni d'acne: efficacia sul substrato cutaneo (Step 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "50785",
+  "claim_text": "Idrata e rigenera la tua pelle rendendola radiosa e vitale",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Idratazione e rigenerazione della pelle con esito estetico: effetto sul substrato cutaneo (T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "50785",
+  "claim_text": "ingredienti dalle proprietà rigeneranti",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Proprieta' rigeneranti degli ingredienti riferite all'azione sulla pelle: asserzione di efficacia sul substrato (Step 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "50785",
+  "claim_text": "Formula dermatologicamente testata",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione relativa al processo probatorio (test dermatologico) e non all'impatto ambientale (T1).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "698877",
+  "claim_text": "aiutano a rendere la pelle liscia e morbida",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto levigante e ammorbidente sulla pelle: efficacia sul substrato cutaneo (T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "698877",
+  "claim_text": "Dermatologicamente testato",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione relativa al processo probatorio (test dermatologico) (T1).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "674356",
+  "claim_text": "Dermatologicamente e ginecologicamente testato",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione relativa al processo probatorio (test dermatologico e ginecologico) e non a una caratteristica ambientale (T1).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "674356",
+  "claim_text": "Leviga la pelle per aiutare a prevenire i peli incarniti",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto levigante sulla pelle con prevenzione dei peli incarniti: efficacia sul substrato cutaneo, priva di aggancio ECGT (Step 2b; cfr. la questione aperta sulle asserzioni di efficacia, dissolta dal vaglio di ambito).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "646175",
+  "claim_text": "Dermatologicamente testato su pelli sensibili",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione relativa al processo probatorio (test dermatologico su pelli sensibili) (T1).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "646175",
+  "claim_text": "Composizione che riduce il rischio di allergie",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione di efficacia/sicurezza sulla pelle priva di aggancio ECGT: non e' asserzione ambientale, ne' etichetta di sostenibilità, ne' durabilità (Step 2b; e' una delle sei asserzioni espressamente indicate come scartate).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "646175",
+  "claim_text": "Nichel, Cromo e Cobalto tested",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione relativa al processo probatorio (test su nichel, cromo e cobalto) riferita alla tollerabilità cutanea (T1).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "646175",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi ex art. 219, comma 5, D.Lgs. 152/2006 (come mod. da D.Lgs. 116/2020): marchio obbligatorio, espressamente escluso dalla definizione di etichetta di sostenibilità (art. 18 lett. n-sexies).",
+  "rationale_it": "Marchio obbligatorio di etichettatura ambientale degli imballaggi, escluso dalla nozione di etichetta di sostenibilità e quindi fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "646175",
+  "claim_text": "CRESCENDO",
+  "reason": "other_regime",
+  "note": "Marchio commerciale / denominazione di linea del distributore; nessun riferimento a caratteristiche ambientali o sociali, quindi nessun aggancio ECGT.",
+  "rationale_it": "Denominazione della linea di prodotto a marchio Coop (nel contesto: 'salviettine detergenti Crescendo Advance Coop'), non un marchio volontario che distingue il prodotto per caratteristiche ambientali o sociali ai sensi dell'art. 18 lett. n-sexies.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "641361",
+  "claim_text": "Brightening & glow boosting eye mask",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione di effetto cosmetico illuminante sul contorno occhi: prestazione del prodotto (corrisponde al seme D10).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "641361",
+  "claim_text": "Visibily brightens eye contour in 1 mask",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto illuminante visibile sul contorno occhi dopo una applicazione: efficacia sul substrato cutaneo (Step 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "641361",
+  "claim_text": "Dermatologically Tested",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione relativa al processo probatorio (test dermatologico) (T1).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612460",
+  "claim_text": "Rinforza lo smalto",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Rafforzamento dello smalto: effetto sul substrato dentale, quindi prestazione del prodotto (T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612460",
+  "claim_text": "aiuta a prevenire la placca, rinforza lo smalto e protegge i denti dalla carie",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Prevenzione della placca, rafforzamento dello smalto e protezione dalla carie: efficacia sul substrato dentale (Step 2b, T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612460",
+  "claim_text": "Testato sotto controllo odontoiatrico",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione relativa al processo probatorio (controllo odontoiatrico) e non a una caratteristica ambientale (T1).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612460",
+  "claim_text": "DAYTECH",
+  "reason": "other_regime",
+  "note": "private retailer line mark with no environmental or social content - a trade mark, not an etichetta di sostenibilita under Art. 18 lett. n-sexies",
+  "rationale_it": "Marchio di linea commerciale privo di contenuto ambientale o sociale: non e un'etichetta di sostenibilita.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612460",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi ex art. 219, comma 5, D.Lgs. 152/2006 (come mod. da D.Lgs. 116/2020): marchio obbligatorio, espressamente escluso dalla definizione di etichetta di sostenibilità (art. 18 lett. n-sexies).",
+  "rationale_it": "Marchio obbligatorio di etichettatura ambientale degli imballaggi, escluso dalla nozione di etichetta di sostenibilità e quindi fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "673142",
+  "claim_text": "Ripara* i capelli lunghi fino all'ultimo centimetro",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Riparazione del capello lungo fino alle punte: effetto sul substrato capillare (T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "673142",
+  "claim_text": "il 50% in più di agenti protettivi** ... rispetto alla formula precedente",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Comparativo quantificato il cui asse e' la quantità di agenti protettivi del capello, quindi prestazione del prodotto (T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "673142",
+  "claim_text": "Testato dell'Istituto Svizzero della Vitamina",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione relativa al processo probatorio presso un ente terzo, priva di aggancio ECGT: non asserisce un impatto ambientale e l'ente non e' un marchio riferito a caratteristiche ambientali o sociali (T1 e vaglio di ambito Step 3).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40177",
+  "claim_text": "aiuta a proteggere i denti dalla carie",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Protezione dei denti dalla carie: effetto sul substrato dentale, quindi prestazione del prodotto (T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "65569",
+  "claim_text": "12h Idratazione",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Durata dell'effetto idratante (12h): espressamente qualificata come efficacia-durata e non come durabilità del bene ai sensi n-novies.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "65569",
+  "claim_text": "Altamente resistente all'acqua",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Resistenza all'acqua del solare: caratteristica tecnica e prestazionale del prodotto (Step 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "54275",
+  "claim_text": "Professional quality color",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Affermazione di eccellenza il cui asse e' la qualità del risultato di colorazione, quindi prestazione sensoriale del prodotto (Step 2b, che precede il vaglio di ambito).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "54275",
+  "claim_text": "Supremo nutrimento e colore duraturo",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo su nutrimento del capello e durata del colore: asse prestazionale e durata di un effetto cosmetico (Step 2b, T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "54275",
+  "claim_text": "Copertura Professionale dei Capelli Bianchi Fino al 100%",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserisce quanto bene la colorazione svolge la propria funzione (copertura dei capelli bianchi): efficacia di prodotto ex Step 2b.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "54275",
+  "claim_text": "per una Suprema Intensità e Durata del Colore",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo sull'intensita' e sulla durata dell'effetto cosmetico del colore: asse prestazionale (Step 2b), e la durata dell'effetto non e' durabilita' ex n-novies.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "54275",
+  "claim_text": "Capelli visibilmente sani e forti",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto sul substrato su cui il prodotto agisce (il capello) ex T2: efficacia cosmetica, non asserzione ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "611508",
+  "claim_text": "Wash away bacteria",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserisce l'efficacia detergente/antibatterica del sapone sulle mani, cioe' cio' che il prodotto fa al substrato su cui agisce (Step 2b, T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40732",
+  "claim_text": "Massima protezione e comfort",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo su protezione e comfort dell'assorbente: asse prestazionale (Step 2b), seed D11.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40732",
+  "claim_text": "ipoallergenico",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Attributo categoriale di tollerabilita' del materiale a contatto con la pelle: efficacia/sicurezza di prodotto (Step 2b), seed D12.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40732",
+  "claim_text": "aiutando a mantenere la pelle asciutta e a prevenire l'insorgenza di irritazioni e arrossamenti",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione di efficacia su prodotto non alimentare: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40732",
+  "claim_text": "limita la formazione di cattivi odori",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Controllo degli odori: funzione propria del prodotto (Step 2b), seed D13.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "673140",
+  "claim_text": "il 50% in più di agenti protettivi* ... rispetto alla formula precedente",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Comparativo quantificato il cui asse di confronto e' la prestazione (agenti protettivi del capello): T4 lo mantiene in DISCARD nonostante la nota in confezione.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "673140",
+  "claim_text": "aiuta a ricostituire i capelli dall'interno",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Effetto sul capello, substrato su cui il prodotto agisce (Step 2b via T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "673140",
+  "claim_text": "Aiuta a rafforzare i capelli fini",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Efficacia rinforzante sul capello: effetto sul substrato (Step 2b via T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "673140",
+  "claim_text": "Testato dell'Istituto Svizzero della Vitamina",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sul processo probatorio (prodotto testato da un istituto), che T1 colloca in product_performance; non e' ne' asserzione ambientale ne' etichetta di sostenibilita' ex Step 3.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "698462",
+  "claim_text": "esclusivo complesso di cheratina vegetale e acido ialuronico ... fornendo la giusta dose di idratazione e di nutrienti necessari per ripristinarla e rafforzarla",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Descrive l'azione del complesso attivo sulla fibra del capello: efficacia cosmetica sul substrato (Step 2b via T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "698462",
+  "claim_text": "azione anti-crespo che aiuta a mantenere e prolungare la lisciatura",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Azione anti-crespo e durata dell'effetto lisciante: efficacia cosmetica sul capello (Step 2b via T2), analoga al seed D14.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "666692",
+  "claim_text": "Fissaggio 48H* ... Test strumentale",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Durata dell'effetto di fissaggio: la guida cita espressamente 'Fissaggio 48H*' come claim di durata dell'efficacia, non di durabilita' del bene (Step 3c), quindi product_performance.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "666692",
+  "claim_text": "protegge i capelli dal crespo e da aggressioni esterne",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Protezione del capello da crespo e aggressioni esterne: seed D14, efficacia sul substrato (Step 2b via T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "609170",
+  "claim_text": "L'asciutto pulito n°1* ... L'assorbente più venduto in Italia (dati Nielsen 12 mesi Feb '25)",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo il cui asse di confronto e' la prestazione dell'assorbente ('asciutto pulito n.1'): T4 lo mantiene in DISCARD anche in presenza di nota e fonte dati.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "609170",
+  "claim_text": "Con molecola attiva N.3 Zero odori",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Controllo degli odori mediante molecola attiva: funzione propria del prodotto (Step 2b), analogo al seed D13.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "62036",
+  "claim_text": "svolge un'azione antibatterica naturale grazie alla presenza della Propoli",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Azione antibatterica del prodotto nel cavo orale, cioe' effetto sul substrato su cui agisce (Step 2b via T2); l'aggettivo 'naturale' qualifica il meccanismo, non un impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "62036",
+  "claim_text": "assicura una sensazione di immediata e durevole freschezza",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sensoriale sulla freschezza percepita e sulla sua durata: efficacia/sensorialita' di prodotto (Step 2b).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "62036",
+  "claim_text": "garantisce sempre e in ogni circostanza un alito fresco e pulito",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Assoluto sull'efficacia antialitosi in ogni circostanza: asse prestazionale (Step 2b, T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "62036",
+  "claim_text": "Propoli ... aiuta a ridurre la fermentazione batterica, contribuendo a una migliore Igiene Orale",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Riduzione della fermentazione batterica e miglioramento dell'igiene orale: effetto sul cavo orale come substrato (Step 2b via T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "62036",
+  "claim_text": "Sulfetal Zn ... ad azione antibatterica che contribuisce a rinfrescare l'alito",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Azione antibatterica di un ingrediente che rinfresca l'alito: efficacia del prodotto sul substrato (Step 2b via T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "62036",
+  "claim_text": "L'efficacia del prodotto è stata testata e dimostrata",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sul processo probatorio ('testata e dimostrata'), che T1 colloca in product_performance.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "636091",
+  "claim_text": "Abbatte rapidamente il dolore",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Efficacia propria del dispositivo (abbattimento del dolore da sensibilita' dentinale): Step 2b; nessun aggancio ambientale ex Step 3.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "636091",
+  "claim_text": "Brevetto internazionale",
+  "reason": "ip_regulatory_status",
+  "note": null,
+  "rationale_it": "Asserzione di status brevettuale: seed D19, Step 2d.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "636091",
+  "claim_text": "ricerca di 7 anni tutta italiana, in collaborazione con ISTEC-CNR",
+  "reason": "other_regime",
+  "note": "Affermazione di provenienza della ricerca e di collaborazione istituzionale: non e' asserzione ambientale ex n-quater ne' etichetta di sostenibilita' ex n-sexies, quindi fuori dal perimetro ECGT; eventuale profilo generale di Art. 21 Cod. Cons.",
+  "rationale_it": "Asserisce durata e provenienza della ricerca e una collaborazione con ISTEC-CNR: nessuna delle tre porte dello Step 3 si apre.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "636091",
+  "claim_text": "Risultati apprezzabili anche a lungo termine",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Durata nel tempo dei risultati d'uso: durata dell'effetto, che lo Step 3c esclude espressamente dalla durabilita', quindi product_performance.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "702976",
+  "claim_text": "Lenta stagionatura tradizionale di minimo 3 mesi",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Metodo di produzione presentato come tradizionale: T5 e' stata ritirata, il claim asserisce un metodo e non un impatto ambientale, e l'appello e' alla tradizione (Step 2c).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "48442",
+  "claim_text": "Le nostre mucche vengono nutrite in modo tradizionale, con erba fresca, fieno e piante di campo. E si sente!",
+  "reason": "other_regime",
+  "note": "Reg. (UE) 1151/2012 - specifica dello schema STG 'Latte Fieno/Heumilch' riformulata in prosa: certifica composizione e metodo tradizionale, non caratteristiche ambientali o sociali.",
+  "rationale_it": "Il contesto di prodotto indica Mozzarella di Latte Fieno STG: il regime di alimentazione descritto e' il requisito stesso del disciplinare STG, governato dal Reg. (UE) 1151/2012 e non dall'ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "619225",
+  "claim_text": "Originale",
+  "reason": "other_regime",
+  "note": "Asserzione di autenticita'/originalita' del prodotto: territorio generale dell'Art. 21 Cod. Cons. sull'origine e l'autenticita', fuori dal perimetro ECGT.",
+  "rationale_it": "Non asserisce alcun impatto ambientale, non e' un marchio su caratteristiche ambientali o sociali e non tocca la durabilita': nessuna porta dello Step 3 si apre.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "619225",
+  "claim_text": "Ricco in proteine - 37g Per 100g di prodotto",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione nutrizionale sul tenore di proteine, governata dal Reg. (CE) 1924/2006 e dal Reg. (UE) 1169/2011 (Step 2a).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "588549",
+  "claim_text": "Mangia sano, vivi Snello",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Slogan che collega il consumo del prodotto alla salute e alla linea: rientra nella disciplina delle indicazioni salutistiche, non nel perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "53999",
+  "claim_text": "Tradizionali e gustosi",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione di qualità sensoriale (gustosi) unita al richiamo alla tradizione, priva di qualsiasi contenuto ambientale: lo Step 2b interviene per primo.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "53999",
+  "claim_text": "Ragù secondo la tradizione",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Richiamo alla provenienza tradizionale della ricetta, privo di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "53999",
+  "claim_text": "Sfoglia tradizionale, ruvida e casereccia",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Descrizione della consistenza e dell'aspetto della sfoglia: qualità sensoriale del prodotto, nessun aggancio ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "45171",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi (D.Lgs. 116/2020, art. 219 D.Lgs. 152/2006): marchio obbligatorio escluso dalla definizione di etichetta di sostenibilità, art. 18 lett. n-sexies.",
+  "rationale_it": "Dicitura di legge obbligatoria sull'imballaggio, espressamente esclusa dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "709781",
+  "claim_text": "prodotto con metodo tradizionale in caldaie di rame",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Metodo di produzione presentato come tradizionale: asserisce una pratica produttiva, non un impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "709781",
+  "claim_text": "Fatto con latte della nostra filiera",
+  "reason": "other_regime",
+  "note": "Asserzione di filiera e di origine della materia prima (territorio dell'art. 21 Cod. Cons.), priva di contenuto ambientale: nessuna delle definizioni dell'art. 18 lett. n-quater/n-sexies/n-novies è integrata.",
+  "rationale_it": "Rassicurazione sulla filiera senza alcun contenuto ambientale, quindi fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "552334",
+  "claim_text": "Alta digeribilità",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Asserzione su una funzione fisiologica (digeribilità) riferita all'ingestione del prodotto.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "552334",
+  "claim_text": "BENE SI'",
+  "reason": "other_regime",
+  "note": "private retailer line mark with no environmental or social content - a trade mark, not an etichetta di sostenibilita under Art. 18 lett. n-sexies",
+  "rationale_it": "Marchio di linea commerciale privo di contenuto ambientale o sociale: non e un'etichetta di sostenibilita.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "429528",
+  "claim_text": "il formaggio greco più antico, risalente all'età omerica",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Asserzione sull'antichità e sulla tipicità storica del formaggio: riguarda il passato, non l'ambiente.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "429528",
+  "claim_text": "FIOR FIORE",
+  "reason": "other_regime",
+  "note": "Marchio commerciale privato di linea premium (qualità gastronomica), riportato nella stessa denominazione di vendita: non distingue caratteristiche ambientali o sociali, quindi non è etichetta di sostenibilità ex art. 18 lett. n-sexies.",
+  "rationale_it": "Insegna di gamma qualitativa priva di contenuto ambientale o sociale, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "429528",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi (D.Lgs. 116/2020, art. 219 D.Lgs. 152/2006): marchio obbligatorio escluso dall'art. 18 lett. n-sexies.",
+  "rationale_it": "Dicitura obbligatoria di legge, esclusa per definizione dalle etichette di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "55274",
+  "claim_text": "Salume tipico artigianale della Puglia",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Tipicita' territoriale e artigianalità del salume: asserzione di origine e tradizione, senza contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "55274",
+  "claim_text": "Conosciuto ed apprezzato già nel XVII secolo",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Riferimento esplicito al passato (XVII secolo) come elemento di tipicità storica.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "55274",
+  "claim_text": "prodotto con metodi artigianali",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Metodo produttivo artigianale richiamato come tradizione: pratica di lavorazione, non impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "665410",
+  "claim_text": "FIOR FIORE",
+  "reason": "other_regime",
+  "note": "Marchio privato volontario di linea premium incluso nella denominazione di vendita, riferito alla qualità gastronomica e non a caratteristiche ambientali o sociali: fuori dall'art. 18 lett. n-sexies.",
+  "rationale_it": "Denominazione di gamma qualitativa senza contenuto ambientale o sociale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "665410",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi (D.Lgs. 116/2020, art. 219 D.Lgs. 152/2006): marchio obbligatorio escluso dall'art. 18 lett. n-sexies.",
+  "rationale_it": "Adempimento informativo obbligatorio, non etichetta volontaria di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "54957",
+  "claim_text": "Cottura lenta materie prime selezionate",
+  "reason": "other_regime",
+  "note": "Asserzione generica di qualità di processo e di selezione delle materie prime, priva di contenuto ambientale: nel perimetro ECGT non esiste un limbo di eccellenza generica (Step 4 della guida).",
+  "rationale_it": "Vanto generico su cottura e materie prime senza alcun riferimento all'impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "58406",
+  "claim_text": "Il calcio contribuisce alla normale funzione muscolare",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione sulla salute autorizzata relativa al calcio e alla funzione muscolare, disciplinata dal Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "58406",
+  "claim_text": "Le proteine contribuiscono al mantenimento della massa muscolare",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione sulla salute relativa alle proteine e al mantenimento della massa muscolare.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "58406",
+  "claim_text": "Ricca in calcio",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione nutrizionale sul tenore di calcio.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "58406",
+  "claim_text": "Fonte naturale di proteine",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione nutrizionale sul tenore di proteine.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "569248",
+  "claim_text": "da allevamenti prevalentemente piccoli e a conduzione familiare dove le mucche rappresentato il bene più prezioso",
+  "reason": "other_regime",
+  "note": "Prosa sociale in forma libera sulla dimensione e conduzione degli allevamenti: la lett. n-quater copre solo l'impatto ambientale e la lett. n-sexies solo le asserzioni in forma di marchio, quindi manca l'aggancio ECGT.",
+  "rationale_it": "Descrizione narrativa di carattere sociale sugli allevamenti conferenti, non in forma di etichetta e senza asserzione di impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "603657",
+  "claim_text": "Il latte è una fonte naturale di Calcio, necessario per il mantenimento di ossa e denti normali",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione sulla salute relativa al calcio e al mantenimento di ossa e denti.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612212",
+  "claim_text": "Naturalmente ricco di proteine",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione nutrizionale sul tenore di proteine.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "612212",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi (D.Lgs. 116/2020, art. 219 D.Lgs. 152/2006): marchio obbligatorio escluso dall'art. 18 lett. n-sexies.",
+  "rationale_it": "Informativa obbligatoria di smaltimento, non asserzione volontaria di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "609831",
+  "claim_text": "le capre sono allevate nel rispetto del benessere animale",
+  "reason": "other_regime",
+  "note": "Asserzione sul benessere animale in prosa libera e non in forma di marchio: la lett. n-sexies richiede la forma di etichetta e la lett. n-quater riguarda solo l'impatto ambientale.",
+  "rationale_it": "Dichiarazione narrativa sulle pratiche di allevamento, priva di forma di etichetta e di asserzione di impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "609831",
+  "claim_text": "prodotti di massima qualità",
+  "reason": "other_regime",
+  "note": "Vanto assoluto di eccellenza qualitativa privo di contenuto ambientale: nel perimetro ECGT non esiste un limbo di eccellenza generica (Step 4 della guida).",
+  "rationale_it": "Superlativo di qualità generale che non asserisce alcun impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "609831",
+  "claim_text": "mantenendo l'artigianalità",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Richiamo all'artigianalità come metodo tradizionale di lavorazione, senza asserzione di impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "598057",
+  "claim_text": "allevate secondo i metodi alpini tradizionali",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Metodo di allevamento presentato come tradizione alpina (peraltro coerente con il disciplinare Latte Fieno STG): pratica produttiva, non impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "47286",
+  "claim_text": "-30% di zuccheri rispetto al latte",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Asserzione sul tenore di zuccheri ridotto rispetto al latte: claim nutrizionale ex Reg. (CE) 1924/2006, privo di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "47286",
+  "claim_text": "Il Calcio ... necessario per il mantenimento delle ossa e dei denti normali",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim salutistico autorizzato sul calcio e il mantenimento di ossa e denti: territorio del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "45183",
+  "claim_text": "Burro tradizionale",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "'Burro tradizionale' richiama la tipicità e il metodo di lavorazione tradizionale, non un impatto ambientale: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "701225",
+  "claim_text": "Con 5 nutrienti essenziali ... contribuisce all'assunzione quotidiana di 5 tra i Nutrienti Essenziali",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Asserzione sull'apporto di nutrienti essenziali: claim nutrizionale ex Reg. (CE) 1924/2006 e Reg. (UE) 1169/2011.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "578874",
+  "claim_text": "Cannuccia e incarto cannuccia plastica compostabile",
+  "reason": "other_regime",
+  "note": "material identification inside the mandatory packaging-disposal block (prefixed '7 -'), D.Lgs. 116/2020 - expressly excluded from etichetta di sostenibilita by Art. 18 lett. n-sexies",
+  "rationale_it": "Identificazione del materiale nel blocco obbligatorio di etichettatura ambientale: non e un'asserzione volontaria.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "47144",
+  "claim_text": "Una combinazione unica di cacao e zucchero di canna",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sensoriale e di unicità gustativa della combinazione di ingredienti: nessun contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "44887",
+  "claim_text": "Supporta il Sistema Immunitario* ... Grazie alle vitamine D e B6, che aiutano il buon funzionamento del sistema immunitario",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim sul supporto al sistema immunitario grazie a vitamine D e B6: disciplina dei claim salutistici, non ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "44887",
+  "claim_text": "20 miliardi del nostro esclusivo probiotico L. casei Danone",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Asserzione sulla quantità di probiotico contenuto, presentata come benefica per l'organismo: territorio del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "44887",
+  "claim_text": "Le vitamine vengono assorbite nell'intestino, per poi supportare il tuo sistema immunitario",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Asserzione su assorbimento intestinale delle vitamine e funzione immunitaria: claim su una funzione fisiologica.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "59190",
+  "claim_text": "hanno conservato il patrimonio genetico delle \"mucche di un tempo\"",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Riferimento al patrimonio genetico delle 'mucche di un tempo': asserzione sul passato e sulla tipicità storica.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "59190",
+  "claim_text": "betacaseina è unicamente A2, come era una volta",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Asserzione compositiva ancorata alla tipicità del passato ('come era una volta'), priva di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "59190",
+  "claim_text": "Un latte integro perché il tenore dei grassi non viene modificato dopo la mungitura",
+  "reason": "other_regime",
+  "note": "Informazione sugli alimenti / metodo di lavorazione — Reg. (UE) 1169/2011; nessun aggancio ECGT",
+  "rationale_it": "Descrive un metodo di lavorazione (tenore di grassi non modificato dopo la mungitura): metodo produttivo, non impatto ambientale, quindi fuori dall'art. 18 lett. n-quater.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "59190",
+  "claim_text": "mantiene il gusto e la corposità dei sapori di un tempo",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sensoriale su gusto e corposità: qualità organolettica del prodotto, senza contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617926",
+  "claim_text": "Oltre il 50% di zuccheri in meno* ... Fonte IRI",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Comparativa sul tenore di zuccheri: claim nutrizionale comparativo ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617926",
+  "claim_text": "Ricco in proteine. Le proteine contribuiscono alla crescita della massa muscolare",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim nutrizionale e salutistico su proteine e massa muscolare.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617926",
+  "claim_text": "PROTEIN +",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Marchio/dicitura 'PROTEIN +' riferita al contenuto proteico: non distingue caratteristiche ambientali o sociali, quindi non è etichetta di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "101501",
+  "claim_text": "la cui qualità è certificata da controlli lungo tutta la filiera",
+  "reason": "other_regime",
+  "note": "Assicurazione di qualità e controllo di filiera priva di contenuto ambientale — fuori dal perimetro ECGT (cfr. seed S24 superato)",
+  "rationale_it": "Afferma che la qualità è certificata da controlli lungo la filiera: assicurazione di qualità/filiera che non soddisfa nessuno dei limiti 3a-3c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "673274",
+  "claim_text": "N°1 in Italia# ... Fonte: NielsenIQ Market Track",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Primato di vendite sostenuto da una fonte di mercato: nessun contenuto ambientale, sociale o di durabilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "673274",
+  "claim_text": "Fonte di fibre",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim nutrizionale sulle fibre (cfr. seed D3).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "39017",
+  "claim_text": "Il più morbido di sempre* ... rispetto alla ricetta precedente",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo comparativo su un asse prestazionale/sensoriale (morbidezza) rispetto alla ricetta precedente: resta escluso per T4.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41401",
+  "claim_text": "Zuppa tradizionale",
+  "reason": "other_regime",
+  "note": "not_a_commercial_claim — coincide con la denominazione di vendita del prodotto",
+  "rationale_it": "'Zuppa tradizionale' è la denominazione stessa del prodotto: pura identificazione, non un'asserzione capace di incidere sulla decisione di acquisto.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41401",
+  "claim_text": "Il nostro impegno",
+  "reason": "other_regime",
+  "note": "Impegno aziendale generico senza contenuto ambientale — nessun aggancio ECGT (non è asserzione ambientale ex art. 18 lett. n-quater)",
+  "rationale_it": "'Il nostro impegno' introduce esclusivamente attributi di ricetta e nutrizionali (senza conservanti, coloranti, glutammato): nessuna asserzione di impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41401",
+  "claim_text": "equivale ad 1 delle 5 porzioni giornaliere di frutta e verdura raccomandate dall'Organizzazione Mondiale della Sanità",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Equivalenza con una porzione giornaliera di frutta e verdura raccomandata dall'OMS: claim nutrizionale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41401",
+  "claim_text": "Fonte di fibre",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim nutrizionale sulle fibre (cfr. seed D3).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41908",
+  "claim_text": "Artigianali dentro",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "'Artigianali dentro' richiama la lavorazione artigianale e la tradizione produttiva: nessuna asserzione di impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41908",
+  "claim_text": "Come smaltire le calorie in eccesso? Ad esempio 7 minuti di corsa equivalgono a circa 100 kcal",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Equivalenza tra calorie e attività fisica: informazione nutrizionale/energetica.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "43335",
+  "claim_text": "prodotti con un metodo tradizionale",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Metodo tradizionale di produzione: asserzione su un metodo e sulla tradizione, non su un impatto ambientale (T5 ritirata).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "43335",
+  "claim_text": "Etichetta ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi (D.Lgs. 116/2020, art. 219 D.Lgs. 152/2006): marchio obbligatorio escluso da art. 18 lett. n-sexies",
+  "rationale_it": "Informativa/marchio reso obbligatorio dalla normativa nazionale sull'etichettatura ambientale degli imballaggi, espressamente escluso dalla nozione di etichetta di sostenibilita.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "145542",
+  "claim_text": "Autentico: riso Gallo seleziona le varietà più rinomate classificate come autentico \"Basmati\"",
+  "reason": "other_regime",
+  "note": "Art. 21 Cod. Cons. - autenticita varietale e selezione della materia prima, fuori dal perimetro ECGT",
+  "rationale_it": "Afferma l'autenticita della varieta e la selezione delle materie prime, senza alcuna asserzione di impatto ambientale ne alcun marchio ambientale o sociale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "145542",
+  "claim_text": "Originale: ... il Basmati Gallo è ideale per originali ricette",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserisce l'idoneita d'uso del prodotto per determinate ricette, cioe una qualita d'impiego priva di qualsiasi contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "603896",
+  "claim_text": "Blond è sinonimo di riso sempre al dente e garanzia di qualità",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Afferma una qualita sensoriale e prestazionale del riso («sempre al dente», «garanzia di qualita»), senza contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "603896",
+  "claim_text": "Siamo stati tra le prime aziende a introdurre il riso parboiled in Italia",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Asserzione sul passato dell'impresa (essere stati fra i primi a introdurre il parboiled in Italia): Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "603896",
+  "claim_text": "tra i più antichi che la storia tramandi",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Afferma l'antichita storica del processo di parboilizzazione: tipicita storica, Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "668756",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi (D.Lgs. 116/2020, art. 219 D.Lgs. 152/2006): marchio obbligatorio escluso da art. 18 lett. n-sexies",
+  "rationale_it": "Informativa/marchio reso obbligatorio dalla normativa nazionale sull'etichettatura ambientale degli imballaggi, espressamente escluso da art. 18 lett. n-sexies.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "87990",
+  "claim_text": "Trofie artigianali",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "«Artigianali», nel contesto di un prodotto presentato come espressione della tradizione pastaia ligure, e un richiamo alla tradizione e al metodo, non un'asserzione di impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "87990",
+  "claim_text": "Il formato che più definisce la tradizione della pasta in Liguria",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Tipicita tradizionale regionale del formato di pasta: Step 2c, come il seed D15.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "144287",
+  "claim_text": "Dedicata a tutti coloro che onorano il ricordo delle vittime delle mafie attraverso il proprio impegno quotidiano",
+  "reason": "other_regime",
+  "note": "Prosa sociale libera (impegno antimafia): nessun aggancio ECGT, perche n-quater riguarda il solo impatto ambientale e n-sexies i soli marchi",
+  "rationale_it": "Dedica di carattere etico-sociale in prosa libera: l'ECGT raggiunge le caratteristiche sociali soltanto in forma di marchio o etichetta di sostenibilita.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "646701",
+  "claim_text": "la migliore semola di grano duro pugliese",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo sulla qualita della semola: asse di confronto qualitativo-prestazionale e non ambientale (T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "646701",
+  "claim_text": "macinato nei mulini locali secondo tecniche secolari",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Metodo di macinazione presentato come tecnica secolare presso mulini locali: richiamo alla tradizione e all'origine, privo di asserzione di impatto ambientale (T5 ritirata).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "646701",
+  "claim_text": "attenzione e cura artigianale, imitando le antiche tecniche della pasta fatta in casa, tramandate da generazioni",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Richiamo esplicito ad antiche tecniche tramandate da generazioni: Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "43792",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi (D.Lgs. 116/2020, art. 219 D.Lgs. 152/2006): marchio obbligatorio escluso da art. 18 lett. n-sexies",
+  "rationale_it": "Informativa/marchio reso obbligatorio dalla normativa nazionale sull'etichettatura ambientale degli imballaggi, espressamente escluso da art. 18 lett. n-sexies.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "43792",
+  "claim_text": "Fonte di proteine",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim nutrizionale sul tenore di proteine, disciplinato dal Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "644934",
+  "claim_text": "Dadini speziati di pane artigianali",
+  "reason": "other_regime",
+  "note": "Metodo di produzione artigianale; eventualmente Art. 21 Cod. Cons. sulla natura del prodotto, fuori dal perimetro ECGT",
+  "rationale_it": "Asserisce un metodo di produzione artigianale senza richiamo alla tradizione e senza alcuna asserzione di impatto ambientale: non soddisfa nessuna delle ipotesi 3a-3c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "56904",
+  "claim_text": "un riso di altissima qualità",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo sulla qualita del riso: asse di confronto prestazionale, non ambientale (T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "56904",
+  "claim_text": "una consistenza superiore ed a una minore collosità del grano rispetto alle stesse varietà prodotte in altre zone",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Comparativo su consistenza e collosita del chicco, cioe su un asse sensoriale-prestazionale (T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "56904",
+  "claim_text": "questo garantisce che il Caranaroli, l'Arborio e il S. Andrea siano le varietà originali e non similari",
+  "reason": "other_regime",
+  "note": "Art. 21 Cod. Cons. - autenticita varietale; profilo di qualita certificata riconducibile al Reg. (UE) 1151/2012, fuori dal perimetro ECGT",
+  "rationale_it": "Garanzia di autenticita varietale del riso, priva di contenuto ambientale e non resa in forma di marchio di sostenibilita.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "56394",
+  "claim_text": "La ricetta della tradizione",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Richiamo alla ricetta della tradizione: provenienza storica della ricetta, Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "56394",
+  "claim_text": "Stesa a mano",
+  "reason": "other_regime",
+  "note": "Metodo di lavorazione (stesura manuale dell'impasto): nessun impatto ambientale asserito ne marchio, fuori dal perimetro ECGT",
+  "rationale_it": "Asserisce una modalita di lavorazione manuale, che non e ne asserzione di impatto ambientale ne etichetta di sostenibilita.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "429649",
+  "claim_text": "PANE ARABO-COTTO A LEGNA",
+  "reason": "other_regime",
+  "note": "Denominazione del prodotto e metodo di cottura (forno a legna): identificazione commerciale priva di contenuto ambientale, fuori dal perimetro ECGT",
+  "rationale_it": "Coincide con la denominazione del prodotto e indica il metodo di cottura: nessuna asserzione di impatto ambientale ne marchio volontario di sostenibilita.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "99051",
+  "claim_text": "raccolte manualmente",
+  "reason": "other_regime",
+  "note": "Metodo di raccolta della materia prima: nessun impatto ambientale asserito, fuori dal perimetro ECGT (T5 ritirata)",
+  "rationale_it": "Descrive una pratica di raccolta manuale, cioe un metodo di produzione, non un impatto positivo o migliorato sull'ambiente.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "99051",
+  "claim_text": "vengono lavorate in tempi brevi per garantirti il massimo della freschezza",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserisce il massimo della freschezza quale qualita sensoriale ottenuta dalla rapidita di lavorazione.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "700710",
+  "claim_text": "1 mg di Melatonina, utile per ridurre il tempo richiesto per prendere sonno",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Attribuisce alla melatonina un effetto fisiologico sul tempo di addormentamento: claim salutistico ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "700710",
+  "claim_text": "estratti di Valeriana e Passiflora tradizionalmente noti per favorire il rilassamento e il sonno",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Attribuisce a valeriana e passiflora un effetto sul rilassamento e sul sonno: claim salutistico su base botanica, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "700710",
+  "claim_text": "Passiflora e Melissa sono utili per il benessere mentale",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Attribuisce a passiflora e melissa un effetto sul benessere mentale: claim salutistico ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "700710",
+  "claim_text": "La Niacina completa la formulazione contribuendo al normale funzionamento del sistema nervoso",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim salutistico autorizzato sulla niacina e sul funzionamento del sistema nervoso: Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "552585",
+  "claim_text": "Propoli ... tradizionalmente utilizzata per i suoi benefici",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Attribuisce alla propoli benefici per l'organismo: claim salutistico su base botanica, territorio del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "552585",
+  "claim_text": "Vitamina C alto dosata, che contribuisce alla normale funzione del sistema immunitario e alla riduzione di stanchezza e affaticamento",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim salutistico sulla vitamina C (sistema immunitario, stanchezza e affaticamento): Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "672184",
+  "claim_text": "Mirtillo antiossidante, utile per il benessere della vista e la funzionalità del microcircolo",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Attribuisce al mirtillo proprieta antiossidanti e benefici per vista e microcircolo: claim salutistico, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "672184",
+  "claim_text": "Zinco ... contribuisce al normale metabolismo della vitamina A e al normale funzionamento del sistema immunitario",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim salutistico sullo zinco (metabolismo della vitamina A e sistema immunitario): Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "672184",
+  "claim_text": "Vitamina B2 ... contribuisce alla protezione delle cellule dallo stress ossidativo e contribuisce al mantenimento della capacità visiva normale",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Claim salutistico sulla vitamina B2 (stress ossidativo e capacita visiva): Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "700703",
+  "claim_text": "Aiuta a ridurre l'aspetto delle rughe",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Integratore che asserisce un effetto sull'aspetto delle rughe conseguente all'ingestione: effetto fisiologico, Step 2a via T2.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "700703",
+  "claim_text": "Favorisce l'elasticità e il tono della pelle",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Asserisce un effetto su elasticita e tono della pelle ottenuto per via alimentare: effetto fisiologico, Step 2a via T2.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "700703",
+  "claim_text": "Verisol - Beauty from Within",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Marchio di ingrediente e slogan di efficacia cosmetica: non e un marchio che certifica caratteristiche ambientali o sociali, quindi non raggiunge lo Step 4.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "700703",
+  "claim_text": "scelto da Equilibra per la sua efficacia testata",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserzione sull'efficacia testata dell'ingrediente: riguarda il processo probatorio e la prestazione del prodotto (T1), senza alcun contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "700703",
+  "claim_text": "Un'assunzione costante per 8 settimane aiuta a migliorare l'aspetto della pelle favorendo elasticità, tonicità e compattezza, riducendo la visibilità delle rughe",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Effetto su elasticità, tonicità e rughe ottenuto per assunzione: claim salutistico ex Reg. (CE) 1924/2006, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "613810",
+  "claim_text": "contribuisce all'equilibrio elettrolitico / alla riduzione di stanchezza e affaticamento / al normale metabolismo energetico / alla normale funzione muscolare e alla sintesi proteica (Magnesio); alla normale funzione muscolare / al normale funzionamento del sistema nervoso / al mantenimento di una normale pressione sanguigna (Potassio)",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Elenco di funzioni fisiologiche attribuite a magnesio e potassio: claim nutrizionali e sulla salute ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "664157",
+  "claim_text": "formulato per contribuire a contrastare i fattori di invecchiamento della pelle",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Integratore presentato come formulato per contrastare l'invecchiamento cutaneo per via di assunzione: effetto fisiologico, territorio del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "664157",
+  "claim_text": "La Vitamina C contribuisce alla normale formazione del collagene",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Funzione della vitamina C sulla formazione del collagene: claim sulla salute autorizzato ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "590807",
+  "claim_text": "Ginseng e Guaranà, piante ad azione tonica, utili in caso di stanchezza fisica e mentale",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Azione tonica di ginseng e guaranà in caso di stanchezza fisica e mentale: effetto su una funzione fisiologica, fuori perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "590807",
+  "claim_text": "utili per il normale metabolismo energetico e per la riduzione di stanchezza e affaticamento",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Contributo al normale metabolismo energetico e alla riduzione della stanchezza: claim sulla salute ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40263",
+  "claim_text": "riduce il tempo richiesto per prendere sonno e può contribuire ad alleviare gli effetti del jet lag",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Riduzione del tempo di addormentamento e attenuazione del jet lag: effetto fisiologico da ingestione, non asserzione ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41185",
+  "claim_text": "Zinco e Selenio contribuiscono al mantenimento di unghie normali ... Biotina contribuiscono al mantenimento di capelli normali",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Contributi di zinco, selenio e biotina al mantenimento di unghie e capelli normali: claim sulla salute ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41185",
+  "claim_text": "Gli estratti di Miglio e Bambù favoriscono il benessere di unghie e capelli",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Benessere di unghie e capelli attribuito a estratti botanici assunti per via orale: claim salutistico, nessun aggancio ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "613815",
+  "claim_text": "per offrire una formula Potenziata con più Potassio e più Magnesio rispetto alle precedenti formulazioni",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Il confronto con le formulazioni precedenti verte sul tenore di nutrienti (più potassio e più magnesio): l'asse è nutrizionale, quindi scatta lo Step 2a e non lo Step 3.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617651",
+  "claim_text": "L'escolzia e il tiglio contribuiscono al rilassamento (sonno, in caso di stress)",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Contributo di escolzia e tiglio al rilassamento e al sonno: effetto su una funzione fisiologica, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617651",
+  "claim_text": "La passiflora contribuisce al rilassamento e al benessere mentale",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Contributo della passiflora al rilassamento e al benessere mentale: claim sulla salute, disciplina del Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40494",
+  "claim_text": "Il Magnesio contribuisce alla riduzione della stanchezza e dell'affaticamento, al normale funzionamento del sistema nervoso, alla normale funzione psicologica e muscolare e al mantenimento di ossa e denti normali",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Funzioni fisiologiche del magnesio (stanchezza, sistema nervoso, ossa e denti): claim sulla salute ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617650",
+  "claim_text": "Il Reishi, un fungo conosciuto per le proprietà benefiche, contribuisce alle naturali difese dell'organismo",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Proprietà benefiche del reishi sulle naturali difese dell'organismo: claim salutistico su funzione immunitaria, nessun contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617650",
+  "claim_text": "L'Echinacea contribuisce alle naturali difese dell'organismo e alla funzionalità delle prime vie respiratorie",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Contributo dell'echinacea alle difese dell'organismo e alla funzionalità delle vie respiratorie: claim sulla salute ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617650",
+  "claim_text": "Lo Zinco contribuisce alla normale funzione del sistema immunitario",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Contributo dello zinco alla normale funzione del sistema immunitario: claim sulla salute autorizzato, fuori perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41494",
+  "claim_text": "contribuiscono alla riduzione della stanchezza e dell'affaticamento e alla normale funzione del sistema immunitario / contribuiscono alla protezione delle cellule dallo stress ossidativo / contribuiscono al normale metabolismo energetico / contribuiscono al mantenimento di una pelle normale",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Elenco di funzioni fisiologiche di vitamine e minerali: claim nutrizionali e sulla salute ex Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "616477",
+  "claim_text": "Pampers N°1 protezione e comfort* ... rispetto ai pannolini tradizionali pampers più venduti",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Primato su protezione e comfort confrontato con i pannolini tradizionali più venduti: l'asse del confronto è prestazionale, quindi resta scartato per T4 nonostante la nota.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "616477",
+  "claim_text": "Il miglior Pampers per i primi passi*",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo sull'idoneità funzionale del pannolino per i primi passi: asse prestazionale, nessun contenuto ambientale (T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "616477",
+  "claim_text": "12h Il più asciutto*",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asciuttezza superlativa per 12 ore: durata dell'effetto del prodotto, non durabilità del bene ex Art. 18 lett. n-novies.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "616477",
+  "claim_text": "Il più soffice* al tatto",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo sensoriale sulla morbidezza al tatto: asse prestazionale, fuori dal perimetro ECGT (T4).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "616477",
+  "claim_text": "Approvato da AIDECO - Associazione Italiana Dermatologia e Cosmetologia",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Approvazione di un'associazione di dermatologia e cosmetologia: endorsement di efficacia e compatibilità cutanea, il cui marchio non certifica caratteristiche ambientali o sociali e quindi non è etichetta di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "666874",
+  "claim_text": "Testato dai pediatri & approvato dai genitori",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Testato dai pediatri e approvato dai genitori: endorsement su efficacia e tollerabilità (T1), da soggetti che non certificano caratteristiche ambientali o sociali.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "666874",
+  "claim_text": "Compatibilità cutanea dermatologicamente testata e comprovata",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Compatibilità cutanea dermatologicamente testata e comprovata: asserzione sul processo probatorio e sull'effetto sul substrato cutaneo (T1 e T2).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "666874",
+  "claim_text": "Formula ipoallergenica** ... con fragranza ipoallergenica identificata dall'opinione SCCS/1459/11",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Formula ipoallergenica con fragranza identificata da un'opinione SCCS: attributo di tollerabilità cutanea del prodotto, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617095",
+  "claim_text": "Pampers N°1 protezione e comfort",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Primato su protezione e comfort: superlativo su asse prestazionale, senza contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617095",
+  "claim_text": "Il miglior Pampers per le prime corse*",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Superlativo sull'idoneità funzionale del pannolino per le prime corse: asse prestazionale (T4), fuori perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "617095",
+  "claim_text": "Il più asciutto* 12h",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asciuttezza superlativa per 12 ore: durata dell'effetto, non durabilità del bene; resta product_performance.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610909",
+  "claim_text": "Più asciutto* ... rispetto agli altri pannolini tradizionali",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Comparativo sull'asciuttezza rispetto agli altri pannolini tradizionali: asse prestazionale, scartato per T4 nonostante la nota.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610909",
+  "claim_text": "Proud olympic and paralympic partner",
+  "reason": "other_regime",
+  "note": "Sponsorizzazione sportiva (partnership olimpica e paralimpica): relazione commerciale e marchio che non distinguono il prodotto per caratteristiche ambientali o sociali, quindi non è etichetta di sostenibilità ex Art. 18 lett. n-sexies; eventuale rilievo solo ex Art. 21 in generale.",
+  "rationale_it": "Dichiarazione di partnership olimpica e paralimpica: nessun contenuto ambientale e nessun marchio di sostenibilità, non supera lo scope gate ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "610909",
+  "claim_text": "Dermatologicamente testato",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Dermatologicamente testato: asserzione sul processo probatorio relativo alla pelle (T1), fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "666869",
+  "claim_text": "Sollievo istantaneo¹, azione riparatrice",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Sollievo istantaneo dal fastidio da irritazione e azione riparatrice: efficacia sul substrato cutaneo trattato (T2), non asserzione ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "666869",
+  "claim_text": "Si prende cura della pelle per 12 h",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Cura della pelle per 12 ore: durata dell'effetto cosmetico, espressamente esclusa dalla nozione di durabilità ex Art. 18 lett. n-novies.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "666869",
+  "claim_text": "Testato & approvato da genitori e pediatri",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Testato e approvato da genitori e pediatri: endorsement su efficacia e tollerabilità (T1), da soggetti che non certificano caratteristiche ambientali o sociali.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "666869",
+  "claim_text": "Compatibilità cutanea dermatologicamente testata e comprovata",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Compatibilità cutanea dermatologicamente testata e comprovata: asserzione sul processo probatorio e sull'effetto cutaneo, fuori perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "37815",
+  "claim_text": "100% Ingredienti controllati rigorosamente che soddisfano i nostri elevati standard qualitativi",
+  "reason": "other_regime",
+  "note": "Assicurazione generica di qualità e di controllo di filiera priva di contenuto ambientale: non soddisfa nessuna delle limb 3a-3c (semi S24 e S25 superati); eventuale rilievo solo ex Art. 21 in generale.",
+  "rationale_it": "Controllo rigoroso degli ingredienti e standard qualitativi elevati: eccellenza di qualità senza contenuto ambientale, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "37815",
+  "claim_text": "Oltre 100 anni di storia / L'amore per la tradizione",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Riferimento a oltre cento anni di storia e all'amore per la tradizione: asserzione sul passato dell'impresa e della ricetta, Step 2c.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "37815",
+  "claim_text": "Il latte materno è l'alimento ideale per il lattante",
+  "reason": "other_regime",
+  "note": "Dicitura obbligatoria per alimenti destinati ai lattanti (Reg. (UE) 609/2013 e D.P.R. 128/1999) - not_a_commercial_claim",
+  "rationale_it": "Non è un'asserzione commerciale ma una menzione obbligatoria di legge sull'allattamento al seno, quindi esce allo Step 1.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "42118",
+  "claim_text": "No 1 nighttime brand** ... dati Neilsen, Dicembre 2022",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Afferma una posizione di mercato (marca n.1) e non un impatto ambientale, quindi non supera il gate di ambito dello Step 3.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "42118",
+  "claim_text": "Clinically Proven for a better night's sleep* ... Basato su uno studio clinico condotto nel 2020-2023",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "È un'asserzione sull'efficacia del prodotto e sul processo probatorio clinico, regolata come prestazione (T1), senza alcun contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "43907",
+  "claim_text": "CRESCENDO",
+  "reason": "other_regime",
+  "note": "private retailer line mark with no environmental or social content - a trade mark, not an etichetta di sostenibilita under Art. 18 lett. n-sexies",
+  "rationale_it": "Marchio di linea commerciale privo di contenuto ambientale o sociale: non e un'etichetta di sostenibilita.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "638347",
+  "claim_text": "Tracciabilità e sicurezza garantite da Oasi nella crescita",
+  "reason": "other_regime",
+  "note": "Assicurazione generica di tracciabilità e sicurezza priva di contenuto ambientale - seed S24 superato dal gate di ambito ECGT",
+  "rationale_it": "Tracciabilità e sicurezza sono garanzie di qualità e filiera senza contenuto ambientale, quindi nessuna delle lettere n-quater, n-sexies o n-novies è integrata.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "638347",
+  "claim_text": "Elevati standard di qualità agricoltori italiani selezionati",
+  "reason": "other_regime",
+  "note": "Eccellenza generica e selezione dei fornitori priva di contenuto ambientale - seed S25 superato dal gate di ambito ECGT",
+  "rationale_it": "Asserisce standard qualitativi elevati e selezione degli agricoltori, senza alcuna asserzione di impatto ambientale: non esiste una categoria di eccellenza generica.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "704720",
+  "claim_text": "Prodotto in Italia* ... *Ingredienti di origine UE e non UE",
+  "reason": "other_regime",
+  "note": "Origine e autenticità - Art. 21 Cod. Cons., fuori dal perimetro ECGT",
+  "rationale_it": "Asserisce il luogo di produzione con precisazione sull'origine degli ingredienti, senza contenuto ambientale rilevante ai fini ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "704720",
+  "claim_text": "Tracciabilità e sicurezza",
+  "reason": "other_regime",
+  "note": "Assicurazione generica di tracciabilità e sicurezza priva di contenuto ambientale - seed S24 superato",
+  "rationale_it": "Garanzia di filiera senza asserzione di impatto ambientale né marchio di sostenibilità: fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "704720",
+  "claim_text": "Agricoltori selezionati",
+  "reason": "other_regime",
+  "note": "Selezione dei fornitori/eccellenza generica priva di contenuto ambientale - seed S25 superato",
+  "rationale_it": "La selezione degli agricoltori è un'assicurazione di filiera senza contenuto ambientale, quindi non integra alcuna delle definizioni dell'art. 18.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40079",
+  "claim_text": "No.1 Brand* ... Basato su dati Nielsen aggregati in Europa, Medio Oriente, Africa",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Afferma la posizione di mercato del marchio e non un impatto ambientale, quindi non supera il gate di ambito.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "40079",
+  "claim_text": "Maximum protection",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserisce il livello di protezione offerto dal prodotto, cioè una prestazione, come nel seed D11.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "56473",
+  "claim_text": "In aiuto per alleviare questi disturbi viene l'uso di guaine per sostenere il peso del pancione",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserisce l'efficacia della guaina nell'alleviare i disturbi lombari sostenendo il peso: asse prestazionale, privo di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "573102",
+  "claim_text": "principio attivo brevettato",
+  "reason": "ip_regulatory_status",
+  "note": null,
+  "rationale_it": "Afferma lo status brevettuale del principio attivo, come nel seed D19.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "573102",
+  "claim_text": "contribuisce a rafforzare la barriera cutanea del bambino preservando il capitale cellulare della sua pelle",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Asserisce un effetto sul substrato cutaneo trattato dal prodotto, quindi prestazione ai sensi del tie-break T2.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "39285",
+  "claim_text": "N°1 in Italia* ... Fonte: banche Dati IRI",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Afferma il primato di vendita in Italia, un'asserzione di mercato priva di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "47106",
+  "claim_text": "N°1 in Italia* ... Fonte: banche Dati IRI",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Il primato di mercato non è un'asserzione ambientale né un'etichetta di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "554704",
+  "claim_text": "Etichetta Ambientale",
+  "reason": "other_regime",
+  "note": "Etichettatura ambientale obbligatoria degli imballaggi (art. 219, comma 5, D.Lgs. 152/2006 come modificato dal D.Lgs. 116/2020): marchio obbligatorio escluso dalla lett. n-sexies",
+  "rationale_it": "È una disclosure obbligatoria di legge, espressamente esclusa dalla nozione di etichetta di sostenibilità.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "713295",
+  "claim_text": "Lavorazioni tradizionali (macinazione, spremitura..)",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Asserisce un metodo di lavorazione tradizionale, cioè un richiamo alla tradizione e non un impatto ambientale (T5 ritirata).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "66541",
+  "claim_text": "GRAPPA TRADIZIONALE",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Qualifica la grappa come tradizionale, richiamo alla tipicità storica senza contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "66541",
+  "claim_text": "DISTILLATA CON METODO ARTIGIANALE IN PICCOLI ALAMBICCHI DI RAME",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Descrive un metodo di distillazione artigianale, cioè una pratica produttiva di tradizione e non un'asserzione di impatto ambientale (T5 ritirata).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "703021",
+  "claim_text": "Fonte di vitamina C",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Indicazione nutrizionale sul contenuto di vitamina C, regolata dal Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38765",
+  "claim_text": "Raccolto a mano",
+  "reason": "other_regime",
+  "note": "Metodo di raccolta/produzione senza asserzione di impatto ambientale - Art. 18 lett. n-quater non integrata; eventualmente Art. 21 Cod. Cons. in generale",
+  "rationale_it": "La raccolta manuale descrive una pratica produttiva e non un impatto ambientale, e non è un marchio volontario di sostenibilità (T5 ritirata).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38765",
+  "claim_text": "Celebrato nel \"Don Giovanni\" di Mozart",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Riferimento culturale-storico al 'Don Giovanni' di Mozart: asserzione sul passato, priva di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38771",
+  "claim_text": "Vinificato con metodi tradizionali",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Asserzione su un metodo produttivo tradizionale, che non afferma alcun impatto ambientale (T5 ritirata).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38239",
+  "claim_text": "può avere effetti diuretici; aiuta la digestione; può combattere la dispepsia; può svolgere azione coadiuvante nel trattamento della stipsi (D.M. 3300-197 del 24-1-2000, D.M. 3551 del 24-3-2004); Una fonte di calcio per la salute delle ossa (D.M. 4311 del 15-7-2019)",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Effetti diuretici, digestivi e apporto di calcio per le ossa: indicazioni sulla salute, materia dei Reg. 1924/2006 e 1169/2011 e dei D.M. citati.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38239",
+  "claim_text": "1500 Controlli di qualità giornalieri",
+  "reason": "other_regime",
+  "note": "Art. 21 Codice del Consumo (pratiche ingannevoli in generale) - vanto di controllo qualità privo di contenuto ambientale",
+  "rationale_it": "Numero di controlli di qualità: assicurazione di qualità senza alcun contenuto ambientale, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "664452",
+  "claim_text": "Facilita la digestione / È indicata per le diete iposodiche / Può avere effetti diuretici ... D.P.G.R. Campania n. 25742 del 30.12.1992",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Digestione, dieta iposodica ed effetti diuretici: indicazioni su funzioni fisiologiche, disciplinate dalla normativa su salute e nutrizione.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "664452",
+  "claim_text": "In bottiglia come nasce alla fonte",
+  "reason": "other_regime",
+  "note": "D.Lgs. 176/2011 sulle acque minerali naturali (imbottigliamento alla fonte) - asserzione di autenticità priva di contenuto ambientale",
+  "rationale_it": "Asserzione di autenticità sull'imbottigliamento alla fonte, che non afferma né implica alcun impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "664452",
+  "claim_text": "1.299 Controlli di qualità ogni giorno",
+  "reason": "other_regime",
+  "note": "Art. 21 Codice del Consumo - vanto di controllo qualità privo di contenuto ambientale",
+  "rationale_it": "Numero di controlli giornalieri: assicurazione di qualità senza contenuto ambientale, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "104322",
+  "claim_text": "Traditional recipe",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "'Traditional recipe' asserisce la provenienza tradizionale della ricetta, quindi il passato del prodotto.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "104322",
+  "claim_text": "rispetta la tradizione poiché viene prodotto secondo un'antica ricetta",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Rispetto della tradizione e antica ricetta: asserzione sulla provenienza storica della ricetta.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38379",
+  "claim_text": "Energade reintegra e disseta",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "Reintegro salino e azione dissetante: effetto su funzioni fisiologiche per ingestione.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "594304",
+  "claim_text": "Condisce, conserva e pulisce* ... Come da tradizione efficace anche nelle pulizie di casa",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Elenco delle funzioni del prodotto (condire, conservare, pulire) con nota sull'efficacia nelle pulizie: asserzione di efficacia funzionale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "594304",
+  "claim_text": "L'originale",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "'L'originale' rivendica priorità e autenticità del prodotto rispetto alle imitazioni, senza alcun contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "594304",
+  "claim_text": "L'aceto di alcol n.1 in Italia** ... Fonte: Dati Nielsen",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Primato di vendita nel segmento: asserzione di posizione di mercato, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "594304",
+  "claim_text": "Casaceto è leader nel segmento di riferimento, grazie alla sua funzione polivalente",
+  "reason": "other_regime",
+  "note": "Art. 21 Codice del Consumo - asserzione di leadership di mercato priva di contenuto ambientale",
+  "rationale_it": "Rivendicazione di leadership di segmento motivata dalla polivalenza d'uso: nessun contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "668466",
+  "claim_text": "N.1 in Italia* ... Dati di vendita Nielsen",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Primato di vendita in Italia: asserzione di posizione di mercato senza contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "668466",
+  "claim_text": "Come fatto in casa",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "'Come fatto in casa' asserisce una qualità sensoriale del prodotto, non un impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "668466",
+  "claim_text": "3h Cotto Lentamente come faresti tu",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Tempo e modalità di cottura lenta: fatto tecnico-sensoriale di preparazione, privo di contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "608812",
+  "claim_text": "La marca preferita dagli chef italiani* ... Indagine Nielsen ... campione rappresentativo di 600 ... +/- 4 pp al 95%",
+  "reason": "other_regime",
+  "note": "market-position claim, Art. 21 Cod. Cons. - sales-ranking axis, outside the ECGT perimeter",
+  "rationale_it": "Preferenza dichiarata dagli chef: asserzione di posizione di mercato, fuori dal perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "608812",
+  "claim_text": "Testato e consigliato dall'Associazione Professionale Cuochi Italiani, che riunisce migliaia di chef e ristoratori professionisti",
+  "reason": "product_performance",
+  "note": null,
+  "rationale_it": "Avallo di un'associazione di cuochi sulla qualità professionale del prodotto: l'ente non certifica caratteristiche ambientali o sociali, quindi non vi è aggancio ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "56232",
+  "claim_text": "considerato tra i fagioli più pregiati",
+  "reason": "other_regime",
+  "note": "Art. 21 Codice del Consumo - vanto generico di pregio del prodotto, privo di contenuto ambientale",
+  "rationale_it": "Superlativo di pregio sul legume: asserzione di eccellenza generica senza aggancio ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "56232",
+  "claim_text": "pare che il suo nome gli fosse stato attribuito perché ambito e presente sulla tavola dei Re",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Aneddoto storico sull'origine del nome del fagiolo: asserzione sul passato.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "58758",
+  "claim_text": "Ricco di proteine**",
+  "reason": "health_nutrition",
+  "note": null,
+  "rationale_it": "'Ricco di proteine' è un'indicazione nutrizionale disciplinata dal Reg. (CE) 1924/2006.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "718993",
+  "claim_text": "riconosciamo loro il giusto compenso contro ogni sfruttamento della manodopera",
+  "reason": "other_regime",
+  "note": "Asserzione sociale in prosa libera: non è etichetta di sostenibilità ex art. 18 n-sexies (marchio) e n-quater copre il solo impatto ambientale; eventualmente art. 21 Codice del Consumo",
+  "rationale_it": "Impegno sociale sul giusto compenso espresso in forma discorsiva e non come marchio: nessun aggancio nel perimetro ECGT.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "718993",
+  "claim_text": "Da filiera corta",
+  "reason": "other_regime",
+  "note": "short-supply-chain claim framed by the record as direct contracts and fair pay to farmers - free-text social prose, no mark form, no asserted environmental impact",
+  "rationale_it": "Asserzione di filiera corta presentata dal record in chiave sociale: nessun impatto ambientale asserito.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38202",
+  "claim_text": "secondo la tradizionale ricetta",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Preparazione secondo la ricetta tradizionale: asserzione sulla provenienza della ricetta.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "639927",
+  "claim_text": "Antica tradizione",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "'Antica tradizione' richiama esplicitamente il passato del prodotto, senza contenuto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "639927",
+  "claim_text": "Lavorazione artigianale",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Lavorazione artigianale: metodo produttivo presentato come richiamo alla tradizione, privo di asserzione di impatto ambientale (T5 ritirata).",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "38130",
+  "claim_text": "La coltivazione dei fagioli \"Phaseolus vulgaris\" ebbe inizio in America ... introdotto in Veneto intorno al 1550 dal frate bellunese Pietro Valeriano",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Racconto storico sull'introduzione del fagiolo in Veneto nel 1550: asserzione sul passato.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "65971",
+  "claim_text": "selezionato dalla famiglia Santagata assaggiatori di olio dal 1907",
+  "reason": "heritage_origin",
+  "note": null,
+  "rationale_it": "Selezione da parte della famiglia con data di fondazione 1907: storia familiare e anno di fondazione.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41690",
+  "claim_text": "accomodate a mano",
+  "reason": "other_regime",
+  "note": "Art. 21 Codice del Consumo - descrizione del metodo di lavorazione manuale, priva di contenuto ambientale",
+  "rationale_it": "'Accomodate a mano' descrive una modalità di lavorazione, non un impatto ambientale.",
+  "removed_in": "v2"
+ },
+ {
+  "product_id": "41690",
+  "claim_text": "FIOR FIORE",
+  "reason": "other_regime",
+  "note": "Marchio privato di linea premium: non è etichetta di sostenibilità ex art. 18 n-sexies perché non distingue per caratteristiche ambientali o sociali",
+  "rationale_it": "'FIOR FIORE' è un marchio commerciale di gamma gastronomica, privo di riferimento a caratteristiche ambientali o sociali.",
+  "removed_in": "v2"
+ }
+]

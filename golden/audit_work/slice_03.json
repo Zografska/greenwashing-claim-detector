@@ -1,0 +1,883 @@
+[
+ {
+  "uid": "554877#8",
+  "product_id": "554877",
+  "claim_text": "Luminous630 è efficace su tutti i fototipi",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Siero anti macchie luminosità",
+   "brand": "Nivea",
+   "features": "Nuovo\nSchiarisce & riduce le macchie e ne previene la ricomparsa\nRisultati visibili dopo 4 settimane\nLuminous630 ingrediente brevettato",
+   "producer_info": "Il trattamento Nivea più efficace nella riduzione delle macchie cutanee\nIl siero dalla texture leggera riduce le macchie causate dal sole, dall'invecchiamento cutaneo, da fattori genetici ed ormonali¹ e ne previene la ricomparsa, trasformando la pelle in uniforme e luminosa.\n¹come gravidanza e menopausa; in assenza di attività ormonale\nRisultati testati\nDopo 4 settimane: le macchie sono visibilmente schiarite.\nDopo 8 settimane: l'intensità delle macchie è ridotta del 50%.\nCon l'uso continuativo³, i risultati continuano a migliorare: la pelle è più liscia, più uniforme e riacquista la sua naturale luminosità, per un aspetto più giovane.\n²i risultati possono variare da individuo a individuo\n³studio di 12 settimane\nRaccomandato dalle donne4\n82% ha confermato\nÈ il prodotto più efficace nel ridurre le macchie che io abbia mai provato\n100% ha confermato\nQuesto prodotto sarà sempre presente nella mia routine di cura del viso\n4 Autovalutazione, studio di 12 settimane con 34 donne, 2018\nUna innovazione rivoluzionaria\nDopo 10 anni di meticolosa ricerca e lo studio di più 50.000 ingredienti, gli scienziati Nivea hanno individuato un ingrediente altamente efficace nel trattamento delle macchie cutanee: Luminous630, in grado di agire a livello cellulare.\nLuminous630 ingrediente brevettato\n- Riduce gli accumuli di melanina schiarendo le macchie già esistenti e riducendone la dimensione.\n- Regola la produzione di nuova melanina prevenendo la formazione di macchie future.\n- Trasforma la pelle in uniforme e luminosa.\nDermatologicamente comprovato\nDelicato sulla pelle e adatto a tutti i tipi di pelle, anche le più sensibili.\nAdatto anche a donne in gravidanza.\nLuminous630 è efficace su tutti i fototipi."
+  }
+ },
+ {
+  "uid": "612478#0",
+  "product_id": "612478",
+  "claim_text": "Cosmetico Certificato 100% naturale",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Shampoo per capelli spenti delicato illuminante",
+   "brand": "Coop",
+   "features": "Capelli spenti\nCon estratto di Camomilla Biologica e olio essenziale di Limone\nCosmetico Certificato 100% naturale",
+   "producer_info": "Fresco e delicato, dalla schiuma fine e compatta, deterge i capelli rendendoli luminosi, setosi e delicatamente profumati.",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nFlacone - Plastica - HDPE 2 - Raccolta plastica\nTappo - Plastica - PP 5 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "612478#1",
+  "product_id": "612478",
+  "claim_text": "Etichetta Ambientale",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": "mandatory_disclosure",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Shampoo per capelli spenti delicato illuminante",
+   "brand": "Coop",
+   "features": "Capelli spenti\nCon estratto di Camomilla Biologica e olio essenziale di Limone\nCosmetico Certificato 100% naturale",
+   "producer_info": "Fresco e delicato, dalla schiuma fine e compatta, deterge i capelli rendendoli luminosi, setosi e delicatamente profumati.",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nFlacone - Plastica - HDPE 2 - Raccolta plastica\nTappo - Plastica - PP 5 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "612478#2",
+  "product_id": "612478",
+  "claim_text": "VIVI VERDE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Shampoo per capelli spenti delicato illuminante",
+   "brand": "Coop",
+   "features": "Capelli spenti\nCon estratto di Camomilla Biologica e olio essenziale di Limone\nCosmetico Certificato 100% naturale",
+   "producer_info": "Fresco e delicato, dalla schiuma fine e compatta, deterge i capelli rendendoli luminosi, setosi e delicatamente profumati.",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nFlacone - Plastica - HDPE 2 - Raccolta plastica\nTappo - Plastica - PP 5 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "608641#0",
+  "product_id": "608641",
+  "claim_text": "Cosmetico Certificato 100% naturale",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Sapone liquido idratante ricarica",
+   "brand": "Coop",
+   "features": "Con estratto di Karkadé Biologico e olio essenziale di Arancia Dolce\nCosmetico Certificato 100% naturale\n75% In meno di plastica",
+   "producer_info": "Sapone liquido delicato, sprigiona una piacevole schiuma detergente, lasciando la pelle profumata e piacevolmente setificata.\nUsando questa ricarica fai risparmiare il 75% di plastica e contribuisci a ridurre la massa dei rifiuti.",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nBusta - Plastica - 7 - Raccolta plastica\nTappo - Plastica - HDPE 2 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "608641#1",
+  "product_id": "608641",
+  "claim_text": "75% In meno di plastica",
+  "v1_category": "unfair_comparison",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Sapone liquido idratante ricarica",
+   "brand": "Coop",
+   "features": "Con estratto di Karkadé Biologico e olio essenziale di Arancia Dolce\nCosmetico Certificato 100% naturale\n75% In meno di plastica",
+   "producer_info": "Sapone liquido delicato, sprigiona una piacevole schiuma detergente, lasciando la pelle profumata e piacevolmente setificata.\nUsando questa ricarica fai risparmiare il 75% di plastica e contribuisci a ridurre la massa dei rifiuti.",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nBusta - Plastica - 7 - Raccolta plastica\nTappo - Plastica - HDPE 2 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "608641#2",
+  "product_id": "608641",
+  "claim_text": "fai risparmiare il 75% di plastica e contribuisci a ridurre la massa dei rifiuti",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Sapone liquido idratante ricarica",
+   "brand": "Coop",
+   "features": "Con estratto di Karkadé Biologico e olio essenziale di Arancia Dolce\nCosmetico Certificato 100% naturale\n75% In meno di plastica",
+   "producer_info": "Sapone liquido delicato, sprigiona una piacevole schiuma detergente, lasciando la pelle profumata e piacevolmente setificata.\nUsando questa ricarica fai risparmiare il 75% di plastica e contribuisci a ridurre la massa dei rifiuti.",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nBusta - Plastica - 7 - Raccolta plastica\nTappo - Plastica - HDPE 2 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "608641#3",
+  "product_id": "608641",
+  "claim_text": "VIVI VERDE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Sapone liquido idratante ricarica",
+   "brand": "Coop",
+   "features": "Con estratto di Karkadé Biologico e olio essenziale di Arancia Dolce\nCosmetico Certificato 100% naturale\n75% In meno di plastica",
+   "producer_info": "Sapone liquido delicato, sprigiona una piacevole schiuma detergente, lasciando la pelle profumata e piacevolmente setificata.\nUsando questa ricarica fai risparmiare il 75% di plastica e contribuisci a ridurre la massa dei rifiuti.",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nBusta - Plastica - 7 - Raccolta plastica\nTappo - Plastica - HDPE 2 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "608641#4",
+  "product_id": "608641",
+  "claim_text": "Etichetta Ambientale",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": "mandatory_disclosure",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Sapone liquido idratante ricarica",
+   "brand": "Coop",
+   "features": "Con estratto di Karkadé Biologico e olio essenziale di Arancia Dolce\nCosmetico Certificato 100% naturale\n75% In meno di plastica",
+   "producer_info": "Sapone liquido delicato, sprigiona una piacevole schiuma detergente, lasciando la pelle profumata e piacevolmente setificata.\nUsando questa ricarica fai risparmiare il 75% di plastica e contribuisci a ridurre la massa dei rifiuti.",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nBusta - Plastica - 7 - Raccolta plastica\nTappo - Plastica - HDPE 2 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "704601#0",
+  "product_id": "704601",
+  "claim_text": "assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Crema adesiva per dentiere totali e parziali sapor",
+   "description": "Kukident Bipacco Morso Insuperabile è stato progettato come coadiuvante per migliorare la stabilità e la tenuta delle protesi dentarie, sia totali che parziali. La sua destinazione d'uso principale è quella di formare uno strato adesivo resistente tra la dentiera e le gengive, assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore. I benefici derivanti dall'utilizzo di questa crema adesiva includono la prevenzione delle infiltrazioni di particelle di cibo sotto la protesi, un problema comune che può causare disagio e irritazione gengivale. Grazie alla sua formula avanzata, Kukident Morso Insuperabile contribuisce a creare un sigillo protettivo che mantiene il cibo lontano dalle gengive e dal palato, preservando la salute orale e il comfort durante i pasti. Un altro vantaggio significativo è l'aumento della sicurezza nel morso, permettendo agli utilizzatori di masticare con maggiore efficacia e senza preoccupazioni, anche alimenti più difficili. Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare. Inoltre, la stabilità offerta dalla crema riduce il rischio di movimenti imprevisti della dentiera, migliorando la fiducia in sé stessi e la qualità della vita quotidiana.\nScegliere Kukident Bipacco Morso Insuperabile su Farmaciauno significa optare per una soluzione affidabile e conveniente per la gestione quotidiana della propria protesi dentaria. Questo prodotto si distingue per la sua formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura, un aspetto fondamentale per chi cerca sicurezza e tranquillità per tutto il giorno. La qualità dei suoi componenti garantisce un'adesione efficace, migliorando notevolmente l'esperienza di chi porta la dentiera. L'acquisto del bipacco offre un vantaggio economico significativo, fornendo due tubetti di crema adesiva, garantendo una scorta più prolungata e riducendo la frequenza degli acquisti. Questa convenienza è un valore aggiunto che Farmaciauno è lieta di offrire, assicurando un ottimo rapporto qualità-prezzo. La scelta di questo formato è ideale per chi desidera avere sempre a disposizione il proprio prodotto preferito senza interruzioni. Kukident Morso Insuperabile non è solo una crema adesiva, ma un vero alleato per la salute e il comfort orale. Acquistarlo da Farmaciauno garantisce non solo l'autenticità e la freschezza del prodotto, ma anche un servizio clienti eccellente e spedizioni rapide, supportando la tua routine quotidiana con la massima efficienza e affidabilità. Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita.",
+   "producer_info": "Kukident Bipacco Morso Insuperabile è un dispositivo medico ideale per tutti coloro che utilizzano protesi dentarie totali o parziali e desiderano una tenuta forte e sicura per l'intera giornata. È specificamente formulato per offrire comfort e stabilità, permettendo di vivere con maggiore serenità ogni momento quotidiano. Le situazioni d'uso consigliate includono i pasti, dove la crema adesiva aiuta a prevenire le infiltrazioni di cibo sotto la dentiera, evitando fastidiosi residui e proteggendo le gengive. È inoltre particolarmente utile durante le conversazioni o le attività sociali, garantendo che la dentiera rimanga saldamente al suo posto, eliminando la preoccupazione di spostamenti indesiderati. I benefici attesi sono molteplici: un morso più potente e una maggiore fiducia nel mangiare qualsiasi tipo di alimento, dal più morbido al più croccante. L'utente sperimenta un significativo aumento del comfort orale, riducendo l'attrito e l'irritazione causati dal movimento della protesi, contribuendo a una migliore qualità di vita e una maggiore libertà di espressione.",
+   "certifications": [
+    "DISPOSITIVO MEDICO DETRAIBILE"
+   ]
+  }
+ },
+ {
+  "uid": "704601#1",
+  "product_id": "704601",
+  "claim_text": "Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "HIGH",
+  "v1_modifiers": [
+   "borderline_medicinal_claim_candidate"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Crema adesiva per dentiere totali e parziali sapor",
+   "description": "Kukident Bipacco Morso Insuperabile è stato progettato come coadiuvante per migliorare la stabilità e la tenuta delle protesi dentarie, sia totali che parziali. La sua destinazione d'uso principale è quella di formare uno strato adesivo resistente tra la dentiera e le gengive, assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore. I benefici derivanti dall'utilizzo di questa crema adesiva includono la prevenzione delle infiltrazioni di particelle di cibo sotto la protesi, un problema comune che può causare disagio e irritazione gengivale. Grazie alla sua formula avanzata, Kukident Morso Insuperabile contribuisce a creare un sigillo protettivo che mantiene il cibo lontano dalle gengive e dal palato, preservando la salute orale e il comfort durante i pasti. Un altro vantaggio significativo è l'aumento della sicurezza nel morso, permettendo agli utilizzatori di masticare con maggiore efficacia e senza preoccupazioni, anche alimenti più difficili. Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare. Inoltre, la stabilità offerta dalla crema riduce il rischio di movimenti imprevisti della dentiera, migliorando la fiducia in sé stessi e la qualità della vita quotidiana.\nScegliere Kukident Bipacco Morso Insuperabile su Farmaciauno significa optare per una soluzione affidabile e conveniente per la gestione quotidiana della propria protesi dentaria. Questo prodotto si distingue per la sua formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura, un aspetto fondamentale per chi cerca sicurezza e tranquillità per tutto il giorno. La qualità dei suoi componenti garantisce un'adesione efficace, migliorando notevolmente l'esperienza di chi porta la dentiera. L'acquisto del bipacco offre un vantaggio economico significativo, fornendo due tubetti di crema adesiva, garantendo una scorta più prolungata e riducendo la frequenza degli acquisti. Questa convenienza è un valore aggiunto che Farmaciauno è lieta di offrire, assicurando un ottimo rapporto qualità-prezzo. La scelta di questo formato è ideale per chi desidera avere sempre a disposizione il proprio prodotto preferito senza interruzioni. Kukident Morso Insuperabile non è solo una crema adesiva, ma un vero alleato per la salute e il comfort orale. Acquistarlo da Farmaciauno garantisce non solo l'autenticità e la freschezza del prodotto, ma anche un servizio clienti eccellente e spedizioni rapide, supportando la tua routine quotidiana con la massima efficienza e affidabilità. Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita.",
+   "producer_info": "Kukident Bipacco Morso Insuperabile è un dispositivo medico ideale per tutti coloro che utilizzano protesi dentarie totali o parziali e desiderano una tenuta forte e sicura per l'intera giornata. È specificamente formulato per offrire comfort e stabilità, permettendo di vivere con maggiore serenità ogni momento quotidiano. Le situazioni d'uso consigliate includono i pasti, dove la crema adesiva aiuta a prevenire le infiltrazioni di cibo sotto la dentiera, evitando fastidiosi residui e proteggendo le gengive. È inoltre particolarmente utile durante le conversazioni o le attività sociali, garantendo che la dentiera rimanga saldamente al suo posto, eliminando la preoccupazione di spostamenti indesiderati. I benefici attesi sono molteplici: un morso più potente e una maggiore fiducia nel mangiare qualsiasi tipo di alimento, dal più morbido al più croccante. L'utente sperimenta un significativo aumento del comfort orale, riducendo l'attrito e l'irritazione causati dal movimento della protesi, contribuendo a una migliore qualità di vita e una maggiore libertà di espressione.",
+   "certifications": [
+    "DISPOSITIVO MEDICO DETRAIBILE"
+   ]
+  }
+ },
+ {
+  "uid": "704601#2",
+  "product_id": "704601",
+  "claim_text": "migliorando la fiducia in sé stessi e la qualità della vita quotidiana",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Crema adesiva per dentiere totali e parziali sapor",
+   "description": "Kukident Bipacco Morso Insuperabile è stato progettato come coadiuvante per migliorare la stabilità e la tenuta delle protesi dentarie, sia totali che parziali. La sua destinazione d'uso principale è quella di formare uno strato adesivo resistente tra la dentiera e le gengive, assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore. I benefici derivanti dall'utilizzo di questa crema adesiva includono la prevenzione delle infiltrazioni di particelle di cibo sotto la protesi, un problema comune che può causare disagio e irritazione gengivale. Grazie alla sua formula avanzata, Kukident Morso Insuperabile contribuisce a creare un sigillo protettivo che mantiene il cibo lontano dalle gengive e dal palato, preservando la salute orale e il comfort durante i pasti. Un altro vantaggio significativo è l'aumento della sicurezza nel morso, permettendo agli utilizzatori di masticare con maggiore efficacia e senza preoccupazioni, anche alimenti più difficili. Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare. Inoltre, la stabilità offerta dalla crema riduce il rischio di movimenti imprevisti della dentiera, migliorando la fiducia in sé stessi e la qualità della vita quotidiana.\nScegliere Kukident Bipacco Morso Insuperabile su Farmaciauno significa optare per una soluzione affidabile e conveniente per la gestione quotidiana della propria protesi dentaria. Questo prodotto si distingue per la sua formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura, un aspetto fondamentale per chi cerca sicurezza e tranquillità per tutto il giorno. La qualità dei suoi componenti garantisce un'adesione efficace, migliorando notevolmente l'esperienza di chi porta la dentiera. L'acquisto del bipacco offre un vantaggio economico significativo, fornendo due tubetti di crema adesiva, garantendo una scorta più prolungata e riducendo la frequenza degli acquisti. Questa convenienza è un valore aggiunto che Farmaciauno è lieta di offrire, assicurando un ottimo rapporto qualità-prezzo. La scelta di questo formato è ideale per chi desidera avere sempre a disposizione il proprio prodotto preferito senza interruzioni. Kukident Morso Insuperabile non è solo una crema adesiva, ma un vero alleato per la salute e il comfort orale. Acquistarlo da Farmaciauno garantisce non solo l'autenticità e la freschezza del prodotto, ma anche un servizio clienti eccellente e spedizioni rapide, supportando la tua routine quotidiana con la massima efficienza e affidabilità. Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita.",
+   "producer_info": "Kukident Bipacco Morso Insuperabile è un dispositivo medico ideale per tutti coloro che utilizzano protesi dentarie totali o parziali e desiderano una tenuta forte e sicura per l'intera giornata. È specificamente formulato per offrire comfort e stabilità, permettendo di vivere con maggiore serenità ogni momento quotidiano. Le situazioni d'uso consigliate includono i pasti, dove la crema adesiva aiuta a prevenire le infiltrazioni di cibo sotto la dentiera, evitando fastidiosi residui e proteggendo le gengive. È inoltre particolarmente utile durante le conversazioni o le attività sociali, garantendo che la dentiera rimanga saldamente al suo posto, eliminando la preoccupazione di spostamenti indesiderati. I benefici attesi sono molteplici: un morso più potente e una maggiore fiducia nel mangiare qualsiasi tipo di alimento, dal più morbido al più croccante. L'utente sperimenta un significativo aumento del comfort orale, riducendo l'attrito e l'irritazione causati dal movimento della protesi, contribuendo a una migliore qualità di vita e una maggiore libertà di espressione.",
+   "certifications": [
+    "DISPOSITIVO MEDICO DETRAIBILE"
+   ]
+  }
+ },
+ {
+  "uid": "704601#3",
+  "product_id": "704601",
+  "claim_text": "formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Crema adesiva per dentiere totali e parziali sapor",
+   "description": "Kukident Bipacco Morso Insuperabile è stato progettato come coadiuvante per migliorare la stabilità e la tenuta delle protesi dentarie, sia totali che parziali. La sua destinazione d'uso principale è quella di formare uno strato adesivo resistente tra la dentiera e le gengive, assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore. I benefici derivanti dall'utilizzo di questa crema adesiva includono la prevenzione delle infiltrazioni di particelle di cibo sotto la protesi, un problema comune che può causare disagio e irritazione gengivale. Grazie alla sua formula avanzata, Kukident Morso Insuperabile contribuisce a creare un sigillo protettivo che mantiene il cibo lontano dalle gengive e dal palato, preservando la salute orale e il comfort durante i pasti. Un altro vantaggio significativo è l'aumento della sicurezza nel morso, permettendo agli utilizzatori di masticare con maggiore efficacia e senza preoccupazioni, anche alimenti più difficili. Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare. Inoltre, la stabilità offerta dalla crema riduce il rischio di movimenti imprevisti della dentiera, migliorando la fiducia in sé stessi e la qualità della vita quotidiana.\nScegliere Kukident Bipacco Morso Insuperabile su Farmaciauno significa optare per una soluzione affidabile e conveniente per la gestione quotidiana della propria protesi dentaria. Questo prodotto si distingue per la sua formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura, un aspetto fondamentale per chi cerca sicurezza e tranquillità per tutto il giorno. La qualità dei suoi componenti garantisce un'adesione efficace, migliorando notevolmente l'esperienza di chi porta la dentiera. L'acquisto del bipacco offre un vantaggio economico significativo, fornendo due tubetti di crema adesiva, garantendo una scorta più prolungata e riducendo la frequenza degli acquisti. Questa convenienza è un valore aggiunto che Farmaciauno è lieta di offrire, assicurando un ottimo rapporto qualità-prezzo. La scelta di questo formato è ideale per chi desidera avere sempre a disposizione il proprio prodotto preferito senza interruzioni. Kukident Morso Insuperabile non è solo una crema adesiva, ma un vero alleato per la salute e il comfort orale. Acquistarlo da Farmaciauno garantisce non solo l'autenticità e la freschezza del prodotto, ma anche un servizio clienti eccellente e spedizioni rapide, supportando la tua routine quotidiana con la massima efficienza e affidabilità. Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita.",
+   "producer_info": "Kukident Bipacco Morso Insuperabile è un dispositivo medico ideale per tutti coloro che utilizzano protesi dentarie totali o parziali e desiderano una tenuta forte e sicura per l'intera giornata. È specificamente formulato per offrire comfort e stabilità, permettendo di vivere con maggiore serenità ogni momento quotidiano. Le situazioni d'uso consigliate includono i pasti, dove la crema adesiva aiuta a prevenire le infiltrazioni di cibo sotto la dentiera, evitando fastidiosi residui e proteggendo le gengive. È inoltre particolarmente utile durante le conversazioni o le attività sociali, garantendo che la dentiera rimanga saldamente al suo posto, eliminando la preoccupazione di spostamenti indesiderati. I benefici attesi sono molteplici: un morso più potente e una maggiore fiducia nel mangiare qualsiasi tipo di alimento, dal più morbido al più croccante. L'utente sperimenta un significativo aumento del comfort orale, riducendo l'attrito e l'irritazione causati dal movimento della protesi, contribuendo a una migliore qualità di vita e una maggiore libertà di espressione.",
+   "certifications": [
+    "DISPOSITIVO MEDICO DETRAIBILE"
+   ]
+  }
+ },
+ {
+  "uid": "704601#4",
+  "product_id": "704601",
+  "claim_text": "Acquistarlo da Farmaciauno garantisce non solo l'autenticità e la freschezza del prodotto, ma anche un servizio clienti eccellente e spedizioni rapide",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "retailer_level_claim_not_product_claim"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Crema adesiva per dentiere totali e parziali sapor",
+   "description": "Kukident Bipacco Morso Insuperabile è stato progettato come coadiuvante per migliorare la stabilità e la tenuta delle protesi dentarie, sia totali che parziali. La sua destinazione d'uso principale è quella di formare uno strato adesivo resistente tra la dentiera e le gengive, assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore. I benefici derivanti dall'utilizzo di questa crema adesiva includono la prevenzione delle infiltrazioni di particelle di cibo sotto la protesi, un problema comune che può causare disagio e irritazione gengivale. Grazie alla sua formula avanzata, Kukident Morso Insuperabile contribuisce a creare un sigillo protettivo che mantiene il cibo lontano dalle gengive e dal palato, preservando la salute orale e il comfort durante i pasti. Un altro vantaggio significativo è l'aumento della sicurezza nel morso, permettendo agli utilizzatori di masticare con maggiore efficacia e senza preoccupazioni, anche alimenti più difficili. Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare. Inoltre, la stabilità offerta dalla crema riduce il rischio di movimenti imprevisti della dentiera, migliorando la fiducia in sé stessi e la qualità della vita quotidiana.\nScegliere Kukident Bipacco Morso Insuperabile su Farmaciauno significa optare per una soluzione affidabile e conveniente per la gestione quotidiana della propria protesi dentaria. Questo prodotto si distingue per la sua formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura, un aspetto fondamentale per chi cerca sicurezza e tranquillità per tutto il giorno. La qualità dei suoi componenti garantisce un'adesione efficace, migliorando notevolmente l'esperienza di chi porta la dentiera. L'acquisto del bipacco offre un vantaggio economico significativo, fornendo due tubetti di crema adesiva, garantendo una scorta più prolungata e riducendo la frequenza degli acquisti. Questa convenienza è un valore aggiunto che Farmaciauno è lieta di offrire, assicurando un ottimo rapporto qualità-prezzo. La scelta di questo formato è ideale per chi desidera avere sempre a disposizione il proprio prodotto preferito senza interruzioni. Kukident Morso Insuperabile non è solo una crema adesiva, ma un vero alleato per la salute e il comfort orale. Acquistarlo da Farmaciauno garantisce non solo l'autenticità e la freschezza del prodotto, ma anche un servizio clienti eccellente e spedizioni rapide, supportando la tua routine quotidiana con la massima efficienza e affidabilità. Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita.",
+   "producer_info": "Kukident Bipacco Morso Insuperabile è un dispositivo medico ideale per tutti coloro che utilizzano protesi dentarie totali o parziali e desiderano una tenuta forte e sicura per l'intera giornata. È specificamente formulato per offrire comfort e stabilità, permettendo di vivere con maggiore serenità ogni momento quotidiano. Le situazioni d'uso consigliate includono i pasti, dove la crema adesiva aiuta a prevenire le infiltrazioni di cibo sotto la dentiera, evitando fastidiosi residui e proteggendo le gengive. È inoltre particolarmente utile durante le conversazioni o le attività sociali, garantendo che la dentiera rimanga saldamente al suo posto, eliminando la preoccupazione di spostamenti indesiderati. I benefici attesi sono molteplici: un morso più potente e una maggiore fiducia nel mangiare qualsiasi tipo di alimento, dal più morbido al più croccante. L'utente sperimenta un significativo aumento del comfort orale, riducendo l'attrito e l'irritazione causati dal movimento della protesi, contribuendo a una migliore qualità di vita e una maggiore libertà di espressione.",
+   "certifications": [
+    "DISPOSITIVO MEDICO DETRAIBILE"
+   ]
+  }
+ },
+ {
+  "uid": "704601#5",
+  "product_id": "704601",
+  "claim_text": "Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita",
+  "v1_category": "misleading_endorsement_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "retailer_level_claim_not_product_claim"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Crema adesiva per dentiere totali e parziali sapor",
+   "description": "Kukident Bipacco Morso Insuperabile è stato progettato come coadiuvante per migliorare la stabilità e la tenuta delle protesi dentarie, sia totali che parziali. La sua destinazione d'uso principale è quella di formare uno strato adesivo resistente tra la dentiera e le gengive, assicurando una presa sicura e duratura per l'intera giornata, fino a 12 ore. I benefici derivanti dall'utilizzo di questa crema adesiva includono la prevenzione delle infiltrazioni di particelle di cibo sotto la protesi, un problema comune che può causare disagio e irritazione gengivale. Grazie alla sua formula avanzata, Kukident Morso Insuperabile contribuisce a creare un sigillo protettivo che mantiene il cibo lontano dalle gengive e dal palato, preservando la salute orale e il comfort durante i pasti. Un altro vantaggio significativo è l'aumento della sicurezza nel morso, permettendo agli utilizzatori di masticare con maggiore efficacia e senza preoccupazioni, anche alimenti più difficili. Questo si traduce in una migliore digestione e un maggiore piacere nel mangiare. Inoltre, la stabilità offerta dalla crema riduce il rischio di movimenti imprevisti della dentiera, migliorando la fiducia in sé stessi e la qualità della vita quotidiana.\nScegliere Kukident Bipacco Morso Insuperabile su Farmaciauno significa optare per una soluzione affidabile e conveniente per la gestione quotidiana della propria protesi dentaria. Questo prodotto si distingue per la sua formula clinicamente testata che assicura una tenuta eccezionalmente forte e duratura, un aspetto fondamentale per chi cerca sicurezza e tranquillità per tutto il giorno. La qualità dei suoi componenti garantisce un'adesione efficace, migliorando notevolmente l'esperienza di chi porta la dentiera. L'acquisto del bipacco offre un vantaggio economico significativo, fornendo due tubetti di crema adesiva, garantendo una scorta più prolungata e riducendo la frequenza degli acquisti. Questa convenienza è un valore aggiunto che Farmaciauno è lieta di offrire, assicurando un ottimo rapporto qualità-prezzo. La scelta di questo formato è ideale per chi desidera avere sempre a disposizione il proprio prodotto preferito senza interruzioni. Kukident Morso Insuperabile non è solo una crema adesiva, ma un vero alleato per la salute e il comfort orale. Acquistarlo da Farmaciauno garantisce non solo l'autenticità e la freschezza del prodotto, ma anche un servizio clienti eccellente e spedizioni rapide, supportando la tua routine quotidiana con la massima efficienza e affidabilità. Affidati all'esperienza di Farmaciauno per prodotti che migliorano la tua qualità di vita.",
+   "producer_info": "Kukident Bipacco Morso Insuperabile è un dispositivo medico ideale per tutti coloro che utilizzano protesi dentarie totali o parziali e desiderano una tenuta forte e sicura per l'intera giornata. È specificamente formulato per offrire comfort e stabilità, permettendo di vivere con maggiore serenità ogni momento quotidiano. Le situazioni d'uso consigliate includono i pasti, dove la crema adesiva aiuta a prevenire le infiltrazioni di cibo sotto la dentiera, evitando fastidiosi residui e proteggendo le gengive. È inoltre particolarmente utile durante le conversazioni o le attività sociali, garantendo che la dentiera rimanga saldamente al suo posto, eliminando la preoccupazione di spostamenti indesiderati. I benefici attesi sono molteplici: un morso più potente e una maggiore fiducia nel mangiare qualsiasi tipo di alimento, dal più morbido al più croccante. L'utente sperimenta un significativo aumento del comfort orale, riducendo l'attrito e l'irritazione causati dal movimento della protesi, contribuendo a una migliore qualità di vita e una maggiore libertà di espressione.",
+   "certifications": [
+    "DISPOSITIVO MEDICO DETRAIBILE"
+   ]
+  }
+ },
+ {
+  "uid": "610425#0",
+  "product_id": "610425",
+  "claim_text": "Clinicamente testato",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Dentifricio white now rimuovi macchie caffè e fumo",
+   "brand": "Mentadent",
+   "denomination": "Dentifricio",
+   "features": "Nuovo\nClinicamente testato\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\n3x Denti più bianchi subito*\nRimuove le macchie da caffè e fumo**\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno",
+   "producer_info": "White Now combina due benefici clinicamente testati:\nWhite-correct technology.\nTecnologia migliorata con blue-sapphire & green pigments per un sorriso 3 Volte piu Bianco Subito*\nWhite-Infinity Technology. I minerali di origine naturale aiutano a rimuovere le macchie superficiali per Denti Bianchi a Lungo***\nEfficace contro le macchie da caffè e fumo** per un'azione sbiancante continua\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale.\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno.\n***Clinicamente provato su 58 soggetti dopo 4 settimane di uso regolare 2 volte al giorno.\n94% Ingredienti di origine naturale\nCon ingredienti sbiancanti dall'azione istantanea non abrasivi\nTubo e cartone in materiale 100% riciclabile\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\nL'A.N.D.I. riconosce che un dentifricio al fluoro aiuta a prevenire la formazione della placca proteggendo la salute di denti e gengive. Mentadent White Now soddisfa questi requisiti ed è quindi di significativa utilità, unito ad una sostituzione regolare dello spazzolino e ad un suo corretto utilizzo.",
+   "recycling_other": "Cartone - PAP 21 - Raccolta carta\nTappo - PP 5 - Raccolta plastica\nTubo - HDPE 2 - Raccolta plastica\nSegui le indicazioni del tuo comune"
+  }
+ },
+ {
+  "uid": "610425#1",
+  "product_id": "610425",
+  "claim_text": "Approvato ANDI - Associazione Nazionale Dentisti Italiani (con spiegazione: l'A.N.D.I. riconosce che un dentifricio al fluoro aiuta a prevenire la formazione della placca...)",
+  "v1_category": "misleading_endorsement_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "annex_i_blacklist_candidate"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Dentifricio white now rimuovi macchie caffè e fumo",
+   "brand": "Mentadent",
+   "denomination": "Dentifricio",
+   "features": "Nuovo\nClinicamente testato\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\n3x Denti più bianchi subito*\nRimuove le macchie da caffè e fumo**\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno",
+   "producer_info": "White Now combina due benefici clinicamente testati:\nWhite-correct technology.\nTecnologia migliorata con blue-sapphire & green pigments per un sorriso 3 Volte piu Bianco Subito*\nWhite-Infinity Technology. I minerali di origine naturale aiutano a rimuovere le macchie superficiali per Denti Bianchi a Lungo***\nEfficace contro le macchie da caffè e fumo** per un'azione sbiancante continua\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale.\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno.\n***Clinicamente provato su 58 soggetti dopo 4 settimane di uso regolare 2 volte al giorno.\n94% Ingredienti di origine naturale\nCon ingredienti sbiancanti dall'azione istantanea non abrasivi\nTubo e cartone in materiale 100% riciclabile\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\nL'A.N.D.I. riconosce che un dentifricio al fluoro aiuta a prevenire la formazione della placca proteggendo la salute di denti e gengive. Mentadent White Now soddisfa questi requisiti ed è quindi di significativa utilità, unito ad una sostituzione regolare dello spazzolino e ad un suo corretto utilizzo.",
+   "recycling_other": "Cartone - PAP 21 - Raccolta carta\nTappo - PP 5 - Raccolta plastica\nTubo - HDPE 2 - Raccolta plastica\nSegui le indicazioni del tuo comune"
+  }
+ },
+ {
+  "uid": "610425#2",
+  "product_id": "610425",
+  "claim_text": "3x Denti più bianchi subito* ... Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale",
+  "v1_category": "unfair_comparison",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Dentifricio white now rimuovi macchie caffè e fumo",
+   "brand": "Mentadent",
+   "denomination": "Dentifricio",
+   "features": "Nuovo\nClinicamente testato\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\n3x Denti più bianchi subito*\nRimuove le macchie da caffè e fumo**\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno",
+   "producer_info": "White Now combina due benefici clinicamente testati:\nWhite-correct technology.\nTecnologia migliorata con blue-sapphire & green pigments per un sorriso 3 Volte piu Bianco Subito*\nWhite-Infinity Technology. I minerali di origine naturale aiutano a rimuovere le macchie superficiali per Denti Bianchi a Lungo***\nEfficace contro le macchie da caffè e fumo** per un'azione sbiancante continua\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale.\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno.\n***Clinicamente provato su 58 soggetti dopo 4 settimane di uso regolare 2 volte al giorno.\n94% Ingredienti di origine naturale\nCon ingredienti sbiancanti dall'azione istantanea non abrasivi\nTubo e cartone in materiale 100% riciclabile\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\nL'A.N.D.I. riconosce che un dentifricio al fluoro aiuta a prevenire la formazione della placca proteggendo la salute di denti e gengive. Mentadent White Now soddisfa questi requisiti ed è quindi di significativa utilità, unito ad una sostituzione regolare dello spazzolino e ad un suo corretto utilizzo.",
+   "recycling_other": "Cartone - PAP 21 - Raccolta carta\nTappo - PP 5 - Raccolta plastica\nTubo - HDPE 2 - Raccolta plastica\nSegui le indicazioni del tuo comune"
+  }
+ },
+ {
+  "uid": "610425#3",
+  "product_id": "610425",
+  "claim_text": "Rimuove le macchie da caffè e fumo**",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Dentifricio white now rimuovi macchie caffè e fumo",
+   "brand": "Mentadent",
+   "denomination": "Dentifricio",
+   "features": "Nuovo\nClinicamente testato\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\n3x Denti più bianchi subito*\nRimuove le macchie da caffè e fumo**\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno",
+   "producer_info": "White Now combina due benefici clinicamente testati:\nWhite-correct technology.\nTecnologia migliorata con blue-sapphire & green pigments per un sorriso 3 Volte piu Bianco Subito*\nWhite-Infinity Technology. I minerali di origine naturale aiutano a rimuovere le macchie superficiali per Denti Bianchi a Lungo***\nEfficace contro le macchie da caffè e fumo** per un'azione sbiancante continua\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale.\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno.\n***Clinicamente provato su 58 soggetti dopo 4 settimane di uso regolare 2 volte al giorno.\n94% Ingredienti di origine naturale\nCon ingredienti sbiancanti dall'azione istantanea non abrasivi\nTubo e cartone in materiale 100% riciclabile\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\nL'A.N.D.I. riconosce che un dentifricio al fluoro aiuta a prevenire la formazione della placca proteggendo la salute di denti e gengive. Mentadent White Now soddisfa questi requisiti ed è quindi di significativa utilità, unito ad una sostituzione regolare dello spazzolino e ad un suo corretto utilizzo.",
+   "recycling_other": "Cartone - PAP 21 - Raccolta carta\nTappo - PP 5 - Raccolta plastica\nTubo - HDPE 2 - Raccolta plastica\nSegui le indicazioni del tuo comune"
+  }
+ },
+ {
+  "uid": "610425#4",
+  "product_id": "610425",
+  "claim_text": "94% Ingredienti di origine naturale",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Dentifricio white now rimuovi macchie caffè e fumo",
+   "brand": "Mentadent",
+   "denomination": "Dentifricio",
+   "features": "Nuovo\nClinicamente testato\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\n3x Denti più bianchi subito*\nRimuove le macchie da caffè e fumo**\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno",
+   "producer_info": "White Now combina due benefici clinicamente testati:\nWhite-correct technology.\nTecnologia migliorata con blue-sapphire & green pigments per un sorriso 3 Volte piu Bianco Subito*\nWhite-Infinity Technology. I minerali di origine naturale aiutano a rimuovere le macchie superficiali per Denti Bianchi a Lungo***\nEfficace contro le macchie da caffè e fumo** per un'azione sbiancante continua\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale.\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno.\n***Clinicamente provato su 58 soggetti dopo 4 settimane di uso regolare 2 volte al giorno.\n94% Ingredienti di origine naturale\nCon ingredienti sbiancanti dall'azione istantanea non abrasivi\nTubo e cartone in materiale 100% riciclabile\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\nL'A.N.D.I. riconosce che un dentifricio al fluoro aiuta a prevenire la formazione della placca proteggendo la salute di denti e gengive. Mentadent White Now soddisfa questi requisiti ed è quindi di significativa utilità, unito ad una sostituzione regolare dello spazzolino e ad un suo corretto utilizzo.",
+   "recycling_other": "Cartone - PAP 21 - Raccolta carta\nTappo - PP 5 - Raccolta plastica\nTubo - HDPE 2 - Raccolta plastica\nSegui le indicazioni del tuo comune"
+  }
+ },
+ {
+  "uid": "610425#5",
+  "product_id": "610425",
+  "claim_text": "Tubo e cartone in materiale 100% riciclabile",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Dentifricio white now rimuovi macchie caffè e fumo",
+   "brand": "Mentadent",
+   "denomination": "Dentifricio",
+   "features": "Nuovo\nClinicamente testato\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\n3x Denti più bianchi subito*\nRimuove le macchie da caffè e fumo**\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno",
+   "producer_info": "White Now combina due benefici clinicamente testati:\nWhite-correct technology.\nTecnologia migliorata con blue-sapphire & green pigments per un sorriso 3 Volte piu Bianco Subito*\nWhite-Infinity Technology. I minerali di origine naturale aiutano a rimuovere le macchie superficiali per Denti Bianchi a Lungo***\nEfficace contro le macchie da caffè e fumo** per un'azione sbiancante continua\n*L'effetto di sbiancamento ottico e istantaneo è temporaneo. Clinicamente provato su 58 soggetti, rispetto ad un dentifricio al fluoro tradizionale.\n**Aiuta a rimuovere le macchie superficiali con uso regolare 2 volte al giorno.\n***Clinicamente provato su 58 soggetti dopo 4 settimane di uso regolare 2 volte al giorno.\n94% Ingredienti di origine naturale\nCon ingredienti sbiancanti dall'azione istantanea non abrasivi\nTubo e cartone in materiale 100% riciclabile\nApprovato ANDI - Associazione Nazionale Dentisti Italiani\nL'A.N.D.I. riconosce che un dentifricio al fluoro aiuta a prevenire la formazione della placca proteggendo la salute di denti e gengive. Mentadent White Now soddisfa questi requisiti ed è quindi di significativa utilità, unito ad una sostituzione regolare dello spazzolino e ad un suo corretto utilizzo.",
+   "recycling_other": "Cartone - PAP 21 - Raccolta carta\nTappo - PP 5 - Raccolta plastica\nTubo - HDPE 2 - Raccolta plastica\nSegui le indicazioni del tuo comune"
+  }
+ },
+ {
+  "uid": "676876#0",
+  "product_id": "676876",
+  "claim_text": "97% di origine naturale",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Corpo crema idratante 48h rosa ialuronica",
+   "brand": "Equilibra",
+   "features": "0% Petrolati, PEG\n97% di origine naturale\n28% Plastica riciclata\nRegenerating\nDermatologicamente testato\nClinicamente testato",
+   "producer_info": "Equilibra Rosa laluronica Crema Corpo Idratante è una crema dalla texture leggera che si assorbe rapidamente senza ungere. Utilizzata con regolarità, grazie all'azione degli attivi naturali contenuti in formula, conferisce alla pelle un'idratazione completa (idratazione superficiale e profonda).\nCosa contiene:\nEstratto di Rosa Damascena: ad azione tonificante e antiossidante potenziata;\nAcido laluronico Medio-Alto peso: idrata e dona tono e compattezza alla pelle;\nBooster di Idratazione: stimola le acquaporine per una idratazione istantanea e duratura nel tempo;\nFattore Idratante dello Zucchero: riduce l'evaporazione dell'acqua e apporta idratazione.\nRisultati\nLa pelle risulta immediatamente idratata*\n- Dopo 48h dall'applicazione la pelle risulta più idratata*\n- Dopo l'utilizzo la pelle risulta più morbida e vellutata**\n*Test strumentale\n**Test di autovalutazione\nRegenerating\nStudiata per il benessere della pelle, tutta l'efficacia antiossidante della Rosa Fermentata e le proprietà idratanti e protettive dell'Acido laluronico per restituirle la sua condizione naturale.\nSenza: parabeni - petrolati - siliconi - PEG\nAdatta a pelli sensibili\nClinicamente testato\nMade in Italy - Prodotto in Italia\n97% Ingredienti naturali\nSenza: parabeni - petrolati\nPerché l'idratazione?\nLa disidratazione cutanea è un'alterazione dello strato superficiale dell'epidermide che presenta un contenuto ridotto di acqua. Questa alterazione può rendere la pelle più fragile, secca e dal colorito spento.\nLa disidratazione della pelle può essere causata sia da fattori interni come il consumo di poca acqua, stress, cambiamenti ormonali che da fattori ambientali come freddo, vento, inquinamento ed esposizione al sole senza l'utilizzo di adeguata protezione.\nL'utilizzo di Equilibra Rosa laluronica Crema Corpo Idratante aiuta a restituire idratazione, morbidezza e protezione alla pelle del corpo.\nPerché Rosa Ialuronica Crema Corpo idratante?\nIdratante 48h\nTexture leggera che favorisce l'assorbimento\nPool di Attivi Idratanti: Acido laluronico + Booster di Idratazione + Fattore Idratante dello Zucchero\nIdratazione completa (superficiale e profonda)\nIdeale su:\ngambe, braccia, spalle, addome",
+   "recycling_other": "Raccolta differenziata\nVerifica le disposizioni del tuo comune\nPAP 21 - Astuccio - Carta - Raccolta carta\nPAP 22 - Pieghevole - Carta - Raccolta carta\nTubo con plastica riciclata\nOTHER 7 - Tubo - Plastica - Raccolta plastica\nPP 5 - Tappo - Plastica - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "676876#1",
+  "product_id": "676876",
+  "claim_text": "28% Plastica riciclata",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Corpo crema idratante 48h rosa ialuronica",
+   "brand": "Equilibra",
+   "features": "0% Petrolati, PEG\n97% di origine naturale\n28% Plastica riciclata\nRegenerating\nDermatologicamente testato\nClinicamente testato",
+   "producer_info": "Equilibra Rosa laluronica Crema Corpo Idratante è una crema dalla texture leggera che si assorbe rapidamente senza ungere. Utilizzata con regolarità, grazie all'azione degli attivi naturali contenuti in formula, conferisce alla pelle un'idratazione completa (idratazione superficiale e profonda).\nCosa contiene:\nEstratto di Rosa Damascena: ad azione tonificante e antiossidante potenziata;\nAcido laluronico Medio-Alto peso: idrata e dona tono e compattezza alla pelle;\nBooster di Idratazione: stimola le acquaporine per una idratazione istantanea e duratura nel tempo;\nFattore Idratante dello Zucchero: riduce l'evaporazione dell'acqua e apporta idratazione.\nRisultati\nLa pelle risulta immediatamente idratata*\n- Dopo 48h dall'applicazione la pelle risulta più idratata*\n- Dopo l'utilizzo la pelle risulta più morbida e vellutata**\n*Test strumentale\n**Test di autovalutazione\nRegenerating\nStudiata per il benessere della pelle, tutta l'efficacia antiossidante della Rosa Fermentata e le proprietà idratanti e protettive dell'Acido laluronico per restituirle la sua condizione naturale.\nSenza: parabeni - petrolati - siliconi - PEG\nAdatta a pelli sensibili\nClinicamente testato\nMade in Italy - Prodotto in Italia\n97% Ingredienti naturali\nSenza: parabeni - petrolati\nPerché l'idratazione?\nLa disidratazione cutanea è un'alterazione dello strato superficiale dell'epidermide che presenta un contenuto ridotto di acqua. Questa alterazione può rendere la pelle più fragile, secca e dal colorito spento.\nLa disidratazione della pelle può essere causata sia da fattori interni come il consumo di poca acqua, stress, cambiamenti ormonali che da fattori ambientali come freddo, vento, inquinamento ed esposizione al sole senza l'utilizzo di adeguata protezione.\nL'utilizzo di Equilibra Rosa laluronica Crema Corpo Idratante aiuta a restituire idratazione, morbidezza e protezione alla pelle del corpo.\nPerché Rosa Ialuronica Crema Corpo idratante?\nIdratante 48h\nTexture leggera che favorisce l'assorbimento\nPool di Attivi Idratanti: Acido laluronico + Booster di Idratazione + Fattore Idratante dello Zucchero\nIdratazione completa (superficiale e profonda)\nIdeale su:\ngambe, braccia, spalle, addome",
+   "recycling_other": "Raccolta differenziata\nVerifica le disposizioni del tuo comune\nPAP 21 - Astuccio - Carta - Raccolta carta\nPAP 22 - Pieghevole - Carta - Raccolta carta\nTubo con plastica riciclata\nOTHER 7 - Tubo - Plastica - Raccolta plastica\nPP 5 - Tappo - Plastica - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "676876#2",
+  "product_id": "676876",
+  "claim_text": "tutta l'efficacia antiossidante della Rosa Fermentata e le proprietà idratanti e protettive dell'Acido laluronico per restituirle la sua condizione naturale",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "botanical_or_generic_antioxidant_not_on_eu_register"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Corpo crema idratante 48h rosa ialuronica",
+   "brand": "Equilibra",
+   "features": "0% Petrolati, PEG\n97% di origine naturale\n28% Plastica riciclata\nRegenerating\nDermatologicamente testato\nClinicamente testato",
+   "producer_info": "Equilibra Rosa laluronica Crema Corpo Idratante è una crema dalla texture leggera che si assorbe rapidamente senza ungere. Utilizzata con regolarità, grazie all'azione degli attivi naturali contenuti in formula, conferisce alla pelle un'idratazione completa (idratazione superficiale e profonda).\nCosa contiene:\nEstratto di Rosa Damascena: ad azione tonificante e antiossidante potenziata;\nAcido laluronico Medio-Alto peso: idrata e dona tono e compattezza alla pelle;\nBooster di Idratazione: stimola le acquaporine per una idratazione istantanea e duratura nel tempo;\nFattore Idratante dello Zucchero: riduce l'evaporazione dell'acqua e apporta idratazione.\nRisultati\nLa pelle risulta immediatamente idratata*\n- Dopo 48h dall'applicazione la pelle risulta più idratata*\n- Dopo l'utilizzo la pelle risulta più morbida e vellutata**\n*Test strumentale\n**Test di autovalutazione\nRegenerating\nStudiata per il benessere della pelle, tutta l'efficacia antiossidante della Rosa Fermentata e le proprietà idratanti e protettive dell'Acido laluronico per restituirle la sua condizione naturale.\nSenza: parabeni - petrolati - siliconi - PEG\nAdatta a pelli sensibili\nClinicamente testato\nMade in Italy - Prodotto in Italia\n97% Ingredienti naturali\nSenza: parabeni - petrolati\nPerché l'idratazione?\nLa disidratazione cutanea è un'alterazione dello strato superficiale dell'epidermide che presenta un contenuto ridotto di acqua. Questa alterazione può rendere la pelle più fragile, secca e dal colorito spento.\nLa disidratazione della pelle può essere causata sia da fattori interni come il consumo di poca acqua, stress, cambiamenti ormonali che da fattori ambientali come freddo, vento, inquinamento ed esposizione al sole senza l'utilizzo di adeguata protezione.\nL'utilizzo di Equilibra Rosa laluronica Crema Corpo Idratante aiuta a restituire idratazione, morbidezza e protezione alla pelle del corpo.\nPerché Rosa Ialuronica Crema Corpo idratante?\nIdratante 48h\nTexture leggera che favorisce l'assorbimento\nPool di Attivi Idratanti: Acido laluronico + Booster di Idratazione + Fattore Idratante dello Zucchero\nIdratazione completa (superficiale e profonda)\nIdeale su:\ngambe, braccia, spalle, addome",
+   "recycling_other": "Raccolta differenziata\nVerifica le disposizioni del tuo comune\nPAP 21 - Astuccio - Carta - Raccolta carta\nPAP 22 - Pieghevole - Carta - Raccolta carta\nTubo con plastica riciclata\nOTHER 7 - Tubo - Plastica - Raccolta plastica\nPP 5 - Tappo - Plastica - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "676876#3",
+  "product_id": "676876",
+  "claim_text": "Dopo 48h dall'applicazione la pelle risulta più idratata* ... Test strumentale",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Corpo crema idratante 48h rosa ialuronica",
+   "brand": "Equilibra",
+   "features": "0% Petrolati, PEG\n97% di origine naturale\n28% Plastica riciclata\nRegenerating\nDermatologicamente testato\nClinicamente testato",
+   "producer_info": "Equilibra Rosa laluronica Crema Corpo Idratante è una crema dalla texture leggera che si assorbe rapidamente senza ungere. Utilizzata con regolarità, grazie all'azione degli attivi naturali contenuti in formula, conferisce alla pelle un'idratazione completa (idratazione superficiale e profonda).\nCosa contiene:\nEstratto di Rosa Damascena: ad azione tonificante e antiossidante potenziata;\nAcido laluronico Medio-Alto peso: idrata e dona tono e compattezza alla pelle;\nBooster di Idratazione: stimola le acquaporine per una idratazione istantanea e duratura nel tempo;\nFattore Idratante dello Zucchero: riduce l'evaporazione dell'acqua e apporta idratazione.\nRisultati\nLa pelle risulta immediatamente idratata*\n- Dopo 48h dall'applicazione la pelle risulta più idratata*\n- Dopo l'utilizzo la pelle risulta più morbida e vellutata**\n*Test strumentale\n**Test di autovalutazione\nRegenerating\nStudiata per il benessere della pelle, tutta l'efficacia antiossidante della Rosa Fermentata e le proprietà idratanti e protettive dell'Acido laluronico per restituirle la sua condizione naturale.\nSenza: parabeni - petrolati - siliconi - PEG\nAdatta a pelli sensibili\nClinicamente testato\nMade in Italy - Prodotto in Italia\n97% Ingredienti naturali\nSenza: parabeni - petrolati\nPerché l'idratazione?\nLa disidratazione cutanea è un'alterazione dello strato superficiale dell'epidermide che presenta un contenuto ridotto di acqua. Questa alterazione può rendere la pelle più fragile, secca e dal colorito spento.\nLa disidratazione della pelle può essere causata sia da fattori interni come il consumo di poca acqua, stress, cambiamenti ormonali che da fattori ambientali come freddo, vento, inquinamento ed esposizione al sole senza l'utilizzo di adeguata protezione.\nL'utilizzo di Equilibra Rosa laluronica Crema Corpo Idratante aiuta a restituire idratazione, morbidezza e protezione alla pelle del corpo.\nPerché Rosa Ialuronica Crema Corpo idratante?\nIdratante 48h\nTexture leggera che favorisce l'assorbimento\nPool di Attivi Idratanti: Acido laluronico + Booster di Idratazione + Fattore Idratante dello Zucchero\nIdratazione completa (superficiale e profonda)\nIdeale su:\ngambe, braccia, spalle, addome",
+   "recycling_other": "Raccolta differenziata\nVerifica le disposizioni del tuo comune\nPAP 21 - Astuccio - Carta - Raccolta carta\nPAP 22 - Pieghevole - Carta - Raccolta carta\nTubo con plastica riciclata\nOTHER 7 - Tubo - Plastica - Raccolta plastica\nPP 5 - Tappo - Plastica - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "676876#4",
+  "product_id": "676876",
+  "claim_text": "Dopo l'utilizzo la pelle risulta più morbida e vellutata** ... Test di autovalutazione",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "weak_evidence_self_report"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Corpo crema idratante 48h rosa ialuronica",
+   "brand": "Equilibra",
+   "features": "0% Petrolati, PEG\n97% di origine naturale\n28% Plastica riciclata\nRegenerating\nDermatologicamente testato\nClinicamente testato",
+   "producer_info": "Equilibra Rosa laluronica Crema Corpo Idratante è una crema dalla texture leggera che si assorbe rapidamente senza ungere. Utilizzata con regolarità, grazie all'azione degli attivi naturali contenuti in formula, conferisce alla pelle un'idratazione completa (idratazione superficiale e profonda).\nCosa contiene:\nEstratto di Rosa Damascena: ad azione tonificante e antiossidante potenziata;\nAcido laluronico Medio-Alto peso: idrata e dona tono e compattezza alla pelle;\nBooster di Idratazione: stimola le acquaporine per una idratazione istantanea e duratura nel tempo;\nFattore Idratante dello Zucchero: riduce l'evaporazione dell'acqua e apporta idratazione.\nRisultati\nLa pelle risulta immediatamente idratata*\n- Dopo 48h dall'applicazione la pelle risulta più idratata*\n- Dopo l'utilizzo la pelle risulta più morbida e vellutata**\n*Test strumentale\n**Test di autovalutazione\nRegenerating\nStudiata per il benessere della pelle, tutta l'efficacia antiossidante della Rosa Fermentata e le proprietà idratanti e protettive dell'Acido laluronico per restituirle la sua condizione naturale.\nSenza: parabeni - petrolati - siliconi - PEG\nAdatta a pelli sensibili\nClinicamente testato\nMade in Italy - Prodotto in Italia\n97% Ingredienti naturali\nSenza: parabeni - petrolati\nPerché l'idratazione?\nLa disidratazione cutanea è un'alterazione dello strato superficiale dell'epidermide che presenta un contenuto ridotto di acqua. Questa alterazione può rendere la pelle più fragile, secca e dal colorito spento.\nLa disidratazione della pelle può essere causata sia da fattori interni come il consumo di poca acqua, stress, cambiamenti ormonali che da fattori ambientali come freddo, vento, inquinamento ed esposizione al sole senza l'utilizzo di adeguata protezione.\nL'utilizzo di Equilibra Rosa laluronica Crema Corpo Idratante aiuta a restituire idratazione, morbidezza e protezione alla pelle del corpo.\nPerché Rosa Ialuronica Crema Corpo idratante?\nIdratante 48h\nTexture leggera che favorisce l'assorbimento\nPool di Attivi Idratanti: Acido laluronico + Booster di Idratazione + Fattore Idratante dello Zucchero\nIdratazione completa (superficiale e profonda)\nIdeale su:\ngambe, braccia, spalle, addome",
+   "recycling_other": "Raccolta differenziata\nVerifica le disposizioni del tuo comune\nPAP 21 - Astuccio - Carta - Raccolta carta\nPAP 22 - Pieghevole - Carta - Raccolta carta\nTubo con plastica riciclata\nOTHER 7 - Tubo - Plastica - Raccolta plastica\nPP 5 - Tappo - Plastica - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "676876#5",
+  "product_id": "676876",
+  "claim_text": "Clinicamente testato",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Corpo crema idratante 48h rosa ialuronica",
+   "brand": "Equilibra",
+   "features": "0% Petrolati, PEG\n97% di origine naturale\n28% Plastica riciclata\nRegenerating\nDermatologicamente testato\nClinicamente testato",
+   "producer_info": "Equilibra Rosa laluronica Crema Corpo Idratante è una crema dalla texture leggera che si assorbe rapidamente senza ungere. Utilizzata con regolarità, grazie all'azione degli attivi naturali contenuti in formula, conferisce alla pelle un'idratazione completa (idratazione superficiale e profonda).\nCosa contiene:\nEstratto di Rosa Damascena: ad azione tonificante e antiossidante potenziata;\nAcido laluronico Medio-Alto peso: idrata e dona tono e compattezza alla pelle;\nBooster di Idratazione: stimola le acquaporine per una idratazione istantanea e duratura nel tempo;\nFattore Idratante dello Zucchero: riduce l'evaporazione dell'acqua e apporta idratazione.\nRisultati\nLa pelle risulta immediatamente idratata*\n- Dopo 48h dall'applicazione la pelle risulta più idratata*\n- Dopo l'utilizzo la pelle risulta più morbida e vellutata**\n*Test strumentale\n**Test di autovalutazione\nRegenerating\nStudiata per il benessere della pelle, tutta l'efficacia antiossidante della Rosa Fermentata e le proprietà idratanti e protettive dell'Acido laluronico per restituirle la sua condizione naturale.\nSenza: parabeni - petrolati - siliconi - PEG\nAdatta a pelli sensibili\nClinicamente testato\nMade in Italy - Prodotto in Italia\n97% Ingredienti naturali\nSenza: parabeni - petrolati\nPerché l'idratazione?\nLa disidratazione cutanea è un'alterazione dello strato superficiale dell'epidermide che presenta un contenuto ridotto di acqua. Questa alterazione può rendere la pelle più fragile, secca e dal colorito spento.\nLa disidratazione della pelle può essere causata sia da fattori interni come il consumo di poca acqua, stress, cambiamenti ormonali che da fattori ambientali come freddo, vento, inquinamento ed esposizione al sole senza l'utilizzo di adeguata protezione.\nL'utilizzo di Equilibra Rosa laluronica Crema Corpo Idratante aiuta a restituire idratazione, morbidezza e protezione alla pelle del corpo.\nPerché Rosa Ialuronica Crema Corpo idratante?\nIdratante 48h\nTexture leggera che favorisce l'assorbimento\nPool di Attivi Idratanti: Acido laluronico + Booster di Idratazione + Fattore Idratante dello Zucchero\nIdratazione completa (superficiale e profonda)\nIdeale su:\ngambe, braccia, spalle, addome",
+   "recycling_other": "Raccolta differenziata\nVerifica le disposizioni del tuo comune\nPAP 21 - Astuccio - Carta - Raccolta carta\nPAP 22 - Pieghevole - Carta - Raccolta carta\nTubo con plastica riciclata\nOTHER 7 - Tubo - Plastica - Raccolta plastica\nPP 5 - Tappo - Plastica - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "676876#6",
+  "product_id": "676876",
+  "claim_text": "stimola le acquaporine per una idratazione istantanea e duratura nel tempo",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Corpo crema idratante 48h rosa ialuronica",
+   "brand": "Equilibra",
+   "features": "0% Petrolati, PEG\n97% di origine naturale\n28% Plastica riciclata\nRegenerating\nDermatologicamente testato\nClinicamente testato",
+   "producer_info": "Equilibra Rosa laluronica Crema Corpo Idratante è una crema dalla texture leggera che si assorbe rapidamente senza ungere. Utilizzata con regolarità, grazie all'azione degli attivi naturali contenuti in formula, conferisce alla pelle un'idratazione completa (idratazione superficiale e profonda).\nCosa contiene:\nEstratto di Rosa Damascena: ad azione tonificante e antiossidante potenziata;\nAcido laluronico Medio-Alto peso: idrata e dona tono e compattezza alla pelle;\nBooster di Idratazione: stimola le acquaporine per una idratazione istantanea e duratura nel tempo;\nFattore Idratante dello Zucchero: riduce l'evaporazione dell'acqua e apporta idratazione.\nRisultati\nLa pelle risulta immediatamente idratata*\n- Dopo 48h dall'applicazione la pelle risulta più idratata*\n- Dopo l'utilizzo la pelle risulta più morbida e vellutata**\n*Test strumentale\n**Test di autovalutazione\nRegenerating\nStudiata per il benessere della pelle, tutta l'efficacia antiossidante della Rosa Fermentata e le proprietà idratanti e protettive dell'Acido laluronico per restituirle la sua condizione naturale.\nSenza: parabeni - petrolati - siliconi - PEG\nAdatta a pelli sensibili\nClinicamente testato\nMade in Italy - Prodotto in Italia\n97% Ingredienti naturali\nSenza: parabeni - petrolati\nPerché l'idratazione?\nLa disidratazione cutanea è un'alterazione dello strato superficiale dell'epidermide che presenta un contenuto ridotto di acqua. Questa alterazione può rendere la pelle più fragile, secca e dal colorito spento.\nLa disidratazione della pelle può essere causata sia da fattori interni come il consumo di poca acqua, stress, cambiamenti ormonali che da fattori ambientali come freddo, vento, inquinamento ed esposizione al sole senza l'utilizzo di adeguata protezione.\nL'utilizzo di Equilibra Rosa laluronica Crema Corpo Idratante aiuta a restituire idratazione, morbidezza e protezione alla pelle del corpo.\nPerché Rosa Ialuronica Crema Corpo idratante?\nIdratante 48h\nTexture leggera che favorisce l'assorbimento\nPool di Attivi Idratanti: Acido laluronico + Booster di Idratazione + Fattore Idratante dello Zucchero\nIdratazione completa (superficiale e profonda)\nIdeale su:\ngambe, braccia, spalle, addome",
+   "recycling_other": "Raccolta differenziata\nVerifica le disposizioni del tuo comune\nPAP 21 - Astuccio - Carta - Raccolta carta\nPAP 22 - Pieghevole - Carta - Raccolta carta\nTubo con plastica riciclata\nOTHER 7 - Tubo - Plastica - Raccolta plastica\nPP 5 - Tappo - Plastica - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "575950#0",
+  "product_id": "575950",
+  "claim_text": "100% Tessuto biodegradabile",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Salviettine intime per il ciclo x12",
+   "brand": "Chilly",
+   "denomination": "Salviettine intime Chilly ciclo con Antiodor",
+   "features": "100% Tessuto biodegradabile\nIgiene prolungata\nAntiodor\npH3.5 - Clinicamente testate",
+   "producer_info": "Le nostre salviettine intime Chilly ciclo:\n- Ti fanno sentire fresca, pulita e protetta durante le mestruazioni grazie agli agenti ad azione antibatterica e anti-odore\n- Contribuiscono a difendere il tuo equilibrio intimo perché sono formulate a pH3.5\n- Adatte all'uso quotidiano e clinicamente testate\nPortale sempre con te!\nIn viaggio - In vacanza - Al lavoro",
+   "recycling_other": "Dove lo butto?\nIncarto - OTHER 7 - Raccolta plastica*\n*Verifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "575950#1",
+  "product_id": "575950",
+  "claim_text": "Clinicamente testate",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Salviettine intime per il ciclo x12",
+   "brand": "Chilly",
+   "denomination": "Salviettine intime Chilly ciclo con Antiodor",
+   "features": "100% Tessuto biodegradabile\nIgiene prolungata\nAntiodor\npH3.5 - Clinicamente testate",
+   "producer_info": "Le nostre salviettine intime Chilly ciclo:\n- Ti fanno sentire fresca, pulita e protetta durante le mestruazioni grazie agli agenti ad azione antibatterica e anti-odore\n- Contribuiscono a difendere il tuo equilibrio intimo perché sono formulate a pH3.5\n- Adatte all'uso quotidiano e clinicamente testate\nPortale sempre con te!\nIn viaggio - In vacanza - Al lavoro",
+   "recycling_other": "Dove lo butto?\nIncarto - OTHER 7 - Raccolta plastica*\n*Verifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "575950#2",
+  "product_id": "575950",
+  "claim_text": "Contribuiscono a difendere il tuo equilibrio intimo",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Salviettine intime per il ciclo x12",
+   "brand": "Chilly",
+   "denomination": "Salviettine intime Chilly ciclo con Antiodor",
+   "features": "100% Tessuto biodegradabile\nIgiene prolungata\nAntiodor\npH3.5 - Clinicamente testate",
+   "producer_info": "Le nostre salviettine intime Chilly ciclo:\n- Ti fanno sentire fresca, pulita e protetta durante le mestruazioni grazie agli agenti ad azione antibatterica e anti-odore\n- Contribuiscono a difendere il tuo equilibrio intimo perché sono formulate a pH3.5\n- Adatte all'uso quotidiano e clinicamente testate\nPortale sempre con te!\nIn viaggio - In vacanza - Al lavoro",
+   "recycling_other": "Dove lo butto?\nIncarto - OTHER 7 - Raccolta plastica*\n*Verifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "602008#0",
+  "product_id": "602008",
+  "claim_text": "Cosmetico Certificato 100% naturale ... Come previsto dal disciplinare NaTrue",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio detergente struccante per pelli mature",
+   "brand": "Coop",
+   "features": "Con estratti di Uva Rossa e Melograno Biologici\nCosmetico Certificato 100% naturale",
+   "producer_info": "Rimuove il trucco e le impurità\nSenza oli minerali - siliconi - coloranti e profumi sintetici - PEG - polimeri sintetici - Come previsto dal disciplinare NaTrue\nflacone 95% plastica riciclata",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nFlacone - Plastica - PET 1 - Raccolta plastica\nTappo - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "602008#1",
+  "product_id": "602008",
+  "claim_text": "flacone 95% plastica riciclata",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio detergente struccante per pelli mature",
+   "brand": "Coop",
+   "features": "Con estratti di Uva Rossa e Melograno Biologici\nCosmetico Certificato 100% naturale",
+   "producer_info": "Rimuove il trucco e le impurità\nSenza oli minerali - siliconi - coloranti e profumi sintetici - PEG - polimeri sintetici - Come previsto dal disciplinare NaTrue\nflacone 95% plastica riciclata",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nFlacone - Plastica - PET 1 - Raccolta plastica\nTappo - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "602008#2",
+  "product_id": "602008",
+  "claim_text": "VIVI VERDE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio detergente struccante per pelli mature",
+   "brand": "Coop",
+   "features": "Con estratti di Uva Rossa e Melograno Biologici\nCosmetico Certificato 100% naturale",
+   "producer_info": "Rimuove il trucco e le impurità\nSenza oli minerali - siliconi - coloranti e profumi sintetici - PEG - polimeri sintetici - Come previsto dal disciplinare NaTrue\nflacone 95% plastica riciclata",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nFlacone - Plastica - PET 1 - Raccolta plastica\nTappo - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "602008#3",
+  "product_id": "602008",
+  "claim_text": "Etichetta Ambientale",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": "mandatory_disclosure",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Olio detergente struccante per pelli mature",
+   "brand": "Coop",
+   "features": "Con estratti di Uva Rossa e Melograno Biologici\nCosmetico Certificato 100% naturale",
+   "producer_info": "Rimuove il trucco e le impurità\nSenza oli minerali - siliconi - coloranti e profumi sintetici - PEG - polimeri sintetici - Come previsto dal disciplinare NaTrue\nflacone 95% plastica riciclata",
+   "certifications": [
+    "VIVI VERDE"
+   ],
+   "recycling_other": "Etichetta Ambientale\nFlacone - Plastica - PET 1 - Raccolta plastica\nTappo - Plastica - 7 - Raccolta plastica\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "620290#0",
+  "product_id": "620290",
+  "claim_text": "Aiuta a Rigenerare le pelli screpolate",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Crema per le mani classica",
+   "brand": "Glysolid",
+   "features": "Nuovo\nAiuta a Rigenerare le pelli screpolate\nProtegge dagli agenti esterni",
+   "producer_info": "Vuoi donare alle tue mani un'immediata sensazione di morbidezza e idratazione?\nQuando le mani sono secche e screpolate usa Glysolid crema mani Classica, formulata con oli emollienti e il 38% di glicerina, aiuta a rigenerare la tua pelle e proteggerla dagli agenti esterni per un sollievo immediato. Il risultato: mani lisce, morbide e protette a lungo.\nDermatologicamente testata",
+   "recycling_other": "Giara - PP 5 - Raccolta Plastica\nTappo - PP 5 - Raccolta Plastica\nSigillo - ALU 41 - Raccolta Alluminio\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "620290#1",
+  "product_id": "620290",
+  "claim_text": "Protegge dagli agenti esterni",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Crema per le mani classica",
+   "brand": "Glysolid",
+   "features": "Nuovo\nAiuta a Rigenerare le pelli screpolate\nProtegge dagli agenti esterni",
+   "producer_info": "Vuoi donare alle tue mani un'immediata sensazione di morbidezza e idratazione?\nQuando le mani sono secche e screpolate usa Glysolid crema mani Classica, formulata con oli emollienti e il 38% di glicerina, aiuta a rigenerare la tua pelle e proteggerla dagli agenti esterni per un sollievo immediato. Il risultato: mani lisce, morbide e protette a lungo.\nDermatologicamente testata",
+   "recycling_other": "Giara - PP 5 - Raccolta Plastica\nTappo - PP 5 - Raccolta Plastica\nSigillo - ALU 41 - Raccolta Alluminio\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "620290#2",
+  "product_id": "620290",
+  "claim_text": "Dermatologicamente testata",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Crema per le mani classica",
+   "brand": "Glysolid",
+   "features": "Nuovo\nAiuta a Rigenerare le pelli screpolate\nProtegge dagli agenti esterni",
+   "producer_info": "Vuoi donare alle tue mani un'immediata sensazione di morbidezza e idratazione?\nQuando le mani sono secche e screpolate usa Glysolid crema mani Classica, formulata con oli emollienti e il 38% di glicerina, aiuta a rigenerare la tua pelle e proteggerla dagli agenti esterni per un sollievo immediato. Il risultato: mani lisce, morbide e protette a lungo.\nDermatologicamente testata",
+   "recycling_other": "Giara - PP 5 - Raccolta Plastica\nTappo - PP 5 - Raccolta Plastica\nSigillo - ALU 41 - Raccolta Alluminio\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "38080#0",
+  "product_id": "38080",
+  "claim_text": "allevia anche il fastidio provocato dalle punture di insetti ... donando una sensazione di immediato sollievo",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Dopopuntura penna gel derm herbal",
+   "brand": "Vape",
+   "denomination": "Prodotto cosmetico",
+   "features": "Zanzare, mosche, tafani, api, vespe, meduse\nProfumazione citronella eucaliptus",
+   "producer_info": "Gel Dopopuntura\nZanzare, mosche, tafani, api, vespe, meduse\nProfumazione citronella eucaliptus\nVape derm herbal dopopuntura\nVape Derm Herbal Dopopuntura è un prodotto cosmetico dalle proprietà idratanti e lenitive, che applicato sulla pelle, allevia anche il fastidio provocato dalle punture di insetti, quali zanzare e mosche, donando una sensazione di immediato sollievo. Tenere quindi Vape Derm Herbal Dopopuntura sempre a portata di mano.\nDermatologicamente testato",
+   "recycling_other": "Facilita il riciclo\nBottiglia - PE / 02 - Raccolta differenziata plastica\nChiusura - PE / 02 - Raccolta differenziata plastica\nTappo - PP 05 - Raccolta differenziata plastica\nAstuccio - PAP 21 - Raccolta differenziata carta\nVerifica sempre con il tuo comune"
+  }
+ },
+ {
+  "uid": "38080#1",
+  "product_id": "38080",
+  "claim_text": "Dermatologicamente testato",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Dopopuntura penna gel derm herbal",
+   "brand": "Vape",
+   "denomination": "Prodotto cosmetico",
+   "features": "Zanzare, mosche, tafani, api, vespe, meduse\nProfumazione citronella eucaliptus",
+   "producer_info": "Gel Dopopuntura\nZanzare, mosche, tafani, api, vespe, meduse\nProfumazione citronella eucaliptus\nVape derm herbal dopopuntura\nVape Derm Herbal Dopopuntura è un prodotto cosmetico dalle proprietà idratanti e lenitive, che applicato sulla pelle, allevia anche il fastidio provocato dalle punture di insetti, quali zanzare e mosche, donando una sensazione di immediato sollievo. Tenere quindi Vape Derm Herbal Dopopuntura sempre a portata di mano.\nDermatologicamente testato",
+   "recycling_other": "Facilita il riciclo\nBottiglia - PE / 02 - Raccolta differenziata plastica\nChiusura - PE / 02 - Raccolta differenziata plastica\nTappo - PP 05 - Raccolta differenziata plastica\nAstuccio - PAP 21 - Raccolta differenziata carta\nVerifica sempre con il tuo comune"
+  }
+ },
+ {
+  "uid": "42428#0",
+  "product_id": "42428",
+  "claim_text": "Pulizia profonda",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Salviettine igieniche baby fresh x70",
+   "brand": "Pampers",
+   "features": "Pulizia profonda\nCon sistema igienizzante\nRipristina il PH\nSoffice e resistente\nCon Aloe Vera\nProdotte in Italia",
+   "producer_info": "Dermatologicamente testate, senza sapone e senza alcol. Ideali per mani viso e cambio",
+   "recycling_other": "Fare una corretta raccolta differenziata fa bene all'ambiente\nVerifica sempre le modalità di raccolta del tuo comune\nSalviettine - Raccolta indifferenziata\nChiusura: PP 05 - Raccolta plastica\nConfezione: Others 07 - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "42428#1",
+  "product_id": "42428",
+  "claim_text": "Con sistema igienizzante",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Salviettine igieniche baby fresh x70",
+   "brand": "Pampers",
+   "features": "Pulizia profonda\nCon sistema igienizzante\nRipristina il PH\nSoffice e resistente\nCon Aloe Vera\nProdotte in Italia",
+   "producer_info": "Dermatologicamente testate, senza sapone e senza alcol. Ideali per mani viso e cambio",
+   "recycling_other": "Fare una corretta raccolta differenziata fa bene all'ambiente\nVerifica sempre le modalità di raccolta del tuo comune\nSalviettine - Raccolta indifferenziata\nChiusura: PP 05 - Raccolta plastica\nConfezione: Others 07 - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "42428#2",
+  "product_id": "42428",
+  "claim_text": "Ripristina il PH",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Salviettine igieniche baby fresh x70",
+   "brand": "Pampers",
+   "features": "Pulizia profonda\nCon sistema igienizzante\nRipristina il PH\nSoffice e resistente\nCon Aloe Vera\nProdotte in Italia",
+   "producer_info": "Dermatologicamente testate, senza sapone e senza alcol. Ideali per mani viso e cambio",
+   "recycling_other": "Fare una corretta raccolta differenziata fa bene all'ambiente\nVerifica sempre le modalità di raccolta del tuo comune\nSalviettine - Raccolta indifferenziata\nChiusura: PP 05 - Raccolta plastica\nConfezione: Others 07 - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "42428#3",
+  "product_id": "42428",
+  "claim_text": "Dermatologicamente testate",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Salviettine igieniche baby fresh x70",
+   "brand": "Pampers",
+   "features": "Pulizia profonda\nCon sistema igienizzante\nRipristina il PH\nSoffice e resistente\nCon Aloe Vera\nProdotte in Italia",
+   "producer_info": "Dermatologicamente testate, senza sapone e senza alcol. Ideali per mani viso e cambio",
+   "recycling_other": "Fare una corretta raccolta differenziata fa bene all'ambiente\nVerifica sempre le modalità di raccolta del tuo comune\nSalviettine - Raccolta indifferenziata\nChiusura: PP 05 - Raccolta plastica\nConfezione: Others 07 - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "42428#4",
+  "product_id": "42428",
+  "claim_text": "Fare una corretta raccolta differenziata fa bene all'ambiente",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": false,
+  "product_context": {
+   "name": "Salviettine igieniche baby fresh x70",
+   "brand": "Pampers",
+   "features": "Pulizia profonda\nCon sistema igienizzante\nRipristina il PH\nSoffice e resistente\nCon Aloe Vera\nProdotte in Italia",
+   "producer_info": "Dermatologicamente testate, senza sapone e senza alcol. Ideali per mani viso e cambio",
+   "recycling_other": "Fare una corretta raccolta differenziata fa bene all'ambiente\nVerifica sempre le modalità di raccolta del tuo comune\nSalviettine - Raccolta indifferenziata\nChiusura: PP 05 - Raccolta plastica\nConfezione: Others 07 - Raccolta plastica"
+  }
+ },
+ {
+  "uid": "41070#0",
+  "product_id": "41070",
+  "claim_text": "Manico realizzato con plastica di origine biologica",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Spazzolino denti sensibili setole morbide gentle",
+   "brand": "Sensodyne",
+   "description": "\"Lo spazzolino Sensodyne Gentle, progettato per persone con denti sensibili, ha filamenti setosi per una delicata igiene di denti e gengive.\nLe setole composte da numerosi filamenti, fitti e sottili, puliscono i denti minimizzando il fastidio sul bordo gengivale che si avverte particolarmente in caso di sensibilità dentale.\nLa testina piccola permette di pulire anche le aree della bocca più difficili da raggiungere\"",
+   "features": "Soft\nManico realizzato con plastica di origine biologica\n30% Più flessibile*\nPulizia efficace e delicata\nPer una pressione delicata\nConfezione senza plastica, riciclabile\n*Da test di laboratorio, rispetto ad uno spazzolino a setole piatte standard",
+   "producer_info": "Gentle care\nPulizia efficace e delicata\nLo spazzolino Sensodyne Gentle Care presenta il collo il 30% più flessibile per una maggiore delicatezza* e una migliore pulizia. Questo spazzolino è appositamente progettato per le persone con denti sensibili:\n- Le setole morbide e arrotondate, composte da filamenti extra-fini in seta, sono progettate per adattarsi alle aree delicate di denti e gengive\n- Progettato con setole dalla punta 4 volte più sottile per una pulizia delicata**\n*Da test di laboratorio, rispetto ad uno spazzolino a setole piatte standard\n**rispetto a filamenti arrotondati standard",
+   "recycling_other": "PAP-21 - Astuccio - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "41070#1",
+  "product_id": "41070",
+  "claim_text": "30% Più flessibile* ... Da test di laboratorio, rispetto ad uno spazzolino a setole piatte standard",
+  "v1_category": "unfair_comparison",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Spazzolino denti sensibili setole morbide gentle",
+   "brand": "Sensodyne",
+   "description": "\"Lo spazzolino Sensodyne Gentle, progettato per persone con denti sensibili, ha filamenti setosi per una delicata igiene di denti e gengive.\nLe setole composte da numerosi filamenti, fitti e sottili, puliscono i denti minimizzando il fastidio sul bordo gengivale che si avverte particolarmente in caso di sensibilità dentale.\nLa testina piccola permette di pulire anche le aree della bocca più difficili da raggiungere\"",
+   "features": "Soft\nManico realizzato con plastica di origine biologica\n30% Più flessibile*\nPulizia efficace e delicata\nPer una pressione delicata\nConfezione senza plastica, riciclabile\n*Da test di laboratorio, rispetto ad uno spazzolino a setole piatte standard",
+   "producer_info": "Gentle care\nPulizia efficace e delicata\nLo spazzolino Sensodyne Gentle Care presenta il collo il 30% più flessibile per una maggiore delicatezza* e una migliore pulizia. Questo spazzolino è appositamente progettato per le persone con denti sensibili:\n- Le setole morbide e arrotondate, composte da filamenti extra-fini in seta, sono progettate per adattarsi alle aree delicate di denti e gengive\n- Progettato con setole dalla punta 4 volte più sottile per una pulizia delicata**\n*Da test di laboratorio, rispetto ad uno spazzolino a setole piatte standard\n**rispetto a filamenti arrotondati standard",
+   "recycling_other": "PAP-21 - Astuccio - Carta\nVerifica le disposizioni del tuo Comune"
+  }
+ }
+]

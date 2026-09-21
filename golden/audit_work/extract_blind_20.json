@@ -1,0 +1,1678 @@
+[
+ {
+  "product_id": "44114",
+  "claims": [
+   {
+    "claim_text": "50% di zenzero",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Indicazione quantitativa di ingrediente (QUID, Reg. (UE) 1169/2011): nessun contenuto ambientale o sociale.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Speziato e Antiossidante** ... **Contiene curcuma che possiede proprietà antiossidanti",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Asserisce una proprieta' antiossidante attribuita alla curcuma: disciplina Reg. (CE) 1924/2006.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "100% Naturale",
+    "source_field": "features",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Wording verde generico senza alcuna specificazione: asserzione ambientale generica, art. 23 lett. d-bis.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "#unsorsomigliore",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Slogan privo di contenuto ambientale proprio che introduce un elenco sostenibile: regola degli slogan.",
+    "confidence": 0.75
+   },
+   {
+    "claim_text": "Astuccio in cartone riciclabile",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Asserzione di riciclabilita' dell'imballaggio priva di base dichiarata nel contesto di prodotto.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Bustina in carta riciclabile",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Asserzione di riciclabilita' di un componente priva di base dichiarata.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Imballi certificati FSC per salvaguardare le foreste",
+    "source_field": "producer_info",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Nomina lo schema FSC: occorre verificare marchio, codice di licenza e validita' della catena di custodia.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Filtro in cellulosa biodegradabile",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Biodegradabilita' asserita senza quantificazione ne' norma di prova: asserzione ambientale generica.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Senza microplastiche",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "L'assenza di microplastiche implica un minore danno ambientale (art. 18 lett. n-quater) senza specificazione.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Filo in puro cotone",
+    "source_field": "producer_info",
+    "label": "UNCERTAIN",
+    "discard_reason": null,
+    "rationale_it": "Letture in conflitto: descrizione di materiale fuori perimetro oppure asserzione ambientale implicita (fibra naturale contro filo sintetico) dentro un elenco dichiaratamente sostenibile.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Scritta in Braille",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Accessibilita': prosa sociale che non nomina alcun marchio o schema, nessun aggancio alla lett. n-sexies.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Emissioni di CO2 ridotte e compensate",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Asserzione di riduzione e compensazione delle emissioni: art. 23, comma 1, lett. d-quater.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Lo zenzero, una radice dal sapore piccante utilizzata da secoli in Asia, è un alleato dello stomaco e della digestione.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Effetto asserito su stomaco e digestione: Reg. (CE) 1924/2006.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "La curcuma, deliziosa e ricca di proprietà salutari per l'organismo, è uno straordinario antiossidante.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Proprieta' salutari e antiossidanti attribuite a un ingrediente: Reg. (CE) 1924/2006.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "L'abbinamento con miele e limone rende questo infuso ancora più piacevole e ricco di gusto.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Resa sensoriale del prodotto: nessun asse ambientale.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Questo prodotto è naturalmente senza glutine.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione sull'assenza di glutine: Reg. (UE) 828/2014 e Reg. (UE) 1169/2011.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "VEGANO",
+    "source_field": "certifications",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Dicitura/marchio di certificazione vegana esibito senza schema nominato (T9): quale sistema di certificazione la sostiene?",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Idoneo ai vegani",
+    "source_field": "life_style",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Informazione di idoneita' dietetica, non un marchio volontario che distingue per caratteristiche ambientali o sociali.",
+    "confidence": 0.4
+   }
+  ]
+ },
+ {
+  "product_id": "554553",
+  "claims": [
+   {
+    "claim_text": "Plus - Più erbe funzionali",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Rimanda a erbe 'funzionali', cioe' a un effetto fisiologico: Reg. (CE) 1924/2006.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "#unsorsomigliore",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Slogan privo di contenuto ambientale proprio che introduce un elenco sostenibile: regola degli slogan.",
+    "confidence": 0.75
+   },
+   {
+    "claim_text": "Astuccio in cartone 100% riciclabile",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Riciclabilita' quantificata al 100% senza base dichiarata: asserzione ambientale da segnalare.",
+    "confidence": 0.75
+   },
+   {
+    "claim_text": "Bustina salva-aroma in carta 100% riciclabile",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Riciclabilita' quantificata al 100% senza base dichiarata.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Imballi certificati FSC per salvaguardare le foreste",
+    "source_field": "producer_info",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Nomina lo schema FSC: verificare marchio, codice di licenza e catena di custodia in corso di validita'.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Filtro in cellulosa biodegradabile senza microplastiche",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Biodegradabilita' e assenza di microplastiche asserite senza quantificazione ne' norma di prova.",
+    "confidence": 0.65
+   },
+   {
+    "claim_text": "Filo in puro cotone senza graffetta in alluminio",
+    "source_field": "producer_info",
+    "label": "UNCERTAIN",
+    "discard_reason": null,
+    "rationale_it": "Letture in conflitto: descrizione di materiali fuori perimetro oppure asserzione ambientale implicita (eliminazione della graffetta metallica) dentro un elenco sostenibile.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Scritta in Braille per aiutare ciechi e ipovedenti",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Prosa sociale/accessibilita' senza marchio o schema nominato: fuori dal perimetro ECGT.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Produzione a zero emissioni di CO2",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Asserzione di neutralita' climatica della produzione senza specificazione: art. 23, comma 1, lett. d-quater.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Le sue proprietà calmanti e distensive, aiutano e facilitano i naturali processi digestivi.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Effetto asserito sui processi digestivi: Reg. (CE) 1924/2006.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Conosciuto come uno dei migliori rimedi naturali per sconfiggere il gonfiore addominale e tutti i disturbi che colpiscono la digestione.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Effetto asserito su gonfiore addominale e digestione: Reg. (CE) 1924/2006.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "Dalle riconosciute proprietà distensive, è un ottimo coadiuvante nella digestione e contribuisce al normale funzionamento del tratto intestinale.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Effetto asserito sulla digestione e sul tratto intestinale: Reg. (CE) 1924/2006.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "VEGANO",
+    "source_field": "certifications",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Dicitura di certificazione vegana senza schema nominato (T9).",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Idoneo ai vegani",
+    "source_field": "life_style",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Informazione di idoneita' dietetica, non etichetta di sostenibilita'.",
+    "confidence": 0.4
+   }
+  ]
+ },
+ {
+  "product_id": "63837",
+  "claims": [
+   {
+    "claim_text": "il più tipico dei dolci tradizionali genovesi",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Tipicita' storica e tradizionale: passo 2c.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "la cui ricetta originale, creata nel XVI secolo ai tempi di Andrea D’Oria",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Provenienza storica della ricetta: passo 2c.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "è un autentico trionfo di pasticceria",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Superlativo agganciato alla ricetta tradizionale: T3.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "L’abbondanza di uva sultanina*, scorze di agrumi candite e pinoli testimoniano la vocazione mercantile ed i fasti della Repubblica Marinara Genovese.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Richiamo storico alla Repubblica Marinara: passo 2c.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Il suo ricco sapore di burro ed i profumi dei suoi ingredienti sapranno avvolgervi e deliziarvi fino all’ultima briciola, che i commensali si ruberanno nel piatto!",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Resa sensoriale del prodotto.",
+    "confidence": 0.65
+   },
+   {
+    "claim_text": "Prodotto Ligure",
+    "source_field": "certifications",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Marchio di origine territoriale: art. 21 Cod. Cons., fuori dal perimetro ECGT.",
+    "confidence": 0.55
+   }
+  ]
+ },
+ {
+  "product_id": "663509",
+  "claims": [
+   {
+    "claim_text": "Senza conservanti - Edulcoranti artificiali",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di additivi presentata come pregio alimentare: Reg. (UE) 1169/2011.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "13 Kcal per porzione (15 g) * ... *per porzione (15 g) 55 kJ / 13 kcal - per 100 g 367 kJ / 87 kcal",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Dichiarazione nutrizionale sull'apporto energetico: Reg. (UE) 1169/2011.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Fonte di fibre",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione nutrizionale tipica: Reg. (CE) 1924/2006.",
+    "confidence": 0.9
+   },
+   {
+    "claim_text": "Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Approvazione di un ente che certifica caratteristiche nutrizionali, non ambientali o sociali: non supera il passo 3.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Le migliori pesche gialle bio",
+    "source_field": "producer_info",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Richiama la certificazione biologica (Reg. (UE) 2018/848) e vi aggiunge un superlativo: verifica di certificato e sostanziazione.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "senza conservanti ed edulcoranti artificiali",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di additivi: Reg. (UE) 1169/2011.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "per un gusto senza compromessi",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Resa sensoriale.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Natù",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Marchio di linea che non distingue per caratteristiche ambientali o sociali: T10.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "I prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Inserimento in un'alimentazione sana ed equilibrata: Reg. (CE) 1924/2006.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "hanno pochi ingredienti, di origine naturale e bio",
+    "source_field": "producer_info",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Richiama la certificazione biologica insieme all'origine naturale: verifica dello schema Reg. (UE) 2018/848.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "per un'esperienza di gusto e benessere unica",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Benessere e gusto: nessun asse ambientale, richiamo al benessere fisico.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Rigoni di Asiago per l'ambiente",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Programma ambientale aziendale vago e senza specificazione: art. 23, comma 1, lett. d-bis.",
+    "confidence": 0.9
+   },
+   {
+    "claim_text": "Etichetta in carta riciclata",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Contenuto riciclato asserito senza base dichiarata nel contesto di prodotto (T7).",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "BIOLOGICO",
+    "source_field": "certifications",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Etichetta di sostenibilita' riconosciuta: verifica del certificato Reg. (UE) 2018/848 e dell'organismo di controllo.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "Senza aggiunta di zucchero",
+    "source_field": "life_style",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione nutrizionale: Reg. (CE) 1924/2006.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Biologico",
+    "source_field": "life_style",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Etichetta di sostenibilita' riconosciuta: verifica del certificato biologico.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Idoneo ai vegani",
+    "source_field": "life_style",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Informazione di idoneita' dietetica.",
+    "confidence": 0.35
+   }
+  ]
+ },
+ {
+  "product_id": "603892",
+  "claims": [
+   {
+    "claim_text": "Senza conservanti - Edulcoranti artificiali",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di additivi presentata come pregio alimentare: Reg. (UE) 1169/2011.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "12 Kcal per porzione (15 g) * ... * per porzione (15 g) 51 kJ / 12 kcal - per 100 g 339 kJ / 80 kcal",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Dichiarazione nutrizionale sull'apporto energetico: Reg. (UE) 1169/2011.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Fonte di fibre",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione nutrizionale tipica: Reg. (CE) 1924/2006.",
+    "confidence": 0.9
+   },
+   {
+    "claim_text": "Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Approvazione di un ente che certifica caratteristiche nutrizionali: non supera il passo 3.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Le migliori albicocche bio",
+    "source_field": "producer_info",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Richiama la certificazione biologica e vi aggiunge un superlativo: verifica di certificato e sostanziazione.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "senza conservanti ed edulcoranti artificiali",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di additivi: Reg. (UE) 1169/2011.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "per un gusto senza compromessi",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Resa sensoriale.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Natù",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Marchio di linea privo di contenuto ambientale o sociale: T10.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "I prodotti Natù, ideali nell'ambito di un'alimentazione sana e equilibrata",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Inserimento in un'alimentazione sana ed equilibrata: Reg. (CE) 1924/2006.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "hanno pochi ingredienti, di origine naturale e bio",
+    "source_field": "producer_info",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Richiama la certificazione biologica insieme all'origine naturale.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "per un'esperienza di gusto e benessere unica",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Benessere e gusto: nessun asse ambientale.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Rigoni di Asiago per l'ambiente",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Programma ambientale aziendale vago e senza specificazione: art. 23, comma 1, lett. d-bis.",
+    "confidence": 0.9
+   },
+   {
+    "claim_text": "Etichetta in carta riciclata",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Contenuto riciclato asserito senza base dichiarata (T7).",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "BIOLOGICO",
+    "source_field": "certifications",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Etichetta di sostenibilita' riconosciuta: verifica del certificato Reg. (UE) 2018/848.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "VEGANO",
+    "source_field": "certifications",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Dicitura di certificazione vegana senza schema nominato (T9).",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Senza aggiunta di zucchero",
+    "source_field": "life_style",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione nutrizionale: Reg. (CE) 1924/2006.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Biologico",
+    "source_field": "life_style",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Etichetta di sostenibilita' riconosciuta: verifica del certificato biologico.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Idoneo ai vegani",
+    "source_field": "life_style",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Informazione di idoneita' dietetica.",
+    "confidence": 0.35
+   }
+  ]
+ },
+ {
+  "product_id": "43145",
+  "claims": [
+   {
+    "claim_text": "Acquistando questa tavoletta di cioccolato contribuisci a sostenere e promuovere lo sviluppo economico e sociale delle comunità in cui operano le cooperative o i produttori dei seguenti paesi: Repubblica Dominicana, Perù, Paraguay, India, Madagascar",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Prosa sociale libera che non nomina alcun marchio o schema: la lett. n-sexies ammette il sociale solo in forma di marchio o schema nominato.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "BIOLOGICO",
+    "source_field": "certifications",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Etichetta di sostenibilita' riconosciuta: verifica del certificato Reg. (UE) 2018/848.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "VIVI VERDE",
+    "source_field": "certifications",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Marchio di linea della distribuzione che commercializza credenziali ambientali senza specificazione (seme S3, T10).",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Biologico",
+    "source_field": "life_style",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Etichetta di sostenibilita' riconosciuta: verifica del certificato biologico.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Coop per l'ambiente",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Programma ambientale aziendale vago e senza specificazione: art. 23, comma 1, lett. d-bis.",
+    "confidence": 0.9
+   }
+  ]
+ },
+ {
+  "product_id": "41888",
+  "claims": [
+   {
+    "claim_text": "Il miele di castagno vivi verde Coop è ottenuto dal nettare dei fiori di castagno provenienti principalmente dalle regioni italiane più vocate quali: Calabria, Piemonte e Toscana.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Asserzione di origine geografica e vocazione territoriale: art. 21 Cod. Cons., fuori dal perimetro ECGT.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "BIOLOGICO",
+    "source_field": "certifications",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Etichetta di sostenibilita' riconosciuta: verifica del certificato Reg. (UE) 2018/848.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "VIVI VERDE",
+    "source_field": "certifications",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Marchio di linea che commercializza credenziali ambientali senza specificazione (seme S3).",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Biologico",
+    "source_field": "life_style",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Etichetta di sostenibilita' riconosciuta: verifica del certificato biologico.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Coop per l'ambiente",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Programma ambientale aziendale vago e senza specificazione: art. 23, comma 1, lett. d-bis.",
+    "confidence": 0.9
+   }
+  ]
+ },
+ {
+  "product_id": "50746",
+  "claims": [
+   {
+    "claim_text": "Ricche e semplici",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Descrittore sensoriale del prodotto.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Senza grassi idrogenati",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di grassi idrogenati presentata come pregio nutrizionale: Reg. (UE) 1169/2011.",
+    "confidence": 0.65
+   },
+   {
+    "claim_text": "Prodotto in Italia",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Asserzione di origine: art. 21 Cod. Cons., fuori dal perimetro ECGT.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Le ricette di famiglia",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Provenienza familiare della ricetta: passo 2c.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "la tradizionale, autentica pastafrolla di Grondona, buona e semplice",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Tradizione e autenticita' della ricetta: passo 2c.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "arricchita e resa unica da una fantasia di cocco e dall'intensità del cioccolato, che insieme ne caratterizzano il sapore",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Resa sensoriale.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "È una ricetta di inizio Ottocento quando, in un piccolo laboratorio, Grondona avvia la sua produzione",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Datazione storica della ricetta e dell'avvio della produzione: passo 2c.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "le inimitabili ricette di famiglia",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Superlativo agganciato alle ricette di famiglia: T3.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Le stesse utilizzate ancora oggi.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Continuita' con le ricette storiche: passo 2c.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Prodotto di qualità",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Asserzione generica di qualita' priva di contenuto ambientale: non esiste un limbo di eccellenza generica.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Garanzia famiglia Grondona",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Garanzia appoggiata alla storia familiare: passo 2c.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Dal 1820 la famiglia Grondona garantisce che anche questa specialità è prodotta con i migliori ingredienti reperibili sul mercato",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Data di fondazione e storia familiare: passo 2c.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "senza aggiungere conservanti, coloranti o aromi",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di additivi presentata come pregio: Reg. (UE) 1169/2011.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Prodotto Ligure",
+    "source_field": "certifications",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Marchio di origine territoriale: fuori dal perimetro ECGT.",
+    "confidence": 0.55
+   }
+  ]
+ },
+ {
+  "product_id": "68928",
+  "claims": [
+   {
+    "claim_text": "Lenta cottura",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Metodo di produzione: T5 ritirata, nessuna asserzione di impatto ambientale.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Arricciate e croccanti",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Descrittore sensoriale.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Antica ricetta",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Provenienza storica della ricetta: passo 2c.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "Buona com'era",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Continuita' con il gusto del passato: passo 2c.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "1936 Nel Cuore di Milano apre la Rosticceria San Carlo, ed è subito successo.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Racconto storico di fondazione: passo 2c.",
+    "confidence": 0.75
+   },
+   {
+    "claim_text": "La Rosticceria è un vero e proprio riferimento per i buongustai dell'epoca.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Notorieta' storica: passo 2c.",
+    "confidence": 0.65
+   },
+   {
+    "claim_text": "È particolarmente rinomata per le sue patatine dal taglio sottile, arricciate e molto croccanti.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Rinomanza storica unita a descrittori sensoriali: passo 2c.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "La sapienza e la passione con cui queste patatine venivano preparate è stata tramandata di generazione in generazione.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Trasmissione generazionale del metodo: passo 2c.",
+    "confidence": 0.75
+   },
+   {
+    "claim_text": "Senza glutine",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione sull'assenza di glutine: Reg. (UE) 828/2014.",
+    "confidence": 0.65
+   },
+   {
+    "claim_text": "100% Elettrica rinnovabile",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Asserzione ambientale sull'energia impiegata, senza metodo di calcolo, ambito o comparatore dichiarati.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Le chips 1936 sono prodotte con energia elettrica proveniente esclusivamente da fonti rinnovabili.",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Ribadisce l'impiego esclusivo di fonti rinnovabili senza fornire una base verificabile: asserzione ambientale generica.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Non disperdere nell'ambiente",
+    "source_field": "recycling_other",
+    "label": "UNCERTAIN",
+    "discard_reason": null,
+    "rationale_it": "Letture in conflitto: avvertenza di conferimento obbligatoria (D.Lgs. 116/2020) oppure testo ambientale volontario, dato che la riga non porta prefisso di codice materiale (T14).",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "L'ambiente è vita. Tienilo pulito",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Slogan ambientale volontario e autonomo nel pannello di conferimento, senza prefisso di codice materiale (T14).",
+    "confidence": 0.7
+   }
+  ]
+ },
+ {
+  "product_id": "418104",
+  "claims": [
+   {
+    "claim_text": "Si alla linea, no allo fame!",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Richiamo al controllo del peso: Reg. (CE) 1924/2006.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "65% di Grassi in Meno* ... *Rispetto alla media degli snack analoghi più venduti (fonte IRI vedi www.fiorentinialimentari.it)",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Comparativo sul tenore di grassi: indicazione nutrizionale comparativa, Reg. (CE) 1924/2006.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Non fritto - No glutine",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Metodo di cottura e assenza di glutine presentati come pregi alimentari.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Segni particolari: Chips non fritta",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Metodo di produzione: nessuna asserzione di impatto ambientale.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Carattere: Croccante e irresistibile",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Descrittore sensoriale.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Personalità: Meno grassi, più gusto.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Comparativo sul tenore di grassi unito alla resa sensoriale.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Quando: ogni volta che hai fame ma pensi alla bilancia.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Richiamo al controllo del peso.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Si vegan",
+    "source_field": "producer_info",
+    "label": "UNCERTAIN",
+    "discard_reason": null,
+    "rationale_it": "Letture in conflitto: mera idoneita' dietetica (other_regime) oppure credenziale etico-sociale esibita senza schema nominato (T9 -> NEEDS_VERIFICATION).",
+    "confidence": 0.35
+   },
+   {
+    "claim_text": "Si fibre",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione nutrizionale sulle fibre: Reg. (CE) 1924/2006.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "65% di grassi in meno* ... *Rispetto alla media degli snack analoghi più venduti (fonte IRI vedi www.fiorentinialimentari.it)",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Comparativo sul tenore di grassi: indicazione nutrizionale comparativa.",
+    "confidence": 0.65
+   },
+   {
+    "claim_text": "No fritto",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Metodo di produzione.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "No glutine",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di glutine: Reg. (UE) 828/2014.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "No olio bollente",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Metodo di produzione.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "No olio di palma",
+    "source_field": "producer_info",
+    "label": "UNCERTAIN",
+    "discard_reason": null,
+    "rationale_it": "Letture in conflitto: assenza di ingrediente fuori perimetro (other_regime) oppure asserzione ambientale implicita sulla deforestazione (art. 18 lett. n-quater).",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "VEGANO",
+    "source_field": "certifications",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Dicitura di certificazione vegana senza schema nominato (T9).",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Idoneo ai vegani",
+    "source_field": "life_style",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Informazione di idoneita' dietetica.",
+    "confidence": 0.35
+   },
+   {
+    "claim_text": "Fiorentini per l'ambiente",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Programma ambientale aziendale vago e senza specificazione: art. 23, comma 1, lett. d-bis (seme S4).",
+    "confidence": 0.9
+   },
+   {
+    "claim_text": "Incarto riciclabile 100% plastica",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Riciclabilita' dell'incarto asserita senza base dichiarata; riga priva di prefisso di codice materiale (T14).",
+    "confidence": 0.6
+   }
+  ]
+ },
+ {
+  "product_id": "56017",
+  "claims": [
+   {
+    "claim_text": "+ Gusto + sostenibile",
+    "source_field": "features",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Comparativo ambientale generico ('piu' sostenibile') senza base ne' comparatore identificato: art. 23, lett. d-bis.",
+    "confidence": 0.75
+   },
+   {
+    "claim_text": "Senza coloranti aggiunti",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di additivi presentata come pregio: Reg. (UE) 1169/2011.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Con olio essenziale di limoni siciliani",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Origine geografica di un ingrediente: art. 21 Cod. Cons., fuori perimetro.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Nuova ricetta più che buona",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Resa sensoriale.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Per un gelato eccezionale!",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Resa d'uso e sensoriale.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Nuova ricetta + gusto + sostenibile",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Comparativo ambientale generico senza base ne' comparatore identificato.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Più che buono* ... * La nostra crema al limone trae il suo intenso aroma dall'olio essenziale dei limoni di Sicilia, estratto con cura dalla scorza.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Superlativo sensoriale con nota che ne spiega l'origine aromatica: asse prestazionale (T4).",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "con olio essenziale di Limoni Siciliani",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Origine geografica di un ingrediente.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Senza coloranti aggiunti",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di additivi: Reg. (UE) 1169/2011.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Senza conservanti",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di additivi: Reg. (UE) 1169/2011.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "-17% Plastica rispetto al pack precedente",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Comparativo ambientale con comparatore non identificato ('pack precedente'): IN_SCOPE (seme S5).",
+    "confidence": 0.9
+   }
+  ]
+ },
+ {
+  "product_id": "44300",
+  "claims": [
+   {
+    "claim_text": "I prodotti Solidal Coop rendono concreto il sostegno alle cooperative, alle piccole comunità di produttori e ai lavoratori del Sud del mondo.",
+    "source_field": "producer_info",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Marchio di linea a contenuto sociale (Solidal) senza schema di certificazione nominato: T9/T10.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Fairtrade significa condizioni commerciali più eque e opportunità, per i produttori dei paesi in via di sviluppo, di investire nelle loro imprese e nelle loro comunità per un futuro sostenibile.",
+    "source_field": "producer_info",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Nomina in prosa lo schema Fairtrade (T11): verifica della certificazione e del suo ambito.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Acquistando questa tavoletta di cioccolato contribuisci a sostenere e promuovere lo sviluppo economico e sociale delle comunità in cui operano le cooperative o i produttori dei seguenti paesi:",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Prosa sociale libera senza marchio o schema nominato: nessun aggancio alla lett. n-sexies.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "SOLIDAL",
+    "source_field": "certifications",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Marchio di linea a contenuto sociale esibito senza schema di certificazione nominato (T9).",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Coop per l'ambiente",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Programma ambientale aziendale vago e senza specificazione: art. 23, comma 1, lett. d-bis (seme S2).",
+    "confidence": 0.9
+   }
+  ]
+ },
+ {
+  "product_id": "675785",
+  "claims": [
+   {
+    "claim_text": "Con erbe delle Alpi svizzere",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Origine geografica degli ingredienti: fuori dal perimetro ECGT.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Supporta le difese immunitarie e contribuisce a lenire la gola* ... *La vitamina C contribuisce al normale funzionamento del sistema immunitario. Il mentolo contribuisce a lenire la gola. Contiene la tradizionale miscela di 13 erbe Ricola, miele, limone ed echinacea",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione sulla salute relativa a sistema immunitario e gola: Reg. (CE) 1924/2006.",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Miele Equosolidale",
+    "source_field": "features",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Marchio equosolidale: etichetta di sostenibilita' a contenuto sociale, verifica dello schema di certificazione.",
+    "confidence": 0.8
+   }
+  ]
+ },
+ {
+  "product_id": "704630",
+  "claims": [
+   {
+    "claim_text": "100% Datteri e arachidi",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Composizione del prodotto: nessuna asserzione ambientale o sociale.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Solo 2 ingredienti",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Semplicita' di composizione: fuori dal perimetro ECGT.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Senza zuccheri aggiunti** ... **Contiene naturalmente zuccheri",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione nutrizionale sull'assenza di zuccheri aggiunti: Reg. (CE) 1924/2006.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "Texture morbida",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Descrittore sensoriale/testurale.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Non intendiamo che tutto quello che si trova nelle nostre barrette «cresce sugli alberi», ma che i nostri ingredienti sono di origine naturale; alcuni di loro devono essere puliti, essiccati e talvolta lavorati e lo facciamo con cura, per mantenerne il gusto autentico.",
+    "source_field": "producer_info",
+    "label": "NEEDS_VERIFICATION",
+    "discard_reason": null,
+    "rationale_it": "Il marchio fornisce la propria definizione del termine 'Natural' su cui commercializza: precisazione in confezione ex T16.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Inoltre, le nostre barrette sono senza aromi artificiali, senza additivi conservanti e coloranti.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di aromi e additivi presentata come pregio: Reg. (UE) 1169/2011.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Senza aggiunta di zucchero",
+    "source_field": "life_style",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Indicazione nutrizionale: Reg. (CE) 1924/2006.",
+    "confidence": 0.55
+   }
+  ]
+ },
+ {
+  "product_id": "63854",
+  "claims": [
+   {
+    "claim_text": "Solo aromi naturali",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Wording 'naturale' senza specificazione, nella forma tipica delle asserzioni ambientali generiche (semi S6/S9).",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Prodotto Ligure",
+    "source_field": "certifications",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Marchio di origine territoriale: fuori dal perimetro ECGT.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Aiutiamo l'ambiente",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Slogan ambientale volontario e autonomo nel pannello di conferimento, privo di prefisso di codice materiale (T14).",
+    "confidence": 0.8
+   }
+  ]
+ },
+ {
+  "product_id": "41567",
+  "claims": [
+   {
+    "claim_text": "Artigianale sfogliato a mano",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Metodo artigianale con appello alla tradizione: T5 ritirata, passo 2c.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Prodotto italiano",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Asserzione di origine: art. 21 Cod. Cons., fuori dal perimetro ECGT.",
+    "confidence": 0.7
+   }
+  ]
+ },
+ {
+  "product_id": "717407",
+  "claims": [
+   {
+    "claim_text": "Le ricette di famiglia",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Provenienza familiare della ricetta: passo 2c.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "É a inizio Ottocento che prende avvio l'esperienza Grondona, quando in un piccolo laboratorio nascono le prime specialità secondo le \"ricette di famiglia\".",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Datazione storica dell'avvio dell'attivita': passo 2c.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "Ricette che nel tempo verranno custodite e tramandate grazie al quadernetto delle cose buone, non segrete, ma semplici perché naturali, quindi senza tempo.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Trasmissione storica delle ricette di famiglia: passo 2c.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Le stesse utilizzate ancora oggi per gli inimitabili dolci genovesi che fanno riconoscere Grondona ogni dove.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Superlativo agganciato alle ricette tradizionali: T3.",
+    "confidence": 0.75
+   },
+   {
+    "claim_text": "Come il Pandolce che riporta alla storia dei navigatori.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Richiamo storico: passo 2c.",
+    "confidence": 0.65
+   },
+   {
+    "claim_text": "Un dolce di grande pastafrolla che si arricchisce dei gusti e dei profumi della macedonia di vera frutta - scelta e candita espressamente per Grondona - dei pinoli e della uvetta di Smirne: una fragranza unica e autentica.",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Resa sensoriale e qualita' degli ingredienti.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Prodotto di qualità",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Asserzione generica di qualita' priva di contenuto ambientale.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Garanzia famiglia Grondona",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Garanzia appoggiata alla storia familiare: passo 2c.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Dal 1820 la famiglia Grondona garantisce che anche questa specialità è prodotta con i migliori ingredienti reperibili sul mercato",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Data di fondazione e storia familiare: passo 2c.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "senza aggiungere conservanti, coloranti e aromi",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di additivi presentata come pregio: Reg. (UE) 1169/2011.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Prodotto Ligure",
+    "source_field": "certifications",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Marchio di origine territoriale: fuori dal perimetro ECGT.",
+    "confidence": 0.55
+   }
+  ]
+ },
+ {
+  "product_id": "164990",
+  "claims": [
+   {
+    "claim_text": "Lievitazione istantanea",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Prestazione funzionale del prodotto.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Astuccio richiudibile",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Caratteristica tecnica di design dell'imballaggio, non un'asserzione di impatto ambientale.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Con 80 anni di tradizione",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "heritage_origin",
+    "rationale_it": "Anzianita' e tradizione del marchio: passo 2c.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "garantisce la lievitazione perfetta di torte di pasta morbida, pasta Margherita, Pan di Spagna, pasta frolla e biscotti e conferisce loro una delicata fragranza di vanillina",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Efficacia e resa sensoriale del prodotto.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Rispettiamo l'ambiente",
+    "source_field": "recycling_other",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Slogan ambientale volontario e autonomo nel pannello di conferimento, privo di prefisso di codice materiale (T14).",
+    "confidence": 0.8
+   }
+  ]
+ },
+ {
+  "product_id": "39785",
+  "claims": [
+   {
+    "claim_text": "Senza Lattosio",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di lattosio: indicazione a rilievo nutrizionale/allergenico.",
+    "confidence": 0.6
+   },
+   {
+    "claim_text": "Senza Olio di Palma",
+    "source_field": "features",
+    "label": "UNCERTAIN",
+    "discard_reason": null,
+    "rationale_it": "Letture in conflitto: assenza di ingrediente fuori perimetro oppure asserzione ambientale implicita sulla deforestazione.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Prodotto specificamente formulato per persone intolleranti al glutine",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Dicitura prevista per gli alimenti formulati per intolleranti al glutine: Reg. (UE) 828/2014.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Céréal si impegna per voi",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Slogan privo di contenuto ambientale proprio in testa a un elenco: regola degli slogan.",
+    "confidence": 0.8
+   },
+   {
+    "claim_text": "Le Madeleine Noire Céréal sono prodotte con la massima cura",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "other_regime",
+    "rationale_it": "Asserzione generica di qualita' priva di contenuto ambientale.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Senza Glutine",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di glutine: Reg. (UE) 828/2014.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Senza Lattosio",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di lattosio.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Senza Latte",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di latte: informazione allergenica/composizione.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "Senza Olio di Palma",
+    "source_field": "producer_info",
+    "label": "UNCERTAIN",
+    "discard_reason": null,
+    "rationale_it": "Letture in conflitto: assenza di ingrediente fuori perimetro oppure asserzione ambientale implicita sulla deforestazione.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Con cacao da coltivazione più sostenibile",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Comparativo ambientale generico sulla coltivazione del cacao, senza base ne' comparatore identificato (seme S7).",
+    "confidence": 0.9
+   },
+   {
+    "claim_text": "SENZA GLUTINE",
+    "source_field": "certifications",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di glutine: Reg. (UE) 828/2014.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "SENZA LATTOSIO",
+    "source_field": "certifications",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di lattosio.",
+    "confidence": 0.55
+   },
+   {
+    "claim_text": "Idoneo agli intolleranti al glutine",
+    "source_field": "life_style",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Idoneita' per intolleranti al glutine: Reg. (UE) 828/2014.",
+    "confidence": 0.5
+   }
+  ]
+ },
+ {
+  "product_id": "63679",
+  "claims": [
+   {
+    "claim_text": "100% Naturale",
+    "source_field": "features",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Wording verde generico senza specificazione: asserzione ambientale generica, art. 23 lett. d-bis (seme S6).",
+    "confidence": 0.85
+   },
+   {
+    "claim_text": "Naturalmente priva di caffeina",
+    "source_field": "features",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza naturale di caffeina: indicazione a rilievo nutrizionale.",
+    "confidence": 0.5
+   },
+   {
+    "claim_text": "Deliziosa selezione di infusi naturalmente privi di caffeina",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "health_nutrition",
+    "rationale_it": "Assenza di caffeina unita a un descrittore sensoriale.",
+    "confidence": 0.45
+   },
+   {
+    "claim_text": "100% naturali",
+    "source_field": "producer_info",
+    "label": "IN_SCOPE",
+    "discard_reason": null,
+    "rationale_it": "Wording verde generico senza specificazione: asserzione ambientale generica.",
+    "confidence": 0.7
+   },
+   {
+    "claim_text": "Ciliegia e cannella - vellutato e avvolgente",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Descrittore sensoriale.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Finocchio, menta e liquirizia - dolce e rinfrescante",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Descrittore sensoriale.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Frutti rossi - vivace e profumato",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Descrittore sensoriale.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Zenzero e limone - frizzante e speziato",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Descrittore sensoriale.",
+    "confidence": 0.4
+   },
+   {
+    "claim_text": "Moringa, zenzero e mango - fruttato e delicato",
+    "source_field": "producer_info",
+    "label": "DISCARD",
+    "discard_reason": "product_performance",
+    "rationale_it": "Descrittore sensoriale.",
+    "confidence": 0.4
+   }
+  ]
+ }
+]

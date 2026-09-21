@@ -1,0 +1,862 @@
+[
+ {
+  "uid": "38765#1",
+  "product_id": "38765",
+  "claim_text": "Agricoltura sostenibile",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Vino rosso marzemino DOC trentino",
+   "brand": "Mezzacorona",
+   "features": "Marzemino Trentino DOC, vino del Trentino Alto-Adige, Italia\nDenominazione di Origine Controllata\nRaccolto a mano\nAgricoltura sostenibile",
+   "producer_info": "Marzemino Trentino DOC, vino rosso italiano.\nZona di provenienza: Trentino-Alto Adige\nCaratteristiche: Celebrato nel \"Don Giovanni\" di Mozart. Secco e armonico, struttura fine ed elegante, profumo gradevolmente fruttato.\nTrentino\nDenominazione di Origine Controllata",
+   "certifications": [
+    "DOC"
+   ]
+  }
+ },
+ {
+  "uid": "38765#2",
+  "product_id": "38765",
+  "claim_text": "Celebrato nel \"Don Giovanni\" di Mozart",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": "trivial_non_actionable",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Vino rosso marzemino DOC trentino",
+   "brand": "Mezzacorona",
+   "features": "Marzemino Trentino DOC, vino del Trentino Alto-Adige, Italia\nDenominazione di Origine Controllata\nRaccolto a mano\nAgricoltura sostenibile",
+   "producer_info": "Marzemino Trentino DOC, vino rosso italiano.\nZona di provenienza: Trentino-Alto Adige\nCaratteristiche: Celebrato nel \"Don Giovanni\" di Mozart. Secco e armonico, struttura fine ed elegante, profumo gradevolmente fruttato.\nTrentino\nDenominazione di Origine Controllata",
+   "certifications": [
+    "DOC"
+   ]
+  }
+ },
+ {
+  "uid": "38771#0",
+  "product_id": "38771",
+  "claim_text": "ottenuto esclusivamente da uve a produzione integrata nel pieno rispetto della natura",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Vino rosso lambrusco di castelvetro DOC amabile",
+   "brand": "Civ&Civ",
+   "denomination": "Vino frizzante amabile",
+   "features": "Lambrusco Grasparossa di Castelvetro DOC Amabile, vino dell'Emilia-Romagna, Italia\nDenominazione di Origine Controllata",
+   "producer_info": "Lambrusco Grasparossa di Castelvetro DOC Amabile, vino rosso frizzante amabile italiano.\nQuesto vino è stato ottenuto esclusivamente da uve a produzione integrata nel pieno rispetto della natura.\nEnologo\nAndrea Ferrari\nIl vino proviene dalle uve dei viticoltori soci della cooperativa. Vinificato con metodi tradizionali, è ideale a tutto pasto.\nLambrusco Grasparossa di Castelvetro\nDenominazione di Origine Controllata",
+   "certifications": [
+    "DOC"
+   ]
+  }
+ },
+ {
+  "uid": "38771#1",
+  "product_id": "38771",
+  "claim_text": "Vinificato con metodi tradizionali",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Vino rosso lambrusco di castelvetro DOC amabile",
+   "brand": "Civ&Civ",
+   "denomination": "Vino frizzante amabile",
+   "features": "Lambrusco Grasparossa di Castelvetro DOC Amabile, vino dell'Emilia-Romagna, Italia\nDenominazione di Origine Controllata",
+   "producer_info": "Lambrusco Grasparossa di Castelvetro DOC Amabile, vino rosso frizzante amabile italiano.\nQuesto vino è stato ottenuto esclusivamente da uve a produzione integrata nel pieno rispetto della natura.\nEnologo\nAndrea Ferrari\nIl vino proviene dalle uve dei viticoltori soci della cooperativa. Vinificato con metodi tradizionali, è ideale a tutto pasto.\nLambrusco Grasparossa di Castelvetro\nDenominazione di Origine Controllata",
+   "certifications": [
+    "DOC"
+   ]
+  }
+ },
+ {
+  "uid": "703069#0",
+  "product_id": "703069",
+  "claim_text": "Equalitas - Cantina Sostenibile",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Vino rosso amarone della valpolicella DOCG",
+   "brand": "Pasqua",
+   "features": "Amarone della Valpolicella DOCG, vino del Veneto, Italia\nDenominazione di Origine Controllata e Garantita\nProduct of Italy",
+   "producer_info": "Amarone della Valpolicella DOCG, vino rosso italiano.\nL'Amarone, prodotto con la particolare tecnica dell'appassimento, è il vino Veronese per eccellenza. I grappoli vengono disposti ad appassire all'interno del Fruttaio per circa 3 mesi. Il vino viene invecchiato in botti di rovere e poi in bottiglia.\nAmarone della Valpolicella\nDenominazione di Origine Controllata e Garantita",
+   "certifications": [
+    "DOCG",
+    "Equalitas - Cantina Sostenibile"
+   ]
+  }
+ },
+ {
+  "uid": "38239#0",
+  "product_id": "38239",
+  "claim_text": "può avere effetti diuretici; aiuta la digestione; può combattere la dispepsia; può svolgere azione coadiuvante nel trattamento della stipsi (D.M. 3300-197 del 24-1-2000, D.M. 3551 del 24-3-2004); Una fonte di calcio per la salute delle ossa (D.M. 4311 del 15-7-2019)",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "eu_authorized_wording",
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": "eu_authorized_optional_claim",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Acqua effervescente naturale",
+   "brand": "Uliveto",
+   "denomination": "Acqua minerale naturale",
+   "features": "L'acqua per lo sport\n1/2 Litro\nAcqua minerale naturale\nVivi in forma\n1500 Controlli di qualità giornalieri\nBottiglie in PET riciclabile\nAiuta la digestione\nUna fonte di calcio per la salute delle ossa",
+   "producer_info": "Buona digestione e forma fisica\nL'acqua ricca di preziosi minerali quali bicarbonati, magnesio e solfati costituisce un aiuto naturale per il miglior svolgimento dei processi digestivi ed è ideale durante l'attività fisica per aiutare e reintegrare l'equilibrio idrico-minerale.\nL'acqua minerale naturale Uliveto\npuò avere effetti diuretici; aiuta la digestione; può combattere la dispepsia; può svolgere azione coadiuvante nel trattamento della stipsi dell'adulto e del bambino.\n(D.M. 3300-197 del 24-1-2000, D.M. 3551 del 24-3-2004)\nUna fonte di calcio per la salute delle ossa\nLa quantità di calcio presente nell'acqua minerale naturale Uliveto partecipa alla integrazione del fabbisogno giornaliero di calcio per la salute delle ossa.\n(D.M. 4311 del 15-7-2019)\n1500 Controlli di qualità giornalieri\nMicrobiologicamente pura\nEffervescente naturale - Bicarbonato calcica",
+   "recycling_other": "Confezione - LDPE 04 - Raccolta plastica\nPer l'ambiente\nBottiglia in PET 100% riciclabile\nSorgente Naturalmente Protetta\nBottiglia - PET 01 - Raccolta plastica\nEtichetta - PP 05 - Raccolta plastica\nTappo - HDPE 02 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "38239#1",
+  "product_id": "38239",
+  "claim_text": "1500 Controlli di qualità giornalieri",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Acqua effervescente naturale",
+   "brand": "Uliveto",
+   "denomination": "Acqua minerale naturale",
+   "features": "L'acqua per lo sport\n1/2 Litro\nAcqua minerale naturale\nVivi in forma\n1500 Controlli di qualità giornalieri\nBottiglie in PET riciclabile\nAiuta la digestione\nUna fonte di calcio per la salute delle ossa",
+   "producer_info": "Buona digestione e forma fisica\nL'acqua ricca di preziosi minerali quali bicarbonati, magnesio e solfati costituisce un aiuto naturale per il miglior svolgimento dei processi digestivi ed è ideale durante l'attività fisica per aiutare e reintegrare l'equilibrio idrico-minerale.\nL'acqua minerale naturale Uliveto\npuò avere effetti diuretici; aiuta la digestione; può combattere la dispepsia; può svolgere azione coadiuvante nel trattamento della stipsi dell'adulto e del bambino.\n(D.M. 3300-197 del 24-1-2000, D.M. 3551 del 24-3-2004)\nUna fonte di calcio per la salute delle ossa\nLa quantità di calcio presente nell'acqua minerale naturale Uliveto partecipa alla integrazione del fabbisogno giornaliero di calcio per la salute delle ossa.\n(D.M. 4311 del 15-7-2019)\n1500 Controlli di qualità giornalieri\nMicrobiologicamente pura\nEffervescente naturale - Bicarbonato calcica",
+   "recycling_other": "Confezione - LDPE 04 - Raccolta plastica\nPer l'ambiente\nBottiglia in PET 100% riciclabile\nSorgente Naturalmente Protetta\nBottiglia - PET 01 - Raccolta plastica\nEtichetta - PP 05 - Raccolta plastica\nTappo - HDPE 02 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "664452#0",
+  "product_id": "664452",
+  "claim_text": "Facilita la digestione / È indicata per le diete iposodiche / Può avere effetti diuretici ... D.P.G.R. Campania n. 25742 del 30.12.1992",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "eu_authorized_wording",
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": "eu_authorized_optional_claim",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Acqua effervescente naturale",
+   "brand": "Lete",
+   "denomination": "Acqua Minerale Effervescente Naturale",
+   "features": "Acqua Minerale",
+   "producer_info": "Il contenuto di calcio presente nell'acqua minerale naturale Lete partecipa all'integrazione del fabbisogno giornaliero di calcio per la salute delle ossa.\nFacilita la digestione\nÈ indicata per le diete iposodiche\nPuò avere effetti diuretici\nIn bottiglia come nasce alla fonte\n1.299 Controlli di qualità ogni giorno.\nMicrobiologicamente pura\nD.P.G.R. Campania n. 25742 del 30.12.1992",
+   "life_style": "Idoneo per una dieta a basso contenuto di sale/sodio",
+   "recycling_other": "Involucro - PE-LD 04 - Plastica\nRaccolta differenziata\nPer l'ambiente\nEtichetta - PP 05 - Raccolta plastica\nTappo - HDPE 02 - Raccolta plastica\nBottiglia - PET 01 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "664452#1",
+  "product_id": "664452",
+  "claim_text": "In bottiglia come nasce alla fonte",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Acqua effervescente naturale",
+   "brand": "Lete",
+   "denomination": "Acqua Minerale Effervescente Naturale",
+   "features": "Acqua Minerale",
+   "producer_info": "Il contenuto di calcio presente nell'acqua minerale naturale Lete partecipa all'integrazione del fabbisogno giornaliero di calcio per la salute delle ossa.\nFacilita la digestione\nÈ indicata per le diete iposodiche\nPuò avere effetti diuretici\nIn bottiglia come nasce alla fonte\n1.299 Controlli di qualità ogni giorno.\nMicrobiologicamente pura\nD.P.G.R. Campania n. 25742 del 30.12.1992",
+   "life_style": "Idoneo per una dieta a basso contenuto di sale/sodio",
+   "recycling_other": "Involucro - PE-LD 04 - Plastica\nRaccolta differenziata\nPer l'ambiente\nEtichetta - PP 05 - Raccolta plastica\nTappo - HDPE 02 - Raccolta plastica\nBottiglia - PET 01 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "664452#2",
+  "product_id": "664452",
+  "claim_text": "1.299 Controlli di qualità ogni giorno",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Acqua effervescente naturale",
+   "brand": "Lete",
+   "denomination": "Acqua Minerale Effervescente Naturale",
+   "features": "Acqua Minerale",
+   "producer_info": "Il contenuto di calcio presente nell'acqua minerale naturale Lete partecipa all'integrazione del fabbisogno giornaliero di calcio per la salute delle ossa.\nFacilita la digestione\nÈ indicata per le diete iposodiche\nPuò avere effetti diuretici\nIn bottiglia come nasce alla fonte\n1.299 Controlli di qualità ogni giorno.\nMicrobiologicamente pura\nD.P.G.R. Campania n. 25742 del 30.12.1992",
+   "life_style": "Idoneo per una dieta a basso contenuto di sale/sodio",
+   "recycling_other": "Involucro - PE-LD 04 - Plastica\nRaccolta differenziata\nPer l'ambiente\nEtichetta - PP 05 - Raccolta plastica\nTappo - HDPE 02 - Raccolta plastica\nBottiglia - PET 01 - Raccolta plastica\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "104322#0",
+  "product_id": "104322",
+  "claim_text": "Traditional recipe",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Vermouth rosso",
+   "brand": "Vincenzi",
+   "description": "Vermouth rosso di Torino Camillo",
+   "features": "Wine based\nTraditional recipe\nClassic\nBottled in Italy\nProdotto in Italia\nLa storia narra che il vermouth nasca alla fine del 1700, unendo il vino piemontese ad un infusione di erbe e radici",
+   "producer_info": "La storia narra che il vermouth nasca alla fine del 1700, unendo il vino piemontese ad un infusione di erbe e radici. Il nostro Vermouth Camillo rispetta la tradizione poiché viene prodotto secondo un'antica ricetta a base di erbe, spezie e fine vino Cortese del Piemonte"
+  }
+ },
+ {
+  "uid": "104322#1",
+  "product_id": "104322",
+  "claim_text": "rispetta la tradizione poiché viene prodotto secondo un'antica ricetta",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Vermouth rosso",
+   "brand": "Vincenzi",
+   "description": "Vermouth rosso di Torino Camillo",
+   "features": "Wine based\nTraditional recipe\nClassic\nBottled in Italy\nProdotto in Italia\nLa storia narra che il vermouth nasca alla fine del 1700, unendo il vino piemontese ad un infusione di erbe e radici",
+   "producer_info": "La storia narra che il vermouth nasca alla fine del 1700, unendo il vino piemontese ad un infusione di erbe e radici. Il nostro Vermouth Camillo rispetta la tradizione poiché viene prodotto secondo un'antica ricetta a base di erbe, spezie e fine vino Cortese del Piemonte"
+  }
+ },
+ {
+  "uid": "38379#0",
+  "product_id": "38379",
+  "claim_text": "Energade reintegra e disseta",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Integratore salino arancia",
+   "brand": "Energade",
+   "denomination": "Bevanda analcolica con sali minerali",
+   "features": "Gusto arancia\nReintegratore dissetante\nIn acqua minerale",
+   "producer_info": "Energade gusto arancia senza glutine\nPer chi fa sport o è sempre in movimento Energade reintegra e disseta.",
+   "life_style": "Analcolico"
+  }
+ },
+ {
+  "uid": "594304#0",
+  "product_id": "594304",
+  "claim_text": "Condisce, conserva e pulisce* ... Come da tradizione efficace anche nelle pulizie di casa",
+  "v1_category": "unsubstantiated_health_or_efficacy_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Aceto bianco di alcol",
+   "brand": "Casaceto",
+   "features": "Condisce, conserva e pulisce*\nFormato magnum\nAcidità 6%\nL'originale\n*Come da tradizione efficace anche nelle pulizie di casa",
+   "producer_info": "Casaceto è l'aceto bianco di alcol per uso alimentare 100% naturale, ottenuto dalla fermentazione degli zuccheri contenuti in frutta e cereali.\nBuono per condire, esalta i sapori\nAdatto per conservare, in maniera sana e genuina\n*Come da tradizione efficace anche nelle pulizie di casa\nL'aceto di alcol n.1 in Italia**\nCasaceto è leader nel segmento di riferimento, grazie alla sua funzione polivalente.\n** Fonte: Dati Nielsen at 06/20 - Aceto di alcol",
+   "recycling_other": "Casaceto per l'ambiente\nTappo - HDPE02 - Raccolta plastica*\nBottiglia - PET01 - Raccolta plastica*\nEtichetta - PAP22 - Raccolta carta*\nRaccolta differenziata\n*Verifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "594304#1",
+  "product_id": "594304",
+  "claim_text": "L'originale",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Aceto bianco di alcol",
+   "brand": "Casaceto",
+   "features": "Condisce, conserva e pulisce*\nFormato magnum\nAcidità 6%\nL'originale\n*Come da tradizione efficace anche nelle pulizie di casa",
+   "producer_info": "Casaceto è l'aceto bianco di alcol per uso alimentare 100% naturale, ottenuto dalla fermentazione degli zuccheri contenuti in frutta e cereali.\nBuono per condire, esalta i sapori\nAdatto per conservare, in maniera sana e genuina\n*Come da tradizione efficace anche nelle pulizie di casa\nL'aceto di alcol n.1 in Italia**\nCasaceto è leader nel segmento di riferimento, grazie alla sua funzione polivalente.\n** Fonte: Dati Nielsen at 06/20 - Aceto di alcol",
+   "recycling_other": "Casaceto per l'ambiente\nTappo - HDPE02 - Raccolta plastica*\nBottiglia - PET01 - Raccolta plastica*\nEtichetta - PAP22 - Raccolta carta*\nRaccolta differenziata\n*Verifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "594304#2",
+  "product_id": "594304",
+  "claim_text": "100% naturale",
+  "v1_category": "misleading_composition_or_ingredient_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Aceto bianco di alcol",
+   "brand": "Casaceto",
+   "features": "Condisce, conserva e pulisce*\nFormato magnum\nAcidità 6%\nL'originale\n*Come da tradizione efficace anche nelle pulizie di casa",
+   "producer_info": "Casaceto è l'aceto bianco di alcol per uso alimentare 100% naturale, ottenuto dalla fermentazione degli zuccheri contenuti in frutta e cereali.\nBuono per condire, esalta i sapori\nAdatto per conservare, in maniera sana e genuina\n*Come da tradizione efficace anche nelle pulizie di casa\nL'aceto di alcol n.1 in Italia**\nCasaceto è leader nel segmento di riferimento, grazie alla sua funzione polivalente.\n** Fonte: Dati Nielsen at 06/20 - Aceto di alcol",
+   "recycling_other": "Casaceto per l'ambiente\nTappo - HDPE02 - Raccolta plastica*\nBottiglia - PET01 - Raccolta plastica*\nEtichetta - PAP22 - Raccolta carta*\nRaccolta differenziata\n*Verifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "594304#3",
+  "product_id": "594304",
+  "claim_text": "L'aceto di alcol n.1 in Italia** ... Fonte: Dati Nielsen",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Aceto bianco di alcol",
+   "brand": "Casaceto",
+   "features": "Condisce, conserva e pulisce*\nFormato magnum\nAcidità 6%\nL'originale\n*Come da tradizione efficace anche nelle pulizie di casa",
+   "producer_info": "Casaceto è l'aceto bianco di alcol per uso alimentare 100% naturale, ottenuto dalla fermentazione degli zuccheri contenuti in frutta e cereali.\nBuono per condire, esalta i sapori\nAdatto per conservare, in maniera sana e genuina\n*Come da tradizione efficace anche nelle pulizie di casa\nL'aceto di alcol n.1 in Italia**\nCasaceto è leader nel segmento di riferimento, grazie alla sua funzione polivalente.\n** Fonte: Dati Nielsen at 06/20 - Aceto di alcol",
+   "recycling_other": "Casaceto per l'ambiente\nTappo - HDPE02 - Raccolta plastica*\nBottiglia - PET01 - Raccolta plastica*\nEtichetta - PAP22 - Raccolta carta*\nRaccolta differenziata\n*Verifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "594304#4",
+  "product_id": "594304",
+  "claim_text": "Casaceto è leader nel segmento di riferimento, grazie alla sua funzione polivalente",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Aceto bianco di alcol",
+   "brand": "Casaceto",
+   "features": "Condisce, conserva e pulisce*\nFormato magnum\nAcidità 6%\nL'originale\n*Come da tradizione efficace anche nelle pulizie di casa",
+   "producer_info": "Casaceto è l'aceto bianco di alcol per uso alimentare 100% naturale, ottenuto dalla fermentazione degli zuccheri contenuti in frutta e cereali.\nBuono per condire, esalta i sapori\nAdatto per conservare, in maniera sana e genuina\n*Come da tradizione efficace anche nelle pulizie di casa\nL'aceto di alcol n.1 in Italia**\nCasaceto è leader nel segmento di riferimento, grazie alla sua funzione polivalente.\n** Fonte: Dati Nielsen at 06/20 - Aceto di alcol",
+   "recycling_other": "Casaceto per l'ambiente\nTappo - HDPE02 - Raccolta plastica*\nBottiglia - PET01 - Raccolta plastica*\nEtichetta - PAP22 - Raccolta carta*\nRaccolta differenziata\n*Verifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "594304#5",
+  "product_id": "594304",
+  "claim_text": "Casaceto per l'ambiente",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Aceto bianco di alcol",
+   "brand": "Casaceto",
+   "features": "Condisce, conserva e pulisce*\nFormato magnum\nAcidità 6%\nL'originale\n*Come da tradizione efficace anche nelle pulizie di casa",
+   "producer_info": "Casaceto è l'aceto bianco di alcol per uso alimentare 100% naturale, ottenuto dalla fermentazione degli zuccheri contenuti in frutta e cereali.\nBuono per condire, esalta i sapori\nAdatto per conservare, in maniera sana e genuina\n*Come da tradizione efficace anche nelle pulizie di casa\nL'aceto di alcol n.1 in Italia**\nCasaceto è leader nel segmento di riferimento, grazie alla sua funzione polivalente.\n** Fonte: Dati Nielsen at 06/20 - Aceto di alcol",
+   "recycling_other": "Casaceto per l'ambiente\nTappo - HDPE02 - Raccolta plastica*\nBottiglia - PET01 - Raccolta plastica*\nEtichetta - PAP22 - Raccolta carta*\nRaccolta differenziata\n*Verifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "668466#0",
+  "product_id": "668466",
+  "claim_text": "N.1 in Italia* ... Dati di vendita Nielsen",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Brodo di verdure",
+   "brand": "Star",
+   "denomination": "Brodo di verdure",
+   "features": "N.1 in Italia*\nCome fatto in casa\n100% Naturale\n*Dati di vendita Nielsen - Categoria brodo liquido. Per saperne di più vai su www.star.it",
+   "producer_info": "Lo sai perché è come fatto in casa?\n100% Ingredienti naturali\n3h Cotto Lentamente come faresti tu\nSenza Conservanti perché si sterilizza a 150 gradi",
+   "recycling_other": "Brik - C/PAP 84 - Raccolta carta\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "668466#1",
+  "product_id": "668466",
+  "claim_text": "Come fatto in casa",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Brodo di verdure",
+   "brand": "Star",
+   "denomination": "Brodo di verdure",
+   "features": "N.1 in Italia*\nCome fatto in casa\n100% Naturale\n*Dati di vendita Nielsen - Categoria brodo liquido. Per saperne di più vai su www.star.it",
+   "producer_info": "Lo sai perché è come fatto in casa?\n100% Ingredienti naturali\n3h Cotto Lentamente come faresti tu\nSenza Conservanti perché si sterilizza a 150 gradi",
+   "recycling_other": "Brik - C/PAP 84 - Raccolta carta\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "668466#2",
+  "product_id": "668466",
+  "claim_text": "100% Naturale / 100% Ingredienti naturali",
+  "v1_category": "misleading_composition_or_ingredient_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Brodo di verdure",
+   "brand": "Star",
+   "denomination": "Brodo di verdure",
+   "features": "N.1 in Italia*\nCome fatto in casa\n100% Naturale\n*Dati di vendita Nielsen - Categoria brodo liquido. Per saperne di più vai su www.star.it",
+   "producer_info": "Lo sai perché è come fatto in casa?\n100% Ingredienti naturali\n3h Cotto Lentamente come faresti tu\nSenza Conservanti perché si sterilizza a 150 gradi",
+   "recycling_other": "Brik - C/PAP 84 - Raccolta carta\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "668466#3",
+  "product_id": "668466",
+  "claim_text": "3h Cotto Lentamente come faresti tu",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Brodo di verdure",
+   "brand": "Star",
+   "denomination": "Brodo di verdure",
+   "features": "N.1 in Italia*\nCome fatto in casa\n100% Naturale\n*Dati di vendita Nielsen - Categoria brodo liquido. Per saperne di più vai su www.star.it",
+   "producer_info": "Lo sai perché è come fatto in casa?\n100% Ingredienti naturali\n3h Cotto Lentamente come faresti tu\nSenza Conservanti perché si sterilizza a 150 gradi",
+   "recycling_other": "Brik - C/PAP 84 - Raccolta carta\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "564356#0",
+  "product_id": "564356",
+  "claim_text": "Da filera tracciata e sostenibile",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio di semi di girasole 100% italiano",
+   "brand": "Zucchi",
+   "denomination": "Olio di semi di girasole 100% italiano",
+   "features": "Da filera tracciata e sostenibile\nFonte naturale di vitamina E\nConsigliato da Legambiente",
+   "producer_info": "Questo prodotto 100% italiano rispetta le linee guida sulla produzione vegetale relative alle materie prime e alla sicurezza alimentare proposte da Legambiente.\nOleificio Zucchi ha deciso di aderirvi volontariamente per valorizzare la filiera e rispettare gli impegni aziendali in termini di qualità, sostenibilità e tracciabilità.\nUtilizza il qr code o digita www.zucchi.com/tracciabilita, inserisci il numero di lotto che trovi sulla bottiglia per scoprire la provenienza dell'olio. Sustainable product DTP112 certified, Cert. CSQA n. 57027\nOlio di semi di girasole 100% italiano\nFonte naturale di vitamina E. Indicato per salse e maionesi e per condire a crudo.\n50% R-PET\nZucchi per l'ambiente\nPer questo prodotto Zucchi utilizza il 50% di plastica riciclata\nScopri di più su www.zucchi.com\nAlimento Italia\nAzienda con sistema di gestione per la qualità UNI EN ISO 9001:2015 cert. CSQA nº 2; di gestione ambientale UNI EN ISO 14001:2015 cert. CSQA nº 426; di gestione della sicurezza e salute nei luoghi di lavoro UNI EN ISO 45001:2023 - cert. CSQA nº 30498; di rintracciabilità nelle filiere agroalimentari UNI EN ISO 22005:2008, cert. CSQA nº 41524.",
+   "recycling_other": "Separa l'etichetta dalla bottiglia e smaltisci nella raccolta differenziata\nBottiglia - PET 1 - Plastica\nTappo - HDPE 2 - Plastica\nSigillo - LDPE 4 - Plastica\nEtichetta - PET 1 - Plastica\nRaccolta Differenziata\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "564356#1",
+  "product_id": "564356",
+  "claim_text": "Consigliato da Legambiente ... Sustainable product DTP112 certified, Cert. CSQA n. 57027",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio di semi di girasole 100% italiano",
+   "brand": "Zucchi",
+   "denomination": "Olio di semi di girasole 100% italiano",
+   "features": "Da filera tracciata e sostenibile\nFonte naturale di vitamina E\nConsigliato da Legambiente",
+   "producer_info": "Questo prodotto 100% italiano rispetta le linee guida sulla produzione vegetale relative alle materie prime e alla sicurezza alimentare proposte da Legambiente.\nOleificio Zucchi ha deciso di aderirvi volontariamente per valorizzare la filiera e rispettare gli impegni aziendali in termini di qualità, sostenibilità e tracciabilità.\nUtilizza il qr code o digita www.zucchi.com/tracciabilita, inserisci il numero di lotto che trovi sulla bottiglia per scoprire la provenienza dell'olio. Sustainable product DTP112 certified, Cert. CSQA n. 57027\nOlio di semi di girasole 100% italiano\nFonte naturale di vitamina E. Indicato per salse e maionesi e per condire a crudo.\n50% R-PET\nZucchi per l'ambiente\nPer questo prodotto Zucchi utilizza il 50% di plastica riciclata\nScopri di più su www.zucchi.com\nAlimento Italia\nAzienda con sistema di gestione per la qualità UNI EN ISO 9001:2015 cert. CSQA nº 2; di gestione ambientale UNI EN ISO 14001:2015 cert. CSQA nº 426; di gestione della sicurezza e salute nei luoghi di lavoro UNI EN ISO 45001:2023 - cert. CSQA nº 30498; di rintracciabilità nelle filiere agroalimentari UNI EN ISO 22005:2008, cert. CSQA nº 41524.",
+   "recycling_other": "Separa l'etichetta dalla bottiglia e smaltisci nella raccolta differenziata\nBottiglia - PET 1 - Plastica\nTappo - HDPE 2 - Plastica\nSigillo - LDPE 4 - Plastica\nEtichetta - PET 1 - Plastica\nRaccolta Differenziata\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "564356#2",
+  "product_id": "564356",
+  "claim_text": "Zucchi per l'ambiente ... utilizza il 50% di plastica riciclata",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio di semi di girasole 100% italiano",
+   "brand": "Zucchi",
+   "denomination": "Olio di semi di girasole 100% italiano",
+   "features": "Da filera tracciata e sostenibile\nFonte naturale di vitamina E\nConsigliato da Legambiente",
+   "producer_info": "Questo prodotto 100% italiano rispetta le linee guida sulla produzione vegetale relative alle materie prime e alla sicurezza alimentare proposte da Legambiente.\nOleificio Zucchi ha deciso di aderirvi volontariamente per valorizzare la filiera e rispettare gli impegni aziendali in termini di qualità, sostenibilità e tracciabilità.\nUtilizza il qr code o digita www.zucchi.com/tracciabilita, inserisci il numero di lotto che trovi sulla bottiglia per scoprire la provenienza dell'olio. Sustainable product DTP112 certified, Cert. CSQA n. 57027\nOlio di semi di girasole 100% italiano\nFonte naturale di vitamina E. Indicato per salse e maionesi e per condire a crudo.\n50% R-PET\nZucchi per l'ambiente\nPer questo prodotto Zucchi utilizza il 50% di plastica riciclata\nScopri di più su www.zucchi.com\nAlimento Italia\nAzienda con sistema di gestione per la qualità UNI EN ISO 9001:2015 cert. CSQA nº 2; di gestione ambientale UNI EN ISO 14001:2015 cert. CSQA nº 426; di gestione della sicurezza e salute nei luoghi di lavoro UNI EN ISO 45001:2023 - cert. CSQA nº 30498; di rintracciabilità nelle filiere agroalimentari UNI EN ISO 22005:2008, cert. CSQA nº 41524.",
+   "recycling_other": "Separa l'etichetta dalla bottiglia e smaltisci nella raccolta differenziata\nBottiglia - PET 1 - Plastica\nTappo - HDPE 2 - Plastica\nSigillo - LDPE 4 - Plastica\nEtichetta - PET 1 - Plastica\nRaccolta Differenziata\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "608812#0",
+  "product_id": "608812",
+  "claim_text": "La marca preferita dagli chef italiani* ... Indagine Nielsen ... campione rappresentativo di 600 ... +/- 4 pp al 95%",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio di semi di mais",
+   "brand": "Olitalia",
+   "denomination": "Olio di Semi di Mais",
+   "features": "La marca preferita dagli chef italiani*\nViva la Natura!\nPer un futuro migliore\nBottiglia in plastica 100% riciclata** e riciclabile\nFonte di vitamina E\nTestato e consigliato da APCI - Associazione Professionale Cuochi Italiani\n*Indagine Nielsen condotta tra marzo e settembre 2020. Dati a Totale Olitalia calcolati su un campione rappresentativo di 600 tra Ristoranti, Pizzerie e Hotel con cucina,+/- 4 pp al 95%\n**Da filiera alimentare controllata italiana\n**Escluso tappo ed etichetta",
+   "producer_info": "Olitalia è sinonimo di eccellenza e specializzazione. Grazie alla collaborazione tra esperti assaggiatori e chef, inventa nuovi modi di valorizzare l'olio a tavola come in cucina.\nProfilo\nL'olio di semi di mais è ottenuto per spremitura ed estrazione dal germe di semi di mais e successiva raffinazione. É fonte naturale di vitamina E, che contribuisce alla protezione delle cellule dallo stress ossidativo. Ricorda l'importanza di uno stile di vita attivo e di una dieta varia ed equilibrata.\nCollaborazioni\nTestato e consigliato dall'Associazione Professionale Cuochi Italiani, che riunisce migliaia di chef e ristoratori professionisti, come prodotto dalla qualità professionale.\nUtilizzo\nA crudo e per tutti gli usi di cucina che non richiedono alte temperature di cottura. Ideale per condire pesce e carni bianche bollite o alla griglia, legumi, insalate e contorni.",
+   "recycling_other": "Aderisci anche tu!\nConsulta il sito www.coripet.it o clicca sul QR Code a fianco per trovare il punto di riciclo più vicino a te, le modalità di conferimento e scoprire i tanti vantaggi dell'iniziativa. Diversamente, mettila nella raccolta differenziata della plastica\nBottiglia - PET 1 - Plastica\nSigillo - LDPE 4 - Plastica\nTappo - HDPE 2 - Plastica\nRaccolta differenziata\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "608812#1",
+  "product_id": "608812",
+  "claim_text": "Viva la Natura! / Per un futuro migliore",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio di semi di mais",
+   "brand": "Olitalia",
+   "denomination": "Olio di Semi di Mais",
+   "features": "La marca preferita dagli chef italiani*\nViva la Natura!\nPer un futuro migliore\nBottiglia in plastica 100% riciclata** e riciclabile\nFonte di vitamina E\nTestato e consigliato da APCI - Associazione Professionale Cuochi Italiani\n*Indagine Nielsen condotta tra marzo e settembre 2020. Dati a Totale Olitalia calcolati su un campione rappresentativo di 600 tra Ristoranti, Pizzerie e Hotel con cucina,+/- 4 pp al 95%\n**Da filiera alimentare controllata italiana\n**Escluso tappo ed etichetta",
+   "producer_info": "Olitalia è sinonimo di eccellenza e specializzazione. Grazie alla collaborazione tra esperti assaggiatori e chef, inventa nuovi modi di valorizzare l'olio a tavola come in cucina.\nProfilo\nL'olio di semi di mais è ottenuto per spremitura ed estrazione dal germe di semi di mais e successiva raffinazione. É fonte naturale di vitamina E, che contribuisce alla protezione delle cellule dallo stress ossidativo. Ricorda l'importanza di uno stile di vita attivo e di una dieta varia ed equilibrata.\nCollaborazioni\nTestato e consigliato dall'Associazione Professionale Cuochi Italiani, che riunisce migliaia di chef e ristoratori professionisti, come prodotto dalla qualità professionale.\nUtilizzo\nA crudo e per tutti gli usi di cucina che non richiedono alte temperature di cottura. Ideale per condire pesce e carni bianche bollite o alla griglia, legumi, insalate e contorni.",
+   "recycling_other": "Aderisci anche tu!\nConsulta il sito www.coripet.it o clicca sul QR Code a fianco per trovare il punto di riciclo più vicino a te, le modalità di conferimento e scoprire i tanti vantaggi dell'iniziativa. Diversamente, mettila nella raccolta differenziata della plastica\nBottiglia - PET 1 - Plastica\nSigillo - LDPE 4 - Plastica\nTappo - HDPE 2 - Plastica\nRaccolta differenziata\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "608812#2",
+  "product_id": "608812",
+  "claim_text": "Testato e consigliato dall'Associazione Professionale Cuochi Italiani, che riunisce migliaia di chef e ristoratori professionisti",
+  "v1_category": "misleading_endorsement_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "annex_i_blacklist_candidate"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio di semi di mais",
+   "brand": "Olitalia",
+   "denomination": "Olio di Semi di Mais",
+   "features": "La marca preferita dagli chef italiani*\nViva la Natura!\nPer un futuro migliore\nBottiglia in plastica 100% riciclata** e riciclabile\nFonte di vitamina E\nTestato e consigliato da APCI - Associazione Professionale Cuochi Italiani\n*Indagine Nielsen condotta tra marzo e settembre 2020. Dati a Totale Olitalia calcolati su un campione rappresentativo di 600 tra Ristoranti, Pizzerie e Hotel con cucina,+/- 4 pp al 95%\n**Da filiera alimentare controllata italiana\n**Escluso tappo ed etichetta",
+   "producer_info": "Olitalia è sinonimo di eccellenza e specializzazione. Grazie alla collaborazione tra esperti assaggiatori e chef, inventa nuovi modi di valorizzare l'olio a tavola come in cucina.\nProfilo\nL'olio di semi di mais è ottenuto per spremitura ed estrazione dal germe di semi di mais e successiva raffinazione. É fonte naturale di vitamina E, che contribuisce alla protezione delle cellule dallo stress ossidativo. Ricorda l'importanza di uno stile di vita attivo e di una dieta varia ed equilibrata.\nCollaborazioni\nTestato e consigliato dall'Associazione Professionale Cuochi Italiani, che riunisce migliaia di chef e ristoratori professionisti, come prodotto dalla qualità professionale.\nUtilizzo\nA crudo e per tutti gli usi di cucina che non richiedono alte temperature di cottura. Ideale per condire pesce e carni bianche bollite o alla griglia, legumi, insalate e contorni.",
+   "recycling_other": "Aderisci anche tu!\nConsulta il sito www.coripet.it o clicca sul QR Code a fianco per trovare il punto di riciclo più vicino a te, le modalità di conferimento e scoprire i tanti vantaggi dell'iniziativa. Diversamente, mettila nella raccolta differenziata della plastica\nBottiglia - PET 1 - Plastica\nSigillo - LDPE 4 - Plastica\nTappo - HDPE 2 - Plastica\nRaccolta differenziata\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "608812#3",
+  "product_id": "608812",
+  "claim_text": "Bottiglia in plastica 100% riciclata** ... Da filiera alimentare controllata italiana",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio di semi di mais",
+   "brand": "Olitalia",
+   "denomination": "Olio di Semi di Mais",
+   "features": "La marca preferita dagli chef italiani*\nViva la Natura!\nPer un futuro migliore\nBottiglia in plastica 100% riciclata** e riciclabile\nFonte di vitamina E\nTestato e consigliato da APCI - Associazione Professionale Cuochi Italiani\n*Indagine Nielsen condotta tra marzo e settembre 2020. Dati a Totale Olitalia calcolati su un campione rappresentativo di 600 tra Ristoranti, Pizzerie e Hotel con cucina,+/- 4 pp al 95%\n**Da filiera alimentare controllata italiana\n**Escluso tappo ed etichetta",
+   "producer_info": "Olitalia è sinonimo di eccellenza e specializzazione. Grazie alla collaborazione tra esperti assaggiatori e chef, inventa nuovi modi di valorizzare l'olio a tavola come in cucina.\nProfilo\nL'olio di semi di mais è ottenuto per spremitura ed estrazione dal germe di semi di mais e successiva raffinazione. É fonte naturale di vitamina E, che contribuisce alla protezione delle cellule dallo stress ossidativo. Ricorda l'importanza di uno stile di vita attivo e di una dieta varia ed equilibrata.\nCollaborazioni\nTestato e consigliato dall'Associazione Professionale Cuochi Italiani, che riunisce migliaia di chef e ristoratori professionisti, come prodotto dalla qualità professionale.\nUtilizzo\nA crudo e per tutti gli usi di cucina che non richiedono alte temperature di cottura. Ideale per condire pesce e carni bianche bollite o alla griglia, legumi, insalate e contorni.",
+   "recycling_other": "Aderisci anche tu!\nConsulta il sito www.coripet.it o clicca sul QR Code a fianco per trovare il punto di riciclo più vicino a te, le modalità di conferimento e scoprire i tanti vantaggi dell'iniziativa. Diversamente, mettila nella raccolta differenziata della plastica\nBottiglia - PET 1 - Plastica\nSigillo - LDPE 4 - Plastica\nTappo - HDPE 2 - Plastica\nRaccolta differenziata\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "40954#0",
+  "product_id": "40954",
+  "claim_text": "VIVI VERDE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Fagioli borlotti",
+   "brand": "Coop",
+   "denomination": "Fagioli borlotti biologici",
+   "features": "- Lavorati dal fresco\n- Alto contenuto di fibre e di proteine",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Coop per l'ambiente\nCos'è - Etichetta - Carta - PAP 21 | Dove va - Raccolta carta\nCos'è - Lattina - Acciaio - FE 40 | Dove va - Raccolta diff."
+  }
+ },
+ {
+  "uid": "40954#1",
+  "product_id": "40954",
+  "claim_text": "Coop per l'ambiente",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Fagioli borlotti",
+   "brand": "Coop",
+   "denomination": "Fagioli borlotti biologici",
+   "features": "- Lavorati dal fresco\n- Alto contenuto di fibre e di proteine",
+   "certifications": [
+    "BIOLOGICO",
+    "VIVI VERDE"
+   ],
+   "life_style": "Biologico",
+   "recycling_other": "Coop per l'ambiente\nCos'è - Etichetta - Carta - PAP 21 | Dove va - Raccolta carta\nCos'è - Lattina - Acciaio - FE 40 | Dove va - Raccolta diff."
+  }
+ },
+ {
+  "uid": "56232#0",
+  "product_id": "56232",
+  "claim_text": "considerato tra i fagioli più pregiati",
+  "v1_category": "misleading_superiority_or_absolute_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Fagioli corona giganti lessati",
+   "brand": "Montello",
+   "denomination": "Fagioli Corona Giganti Lessati al Naturale",
+   "producer_info": "\"Fagioli Corona Giganti\"\nIl \"Fagiolo Corona Gigante\" è un legume di grandi dimensioni ed è considerato tra i fagioli più pregiati. È il fratello nobile del Bianco di Spagna e pare che il suo nome gli fosse stato attribuito perché ambito e presente sulla tavola dei Re. Ottimo in accompagnamento col maiale, tradizionalmente usato con sughi in umido, trova un grande utilizzo anche nella preparazione di insalate.\nScopri le ricette su: www.damico.it",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani"
+  }
+ },
+ {
+  "uid": "56232#1",
+  "product_id": "56232",
+  "claim_text": "pare che il suo nome gli fosse stato attribuito perché ambito e presente sulla tavola dei Re",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Fagioli corona giganti lessati",
+   "brand": "Montello",
+   "denomination": "Fagioli Corona Giganti Lessati al Naturale",
+   "producer_info": "\"Fagioli Corona Giganti\"\nIl \"Fagiolo Corona Gigante\" è un legume di grandi dimensioni ed è considerato tra i fagioli più pregiati. È il fratello nobile del Bianco di Spagna e pare che il suo nome gli fosse stato attribuito perché ambito e presente sulla tavola dei Re. Ottimo in accompagnamento col maiale, tradizionalmente usato con sughi in umido, trova un grande utilizzo anche nella preparazione di insalate.\nScopri le ricette su: www.damico.it",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani"
+  }
+ },
+ {
+  "uid": "58758#0",
+  "product_id": "58758",
+  "claim_text": "Ricco di proteine**",
+  "v1_category": "nutrition_content_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "compliance_unverified_from_text"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Tonno al naturale",
+   "brand": "Rio Mare",
+   "denomination": "Tonno al naturale",
+   "features": "Qualità tonno pinne gialle\n8 Lattine da 80 g - Gran risparmio\nRicco di proteine**\n**Il prodotto è ricco di proteine come tutte le conserve di tonno al naturale",
+   "producer_info": "Rio Mare Naturale, gusto autentico e qualità pregiata: un tonno dal sapore inconfondibile, dal colore rosa, compatto all'apertura e così tenero che si taglia con un grissino. È preparato usando solo acqua, un pizzico di sale e aromi naturali. Solo tonno di qualità pinne gialle, selezionato con cura per darti sempre il meglio.\nRicco di: proteine, niacina, selenio\nFonte di: vitamina B12, fosforo.",
+   "recycling_other": "Dove lo butto?\nLattina - FE 40 - Raccolta acciaio\nAstuccio - PAP 21 - Raccolta carta\nVerifica le disposizioni del tuo comune"
+  }
+ },
+ {
+  "uid": "718993#0",
+  "product_id": "718993",
+  "claim_text": "tecniche di produzione integrata a tutela della salute e dell'ambiente (pesticidi -70% della soglia consentita)",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "specific_quantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Polpa finissima",
+   "brand": "La Fiammante",
+   "denomination": "Polpa di pomodoro finissima",
+   "features": "100% Italiano - Solo pomodoro fresco - Da filiera corta",
+   "producer_info": "Pomodori in pezzi\nMettiamo in conserva solo pomodoro fresco, difeso dai parassiti con tecniche di produzione integrata a tutela della salute e dell'ambiente (pesticidi -70% della soglia consentita). Stringiamo accordi diretti con gli agricoltori (filiera corta) e riconosciamo loro il giusto compenso contro ogni sfruttamento della manodopera.",
+   "life_style": "Kosher",
+   "recycling_other": "Raccolta differenziata\nVerifica le modalità di smaltimento del tuo Comune\nPAP 22 - Etichetta - Carta\nFE 40 - Barattolo - Metallo"
+  }
+ },
+ {
+  "uid": "718993#1",
+  "product_id": "718993",
+  "claim_text": "riconosciamo loro il giusto compenso contro ogni sfruttamento della manodopera",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [
+   "vague_or_unquantified"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Polpa finissima",
+   "brand": "La Fiammante",
+   "denomination": "Polpa di pomodoro finissima",
+   "features": "100% Italiano - Solo pomodoro fresco - Da filiera corta",
+   "producer_info": "Pomodori in pezzi\nMettiamo in conserva solo pomodoro fresco, difeso dai parassiti con tecniche di produzione integrata a tutela della salute e dell'ambiente (pesticidi -70% della soglia consentita). Stringiamo accordi diretti con gli agricoltori (filiera corta) e riconosciamo loro il giusto compenso contro ogni sfruttamento della manodopera.",
+   "life_style": "Kosher",
+   "recycling_other": "Raccolta differenziata\nVerifica le modalità di smaltimento del tuo Comune\nPAP 22 - Etichetta - Carta\nFE 40 - Barattolo - Metallo"
+  }
+ },
+ {
+  "uid": "718993#2",
+  "product_id": "718993",
+  "claim_text": "Da filiera corta",
+  "v1_category": "environmental_unsubstantiated",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Polpa finissima",
+   "brand": "La Fiammante",
+   "denomination": "Polpa di pomodoro finissima",
+   "features": "100% Italiano - Solo pomodoro fresco - Da filiera corta",
+   "producer_info": "Pomodori in pezzi\nMettiamo in conserva solo pomodoro fresco, difeso dai parassiti con tecniche di produzione integrata a tutela della salute e dell'ambiente (pesticidi -70% della soglia consentita). Stringiamo accordi diretti con gli agricoltori (filiera corta) e riconosciamo loro il giusto compenso contro ogni sfruttamento della manodopera.",
+   "life_style": "Kosher",
+   "recycling_other": "Raccolta differenziata\nVerifica le modalità di smaltimento del tuo Comune\nPAP 22 - Etichetta - Carta\nFE 40 - Barattolo - Metallo"
+  }
+ },
+ {
+  "uid": "38202#0",
+  "product_id": "38202",
+  "claim_text": "secondo la tradizionale ricetta",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Funghi trifolati in olio girasole",
+   "brand": "Coop",
+   "denomination": "Funghi coltivati conditi in olio di semi di girasole",
+   "producer_info": "Un saporito contorno preparato con funghi tagliati a fettine e trifolati secondo la tradizionale ricetta, ottimo da consumare così com'è oppure scaldato in padella.",
+   "certifications": [
+    "COOP"
+   ],
+   "recycling_other": "Etichetta Ambientale\nVaso - Vetro - GL 70 - Raccolta vetro\nCapsula - Acciaio - C/FE91 - Raccolta acciaio\nVerifica le disposizioni del tuo Comune"
+  }
+ },
+ {
+  "uid": "639927#0",
+  "product_id": "639927",
+  "claim_text": "Antica tradizione",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Alici filetti",
+   "brand": "Zarotti",
+   "denomination": "Filetti di alici distesi in olio di semi di girasole",
+   "features": "In olio di semi di Girasole\nAntica tradizione\nLavorazione artigianale",
+   "recycling_other": "Vedi differenziata del tuo comune\nVaso - Vetro - GL70\nCapsula - Acciaio - FE 40"
+  }
+ },
+ {
+  "uid": "639927#1",
+  "product_id": "639927",
+  "claim_text": "Lavorazione artigianale",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Alici filetti",
+   "brand": "Zarotti",
+   "denomination": "Filetti di alici distesi in olio di semi di girasole",
+   "features": "In olio di semi di Girasole\nAntica tradizione\nLavorazione artigianale",
+   "recycling_other": "Vedi differenziata del tuo comune\nVaso - Vetro - GL70\nCapsula - Acciaio - FE 40"
+  }
+ },
+ {
+  "uid": "38130#0",
+  "product_id": "38130",
+  "claim_text": "La coltivazione dei fagioli \"Phaseolus vulgaris\" ebbe inizio in America ... introdotto in Veneto intorno al 1550 dal frate bellunese Pietro Valeriano",
+  "v1_category": "irrelevant_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": "trivial_non_actionable",
+  "v1_positive": false,
+  "product_context": {
+   "name": "Fagioli borlotti lamon lessati",
+   "brand": "Montello",
+   "denomination": "Fagioli Borlotti Lamon Lessati",
+   "features": "100% Italiani\nAnche per Vegani",
+   "producer_info": "\"Fagioli Borlotti Lamon\"\nLa coltivazione dei fagioli \"Phaseolus vulgaris\" ebbe inizio in America dal Perù alla California, fu introdotto in Veneto intorno al 1550 dal frate bellunese Pietro Valeriano, funzionario di Papa Clemente VII, che da lui ebbe in dono dei fagioli provenienti dalla corte di Spagna. All'inizio del 900 il \"Borlotto del Feltrino\", meglio conosciuto con il nome di Lamon, fu introdotto in provincia di Cuneo e già negli anni 60 il Lamon veniva coltivato in maniera estensiva, ricoprendo un ruolo di primaria importanza. Montello propone i Borlotti Lamon nella versione lessata al naturale e alla cacciatora come piatto pronto, solo da scaldare.",
+   "certifications": [
+    "VEGANO"
+   ],
+   "life_style": "Idoneo ai vegani",
+   "recycling_other": "Metallo - si ricicla all'infinito"
+  }
+ },
+ {
+  "uid": "65971#0",
+  "product_id": "65971",
+  "claim_text": "selezionato dalla famiglia Santagata assaggiatori di olio dal 1907",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [
+   "two_part_verification_required"
+  ],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Olio extravergine d'oliva",
+   "brand": "SANTAGATA",
+   "description": "Olio extra vergine di oliva classico",
+   "features": "profumo: tipico\ncolore: verde chiaro - giallo scuro\nconsistenza: fluida sopra i 12°C\ngusto: aroma erbaceo e delicato",
+   "producer_info": "SANTAGATA 1907 SPA\nOlio di oliva di categoria superiore ottenuto direttamente dalle olive e unicamente mediante procedimenti meccanici.\nL'Olio Extra Vergine di Oliva si ottiene dal frutto, accuratamente selezionato, dal secolare albero dell'ulivo.\nL'Olio Extra Vergine di Oliva contenuto in questa bottiglia è stato selezionato dalla famiglia Santagata assaggiatori di olio dal 1907.",
+   "certifications": [
+    "Prodotto Ligure"
+   ]
+  }
+ },
+ {
+  "uid": "41690#0",
+  "product_id": "41690",
+  "claim_text": "accomodate a mano",
+  "v1_category": "misleading_authenticity_or_origin_claim",
+  "v1_risk": "LOW",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pomodori secchi con pecorino sardo DOP",
+   "brand": "Coop",
+   "producer_info": "Tutto il caldo sole della Sardegna in queste gustose fette di pomodoro essicato farcite con una squisita crema di Pecorino Sardo DOP, mandorle e peperoncino, vengono arrotolate ed accomodate a mano per offrirvi un antipasto sfizioso e prelibato.",
+   "certifications": [
+    "DOP",
+    "FIOR FIORE"
+   ]
+  }
+ },
+ {
+  "uid": "41690#1",
+  "product_id": "41690",
+  "claim_text": "FIOR FIORE",
+  "v1_category": "fake_or_unverified_label",
+  "v1_risk": "MEDIUM",
+  "v1_modifiers": [],
+  "v1_irrelevant_subreason": null,
+  "v1_positive": true,
+  "product_context": {
+   "name": "Pomodori secchi con pecorino sardo DOP",
+   "brand": "Coop",
+   "producer_info": "Tutto il caldo sole della Sardegna in queste gustose fette di pomodoro essicato farcite con una squisita crema di Pecorino Sardo DOP, mandorle e peperoncino, vengono arrotolate ed accomodate a mano per offrirvi un antipasto sfizioso e prelibato.",
+   "certifications": [
+    "DOP",
+    "FIOR FIORE"
+   ]
+  }
+ }
+]
