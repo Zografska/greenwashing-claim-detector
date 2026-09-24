@@ -1,0 +1,481 @@
+model,id,polarity,category,margin,polarity_ok,nn_id,nn_text,category_ok
+charngram,P-brand_eco_slogan-01,pos,brand_eco_slogan,0.4214,True,P-brand_eco_slogan-02,Coop per l'ambiente,True
+charngram,P-brand_eco_slogan-02,pos,brand_eco_slogan,0.5088,True,P-brand_eco_slogan-03,Fiorentini per l'ambiente,True
+charngram,P-brand_eco_slogan-03,pos,brand_eco_slogan,0.4966,True,P-brand_eco_slogan-02,Coop per l'ambiente,True
+charngram,P-brand_eco_slogan-04,pos,brand_eco_slogan,-0.0026,False,N-performance-07,limita la formazione di cattivi odori,False
+charngram,P-brand_eco_slogan-05,pos,brand_eco_slogan,0.2733,True,P-generic_green-06,Flacone green 100%,False
+charngram,P-brand_eco_slogan-06,pos,brand_eco_slogan,0.1345,True,P-brand_eco_slogan-07,Il gusto di amare il pianeta,True
+charngram,P-brand_eco_slogan-07,pos,brand_eco_slogan,0.1132,True,P-generic_green-04,Fai la differenziata per il pianeta,False
+charngram,P-brand_eco_slogan-08,pos,brand_eco_slogan,-0.0362,False,N-natural_flavour-01,Aroma naturale,False
+charngram,P-brand_eco_slogan-09,pos,brand_eco_slogan,0.2405,True,P-generic_green-06,Flacone green 100%,False
+charngram,P-generic_green-01,pos,generic_green,0.2448,True,P-brand_eco_slogan-02,Coop per l'ambiente,False
+charngram,P-generic_green-02,pos,generic_green,0.0939,True,P-brand_eco_slogan-09,Progetto sostenibilità / Il Nostro Flacone Green,False
+charngram,P-generic_green-03,pos,generic_green,0.1186,True,P-vague_supply_chain-03,Agricoltura sostenibile,False
+charngram,P-generic_green-04,pos,generic_green,0.2677,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,True
+charngram,P-generic_green-05,pos,generic_green,0.2454,True,P-generic_green-04,Fai la differenziata per il pianeta,True
+charngram,P-generic_green-06,pos,generic_green,0.2115,True,P-brand_eco_slogan-09,Progetto sostenibilità / Il Nostro Flacone Green,False
+charngram,P-generic_green-07,pos,generic_green,0.3171,True,P-vague_supply_chain-03,Agricoltura sostenibile,False
+charngram,P-generic_green-08,pos,generic_green,0.2415,True,P-brand_eco_slogan-02,Coop per l'ambiente,False
+charngram,P-generic_green-09,pos,generic_green,0.3567,True,P-brand_eco_slogan-02,Coop per l'ambiente,False
+charngram,P-generic_green-10,pos,generic_green,0.1265,True,P-vague_comparison-02,75% In meno di plastica,False
+charngram,P-vague_comparison-01,pos,vague_comparison,0.2086,True,P-named_comparison-01,20% di plastica in meno rispetto al nostro flacone da 500 ml,False
+charngram,P-vague_comparison-02,pos,vague_comparison,0.3077,True,P-named_comparison-01,20% di plastica in meno rispetto al nostro flacone da 500 ml,False
+charngram,P-vague_comparison-03,pos,vague_comparison,0.1898,True,P-vague_supply_chain-03,Agricoltura sostenibile,False
+charngram,P-undefined_natural-01,pos,undefined_natural,-0.1915,False,N-natural_flavour-01,Aroma naturale,False
+charngram,P-undefined_natural-02,pos,undefined_natural,0.5849,True,P-undefined_natural-03,94% Ingredienti di origine naturale,True
+charngram,P-undefined_natural-03,pos,undefined_natural,0.6064,True,P-undefined_natural-02,Ingredienti di origine naturale,True
+charngram,P-undefined_natural-04,pos,undefined_natural,0.5251,True,P-undefined_natural-02,Ingredienti di origine naturale,True
+charngram,P-climate_neutral-01,pos,climate_neutral,0.2619,True,P-climate_neutral-03,Prodotto a impatto zero,True
+charngram,P-climate_neutral-02,pos,climate_neutral,0.1428,True,P-climate_neutral-04,Compensiamo le emissioni sostenendo progetti di riforestazione,True
+charngram,P-climate_neutral-03,pos,climate_neutral,0.1536,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,True
+charngram,P-climate_neutral-04,pos,climate_neutral,0.1891,True,P-climate_neutral-02,Emissioni zero / Questa confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione,True
+charngram,P-climate_neutral-05,pos,climate_neutral,0.3176,True,P-certification-02,Carta certificata FSC®,False
+charngram,P-vague_supply_chain-01,pos,vague_supply_chain,-0.047,False,N-health_nutrition-04,Alta digeribilità,False
+charngram,P-vague_supply_chain-02,pos,vague_supply_chain,0.1834,True,P-vague_supply_chain-03,Agricoltura sostenibile,True
+charngram,P-vague_supply_chain-03,pos,vague_supply_chain,0.3114,True,P-generic_green-07,brik-eco sostenibile,False
+charngram,P-certification-01,pos,certification,0.0461,True,P-brand_eco_slogan-08,Viva la Natura! / Per un futuro migliore,False
+charngram,P-certification-02,pos,certification,0.2909,True,P-climate_neutral-05,Neutralità climatica certificata,False
+charngram,P-certification-03,pos,certification,-0.0157,False,N-origin-02,Prodotto in Italia,False
+charngram,P-certification-04,pos,certification,0.227,True,P-certification-02,Carta certificata FSC®,True
+charngram,P-certification-05,pos,certification,0.2307,True,P-certification-04,Certificato Ecolabel UE,True
+charngram,P-recycled_recyclable-01,pos,recycled_recyclable,0.2329,True,P-recycled_recyclable-03,Vaschetta realizzata con il 50% di PET riciclato,True
+charngram,P-recycled_recyclable-02,pos,recycled_recyclable,0.1769,True,P-recycled_recyclable-01,Etichetta in carta riciclata,True
+charngram,P-recycled_recyclable-03,pos,recycled_recyclable,0.2383,True,P-recycled_recyclable-01,Etichetta in carta riciclata,True
+charngram,P-recycled_recyclable-04,pos,recycled_recyclable,0.0432,True,P-generic_green-10,Eco pack 100% riciclabile - Con meno plastica,False
+charngram,P-biodegradable-01,pos,biodegradable,0.5464,True,P-biodegradable-02,Formula biodegradabile,True
+charngram,P-biodegradable-02,pos,biodegradable,0.5253,True,P-biodegradable-01,"Formula vegana & biodegradabile^ ... 99,9% formula biodegradabile",True
+charngram,P-biodegradable-03,pos,biodegradable,-0.0762,False,N-tradition_history-04,le inimitabili ricette di famiglia,False
+charngram,P-biodegradable-04,pos,biodegradable,0.324,True,P-biodegradable-02,Formula biodegradabile,True
+charngram,P-named_endorsement-01,pos,named_endorsement,0.1681,True,P-named_endorsement-02,Prodotto consigliato dall'Associazione Italiana Celiachia,True
+charngram,P-named_endorsement-02,pos,named_endorsement,-0.0341,False,N-origin-02,Prodotto in Italia,False
+charngram,P-named_endorsement-03,pos,named_endorsement,-0.035,False,N-functional_packaging-05,Confezione con apertura facilitata,False
+charngram,P-vegan-01,pos,vegan,0.2988,True,P-vegan-04,Senza ingredienti di origine animale,True
+charngram,P-vegan-02,pos,vegan,0.1011,True,P-vegan-03,Adatto a una dieta vegana,True
+charngram,P-vegan-03,pos,vegan,0.0362,True,P-vegan-02,VEGANO,True
+charngram,P-vegan-04,pos,vegan,0.3832,True,P-undefined_natural-02,Ingredienti di origine naturale,False
+charngram,P-vegan-05,pos,vegan,0.0556,True,P-undefined_natural-01,100% Naturale,False
+charngram,P-farming_practice-01,pos,farming_practice,-0.0727,False,N-quality_scheme-03,Specialità Tradizionale Garantita,False
+charngram,P-farming_practice-02,pos,farming_practice,0.0368,True,P-farming_practice-03,Maiali allevati senza uso di antibiotici,True
+charngram,P-farming_practice-03,pos,farming_practice,-0.0056,False,N-free_from_non_pollutant-04,Senza coloranti artificiali,False
+charngram,P-farming_practice-04,pos,farming_practice,0.0369,True,P-farming_practice-03,Maiali allevati senza uso di antibiotici,True
+charngram,P-farming_practice-05,pos,farming_practice,-0.0498,False,N-tests_tolerance-03,Raccomandato dai dermatologi,False
+charngram,P-defined_term-01,pos,defined_term,0.1317,True,P-undefined_natural-02,Ingredienti di origine naturale,False
+charngram,P-defined_term-02,pos,defined_term,0.5048,True,P-undefined_natural-02,Ingredienti di origine naturale,False
+charngram,P-defined_term-03,pos,defined_term,0.1298,True,P-defined_term-02,"Ingredienti di origine naturale* ... *il 95% degli ingredienti deriva da piante, minerali o acqua",True
+charngram,P-defined_term-04,pos,defined_term,0.0996,True,P-defined_term-01,96% Natural origin* ... water and naturally sourced ingredients with limited processing,True
+charngram,P-risk_reduction-01,pos,risk_reduction,0.3599,True,P-risk_reduction-02,Aiuta a ridurre il rischio di arrossamenti,True
+charngram,P-risk_reduction-02,pos,risk_reduction,0.4063,True,P-risk_reduction-01,aiutano a ridurre il rischio di irritazione della pelle,True
+charngram,P-risk_reduction-03,pos,risk_reduction,0.3771,True,P-risk_reduction-02,Aiuta a ridurre il rischio di arrossamenti,True
+charngram,P-named_comparison-01,pos,named_comparison,0.324,True,P-vague_comparison-02,75% In meno di plastica,False
+charngram,P-named_comparison-02,pos,named_comparison,0.1156,True,P-named_comparison-01,20% di plastica in meno rispetto al nostro flacone da 500 ml,True
+charngram,P-named_comparison-03,pos,named_comparison,0.2019,True,P-named_comparison-01,20% di plastica in meno rispetto al nostro flacone da 500 ml,True
+charngram,P-pollutant_free-01,pos,pollutant_free,0.0,False,P-pollutant_free-02,Senza fosfati,True
+charngram,P-pollutant_free-02,pos,pollutant_free,-0.0131,False,N-free_from_non_pollutant-02,Senza glutine,False
+charngram,P-pollutant_free-03,pos,pollutant_free,-0.0205,False,N-quality_scheme-02,Prosciutto di Parma DOP,False
+charngram,P-pollutant_free-04,pos,pollutant_free,0.0,False,P-pollutant_free-02,Senza fosfati,True
+charngram,N-health_nutrition-01,neg,health_nutrition,-0.2542,True,N-health_nutrition-02,Contiene curcuma che possiede proprietà antiossidanti,True
+charngram,N-health_nutrition-02,neg,health_nutrition,-0.2484,True,N-health_nutrition-01,Speziato e Antiossidante,True
+charngram,N-health_nutrition-03,neg,health_nutrition,-0.0523,True,N-tradition_history-04,le inimitabili ricette di famiglia,False
+charngram,N-health_nutrition-04,neg,health_nutrition,0.1276,False,P-generic_green-02,gestito con ecosostenibilità,False
+charngram,N-performance-01,neg,performance,-0.2703,True,N-performance-08,protegge i capelli dal crespo e da aggressioni esterne,True
+charngram,N-performance-02,neg,performance,-0.1392,True,N-performance-04,Progettato con setole dalla punta 4 volte più sottile per una pulizia delicata** ... rispetto a filamenti arrotondati standard,True
+charngram,N-performance-03,neg,performance,0.0006,False,P-brand_eco_slogan-07,Il gusto di amare il pianeta,False
+charngram,N-performance-04,neg,performance,-0.0261,True,N-performance-02,Pulizia profonda,True
+charngram,N-performance-05,neg,performance,0.0456,False,P-generic_green-07,brik-eco sostenibile,False
+charngram,N-performance-06,neg,performance,-0.0417,True,N-quality_scheme-04,Denominazione di Origine Protetta,False
+charngram,N-performance-07,neg,performance,-0.0871,True,N-quality_scheme-04,Denominazione di Origine Protetta,False
+charngram,N-performance-08,neg,performance,-0.2189,True,N-performance-01,Protegge dagli agenti esterni,True
+charngram,N-tests_tolerance-01,neg,tests_tolerance,0.0528,False,P-brand_eco_slogan-03,Fiorentini per l'ambiente,False
+charngram,N-tests_tolerance-02,neg,tests_tolerance,0.0354,False,P-certification-05,Cosmetico biologico certificato ICEA,False
+charngram,N-tests_tolerance-03,neg,tests_tolerance,0.0173,False,P-farming_practice-05,Raccolti a mano,False
+charngram,N-tests_tolerance-04,neg,tests_tolerance,0.1167,False,P-vegan-03,Adatto a una dieta vegana,False
+charngram,N-tradition_history-01,neg,tradition_history,-0.1067,True,N-quality_scheme-03,Specialità Tradizionale Garantita,False
+charngram,N-tradition_history-02,neg,tradition_history,-0.0186,True,N-quality_scheme-04,Denominazione di Origine Protetta,False
+charngram,N-tradition_history-03,neg,tradition_history,0.013,False,P-generic_green-03,garantisce una produzione sostenibile in armonia con la natura,False
+charngram,N-tradition_history-04,neg,tradition_history,-0.0697,True,N-sales_rank-03,Scelto da milioni di famiglie,False
+charngram,N-patents-01,neg,patents,-0.0883,True,N-quality_scheme-03,Specialità Tradizionale Garantita,False
+charngram,N-patents-02,neg,patents,0.2273,False,P-biodegradable-02,Formula biodegradabile,False
+charngram,N-patents-03,neg,patents,0.0041,False,P-risk_reduction-03,Riduce il rischio di carie,False
+charngram,N-origin-01,neg,origin,-0.0556,True,N-sales_rank-01,N°1 in Italia,False
+charngram,N-origin-02,neg,origin,-0.1483,True,N-sales_rank-01,N°1 in Italia,False
+charngram,N-origin-03,neg,origin,0.0582,False,P-farming_practice-04,Coltivato senza l'uso di pesticidi di sintesi,False
+charngram,N-quality_scheme-01,neg,quality_scheme,-0.0492,True,N-origin-01,100% Italiano,False
+charngram,N-quality_scheme-02,neg,quality_scheme,0.0306,False,P-pollutant_free-03,Privo di PFAS,False
+charngram,N-quality_scheme-03,neg,quality_scheme,-0.0662,True,N-tradition_history-01,il più tipico dei dolci tradizionali genovesi,False
+charngram,N-quality_scheme-04,neg,quality_scheme,0.0658,False,P-undefined_natural-02,Ingredienti di origine naturale,False
+charngram,N-free_from_non_pollutant-01,neg,free_from_non_pollutant,-0.0795,True,N-free_from_non_pollutant-04,Senza coloranti artificiali,True
+charngram,N-free_from_non_pollutant-02,neg,free_from_non_pollutant,0.0131,False,P-pollutant_free-02,Senza fosfati,False
+charngram,N-free_from_non_pollutant-03,neg,free_from_non_pollutant,0.0,True,P-pollutant_free-02,Senza fosfati,False
+charngram,N-free_from_non_pollutant-04,neg,free_from_non_pollutant,-0.1327,True,N-free_from_non_pollutant-01,Senza conservanti,True
+charngram,N-free_from_non_pollutant-05,neg,free_from_non_pollutant,0.0002,False,P-pollutant_free-02,Senza fosfati,False
+charngram,N-sales_rank-01,neg,sales_rank,-0.3602,True,N-origin-02,Prodotto in Italia,False
+charngram,N-sales_rank-02,neg,sales_rank,0.0002,False,P-brand_eco_slogan-07,Il gusto di amare il pianeta,False
+charngram,N-sales_rank-03,neg,sales_rank,-0.1361,True,N-tradition_history-04,le inimitabili ricette di famiglia,False
+charngram,N-natural_flavour-01,neg,natural_flavour,0.022,False,P-undefined_natural-01,100% Naturale,False
+charngram,N-natural_flavour-02,neg,natural_flavour,0.022,False,P-undefined_natural-01,100% Naturale,False
+charngram,N-natural_flavour-03,neg,natural_flavour,-0.1208,True,N-natural_flavour-01,Aroma naturale,True
+charngram,N-functional_packaging-01,neg,functional_packaging,-0.1292,True,N-functional_packaging-05,Confezione con apertura facilitata,True
+charngram,N-functional_packaging-02,neg,functional_packaging,0.1519,False,P-generic_green-10,Eco pack 100% riciclabile - Con meno plastica,False
+charngram,N-functional_packaging-03,neg,functional_packaging,0.0235,False,P-recycled_recyclable-04,Tappo riciclabile insieme alla bottiglia,False
+charngram,N-functional_packaging-04,neg,functional_packaging,-0.006,True,N-tests_tolerance-03,Raccomandato dai dermatologi,False
+charngram,N-functional_packaging-05,neg,functional_packaging,-0.0488,True,N-functional_packaging-01,Confezione salvafreschezza,True
+intfloat/multilingual-e5-base,P-brand_eco_slogan-01,pos,brand_eco_slogan,0.0343,True,P-brand_eco_slogan-03,Fiorentini per l'ambiente,True
+intfloat/multilingual-e5-base,P-brand_eco_slogan-02,pos,brand_eco_slogan,0.0389,True,P-brand_eco_slogan-03,Fiorentini per l'ambiente,True
+intfloat/multilingual-e5-base,P-brand_eco_slogan-03,pos,brand_eco_slogan,0.0414,True,P-brand_eco_slogan-02,Coop per l'ambiente,True
+intfloat/multilingual-e5-base,P-brand_eco_slogan-04,pos,brand_eco_slogan,0.0069,True,P-brand_eco_slogan-05,Gallo green,True
+intfloat/multilingual-e5-base,P-brand_eco_slogan-05,pos,brand_eco_slogan,0.0376,True,P-generic_green-06,Flacone green 100%,False
+intfloat/multilingual-e5-base,P-brand_eco_slogan-06,pos,brand_eco_slogan,0.0649,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,False
+intfloat/multilingual-e5-base,P-brand_eco_slogan-07,pos,brand_eco_slogan,0.0159,True,P-generic_green-09,Ho a cuore l'ambiente,False
+intfloat/multilingual-e5-base,P-brand_eco_slogan-08,pos,brand_eco_slogan,0.0231,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,False
+intfloat/multilingual-e5-base,P-brand_eco_slogan-09,pos,brand_eco_slogan,0.0503,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,False
+intfloat/multilingual-e5-base,P-generic_green-01,pos,generic_green,0.0389,True,P-brand_eco_slogan-02,Coop per l'ambiente,False
+intfloat/multilingual-e5-base,P-generic_green-02,pos,generic_green,0.0161,True,P-brand_eco_slogan-02,Coop per l'ambiente,False
+intfloat/multilingual-e5-base,P-generic_green-03,pos,generic_green,0.0297,True,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,False
+intfloat/multilingual-e5-base,P-generic_green-04,pos,generic_green,0.0598,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,True
+intfloat/multilingual-e5-base,P-generic_green-05,pos,generic_green,0.0281,True,P-generic_green-04,Fai la differenziata per il pianeta,True
+intfloat/multilingual-e5-base,P-generic_green-06,pos,generic_green,0.0271,True,P-vegan-05,100% vegetale,False
+intfloat/multilingual-e5-base,P-generic_green-07,pos,generic_green,0.0502,True,P-generic_green-02,gestito con ecosostenibilità,True
+intfloat/multilingual-e5-base,P-generic_green-08,pos,generic_green,0.0311,True,P-risk_reduction-02,Aiuta a ridurre il rischio di arrossamenti,False
+intfloat/multilingual-e5-base,P-generic_green-09,pos,generic_green,0.0208,True,P-brand_eco_slogan-02,Coop per l'ambiente,False
+intfloat/multilingual-e5-base,P-generic_green-10,pos,generic_green,0.0614,True,P-recycled_recyclable-02,Qualità Pampers in cartoni 100% riciclati,False
+intfloat/multilingual-e5-base,P-vague_comparison-01,pos,vague_comparison,0.0686,True,P-vague_comparison-02,75% In meno di plastica,True
+intfloat/multilingual-e5-base,P-vague_comparison-02,pos,vague_comparison,0.0493,True,P-vague_comparison-01,-17% Plastica rispetto al pack precedente,True
+intfloat/multilingual-e5-base,P-vague_comparison-03,pos,vague_comparison,0.0314,True,P-vague_supply_chain-03,Agricoltura sostenibile,False
+intfloat/multilingual-e5-base,P-undefined_natural-01,pos,undefined_natural,0.0152,True,P-vegan-05,100% vegetale,False
+intfloat/multilingual-e5-base,P-undefined_natural-02,pos,undefined_natural,0.0479,True,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,True
+intfloat/multilingual-e5-base,P-undefined_natural-03,pos,undefined_natural,0.0357,True,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,True
+intfloat/multilingual-e5-base,P-undefined_natural-04,pos,undefined_natural,0.0501,True,P-undefined_natural-02,Ingredienti di origine naturale,True
+intfloat/multilingual-e5-base,P-climate_neutral-01,pos,climate_neutral,0.0505,True,P-climate_neutral-02,Emissioni zero / Questa confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione,True
+intfloat/multilingual-e5-base,P-climate_neutral-02,pos,climate_neutral,0.0749,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,True
+intfloat/multilingual-e5-base,P-climate_neutral-03,pos,climate_neutral,0.0113,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,True
+intfloat/multilingual-e5-base,P-climate_neutral-04,pos,climate_neutral,0.0557,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,False
+intfloat/multilingual-e5-base,P-climate_neutral-05,pos,climate_neutral,0.0148,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,True
+intfloat/multilingual-e5-base,P-vague_supply_chain-01,pos,vague_supply_chain,-0.0246,False,N-performance-06,Massima protezione e comfort,False
+intfloat/multilingual-e5-base,P-vague_supply_chain-02,pos,vague_supply_chain,0.0136,True,P-vague_supply_chain-03,Agricoltura sostenibile,True
+intfloat/multilingual-e5-base,P-vague_supply_chain-03,pos,vague_supply_chain,0.038,True,P-vague_supply_chain-02,Agricoltori selezionati,True
+intfloat/multilingual-e5-base,P-certification-01,pos,certification,0.0141,True,P-certification-05,Cosmetico biologico certificato ICEA,True
+intfloat/multilingual-e5-base,P-certification-02,pos,certification,0.0367,True,P-certification-04,Certificato Ecolabel UE,True
+intfloat/multilingual-e5-base,P-certification-03,pos,certification,0.0031,True,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,False
+intfloat/multilingual-e5-base,P-certification-04,pos,certification,0.0416,True,P-certification-02,Carta certificata FSC®,True
+intfloat/multilingual-e5-base,P-certification-05,pos,certification,0.0065,True,P-certification-04,Certificato Ecolabel UE,True
+intfloat/multilingual-e5-base,P-recycled_recyclable-01,pos,recycled_recyclable,0.0296,True,P-recycled_recyclable-04,Tappo riciclabile insieme alla bottiglia,True
+intfloat/multilingual-e5-base,P-recycled_recyclable-02,pos,recycled_recyclable,0.0582,True,P-generic_green-10,Eco pack 100% riciclabile - Con meno plastica,False
+intfloat/multilingual-e5-base,P-recycled_recyclable-03,pos,recycled_recyclable,0.0438,True,P-generic_green-10,Eco pack 100% riciclabile - Con meno plastica,False
+intfloat/multilingual-e5-base,P-recycled_recyclable-04,pos,recycled_recyclable,0.0134,True,P-recycled_recyclable-01,Etichetta in carta riciclata,True
+intfloat/multilingual-e5-base,P-biodegradable-01,pos,biodegradable,0.0464,True,P-biodegradable-02,Formula biodegradabile,True
+intfloat/multilingual-e5-base,P-biodegradable-02,pos,biodegradable,0.0236,True,P-biodegradable-01,"Formula vegana & biodegradabile^ ... 99,9% formula biodegradabile",True
+intfloat/multilingual-e5-base,P-biodegradable-03,pos,biodegradable,0.0254,True,P-biodegradable-02,Formula biodegradabile,True
+intfloat/multilingual-e5-base,P-biodegradable-04,pos,biodegradable,0.0272,True,P-generic_green-10,Eco pack 100% riciclabile - Con meno plastica,False
+intfloat/multilingual-e5-base,P-named_endorsement-01,pos,named_endorsement,0.026,True,P-named_endorsement-02,Prodotto consigliato dall'Associazione Italiana Celiachia,True
+intfloat/multilingual-e5-base,P-named_endorsement-02,pos,named_endorsement,0.004,True,P-named_endorsement-01,Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti,True
+intfloat/multilingual-e5-base,P-named_endorsement-03,pos,named_endorsement,0.0211,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,False
+intfloat/multilingual-e5-base,P-vegan-01,pos,vegan,0.0328,True,P-defined_term-03,"Naturale al 100%** ... **nessun ingrediente di sintesi, solo estratti vegetali e acqua",False
+intfloat/multilingual-e5-base,P-vegan-02,pos,vegan,0.0074,True,P-brand_eco_slogan-04,Vivi Verde,False
+intfloat/multilingual-e5-base,P-vegan-03,pos,vegan,-0.0169,False,N-tests_tolerance-04,Adatto alle pelli sensibili,False
+intfloat/multilingual-e5-base,P-vegan-04,pos,vegan,-0.0104,False,N-free_from_non_pollutant-04,Senza coloranti artificiali,False
+intfloat/multilingual-e5-base,P-vegan-05,pos,vegan,0.0117,True,P-undefined_natural-01,100% Naturale,False
+intfloat/multilingual-e5-base,P-farming_practice-01,pos,farming_practice,0.0063,True,P-defined_term-02,"Ingredienti di origine naturale* ... *il 95% degli ingredienti deriva da piante, minerali o acqua",False
+intfloat/multilingual-e5-base,P-farming_practice-02,pos,farming_practice,0.001,True,P-farming_practice-03,Maiali allevati senza uso di antibiotici,True
+intfloat/multilingual-e5-base,P-farming_practice-03,pos,farming_practice,0.0392,True,P-farming_practice-04,Coltivato senza l'uso di pesticidi di sintesi,True
+intfloat/multilingual-e5-base,P-farming_practice-04,pos,farming_practice,0.0131,True,P-vegan-04,Senza ingredienti di origine animale,False
+intfloat/multilingual-e5-base,P-farming_practice-05,pos,farming_practice,0.0034,True,P-recycled_recyclable-01,Etichetta in carta riciclata,False
+intfloat/multilingual-e5-base,P-defined_term-01,pos,defined_term,0.0681,True,P-defined_term-02,"Ingredienti di origine naturale* ... *il 95% degli ingredienti deriva da piante, minerali o acqua",True
+intfloat/multilingual-e5-base,P-defined_term-02,pos,defined_term,0.0564,True,P-undefined_natural-03,94% Ingredienti di origine naturale,False
+intfloat/multilingual-e5-base,P-defined_term-03,pos,defined_term,0.0598,True,P-defined_term-02,"Ingredienti di origine naturale* ... *il 95% degli ingredienti deriva da piante, minerali o acqua",True
+intfloat/multilingual-e5-base,P-defined_term-04,pos,defined_term,0.0701,True,P-defined_term-01,96% Natural origin* ... water and naturally sourced ingredients with limited processing,True
+intfloat/multilingual-e5-base,P-risk_reduction-01,pos,risk_reduction,0.0337,True,P-risk_reduction-03,Riduce il rischio di carie,True
+intfloat/multilingual-e5-base,P-risk_reduction-02,pos,risk_reduction,0.0289,True,P-risk_reduction-03,Riduce il rischio di carie,True
+intfloat/multilingual-e5-base,P-risk_reduction-03,pos,risk_reduction,0.0328,True,P-risk_reduction-02,Aiuta a ridurre il rischio di arrossamenti,True
+intfloat/multilingual-e5-base,P-named_comparison-01,pos,named_comparison,0.0612,True,P-vague_comparison-02,75% In meno di plastica,False
+intfloat/multilingual-e5-base,P-named_comparison-02,pos,named_comparison,0.0538,True,P-named_comparison-01,20% di plastica in meno rispetto al nostro flacone da 500 ml,True
+intfloat/multilingual-e5-base,P-named_comparison-03,pos,named_comparison,0.0636,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,False
+intfloat/multilingual-e5-base,P-pollutant_free-01,pos,pollutant_free,0.0075,True,P-pollutant_free-04,Senza siliconi,True
+intfloat/multilingual-e5-base,P-pollutant_free-02,pos,pollutant_free,-0.0033,False,N-free_from_non_pollutant-01,Senza conservanti,False
+intfloat/multilingual-e5-base,P-pollutant_free-03,pos,pollutant_free,0.0017,True,P-pollutant_free-02,Senza fosfati,True
+intfloat/multilingual-e5-base,P-pollutant_free-04,pos,pollutant_free,0.006,True,P-pollutant_free-01,Senza microplastiche,True
+intfloat/multilingual-e5-base,N-health_nutrition-01,neg,health_nutrition,-0.0063,True,N-performance-06,Massima protezione e comfort,False
+intfloat/multilingual-e5-base,N-health_nutrition-02,neg,health_nutrition,0.0049,False,P-undefined_natural-03,94% Ingredienti di origine naturale,False
+intfloat/multilingual-e5-base,N-health_nutrition-03,neg,health_nutrition,0.0122,False,P-undefined_natural-02,Ingredienti di origine naturale,False
+intfloat/multilingual-e5-base,N-health_nutrition-04,neg,health_nutrition,-0.006,True,N-natural_flavour-02,Gusto naturale,False
+intfloat/multilingual-e5-base,N-performance-01,neg,performance,-0.0157,True,N-health_nutrition-01,Speziato e Antiossidante,False
+intfloat/multilingual-e5-base,N-performance-02,neg,performance,-0.0117,True,N-health_nutrition-04,Alta digeribilità,False
+intfloat/multilingual-e5-base,N-performance-03,neg,performance,0.0065,False,P-pollutant_free-03,Privo di PFAS,False
+intfloat/multilingual-e5-base,N-performance-04,neg,performance,-0.001,True,N-tests_tolerance-04,Adatto alle pelli sensibili,False
+intfloat/multilingual-e5-base,N-performance-05,neg,performance,-0.0108,True,N-performance-06,Massima protezione e comfort,True
+intfloat/multilingual-e5-base,N-performance-06,neg,performance,0.0115,False,P-vague_supply_chain-01,Tracciabilità e sicurezza,False
+intfloat/multilingual-e5-base,N-performance-07,neg,performance,0.017,False,P-risk_reduction-03,Riduce il rischio di carie,False
+intfloat/multilingual-e5-base,N-performance-08,neg,performance,-0.0263,True,N-performance-01,Protegge dagli agenti esterni,True
+intfloat/multilingual-e5-base,N-tests_tolerance-01,neg,tests_tolerance,-0.0105,True,N-tests_tolerance-03,Raccomandato dai dermatologi,True
+intfloat/multilingual-e5-base,N-tests_tolerance-02,neg,tests_tolerance,-0.003,True,N-tests_tolerance-03,Raccomandato dai dermatologi,True
+intfloat/multilingual-e5-base,N-tests_tolerance-03,neg,tests_tolerance,-0.0068,True,N-tests_tolerance-01,Clinicamente testate,True
+intfloat/multilingual-e5-base,N-tests_tolerance-04,neg,tests_tolerance,0.0055,False,P-vegan-03,Adatto a una dieta vegana,False
+intfloat/multilingual-e5-base,N-tradition_history-01,neg,tradition_history,-0.0141,True,N-tradition_history-04,le inimitabili ricette di famiglia,True
+intfloat/multilingual-e5-base,N-tradition_history-02,neg,tradition_history,-0.0078,True,N-tradition_history-04,le inimitabili ricette di famiglia,True
+intfloat/multilingual-e5-base,N-tradition_history-03,neg,tradition_history,-0.0131,True,N-quality_scheme-03,Specialità Tradizionale Garantita,False
+intfloat/multilingual-e5-base,N-tradition_history-04,neg,tradition_history,0.0095,False,P-undefined_natural-02,Ingredienti di origine naturale,False
+intfloat/multilingual-e5-base,N-patents-01,neg,patents,0.0072,False,P-farming_practice-05,Raccolti a mano,False
+intfloat/multilingual-e5-base,N-patents-02,neg,patents,0.0158,False,P-biodegradable-02,Formula biodegradabile,False
+intfloat/multilingual-e5-base,N-patents-03,neg,patents,0.0057,False,P-farming_practice-05,Raccolti a mano,False
+intfloat/multilingual-e5-base,N-origin-01,neg,origin,0.0307,False,P-vegan-05,100% vegetale,False
+intfloat/multilingual-e5-base,N-origin-02,neg,origin,-0.0141,True,N-sales_rank-01,N°1 in Italia,False
+intfloat/multilingual-e5-base,N-origin-03,neg,origin,-0.0033,True,N-origin-02,Prodotto in Italia,True
+intfloat/multilingual-e5-base,N-quality_scheme-01,neg,quality_scheme,-0.0772,True,N-quality_scheme-02,Prosciutto di Parma DOP,True
+intfloat/multilingual-e5-base,N-quality_scheme-02,neg,quality_scheme,-0.0614,True,N-quality_scheme-01,Parmigiano Reggiano DOP,True
+intfloat/multilingual-e5-base,N-quality_scheme-03,neg,quality_scheme,0.0013,False,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,False
+intfloat/multilingual-e5-base,N-quality_scheme-04,neg,quality_scheme,0.0054,False,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,False
+intfloat/multilingual-e5-base,N-free_from_non_pollutant-01,neg,free_from_non_pollutant,0.0088,False,P-pollutant_free-02,Senza fosfati,False
+intfloat/multilingual-e5-base,N-free_from_non_pollutant-02,neg,free_from_non_pollutant,-0.0086,True,N-free_from_non_pollutant-03,Senza lattosio,True
+intfloat/multilingual-e5-base,N-free_from_non_pollutant-03,neg,free_from_non_pollutant,-0.0155,True,N-free_from_non_pollutant-02,Senza glutine,True
+intfloat/multilingual-e5-base,N-free_from_non_pollutant-04,neg,free_from_non_pollutant,0.0068,False,P-vegan-04,Senza ingredienti di origine animale,False
+intfloat/multilingual-e5-base,N-free_from_non_pollutant-05,neg,free_from_non_pollutant,0.0073,False,P-vegan-04,Senza ingredienti di origine animale,False
+intfloat/multilingual-e5-base,N-sales_rank-01,neg,sales_rank,-0.052,True,N-origin-02,Prodotto in Italia,False
+intfloat/multilingual-e5-base,N-sales_rank-02,neg,sales_rank,-0.0038,True,N-sales_rank-01,N°1 in Italia,True
+intfloat/multilingual-e5-base,N-sales_rank-03,neg,sales_rank,-0.0086,True,N-performance-06,Massima protezione e comfort,False
+intfloat/multilingual-e5-base,N-natural_flavour-01,neg,natural_flavour,-0.0386,True,N-natural_flavour-02,Gusto naturale,True
+intfloat/multilingual-e5-base,N-natural_flavour-02,neg,natural_flavour,-0.0354,True,N-natural_flavour-01,Aroma naturale,True
+intfloat/multilingual-e5-base,N-natural_flavour-03,neg,natural_flavour,-0.0305,True,N-natural_flavour-01,Aroma naturale,True
+intfloat/multilingual-e5-base,N-functional_packaging-01,neg,functional_packaging,-0.0345,True,N-functional_packaging-05,Confezione con apertura facilitata,True
+intfloat/multilingual-e5-base,N-functional_packaging-02,neg,functional_packaging,0.0036,False,P-recycled_recyclable-01,Etichetta in carta riciclata,False
+intfloat/multilingual-e5-base,N-functional_packaging-03,neg,functional_packaging,-0.0042,True,N-functional_packaging-01,Confezione salvafreschezza,True
+intfloat/multilingual-e5-base,N-functional_packaging-04,neg,functional_packaging,0.0036,False,P-vague_supply_chain-01,Tracciabilità e sicurezza,False
+intfloat/multilingual-e5-base,N-functional_packaging-05,neg,functional_packaging,-0.0426,True,N-functional_packaging-01,Confezione salvafreschezza,True
+BAAI/bge-m3,P-brand_eco_slogan-01,pos,brand_eco_slogan,0.1629,True,P-generic_green-09,Ho a cuore l'ambiente,False
+BAAI/bge-m3,P-brand_eco_slogan-02,pos,brand_eco_slogan,0.1598,True,P-brand_eco_slogan-03,Fiorentini per l'ambiente,True
+BAAI/bge-m3,P-brand_eco_slogan-03,pos,brand_eco_slogan,0.1529,True,P-brand_eco_slogan-02,Coop per l'ambiente,True
+BAAI/bge-m3,P-brand_eco_slogan-04,pos,brand_eco_slogan,0.0597,True,P-named_endorsement-03,In collaborazione con il WWF,False
+BAAI/bge-m3,P-brand_eco_slogan-05,pos,brand_eco_slogan,0.0673,True,P-generic_green-06,Flacone green 100%,False
+BAAI/bge-m3,P-brand_eco_slogan-06,pos,brand_eco_slogan,0.1366,True,P-generic_green-04,Fai la differenziata per il pianeta,False
+BAAI/bge-m3,P-brand_eco_slogan-07,pos,brand_eco_slogan,-0.0196,False,N-natural_flavour-02,Gusto naturale,False
+BAAI/bge-m3,P-brand_eco_slogan-08,pos,brand_eco_slogan,0.1141,True,P-generic_green-09,Ho a cuore l'ambiente,False
+BAAI/bge-m3,P-brand_eco_slogan-09,pos,brand_eco_slogan,0.2326,True,P-generic_green-06,Flacone green 100%,False
+BAAI/bge-m3,P-generic_green-01,pos,generic_green,0.0465,True,P-generic_green-03,garantisce una produzione sostenibile in armonia con la natura,True
+BAAI/bge-m3,P-generic_green-02,pos,generic_green,0.1308,True,P-generic_green-03,garantisce una produzione sostenibile in armonia con la natura,True
+BAAI/bge-m3,P-generic_green-03,pos,generic_green,0.1606,True,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,False
+BAAI/bge-m3,P-generic_green-04,pos,generic_green,0.1757,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,True
+BAAI/bge-m3,P-generic_green-05,pos,generic_green,0.1781,True,P-generic_green-04,Fai la differenziata per il pianeta,True
+BAAI/bge-m3,P-generic_green-06,pos,generic_green,0.1247,True,P-vegan-05,100% vegetale,False
+BAAI/bge-m3,P-generic_green-07,pos,generic_green,0.1681,True,P-generic_green-02,gestito con ecosostenibilità,True
+BAAI/bge-m3,P-generic_green-08,pos,generic_green,0.1816,True,P-recycled_recyclable-01,Etichetta in carta riciclata,False
+BAAI/bge-m3,P-generic_green-09,pos,generic_green,0.0477,True,P-brand_eco_slogan-07,Il gusto di amare il pianeta,False
+BAAI/bge-m3,P-generic_green-10,pos,generic_green,0.1513,True,P-recycled_recyclable-02,Qualità Pampers in cartoni 100% riciclati,False
+BAAI/bge-m3,P-vague_comparison-01,pos,vague_comparison,0.2604,True,P-vague_comparison-02,75% In meno di plastica,True
+BAAI/bge-m3,P-vague_comparison-02,pos,vague_comparison,0.2132,True,P-vague_comparison-01,-17% Plastica rispetto al pack precedente,True
+BAAI/bge-m3,P-vague_comparison-03,pos,vague_comparison,0.0821,True,P-generic_green-03,garantisce una produzione sostenibile in armonia con la natura,False
+BAAI/bge-m3,P-undefined_natural-01,pos,undefined_natural,0.0735,True,P-vegan-05,100% vegetale,False
+BAAI/bge-m3,P-undefined_natural-02,pos,undefined_natural,0.0971,True,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,True
+BAAI/bge-m3,P-undefined_natural-03,pos,undefined_natural,0.1644,True,P-undefined_natural-02,Ingredienti di origine naturale,True
+BAAI/bge-m3,P-undefined_natural-04,pos,undefined_natural,0.1281,True,P-undefined_natural-02,Ingredienti di origine naturale,True
+BAAI/bge-m3,P-climate_neutral-01,pos,climate_neutral,0.203,True,P-climate_neutral-05,Neutralità climatica certificata,True
+BAAI/bge-m3,P-climate_neutral-02,pos,climate_neutral,0.1762,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,True
+BAAI/bge-m3,P-climate_neutral-03,pos,climate_neutral,0.0512,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,True
+BAAI/bge-m3,P-climate_neutral-04,pos,climate_neutral,0.159,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,False
+BAAI/bge-m3,P-climate_neutral-05,pos,climate_neutral,0.1668,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,True
+BAAI/bge-m3,P-vague_supply_chain-01,pos,vague_supply_chain,-0.0787,False,N-performance-06,Massima protezione e comfort,False
+BAAI/bge-m3,P-vague_supply_chain-02,pos,vague_supply_chain,0.0839,True,P-vague_supply_chain-03,Agricoltura sostenibile,True
+BAAI/bge-m3,P-vague_supply_chain-03,pos,vague_supply_chain,0.0628,True,P-vague_supply_chain-02,Agricoltori selezionati,True
+BAAI/bge-m3,P-certification-01,pos,certification,0.0383,True,P-brand_eco_slogan-05,Gallo green,False
+BAAI/bge-m3,P-certification-02,pos,certification,0.0879,True,P-climate_neutral-05,Neutralità climatica certificata,False
+BAAI/bge-m3,P-certification-03,pos,certification,-0.0402,False,N-origin-02,Prodotto in Italia,False
+BAAI/bge-m3,P-certification-04,pos,certification,0.1195,True,P-climate_neutral-05,Neutralità climatica certificata,False
+BAAI/bge-m3,P-certification-05,pos,certification,0.0343,True,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,False
+BAAI/bge-m3,P-recycled_recyclable-01,pos,recycled_recyclable,0.1166,True,P-recycled_recyclable-04,Tappo riciclabile insieme alla bottiglia,True
+BAAI/bge-m3,P-recycled_recyclable-02,pos,recycled_recyclable,0.2138,True,P-generic_green-10,Eco pack 100% riciclabile - Con meno plastica,False
+BAAI/bge-m3,P-recycled_recyclable-03,pos,recycled_recyclable,0.1738,True,P-recycled_recyclable-01,Etichetta in carta riciclata,True
+BAAI/bge-m3,P-recycled_recyclable-04,pos,recycled_recyclable,0.0782,True,P-recycled_recyclable-01,Etichetta in carta riciclata,True
+BAAI/bge-m3,P-biodegradable-01,pos,biodegradable,0.1918,True,P-biodegradable-02,Formula biodegradabile,True
+BAAI/bge-m3,P-biodegradable-02,pos,biodegradable,0.1772,True,P-biodegradable-01,"Formula vegana & biodegradabile^ ... 99,9% formula biodegradabile",True
+BAAI/bge-m3,P-biodegradable-03,pos,biodegradable,0.0537,True,P-biodegradable-02,Formula biodegradabile,True
+BAAI/bge-m3,P-biodegradable-04,pos,biodegradable,0.0766,True,P-recycled_recyclable-03,Vaschetta realizzata con il 50% di PET riciclato,False
+BAAI/bge-m3,P-named_endorsement-01,pos,named_endorsement,0.0886,True,P-named_endorsement-02,Prodotto consigliato dall'Associazione Italiana Celiachia,True
+BAAI/bge-m3,P-named_endorsement-02,pos,named_endorsement,0.0298,True,P-named_endorsement-01,Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti,True
+BAAI/bge-m3,P-named_endorsement-03,pos,named_endorsement,0.0741,True,P-brand_eco_slogan-08,Viva la Natura! / Per un futuro migliore,False
+BAAI/bge-m3,P-vegan-01,pos,vegan,0.1261,True,P-vegan-04,Senza ingredienti di origine animale,True
+BAAI/bge-m3,P-vegan-02,pos,vegan,0.0064,True,P-brand_eco_slogan-04,Vivi Verde,False
+BAAI/bge-m3,P-vegan-03,pos,vegan,-0.141,False,N-tests_tolerance-04,Adatto alle pelli sensibili,False
+BAAI/bge-m3,P-vegan-04,pos,vegan,-0.0443,False,N-free_from_non_pollutant-04,Senza coloranti artificiali,False
+BAAI/bge-m3,P-vegan-05,pos,vegan,0.1076,True,P-undefined_natural-01,100% Naturale,False
+BAAI/bge-m3,P-farming_practice-01,pos,farming_practice,-0.0098,False,N-natural_flavour-03,Con aromi naturali,False
+BAAI/bge-m3,P-farming_practice-02,pos,farming_practice,0.0772,True,P-farming_practice-03,Maiali allevati senza uso di antibiotici,True
+BAAI/bge-m3,P-farming_practice-03,pos,farming_practice,0.0696,True,P-farming_practice-04,Coltivato senza l'uso di pesticidi di sintesi,True
+BAAI/bge-m3,P-farming_practice-04,pos,farming_practice,-0.0448,False,N-free_from_non_pollutant-04,Senza coloranti artificiali,False
+BAAI/bge-m3,P-farming_practice-05,pos,farming_practice,-0.0514,False,N-natural_flavour-03,Con aromi naturali,False
+BAAI/bge-m3,P-defined_term-01,pos,defined_term,0.2353,True,P-defined_term-02,"Ingredienti di origine naturale* ... *il 95% degli ingredienti deriva da piante, minerali o acqua",True
+BAAI/bge-m3,P-defined_term-02,pos,defined_term,0.2368,True,P-defined_term-01,96% Natural origin* ... water and naturally sourced ingredients with limited processing,True
+BAAI/bge-m3,P-defined_term-03,pos,defined_term,0.1921,True,P-defined_term-02,"Ingredienti di origine naturale* ... *il 95% degli ingredienti deriva da piante, minerali o acqua",True
+BAAI/bge-m3,P-defined_term-04,pos,defined_term,0.2417,True,P-defined_term-01,96% Natural origin* ... water and naturally sourced ingredients with limited processing,True
+BAAI/bge-m3,P-risk_reduction-01,pos,risk_reduction,0.1034,True,P-risk_reduction-02,Aiuta a ridurre il rischio di arrossamenti,True
+BAAI/bge-m3,P-risk_reduction-02,pos,risk_reduction,0.1501,True,P-risk_reduction-01,aiutano a ridurre il rischio di irritazione della pelle,True
+BAAI/bge-m3,P-risk_reduction-03,pos,risk_reduction,0.0966,True,P-risk_reduction-01,aiutano a ridurre il rischio di irritazione della pelle,True
+BAAI/bge-m3,P-named_comparison-01,pos,named_comparison,0.2309,True,P-vague_comparison-02,75% In meno di plastica,False
+BAAI/bge-m3,P-named_comparison-02,pos,named_comparison,0.0899,True,P-named_comparison-01,20% di plastica in meno rispetto al nostro flacone da 500 ml,True
+BAAI/bge-m3,P-named_comparison-03,pos,named_comparison,0.1419,True,P-vague_comparison-02,75% In meno di plastica,False
+BAAI/bge-m3,P-pollutant_free-01,pos,pollutant_free,0.0218,True,P-pollutant_free-04,Senza siliconi,True
+BAAI/bge-m3,P-pollutant_free-02,pos,pollutant_free,0.0011,True,P-pollutant_free-04,Senza siliconi,True
+BAAI/bge-m3,P-pollutant_free-03,pos,pollutant_free,0.074,True,P-pollutant_free-02,Senza fosfati,True
+BAAI/bge-m3,P-pollutant_free-04,pos,pollutant_free,-0.0136,False,N-free_from_non_pollutant-01,Senza conservanti,False
+BAAI/bge-m3,N-health_nutrition-01,neg,health_nutrition,-0.0802,True,N-health_nutrition-02,Contiene curcuma che possiede proprietà antiossidanti,True
+BAAI/bge-m3,N-health_nutrition-02,neg,health_nutrition,0.0221,False,P-risk_reduction-03,Riduce il rischio di carie,False
+BAAI/bge-m3,N-health_nutrition-03,neg,health_nutrition,0.0411,False,P-undefined_natural-02,Ingredienti di origine naturale,False
+BAAI/bge-m3,N-health_nutrition-04,neg,health_nutrition,0.0038,False,P-vegan-03,Adatto a una dieta vegana,False
+BAAI/bge-m3,N-performance-01,neg,performance,-0.1732,True,N-performance-08,protegge i capelli dal crespo e da aggressioni esterne,True
+BAAI/bge-m3,N-performance-02,neg,performance,-0.0242,True,N-performance-06,Massima protezione e comfort,True
+BAAI/bge-m3,N-performance-03,neg,performance,0.055,False,P-pollutant_free-03,Privo di PFAS,False
+BAAI/bge-m3,N-performance-04,neg,performance,-0.026,True,N-tests_tolerance-04,Adatto alle pelli sensibili,False
+BAAI/bge-m3,N-performance-05,neg,performance,0.0289,False,P-risk_reduction-02,Aiuta a ridurre il rischio di arrossamenti,False
+BAAI/bge-m3,N-performance-06,neg,performance,-0.0124,True,N-performance-01,Protegge dagli agenti esterni,True
+BAAI/bge-m3,N-performance-07,neg,performance,0.0953,False,P-risk_reduction-03,Riduce il rischio di carie,False
+BAAI/bge-m3,N-performance-08,neg,performance,-0.1205,True,N-performance-01,Protegge dagli agenti esterni,True
+BAAI/bge-m3,N-tests_tolerance-01,neg,tests_tolerance,0.0024,False,P-risk_reduction-01,aiutano a ridurre il rischio di irritazione della pelle,False
+BAAI/bge-m3,N-tests_tolerance-02,neg,tests_tolerance,-0.0464,True,N-tests_tolerance-04,Adatto alle pelli sensibili,True
+BAAI/bge-m3,N-tests_tolerance-03,neg,tests_tolerance,-0.0241,True,N-tests_tolerance-04,Adatto alle pelli sensibili,True
+BAAI/bge-m3,N-tests_tolerance-04,neg,tests_tolerance,0.0388,False,P-vegan-03,Adatto a una dieta vegana,False
+BAAI/bge-m3,N-tradition_history-01,neg,tradition_history,0.0152,False,P-named_endorsement-02,Prodotto consigliato dall'Associazione Italiana Celiachia,False
+BAAI/bge-m3,N-tradition_history-02,neg,tradition_history,0.0273,False,P-undefined_natural-02,Ingredienti di origine naturale,False
+BAAI/bge-m3,N-tradition_history-03,neg,tradition_history,-0.0747,True,N-quality_scheme-03,Specialità Tradizionale Garantita,False
+BAAI/bge-m3,N-tradition_history-04,neg,tradition_history,-0.0136,True,N-sales_rank-03,Scelto da milioni di famiglie,False
+BAAI/bge-m3,N-patents-01,neg,patents,-0.0031,True,N-functional_packaging-04,Formato pratico da viaggio,False
+BAAI/bge-m3,N-patents-02,neg,patents,0.0681,False,P-biodegradable-02,Formula biodegradabile,False
+BAAI/bge-m3,N-patents-03,neg,patents,0.0075,False,P-certification-03,Prodotto Fairtrade,False
+BAAI/bge-m3,N-origin-01,neg,origin,0.1563,False,P-undefined_natural-01,100% Naturale,False
+BAAI/bge-m3,N-origin-02,neg,origin,0.0403,False,P-certification-03,Prodotto Fairtrade,False
+BAAI/bge-m3,N-origin-03,neg,origin,0.0859,False,P-vague_supply_chain-02,Agricoltori selezionati,False
+BAAI/bge-m3,N-quality_scheme-01,neg,quality_scheme,-0.2681,True,N-quality_scheme-02,Prosciutto di Parma DOP,True
+BAAI/bge-m3,N-quality_scheme-02,neg,quality_scheme,-0.2004,True,N-quality_scheme-01,Parmigiano Reggiano DOP,True
+BAAI/bge-m3,N-quality_scheme-03,neg,quality_scheme,0.0318,False,P-undefined_natural-02,Ingredienti di origine naturale,False
+BAAI/bge-m3,N-quality_scheme-04,neg,quality_scheme,0.054,False,P-certification-03,Prodotto Fairtrade,False
+BAAI/bge-m3,N-free_from_non_pollutant-01,neg,free_from_non_pollutant,-0.019,True,N-free_from_non_pollutant-04,Senza coloranti artificiali,True
+BAAI/bge-m3,N-free_from_non_pollutant-02,neg,free_from_non_pollutant,-0.0455,True,N-free_from_non_pollutant-03,Senza lattosio,True
+BAAI/bge-m3,N-free_from_non_pollutant-03,neg,free_from_non_pollutant,-0.0655,True,N-free_from_non_pollutant-02,Senza glutine,True
+BAAI/bge-m3,N-free_from_non_pollutant-04,neg,free_from_non_pollutant,-0.0404,True,N-free_from_non_pollutant-01,Senza conservanti,True
+BAAI/bge-m3,N-free_from_non_pollutant-05,neg,free_from_non_pollutant,-0.0148,True,N-free_from_non_pollutant-04,Senza coloranti artificiali,True
+BAAI/bge-m3,N-sales_rank-01,neg,sales_rank,-0.1635,True,N-origin-02,Prodotto in Italia,False
+BAAI/bge-m3,N-sales_rank-02,neg,sales_rank,-0.071,True,N-sales_rank-03,Scelto da milioni di famiglie,True
+BAAI/bge-m3,N-sales_rank-03,neg,sales_rank,-0.0849,True,N-tradition_history-04,le inimitabili ricette di famiglia,False
+BAAI/bge-m3,N-natural_flavour-01,neg,natural_flavour,-0.1033,True,N-natural_flavour-03,Con aromi naturali,True
+BAAI/bge-m3,N-natural_flavour-02,neg,natural_flavour,-0.0886,True,N-natural_flavour-01,Aroma naturale,True
+BAAI/bge-m3,N-natural_flavour-03,neg,natural_flavour,-0.0263,True,N-natural_flavour-01,Aroma naturale,True
+BAAI/bge-m3,N-functional_packaging-01,neg,functional_packaging,-0.1092,True,N-functional_packaging-05,Confezione con apertura facilitata,True
+BAAI/bge-m3,N-functional_packaging-02,neg,functional_packaging,0.0422,False,P-biodegradable-03,Capsule compostabili,False
+BAAI/bge-m3,N-functional_packaging-03,neg,functional_packaging,-0.0176,True,N-functional_packaging-01,Confezione salvafreschezza,True
+BAAI/bge-m3,N-functional_packaging-04,neg,functional_packaging,-0.0265,True,N-functional_packaging-05,Confezione con apertura facilitata,True
+BAAI/bge-m3,N-functional_packaging-05,neg,functional_packaging,-0.0787,True,N-functional_packaging-01,Confezione salvafreschezza,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-brand_eco_slogan-01,pos,brand_eco_slogan,0.0863,True,P-brand_eco_slogan-03,Fiorentini per l'ambiente,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-brand_eco_slogan-02,pos,brand_eco_slogan,0.2155,True,P-generic_green-09,Ho a cuore l'ambiente,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-brand_eco_slogan-03,pos,brand_eco_slogan,0.056,True,P-brand_eco_slogan-01,Rigoni di Asiago per l'ambiente,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-brand_eco_slogan-04,pos,brand_eco_slogan,0.1839,True,P-brand_eco_slogan-05,Gallo green,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-brand_eco_slogan-05,pos,brand_eco_slogan,0.1379,True,P-brand_eco_slogan-04,Vivi Verde,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-brand_eco_slogan-06,pos,brand_eco_slogan,-0.0247,False,N-functional_packaging-03,Tappo salvagoccia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-brand_eco_slogan-07,pos,brand_eco_slogan,0.1399,True,P-generic_green-09,Ho a cuore l'ambiente,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-brand_eco_slogan-08,pos,brand_eco_slogan,0.0881,True,P-vegan-02,VEGANO,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-brand_eco_slogan-09,pos,brand_eco_slogan,0.3394,True,P-generic_green-02,gestito con ecosostenibilità,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-01,pos,generic_green,-0.0148,False,N-free_from_non_pollutant-03,Senza lattosio,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-02,pos,generic_green,0.4315,True,P-brand_eco_slogan-09,Progetto sostenibilità / Il Nostro Flacone Green,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-03,pos,generic_green,0.2634,True,P-vague_supply_chain-03,Agricoltura sostenibile,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-04,pos,generic_green,0.2588,True,P-generic_green-05,Il nostro impegno per te e per il pianeta,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-05,pos,generic_green,0.3211,True,P-generic_green-04,Fai la differenziata per il pianeta,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-06,pos,generic_green,0.1706,True,P-vegan-05,100% vegetale,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-07,pos,generic_green,0.3083,True,P-generic_green-02,gestito con ecosostenibilità,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-08,pos,generic_green,0.2336,True,P-recycled_recyclable-01,Etichetta in carta riciclata,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-09,pos,generic_green,0.3338,True,P-brand_eco_slogan-02,Coop per l'ambiente,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-generic_green-10,pos,generic_green,0.1588,True,P-biodegradable-03,Capsule compostabili,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vague_comparison-01,pos,vague_comparison,0.0339,True,P-vague_comparison-02,75% In meno di plastica,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vague_comparison-02,pos,vague_comparison,0.2456,True,P-named_comparison-01,20% di plastica in meno rispetto al nostro flacone da 500 ml,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vague_comparison-03,pos,vague_comparison,0.0531,True,P-vague_supply_chain-03,Agricoltura sostenibile,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-undefined_natural-01,pos,undefined_natural,0.1584,True,P-undefined_natural-03,94% Ingredienti di origine naturale,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-undefined_natural-02,pos,undefined_natural,0.23,True,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-undefined_natural-03,pos,undefined_natural,0.2648,True,P-defined_term-01,96% Natural origin* ... water and naturally sourced ingredients with limited processing,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-undefined_natural-04,pos,undefined_natural,0.2526,True,P-undefined_natural-02,Ingredienti di origine naturale,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-climate_neutral-01,pos,climate_neutral,0.474,True,P-climate_neutral-02,Emissioni zero / Questa confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-climate_neutral-02,pos,climate_neutral,0.3067,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-climate_neutral-03,pos,climate_neutral,0.1245,True,P-climate_neutral-02,Emissioni zero / Questa confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-climate_neutral-04,pos,climate_neutral,0.4105,True,P-generic_green-02,gestito con ecosostenibilità,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-climate_neutral-05,pos,climate_neutral,0.2187,True,P-climate_neutral-02,Emissioni zero / Questa confezione è Carbon Neutral: ciò significa che neutralizziamo le emissioni di CO2 generate dalla sua produzione,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vague_supply_chain-01,pos,vague_supply_chain,-0.2743,False,N-performance-06,Massima protezione e comfort,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vague_supply_chain-02,pos,vague_supply_chain,0.0055,True,P-vague_supply_chain-03,Agricoltura sostenibile,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vague_supply_chain-03,pos,vague_supply_chain,0.2363,True,P-generic_green-03,garantisce una produzione sostenibile in armonia con la natura,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-certification-01,pos,certification,0.0794,True,P-brand_eco_slogan-03,Fiorentini per l'ambiente,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-certification-02,pos,certification,0.1355,True,P-certification-04,Certificato Ecolabel UE,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-certification-03,pos,certification,0.0154,True,P-recycled_recyclable-01,Etichetta in carta riciclata,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-certification-04,pos,certification,0.1338,True,P-generic_green-02,gestito con ecosostenibilità,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-certification-05,pos,certification,0.018,True,P-certification-04,Certificato Ecolabel UE,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-recycled_recyclable-01,pos,recycled_recyclable,0.2677,True,P-generic_green-08,cannuccia di carta per ridurre l'impatto sull'ambiente,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-recycled_recyclable-02,pos,recycled_recyclable,0.1456,True,P-recycled_recyclable-01,Etichetta in carta riciclata,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-recycled_recyclable-03,pos,recycled_recyclable,0.1469,True,P-recycled_recyclable-04,Tappo riciclabile insieme alla bottiglia,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-recycled_recyclable-04,pos,recycled_recyclable,0.22,True,P-biodegradable-03,Capsule compostabili,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-biodegradable-01,pos,biodegradable,0.2663,True,P-biodegradable-02,Formula biodegradabile,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-biodegradable-02,pos,biodegradable,0.357,True,P-biodegradable-01,"Formula vegana & biodegradabile^ ... 99,9% formula biodegradabile",True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-biodegradable-03,pos,biodegradable,0.2265,True,P-recycled_recyclable-04,Tappo riciclabile insieme alla bottiglia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-biodegradable-04,pos,biodegradable,-0.0177,False,N-health_nutrition-03,fonte di fibre,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-named_endorsement-01,pos,named_endorsement,0.0813,True,P-named_endorsement-02,Prodotto consigliato dall'Associazione Italiana Celiachia,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-named_endorsement-02,pos,named_endorsement,0.0339,True,P-named_endorsement-01,Approvata da A.I.Nut. - Associazione Italiana Nutrizionisti,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-named_endorsement-03,pos,named_endorsement,0.0642,True,P-vegan-02,VEGANO,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vegan-01,pos,vegan,0.1166,True,P-vegan-04,Senza ingredienti di origine animale,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vegan-02,pos,vegan,-0.2458,False,N-functional_packaging-03,Tappo salvagoccia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vegan-03,pos,vegan,0.1259,True,P-vegan-01,formula vegana** ... Nessun ingrediente o derivato di origine animale,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vegan-04,pos,vegan,0.0387,True,P-vegan-01,formula vegana** ... Nessun ingrediente o derivato di origine animale,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-vegan-05,pos,vegan,0.1927,True,P-defined_term-03,"Naturale al 100%** ... **nessun ingrediente di sintesi, solo estratti vegetali e acqua",False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-farming_practice-01,pos,farming_practice,0.0074,True,P-generic_green-01,il latte amico dell'ambiente,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-farming_practice-02,pos,farming_practice,-0.1059,False,N-origin-03,Coltivati in Puglia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-farming_practice-03,pos,farming_practice,0.0132,True,P-vegan-04,Senza ingredienti di origine animale,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-farming_practice-04,pos,farming_practice,0.0442,True,P-vegan-04,Senza ingredienti di origine animale,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-farming_practice-05,pos,farming_practice,-0.1634,False,N-functional_packaging-03,Tappo salvagoccia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-defined_term-01,pos,defined_term,0.3318,True,P-defined_term-02,"Ingredienti di origine naturale* ... *il 95% degli ingredienti deriva da piante, minerali o acqua",True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-defined_term-02,pos,defined_term,0.3134,True,P-defined_term-01,96% Natural origin* ... water and naturally sourced ingredients with limited processing,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-defined_term-03,pos,defined_term,0.1498,True,P-undefined_natural-04,Prodotto con ingredienti di origine naturale,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-defined_term-04,pos,defined_term,0.1003,True,P-defined_term-01,96% Natural origin* ... water and naturally sourced ingredients with limited processing,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-risk_reduction-01,pos,risk_reduction,-0.0214,False,N-tests_tolerance-04,Adatto alle pelli sensibili,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-risk_reduction-02,pos,risk_reduction,0.2927,True,P-risk_reduction-03,Riduce il rischio di carie,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-risk_reduction-03,pos,risk_reduction,0.2954,True,P-risk_reduction-02,Aiuta a ridurre il rischio di arrossamenti,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-named_comparison-01,pos,named_comparison,0.2927,True,P-vague_comparison-02,75% In meno di plastica,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-named_comparison-02,pos,named_comparison,0.1839,True,P-named_comparison-01,20% di plastica in meno rispetto al nostro flacone da 500 ml,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-named_comparison-03,pos,named_comparison,0.4544,True,P-climate_neutral-01,CO2 100% prodotto a impatto climatico neutralizzato,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-pollutant_free-01,pos,pollutant_free,0.0554,True,P-pollutant_free-04,Senza siliconi,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-pollutant_free-02,pos,pollutant_free,-0.0542,False,N-free_from_non_pollutant-01,Senza conservanti,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-pollutant_free-03,pos,pollutant_free,0.0145,True,P-vegan-02,VEGANO,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,P-pollutant_free-04,pos,pollutant_free,0.089,True,P-pollutant_free-01,Senza microplastiche,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-health_nutrition-01,neg,health_nutrition,-0.1913,True,N-health_nutrition-02,Contiene curcuma che possiede proprietà antiossidanti,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-health_nutrition-02,neg,health_nutrition,-0.181,True,N-health_nutrition-01,Speziato e Antiossidante,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-health_nutrition-03,neg,health_nutrition,0.2331,False,P-biodegradable-04,Salviette in fibra 100% biodegradabile,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-health_nutrition-04,neg,health_nutrition,-0.0091,True,N-free_from_non_pollutant-02,Senza glutine,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-performance-01,neg,performance,0.0202,False,P-vague_supply_chain-01,Tracciabilità e sicurezza,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-performance-02,neg,performance,-0.0417,True,N-functional_packaging-03,Tappo salvagoccia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-performance-03,neg,performance,0.0134,False,P-pollutant_free-03,Privo di PFAS,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-performance-04,neg,performance,0.053,False,P-pollutant_free-01,Senza microplastiche,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-performance-05,neg,performance,-0.1043,True,N-free_from_non_pollutant-04,Senza coloranti artificiali,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-performance-06,neg,performance,0.0681,False,P-vague_supply_chain-01,Tracciabilità e sicurezza,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-performance-07,neg,performance,-0.1586,True,N-natural_flavour-01,Aroma naturale,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-performance-08,neg,performance,-0.0229,True,N-tests_tolerance-04,Adatto alle pelli sensibili,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-tests_tolerance-01,neg,tests_tolerance,0.0103,False,P-risk_reduction-02,Aiuta a ridurre il rischio di arrossamenti,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-tests_tolerance-02,neg,tests_tolerance,-0.142,True,N-health_nutrition-01,Speziato e Antiossidante,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-tests_tolerance-03,neg,tests_tolerance,0.0611,False,P-risk_reduction-01,aiutano a ridurre il rischio di irritazione della pelle,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-tests_tolerance-04,neg,tests_tolerance,0.0661,False,P-risk_reduction-01,aiutano a ridurre il rischio di irritazione della pelle,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-tradition_history-01,neg,tradition_history,-0.1566,True,N-functional_packaging-01,Confezione salvafreschezza,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-tradition_history-02,neg,tradition_history,-0.0937,True,N-origin-02,Prodotto in Italia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-tradition_history-03,neg,tradition_history,-0.0663,True,N-quality_scheme-03,Specialità Tradizionale Garantita,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-tradition_history-04,neg,tradition_history,-0.0398,True,N-functional_packaging-01,Confezione salvafreschezza,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-patents-01,neg,patents,0.0394,False,P-vegan-02,VEGANO,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-patents-02,neg,patents,0.0554,False,P-vegan-02,VEGANO,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-patents-03,neg,patents,0.0015,False,P-vegan-02,VEGANO,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-origin-01,neg,origin,-0.1631,True,N-origin-02,Prodotto in Italia,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-origin-02,neg,origin,0.0058,False,P-named_endorsement-02,Prodotto consigliato dall'Associazione Italiana Celiachia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-origin-03,neg,origin,-0.0361,True,N-functional_packaging-03,Tappo salvagoccia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-quality_scheme-01,neg,quality_scheme,-0.1646,True,N-quality_scheme-02,Prosciutto di Parma DOP,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-quality_scheme-02,neg,quality_scheme,-0.2399,True,N-quality_scheme-01,Parmigiano Reggiano DOP,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-quality_scheme-03,neg,quality_scheme,-0.0655,True,N-quality_scheme-04,Denominazione di Origine Protetta,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-quality_scheme-04,neg,quality_scheme,-0.0085,True,N-quality_scheme-03,Specialità Tradizionale Garantita,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-free_from_non_pollutant-01,neg,free_from_non_pollutant,-0.0075,True,N-free_from_non_pollutant-05,Senza zuccheri aggiunti,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-free_from_non_pollutant-02,neg,free_from_non_pollutant,-0.1767,True,N-free_from_non_pollutant-03,Senza lattosio,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-free_from_non_pollutant-03,neg,free_from_non_pollutant,-0.1139,True,N-free_from_non_pollutant-02,Senza glutine,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-free_from_non_pollutant-04,neg,free_from_non_pollutant,-0.1191,True,N-free_from_non_pollutant-01,Senza conservanti,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-free_from_non_pollutant-05,neg,free_from_non_pollutant,-0.1505,True,N-free_from_non_pollutant-02,Senza glutine,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-sales_rank-01,neg,sales_rank,-0.1489,True,N-origin-02,Prodotto in Italia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-sales_rank-02,neg,sales_rank,0.0165,False,P-vegan-02,VEGANO,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-sales_rank-03,neg,sales_rank,-0.0735,True,N-tradition_history-04,le inimitabili ricette di famiglia,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-natural_flavour-01,neg,natural_flavour,-0.3282,True,N-natural_flavour-03,Con aromi naturali,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-natural_flavour-02,neg,natural_flavour,-0.1728,True,N-natural_flavour-03,Con aromi naturali,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-natural_flavour-03,neg,natural_flavour,-0.2191,True,N-natural_flavour-01,Aroma naturale,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-functional_packaging-01,neg,functional_packaging,-0.2666,True,N-functional_packaging-05,Confezione con apertura facilitata,True
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-functional_packaging-02,neg,functional_packaging,0.1601,False,P-generic_green-10,Eco pack 100% riciclabile - Con meno plastica,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-functional_packaging-03,neg,functional_packaging,0.1164,False,P-vegan-02,VEGANO,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-functional_packaging-04,neg,functional_packaging,0.0332,False,P-vague_supply_chain-01,Tracciabilità e sicurezza,False
+sentence-transformers/paraphrase-multilingual-mpnet-base-v2,N-functional_packaging-05,neg,functional_packaging,-0.3633,True,N-functional_packaging-01,Confezione salvafreschezza,True
