@@ -18,30 +18,23 @@ Ollama models. Each surviving claim gets one of two labels:
 
 The `rag` branch was reset to a minimal baseline in commit `f0f1b57`
 ("clean up everything, start from 0.1"), which deleted the entire previous
-`src/` pipeline (`extraction.py`, `data.py`, `pipeline.py`, `evaluate.py`,
-`src/knowledge/`, the old `CLAUDE.md`, etc.) and most of `golden/`'s audit
-history. **None of that code exists on this branch right now** — `src/`
-contains nothing but a stray `.DS_Store`. Don't reference those modules or
-run `python3 -m src.extraction`; they aren't there. If you need the old
-design for reference, it's recoverable with `git show f0f1b57~1:<path>`, but
-treat it as historical, not current.
+`src/` pipeline (`extraction.py` with its `CLAIM_KEYWORDS` prefilter,
+`data.py`, `pipeline.py`, `evaluate.py`, `check_prefilter_coverage.py`,
+`src/knowledge/`, …) and most of `golden/`'s audit history. **None of that
+code exists on this branch** — `src/` holds only a stray `.DS_Store`. Don't
+reference those modules or run `python3 -m src.extraction`. The old design
+is recoverable with `git show f0f1b57~1:<path>`; treat it as historical.
 
-What the repo actually contains today is: cleaned golden data + the current
-prompt design doc (`golden/`), raw scrapes (`server/`, gitignored), two
-HTML data viewers (`tools/`), and an **in-flight redesign** of the
-extraction pipeline's first stage, checked in at the repo root rather than
-under `src/` yet (see below).
-
-Two local venvs, `greenwashing-claims/` and `rag-workshop/`, sit at the repo
-root (`pyvenv.cfg` + `bin/`/`lib/`/`include/`) — they're environments, not
-source; skip them when searching the codebase.
+What the repo contains today: cleaned golden data + the prompt design doc
+(`golden/`), raw scrapes (`server/`, gitignored), two HTML data viewers
+(`tools/`), and the **in-flight retriever redesign** in `retriever/`.
 
 ## The in-flight redesign: retriever replacing LLM Pass 1
 
 **Read `HANDOFF_ECGT_RETRIEVER.md` then `ECGT_RETRIEVER_CHECKLIST.md` first**
-— they are the authoritative, up-to-date status (what's decided, what
-passed its gate, what's next) for this work. Don't re-derive decisions
-that are already settled there.
+— they are the authoritative status (what's decided, what passed its gate,
+what's next). Don't re-derive decisions already settled in the checklist's
+decisions log.
 
 The design in one line: `golden/ECGT_TWO_PASS_PROMPT.md`'s two-pass LLM
 design had Pass 1 (LLM extracts candidate spans) → Pass 2 (LLM assigns
@@ -79,50 +72,51 @@ only costs one extra Pass 2 call, which then drops it via `out_of_scope`.
 So every gate in the checklist is stated in terms of **positives kept /
 recall** — negatives rejected is tracked only as a cost metric, never gated.
 
-Files for this work, currently at repo root (not yet moved to the
-checklist's suggested destinations — `src/knowledge/anchors/`, `scripts/`,
-`docs/` — don't assume those paths exist):
+### Files (`retriever/`)
 
-- `anchors_v2.jsonl` — **current** anchor set (120: 74 pos / 46 neg), one
-  JSON object per line: `id, text, polarity (pos|neg), category, triggers[],
-  label_hint, origin (real|synthetic), form (joined|claim_only)`. Anchors
-  must be topic-neutral (no product nouns/brand names in synthetic ones).
+- `ecgt_retriever.yaml` — pipeline config and **single source of truth**
+  for the anchor path, embedding model names/prefixes, PRE/segmentation
+  settings, the lexical keyword list (`lexical.include`, word-bounded
+  regexes, ECGT-only), τ per model, and Pass 2 settings. Keep tunables here,
+  not in code.
+- `knowledge/anchors_v3.jsonl` — **current** anchor set (121: 74 pos / 47
+  neg). One JSON object per line: `id, text, polarity (pos|neg), category,
+  triggers[], label_hint, origin (real|synthetic), form (joined|claim_only)`.
+  Synthetic anchors must be topic-neutral (no product nouns/brand names).
   Footnoted anchors are stored pre-joined (`claim ... footnote body`).
-- `anchors.jsonl` — previous set (123), kept only for comparison.
-- `loo_check.py` — leave-one-out sanity check across embedding models; run
-  it to compare/recalibrate whenever the anchor set or model choice changes.
-  `loo_results.csv` is its most recent output.
-- `ECGT_RETRIEVER_CHECKLIST.md` — step-by-step plan (Steps 0–8) with gates;
-  Step 1 (embedding model choice) has passed its gate, Step 3 (segmentation
-  module) is the suggested next task as of the last session.
-- `HANDOFF_ECGT_RETRIEVER.md` — narrative handoff for this same session;
-  has the full Step 1 results table and open decisions.
-- `files/` and `files.zip` — a redundant duplicate bundle of the four files
-  above, exported from the session that produced them; not a separate
-  source of truth.
+  `anchors_v2.jsonl` (120) and `anchors.jsonl` (v1, 123) are kept only for
+  comparison.
+- `loo_check.py` — leave-one-out check across embedding models; rerun
+  whenever the anchors or model choice change. `loo_results_v3.csv` is the
+  latest output (`loo_results_v2.csv` is the v2 run, incl. bge-m3).
+- `lexical_coverage.py` — runs the config's keyword list over the anchors
+  (and optionally a `coop_claims.json`-style file, `--claims`), and with
+  `--loo <csv>` lists positives missed by **both** embedding and keywords.
 
-**Chosen embedding models** (from the Step 1 leave-one-out gate — positives
-kept ≥ 85% alone, ≥ 95% combined with the lexical rule): primary
-`intfloat/multilingual-e5-base` (use the `query: ` prefix on **both** sides
-when embedding), runner-up `sentence-transformers/paraphrase-multilingual-mpnet-base-v2`.
-`bge-m3` was tried and dropped (largest model, scored last both times).
+Status: Step 0 (housekeeping) and Step 1 (embedding model choice) are
+done; Step 2 (gold span set) / Step 3 (segmentation module) are next.
 
-### Rerunning the LOO check
+**Chosen embedding models** (Step 1 gate — positives kept ≥ 85% alone,
+≥ 95% with the lexical rule): primary `intfloat/multilingual-e5-base`
+(`query: ` prefix on **both** sides), runner-up
+`sentence-transformers/paraphrase-multilingual-mpnet-base-v2`. `bge-m3` was
+dropped. On v3, e5 + keywords miss 0/74 positives; mpnet + keywords miss 1
+(«Raccolti a mano»).
+
+### Commands
 
 ```bash
-pip install sentence-transformers
-python3 loo_check.py --anchors anchors_v2.jsonl --csv loo_results_v2.csv \
+pip install sentence-transformers pyyaml
+python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v3.jsonl \
+  --csv retriever/loo_results_v3.csv \
   --models charngram intfloat/multilingual-e5-base \
            sentence-transformers/paraphrase-multilingual-mpnet-base-v2
+python3 retriever/lexical_coverage.py --claims golden/clean/coop_claims.json \
+  --loo retriever/loo_results_v3.csv
 ```
 
-`charngram` is an offline hashed character-n-gram baseline needing no
-download, used as a floor. The script reports positives kept, negatives
-rejected, polarity/category accuracy, per-failure detail, closest pos/neg
-pairs, and per-category accuracy.
-
-There is no other runnable pipeline entry point on this branch yet, and no
-test suite.
+`charngram` is an offline hashed character-n-gram baseline (no download),
+used as a floor. There is no pipeline entry point or test suite yet.
 
 ## Data layout
 
@@ -130,10 +124,9 @@ test suite.
   design: full system prompts, few-shots, and JSON schemas for Pass 1
   (extraction) and Pass 2 (trigger classification), plus the PRE/MID/POST
   deterministic steps between them. This is the source of truth for prompt
-  wording and schemas until they land in code. Its "Open questions" section
-  at the bottom is stale — origin, DOP/IGP, and «Senza microplastiche»/
-  «Senza siliconi» are already resolved in `ECGT_RETRIEVER_CHECKLIST.md`'s
-  decisions log; don't re-litigate them from this file alone.
+  wording and schemas until they land in code. Its Pass 1 section is kept
+  only as the Step 7 baseline; its open questions are resolved (see the
+  "Resolved questions" section at the bottom).
 - `golden/clean/` — cleaned, per-retailer product data:
   - `coop.json`, `carrefour.json`, `eurospin.json`, `naturasi.json` —
     canonical product records (list of objects with `product_id`, `name`,
@@ -157,9 +150,7 @@ test suite.
 
 ## Legal/domain reference
 
-`HANDOFF_ECGT_RETRIEVER.md` lists `legal-framework-ecgt-ucpd.md` (UCPD/ECGT
-background + mapping to Italy's D.Lgs. 30/2026 / Codice del Consumo) as an
-existing, unchanged file — but it is **not actually present anywhere in
-this repo or its history**. If checklist Step 8 (citable article mapping)
-comes up, that file needs to be tracked down or rewritten, not assumed to
-exist.
+`legal-framework-ecgt-ucpd.md` (UCPD/ECGT background + mapping to Italy's
+D.Lgs. 30/2026 / Codice del Consumo) is referenced by the handoff but is
+**not in this repo or its history**. If checklist Step 8 (citable article
+mapping) comes up, it needs to be tracked down or rewritten.

@@ -1,0 +1,112 @@
+# ECGT retriever pipeline config.
+# Everything that affects results lives here, so a run is reproducible from (config + anchors + code).
+config_version: 1
+
+anchors:
+  path: retriever/knowledge/anchors_v3.jsonl
+  sha256: null            # filled by `make anchors-hash`; the loader refuses to run on a mismatch
+
+embedding:
+  active: e5              # key into `models`; switch to "mpnet" to run the runner-up
+  models:
+    e5:
+      name: intfloat/multilingual-e5-base
+      revision: null      # pin the Hugging Face commit hash once chosen
+      prefix: "query: "   # e5 needs a prefix; the same one on both sides for symmetric matching
+      normalize: true
+    mpnet:
+      name: sentence-transformers/paraphrase-multilingual-mpnet-base-v2
+      revision: null
+      prefix: ""
+      normalize: true
+  batch_size: 32
+  device: auto            # auto | cpu | cuda | mps
+  cache_dir: .cache/anchor_embeddings   # cache key: model name + revision + anchors sha256
+
+pre:
+  drop_fields: [recycling]
+  drop_annotation_fields: true
+  drop_mandatory_disclosures: true      # uses _MANDATORY_DISCLOSURE_PATTERNS
+  drop_ingredient_lists: true
+  field_priority: [features, producer_info, description, name]   # for source_field on dedupe
+
+segmentation:
+  unit_split: [line_break, bullet, sentence_end]   # never on comma
+  strip_leading: ["-", "•"]
+  strip_trailing: [".", ";"]
+  window_size: 2                        # also score merged spans of 2 adjacent units
+  score_comma_subclauses: true          # unit score = max over clauses; the whole unit is emitted
+  footnote_markers: ["**", "*", "^", "°"]   # longest first, so "**" is not read as "*"
+  footnote_join_separator: " ... "
+  drop_joined_footnote_bodies: true
+
+lexical:
+  # ECGT-only keyword list; this is the source of truth (the old extraction.py CLAIM_KEYWORDS
+  # prefilter is gone). Check coverage with `python3 retriever/lexical_coverage.py`.
+  source: config
+  flags: [IGNORECASE]
+  include:
+    - '\bvegan\w*'
+    - '\borigine\s+animale\b'
+    - '\bderivat\w*\s+(?:di\s+origine\s+)?animal\w*'
+    - '\bagricoltor\w*'
+    - '\btracciabil\w*'
+    - '\bmucche\b'
+    - '\ballevat\w*'
+    - '\bapprovat[oaie]\b'
+    - '\brischio\b'
+    - '\bricicla\w*'
+    - '\bbiodegradabil\w*'
+    - '\bcompostabil\w*'
+    - '\bpfas\b'
+    - '\bfosfati\b'
+    - '\bmicroplastic\w*'
+    - '\bsiliconi\b'
+    - '\bcarbon\b'
+    - '\bco2\b'
+    - '\bemission\w*'
+    - '\bambiente\b'
+    - '\bpianeta\b'
+    - '\bsostenibil\w*'
+    - '\beco\b'
+    - '\bgreen\b'
+    - '\bbio\b'
+    - '\bbiologic\w*'
+    - '\bnatural\w*'
+    - '\bnatura\b'
+    - '\bverde\b'
+    - '\bplastica\b'
+    - '\bimpatto\b'
+    - '\bclimatic\w*'
+    - '\brinnovabil\w*'
+    - '\bcertificat\w*'
+    - '\bfsc\b'
+    - '\bfairtrade\b'
+    - '\becolabel\b'
+  exclude: []             # enable only if Step 5 shows leakage, e.g. '\baroma\s+natural\w*', '\bgusto\s+natural\w*'
+
+scoring:
+  method: margin          # margin = agg(sim to pos anchors) - agg(sim to neg anchors)
+  aggregation: max        # max | top3_mean  (compare both in Step 5)
+  tau:                    # per model: margin scales differ (e5 is compressed)
+    e5: null              # set after Step 5 calibration
+    mpnet: null
+  candidate_rule: lexical_or_margin
+  fewshot_k: 3            # top-k positive anchors passed to Pass 2
+
+pass2:
+  backend: ollama
+  model: null             # the local 3–8B model tag
+  temperature: 0
+  num_predict: 96
+  num_ctx: 3072
+  static_fewshot: 5
+  dynamic_fewshot: true   # append the retrieved anchors as CLAIM -> triggers examples
+
+eval:
+  gold_spans: eval/gold_spans_v1.jsonl
+  target_recall: 0.95
+  tau_sweep: {start: -0.05, stop: 0.10, step: 0.0025}   # fine steps for e5
+
+output:
+  record_run_metadata: true   # write config_version, anchors sha256, model + revision into every output file

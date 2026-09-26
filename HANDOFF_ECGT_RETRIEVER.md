@@ -2,16 +2,19 @@
 
 Context for continuing this work in Claude Code. The session ran on 2026-09-24. Read this file first, then `ECGT_RETRIEVER_CHECKLIST.md`.
 
-## Files from the session (copy into the repo)
+## Files (as placed in the repo, 2026-09-24)
 
-| File | Suggested repo path | What it is |
-|---|---|---|
-| `anchors_v2.jsonl` | `src/knowledge/anchors/anchors_v2.jsonl` | **Current** anchor set: 120 anchors (74 pos / 46 neg) |
-| `anchors.jsonl` | `src/knowledge/anchors/anchors_v1.jsonl` | Previous set (123), kept for comparison |
-| `loo_check.py` | `scripts/loo_check.py` | Leave-one-out sanity check across embedding models |
-| `ECGT_RETRIEVER_CHECKLIST.md` | `docs/ECGT_RETRIEVER_CHECKLIST.md` | Step-by-step plan with gates; Steps 0–1 partly or fully done |
-| (existing) `ECGT_TWO_PASS_PROMPT.md` | unchanged | Original two-pass LLM design; Pass 2 and POST are reused |
-| (existing) `legal-framework-ecgt-ucpd.md` | unchanged | Legal background: UCPD/ECGT, Italy's D.Lgs. 30/2026 / Codice del Consumo mapping |
+| Repo path | What it is |
+|---|---|
+| `retriever/knowledge/anchors_v3.jsonl` | **Current** anchor set: 121 anchors (74 pos / 47 neg) = v2 + «Senza parabeni» |
+| `retriever/knowledge/anchors_v2.jsonl` | Previous set (120), kept for comparison |
+| `retriever/knowledge/anchors.jsonl` | v1 (123), kept for comparison |
+| `retriever/ecgt_retriever.yaml` | Pipeline config: anchor path, embedding models, segmentation, **keyword list**, τ, Pass 2 settings |
+| `retriever/loo_check.py` | Leave-one-out sanity check across embedding models (`loo_results*.csv` = its output) |
+| `retriever/lexical_coverage.py` | Coverage check for the keyword list over anchors and claims files |
+| `ECGT_RETRIEVER_CHECKLIST.md` | Step-by-step plan with gates; Steps 0–1 done |
+| `golden/ECGT_TWO_PASS_PROMPT.md` | Two-pass LLM design; Pass 2 and POST are reused, Pass 1 is kept as the Step 7 baseline |
+| `legal-framework-ecgt-ucpd.md` | **Not in the repo** (never committed). Needs to be found or rewritten before Step 8's article mapping |
 
 ## Goal
 
@@ -112,16 +115,12 @@ The gate is passed by e5 and mpnet.
 
 ## Open items and next steps (see the checklist for detail)
 
-### Step 0: housekeeping (open)
-- [ ] Decide whether to add back «Senza parabeni» (FF2) as a negative. It is the natural hard pair for «Senza microplastiche» / «Senza siliconi». Also decide on «Latte Alto Adige» (OR2). Neither is currently in v2.
-- [ ] Pass 2 prompt: extend the `out_of_scope` line with `natural flavour or taste (aroma naturale, gusto naturale), packaging function (salvafreschezza, richiudibile, apertura facilitata)`, and add a few-shot `CLAIM: Aroma naturale` → `["out_of_scope"]`.
-- [ ] `ECGT_TWO_PASS_PROMPT.md`: mark open questions 1–3 as resolved (origin → out_of_scope, DOP/IGP → out_of_scope, «Senza microplastiche» → NV; also «Senza siliconi» → NV). Replace the Pass 1 section with a pointer to the retriever.
-- [ ] `CLAIM_KEYWORDS` in `extraction.py`: add vegan, agricoltor, tracciabil, mucche, allevat, approvat, rischio, compostabil, PFAS, fosfati, microplastic, siliconi, carbon, emissioni, and:
-  - `\borigine\s+animale\b`
-  - `\bderivat\w*\s+(?:di\s+origine\s+)?animal\w*`
-  - Use word boundaries, e.g. `\bbio\b`. Confirm `ambiente` and `pianeta` are present.
-  - Then rerun `check_prefilter_coverage.py`.
-- [ ] Record the model name and version in config, not in code.
+### Step 0: housekeeping (done, see the checklist for results)
+- «Senza parabeni» added (anchor set v3); «Latte Alto Adige» skipped. LOO positives kept unchanged.
+- Pass 2 `out_of_scope` line mirrors all 11 negative categories; `Aroma naturale` added as a 5th static few-shot.
+- Prompt doc open questions resolved; Pass 1 kept as baseline.
+- Keyword list lives in `retriever/ecgt_retriever.yaml` (`lexical.include`), not `extraction.py`. `retriever/lexical_coverage.py` replaces `check_prefilter_coverage.py`: e5 + keywords miss 0/74 positives, mpnet + keywords 1/74 («Raccolti a mano»).
+- Still open: pin model `revision`s in the config.
 
 ### Step 2: gold span set (needs real data)
 - 50–100 records across categories, about 10 of them with zero ECGT claims.
@@ -176,7 +175,7 @@ Keep the 4 static examples and append the top-3 retrieved anchors as `CLAIM → 
 
 ```
 pip install sentence-transformers
-python scripts/loo_check.py --anchors src/knowledge/anchors/anchors_v2.jsonl --csv loo_results_v2.csv \
+python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v3.jsonl --csv retriever/loo_results_v3.csv \
   --models charngram intfloat/multilingual-e5-base \
            sentence-transformers/paraphrase-multilingual-mpnet-base-v2
 ```

@@ -3,6 +3,11 @@
 **Version 4** (2026-09-24). Replaces the single-pass `PRODUCT_CLASSIFIER_PROMPT.md` v3 for
 local 3–8B models. **Not yet tested.** Calibrate token budgets with `--limit 2-3` before a full run.
 
+> **Retriever redesign (2026-09-24):** Pass 1 is being replaced by deterministic segmentation
+> plus an embedding + lexical candidate retriever (`retriever/`, see `ECGT_RETRIEVER_CHECKLIST.md`).
+> Pass 2 and POST below stay the source of truth. The Pass 1 section is kept only as the
+> baseline (A) for the Step 7 end-to-end comparison.
+
 ## What changed from v3, and why
 
 | v3 | v4 | Why |
@@ -38,6 +43,7 @@ record ─► [PRE]  strip annotation fields; drop `recycling` field; drop mater
                  "Raccolta differenziata", "Verifica le disposizioni del tuo Comune"
                  (reuse _MANDATORY_DISCLOSURE_PATTERNS)
        ─► [PASS 1] extract candidate spans (list of strings)
+                 (retriever design: segment → footnote join → lexical OR margin > τ instead)
        ─► [MID]  verbatim check → strip bullets/trailing punctuation → dedupe →
                  locate source_field → join footnote by marker (*, **, ^, °)
        ─► [PASS 2] one call per claim → triggers[] + confidence
@@ -46,7 +52,10 @@ record ─► [PRE]  strip annotation fields; drop `recycling` field; drop mater
 
 ---
 
-## PASS 1: extraction
+## PASS 1: extraction (baseline only)
+
+Replaced by the retriever in `retriever/` (config: `retriever/ecgt_retriever.yaml`). Kept
+unchanged so Step 7 of `ECGT_RETRIEVER_CHECKLIST.md` can run "A) original two-pass" as a baseline.
 
 **Settings:** temperature 0 · Ollama `format` = schema below · `num_predict` ≈ 1024 (est. ~40
 tok/claim × 25) · `num_ctx` sized to record + ~1.5k prompt.
@@ -165,17 +174,21 @@ defined_term         a green or natural word that CLAIM or FOOTNOTE defines
                      «96% Natural origin* ... water and naturally sourced ingredients with limited processing»
 risk_reduction       "riduce/aiuta a ridurre il rischio di ..."
 named_comparison     compared with a named brand, product or standard  «rispetto alle precedenti confezioni Beretta»
-pollutant_free       free from a pollutant  «Senza microplastiche»
+pollutant_free       free from a pollutant  «Senza microplastiche» «Senza siliconi»
 
 C. NONE OF THE ABOVE
-out_of_scope       health, nutrition, performance, tests, history, recipe, origin country,
-                   DOP/IGP, "senza conservanti/parabeni", sales rank
+out_of_scope       health or nutrition; what the product does (performance); tests or skin
+                   tolerance; history, tradition, recipe; patents or trademarks; geographic
+                   origin (country or region); quality schemes (DOP, IGP, STG); free from a
+                   non-pollutant (senza conservanti, parabeni, glutine, lattosio, zuccheri);
+                   sales rank; natural flavour or taste (aroma naturale, gusto naturale);
+                   packaging function (salvafreschezza, richiudibile, apertura facilitata)
 
 Output JSON: {"triggers": [...], "confidence": 0.0-1.0}
 confidence = how sure you are that the trigger list is right.
 ```
 
-### Few-shot (4 compact exchanges)
+### Few-shot (5 compact exchanges)
 
 ```
 CLAIM: Eco pack 100% riciclabile - Con meno plastica
@@ -191,6 +204,10 @@ FOOTNOTE: none
 → {"triggers":["climate_neutral"],"confidence":0.95}
 
 CLAIM: Clinicamente testate
+FOOTNOTE: none
+→ {"triggers":["out_of_scope"],"confidence":0.9}
+
+CLAIM: Aroma naturale
 FOOTNOTE: none
 → {"triggers":["out_of_scope"],"confidence":0.9}
 ```
@@ -239,13 +256,14 @@ claims, generate it from a per-trigger template in code, not with the model.
 
 ---
 
-## Open questions (not covered by the current examples)
+## Resolved questions (2026-09-24, see the checklist's decisions log)
 
-1. **Geographic origin** («100% Italiano», «Latte Alto Adige»): out_of_scope for now. Say if
-   "sourcing" should include it.
-2. **DOP/IGP**: out_of_scope (a quality scheme, not an endorsement). Say if "any named label"
-   should include it.
-3. **«Senza microplastiche»**: now NV (v3 had IN_SCOPE).
-4. **Pass 1 recall vs. prefilter:** `CLAIM_KEYWORDS` in `extraction.py` needs the new topics
-   (vegan, agricoltori, tracciabilità, mucche/allevamento, approvato/approvata, rischio) or
-   the prefilter will hide them from Pass 1. Rerun `check_prefilter_coverage.py` after adding them.
+1. **Geographic origin** («100% Italiano», «Coltivati in Puglia»): **out_of_scope**. Negative
+   anchor category `origin`.
+2. **DOP/IGP/STG**: **out_of_scope** (a quality scheme, not an endorsement). Negative anchor
+   category `quality_scheme`.
+3. **«Senza microplastiche»**: **NV** (`pollutant_free`; v3 had IN_SCOPE). «Senza siliconi» is
+   also NV. «Senza parabeni» / «Senza conservanti» stay out_of_scope (`free_from_non_pollutant`).
+4. **Pass 1 recall vs. prefilter**: superseded. There is no `extraction.py` prefilter in the
+   retriever design; the lexical half of the candidate rule is `lexical.include` in
+   `retriever/ecgt_retriever.yaml`, checked with `retriever/lexical_coverage.py`.

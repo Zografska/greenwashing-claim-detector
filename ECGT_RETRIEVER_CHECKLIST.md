@@ -30,6 +30,8 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 - [x] Anchor set v2: `anchors_v2.jsonl`, 120 anchors (74 pos / 46 neg). Changes from v1:
   - dropped the 3 `mandatory_disclosure` anchors (PRE regex removes these texts deterministically)
   - made the tomato pair topic-neutral: «Raccolti a mano» (farming_practice), «Coltivati in Puglia» (origin)
+- [x] Anchor set v3: `retriever/knowledge/anchors_v3.jsonl`, 121 anchors (74 pos / 47 neg) = v2 + «Senza parabeni» (`free_from_non_pollutant`). «Latte Alto Adige» not added.
+- [x] Retriever code, config and anchors live in `retriever/` (config: `retriever/ecgt_retriever.yaml`, the source of truth for the keyword list, model names and anchor path).
 - [x] Anchors stay topic-neutral: no product nouns or brand names in new synthetic anchors.
 - [x] Template-sharing negatives that slip through («Formula esclusiva», «Pack richiudibile», «Adatto alle pelli sensibili», «fonte di fibre») are accepted: they cost one Pass 2 call each.
 - [x] Retriever errors are asymmetric: a missed positive can be lost for good, a leaked negative costs one Pass 2 call. Gates measure positives kept; negatives rejected is a cost metric.
@@ -38,29 +40,29 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 
 ## Step 0: Housekeeping (before any code)
 
-- [ ] Decide on the two omissions:
-  - [ ] Add «Senza parabeni» (FF2) as a negative? It is the hard pair for «Senza microplastiche» and «Senza siliconi».
-  - [ ] Add «Latte Alto Adige» (OR2) as a negative?
-- [ ] Put `anchors.jsonl` in the repo under version control (e.g. `src/knowledge/anchors/anchors_v1.jsonl`).
-- [ ] Update the Pass 2 prompt so it matches the anchor scope. Add to the `out_of_scope` line:
-      `natural flavour or taste (aroma naturale, gusto naturale), packaging function (salvafreschezza, richiudibile, apertura facilitata)`
-  - [ ] Add one of these as a Pass 2 few-shot, e.g. `CLAIM: Aroma naturale` → `["out_of_scope"]`.
-- [ ] Update `ECGT_TWO_PASS_PROMPT.md`:
-  - [ ] Mark open question 1 (origin) resolved: `out_of_scope`.
-  - [ ] Mark open question 2 (DOP/IGP) resolved: `out_of_scope`.
-  - [ ] Mark open question 3 («Senza microplastiche») resolved: NV. Also note «Senza siliconi» is NV.
-  - [ ] Replace the PASS 1 section with a pointer to this retriever.
-- [ ] Extend `CLAIM_KEYWORDS` in `extraction.py`: vegan, agricoltor, tracciabil, mucche, allevat, approvat, rischio, compostabil, PFAS, fosfati, microplastic, siliconi, carbon, emissioni, origine animale, derivat.. animal.
-  - suggested regexes for the last two: `\borigine\s+animale\b`, `\bderivat\w*\s+(?:di\s+origine\s+)?animal\w*`
-- [ ] Rerun `check_prefilter_coverage.py`.
+- [x] Decide on the two omissions:
+  - [x] «Senza parabeni» added as `N-free_from_non_pollutant-06` → **anchor set v3** (`retriever/knowledge/anchors_v3.jsonl`, 121: 74 pos / 47 neg). LOO on v3: positives kept unchanged (e5 70/74, mpnet 65/74, same misses as v2); mpnet rejects «Senza parabeni» itself, e5 does not (margin +0.013, nn «Senza fosfati»).
+  - [x] «Latte Alto Adige» skipped: `origin` already has 3 anchors incl. a region («Coltivati in Puglia»), and "Latte" is a product noun.
+- [x] Anchors under version control in `retriever/knowledge/` (v1 = `anchors.jsonl`, v2, v3). Config `retriever/ecgt_retriever.yaml` points at v3.
+- [x] Pass 2 `out_of_scope` line now lists all 11 negative anchor categories one-to-one, incl. natural flavour/taste and packaging function.
+  - [x] Added `CLAIM: Aroma naturale` → `["out_of_scope"]` as a **5th** static few-shot (dynamic few-shot only retrieves positive anchors, so Pass 2 would otherwise see no negative example). `pass2.static_fewshot: 5`.
+- [x] `ECGT_TWO_PASS_PROMPT.md`:
+  - [x] Open questions 1–3 marked resolved (origin → out_of_scope, DOP/IGP → out_of_scope, «Senza microplastiche»/«Senza siliconi» → NV); Q4 marked superseded.
+  - [x] PASS 1 section **kept** as the Step 7 baseline (A), with a pointer to the retriever at the top.
+- [x] Keyword list: no `extraction.py` on this branch. The ECGT-only list lives in `lexical.include` in `retriever/ecgt_retriever.yaml` (word-bounded): the planned additions (vegan, agricoltor, tracciabil, mucche, allevat, approvat, rischio, compostabil, PFAS, fosfati, microplastic, siliconi, carbon, emissioni, origine animale, derivat… animal) plus `biologic`, `natura`, `verde`, `plastica`, `impatto`, `climatic`, `rinnovabil`, `certificat`, `fsc`, `fairtrade`, `ecolabel`.
+- [x] `check_prefilter_coverage.py` replaced by `retriever/lexical_coverage.py`:
+  - anchors v3: 67/74 positives hit, 3/47 negatives hit (the 3 natural_flavour anchors, via `\bnatural\w*`)
+  - positives missed by both LOO embedding and lexical: **e5 0**, mpnet 1 («Raccolti a mano»)
+  - Coop LLM-run claims (not gold): 15/16 IN_SCOPE/NV hit; 3/9 DISCARD hit
 
 ## Step 1: Choose the embedding model (leave-one-out)
 
-- [ ] `pip install sentence-transformers`
-- [ ] Run:
+- [x] `pip install sentence-transformers`
+- [x] Run (current form):
   ```
-  python loo_check.py --anchors anchors.jsonl --csv loo_results.csv \
-    --models charngram intfloat/multilingual-e5-base BAAI/bge-m3 \
+  python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v3.jsonl \
+    --csv retriever/loo_results_v3.csv \
+    --models charngram intfloat/multilingual-e5-base \
              sentence-transformers/paraphrase-multilingual-mpnet-base-v2
   ```
 - [x] v1 results (123 anchors), positives kept / negatives rejected / overall polarity:
@@ -74,12 +76,12 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 - [x] Reran LOO on v2 (120 anchors). Positives kept / negatives rejected / overall polarity:
   - charngram (baseline): 79.7% / 56.5% / 70.8%
   - **multilingual-e5-base: 94.6% / 60.9% / 81.7%**, with lexical rule: 74/74 positives kept
-  - **paraphrase-multilingual-mpnet: 87.8% / 65.2% / 79.2%**, with lexical rule: 72–73/74 (depends on whether `ambiente`/`pianeta` are already in `CLAIM_KEYWORDS`)
+  - **paraphrase-multilingual-mpnet: 87.8% / 65.2% / 79.2%**, with lexical rule: 72–73/74 (re-measured on v3 with the config keyword list: 73/74, only «Raccolti a mano» missed by both)
   - bge-m3: 87.8% / 60.9% / 77.5% (not carried forward)
 - [x] Dropping `mandatory_disclosure` fixed «Vaschetta … PET riciclato» in all three models.
 - [ ] Watch «Raccolti a mano» in Step 5: it is short and generic enough to act as a magnet. In e5 it passes with only a +0.003 margin (nearest neighbour «Etichetta in carta riciclata») and it pulls «Brevetto internazionale» and «Marchio registrato» over the line. In mpnet it still fails.
-- [ ] Confirm `ambiente` and `pianeta` are in `CLAIM_KEYWORDS`.
-- [ ] Record the model name and version in config, not in code, so embeddings stay versioned.
+- [x] `ambiente` and `pianeta` are in `lexical.include`.
+- [ ] Record the model name and version in config, not in code, so embeddings stay versioned. (Names are in `retriever/ecgt_retriever.yaml`; `revision` still null.)
 - [x] **Gate:** positives kept ≥ 85% in LOO, and ≥ 95% when combined with the lexical rule. Negatives rejected is reported as a cost, with no gate. **Passed by e5 and mpnet on v2.**
 
 ## Step 2: Build the gold span set
@@ -108,7 +110,7 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 
 - [ ] Load anchors once and embed them into a normalized numpy matrix. No vector DB needed at this size.
 - [ ] Score each span as `margin = max_sim(pos) − max_sim(neg)`. Also try the mean of the top-3 for each polarity.
-- [ ] **Lexical hit:** `CLAIM_KEYWORDS` with word boundaries (`\bbio\b`, not the substring).
+- [ ] **Lexical hit:** `lexical.include` from `retriever/ecgt_retriever.yaml`, word-bounded (`\bbio\b`, not the substring).
   - [ ] Add exclusion patterns (`\baroma naturale\b`, `\bgusto naturale\b`) only if Step 5 shows leakage.
 - [ ] Candidate rule: `lexical_hit OR margin > τ`.
 - [ ] For each candidate, keep its top-3 nearest **positive** anchors (id, text, triggers) for Pass 2.
@@ -127,7 +129,7 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 
 ## Step 6: Pass 2 with dynamic few-shot
 
-- [ ] Keep the 4 static examples, and append the top-3 retrieved anchors as extra `CLAIM → triggers` examples.
+- [ ] Keep the 5 static examples, and append the top-3 retrieved anchors as extra `CLAIM → triggers` examples.
   - [ ] Use each anchor's `triggers` field as its expected output.
 - [ ] Watch the token budget: `num_ctx` ≈ 3k should still fit. Check this with `--limit 2-3`.
 - [ ] POST is unchanged. Claims whose only trigger is `out_of_scope` are dropped, which is also how retriever false positives get discarded.
