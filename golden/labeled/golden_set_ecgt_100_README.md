@@ -4,6 +4,31 @@ Gold evaluation set for a detector of claims under the EU ECGT rules (Directive 
 
 Files: `golden_set_ecgt_100.json` (the 100 selected products), `golden_set_ecgt_reserve.json` (the other 174 usable products, labelled the same way), and this README.
 
+## Amendments (2026-10-03, review of unannotated lines)
+
+The counts further down are from the original build and are **not** updated. After these amendments
+the selected 100 have: hard_yes 37 · in_between 35 · hard_no 28; 288 IN_SCOPE / NEEDS_VERIFICATION claims
+(IN_SCOPE 179 · NEEDS_VERIFICATION 109); 489 DISCARDED, of which 1 is `needs_review`.
+
+| EAN | product | change |
+|---|---|---|
+| 8022966510104 | Maniva Acqua Oligominerale | added «Non sprecare, ricicla.\nÈ per il bene del nostro pianeta.» → generic_green, IN_SCOPE (merged 2-unit span; «È» continues the previous line). hard_no → hard_yes |
+| 8002200163136 | Kimbo Macinato Fresco | added «Cialde compostabili» → biodegradable, NV. hard_no → hard_yes |
+| 8017331105108 | L'Angelica Senna e Carvi | added «A Villa Angelica: il cuore della natura» → out_of_scope, DISCARDED, `needs_review: true` (place storytelling, close to origin; no impact element). Exclude from scoring until reviewed |
+
+Two conventions settled in the same review (apply to the reserve set and all future labelling):
+
+- **Headings are never claims on their own.** A heading over disposal instructions («Per l'ambiente»,
+  «Rispetta l'ambiente», «La nostra confezione e l'ambiente» followed by «Come smaltire:» / material
+  codes) is dropped with them. A heading followed by an actual claim: label the claim, the heading is
+  out_of_scope.
+- **Recycling calls-to-action: the benefit clause decides.** A bare call-to-action («Riciclami!»,
+  «Ricicla con Plasmon», «Pensa a riciclare») is out_of_scope. One that adds an environmental-benefit
+  clause («per il pianeta», «per il bene del nostro pianeta») is generic_green → IN_SCOPE. This matches
+  the anchor «Fai la differenziata per il pianeta».
+
+A claim may carry `needs_review: true`: its label is provisional and evaluators must skip it.
+
 ## Pool size
 
 The brief expected a pool of 150 records. `clean/carrefour.json` actually holds **300** records, so the accounting below is: 100 selected + 174 reserve + 26 unusable = 300.

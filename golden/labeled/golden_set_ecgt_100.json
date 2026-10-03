@@ -93,10 +93,11 @@
     "category": "acqua-e-analcolici",
     "brand": "Maniva",
     "name": "Maniva Acqua Oligominerale Alcalina Naturale 6 x 1,5 L",
-    "golden_bucket": "hard_no",
-    "bucket_reason": "Only DISCARDED (out-of-scope) claims (3).",
+    "golden_bucket": "hard_yes",
+    "bucket_reason": "Amended 2026-10-03 from hard_no: 1 in-scope/needs-verification claim added on review, none on a gray zone, e.g. «Non sprecare, ricicla.\nÈ per il bene del nostro pianeta.».",
     "gray_zone": null,
     "triggers": [
+      "generic_green",
       "out_of_scope"
     ],
     "claims": [
@@ -132,6 +133,17 @@
         "label": "DISCARDED",
         "confidence": "high",
         "note": null
+      },
+      {
+        "claim_text": "Non sprecare, ricicla.\nÈ per il bene del nostro pianeta.",
+        "source_field": "description",
+        "footnote": null,
+        "triggers": [
+          "generic_green"
+        ],
+        "label": "IN_SCOPE",
+        "confidence": "high",
+        "note": "Amended 2026-10-03: merged 2-unit span. CTA rule: a bare recycling call-to-action is out_of_scope; one with an environmental-benefit clause («per il bene del nostro pianeta») is generic_green."
       }
     ]
   },
@@ -4077,10 +4089,11 @@
     "category": "dolci-e-prima-colazione",
     "brand": "Kimbo",
     "name": "Kimbo Macinato Fresco 2 x 250 g",
-    "golden_bucket": "hard_no",
-    "bucket_reason": "Only DISCARDED (out-of-scope) claims (8).",
+    "golden_bucket": "hard_yes",
+    "bucket_reason": "Amended 2026-10-03 from hard_no: 1 in-scope/needs-verification claim added on review, none on a gray zone, e.g. «Cialde compostabili».",
     "gray_zone": null,
     "triggers": [
+      "biodegradable",
       "out_of_scope"
     ],
     "claims": [
@@ -4171,6 +4184,17 @@
         "label": "DISCARDED",
         "confidence": "high",
         "note": null
+      },
+      {
+        "claim_text": "Cialde compostabili",
+        "source_field": "description",
+        "footnote": null,
+        "triggers": [
+          "biodegradable"
+        ],
+        "label": "NEEDS_VERIFICATION",
+        "confidence": "high",
+        "note": "Amended 2026-10-03: same pattern as the «Capsule compostabili» anchor."
       }
     ]
   },
@@ -4925,6 +4949,18 @@
         "label": "DISCARDED",
         "confidence": "low",
         "note": "Gray zone: endorsement_named_vs_generic. Collaboration with a named health foundation, not an endorsement of environmental characteristics."
+      },
+      {
+        "claim_text": "A Villa Angelica: il cuore della natura",
+        "source_field": "description",
+        "footnote": null,
+        "triggers": [
+          "out_of_scope"
+        ],
+        "label": "DISCARDED",
+        "confidence": "low",
+        "note": "Gray zone: place storytelling. Amended 2026-10-03, needs_review: «natura» describes the location (close to origin, out of scope); unlike «Viva la Natura! / Per un futuro migliore» there is no impact element. Provisional out_of_scope; exclude from scoring until reviewed.",
+        "needs_review": true
       }
     ]
   },
