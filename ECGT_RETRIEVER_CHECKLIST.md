@@ -36,6 +36,7 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 - [x] Anchors stay topic-neutral: no product nouns or brand names in new synthetic anchors.
 - [x] Template-sharing negatives that slip through («Formula esclusiva», «Pack richiudibile», «Adatto alle pelli sensibili», «fonte di fibre») are accepted: they cost one Pass 2 call each.
 - [x] Headings are never claims on their own; a heading over disposal instructions is dropped with them (2026-10-03).
+- [x] Heading rule exempts brand eco-slogans («<Brand> per l'ambiente» stays a claim even above a disposal block) (2026-10-03).
 - [x] Recycling calls-to-action: bare CTA → out_of_scope; CTA + environmental-benefit clause («per il pianeta») → generic_green (2026-10-03).
 - [x] Gold claims may carry `needs_review: true`; evaluators skip them.
 - [x] Retriever errors are asymmetric: a missed positive can be lost for good, a leaked negative costs one Pass 2 call. Gates measure positives kept; negatives rejected is a cost metric.
@@ -103,22 +104,27 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 
 ## Step 3: Segmentation module
 
-- [ ] **PRE:** strip annotation fields, drop the `recycling` field, drop mandatory disclosures (reuse `_MANDATORY_DISCLOSURE_PATTERNS`), drop ingredient lists and cooking/storage text.
-- [ ] **Base units:** split on line break, bullet and sentence end. Never split at a comma.
-- [ ] **Windows:** also build merged spans of 2 adjacent units. This covers «Emissioni zero / …» and «Viva la Natura! / …».
-- [ ] **Sub-clauses:** split each unit on commas for *scoring only*. The unit's score is the max over its clauses, but the whole unit is emitted.
-- [ ] **Footnote join (before embedding):**
-  - [ ] Find marker-carrying spans (`*`, `**`, `^`, `°`) and join each with its body line as `claim ... body`.
-  - [ ] Remove the standalone body lines so they are never scored on their own.
-- [ ] Unit tests:
-  - [ ] Use the *Bagnoschiuma idratante* few-shot record as a fixture (footnote, mixed fields, negatives).
-  - [ ] A record with multiple footnote markers.
-  - [ ] A record where one text appears in two fields; the dedupe must keep the most specific `source_field`.
+Done 2026-10-03: `retriever/segment.py` (settings in the config's `pre`/`segmentation`), tests in `tests/test_segment.py` (30 passing), coverage check `retriever/segment_coverage.py`.
+
+- [x] **PRE:** only the config's `text_fields` are segmented (certifications, features, producer_info, description; name/denomination are not claims), so annotation/recycling fields are ignored by construction. Whole lines are dropped by **structural** patterns only (`pre.drop_lines`): disposal block (material codes, «Largamente riciclabile», «Raccolta <material>», «Verifica … tuo comune» instructions), retailer origin lines, labelled sections (Ingredienti/Ricetta/Modalità d'uso/Conservazione/…). Old `_MANDATORY_DISCLOSURE_PATTERNS` **not** reused: it dropped every «<Brand> per l'ambiente», which are positive anchors.
+  - [x] Heading rule: a short line directly above a pattern-dropped disposal line is dropped only if it has heading vocabulary (ambiente/pianeta/natura/confezione/imballo) and no specific wording; brand eco-slogans («Fiorentini per l'ambiente») are exempt (decision 2026-10-03).
+- [x] **Base units:** line break (also HTML `<br>`), bullet, sentence end; never a comma; abbreviations («Dott.», «A.I.Nut.», «S.p.A.») don't end a sentence.
+- [x] **Windows:** 2 adjacent units within one paragraph — never across a blank line, a dropped line or a footnote body (no gold span crosses a blank line).
+- [x] **Sub-clauses:** `Span.clauses` (comma split) for scoring only; the whole unit is emitted.
+- [x] **Footnote join:** marker-carrying spans joined as `claim ... body` (several bodies joined by newlines, same field first, else any field); joined bodies are not scored alone; unused bodies stay as units (recall-first). «N°1», «12 °C» are not markers.
+- [x] **Dedupe:** same normalized text kept once, `source_field` by `text_fields` order, other fields in `also_in`.
+- [x] Unit tests: the *Bagnoschiuma* fixture, multiple markers, same text in two fields, plus comma/abbreviation/`<br>`/window/disposal/heading/origin cases.
+- [x] **Coverage** (labelled claims reproduced as a span, exact or covered):
+  - reserve (dev): IN_SCOPE/NV **267/267**; 16.0 spans/record
+  - gold, measured once: **287/288 (99.7%)**; the miss was a too-broad `tuo comune` disposal pattern, fixed afterwards (now 288/288, but that figure is gold-informed). 26.8 spans/record (gold favours long records).
+  - all 950 cleaned records segment without errors in < 1 s.
+  - reserve relabel: «Rispettiamo l'ambiente» (cameo) → out_of_scope under the heading rule.
 
 ## Step 4: Candidate scoring
 
 - [ ] Load anchors once and embed them into a normalized numpy matrix. No vector DB needed at this size.
 - [ ] Score each span as `margin = max_sim(pos) − max_sim(neg)`. Also try the mean of the top-3 for each polarity.
+- [ ] Score `Span.clauses` and the joined text; unit score = max.
 - [ ] **Lexical hit:** `lexical.include` from `retriever/ecgt_retriever.yaml`, word-bounded (`\bbio\b`, not the substring).
   - [ ] Add exclusion patterns (`\baroma naturale\b`, `\bgusto naturale\b`) only if Step 5 shows leakage.
 - [ ] Candidate rule: `lexical_hit OR margin > τ`.

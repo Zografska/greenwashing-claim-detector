@@ -89,6 +89,13 @@ recall** — negatives rejected is tracked only as a cost metric, never gated.
 - `loo_check.py` — leave-one-out check across embedding models; rerun
   whenever the anchors or model choice change. `loo_results_v4.csv` is the
   latest output (`loo_results_v2.csv` is the v2 run, incl. bge-m3).
+- `segment.py` — Step 3 segmentation: `segment_record(record, cfg)` → `Span`s
+  (verbatim `text`, footnotes joined as `claim ... body`, `source_field`,
+  `kind` unit/window/list_item, comma `clauses` for scoring, `also_in`).
+  PRE drops lines by **structural** patterns only (config `pre.drop_lines`);
+  never add topical patterns there — a dropped positive is lost for good.
+- `segment_coverage.py` — Step 3 gate: segments the labelled records and
+  checks every labelled claim comes out as a span (exact/covered/missed).
 - `lexical_coverage.py` — runs the config's keyword list over the anchors
   (and optionally a `coop_claims.json`-style file, `--claims`), and with
   `--loo <csv>` lists positives missed by **both** embedding and keywords.
@@ -106,9 +113,7 @@ recall** — negatives rejected is tracked only as a cost metric, never gated.
   claims, recycling CTAs only in scope with a benefit clause) are in
   `golden/labeled/golden_set_ecgt_100_README.md`.
 
-Status: Steps 0–2 are done; Step 3 (segmentation module) is next. Carrefour
-folds its packaging-disposal block into `description`, so PRE needs a
-disposal-line pattern, not just `drop_fields: [recycling]`.
+Status: Steps 0–3 are done; Step 4 (candidate scoring) is next.
 
 **Chosen embedding models** (Step 1 gate — positives kept ≥ 85% alone,
 ≥ 95% with the lexical rule): primary `intfloat/multilingual-e5-base`
@@ -127,10 +132,13 @@ python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v4.jsonl \
            sentence-transformers/paraphrase-multilingual-mpnet-base-v2
 python3 retriever/lexical_coverage.py --claims golden/labeled/golden_set_ecgt_reserve.json \
   --loo retriever/loo_results_v4.csv
+python3 retriever/segment_coverage.py golden/labeled/golden_set_ecgt_reserve.json
+python3 retriever/segment.py golden/clean/carrefour.json --index 1   # one record's spans
+python3 -m pytest tests/                                             # segmentation unit tests
 ```
 
 `charngram` is an offline hashed character-n-gram baseline (no download),
-used as a floor. There is no pipeline entry point or test suite yet.
+used as a floor. There is no end-to-end pipeline entry point yet.
 
 ## Data layout
 

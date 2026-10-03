@@ -15,6 +15,9 @@ Context for continuing this work in Claude Code. The session ran on 2026-09-24. 
 | `retriever/ecgt_retriever.yaml` | Pipeline config: anchor path, embedding models, segmentation, **keyword list**, τ, Pass 2 settings |
 | `retriever/loo_check.py` | Leave-one-out sanity check across embedding models (`loo_results*.csv` = its output) |
 | `retriever/lexical_coverage.py` | Coverage check for the keyword list over anchors and claims files |
+| `retriever/segment.py` | Step 3 segmentation (PRE, units, footnote join, windows, dedupe) |
+| `retriever/segment_coverage.py` | Step 3 gate: are labelled claims reproduced as spans |
+| `tests/test_segment.py` | Segmentation unit tests |
 | `ECGT_RETRIEVER_CHECKLIST.md` | Step-by-step plan with gates; Steps 0–1 done |
 | `golden/ECGT_TWO_PASS_PROMPT.md` | Two-pass LLM design; Pass 2 and POST are reused, Pass 1 is kept as the Step 7 baseline |
 | `legal-framework-ecgt-ucpd.md` | **Not in the repo** (never committed). Needs to be found or rewritten before Step 8's article mapping |
@@ -129,29 +132,11 @@ The gate is passed by e5 and mpnet.
 - Frozen as `eval/gold_spans_v1.jsonl` (777 spans, 288 IN_SCOPE/NV). Reserve set = dev set. Gold keyword recall measured once: 89.6%.
 - Next: Step 3 segmentation. Carrefour folds the packaging-disposal block (Largamente riciclabile, PET 1, Raccolta…, Verifica…) into `description`, so PRE needs a disposal-line pattern, not just `drop_fields: [recycling]`; the gold README lists which lines count.
 
-### Step 3: segmentation module ← suggested next task
-- **PRE:** strip annotation fields, drop the `recycling` field, drop mandatory disclosures, ingredient lists and cooking/storage text.
-- **Base units:** split on line break, bullet and sentence end. **Never split at a comma.** Strip leading `-`/`•` and trailing `.`/`;`.
-- **2-unit windows:** merge adjacent units. This covers «Emissioni zero / Questa confezione è Carbon Neutral: …» and «Viva la Natura! / Per un futuro migliore».
-- **Comma sub-clauses:** use them for scoring only. The unit's score is the max over its clauses, but the whole unit is emitted.
-- **Footnote join, before embedding:**
-  - Spans carrying a marker (`*`, `**`, `^`, `°`) are joined with the lines that start with the same marker, as `claim ... body`.
-  - If there are several candidate bodies, pass all of them to Pass 2 as `FOOTNOTE:` lines.
-  - Remove the standalone body lines so they are never scored.
-- **Dedupe:** prefer `source_field` in this order: `features` > `producer_info` > `description` > `name`.
-- **Unit test fixture**, from the prompt doc:
-  ```
-  {"name":"Bagnoschiuma idratante","features":"Formula vegana & biodegradabile^\nClinicamente testato\nProtegge la pelle dagli agenti esterni\n^99,9% formula biodegradabile","producer_info":"Dal 1920 le ricette di famiglia. Flacone green 100%. Aiuta a ridurre il rischio di irritazione della pelle.","certifications":["VEGANO"]}
-  ```
-  Expected ECGT candidates:
-  - «Formula vegana & biodegradabile^ ... 99,9% formula biodegradabile»
-  - «Flacone green 100%»
-  - «Aiuta a ridurre il rischio di irritazione della pelle»
-  - «VEGANO»
+### Step 3: segmentation module (done 2026-10-03, see the checklist)
+- `retriever/segment.py` → `segment_record(record, cfg)` returns `Span`s (verbatim `text` with footnote join, `source_field`, `kind`, `clauses`, `also_in`). Tests: `python3 -m pytest tests/`. Coverage: `retriever/segment_coverage.py`.
+- Reserve 267/267 labelled claims reproduced; gold 287/288 measured once (fixed since).
 
-  «^99,9% …» must not appear as a standalone span. Also add tests for multiple footnote markers, and for the same text appearing in two fields.
-
-### Step 4: candidate scoring
+### Step 4: candidate scoring ← suggested next task
 Use the margin plus the lexical OR rule described above. Keep the top-3 positive anchors per candidate, and handle empty or zero-candidate records.
 
 ### Step 5: calibrate τ on the gold set
