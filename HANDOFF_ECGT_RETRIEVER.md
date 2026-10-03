@@ -18,6 +18,7 @@ Context for continuing this work in Claude Code. The session ran on 2026-09-24. 
 | `retriever/segment.py` | Step 3 segmentation (PRE, units, footnote join, windows, dedupe) |
 | `retriever/segment_coverage.py` | Step 3 gate: are labelled claims reproduced as spans |
 | `retriever/score.py` | Step 4 candidate scoring (margin, lexical OR rule, few-shot anchors) |
+| `retriever/calibrate.py` | Step 5 τ sweep and selection (`calibration_*.csv` = its output) |
 | `tests/test_segment.py` | Segmentation unit tests |
 | `ECGT_RETRIEVER_CHECKLIST.md` | Step-by-step plan with gates; Steps 0–1 done |
 | `golden/ECGT_TWO_PASS_PROMPT.md` | Two-pass LLM design; Pass 2 and POST are reused, Pass 1 is kept as the Step 7 baseline |
@@ -141,12 +142,10 @@ The gate is passed by e5 and mpnet.
 - `retriever/score.py`: `Retriever(cfg).score_record(record)` → every span with margin, lexical hits, candidate flag and top-3 positive anchors. τ is null until Step 5.
 - Reserve preview (e5): lexical only 259/267 at 4.4 candidates/record; τ=0.02 → 264/267 at 6.1/record.
 
-### Step 5: calibrate τ on the reserve (dev) set, measure gold once ← suggested next task
-- Choose the smallest τ that gives span recall ≥ 95%.
-- Report per-trigger recall, candidates per record, and lexical-only vs. embedding-only hits.
-- Calibrate e5 and mpnet separately, then pick the one with fewer candidates per record at equal recall.
+### Step 5: τ calibration (done 2026-10-03, see the checklist)
+- Chosen on the reserve: e5 + top3_mean, τ = 0.0125 (rule: largest τ with recall ≥ 99%). Gold once: 281/288 = 97.6% at 12.7 candidates/record; keywords alone 94.1%.
 
-### Step 6: Pass 2 with dynamic few-shot
+### Step 6: Pass 2 with dynamic few-shot ← suggested next task
 Keep the 4 static examples and append the top-3 retrieved anchors as `CLAIM → triggers` examples. Check that the prompt still fits `num_ctx` ≈ 3k using `--limit 2-3`.
 
 ### Step 7: end-to-end comparison on the gold set

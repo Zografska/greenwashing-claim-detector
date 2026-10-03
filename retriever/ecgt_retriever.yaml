@@ -4,19 +4,19 @@ config_version: 1
 
 anchors:
   path: retriever/knowledge/anchors_v4.jsonl
-  sha256: null            # filled by `make anchors-hash`; the loader refuses to run on a mismatch
+  sha256: 4dfcb5549f8230bd86eae0729f50ca5d5e857feead9540725f694dcdf66bfec4   # score.py refuses to run on a mismatch; update when anchors change
 
 embedding:
   active: e5              # key into `models`; switch to "mpnet" to run the runner-up
   models:
     e5:
       name: intfloat/multilingual-e5-base
-      revision: null      # pin the Hugging Face commit hash once chosen
+      revision: d128750597153bb5987e10b1c3493a34e5a4502a   # pinned 2026-10-03 (local HF cache)
       prefix: "query: "   # e5 needs a prefix; the same one on both sides for symmetric matching
       normalize: true
     mpnet:
       name: sentence-transformers/paraphrase-multilingual-mpnet-base-v2
-      revision: null
+      revision: 4328cf26390c98c5e3c738b4460a05b95f4911f5   # pinned 2026-10-03
       prefix: ""
       normalize: true
   batch_size: 32
@@ -135,10 +135,11 @@ lexical:
 
 scoring:
   method: margin          # margin = agg(sim to pos anchors) - agg(sim to neg anchors)
-  aggregation: max        # max | top3_mean  (compare both in Step 5)
-  tau:                    # per model: margin scales differ (e5 is compressed)
-    e5: null              # set after Step 5 calibration
-    mpnet: null
+  aggregation: top3_mean  # max | top3_mean; top3_mean chosen in Step 5 (fewest candidates at ≥ 99% reserve recall)
+  tau:                    # per model (margin scales differ), for top3_mean; calibrated on the reserve set,
+                          # rule: largest τ with recall ≥ 99% (Step 5, 2026-10-03). Gold measured once: 97.6%.
+    e5: 0.0125
+    mpnet: 0.0025
   candidate_rule: lexical_or_margin
   fewshot_k: 3            # top-k positive anchors passed to Pass 2
 

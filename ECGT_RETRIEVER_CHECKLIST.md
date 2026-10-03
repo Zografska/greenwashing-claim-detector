@@ -86,7 +86,7 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 - [x] Dropping `mandatory_disclosure` fixed «Vaschetta … PET riciclato» in all three models.
 - [ ] Watch «Raccolti a mano» in Step 5: it is short and generic enough to act as a magnet. In e5 it passes with only a +0.003 margin (nearest neighbour «Etichetta in carta riciclata») and it pulls «Brevetto internazionale» and «Marchio registrato» over the line. In mpnet it still fails.
 - [x] `ambiente` and `pianeta` are in `lexical.include`.
-- [ ] Record the model name and version in config, not in code, so embeddings stay versioned. (Names are in `retriever/ecgt_retriever.yaml`; `revision` still null.)
+- [x] Record the model name and version in config, not in code, so embeddings stay versioned (revisions pinned 2026-10-03).
 - [x] **Gate:** positives kept ≥ 85% in LOO, and ≥ 95% when combined with the lexical rule. Negatives rejected is reported as a cost, with no gate. **Passed by e5 and mpnet on v2.**
 
 ## Step 2: Build the gold span set
@@ -145,14 +145,16 @@ Done 2026-10-03: `retriever/score.py` (`Retriever(cfg, model=None)`, `score_reco
 
 ## Step 5: Calibrate τ (on the reserve/dev set; measure gold once)
 
-- [ ] Sweep τ, and at each value report:
-  - span recall (overall and per trigger)
-  - candidates per record, which is the Pass 2 cost
-  - how many recalled spans came from lexical only vs. embedding only
-- [ ] Calibrate τ separately for e5 and mpnet (their margin scales differ), then pick the model with fewer candidates per record at equal recall.
-- [ ] Choose the **smallest τ with span recall ≥ 95%**. A missed span is lost for good, while an extra candidate costs only one Pass 2 call.
-- [ ] Check per-trigger recall. Add real anchors for any trigger below 90%.
-- [ ] **Gate:** recall ≥ 95% with a candidate count you can afford to run.
+Done 2026-10-03: `retriever/calibrate.py`; sweeps in `retriever/calibration_reserve.csv` (selection) and `retriever/calibration_gold_report_only.csv` (reporting only, never used to choose).
+
+- [x] Swept τ (−0.05…+0.10, step 0.0025) for e5/mpnet × max/top3_mean, reporting recall (combined, per trigger, embedding alone), lexical-only vs embedding-only recalls, candidates per record, DISCARDED claims that still become candidates.
+- [x] **Selection rule changed:** the original "smallest τ with recall ≥ 95%" was inverted (smaller τ = more candidates) and, read as "largest τ", is met by keywords alone on the reserve (97.0%) because the keyword list was tuned there. Rule used: **largest τ with reserve recall ≥ 99%** (stricter target to absorb the dev-set optimism; a missed span is lost for good).
+- [x] Result on the reserve (target 99%): **e5 + top3_mean, τ = 0.0125** → 266/267, 7.3 candidates/record (e5/max 265 @ 7.8; mpnet/top3 265 @ 8.6; mpnet/max 265 @ 9.8). Written to the config, with `mpnet: 0.0025`.
+- [x] **Gold, measured once with the locked setting: 281/288 = 97.6%**, 12.7 candidates/record (47% of spans); embedding alone 87.2%; keywords alone 271/288 = 94.1% (fails the 95% gate → the embedding is needed). 44% of labelled DISCARDED claims still become candidates (Pass 2 cost).
+  - 7 gold misses: «Antispreco», «save the olives», «Harmony - Patto del grano buono», «Sammontana è una società benefit», «Selezioniamo i terreni più vocati», «Inchiostro a base vegetale», «Senza solfati, coloranti e ftalati» (margins −0.017…+0.012).
+- [ ] Per-trigger < 90%: reserve named_endorsement 7/8; gold pollutant_free 6/7. Both n < 10 (one claim each). Add real anchors from **new** data (not gold, and not the reserve, which would inflate the dev numbers).
+- [x] **Gate:** recall ≥ 95% on gold with ~13 Pass 2 calls/record — passed.
+- [x] Model revisions pinned and `anchors.sha256` set in the config.
 
 ## Step 6: Pass 2 with dynamic few-shot
 

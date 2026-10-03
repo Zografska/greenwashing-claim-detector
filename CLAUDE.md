@@ -99,6 +99,9 @@ recall** — negatives rejected is tracked only as a cost metric, never gated.
   hits, `candidate` (`lexical OR margin > τ`; lexical only while τ is null)
   and top-3 positive `anchors` for Pass 2. Anchor embeddings cached in
   `.cache/anchor_embeddings/`.
+- `calibrate.py` — Step 5: τ sweep per model × aggregation on a labelled
+  set; selects the largest τ reaching `--target` recall (run on the reserve
+  only); `--fixed model:agg:tau` measures one setting (gold, once).
 - `segment_coverage.py` — Step 3 gate: segments the labelled records and
   checks every labelled claim comes out as a span (exact/covered/missed).
 - `lexical_coverage.py` — runs the config's keyword list over the anchors
@@ -118,10 +121,11 @@ recall** — negatives rejected is tracked only as a cost metric, never gated.
   claims, recycling CTAs only in scope with a benefit clause) are in
   `golden/labeled/golden_set_ecgt_100_README.md`.
 
-Status: Steps 0–4 are done; Step 5 (τ calibration on the reserve set, gold
-measured once) is next.
+Status: Steps 0–5 are done; Step 6 (Pass 2 with dynamic few-shot) is next.
+Chosen retriever: e5 + top3_mean, τ = 0.0125 (reserve 266/267; gold, measured
+once, 281/288 = 97.6% at ~13 candidates/record).
 
-**Chosen embedding models** (Step 1 gate — positives kept ≥ 85% alone,
+**Chosen embedding models** (revisions pinned in the config; Step 1 gate — positives kept ≥ 85% alone,
 ≥ 95% with the lexical rule): primary `intfloat/multilingual-e5-base`
 (`query: ` prefix on **both** sides), runner-up
 `sentence-transformers/paraphrase-multilingual-mpnet-base-v2`. `bge-m3` was

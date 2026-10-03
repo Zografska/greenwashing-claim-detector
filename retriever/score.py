@@ -68,6 +68,7 @@ class Retriever:
         self.anchors = [json.loads(l) for l in raw.decode("utf-8").splitlines() if l.strip()]
         self.is_pos = np.array([a["polarity"] == "pos" for a in self.anchors])
         self._model = None
+        self._memo = {}
         self.A = self._anchor_matrix()
 
     # ---- embeddings ---------------------------------------------------------------------
@@ -86,6 +87,13 @@ class Retriever:
             [prefix + t for t in texts], batch_size=self.cfg["embedding"]["batch_size"],
             normalize_embeddings=self.mcfg.get("normalize", True), show_progress_bar=False),
             dtype=np.float32)
+
+    def _embed_cached(self, texts):
+        """embed() with an in-memory cache, so rescoring (e.g. another aggregation) is free."""
+        new = [t for t in dict.fromkeys(texts) if t not in self._memo]
+        if new:
+            self._memo.update(zip(new, self.embed(new)))
+        return np.stack([self._memo[t] for t in texts])
 
     def _anchor_matrix(self):
         """Anchor embeddings, cached by model name + revision + anchors sha256."""
@@ -116,7 +124,7 @@ class Retriever:
                 owner.append(i)
         if not texts:
             return []
-        S = self.embed(texts) @ self.A.T
+        S = self._embed_cached(texts) @ self.A.T
         margins = self._agg(S[:, self.is_pos]) - self._agg(S[:, ~self.is_pos])
         pos_idx = np.flatnonzero(self.is_pos)
 
