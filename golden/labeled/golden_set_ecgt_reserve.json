@@ -3912,11 +3912,10 @@
     "category": "gastronomia",
     "brand": "Cameo",
     "name": "cameo le Soffici Margherita 600 g",
-    "golden_bucket": "hard_yes",
-    "bucket_reason": "1 IN_SCOPE and 0 NEEDS_VERIFICATION claims, none on a gray zone, e.g. «Rispettiamo l'ambiente».",
+    "golden_bucket": "hard_no",
+    "bucket_reason": "Amended 2026-10-03 from hard_yes: «Rispettiamo l'ambiente» relabelled as a disposal heading; only DISCARDED (out-of-scope) claims (2).",
     "gray_zone": null,
     "triggers": [
-      "generic_green",
       "out_of_scope"
     ],
     "claims": [
@@ -3936,11 +3935,11 @@
         "source_field": "description",
         "footnote": null,
         "triggers": [
-          "generic_green"
+          "out_of_scope"
         ],
-        "label": "IN_SCOPE",
+        "label": "DISCARDED",
         "confidence": "low",
-        "note": "Placed as a heading of a recycling call-to-action; kept because it asserts the company respects the environment."
+        "note": "Amended 2026-10-03: heading directly above the disposal block, dropped with it under the heading rule (was IN_SCOPE generic_green)."
       }
     ]
   },

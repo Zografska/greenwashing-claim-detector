@@ -27,6 +27,12 @@ Two conventions settled in the same review (apply to the reserve set and all fut
   clause («per il pianeta», «per il bene del nostro pianeta») is generic_green → IN_SCOPE. This matches
   the anchor «Fai la differenziata per il pianeta».
 
+- **Brand eco-slogans are exempt from the heading rule**: «Fiorentini per l'ambiente», «Latteria
+  Soresina per l'ambiente» stay brand_eco_slogan claims even directly above a disposal block.
+
+Reserve set, same day: «Rispettiamo l'ambiente» (cameo le Soffici Margherita, 8003000616105) relabelled
+out_of_scope as a bare heading over the disposal block; that product moves hard_yes → hard_no.
+
 A claim may carry `needs_review: true`: its label is provisional and evaluators must skip it.
 
 ## Pool size
