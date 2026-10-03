@@ -3,8 +3,9 @@
 Runs the `lexical.include` / `lexical.exclude` patterns from ecgt_retriever.yaml over:
   - the anchor set: every positive anchor should hit (misses depend on the embedding alone);
     negative hits are reported as a cost (each one is an extra Pass 2 call, no gate)
-  - optionally, a claims file (coop_claims.json format): IN_SCOPE/NV claims play the role of
-    positives, DISCARD claims of negatives. These are LLM run output, not hand-checked gold.
+  - optionally, a claims file (coop_claims.json or golden_set_ecgt_*.json format): IN_SCOPE/NV
+    claims play the role of positives, DISCARD/DISCARDED claims of negatives; claims with
+    `needs_review: true` are skipped. Tune keywords on the reserve set, never on the gold 100.
 
 Usage:
   python3 retriever/lexical_coverage.py
@@ -85,8 +86,8 @@ def main():
 
     if args.claims:
         products = json.load(open(args.claims, encoding="utf-8"))
-        items = [(c["claim_text"], c.get("label") != "DISCARD", c.get("label"))
-                 for p in products for c in p.get("claims", [])]
+        items = [(c["claim_text"], c.get("label") not in ("DISCARD", "DISCARDED"), c.get("label"))
+                 for p in products for c in p.get("claims", []) if not c.get("needs_review")]
         report(f"claims ({args.claims})", items, inc, exc)
 
 

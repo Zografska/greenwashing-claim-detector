@@ -3,7 +3,7 @@
 config_version: 1
 
 anchors:
-  path: retriever/knowledge/anchors_v3.jsonl
+  path: retriever/knowledge/anchors_v4.jsonl
   sha256: null            # filled by `make anchors-hash`; the loader refuses to run on a mismatch
 
 embedding:
@@ -52,10 +52,10 @@ lexical:
     - '\bagricoltor\w*'
     - '\btracciabil\w*'
     - '\bmucche\b'
-    - '\ballevat\w*'
+    - '\balleva\w*'
     - '\bapprovat[oaie]\b'
     - '\brischio\b'
-    - '\bricicla\w*'
+    - '\bricicl\w*'
     - '\bbiodegradabil\w*'
     - '\bcompostabil\w*'
     - '\bpfas\b'
@@ -83,6 +83,29 @@ lexical:
     - '\bfsc\b'
     - '\bfairtrade\b'
     - '\becolabel\b'
+    # added 2026-10-03, tuned on golden_set_ecgt_reserve.json only (never on the gold 100)
+    - '\bfilier\w*'
+    - '\bbenessere\s+animale\b'
+    - '\becolog\w*'
+    - '\bsprec\w*'
+    - '\bresponsabil\w*'
+    - '\bimpegn\w*'
+    - '\bcircolar\w*'
+    - '\benergi\w*\s+(?:pulit|eolic|solar|verd|rinnovabil)\w*'
+    - '\brisparmi\w*'
+    - '\bpesticid\w*'
+    - '\bfertilizzant\w*'
+    - '\bdiserbant\w*'
+    - '\bogm\b'
+    - '\bdi\s+sintesi\b'
+    - '\bsolvent\w*'
+    - '\bpolivinil\w*'
+    - '\bconsigliat\w*\s+da\b'
+    - '\bin\s+collaborazione\s+con\b'
+    - '\bcontrollo\s+diretto\b'
+    - '\bdal\s+campo\b'
+    - '\brispett\w*'        # +5 reserve negatives for +1 positive; cost only
+    - '\bselezionat\w*'     # +16 reserve negatives for +3 positives; cost only
   exclude: []             # enable only if Step 5 shows leakage, e.g. '\baroma\s+natural\w*', '\bgusto\s+natural\w*'
 
 scoring:
@@ -104,7 +127,8 @@ pass2:
   dynamic_fewshot: true   # append the retrieved anchors as CLAIM -> triggers examples
 
 eval:
-  gold_spans: eval/gold_spans_v1.jsonl
+  gold_spans: eval/gold_spans_v1.jsonl   # frozen 2026-10-03, sha256 776085444c46…; skip needs_review spans
+  dev_spans: golden/labeled/golden_set_ecgt_reserve.json   # tune keywords/anchors here, never on gold
   target_recall: 0.95
   tau_sweep: {start: -0.05, stop: 0.10, step: 0.0025}   # fine steps for e5
 

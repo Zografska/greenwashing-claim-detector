@@ -6,7 +6,10 @@ Context for continuing this work in Claude Code. The session ran on 2026-09-24. 
 
 | Repo path | What it is |
 |---|---|
-| `retriever/knowledge/anchors_v3.jsonl` | **Current** anchor set: 121 anchors (74 pos / 47 neg) = v2 + «Senza parabeni» |
+| `retriever/knowledge/anchors_v4.jsonl` | **Current** anchor set: 121 anchors (74 pos / 47 neg) = v3 with the gold-overlapping Pampers anchor replaced |
+| `retriever/knowledge/anchors_v3.jsonl` | v2 + «Senza parabeni» |
+| `eval/gold_spans_v1.jsonl` | **Frozen** gold spans (Step 2): 777 spans from 100 Carrefour records; source `golden/labeled/golden_set_ecgt_100.json` |
+| `golden/labeled/golden_set_ecgt_reserve.json` | 174 more labelled records = the **dev set** for tuning keywords/anchors |
 | `retriever/knowledge/anchors_v2.jsonl` | Previous set (120), kept for comparison |
 | `retriever/knowledge/anchors.jsonl` | v1 (123), kept for comparison |
 | `retriever/ecgt_retriever.yaml` | Pipeline config: anchor path, embedding models, segmentation, **keyword list**, τ, Pass 2 settings |
@@ -122,11 +125,9 @@ The gate is passed by e5 and mpnet.
 - Keyword list lives in `retriever/ecgt_retriever.yaml` (`lexical.include`), not `extraction.py`. `retriever/lexical_coverage.py` replaces `check_prefilter_coverage.py`: e5 + keywords miss 0/74 positives, mpnet + keywords 1/74 («Raccolti a mano»).
 - Still open: pin model `revision`s in the config.
 
-### Step 2: gold span set (needs real data)
-- 50–100 records across categories, about 10 of them with zero ECGT claims.
-- Get silver spans from the original LLM Pass 1, then hand-correct them.
-- Fields per span: `record_id`, `claim_text` (verbatim, joined if footnoted), `source_field`, `triggers`, `label`.
-- Freeze as `eval/gold_spans_v1.jsonl`. **Never add gold spans to the anchors.**
+### Step 2: gold span set (done 2026-10-03, see the checklist)
+- Frozen as `eval/gold_spans_v1.jsonl` (777 spans, 288 IN_SCOPE/NV). Reserve set = dev set. Gold keyword recall measured once: 89.6%.
+- Next: Step 3 segmentation. Carrefour folds the packaging-disposal block (Largamente riciclabile, PET 1, Raccolta…, Verifica…) into `description`, so PRE needs a disposal-line pattern, not just `drop_fields: [recycling]`; the gold README lists which lines count.
 
 ### Step 3: segmentation module ← suggested next task
 - **PRE:** strip annotation fields, drop the `recycling` field, drop mandatory disclosures, ingredient lists and cooking/storage text.
@@ -175,7 +176,7 @@ Keep the 4 static examples and append the top-3 retrieved anchors as `CLAIM → 
 
 ```
 pip install sentence-transformers
-python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v3.jsonl --csv retriever/loo_results_v3.csv \
+python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v4.jsonl --csv retriever/loo_results_v4.csv \
   --models charngram intfloat/multilingual-e5-base \
            sentence-transformers/paraphrase-multilingual-mpnet-base-v2
 ```

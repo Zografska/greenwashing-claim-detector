@@ -79,40 +79,54 @@ recall** — negatives rejected is tracked only as a cost metric, never gated.
   settings, the lexical keyword list (`lexical.include`, word-bounded
   regexes, ECGT-only), τ per model, and Pass 2 settings. Keep tunables here,
   not in code.
-- `knowledge/anchors_v3.jsonl` — **current** anchor set (121: 74 pos / 47
+- `knowledge/anchors_v4.jsonl` — **current** anchor set (121: 74 pos / 47
   neg). One JSON object per line: `id, text, polarity (pos|neg), category,
   triggers[], label_hint, origin (real|synthetic), form (joined|claim_only)`.
   Synthetic anchors must be topic-neutral (no product nouns/brand names).
   Footnoted anchors are stored pre-joined (`claim ... footnote body`).
-  `anchors_v2.jsonl` (120) and `anchors.jsonl` (v1, 123) are kept only for
-  comparison.
+  `anchors_v3.jsonl`, `anchors_v2.jsonl` (120) and `anchors.jsonl` (v1, 123)
+  are kept only for comparison. Never add gold spans as anchors.
 - `loo_check.py` — leave-one-out check across embedding models; rerun
-  whenever the anchors or model choice change. `loo_results_v3.csv` is the
+  whenever the anchors or model choice change. `loo_results_v4.csv` is the
   latest output (`loo_results_v2.csv` is the v2 run, incl. bge-m3).
 - `lexical_coverage.py` — runs the config's keyword list over the anchors
   (and optionally a `coop_claims.json`-style file, `--claims`), and with
   `--loo <csv>` lists positives missed by **both** embedding and keywords.
 
-Status: Step 0 (housekeeping) and Step 1 (embedding model choice) are
-done; Step 2 (gold span set) / Step 3 (segmentation module) are next.
+### Evaluation data — gold vs. dev
+
+- `eval/gold_spans_v1.jsonl` — **frozen** gold spans (777 from 100 Carrefour
+  records, 288 IN_SCOPE/NV), flattened from `golden/labeled/golden_set_ecgt_100.json`.
+  Held out: measure on it, never tune keywords/anchors/τ-adjacent choices on
+  it. Skip spans with `needs_review: true`.
+- `golden/labeled/golden_set_ecgt_reserve.json` — 174 more labelled records,
+  the **dev set**: tune keywords and pick anchors here.
+- Labelling conventions (verbatim spans, footnotes joined as `claim ... body`,
+  disposal block and retailer origin lines never extracted, headings never
+  claims, recycling CTAs only in scope with a benefit clause) are in
+  `golden/labeled/golden_set_ecgt_100_README.md`.
+
+Status: Steps 0–2 are done; Step 3 (segmentation module) is next. Carrefour
+folds its packaging-disposal block into `description`, so PRE needs a
+disposal-line pattern, not just `drop_fields: [recycling]`.
 
 **Chosen embedding models** (Step 1 gate — positives kept ≥ 85% alone,
 ≥ 95% with the lexical rule): primary `intfloat/multilingual-e5-base`
 (`query: ` prefix on **both** sides), runner-up
 `sentence-transformers/paraphrase-multilingual-mpnet-base-v2`. `bge-m3` was
-dropped. On v3, e5 + keywords miss 0/74 positives; mpnet + keywords miss 1
+dropped. On v4, e5 + keywords miss 0/74 positive anchors; mpnet + keywords miss 1
 («Raccolti a mano»).
 
 ### Commands
 
 ```bash
 pip install sentence-transformers pyyaml
-python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v3.jsonl \
-  --csv retriever/loo_results_v3.csv \
+python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v4.jsonl \
+  --csv retriever/loo_results_v4.csv \
   --models charngram intfloat/multilingual-e5-base \
            sentence-transformers/paraphrase-multilingual-mpnet-base-v2
-python3 retriever/lexical_coverage.py --claims golden/clean/coop_claims.json \
-  --loo retriever/loo_results_v3.csv
+python3 retriever/lexical_coverage.py --claims golden/labeled/golden_set_ecgt_reserve.json \
+  --loo retriever/loo_results_v4.csv
 ```
 
 `charngram` is an offline hashed character-n-gram baseline (no download),

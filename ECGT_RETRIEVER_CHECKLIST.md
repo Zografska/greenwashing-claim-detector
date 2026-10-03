@@ -30,10 +30,14 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 - [x] Anchor set v2: `anchors_v2.jsonl`, 120 anchors (74 pos / 46 neg). Changes from v1:
   - dropped the 3 `mandatory_disclosure` anchors (PRE regex removes these texts deterministically)
   - made the tomato pair topic-neutral: «Raccolti a mano» (farming_practice), «Coltivati in Puglia» (origin)
+- [x] Anchor set v4: `retriever/knowledge/anchors_v4.jsonl`, 121 anchors = v3 with the gold-overlapping Pampers anchor replaced by a reserve span (2026-10-03).
 - [x] Anchor set v3: `retriever/knowledge/anchors_v3.jsonl`, 121 anchors (74 pos / 47 neg) = v2 + «Senza parabeni» (`free_from_non_pollutant`). «Latte Alto Adige» not added.
 - [x] Retriever code, config and anchors live in `retriever/` (config: `retriever/ecgt_retriever.yaml`, the source of truth for the keyword list, model names and anchor path).
 - [x] Anchors stay topic-neutral: no product nouns or brand names in new synthetic anchors.
 - [x] Template-sharing negatives that slip through («Formula esclusiva», «Pack richiudibile», «Adatto alle pelli sensibili», «fonte di fibre») are accepted: they cost one Pass 2 call each.
+- [x] Headings are never claims on their own; a heading over disposal instructions is dropped with them (2026-10-03).
+- [x] Recycling calls-to-action: bare CTA → out_of_scope; CTA + environmental-benefit clause («per il pianeta») → generic_green (2026-10-03).
+- [x] Gold claims may carry `needs_review: true`; evaluators skip them.
 - [x] Retriever errors are asymmetric: a missed positive can be lost for good, a leaked negative costs one Pass 2 call. Gates measure positives kept; negatives rejected is a cost metric.
 
 ---
@@ -60,8 +64,8 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 - [x] `pip install sentence-transformers`
 - [x] Run (current form):
   ```
-  python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v3.jsonl \
-    --csv retriever/loo_results_v3.csv \
+  python3 retriever/loo_check.py --anchors retriever/knowledge/anchors_v4.jsonl \
+    --csv retriever/loo_results_v4.csv \
     --models charngram intfloat/multilingual-e5-base \
              sentence-transformers/paraphrase-multilingual-mpnet-base-v2
   ```
@@ -86,11 +90,16 @@ it gets. Labels come only from Pass 2 triggers and the POST code.
 
 ## Step 2: Build the gold span set
 
-- [ ] Sample 50–100 real records across categories (food, personal care, household).
-  - [ ] Include about 10 records with **zero** ECGT claims.
-- [ ] Run the original LLM Pass 1 on them to get silver spans.
-- [ ] Hand-correct them. Record for each span: `record_id`, `claim_text` (verbatim, joined form if footnoted), `source_field`, expected `triggers`, expected `label`.
-- [ ] Freeze the set as `eval/gold_spans_v1.jsonl`. **Never add these spans to the anchors.**
+- [x] 100 Carrefour records across 16 aisles (food 72, personal care/household 28), from `golden/clean/carrefour.json`: `golden/labeled/golden_set_ecgt_100.json` (+ README). Reserve of 174 more records labelled the same way: `golden_set_ecgt_reserve.json`.
+  - [x] 28 records with **zero** ECGT claims (all carry DISCARDED decoys).
+  - Single retailer, and `description` is the only text field, so multi-field dedupe / `source_field` isn't exercised here; Step 3 unit tests cover it.
+- [x] Validated (2026-10-03): every claim and footnote is a verbatim substring of its description, `source_index` matches the EAN, labels follow the POST rule, all triggers are valid, no duplicates.
+- [x] Reviewed the unannotated lines that hit keywords; 3 amendments + 2 conventions (headings, recycling calls-to-action), see the README's "Amendments" section and the decisions log. 1 claim is `needs_review` (skip in scoring).
+- [x] Frozen as `eval/gold_spans_v1.jsonl`: 777 spans (288 IN_SCOPE/NV, 489 DISCARDED), sha256 `776085444c4668f927adf84e5c239f4405de8af30a2506eed7c2bf5bdede7ca5`. **Never add these spans to the anchors, never tune keywords on them.**
+  - [x] Anchor `P-recycled_recyclable-02` («Qualità Pampers in cartoni 100% riciclati») was identical to a gold claim → replaced in **anchors v4** by a reserve span («Bottiglia, esclusi etichetta e tappo, realizzata con il 100% di plastica riciclata»). LOO on v4 unchanged: e5 70/74, mpnet 65/74.
+- [x] The reserve set is the **dev set**: keywords/anchors get tuned there (`eval.dev_spans` in the config).
+  - [x] Keyword list extended from reserve misses (+22 patterns, `ricicla`→`ricicl`, `allevat`→`alleva`). Reserve: 212 → **258/268** positives hit; DISCARDED hits 39 → 62/433 (cost).
+  - Held-out gold, measured once: **258/288 (89.6%)** keywords alone; DISCARDED hits 53/488. Visible gold-only gaps (deliberately *not* added, to keep gold clean): `biodiversit`, «Ecofriendly», `glifosato`, «società benefit». Add them only if they turn up in the reserve set or new data.
 
 ## Step 3: Segmentation module
 
