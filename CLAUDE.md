@@ -177,6 +177,10 @@ used as a floor. There is no end-to-end pipeline entry point yet.
   NaturaSì), each a JSON array of minimally-processed scrape records (field
   names vary by retailer — Carrefour's are prefixed `C4_`). Also has
   `run_summary.json`/`run_failures.json` per scrape.
+- `tools/groq_relabel.py` — re-labels the gold 100's claims with another LLM on
+  Groq (`run --model <id> [--with-conventions]`, needs `GROQ_API_KEY`;
+  resumable) using `golden/ECGT_CLAIM_CLASSIFIER_PROMPT.md`, then `analyze`
+  writes a discrepancy report + review CSV to `golden/labeled/relabel/`.
 - `tools/json_viewer.html`, `tools/jsonl_viewer.html` — standalone,
   build-free HTML viewers; open directly in a browser to eyeball a data
   file.
