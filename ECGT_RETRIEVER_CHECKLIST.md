@@ -122,16 +122,28 @@ Done 2026-10-03: `retriever/segment.py` (settings in the config's `pre`/`segment
 
 ## Step 4: Candidate scoring
 
-- [ ] Load anchors once and embed them into a normalized numpy matrix. No vector DB needed at this size.
-- [ ] Score each span as `margin = max_sim(pos) − max_sim(neg)`. Also try the mean of the top-3 for each polarity.
-- [ ] Score `Span.clauses` and the joined text; unit score = max.
-- [ ] **Lexical hit:** `lexical.include` from `retriever/ecgt_retriever.yaml`, word-bounded (`\bbio\b`, not the substring).
-  - [ ] Add exclusion patterns (`\baroma naturale\b`, `\bgusto naturale\b`) only if Step 5 shows leakage.
-- [ ] Candidate rule: `lexical_hit OR margin > τ`.
-- [ ] For each candidate, keep its top-3 nearest **positive** anchors (id, text, triggers) for Pass 2.
-- [ ] Handle empty records and records with zero candidates without errors.
+Done 2026-10-03: `retriever/score.py` (`Retriever(cfg, model=None)`, `score_record`, `candidates`), tests in `tests/test_score.py` (offline char-n-gram encoder, no download).
 
-## Step 5: Calibrate τ on the gold set
+- [x] Anchors embedded once into a normalized numpy matrix, cached under `.cache/anchor_embeddings/` keyed by model name + revision + prefix + anchors sha256. If `anchors.sha256` is set in the config, a mismatch is refused.
+- [x] `margin = agg(sim pos) − agg(sim neg)`, `scoring.aggregation: max | top3_mean`.
+- [x] Scored texts per span: the full text (with joined footnote) and each comma clause; span margin = max, `best_text` records which.
+- [x] Lexical hit: `lexical.include` / `exclude` on the full span text.
+- [x] Candidate rule: `lexical_hit OR margin > τ`; while `scoring.tau.<model>` is null, lexical only (margins still computed for Step 5).
+- [x] Each span keeps its top-`fewshot_k` positive anchors (id, text, triggers, sim) to the full text.
+- [x] Empty records and zero-candidate records return `[]`.
+- [x] Reserve sanity run (e5, max): 268 ms/record on CPU/MPS incl. embedding; preview for Step 5:
+
+  | τ | reserve recall (IN_SCOPE/NV) | candidates / spans | per record |
+  |---|---|---|---|
+  | none (lexical only) | 259/267 | 27% | 4.4 |
+  | 0.03 | 261/267 | 30% | 4.9 |
+  | 0.02 | 264/267 | 38% | 6.1 |
+  | 0.01 | 266/267 | 54% | 8.6 |
+  | 0.00 | 266/267 | 74% | 11.9 |
+
+  Lexical is tuned on the reserve, so its share is optimistic; the 8 lexical misses are mostly named endorsements / supply-chain prose with margins +0.01…+0.04. Embedding margin alone separates weakly (95.5% recall needs τ = 0, i.e. 72% of all spans).
+
+## Step 5: Calibrate τ (on the reserve/dev set; measure gold once)
 
 - [ ] Sweep τ, and at each value report:
   - span recall (overall and per trigger)

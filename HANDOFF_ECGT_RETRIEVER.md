@@ -17,6 +17,7 @@ Context for continuing this work in Claude Code. The session ran on 2026-09-24. 
 | `retriever/lexical_coverage.py` | Coverage check for the keyword list over anchors and claims files |
 | `retriever/segment.py` | Step 3 segmentation (PRE, units, footnote join, windows, dedupe) |
 | `retriever/segment_coverage.py` | Step 3 gate: are labelled claims reproduced as spans |
+| `retriever/score.py` | Step 4 candidate scoring (margin, lexical OR rule, few-shot anchors) |
 | `tests/test_segment.py` | Segmentation unit tests |
 | `ECGT_RETRIEVER_CHECKLIST.md` | Step-by-step plan with gates; Steps 0–1 done |
 | `golden/ECGT_TWO_PASS_PROMPT.md` | Two-pass LLM design; Pass 2 and POST are reused, Pass 1 is kept as the Step 7 baseline |
@@ -136,10 +137,11 @@ The gate is passed by e5 and mpnet.
 - `retriever/segment.py` → `segment_record(record, cfg)` returns `Span`s (verbatim `text` with footnote join, `source_field`, `kind`, `clauses`, `also_in`). Tests: `python3 -m pytest tests/`. Coverage: `retriever/segment_coverage.py`.
 - Reserve 267/267 labelled claims reproduced; gold 287/288 measured once (fixed since).
 
-### Step 4: candidate scoring ← suggested next task
-Use the margin plus the lexical OR rule described above. Keep the top-3 positive anchors per candidate, and handle empty or zero-candidate records.
+### Step 4: candidate scoring (done 2026-10-03, see the checklist)
+- `retriever/score.py`: `Retriever(cfg).score_record(record)` → every span with margin, lexical hits, candidate flag and top-3 positive anchors. τ is null until Step 5.
+- Reserve preview (e5): lexical only 259/267 at 4.4 candidates/record; τ=0.02 → 264/267 at 6.1/record.
 
-### Step 5: calibrate τ on the gold set
+### Step 5: calibrate τ on the reserve (dev) set, measure gold once ← suggested next task
 - Choose the smallest τ that gives span recall ≥ 95%.
 - Report per-trigger recall, candidates per record, and lexical-only vs. embedding-only hits.
 - Calibrate e5 and mpnet separately, then pick the one with fewer candidates per record at equal recall.

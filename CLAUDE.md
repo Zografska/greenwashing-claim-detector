@@ -94,6 +94,11 @@ recall** — negatives rejected is tracked only as a cost metric, never gated.
   `kind` unit/window/list_item, comma `clauses` for scoring, `also_in`).
   PRE drops lines by **structural** patterns only (config `pre.drop_lines`);
   never add topical patterns there — a dropped positive is lost for good.
+- `score.py` — Step 4: `Retriever(cfg, model=None).score_record(record)` →
+  every span with `margin` (max over full text + comma clauses), `lexical`
+  hits, `candidate` (`lexical OR margin > τ`; lexical only while τ is null)
+  and top-3 positive `anchors` for Pass 2. Anchor embeddings cached in
+  `.cache/anchor_embeddings/`.
 - `segment_coverage.py` — Step 3 gate: segments the labelled records and
   checks every labelled claim comes out as a span (exact/covered/missed).
 - `lexical_coverage.py` — runs the config's keyword list over the anchors
@@ -113,7 +118,8 @@ recall** — negatives rejected is tracked only as a cost metric, never gated.
   claims, recycling CTAs only in scope with a benefit clause) are in
   `golden/labeled/golden_set_ecgt_100_README.md`.
 
-Status: Steps 0–3 are done; Step 4 (candidate scoring) is next.
+Status: Steps 0–4 are done; Step 5 (τ calibration on the reserve set, gold
+measured once) is next.
 
 **Chosen embedding models** (Step 1 gate — positives kept ≥ 85% alone,
 ≥ 95% with the lexical rule): primary `intfloat/multilingual-e5-base`
@@ -134,7 +140,8 @@ python3 retriever/lexical_coverage.py --claims golden/labeled/golden_set_ecgt_re
   --loo retriever/loo_results_v4.csv
 python3 retriever/segment_coverage.py golden/labeled/golden_set_ecgt_reserve.json
 python3 retriever/segment.py golden/clean/carrefour.json --index 1   # one record's spans
-python3 -m pytest tests/                                             # segmentation unit tests
+python3 retriever/score.py golden/clean/carrefour.json --index 1 --all  # one record, scored
+python3 -m pytest tests/                                             # unit tests (offline)
 ```
 
 `charngram` is an offline hashed character-n-gram baseline (no download),
