@@ -226,3 +226,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Firm Claims Dashboard: its own git repo (websites-dashboard/.git)
+websites-dashboard/
