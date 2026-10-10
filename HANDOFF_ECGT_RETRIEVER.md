@@ -145,6 +145,10 @@ The gate is passed by e5 and mpnet.
 ### Step 5: τ calibration (done 2026-10-03, see the checklist)
 - Chosen on the reserve: e5 + top3_mean, τ = 0.0125 (rule: largest τ with recall ≥ 99%). Gold once: 281/288 = 97.6% at 12.7 candidates/record; keywords alone 94.1%.
 
+### Step 5b: cross-retailer check (2026-10-03, see the checklist)
+- Locked setting, measured once: Coop 97.9%, Eurospin 95.0%, NaturaSì **89.2%** (all misses are bare certification-scheme names: Demeter, BDIH, NaTrue, BIOS…), Carrefour 97.6%; pooled 95.4%.
+- Fixed with a closed list of certification-scheme names (general knowledge, checked on the NaturaSì reserve): NaturaSì 100% and Coop 99.0% after the fix, but not clean; clean held-out numbers are the before ones.
+
 ### Step 6: Pass 2 with dynamic few-shot ← suggested next task
 Keep the 4 static examples and append the top-3 retrieved anchors as `CLAIM → triggers` examples. Check that the prompt still fits `num_ctx` ≈ 3k using `--limit 2-3`.
 

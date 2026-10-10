@@ -131,6 +131,55 @@ lexical:
     - '\bdal\s+campo\b'
     - '\brispett\w*'        # +5 reserve negatives for +1 positive; cost only
     - '\bselezionat\w*'     # +16 reserve negatives for +3 positives; cost only
+    # Named certification / label schemes (2026-10-03). A bare scheme name («Demeter», «BDIH») has
+    # no green wording, so embeddings can't flag it; a closed list can. Built from general knowledge
+    # of EU/Italian schemes, not from the held-out misses (overlaps with them are reported in the
+    # checklist). Organic / biodynamic:
+    - '\bdemeter\b'
+    - '\bbiodinamic\w*'
+    - '\bbio\s*suisse\b'
+    - '\bnaturland\b'
+    - '\bbioland\b'
+    - '\baiab\b'
+    - '\bicea\b'
+    - '\bccpb\b'
+    - '\bbioagricert\b'
+    - '\bsuolo\s+e\s+salute\b'
+    - '\bbios\b'
+    - '\becocert\b'
+    - '\bsoil\s+association\b'
+    - '\borganic\b'          # English only; Italian «organico» is the waste bin, not a scheme
+    - '\beuro\s*leaf\b'
+    - '\bproduzione\s+integrata\b'
+    - '\bsqnpi\b'
+    # natural / organic cosmetics, animal testing:
+    - '\bcosmos\b'
+    - '\bbdih\b'
+    - '\bnatrue\b'
+    - '\bnature\s+care\s+product\b'
+    - '\bslow\s+cosm[eé]tique\b'
+    - '\bcruelty[\s-]*free\b'
+    - '\bleaping\s+bunny\b'
+    # environmental labels, forestry, textiles, climate:
+    - '\bpefc\b'
+    - '\b(?:blaue[rn]?\s+engel|blue\s+angel)\b'
+    - '\bnordic\s+swan\b'
+    - '\bcradle\s+to\s+cradle\b'
+    - '\boeko[\s-]*tex\b'
+    - '\bgots\b'
+    - '\bclimate\s*partner\b'
+    - '\bb[\s-]*corp\w*\b'
+    - '\bplastic[\s-]*free\b'
+    # fishing, fair trade, palm oil:
+    - '\bmsc\b'
+    - '\basc\b'
+    - '\bfriend\s+of\s+the\s+sea\b'
+    - '\bdolphin\s+safe\b'
+    - '\brainforest\s+alliance\b'
+    - '\butz\b'
+    - '\bequo\s*solidal\w*'
+    - '\bcommercio\s+equo\b'
+    - '\brspo\b'
   exclude: []             # enable only if Step 5 shows leakage, e.g. '\baroma\s+natural\w*', '\bgusto\s+natural\w*'
 
 scoring:

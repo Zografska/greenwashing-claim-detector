@@ -156,6 +156,35 @@ Done 2026-10-03: `retriever/calibrate.py`; sweeps in `retriever/calibration_rese
 - [x] **Gate:** recall ≥ 95% on gold with ~13 Pass 2 calls/record — passed.
 - [x] Model revisions pinned and `anchors.sha256` set in the config.
 
+### Step 5b: cross-retailer check (2026-10-03, locked e5 + top3_mean, τ = 0.0125, nothing tuned)
+
+New gold sets (`golden/labeled/golden_set_ecgt_{coop,eurospin,naturasi}_100.json`) validated clean (verbatim, labels = POST rule). Measured once each; their reserve sets are left untouched for future per-retailer tuning.
+
+| set | segmentation | retriever recall | keywords only | candidates/record | DISCARDED → candidate |
+|---|---|---|---|---|---|
+| Carrefour (gold) | 287/288 | 281/288 = 97.6% | 94.1% | 12.7 | 44% |
+| Coop (multi-field) | 193/193 | 189/193 = 97.9% | 93.3% | 10.0 | 45% |
+| Eurospin | 79/80 ¹ | 76/80 = 95.0% | 87.5% | 2.4 | 27% |
+| NaturaSì (certifications list only) | 176/176 | **157/176 = 89.2%** | 77.8% | 2.7 | 3% |
+| pooled | | 703/737 = 95.4% | | | |
+
+¹ the miss is a matcher artefact: the claim shares a line with an unrelated disclaimer, the emitted span contains it.
+
+- [x] **NaturaSì failed the 95% gate**: all 19 misses were bare certification-scheme names («Demeter» ×8, «Nature Care Product» ×3, «BDIH» ×2, «NaTrue» ×2, «BIOS - NaturCosmetics» ×2, «BIOS - BioClean», «Slow Cosmetique»), margin ≈ 0.
+  - Fix (option 1, 2026-10-03): a closed list of 42 certification/label-scheme patterns in `lexical.include` (organic/biodynamic, natural cosmetics, eco labels, textiles, climate, fishing, fair trade, palm oil), built from general knowledge of EU/Italian schemes, checked on the NaturaSì **reserve** (dev: 160 → 162/162). `\borganic\b` is English-only: the first version (`organic\w*`) matched the Italian waste bin «organico».
+
+  | set (locked τ) | before | after | after is clean? |
+  |---|---|---|---|
+  | NaturaSì reserve (dev) | 160/162 = 98.8% | 162/162 = 100% | dev set |
+  | NaturaSì 100 | **157/176 = 89.2%** | 176/176 = 100% | **no**: the 19 recovered claims are exactly the misses seen before the fix |
+  | Coop 100 | **189/193 = 97.9%** | 191/193 = 99.0% | **no**: «Miele Equosolidale» and «…commercio equo…» were seen misses |
+  | Eurospin 100 | 76/80 = 95.0% | 76/80 = 95.0% | yes (unchanged) |
+  | Carrefour gold | 281/288 = 97.6% | 281/288 = 97.6% | yes (unchanged) |
+
+  Report the **before** column as the clean held-out result; candidates per record changed by ≤ 0.2 on every set.
+- Remaining misses: «#Bontàresponsabile», «0% BPA» (Coop); «Non contengono pvc», «Realizzati con filetti di pesce selvaggio!», «Smaltibile nell'organico e nel WC», «100% compostabile» (matcher artefact) (Eurospin).
+- Keywords alone fail the gate on 3 of 4 retailers; the embedding adds 4–11 points everywhere.
+
 ## Step 6: Pass 2 with dynamic few-shot
 
 - [ ] Keep the 5 static examples, and append the top-3 retrieved anchors as extra `CLAIM → triggers` examples.
